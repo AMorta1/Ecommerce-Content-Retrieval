@@ -1,0 +1,15 @@
+{
+  "model_name": "Qwen/Qwen2.5-7B-Instruct",
+  "cache_dir": "../.model-cache/huggingface/hub",
+  "device": "cuda",
+  "load_in_4bit": true,
+  "bnb_4bit_quant_type": "nf4",
+  "bnb_4bit_compute_dtype": "bfloat16",
+  "max_input_tokens": 2048,
+  "max_new_tokens": 320,
+  "do_sample": false,
+  "temperature": 0.7,
+  "top_p": 0.9,
+  "seed": 42,
+  "prompt_version": "baseline_v1"
+}

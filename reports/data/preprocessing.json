@@ -1,0 +1,104 @@
+{
+  "dataset_version": "week1_v3",
+  "config_sha256": "7f2bf5a3edc663f4c779f97a8174935a17c58d9d13a9dc4b810a0db37e9ada75",
+  "sources": {
+    "full": {
+      "path": "E:\\Projects\\Baidu\\product1m_product5m_id_label.json",
+      "bytes": 5794852057,
+      "mtime_ns": 1788409819580596100,
+      "records": 6313067
+    },
+    "train": {
+      "path": "E:\\Projects\\Baidu\\product1m_product5m_train_id_label.json",
+      "bytes": 3977569457,
+      "mtime_ns": 1788411334779865500,
+      "records": 4418550
+    },
+    "test": {
+      "path": "E:\\Projects\\Baidu\\product1m_product5m_test_id_label.json",
+      "bytes": 1266792790,
+      "mtime_ns": 1788410719396554800,
+      "records": 1341932
+    }
+  },
+  "counts": {
+    "source_records": 6313067,
+    "target_records": 29906
+  },
+  "rejected": {
+    "malformed_or_insufficient_attributes": 99,
+    "excluded_accessory_or_bundle": 863,
+    "excluded_use_case": 56,
+    "excluded_laptop_replacement_keyboard": 362,
+    "duplicate_content": 86,
+    "oversized_pv": 1
+  },
+  "eligible_by_category": {
+    "拖把": 2844,
+    "移动电源": 3312,
+    "耳机": 9615,
+    "鼠标": 5878,
+    "垃圾桶": 1203,
+    "保温杯": 2943,
+    "收纳箱": 995,
+    "键盘": 1649
+  },
+  "selected": 2000,
+  "selected_by_category": {
+    "耳机": 250,
+    "收纳箱": 250,
+    "保温杯": 250,
+    "鼠标": 250,
+    "键盘": 250,
+    "拖把": 250,
+    "垃圾桶": 250,
+    "移动电源": 250
+  },
+  "splits": {
+    "train": {
+      "耳机": 200,
+      "保温杯": 200,
+      "鼠标": 200,
+      "键盘": 200,
+      "收纳箱": 200,
+      "拖把": 200,
+      "垃圾桶": 200,
+      "移动电源": 200
+    },
+    "validation": {
+      "键盘": 25,
+      "移动电源": 25,
+      "垃圾桶": 25,
+      "拖把": 25,
+      "保温杯": 25,
+      "鼠标": 25,
+      "收纳箱": 25,
+      "耳机": 25
+    },
+    "test": {
+      "收纳箱": 25,
+      "键盘": 25,
+      "拖把": 25,
+      "鼠标": 25,
+      "移动电源": 25,
+      "耳机": 25,
+      "保温杯": 25,
+      "垃圾桶": 25
+    }
+  },
+  "selected_original_overlap": 0,
+  "selected_original_split_unknown": 252,
+  "duplicate_checks": {
+    "product_id": 0,
+    "content_fingerprint": 0,
+    "image_url_fingerprint": 0
+  },
+  "limitations": [
+    "Provisional categories require review",
+    "No human-written selling points/descriptions",
+    "Images pending download",
+    "No perceptual image or fuzzy text deduplication",
+    "This experiment uses a new stratified split, not the original benchmark split"
+  ],
+  "elapsed_seconds": 89.6
+}

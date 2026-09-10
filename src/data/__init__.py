@@ -1,0 +1,1 @@
+"""Streaming product data preparation."""

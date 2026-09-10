@@ -1,0 +1,225 @@
+{
+  "status": "passed",
+  "model": "Qwen/Qwen2.5-7B-Instruct",
+  "prompt_version": "baseline_v1",
+  "generation_parameters": {
+    "max_input_tokens": 2048,
+    "max_new_tokens": 320,
+    "do_sample": false,
+    "temperature": 0.7,
+    "top_p": 0.9,
+    "seed": 42
+  },
+  "quantization": "bitsandbytes_nf4_4bit",
+  "cache_dir": "E:\\Projects\\Baidu\\.model-cache\\huggingface\\hub",
+  "python_version": "3.10.21",
+  "sample_count": 5,
+  "parsed_output_count": 5,
+  "structured_output_success_rate": 1.0,
+  "timings_seconds": {
+    "model_load": 13.248,
+    "generation_total": 30.019,
+    "generation_average": 6.004
+  },
+  "gpu_memory_mib": {
+    "allocated": 5590.0,
+    "reserved": 5934.0,
+    "peak_allocated": 5772.7
+  },
+  "results": [
+    {
+      "product_id": "559717136702",
+      "generation_input": {
+        "category_l1": "3C数码",
+        "category_l2": "耳机",
+        "attributes": {
+          "品牌": [
+            "OPPO"
+          ],
+          "型号": [
+            "MH133"
+          ],
+          "是否无线": [
+            "有线"
+          ],
+          "是否有麦克风": [
+            "有"
+          ],
+          "是否线控": [
+            "是"
+          ],
+          "材质": [
+            "塑料"
+          ],
+          "佩戴方式": [
+            "耳塞式"
+          ]
+        }
+      },
+      "reference_title_not_given_to_model": "OPPO耳机原装正品OPPO MH133 R9s R11 A57 R15 R11S R9耳机入耳式plus A59S A5手机耳机a3 K1原厂原配a9 a7x",
+      "raw_output": "{\n  \"generated_title\": \"OPPO MH133 有线耳塞式耳机 塑料材质\",\n  \"selling_points\": [\n    \"内置麦克风，通话清晰无阻\",\n    \"耳塞式设计，佩戴舒适稳固\",\n    \"线控功能，操作便捷省心\"\n  ],\n  \"short_description\": \"OPPO MH133 有线耳塞式耳机采用塑料材质，佩戴舒适稳固。内置麦克风确保通话清晰，线控设计方便操作。适合日常使用，提供良好的听觉体验。\"\n}",
+      "parsed_output": {
+        "generated_title": "OPPO MH133 有线耳塞式耳机 塑料材质",
+        "selling_points": [
+          "内置麦克风，通话清晰无阻",
+          "耳塞式设计，佩戴舒适稳固",
+          "线控功能，操作便捷省心"
+        ],
+        "short_description": "OPPO MH133 有线耳塞式耳机采用塑料材质，佩戴舒适稳固。内置麦克风确保通话清晰，线控设计方便操作。适合日常使用，提供良好的听觉体验。"
+      },
+      "parse_error": null,
+      "generation_seconds": 5.683
+    },
+    {
+      "product_id": "16454614360",
+      "generation_input": {
+        "category_l1": "3C数码",
+        "category_l2": "键盘",
+        "attributes": {
+          "品牌": [
+            "perixx/佩锐"
+          ],
+          "型号": [
+            "PERIBOARD-509PLUS"
+          ],
+          "接口类型": [
+            "USB"
+          ],
+          "是否无线": [
+            "有线"
+          ],
+          "有无手托": [
+            "有"
+          ]
+        }
+      },
+      "reference_title_not_given_to_model": "包邮佩锐锐键-509HPLUS有线迷你轨迹球便携式键盘USB接口2HUB",
+      "raw_output": "{\n  \"generated_title\": \"佩锐 PERIBOARD-509PLUS 有线带托USB键盘\",\n  \"selling_points\": [\n    \"采用USB接口设计，连接稳定快速\",\n    \"配备独立手托，使用舒适长久\",\n    \"有线传输，避免无线干扰问题\"\n  ],\n  \"short_description\": \"佩锐 PERIBOARD-509PLUS 是一款有线键盘，通过USB接口与电脑连接，确保数据传输稳定高效。键盘设计人性化，配有独立手托，长时间使用也能保持舒适。此款键盘适用于各种办公及娱乐场景，是您高效工作的得力助手。\"\n}",
+      "parsed_output": {
+        "generated_title": "佩锐 PERIBOARD-509PLUS 有线带托USB键盘",
+        "selling_points": [
+          "采用USB接口设计，连接稳定快速",
+          "配备独立手托，使用舒适长久",
+          "有线传输，避免无线干扰问题"
+        ],
+        "short_description": "佩锐 PERIBOARD-509PLUS 是一款有线键盘，通过USB接口与电脑连接，确保数据传输稳定高效。键盘设计人性化，配有独立手托，长时间使用也能保持舒适。此款键盘适用于各种办公及娱乐场景，是您高效工作的得力助手。"
+      },
+      "parse_error": null,
+      "generation_seconds": 5.993
+    },
+    {
+      "product_id": "542123769427",
+      "generation_input": {
+        "category_l1": "3C数码",
+        "category_l2": "鼠标",
+        "attributes": {
+          "品牌": [
+            "追光豹"
+          ],
+          "型号": [
+            "T9"
+          ],
+          "接口类型": [
+            "USB"
+          ],
+          "工作方式": [
+            "光电"
+          ],
+          "光学分辨率": [
+            "2400dpi"
+          ],
+          "按键数": [
+            "6个"
+          ]
+        }
+      },
+      "reference_title_not_given_to_model": "成都飞天包邮追光豹t9有线游戏炫彩光电鼠标usb电竞背光 6键led灯",
+      "raw_output": "{\n  \"generated_title\": \"追光豹 T9 光电USB鼠标 6键设计\",\n  \"selling_points\": [\n    \"采用2400dpi高精度光电技术，精准定位每一处细节\",\n    \"配备6个独立按键，操作更便捷高效\",\n    \"USB接口设计，即插即用，轻松连接电脑\"\n  ],\n  \"short_description\": \"追光豹T9光电鼠标，搭载2400dpi高精度传感器，确保游戏和办公中的精准操控。6个独立按键设计，满足多种操作需求。USB接口连接，使用方便快捷，是您电脑操作的理想伴侣。\"\n}",
+      "parsed_output": {
+        "generated_title": "追光豹 T9 光电USB鼠标 6键设计",
+        "selling_points": [
+          "采用2400dpi高精度光电技术，精准定位每一处细节",
+          "配备6个独立按键，操作更便捷高效",
+          "USB接口设计，即插即用，轻松连接电脑"
+        ],
+        "short_description": "追光豹T9光电鼠标，搭载2400dpi高精度传感器，确保游戏和办公中的精准操控。6个独立按键设计，满足多种操作需求。USB接口连接，使用方便快捷，是您电脑操作的理想伴侣。"
+      },
+      "parse_error": null,
+      "generation_seconds": 5.893
+    },
+    {
+      "product_id": "574123212908",
+      "generation_input": {
+        "category_l1": "家居日用",
+        "category_l2": "保温杯",
+        "attributes": {
+          "品牌": [
+            "SKATER"
+          ],
+          "型号": [
+            "冰雪奇缘A"
+          ],
+          "材质": [
+            "304不锈钢"
+          ],
+          "容量": [
+            "401mL(含)-500mL(含)"
+          ],
+          "保温时长": [
+            "6小时以上"
+          ]
+        }
+      },
+      "reference_title_not_given_to_model": "日本代购skater卡通儿童学生不锈钢保温冷杯水壶杯冰雪奇缘2双盖",
+      "raw_output": "{\n  \"generated_title\": \"SKATER冰雪奇缘A 304不锈钢保温杯 401-500ml\",\n  \"selling_points\": [\n    \"采用304不锈钢材质，耐腐蚀耐用\",\n    \"保温效果出色，6小时以上保持温度\",\n    \"容量适中，401-500ml满足日常需求\"\n  ],\n  \"short_description\": \"SKATER冰雪奇缘A保温杯，选用优质304不锈钢材质，不仅耐腐蚀还非常耐用。保温性能优越，能够持续6小时以上保持饮品温度，无论是热饮还是冷饮都能保持最佳口感。容量设计合理，401-500ml的大小适合日常使用，方便携带，满足不同场合的需求。\"\n}",
+      "parsed_output": {
+        "generated_title": "SKATER冰雪奇缘A 304不锈钢保温杯 401-500ml",
+        "selling_points": [
+          "采用304不锈钢材质，耐腐蚀耐用",
+          "保温效果出色，6小时以上保持温度",
+          "容量适中，401-500ml满足日常需求"
+        ],
+        "short_description": "SKATER冰雪奇缘A保温杯，选用优质304不锈钢材质，不仅耐腐蚀还非常耐用。保温性能优越，能够持续6小时以上保持饮品温度，无论是热饮还是冷饮都能保持最佳口感。容量设计合理，401-500ml的大小适合日常使用，方便携带，满足不同场合的需求。"
+      },
+      "parse_error": null,
+      "generation_seconds": 7.109
+    },
+    {
+      "product_id": "523865583326",
+      "generation_input": {
+        "category_l1": "家居日用",
+        "category_l2": "垃圾桶",
+        "attributes": {
+          "品牌": [
+            "茶花"
+          ],
+          "开合方式": [
+            "无盖"
+          ],
+          "适用场景": [
+            "家庭使用"
+          ],
+          "外壳材质": [
+            "塑料"
+          ],
+          "形状": [
+            "圆桶形"
+          ]
+        }
+      },
+      "reference_title_not_given_to_model": "茶花家用卫生间客厅厨房创意小号塑料无盖手提干湿分离套袋垃圾桶",
+      "raw_output": "{\n  \"generated_title\": \"茶花圆桶形无盖塑料垃圾桶 家庭使用\",\n  \"selling_points\": [\n    \"采用环保塑料材质，安全耐用\",\n    \"圆桶设计，节省空间，美观大方\",\n    \"无盖设计，方便投放垃圾，减少异味\"\n  ],\n  \"short_description\": \"茶花品牌出品的这款垃圾桶，采用环保塑料材质，安全耐用；圆桶形设计，既节省空间又美观大方；无盖设计便于投放垃圾，有效减少异味产生，适合家庭日常使用。\"\n}",
+      "parsed_output": {
+        "generated_title": "茶花圆桶形无盖塑料垃圾桶 家庭使用",
+        "selling_points": [
+          "采用环保塑料材质，安全耐用",
+          "圆桶设计，节省空间，美观大方",
+          "无盖设计，方便投放垃圾，减少异味"
+        ],
+        "short_description": "茶花品牌出品的这款垃圾桶，采用环保塑料材质，安全耐用；圆桶形设计，既节省空间又美观大方；无盖设计便于投放垃圾，有效减少异味产生，适合家庭日常使用。"
+      },
+      "parse_error": null,
+      "generation_seconds": 5.341
+    }
+  ]
+}

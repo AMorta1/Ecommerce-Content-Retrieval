@@ -1,0 +1,25 @@
+{
+  "dataset_version": "week1_v3",
+  "taxonomy_version": "manual_whitelist_v3_provisional",
+  "sources": {
+    "full": "../product1m_product5m_id_label.json",
+    "train": "../product1m_product5m_train_id_label.json",
+    "test": "../product1m_product5m_test_id_label.json"
+  },
+  "seed": 42,
+  "per_category": 250,
+  "max_title_chars": 100,
+  "max_pv_chars": 12000,
+  "min_attribute_keys": 3,
+  "image_hosts": ["img.alicdn.com", "gongxiangdm.oss-cn-zhangjiakou.aliyuncs.com"],
+  "categories": [
+    {"category_l1": "3C数码", "category_l2": "耳机", "raw_labels": ["耳机/耳麦", "蓝牙耳机", "手机耳机", "电脑耳机/耳麦"], "exclude_title_terms": ["保护套", "收纳包", "耳机套", "耳机线材"]},
+    {"category_l1": "3C数码", "category_l2": "键盘", "raw_labels": ["键盘"], "exclude_title_terms": ["键帽", "保护膜", "键盘膜", "键鼠套装", "工业", "工控", "轴体按键", "高特轴体", "大保健套餐"], "exclude_laptop_replacement_keyboards": true},
+    {"category_l1": "3C数码", "category_l2": "鼠标", "raw_labels": ["有线鼠标", "无线鼠标"], "exclude_title_terms": ["鼠标垫", "键鼠套装"]},
+    {"category_l1": "3C数码", "category_l2": "移动电源", "raw_labels": ["移动电源"], "exclude_title_terms": ["保护套", "空壳", "电路板"]},
+    {"category_l1": "家居日用", "category_l2": "保温杯", "raw_labels": ["保温杯"], "exclude_title_terms": ["杯盖配件", "杯套"]},
+    {"category_l1": "家居日用", "category_l2": "收纳箱", "raw_labels": ["收纳箱"], "exclude_title_terms": []},
+    {"category_l1": "家居日用", "category_l2": "拖把", "raw_labels": ["平板拖把", "旋转拖把", "胶棉拖把"], "exclude_title_terms": ["替换头", "替换装", "拖把配件"]},
+    {"category_l1": "家居日用", "category_l2": "垃圾桶", "raw_labels": ["垃圾桶", "感应垃圾桶", "不锈钢垃圾桶"], "exclude_title_terms": ["车载", "车用", "环卫", "挂车", "工业", "医疗", "医用", "户外", "240L", "240l", "120L", "120l"], "exclude_attribute_values": {"适用场景": ["工业使用", "户外使用"]}}
+  ]
+}

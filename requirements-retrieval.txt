@@ -1,0 +1,7 @@
+--extra-index-url https://www.paddlepaddle.org.cn/packages/stable/cu130/
+
+numpy==1.26.4
+paddlepaddle-gpu==3.3.0
+paddlenlp==3.0.0b4
+aistudio-sdk==0.2.6
+faiss-cpu==1.15.0

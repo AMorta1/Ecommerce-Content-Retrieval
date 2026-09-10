@@ -1,0 +1,52 @@
+{
+  "status": "index_build_completed",
+  "created_at_utc": "2026-09-08T02:28:57+00:00",
+  "model": "PaddlePaddle/ernie_vil-2.0-base-zh",
+  "device": "gpu:0",
+  "batch_size": 8,
+  "dataset_path": "data/processed/week1_v3/multimodal/products.jsonl",
+  "dataset_sha256": "ba650e3d02bb38d0841210a615986439b71fe9b2a2db3dd6c16406302d33b586",
+  "product_count": 1992,
+  "embedding_dimension": 768,
+  "feature_dtype": "float32",
+  "index_type": "IndexFlatIP",
+  "similarity": "cosine_via_normalized_inner_product",
+  "corpus_splits": {
+    "test": 200,
+    "train": 1592,
+    "validation": 200
+  },
+  "category_counts": {
+    "保温杯": 250,
+    "垃圾桶": 250,
+    "拖把": 248,
+    "收纳箱": 249,
+    "移动电源": 249,
+    "耳机": 250,
+    "键盘": 247,
+    "鼠标": 249
+  },
+  "timings_seconds": {
+    "model_load": 6.178,
+    "image_encoding": 92.038,
+    "index_build": 0.029,
+    "total": 98.27
+  },
+  "average_image_encoding_ms": 46.204,
+  "gpu_memory_allocated_mib": 777.2,
+  "outputs": {
+    "features_path": "artifacts/features/ernie_vil_week1_v3.npy",
+    "features_sha256": "c93f9c81869104628a6e5a9647f9fe9482b05a0de7238670a0ceca287f2745fb",
+    "index_path": "artifacts/indexes/ernie_vil_week1_v3.faiss",
+    "index_sha256": "9521eedef59163f7ff2d5899f8f06d3802d25798845af2201883597a71954d6f",
+    "metadata_path": "artifacts/indexes/ernie_vil_week1_v3_metadata.jsonl",
+    "metadata_sha256": "d3270f849f8ed8d17a776274546367bc475f7a221dc1600feb741f0fa612400e"
+  },
+  "versions": {
+    "paddlepaddle-gpu": "3.3.0",
+    "paddlenlp": "3.0.0b4",
+    "numpy": "1.26.4",
+    "faiss-cpu": "1.15.0"
+  },
+  "metric_warning": "该索引覆盖全部实验商品，人工相关性标注尚未完成，不能据此报告 Recall@10 或 Precision@10。"
+}

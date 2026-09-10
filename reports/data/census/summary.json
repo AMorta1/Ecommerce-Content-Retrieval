@@ -1,0 +1,19 @@
+{
+  "source": "E:\\Projects\\Baidu\\product1m_product5m_id_label.json",
+  "source_bytes": 5794852057,
+  "records": 6313067,
+  "unique_labels": 6522,
+  "field_presence": {
+    "title": 6313067,
+    "label": 6313067,
+    "url": 6313067,
+    "video": 6313067,
+    "pv": 6313067
+  },
+  "empty_fields": {
+    "video": 936223,
+    "url": 373,
+    "pv": 4895
+  },
+  "elapsed_seconds": 193.34
+}

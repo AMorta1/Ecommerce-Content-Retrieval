@@ -1,0 +1,39 @@
+{
+  "dataset_path": "data/processed/week1_v3/multimodal/test.jsonl",
+  "samples_path": "data/processed/week1_v3/generation_evaluation_samples.jsonl",
+  "outputs_path": "reports/generation/baseline/evaluation_outputs.json",
+  "annotation_path": "reports/generation/evaluation/annotation_pool.csv",
+  "metrics_path": "reports/generation/evaluation/baseline_metrics.json",
+  "manifest_path": "reports/generation/evaluation/annotation_manifest.json",
+  "random_seed": 42,
+  "minimum_core_attribute_count": 4,
+  "excluded_attribute_values": ["其他", "其它", "OTHER", "other", "未知", "不详", "默认"],
+  "excluded_values_by_attribute": {
+    "型号": ["耳机", "键盘", "鼠标", "移动电源", "保温杯", "收纳箱", "拖把", "垃圾桶"]
+  },
+  "category_quotas": {
+    "耳机": 13,
+    "键盘": 13,
+    "鼠标": 12,
+    "移动电源": 12,
+    "保温杯": 13,
+    "收纳箱": 13,
+    "拖把": 12,
+    "垃圾桶": 12
+  },
+  "core_attributes": {
+    "耳机": ["品牌", "型号", "佩戴方式", "耳机类别", "耳机与播放设备连接方式", "蓝牙版本", "功能"],
+    "键盘": ["品牌", "型号", "接口类型", "是否无线", "是否机械键盘", "是否有多媒体功能键", "有无手托"],
+    "鼠标": ["品牌", "型号", "接口类型", "工作方式", "光学分辨率", "按键数", "无线技术", "电源方式"],
+    "移动电源": ["品牌", "型号", "电池容量", "电池类型", "电芯类型", "外壳材质", "充电协议", "最大输出功率"],
+    "保温杯": ["品牌", "型号", "材质", "容量", "保温时长", "杯子样式", "适用人群", "适用场景"],
+    "收纳箱": ["品牌", "型号", "材质", "尺寸", "适用对象", "适用空间", "净重"],
+    "拖把": ["品牌", "型号", "杆材质", "拖布材质", "拖把杆类型", "挤水方式", "驱动类型", "电源方式"],
+    "垃圾桶": ["品牌", "外壳材质", "形状", "容量", "垃圾桶类型", "开合方式", "适用场景"]
+  },
+  "targets": {
+    "core_attribute_hit_rate": 0.75,
+    "fluency_pass_rate": 0.8,
+    "average_generation_seconds": 12.0
+  }
+}

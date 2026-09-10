@@ -1,0 +1,11 @@
+{
+  "model_name": "PaddlePaddle/ernie_vil-2.0-base-zh",
+  "device": "gpu:0",
+  "batch_size": 8,
+  "dataset_path": "data/processed/week1_v3/multimodal/products.jsonl",
+  "features_path": "artifacts/features/ernie_vil_week1_v3.npy",
+  "index_path": "artifacts/indexes/ernie_vil_week1_v3.faiss",
+  "metadata_path": "artifacts/indexes/ernie_vil_week1_v3_metadata.jsonl",
+  "report_path": "reports/retrieval/baseline/index_build.json",
+  "default_top_k": 5
+}

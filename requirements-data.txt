@@ -1,0 +1,3 @@
+# Only needed for image validation. Streaming, cleaning and splitting use stdlib.
+# Version tested in the current local environment.
+Pillow==11.1.0
