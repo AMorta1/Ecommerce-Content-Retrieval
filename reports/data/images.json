@@ -1,0 +1,72 @@
+{
+  "attempted": 2000,
+  "image_status_counts": {
+    "cached": 1964,
+    "downloaded": 32,
+    "failed": 4
+  },
+  "ready_records": 1992,
+  "exact_image_duplicates_removed": [
+    {
+      "product_id": "577911531497",
+      "retained_id": "577455347764"
+    },
+    {
+      "product_id": "597833185947",
+      "retained_id": "597328189786"
+    },
+    {
+      "product_id": "607219997827",
+      "retained_id": "606689296905"
+    },
+    {
+      "product_id": "621324890880",
+      "retained_id": "615341392744"
+    }
+  ],
+  "by_category": {
+    "耳机": 250,
+    "收纳箱": 249,
+    "保温杯": 250,
+    "鼠标": 249,
+    "键盘": 247,
+    "拖把": 248,
+    "垃圾桶": 250,
+    "移动电源": 249
+  },
+  "splits": {
+    "train": {
+      "耳机": 200,
+      "保温杯": 200,
+      "鼠标": 199,
+      "键盘": 197,
+      "收纳箱": 199,
+      "拖把": 198,
+      "垃圾桶": 200,
+      "移动电源": 199
+    },
+    "validation": {
+      "键盘": 25,
+      "移动电源": 25,
+      "垃圾桶": 25,
+      "拖把": 25,
+      "保温杯": 25,
+      "鼠标": 25,
+      "收纳箱": 25,
+      "耳机": 25
+    },
+    "test": {
+      "收纳箱": 25,
+      "键盘": 25,
+      "拖把": 25,
+      "鼠标": 25,
+      "移动电源": 25,
+      "耳机": 25,
+      "保温杯": 25,
+      "垃圾桶": 25
+    }
+  },
+  "downloaded_or_cached_bytes": 175479654,
+  "elapsed_seconds": 29.77,
+  "note": "Original experiment split assignments retained after image filtering; counts may differ from 80/10/10."
+}

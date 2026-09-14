@@ -1,0 +1,16 @@
+{
+  "version": "week1_v3_validation_pool_v1",
+  "retrieval_config": "configs/retrieval.json",
+  "queries_path": "configs/retrieval_evaluation_queries.jsonl",
+  "gallery_split": "validation",
+  "pool_depth": 20,
+  "metric_cutoff": 10,
+  "positive_grade_threshold": 1,
+  "annotation_path": "reports/retrieval/evaluation/annotation_pool.csv",
+  "manifest_path": "reports/retrieval/evaluation/annotation_manifest.json",
+  "metrics_path": "reports/retrieval/evaluation/baseline_metrics.json",
+  "prd_targets": {
+    "recall_at_10": 0.65,
+    "precision_at_10": 0.55
+  }
+}

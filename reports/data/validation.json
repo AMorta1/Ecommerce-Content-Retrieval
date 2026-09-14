@@ -1,0 +1,27 @@
+{
+  "validated_records": 1992,
+  "split_sizes": {
+    "train": 1592,
+    "validation": 200,
+    "test": 200
+  },
+  "by_category": {
+    "耳机": 250,
+    "收纳箱": 249,
+    "保温杯": 250,
+    "鼠标": 249,
+    "键盘": 247,
+    "拖把": 248,
+    "垃圾桶": 250,
+    "移动电源": 249
+  },
+  "exact_duplicate_id_content_url_image_checks": "passed",
+  "all_images_full_decode_and_sha256": "passed",
+  "five_training_inference_examples": "passed",
+  "limitations": [
+    "Not a record-by-record semantic category review",
+    "Does not automatically remove perceptually similar images or paraphrased duplicates",
+    "Attributes are source claims, not verified facts"
+  ],
+  "products_jsonl_sha256": "ba650e3d02bb38d0841210a615986439b71fe9b2a2db3dd6c16406302d33b586"
+}

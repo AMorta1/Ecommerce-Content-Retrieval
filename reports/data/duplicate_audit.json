@@ -1,0 +1,32 @@
+{
+  "dataset_version": "week1_v3",
+  "record_count": 1992,
+  "brand_model_heuristic": {
+    "method": "同品类、规范化品牌和型号完全相同；占位品牌或型号不参与",
+    "repeated_groups": 70,
+    "cross_split_groups": 30,
+    "products_in_cross_split_groups": 64,
+    "decision": "保留并记录。相同型号不等于重复商品；若后续构建 LoRA 训练数据，应按型号组重新划分。"
+  },
+  "image_difference_hash": {
+    "method": "同品类 64 位 dHash，两图汉明距离不大于 4 记为疑似近重复",
+    "candidate_pairs": 13,
+    "cross_split_pairs": 6,
+    "pairs": [
+      {"left": "38237091114", "right": "609608929102", "distance": 3, "cross_split": false},
+      {"left": "43078825428", "right": "43215364674", "distance": 0, "cross_split": false},
+      {"left": "535288743349", "right": "592563957845", "distance": 2, "cross_split": true},
+      {"left": "587244433192", "right": "613652655313", "distance": 1, "cross_split": true},
+      {"left": "603541115227", "right": "613530645563", "distance": 2, "cross_split": false},
+      {"left": "605476679887", "right": "607344174595", "distance": 2, "cross_split": false},
+      {"left": "610074667978", "right": "610805722427", "distance": 1, "cross_split": false},
+      {"left": "610115561253", "right": "619518651001", "distance": 3, "cross_split": false},
+      {"left": "615938971838", "right": "621341696263", "distance": 0, "cross_split": true},
+      {"left": "616655611311", "right": "621052633101", "distance": 2, "cross_split": true},
+      {"left": "617425544078", "right": "620529768812", "distance": 2, "cross_split": true},
+      {"left": "618126763705", "right": "623280834523", "distance": 0, "cross_split": false},
+      {"left": "621341804075", "right": "621593539222", "distance": 0, "cross_split": true}
+    ],
+    "decision": "不自动删除。dHash 只表示低分辨率视觉结构相似，不能证明商品重复。"
+  }
+}

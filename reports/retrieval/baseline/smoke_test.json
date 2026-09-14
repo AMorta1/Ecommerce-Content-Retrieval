@@ -1,0 +1,462 @@
+{
+  "status": "full_catalog_smoke_test_completed",
+  "model": "PaddlePaddle/ernie_vil-2.0-base-zh",
+  "device": "gpu:0",
+  "python_version": "3.10.21",
+  "query_count": 5,
+  "candidate_count": 1992,
+  "embedding_dimension": 768,
+  "timings_seconds": {
+    "model_load": 5.833,
+    "five_query_encoding": 0.276,
+    "faiss_search_all_candidates": 0.002001
+  },
+  "gpu_memory_allocated_mib": 777.2,
+  "same_product_top1_count": 0,
+  "same_product_top10_count": 0,
+  "same_category_top10_count": 50,
+  "top10_candidate_total": 50,
+  "metric_warning": "查询由目标商品信息人工编写且未做独立相关性标注；同商品排名只是链路检查，不是正式 Recall@10 或 Precision@10。",
+  "rankings": [
+    {
+      "query_product_id": "559717136702",
+      "query": "带麦克风和线控的有线耳塞",
+      "same_product_image_rank": 124,
+      "same_category_in_top_10": 10,
+      "top_10_candidates": [
+        {
+          "rank": 1,
+          "score": 0.371699,
+          "product_id": "572258998156",
+          "title": "力族金属入耳式耳机重低音通用立体声线控运动有线低音炮手机耳麦",
+          "category_l2": "耳机",
+          "image_path": "data/images/week1_v3/572258998156.webp"
+        },
+        {
+          "rank": 2,
+          "score": 0.358475,
+          "product_id": "578373246053",
+          "title": "PLEXTON/浦记G15电脑手机耳机入耳式K歌游戏耳麦 L型插头带音频线",
+          "category_l2": "耳机",
+          "image_path": "data/images/week1_v3/578373246053.webp"
+        },
+        {
+          "rank": 3,
+          "score": 0.356988,
+          "product_id": "588823770512",
+          "title": "新款挂脖无线蓝牙耳机运动颈挂式跑步双耳入耳式立体声降噪包邮",
+          "category_l2": "耳机",
+          "image_path": "data/images/week1_v3/588823770512.webp"
+        },
+        {
+          "rank": 4,
+          "score": 0.353465,
+          "product_id": "40400411412",
+          "title": "gh手机耳机入耳式适用华为P40荣耀20iV109X8畅享9Plus8emate7通用",
+          "category_l2": "耳机",
+          "image_path": "data/images/week1_v3/40400411412.webp"
+        },
+        {
+          "rank": 5,
+          "score": 0.351143,
+          "product_id": "558909494363",
+          "title": "Shure/舒尔 SE535-BT高解析度三单元动铁HiFi监听隔音蓝牙耳机",
+          "category_l2": "耳机",
+          "image_path": "data/images/week1_v3/558909494363.webp"
+        },
+        {
+          "rank": 6,
+          "score": 0.348981,
+          "product_id": "566220836792",
+          "title": "9D重低音炮入耳式耳机HiFi音质耳塞线控耳麦运动游戏通用手机耳机",
+          "category_l2": "耳机",
+          "image_path": "data/images/week1_v3/566220836792.webp"
+        },
+        {
+          "rank": 7,
+          "score": 0.34702,
+          "product_id": "618274242436",
+          "title": "新品原装 hifi音质 中孔 纯铜平头白色耳机耳塞式重低音mp3老耳机",
+          "category_l2": "耳机",
+          "image_path": "data/images/week1_v3/618274242436.webp"
+        },
+        {
+          "rank": 8,
+          "score": 0.346528,
+          "product_id": "621400991855",
+          "title": "游戏耳机入耳式吃鸡听声辩位专用电竞四核双动圈有线高音质手机通用男女重低音带麦K歌HIFI苹果安卓主动降噪",
+          "category_l2": "耳机",
+          "image_path": "data/images/week1_v3/621400991855.webp"
+        },
+        {
+          "rank": 9,
+          "score": 0.346142,
+          "product_id": "578066755922",
+          "title": "适用于安卓苹果VIVOOPPO耳塞智能通话听歌入耳式手机耳机厂家",
+          "category_l2": "耳机",
+          "image_path": "data/images/week1_v3/578066755922.webp"
+        },
+        {
+          "rank": 10,
+          "score": 0.345309,
+          "product_id": "568408880975",
+          "title": "SENNHEISER/森海塞尔 MOMENTUM大馒头二代 木馒头pxc550蓝牙耳机",
+          "category_l2": "耳机",
+          "image_path": "data/images/week1_v3/568408880975.webp"
+        }
+      ]
+    },
+    {
+      "query_product_id": "16454614360",
+      "query": "USB接口的迷你有线键盘",
+      "same_product_image_rank": 86,
+      "same_category_in_top_10": 10,
+      "top_10_candidates": [
+        {
+          "rank": 1,
+          "score": 0.374859,
+          "product_id": "620750812452",
+          "title": "雷蛇技术正品富德无线键盘鼠标套装小便携女生机械静音薄笔记本台",
+          "category_l2": "键盘",
+          "image_path": "data/images/week1_v3/620750812452.webp"
+        },
+        {
+          "rank": 2,
+          "score": 0.369589,
+          "product_id": "614494141638",
+          "title": "雷蛇技术正品黑爵308i 女生可爱粉色蓝牙键盘可连接苹果手机ipad",
+          "category_l2": "键盘",
+          "image_path": "data/images/week1_v3/614494141638.webp"
+        },
+        {
+          "rank": 3,
+          "score": 0.366564,
+          "product_id": "592705064576",
+          "title": "PS2圆口键盘鼠标套装 USB有线笔记本台式圆孔头电脑键鼠家用办公",
+          "category_l2": "键盘",
+          "image_path": "data/images/week1_v3/592705064576.webp"
+        },
+        {
+          "rank": 4,
+          "score": 0.365064,
+          "product_id": "8443620439",
+          "title": "优派KU855巧克力键盘有线纤薄电脑笔记本USB迷你静音外接小键盘白",
+          "category_l2": "键盘",
+          "image_path": "data/images/week1_v3/8443620439.webp"
+        },
+        {
+          "rank": 5,
+          "score": 0.363446,
+          "product_id": "606689296905",
+          "title": "小袋鼠DS-9818 笔记本台式键盘usb外接轻薄有线办公时尚版多媒体",
+          "category_l2": "键盘",
+          "image_path": "data/images/week1_v3/606689296905.webp"
+        },
+        {
+          "rank": 6,
+          "score": 0.362487,
+          "product_id": "537371573076",
+          "title": "海志有线键盘笔记本台式电脑家用办公游戏商务外接键盘USB接口",
+          "category_l2": "键盘",
+          "image_path": "data/images/week1_v3/537371573076.webp"
+        },
+        {
+          "rank": 7,
+          "score": 0.358914,
+          "product_id": "600945550420",
+          "title": "樱桃粉色笔记本无线键盘鼠标套装迷你静音女生可爱办公打字专用电脑小一体接口USB便携式外接巧克力网红外设",
+          "category_l2": "键盘",
+          "image_path": "data/images/week1_v3/600945550420.webp"
+        },
+        {
+          "rank": 8,
+          "score": 0.358679,
+          "product_id": "613439244945",
+          "title": "粉色机械键盘双模青轴黑轴鼠标套装办公打字笔记本台式电脑圆健外设游戏玩吃鸡电竞专用女生少女心可爱非蓝牙",
+          "category_l2": "键盘",
+          "image_path": "data/images/week1_v3/613439244945.webp"
+        },
+        {
+          "rank": 9,
+          "score": 0.35671,
+          "product_id": "618461997495",
+          "title": "正品森松尼机械手感键盘鼠标套装静音发光台式电脑笔记本办雷蛇级",
+          "category_l2": "键盘",
+          "image_path": "data/images/week1_v3/618461997495.webp"
+        },
+        {
+          "rank": 10,
+          "score": 0.356389,
+          "product_id": "616457691807",
+          "title": "官方正品机械感键盘电竞电脑游戏专用无声静音鼠标套装网吧英雄联",
+          "category_l2": "键盘",
+          "image_path": "data/images/week1_v3/616457691807.webp"
+        }
+      ]
+    },
+    {
+      "query_product_id": "542123769427",
+      "query": "USB接口六键光电游戏鼠标",
+      "same_product_image_rank": 128,
+      "same_category_in_top_10": 10,
+      "top_10_candidates": [
+        {
+          "rank": 1,
+          "score": 0.368878,
+          "product_id": "600941106142",
+          "title": "小手电竞女生笔记本电脑l吃鸡1.1游戏cf职业酷睿codol鼠标宏有线",
+          "category_l2": "鼠标",
+          "image_path": "data/images/week1_v3/600941106142.webp"
+        },
+        {
+          "rank": 2,
+          "score": 0.363095,
+          "product_id": "595934042619",
+          "title": "Wireless Charging Mute Colorful Game Machine Mouse游戏鼠标",
+          "category_l2": "鼠标",
+          "image_path": "data/images/week1_v3/595934042619.webp"
+        },
+        {
+          "rank": 3,
+          "score": 0.362781,
+          "product_id": "566978020204",
+          "title": "追光豹正品包邮游戏办公设计钢板加重静音有线发光鼠标定位准调速",
+          "category_l2": "鼠标",
+          "image_path": "data/images/week1_v3/566978020204.webp"
+        },
+        {
+          "rank": 4,
+          "score": 0.361104,
+          "product_id": "580333585585",
+          "title": "达尔优LM109执法官台式电脑鼠标牧马人游戏有线发光USB吃鸡电脑笔记本办公家用LOL电竞大司马骚男外设店CF",
+          "category_l2": "鼠标",
+          "image_path": "data/images/week1_v3/580333585585.webp"
+        },
+        {
+          "rank": 5,
+          "score": 0.360092,
+          "product_id": "558642897514",
+          "title": "09外设店 大酒神 dota lol游戏鼠标 自定义宏编程 FTD2009牧马人",
+          "category_l2": "鼠标",
+          "image_path": "data/images/week1_v3/558642897514.webp"
+        },
+        {
+          "rank": 6,
+          "score": 0.358729,
+          "product_id": "565929589854",
+          "title": "米蟹M6台式电脑7D钻石版 发光守望米蟹鼠标电竞有线游戏鼠标CF/LO",
+          "category_l2": "鼠标",
+          "image_path": "data/images/week1_v3/565929589854.webp"
+        },
+        {
+          "rank": 7,
+          "score": 0.357808,
+          "product_id": "610107018549",
+          "title": "T26 2.4G无线鼠标TYPE-C可充电接口七键游戏鼠标RGB发光快充鼠标",
+          "category_l2": "鼠标",
+          "image_path": "data/images/week1_v3/610107018549.webp"
+        },
+        {
+          "rank": 8,
+          "score": 0.357113,
+          "product_id": "43027878612",
+          "title": "楚王158鼠标有线USB家用办公商务PS2圆口台式笔记本电脑长线1.8米",
+          "category_l2": "鼠标",
+          "image_path": "data/images/week1_v3/43027878612.webp"
+        },
+        {
+          "rank": 9,
+          "score": 0.356429,
+          "product_id": "544571250320",
+          "title": "新盟曼巴狂蛇电竞游戏机械鼠标 笔记本电脑USB有线鼠标宏编程lol",
+          "category_l2": "鼠标",
+          "image_path": "data/images/week1_v3/544571250320.webp"
+        },
+        {
+          "rank": 10,
+          "score": 0.355815,
+          "product_id": "610723213052",
+          "title": "电竞鼠标有线电脑吃鸡宏鼠标笔记本游戏穿越火线 家用lol机械静音",
+          "category_l2": "鼠标",
+          "image_path": "data/images/week1_v3/610723213052.webp"
+        }
+      ]
+    },
+    {
+      "query_product_id": "574123212908",
+      "query": "儿童用不锈钢保温杯",
+      "same_product_image_rank": 19,
+      "same_category_in_top_10": 10,
+      "top_10_candidates": [
+        {
+          "rank": 1,
+          "score": 0.417233,
+          "product_id": "596666715224",
+          "title": "儿童真空保温杯便携带吸管小学生 316不锈钢直饮吸管杯24小时保温",
+          "category_l2": "保温杯",
+          "image_path": "data/images/week1_v3/596666715224.webp"
+        },
+        {
+          "rank": 2,
+          "score": 0.417195,
+          "product_id": "622673585164",
+          "title": "小学生保温杯 儿童卡通学生水杯男小孩304不锈钢女士可爱杯子带盖",
+          "category_l2": "保温杯",
+          "image_path": "data/images/week1_v3/622673585164.webp"
+        },
+        {
+          "rank": 3,
+          "score": 0.406534,
+          "product_id": "522559579022",
+          "title": "儿童保温杯带吸管幼儿园水壶小孩两用便携宝宝保温杯带吸管1-2岁",
+          "category_l2": "保温杯",
+          "image_path": "data/images/week1_v3/522559579022.png"
+        },
+        {
+          "rank": 4,
+          "score": 0.396677,
+          "product_id": "598857965466",
+          "title": "卡通可爱儿童保温杯带吸管两用宝宝女童小学生水壶幼儿园防漏水杯",
+          "category_l2": "保温杯",
+          "image_path": "data/images/week1_v3/598857965466.webp"
+        },
+        {
+          "rank": 5,
+          "score": 0.394424,
+          "product_id": "596270052992",
+          "title": "韩国正品杯具熊儿童保温杯多啦a梦口袋杯吸嘴三盖不锈钢礼盒水壶",
+          "category_l2": "保温杯",
+          "image_path": "data/images/week1_v3/596270052992.webp"
+        },
+        {
+          "rank": 6,
+          "score": 0.39401,
+          "product_id": "610559289710",
+          "title": "迪士尼小号儿童保温杯316不锈钢便携小学生水杯防摔可爱直饮杯子",
+          "category_l2": "保温杯",
+          "image_path": "data/images/week1_v3/610559289710.webp"
+        },
+        {
+          "rank": 7,
+          "score": 0.393765,
+          "product_id": "583748933392",
+          "title": "希乐不锈钢保温杯男女情侣杯子PP猩卡通水杯手柄屁屁猩办公保温杯",
+          "category_l2": "保温杯",
+          "image_path": "data/images/week1_v3/583748933392.webp"
+        },
+        {
+          "rank": 8,
+          "score": 0.388344,
+          "product_id": "586799992221",
+          "title": "膳魔师保温杯猪年限量款男女士小学生日本超轻便携不锈钢水杯子",
+          "category_l2": "保温杯",
+          "image_path": "data/images/week1_v3/586799992221.webp"
+        },
+        {
+          "rank": 9,
+          "score": 0.385198,
+          "product_id": "601456232034",
+          "title": "diyi帝怡儿童保温杯带吸管两用水杯防摔男女婴幼儿园宝宝学生水壶",
+          "category_l2": "保温杯",
+          "image_path": "data/images/week1_v3/601456232034.webp"
+        },
+        {
+          "rank": 10,
+          "score": 0.3834,
+          "product_id": "584801226682",
+          "title": "迪士尼儿童水杯带吸管两用幼儿园便携小学生水壶瓶男女宝宝保温杯",
+          "category_l2": "保温杯",
+          "image_path": "data/images/week1_v3/584801226682.webp"
+        }
+      ]
+    },
+    {
+      "query_product_id": "523865583326",
+      "query": "家用无盖塑料垃圾桶",
+      "same_product_image_rank": 159,
+      "same_category_in_top_10": 10,
+      "top_10_candidates": [
+        {
+          "rank": 1,
+          "score": 0.412899,
+          "product_id": "621886559374",
+          "title": "智能垃圾桶机器人自动开关垃圾桶智能感应式垃圾桶大号创意客厅",
+          "category_l2": "垃圾桶",
+          "image_path": "data/images/week1_v3/621886559374.webp"
+        },
+        {
+          "rank": 2,
+          "score": 0.406956,
+          "product_id": "520800024832",
+          "title": "垃圾桶无盖家用带压圈大号厨房卫生间厕所办公室简约酒店商用纸篓",
+          "category_l2": "垃圾桶",
+          "image_path": "data/images/week1_v3/520800024832.webp"
+        },
+        {
+          "rank": 3,
+          "score": 0.399514,
+          "product_id": "565290418809",
+          "title": "学生宿舍用塑料垃圾桶简约方形家用客厅厨房垃圾筐卫生间厕所纸篓",
+          "category_l2": "垃圾桶",
+          "image_path": "data/images/week1_v3/565290418809.webp"
+        },
+        {
+          "rank": 4,
+          "score": 0.393885,
+          "product_id": "596931239649",
+          "title": "小型北欧简单20L升垃圾桶不带盖家用简易无盖欧式红色仿古带圈",
+          "category_l2": "垃圾桶",
+          "image_path": "data/images/week1_v3/596931239649.webp"
+        },
+        {
+          "rank": 5,
+          "score": 0.393064,
+          "product_id": "615414912796",
+          "title": "桌面垃圾桶按压式办公室创意迷你可爱桌上客厅弹盖小垃圾桶TS型",
+          "category_l2": "垃圾桶",
+          "image_path": "data/images/week1_v3/615414912796.webp"
+        },
+        {
+          "rank": 6,
+          "score": 0.392787,
+          "product_id": "617437604526",
+          "title": "带盖垃圾桶家用 厨房拉圾筒卧室客厅有盖厕所卫生间马桶纸篓大号",
+          "category_l2": "垃圾桶",
+          "image_path": "data/images/week1_v3/617437604526.webp"
+        },
+        {
+          "rank": 7,
+          "score": 0.391029,
+          "product_id": "617493601089",
+          "title": "现代简约家用垃圾桶带盖按压弹盖客厅厨房干湿分离垃圾分类垃圾篓",
+          "category_l2": "垃圾桶",
+          "image_path": "data/images/week1_v3/617493601089.webp"
+        },
+        {
+          "rank": 8,
+          "score": 0.390463,
+          "product_id": "600528812096",
+          "title": "居家家压圈分类垃圾桶家用客厅夹缝拉圾桶厨房厨余干湿分离垃圾筒",
+          "category_l2": "垃圾桶",
+          "image_path": "data/images/week1_v3/600528812096.webp"
+        },
+        {
+          "rank": 9,
+          "score": 0.390429,
+          "product_id": "26998768780",
+          "title": "欧本客厅全自动垃圾桶智能感应式家用卫生间带盖环保情绪垃圾桶",
+          "category_l2": "垃圾桶",
+          "image_path": "data/images/week1_v3/26998768780.webp"
+        },
+        {
+          "rank": 10,
+          "score": 0.390292,
+          "product_id": "622535352988",
+          "title": "网红垃圾桶家用客厅创意可爱少女卧室轻奢高档现代简约北欧风ins",
+          "category_l2": "垃圾桶",
+          "image_path": "data/images/week1_v3/622535352988.webp"
+        }
+      ]
+    }
+  ]
+}

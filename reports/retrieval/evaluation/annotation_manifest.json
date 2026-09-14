@@ -1,0 +1,44 @@
+{
+  "status": "human_annotation_completed",
+  "version": "week1_v3_validation_pool_v1",
+  "created_at_utc": "2026-09-08T02:31:28+00:00",
+  "model": "PaddlePaddle/ernie_vil-2.0-base-zh",
+  "gallery_split": "validation",
+  "gallery_size": 200,
+  "query_count": 24,
+  "queries_by_category": {
+    "保温杯": 3,
+    "垃圾桶": 3,
+    "拖把": 3,
+    "收纳箱": 3,
+    "移动电源": 3,
+    "耳机": 3,
+    "键盘": 3,
+    "鼠标": 3
+  },
+  "pool_depth": 20,
+  "annotation_rows": 480,
+  "annotation_file_sha256": "c208828dbcda9987e475159bf44da6106b8a76715fc5c041a3e34fed6c2f4c2a",
+  "query_file_sha256": "ec726239ffce9ea8666ae1138d5009f3f1dda2954c728455bc2fc68ee3aae6ad",
+  "index_sha256": "9521eedef59163f7ff2d5899f8f06d3802d25798845af2201883597a71954d6f",
+  "timings_seconds": {
+    "model_load": 5.811,
+    "query_encoding": 0.335,
+    "faiss_full_search": 0.005163
+  },
+  "label_values": {
+    "2": "高度相关：满足品类和主要意图",
+    "1": "部分相关：核心品类正确，但只满足部分意图",
+    "0": "不相关：品类错误或与关键要求冲突"
+  },
+  "annotation_progress": {
+    "filled_rows": 480,
+    "human_reviewed_rows": 480,
+    "assistant_draft_rows": 0,
+    "remaining_human_review_rows": 0,
+    "migration_source_version": "week1_v2_validation_pool_v1",
+    "migration_source_sha256": "1a7efb1d0f9b24e294da394c97624976c1a5d9042af5542dc87e00779b552356",
+    "migration_key": ["query_id", "product_id"]
+  },
+  "warning": "当前 Recall 的分母来自每条查询的 Top-20 人工候选池，不等同于覆盖全部商品的完整 Recall。"
+}
