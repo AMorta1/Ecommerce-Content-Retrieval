@@ -1,0 +1,11 @@
+{
+  "version": "generation_sampling_prompt_v2",
+  "outputs_path": "reports/generation/baseline/evaluation_outputs_sampling_v2.json",
+  "annotation_path": "reports/generation/evaluation/annotation_pool_sampling_v2.csv",
+  "metrics_path": "reports/generation/evaluation/baseline_metrics_sampling_v2.json",
+  "targets": {
+    "core_attribute_hit_rate": 0.75,
+    "fluency_pass_rate": 0.8,
+    "average_generation_seconds": 12.0
+  }
+}

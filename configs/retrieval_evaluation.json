@@ -3,6 +3,7 @@
   "retrieval_config": "configs/retrieval.json",
   "queries_path": "configs/retrieval_evaluation_queries.jsonl",
   "gallery_split": "validation",
+  "catalog_feature": "image",
   "pool_depth": 20,
   "metric_cutoff": 10,
   "positive_grade_threshold": 1,

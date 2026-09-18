@@ -32,23 +32,35 @@ def validate_generation_input(generation_input: dict[str, Any]) -> None:
         raise ValueError(f"不支持的一级品类：{generation_input['category_l1']}")
 
 
-def build_messages(generation_input: dict[str, Any]) -> list[dict[str, str]]:
-    """把标准化商品属性转换为 Qwen 的 system/user 消息。"""
+def build_messages(
+    generation_input: dict[str, Any], prompt_version: str = "baseline_v1"
+) -> list[dict[str, str]]:
+    """按指定版本把商品属性转换为 Qwen 消息，保留旧基线 Prompt。"""
     validate_generation_input(generation_input)
+    if prompt_version not in ("baseline_v1", "baseline_v2"):
+        raise ValueError(f"不支持的 Prompt 版本：{prompt_version}")
     product_facts = {
         "一级品类": generation_input["category_l1"],
         "二级品类": generation_input["category_l2"],
         "商品属性": generation_input["attributes"],
     }
     style_guidance = CATEGORY_STYLE_GUIDANCE[generation_input["category_l1"]]
+    content_requirements = CONTENT_REQUIREMENTS.copy()
+    if prompt_version == "baseline_v2":
+        content_requirements["核心卖点"] = (
+            "恰好生成三个核心卖点，每个卖点是一句话，且必须能由输入属性直接支持；"
+            "即使有更多属性，也只选最重要的三点，不得添加第四个卖点。"
+        )
     task_requirements = "\n".join(
         f"- {content_type}：{requirement}"
-        for content_type, requirement in CONTENT_REQUIREMENTS.items()
+        for content_type, requirement in content_requirements.items()
     )
     system_prompt = (
         "你是专业的中文电商文案运营师。只能依据用户提供的商品事实写作，不得编造参数、"
         "功能、认证、促销、销量或售后承诺。只输出合法 JSON，不要输出 Markdown 和解释。"
     )
+    if prompt_version == "baseline_v2":
+        system_prompt += "selling_points 数组必须恰好有三个字符串，不能多也不能少。"
     user_prompt = (
         "请一次生成商品标题、核心卖点和短详情。三个内容类型分别遵循以下模板要求：\n"
         f"{task_requirements}\n"
@@ -140,7 +152,7 @@ class QwenGenerator:
     def generate(self, generation_input: dict[str, Any]) -> str:
         """生成一条文案，并且只返回新生成的文本。"""
         model_inputs = self.tokenizer.apply_chat_template(
-            build_messages(generation_input),
+            build_messages(generation_input, prompt_version=self.config["prompt_version"]),
             add_generation_prompt=True,
             tokenize=True,
             return_dict=True,

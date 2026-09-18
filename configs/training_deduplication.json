@@ -1,0 +1,9 @@
+{
+  "dataset_version": "week2_train_v1",
+  "source_dataset_version": "week1_v3",
+  "source_dataset": "data/processed/week1_v3/multimodal",
+  "output_dataset": "data/processed/week2_train_v1",
+  "frozen_splits": ["validation", "test"],
+  "image_dhash_max_distance": 4,
+  "policy": "冻结验证集和测试集不动；训练样本若与冻结集具有相同品牌-型号，或同品类图片 dHash 汉明距离不大于阈值，则从本版本训练集中排除。"
+}

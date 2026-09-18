@@ -73,7 +73,9 @@
 - v3 分层抽查每类 5 条，共 40 条；品类 40/40、图片 40/40 通过。
 - v2 的 40 条抽查中品类 39/40 通过，唯一失败项推动了 v3 键盘过滤规则，因此原表作为历史证据保留。
 
-近重复检查还发现 70 个重复品牌-型号组，其中 30 组跨划分；同品类中有 13 对 dHash 接近图片，其中 6 对跨划分。它们可能是不同商家的同型号 SKU，也可能只是图片版式相似，所以本阶段没有自动删除。若 Week 2 用商品数据训练 LoRA，应先人工确认同款关系，再按型号分组划分，避免训练泄漏。
+近重复检查还发现 70 个重复品牌-型号组，其中 30 组跨划分；同品类中有 13 对 dHash 接近图片，其中 6 对跨划分。它们可能是不同商家的同型号 SKU，也可能只是图片版式相似，所以 `week1_v3` 保持原样，确保 Week 1 基线可以复现。
+
+Week 2 构建 LoRA 数据前采用保守的防泄漏策略：验证集和测试集固定不动；训练商品只要与二者具有相同的规范化品牌-型号，或同品类图片的 64 位 dHash 汉明距离不大于 4，就从新的 `week2_train_v1` 训练版本中排除。该步骤不会把验证或测试商品移动到训练集，也不会改写 `week1_v3`。逐条排除证据和处理统计分别位于 `reports/data/training_deduplication_week2_v1.csv` 和 `.json`。
 
 机器可读证据位于：
 
@@ -92,6 +94,7 @@ python scripts/prepare_data.py
 python scripts/download_images.py --workers 4
 python scripts/prepare_inference_samples.py
 python scripts/validate_data.py
+python scripts/deduplicate_training_data.py
 python -m unittest discover -s tests -v
 ~~~
 
@@ -112,6 +115,7 @@ python scripts/repair_csv.py --repair reports/data/category_review.csv
 | `data/processed/week1_v3/multimodal/test.jsonl` | 200 条最终测试数据 |
 | `data/processed/week1_v3/inference_samples.jsonl` | 5 条人工检查过的单样本推理输入 |
 | `data/images/week1_v3/` | 有效商品图片 |
+| `data/processed/week2_train_v1/train.jsonl` | 排除跨划分近重复后、用于构建 LoRA 指令样本的 1,559 条初始训练商品 |
 
 数据和图片不提交 Git；代码、配置和 `reports/` 中的小型证据提交。Leader 可以用原始数据运行上述命令复现。
 
@@ -120,5 +124,5 @@ python scripts/repair_csv.py --repair reports/data/category_review.csv
 - 没有 1,992 条逐条人工品类核实，40 条抽查只用于发现系统性规则问题。
 - 来源属性可能与标题或图片冲突，不能把属性直接当作已经验证的商品事实。
 - 没有优质卖点、短详情等目标答案，当前数据不能直接视为 LoRA 指令集。
-- 近似重复和同型号商品尚未人工裁决。
+- 近似重复和同型号商品未逐对人工裁决；`week2_train_v1` 为降低泄漏风险进行了保守排除，可能同时排除部分不同商家的同型号商品。
 - 数据处理完成不等于正式检索指标达标；检索相关性需要单独人工标注。

@@ -2,7 +2,7 @@
 
 ## 一句话结论
 
-检索主线已经使用 `PaddlePaddle/ernie_vil-2.0-base-zh` 在本机 RTX 4070 Laptop 8GB 显存上跑通，并完成 `week1_v3` 全部 1,992 张商品图片的特征库和 Faiss 索引。中文文本和本地图片都能返回 Top-K 商品，满足 PRD“商品特征库构建”和“跨模态检索逻辑实现”的基线实现要求。
+检索主线已经使用 `PaddlePaddle/ernie_vil-2.0-base-zh` 在本机 RTX 4070 Laptop 8GB 显存上跑通，并完成 `week1_v3` 全部 1,992 件商品的图片特征与标题文本特征库。当前 Baseline 采用纯跨模态策略：中文文本检索商品图片索引，本地图片检索商品文本索引。实验性图文融合特征仅保留作后续优化对照，不作为 Baseline。
 
 24条 validation 查询、每条20个候选已经完成人工相关性复核。基线 Precision@10 为49.58%，低于PRD参考目标55%；候选池 Recall@10 为67.08%。由于没有标注 validation 全库，只能将后者称为 pooled Recall，不能冒充覆盖全库的完整 Recall。
 
@@ -31,24 +31,28 @@
 ## 基线实现
 
 ~~~text
-1,992 张商品图
-      ↓ ERNIE-ViL 图片编码
-1,992 × 768 的归一化向量
-      ↓ Faiss IndexFlatIP
-图片特征库与精确索引
-      ↑
-中文查询或新图片 → ERNIE-ViL 编码 → Top-K 商品
+1,992 张商品图 → ERNIE-ViL 图片编码 → 图片索引
+                                      ↑
+中文查询 → ERNIE-ViL 文本编码 ────────┘
+
+1,992 条商品标题 → ERNIE-ViL 文本编码 → 文本索引
+                                        ↑
+查询图片 → ERNIE-ViL 图片编码 ──────────┘
 ~~~
 
 - 商品库：`data/processed/week1_v3/multimodal/products.jsonl`。
 - 图片向量：`artifacts/features/ernie_vil_week1_v3.npy`。
-- Faiss 索引：`artifacts/indexes/ernie_vil_week1_v3.faiss`。
+- 文本向量：`artifacts/features/ernie_vil_week1_v3_text.npy`。
+- 实验性融合向量：`artifacts/features/ernie_vil_week1_v3_fused.npy`，只供后续优化对照。
+- 图片、文本和实验性融合 Faiss 索引：`artifacts/indexes/` 下对应的三个 `.faiss` 文件。
 - 行号与商品信息对应表：`artifacts/indexes/ernie_vil_week1_v3_metadata.jsonl`。
 - 模型、批量大小和所有路径：`configs/retrieval.json`。
 
 图片和文本向量先做 L2 归一化，再用 Faiss `IndexFlatIP` 排序；此时内积等价于余弦相似度。当前只有 1,992 个候选，CPU 精确索引已经足够快，没有必要让近似索引增加复杂度。
 
-商品库包含 train、validation、test，是为了提供完整本地检索体验。正式开发指标只使用 validation；最终方案确定后再单独使用 test，不能把全库试跑结果包装成无泄漏评测。
+商品库包含 train、validation、test，是为了提供完整本地检索体验。已完成人工复核的 24 条 validation 文本查询继续作为开发指标。另从冻结 test 中分层选出了 50 件查询商品；正式 test50 查询集目前为 v3。在首次正式 test 指标产生前，用户确认替换两条无相关候选的查询；test200 划分、其余 48 条查询和 1,152 行人工标签不变。新查询的 48 行也已人工复核，正式 test50 纯跨模态指标已生成，详情见 `docs/evaluation.md`。
+
+当前来源的 `description` 全为空，所以 PRD 建议的“标题+短描述”文本特征实际只使用标题。没有用模型生成的短描述回填，因为那会额外引入生成模型变量。该数据限制和特征哈希记录在 `reports/retrieval/baseline/feature_library.json`。
 
 ## 本机实测
 
@@ -85,6 +89,7 @@ python -m pip install --use-pep517 -r requirements-retrieval.txt
 
 ~~~powershell
 python scripts/build_index.py
+python scripts/build_text_features.py
 python scripts/smoke_test_retrieval.py
 python scripts/search.py --text "USB接口的迷你有线键盘" --top-k 5
 python scripts/search.py --image data/images/week1_v3/16454614360.webp --top-k 5
@@ -103,14 +108,16 @@ python scripts/build_index.py --overwrite
 已经完成：
 
 - ERNIE-ViL GPU 加载和统一图文编码封装。
-- 全部商品图片特征库和 Faiss 索引。
+- 全部商品图片、标题文本特征库及 Faiss 索引；实验性融合索引保留作后续对照。
 - 中文文本检索、图片检索和 Top-K 输出入口。
 - 五样本链路检查、速度记录和可复现环境。
 - validation 的24条查询、480行候选人工复核。
 - Precision@10、候选池 Recall@10、MRR@10 和 NDCG@10 正式基线报告。
+- 从冻结 test 分层选择 50 件查询商品，生成 1,200 行相关性标注表；v3 两处换选有记录和相关候选预检。
+- test50 的 1,200 行人工相关性复核及文本搜图、图片搜文本正式基线评测；指标见 `reports/retrieval/test_evaluation/baseline_metrics.json`。
 
 尚未完成：
 
-- 类别重排、图文特征融合、RAG 和优化前后对比。
-- Gradio Demo、压力测试和最终 test 评测。
+- 类别重排、RAG 和优化前后对比。
+- Gradio Demo、压力测试和最终优化方案的 test 对比评测。
 - LoRA/QLoRA 训练闭环与微调效果验证。

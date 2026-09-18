@@ -1,5 +1,6 @@
 import json
 import unittest
+from pathlib import Path
 
 from src.generation.evaluation import (
     GenerationJudgment,
@@ -9,6 +10,49 @@ from src.generation.evaluation import (
     parse_judgments,
 )
 from src.generation.qwen import build_messages, parse_generation_output
+
+
+class GenerationConfigTests(unittest.TestCase):
+    def test_sampling_parameters_are_active_without_changing_old_baseline(self) -> None:
+        project_root = Path(__file__).resolve().parents[1]
+        config_dir = project_root / "configs"
+        current = json.loads((config_dir / "generation.json").read_text(encoding="utf-8"))
+        historical = json.loads(
+            (config_dir / "generation_greedy_baseline.json").read_text(encoding="utf-8")
+        )
+
+        self.assertTrue(current["do_sample"])
+        self.assertEqual(current["temperature"], 0.7)
+        self.assertEqual(current["top_p"], 0.9)
+        self.assertEqual(current["prompt_version"], "baseline_v2")
+        self.assertFalse(historical["do_sample"])
+        self.assertEqual(historical["prompt_version"], "baseline_v1")
+        self.assertEqual(
+            {
+                key: value
+                for key, value in current.items()
+                if key not in ("do_sample", "prompt_version")
+            },
+            {
+                key: value
+                for key, value in historical.items()
+                if key not in ("do_sample", "prompt_version")
+            },
+        )
+
+    def test_sampling_evaluation_uses_separate_files_and_same_targets(self) -> None:
+        config_dir = Path(__file__).resolve().parents[1] / "configs"
+        historical = json.loads(
+            (config_dir / "generation_evaluation.json").read_text(encoding="utf-8")
+        )
+        sampling = json.loads(
+            (config_dir / "generation_evaluation_sampling_v2.json").read_text(encoding="utf-8")
+        )
+
+        self.assertEqual(sampling["version"], "generation_sampling_prompt_v2")
+        self.assertEqual(sampling["targets"], historical["targets"])
+        for field in ("outputs_path", "annotation_path", "metrics_path"):
+            self.assertNotEqual(sampling[field], historical[field])
 
 
 class GenerationPromptTests(unittest.TestCase):
@@ -33,6 +77,17 @@ class GenerationPromptTests(unittest.TestCase):
 
         with self.assertRaisesRegex(ValueError, "不能包含目标标题"):
             build_messages(leaked_input)
+
+    def test_v2_prompt_requires_exactly_three_selling_points(self) -> None:
+        messages = build_messages(self.generation_input, prompt_version="baseline_v2")
+
+        self.assertIn("恰好有三个字符串", messages[0]["content"])
+        self.assertIn("不得添加第四个卖点", messages[1]["content"])
+
+    def test_v1_prompt_remains_available_for_historical_baseline(self) -> None:
+        messages = build_messages(self.generation_input, prompt_version="baseline_v1")
+
+        self.assertNotIn("不得添加第四个卖点", messages[1]["content"])
 
 
 class GenerationOutputTests(unittest.TestCase):

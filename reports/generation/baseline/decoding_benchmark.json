@@ -1,0 +1,58 @@
+{
+  "purpose": "Same-model-instance decoding comparison; diagnostic only, not a formal baseline",
+  "model": "Qwen/Qwen2.5-7B-Instruct",
+  "sample_count": 3,
+  "max_new_tokens": 320,
+  "temperature": 0.7,
+  "top_p": 0.9,
+  "model_load_seconds": 12.369,
+  "gpu_memory_mib": {
+    "allocated": 5590.0,
+    "reserved": 5936.0,
+    "peak_allocated": 5772.7
+  },
+  "results": [
+    {
+      "product_id": "559717136702",
+      "mode": "greedy",
+      "generation_seconds": 5.124,
+      "raw_output": "{\n  \"generated_title\": \"OPPO MH133 有线耳塞式耳机 塑料材质\",\n  \"selling_points\": [\n    \"内置麦克风，通话清晰无阻\",\n    \"耳塞式设计，佩戴舒适稳固\",\n    \"线控功能，操作便捷省心\"\n  ],\n  \"short_description\": \"OPPO MH133 有线耳塞式耳机采用塑料材质，佩戴舒适稳固。内置麦克风确保通话清晰，线控设计方便操作。适合日常使用，提供良好的听觉体验。\"\n}",
+      "parse_error": null
+    },
+    {
+      "product_id": "559717136702",
+      "mode": "sampling",
+      "generation_seconds": 6.96,
+      "raw_output": "{\n  \"generated_title\": \"OPPO MH133 有线耳塞式耳机 塑料材质\",\n  \"selling_points\": [\n    \"采用塑料材质，轻巧耐用，适合长时间佩戴。\",\n    \"内置麦克风设计，支持通话清晰，方便沟通。\",\n    \"线控设计，操作便捷，音乐控制随心所欲。\",\n    \"耳塞式佩戴方式，贴合耳朵，舒适度高\"\n  ],\n  \"short_description\": \"这款OPPO MH133有线耳机，以塑料材质制作，佩戴舒适且耐用。具有内置麦克风功能，通话清晰无障碍。耳机还配备线控功能，可轻松控制音乐播放。采用耳塞式佩戴方式，确保了良好的隔音效果。\"\n}",
+      "parse_error": "selling_points 必须是包含三个非空字符串的数组。"
+    },
+    {
+      "product_id": "16454614360",
+      "mode": "sampling",
+      "generation_seconds": 6.291,
+      "raw_output": "{\n  \"generated_title\": \"佩锐 PERIBOARD-509PLUS 有线带手托 USB键盘\",\n  \"selling_points\": [\n    \"采用USB接口，传输稳定快速\",\n    \"配备独立手托，使用更加舒适\",\n    \"有线设计确保游戏时无延迟\"\n  ],\n  \"short_description\": \"佩锐 PERIBOARD-509PLUS 是一款有线键盘，通过USB接口连接电脑，提供稳定快速的数据传输。其设计人性化，带有独立手托，长时间操作也能保持舒适。专为减少手腕压力和提高打字效率而设计，适用于办公、学习及游戏等多种场景。\"\n}",
+      "parse_error": null
+    },
+    {
+      "product_id": "16454614360",
+      "mode": "greedy",
+      "generation_seconds": 6.179,
+      "raw_output": "{\n  \"generated_title\": \"佩锐 PERIBOARD-509PLUS 有线带托USB键盘\",\n  \"selling_points\": [\n    \"采用USB接口设计，连接稳定快速\",\n    \"配备独立手托，使用舒适长久\",\n    \"有线传输，避免无线干扰问题\"\n  ],\n  \"short_description\": \"佩锐 PERIBOARD-509PLUS 是一款有线键盘，通过USB接口与电脑连接，确保数据传输稳定高效。键盘设计人性化，配有独立手托，长时间使用也能保持舒适。此款键盘适用于各种办公及娱乐场景，是您高效工作的得力助手。\"\n}",
+      "parse_error": null
+    },
+    {
+      "product_id": "542123769427",
+      "mode": "greedy",
+      "generation_seconds": 6.254,
+      "raw_output": "{\n  \"generated_title\": \"追光豹 T9 光电USB鼠标 6键设计\",\n  \"selling_points\": [\n    \"采用2400dpi高精度光电技术，精准定位每一处细节\",\n    \"配备6个独立按键，操作更便捷高效\",\n    \"USB接口设计，即插即用，轻松连接电脑\"\n  ],\n  \"short_description\": \"追光豹T9光电鼠标，搭载2400dpi高精度传感器，确保游戏和办公中的精准操控。6个独立按键设计，满足多种操作需求。USB接口连接，使用方便快捷，是您电脑操作的理想伴侣。\"\n}",
+      "parse_error": null
+    },
+    {
+      "product_id": "542123769427",
+      "mode": "sampling",
+      "generation_seconds": 45.407,
+      "raw_output": "{\n  \"generated_title\": \"追光豹 T9 光电USB接口6键鼠标\",\n  \"selling_points\": [\n    \"光电技术确保精准定位，2400dpi高分辨率\",\n    \"USB接口设计，即插即用，操作简单\",\n    \"6键配置，多任务处理更高效\"\n  ],\n  \"short_description\": \"追光豹T9鼠标采用光电技术，提供2400dpi高分辨率，确保精准操作体验。配备USB接口，轻松连接电脑，操作简便。六个独立按键，满足多种需求，提升工作效率。\"\n}",
+      "parse_error": null
+    }
+  ]
+}

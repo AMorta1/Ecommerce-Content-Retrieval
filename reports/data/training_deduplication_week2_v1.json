@@ -1,0 +1,65 @@
+{
+  "dataset_version": "week2_train_v1",
+  "source_dataset_version": "week1_v3",
+  "policy": "冻结验证集和测试集不动；训练样本若与冻结集具有相同品牌-型号，或同品类图片 dHash 汉明距离不大于阈值，则从本版本训练集中排除。",
+  "frozen_evaluation": {
+    "test": {
+      "records": 200,
+      "sha256": "4afe6589d2f2a6b8d020ec3836128c6a83d00bf6acd3eff0c0b5f0a8a68076a5"
+    },
+    "validation": {
+      "records": 200,
+      "sha256": "dd2bc1d6c21567176d95f5414bfd9304f48979b3bb39ab0b038627b1f346af0b"
+    }
+  },
+  "brand_model_audit": {
+    "repeated_groups": 70,
+    "cross_split_groups": 30,
+    "frozen_only_cross_split_groups": 2
+  },
+  "image_dhash_audit": {
+    "max_hamming_distance": 4,
+    "candidate_pairs": 13,
+    "cross_split_pairs": 6,
+    "frozen_only_cross_split_pairs": 0
+  },
+  "training": {
+    "before": 1592,
+    "excluded": 33,
+    "after": 1559,
+    "before_by_category": {
+      "保温杯": 200,
+      "垃圾桶": 200,
+      "拖把": 198,
+      "收纳箱": 199,
+      "移动电源": 199,
+      "耳机": 200,
+      "键盘": 197,
+      "鼠标": 199
+    },
+    "excluded_by_category": {
+      "拖把": 3,
+      "移动电源": 7,
+      "耳机": 5,
+      "键盘": 13,
+      "鼠标": 5
+    },
+    "after_by_category": {
+      "保温杯": 200,
+      "垃圾桶": 200,
+      "拖把": 195,
+      "收纳箱": 199,
+      "移动电源": 192,
+      "耳机": 195,
+      "键盘": 184,
+      "鼠标": 194
+    },
+    "source_train_jsonl_sha256": "34e1aeb203fb2cf28f109ba22c93863f5597a0340f2b14a28233be40ab2c5062",
+    "train_jsonl_sha256": "6ba7179da3339c638aaace1a331cdc50648e58aa75c6a6852e33666bda512fb1"
+  },
+  "limitations": [
+    "同品牌型号按保守策略排除，不表示这些商品已被人工确认完全相同。",
+    "dHash 只反映低分辨率视觉结构相似，不等同于商品语义相同。",
+    "验证集和测试集已冻结；两者之间的疑似近重复只记录、不移动。"
+  ]
+}

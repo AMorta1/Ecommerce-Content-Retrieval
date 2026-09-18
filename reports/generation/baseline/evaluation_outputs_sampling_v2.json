@@ -1,0 +1,4209 @@
+{
+  "status": "output_parse_failed",
+  "model": "Qwen/Qwen2.5-7B-Instruct",
+  "prompt_version": "baseline_v2",
+  "generation_parameters": {
+    "max_input_tokens": 2048,
+    "max_new_tokens": 320,
+    "do_sample": true,
+    "temperature": 0.7,
+    "top_p": 0.9,
+    "seed": 42
+  },
+  "quantization": "bitsandbytes_nf4_4bit",
+  "cache_dir": "E:\\Projects\\Baidu\\.model-cache\\huggingface\\hub",
+  "python_version": "3.10.21",
+  "sample_count": 100,
+  "parsed_output_count": 99,
+  "structured_output_success_rate": 0.99,
+  "timings_seconds": {
+    "model_load": 12.266,
+    "generation_total": 642.987,
+    "generation_average": 6.43
+  },
+  "gpu_memory_mib": {
+    "allocated": 5590.0,
+    "reserved": 5962.0,
+    "peak_allocated": 5821.3
+  },
+  "results": [
+    {
+      "product_id": "522783084872",
+      "generation_input": {
+        "category_l1": "3C数码",
+        "category_l2": "移动电源",
+        "attributes": {
+          "品牌": [
+            "HANDIC/汉尼"
+          ],
+          "型号": [
+            "M-20000M"
+          ],
+          "电池容量": [
+            "5400mAh"
+          ],
+          "电池类型": [
+            "锂电池"
+          ],
+          "电芯类型": [
+            "圆柱状铝壳"
+          ],
+          "外壳材质": [
+            "塑料"
+          ]
+        }
+      },
+      "reference_title_not_given_to_model": "可爱女生卡通超萌苹果vivo华为oppo手机通用充电宝迷你毫安大容量移动电源超薄小巧便携快充创意大容量",
+      "raw_output": "{\n  \"generated_title\": \"HANDIC/汉尼 M-20000M 5400mAh 锂电池 移动电源\",\n  \"selling_points\": [\n    \"大容量5400mAh，满足长时间用电需求\",\n    \"采用圆柱状铝壳电芯，安全可靠\",\n    \"塑料外壳设计，轻巧耐用\"\n  ],\n  \"short_description\": \"HANDIC/汉尼 M-20000M移动电源采用5400mAh锂电池，提供持久电力支持。电芯采用圆柱状铝壳设计，确保使用安全。外壳采用塑料材质，轻便且耐用，适合各种使用环境。\"\n}",
+      "parsed_output": {
+        "generated_title": "HANDIC/汉尼 M-20000M 5400mAh 锂电池 移动电源",
+        "selling_points": [
+          "大容量5400mAh，满足长时间用电需求",
+          "采用圆柱状铝壳电芯，安全可靠",
+          "塑料外壳设计，轻巧耐用"
+        ],
+        "short_description": "HANDIC/汉尼 M-20000M移动电源采用5400mAh锂电池，提供持久电力支持。电芯采用圆柱状铝壳设计，确保使用安全。外壳采用塑料材质，轻便且耐用，适合各种使用环境。"
+      },
+      "parse_error": null,
+      "generation_seconds": 6.898
+    },
+    {
+      "product_id": "562615192976",
+      "generation_input": {
+        "category_l1": "3C数码",
+        "category_l2": "移动电源",
+        "attributes": {
+          "品牌": [
+            "非尼摩鼠"
+          ],
+          "型号": [
+            "H15B"
+          ],
+          "电池容量": [
+            "1500MAH"
+          ],
+          "电池类型": [
+            "锂离子电池"
+          ],
+          "电芯类型": [
+            "圆柱状铝壳"
+          ],
+          "外壳材质": [
+            "塑料"
+          ],
+          "充电协议": [
+            "PE2.0"
+          ],
+          "最大输出功率": [
+            "18W"
+          ]
+        }
+      },
+      "reference_title_not_given_to_model": "充电打火机移动电源个性男送生日USB多功能电子电弧点烟器充电宝",
+      "raw_output": "{\n  \"generated_title\": \"非尼摩鼠H15B 1500mAh便携式移动电源\",\n  \"selling_points\": [\n    \"采用圆柱状铝壳电芯，安全稳定\",\n    \"支持PE2.0快充协议，高效充电\",\n    \"塑料外壳设计，轻巧便携\"\n  ],\n  \"short_description\": \"非尼摩鼠H15B移动电源，配备1500mAh锂离子电池，采用圆柱状铝壳电芯确保安全稳定。支持PE2.0快充协议，有效提升充电效率。塑料外壳设计，轻巧便携，适合日常出行使用。\"\n}",
+      "parsed_output": {
+        "generated_title": "非尼摩鼠H15B 1500mAh便携式移动电源",
+        "selling_points": [
+          "采用圆柱状铝壳电芯，安全稳定",
+          "支持PE2.0快充协议，高效充电",
+          "塑料外壳设计，轻巧便携"
+        ],
+        "short_description": "非尼摩鼠H15B移动电源，配备1500mAh锂离子电池，采用圆柱状铝壳电芯确保安全稳定。支持PE2.0快充协议，有效提升充电效率。塑料外壳设计，轻巧便携，适合日常出行使用。"
+      },
+      "parse_error": null,
+      "generation_seconds": 6.481
+    },
+    {
+      "product_id": "583014299804",
+      "generation_input": {
+        "category_l1": "3C数码",
+        "category_l2": "移动电源",
+        "attributes": {
+          "品牌": [
+            "雅奇乐(电池)"
+          ],
+          "电池容量": [
+            "8000mAh"
+          ],
+          "电池类型": [
+            "锂聚合物电池"
+          ],
+          "电芯类型": [
+            "软包"
+          ]
+        }
+      },
+      "reference_title_not_given_to_model": "AQL 新款玻璃充电宝8000毫安创意苹果安卓通用移动电源轻薄便携",
+      "raw_output": "{\n  \"generated_title\": \"雅奇乐8000mAh锂聚合物软包移动电源\",\n  \"selling_points\": [\n    \"采用高效锂聚合物电芯，安全稳定\",\n    \"8000mAh大容量，满足长时间使用需求\",\n    \"轻巧便携设计，适合各种出行场景\"\n  ],\n  \"short_description\": \"雅奇乐8000mAh锂聚合物软包移动电源，采用高效稳定的锂聚合物电芯，保障充电安全与效率。大容量电池设计，轻松应对长时间使用。小巧轻便，方便随身携带，满足日常出行及办公需求。\"\n}",
+      "parsed_output": {
+        "generated_title": "雅奇乐8000mAh锂聚合物软包移动电源",
+        "selling_points": [
+          "采用高效锂聚合物电芯，安全稳定",
+          "8000mAh大容量，满足长时间使用需求",
+          "轻巧便携设计，适合各种出行场景"
+        ],
+        "short_description": "雅奇乐8000mAh锂聚合物软包移动电源，采用高效稳定的锂聚合物电芯，保障充电安全与效率。大容量电池设计，轻松应对长时间使用。小巧轻便，方便随身携带，满足日常出行及办公需求。"
+      },
+      "parse_error": null,
+      "generation_seconds": 6.186
+    },
+    {
+      "product_id": "587556959797",
+      "generation_input": {
+        "category_l1": "3C数码",
+        "category_l2": "移动电源",
+        "attributes": {
+          "品牌": [
+            "Luxtude"
+          ],
+          "型号": [
+            "Et50L"
+          ],
+          "电池容量": [
+            "5000mAh"
+          ],
+          "电池类型": [
+            "锂聚合物电池"
+          ],
+          "电芯类型": [
+            "方形铝壳"
+          ],
+          "外壳材质": [
+            "合金"
+          ],
+          "充电协议": [
+            "BC1.2",
+            "DCP"
+          ],
+          "最大输出功率": [
+            "12W"
+          ]
+        }
+      },
+      "reference_title_not_given_to_model": "鹿途充电宝超薄 小巧 便携 迷你充电宝苹果专用手机充电宝自带线",
+      "raw_output": "{\n  \"generated_title\": \"Luxtude Et50L 5000mAh方形铝壳合金移动电源\",\n  \"selling_points\": [\n    \"采用高性能5000mAh锂电池，满足长时间外出用电需求\",\n    \"支持BC1.2和DCP双充电协议，兼容性强\",\n    \"铝合金外壳设计，坚固耐用，质感出众\"\n  ],\n  \"short_description\": \"Luxtude Et50L移动电源，配备5000mAh大容量锂聚合物电池，电芯采用方形铝壳设计，保证安全稳定。支持BC1.2和DCP两种充电协议，适用于多种设备。搭配铝合金外壳，不仅坚固耐用，更显高端质感。\"\n}",
+      "parsed_output": {
+        "generated_title": "Luxtude Et50L 5000mAh方形铝壳合金移动电源",
+        "selling_points": [
+          "采用高性能5000mAh锂电池，满足长时间外出用电需求",
+          "支持BC1.2和DCP双充电协议，兼容性强",
+          "铝合金外壳设计，坚固耐用，质感出众"
+        ],
+        "short_description": "Luxtude Et50L移动电源，配备5000mAh大容量锂聚合物电池，电芯采用方形铝壳设计，保证安全稳定。支持BC1.2和DCP两种充电协议，适用于多种设备。搭配铝合金外壳，不仅坚固耐用，更显高端质感。"
+      },
+      "parse_error": null,
+      "generation_seconds": 6.947
+    },
+    {
+      "product_id": "589508217209",
+      "generation_input": {
+        "category_l1": "3C数码",
+        "category_l2": "移动电源",
+        "attributes": {
+          "品牌": [
+            "other/其他"
+          ],
+          "型号": [
+            "others"
+          ],
+          "电池容量": [
+            "3000mAh"
+          ],
+          "电池类型": [
+            "锂聚合物电池"
+          ],
+          "电芯类型": [
+            "软包"
+          ],
+          "外壳材质": [
+            "合金"
+          ]
+        }
+      },
+      "reference_title_not_given_to_model": "超大容量充电宝1000000毫安通用vivo华为oppo快充移动电源80000",
+      "raw_output": "{\n  \"generated_title\": \"3000mAh锂聚合物软包合金移动电源\",\n  \"selling_points\": [\n    \"3000mAh大容量电池，满足长时间使用需求\",\n    \"采用锂聚合物软包电芯，安全可靠\",\n    \"合金外壳设计，坚固耐用\"\n  ],\n  \"short_description\": \"这款移动电源采用3000mAh大容量电池，能够提供持久电力支持。其使用锂聚合物软包电芯，确保安全性能更佳。外壳采用合金材质，不仅美观而且坚固耐用。\"\n}",
+      "parsed_output": {
+        "generated_title": "3000mAh锂聚合物软包合金移动电源",
+        "selling_points": [
+          "3000mAh大容量电池，满足长时间使用需求",
+          "采用锂聚合物软包电芯，安全可靠",
+          "合金外壳设计，坚固耐用"
+        ],
+        "short_description": "这款移动电源采用3000mAh大容量电池，能够提供持久电力支持。其使用锂聚合物软包电芯，确保安全性能更佳。外壳采用合金材质，不仅美观而且坚固耐用。"
+      },
+      "parse_error": null,
+      "generation_seconds": 5.596
+    },
+    {
+      "product_id": "590175217614",
+      "generation_input": {
+        "category_l1": "3C数码",
+        "category_l2": "移动电源",
+        "attributes": {
+          "品牌": [
+            "ROMOSS/罗马仕"
+          ],
+          "型号": [
+            "sense 8P"
+          ],
+          "电池容量": [
+            "30000mAh"
+          ],
+          "电池类型": [
+            "锂聚合物电池"
+          ],
+          "电芯类型": [
+            "软包"
+          ],
+          "外壳材质": [
+            "塑料"
+          ],
+          "充电协议": [
+            "QC2.0"
+          ]
+        }
+      },
+      "reference_title_not_given_to_model": "ROMOSS/罗马仕 30000m毫安充电宝大容量8p 手机电充宝快充 闪充移动电源旗舰店官方旗舰七千猫舰旗超大量式士",
+      "raw_output": "{\n  \"generated_title\": \"ROMOSS sense 8P 30000mAh 锂聚合物移动电源\",\n  \"selling_points\": [\n    \"采用软包电芯设计，安全可靠\",\n    \"支持QC2.0快充协议，充电更高效\",\n    \"轻巧塑料外壳，携带方便\"\n  ],\n  \"short_description\": \"ROMOSS sense 8P是一款30000mAh的大容量移动电源，使用锂聚合物软包电芯，确保长时间使用的安全性。它具备QC2.0快充技术，为设备充电更快捷。外观采用塑料材质，设计轻便，便于随身携带。\"\n}",
+      "parsed_output": {
+        "generated_title": "ROMOSS sense 8P 30000mAh 锂聚合物移动电源",
+        "selling_points": [
+          "采用软包电芯设计，安全可靠",
+          "支持QC2.0快充协议，充电更高效",
+          "轻巧塑料外壳，携带方便"
+        ],
+        "short_description": "ROMOSS sense 8P是一款30000mAh的大容量移动电源，使用锂聚合物软包电芯，确保长时间使用的安全性。它具备QC2.0快充技术，为设备充电更快捷。外观采用塑料材质，设计轻便，便于随身携带。"
+      },
+      "parse_error": null,
+      "generation_seconds": 6.568
+    },
+    {
+      "product_id": "609861568866",
+      "generation_input": {
+        "category_l1": "3C数码",
+        "category_l2": "移动电源",
+        "attributes": {
+          "品牌": [
+            "中性"
+          ],
+          "型号": [
+            "圆柱形"
+          ],
+          "电池容量": [
+            "2600MAH"
+          ],
+          "电池类型": [
+            "锂离子电池"
+          ],
+          "电芯类型": [
+            "圆柱状铝壳"
+          ],
+          "外壳材质": [
+            "合金"
+          ]
+        }
+      },
+      "reference_title_not_given_to_model": "热销迷你便携式单节2600圆柱手机移动电源 口红充电宝生日节日礼",
+      "raw_output": "{\n  \"generated_title\": \"圆柱形2600MAH锂离子移动电源\",\n  \"selling_points\": [\n    \"采用优质合金外壳，坚固耐用\",\n    \"圆柱形设计，携带方便\",\n    \"锂离子电池，安全可靠\"\n  ],\n  \"short_description\": \"本产品为圆柱形设计，选用2600MAH锂离子电池作为动力源，内置圆柱状铝壳电芯，确保高效能输出。外壳采用合金材质，不仅美观大方，更能提供卓越的物理防护。\"\n}",
+      "parsed_output": {
+        "generated_title": "圆柱形2600MAH锂离子移动电源",
+        "selling_points": [
+          "采用优质合金外壳，坚固耐用",
+          "圆柱形设计，携带方便",
+          "锂离子电池，安全可靠"
+        ],
+        "short_description": "本产品为圆柱形设计，选用2600MAH锂离子电池作为动力源，内置圆柱状铝壳电芯，确保高效能输出。外壳采用合金材质，不仅美观大方，更能提供卓越的物理防护。"
+      },
+      "parse_error": null,
+      "generation_seconds": 5.503
+    },
+    {
+      "product_id": "609923870759",
+      "generation_input": {
+        "category_l1": "3C数码",
+        "category_l2": "移动电源",
+        "attributes": {
+          "品牌": [
+            "雅奇乐(电池)"
+          ],
+          "型号": [
+            "Q5"
+          ],
+          "电池容量": [
+            "8000mAh"
+          ],
+          "电池类型": [
+            "锂聚合物电池"
+          ],
+          "电芯类型": [
+            "软包"
+          ]
+        }
+      },
+      "reference_title_not_given_to_model": "金属独角兽充电宝超薄小巧便携创意迷你苹果华为专用通用移动电源",
+      "raw_output": "{\n  \"generated_title\": \"雅奇乐 Q5 8000mAh 锂聚合物软包移动电源\",\n  \"selling_points\": [\n    \"采用优质锂聚合物软包电芯，安全稳定耐用\",\n    \"大容量8000mAh，满足多种设备充电需求\",\n    \"轻巧便携设计，旅行出差必备\"\n  ],\n  \"short_description\": \"雅奇乐Q5移动电源采用8000mAh大容量锂聚合物软包电芯，为您的手机和其他电子设备提供持久电力支持。小巧轻便的设计方便随身携带，无论是日常使用还是外出旅行都能轻松应对。\"\n}",
+      "parsed_output": {
+        "generated_title": "雅奇乐 Q5 8000mAh 锂聚合物软包移动电源",
+        "selling_points": [
+          "采用优质锂聚合物软包电芯，安全稳定耐用",
+          "大容量8000mAh，满足多种设备充电需求",
+          "轻巧便携设计，旅行出差必备"
+        ],
+        "short_description": "雅奇乐Q5移动电源采用8000mAh大容量锂聚合物软包电芯，为您的手机和其他电子设备提供持久电力支持。小巧轻便的设计方便随身携带，无论是日常使用还是外出旅行都能轻松应对。"
+      },
+      "parse_error": null,
+      "generation_seconds": 6.55
+    },
+    {
+      "product_id": "610605050479",
+      "generation_input": {
+        "category_l1": "3C数码",
+        "category_l2": "移动电源",
+        "attributes": {
+          "品牌": [
+            "Pisen/品胜"
+          ],
+          "电池容量": [
+            "10000mAh"
+          ],
+          "电池类型": [
+            "锂聚合物电池"
+          ],
+          "电芯类型": [
+            "方形铝壳"
+          ],
+          "外壳材质": [
+            "合金"
+          ]
+        }
+      },
+      "reference_title_not_given_to_model": "品胜充电宝自带线三合一10000毫安迷你小巧苹果移动电源华为正品",
+      "raw_output": "{\n  \"generated_title\": \"Pisen品胜10000mAh方形铝壳锂聚合物合金移动电源\",\n  \"selling_points\": [\n    \"采用高品质方形铝壳锂聚合物电芯，安全可靠\",\n    \"合金材质外壳，坚固耐用，质感出众\",\n    \"大容量10000mAh，满足多种设备充电需求\"\n  ],\n  \"short_description\": \"本产品采用Pisen品胜品牌，具备10000mAh大容量电池，适合多种电子设备充电使用。采用方形铝壳锂聚合物电芯设计，确保充电安全。外壳选用合金材质，坚固耐用，提供良好的手感。\"\n}",
+      "parsed_output": {
+        "generated_title": "Pisen品胜10000mAh方形铝壳锂聚合物合金移动电源",
+        "selling_points": [
+          "采用高品质方形铝壳锂聚合物电芯，安全可靠",
+          "合金材质外壳，坚固耐用，质感出众",
+          "大容量10000mAh，满足多种设备充电需求"
+        ],
+        "short_description": "本产品采用Pisen品胜品牌，具备10000mAh大容量电池，适合多种电子设备充电使用。采用方形铝壳锂聚合物电芯设计，确保充电安全。外壳选用合金材质，坚固耐用，提供良好的手感。"
+      },
+      "parse_error": null,
+      "generation_seconds": 6.572
+    },
+    {
+      "product_id": "616413073658",
+      "generation_input": {
+        "category_l1": "3C数码",
+        "category_l2": "移动电源",
+        "attributes": {
+          "品牌": [
+            "other/其他"
+          ],
+          "型号": [
+            "J947977"
+          ],
+          "电池容量": [
+            "10000mAh"
+          ],
+          "电池类型": [
+            "锂离子电池"
+          ],
+          "电芯类型": [
+            "软包"
+          ],
+          "外壳材质": [
+            "塑料"
+          ],
+          "充电协议": [
+            "pd2.0"
+          ]
+        }
+      },
+      "reference_title_not_given_to_model": "充电宝个性搞怪炸迷你轻薄便携小巧很萌个性女款圆形镜面数显通用",
+      "raw_output": "{\n  \"generated_title\": \"J947977 10000mAh 锂离子软包移动电源\",\n  \"selling_points\": [\n    \"10000mAh大容量，满足长时间使用需求\",\n    \"采用PD2.0快充协议，充电更快更高效\",\n    \"外壳材质为耐用的塑料，安全可靠\"\n  ],\n  \"short_description\": \"J947977型号移动电源，配备10000mAh锂离子软包电池，适用于各种电子设备。支持PD2.0快充技术，提升充电速度。外壳采用耐用塑料材质，设计稳固安全。\"\n}",
+      "parsed_output": {
+        "generated_title": "J947977 10000mAh 锂离子软包移动电源",
+        "selling_points": [
+          "10000mAh大容量，满足长时间使用需求",
+          "采用PD2.0快充协议，充电更快更高效",
+          "外壳材质为耐用的塑料，安全可靠"
+        ],
+        "short_description": "J947977型号移动电源，配备10000mAh锂离子软包电池，适用于各种电子设备。支持PD2.0快充技术，提升充电速度。外壳采用耐用塑料材质，设计稳固安全。"
+      },
+      "parse_error": null,
+      "generation_seconds": 6.583
+    },
+    {
+      "product_id": "621846828786",
+      "generation_input": {
+        "category_l1": "3C数码",
+        "category_l2": "移动电源",
+        "attributes": {
+          "品牌": [
+            "倍电"
+          ],
+          "型号": [
+            "14口机柜带广告屏幕"
+          ],
+          "电池容量": [
+            "5100mah"
+          ],
+          "电池类型": [
+            "锂离子电池"
+          ],
+          "电芯类型": [
+            "圆柱状铝壳"
+          ],
+          "外壳材质": [
+            "塑料"
+          ],
+          "充电协议": [
+            "BC1.2"
+          ]
+        }
+      },
+      "reference_title_not_given_to_model": "共享充电宝自助商用立体式机柜移动电源带广告屏幕现货原创品牌",
+      "raw_output": "{\n  \"generated_title\": \"倍电14口机柜带广告屏幕移动电源 5100mAh\",\n  \"selling_points\": [\n    \"内置5100mAh大容量锂离子电池，持久续航\",\n    \"采用BC1.2充电协议，安全快速充电\",\n    \"优质塑料外壳设计，耐用稳固\"\n  ],\n  \"short_description\": \"倍电14口机柜带广告屏幕移动电源，搭载5100mAh大容量锂电池，支持BC1.2快充协议，确保设备快速充电。采用坚固耐用的塑料材质，确保长期使用稳定性。\"\n}",
+      "parsed_output": {
+        "generated_title": "倍电14口机柜带广告屏幕移动电源 5100mAh",
+        "selling_points": [
+          "内置5100mAh大容量锂离子电池，持久续航",
+          "采用BC1.2充电协议，安全快速充电",
+          "优质塑料外壳设计，耐用稳固"
+        ],
+        "short_description": "倍电14口机柜带广告屏幕移动电源，搭载5100mAh大容量锂电池，支持BC1.2快充协议，确保设备快速充电。采用坚固耐用的塑料材质，确保长期使用稳定性。"
+      },
+      "parse_error": null,
+      "generation_seconds": 6.038
+    },
+    {
+      "product_id": "624105227976",
+      "generation_input": {
+        "category_l1": "3C数码",
+        "category_l2": "移动电源",
+        "attributes": {
+          "品牌": [
+            "乔威"
+          ],
+          "型号": [
+            "JP90/199/221/213"
+          ],
+          "电池容量": [
+            "10050mah"
+          ],
+          "电池类型": [
+            "锂聚合物电池"
+          ],
+          "电芯类型": [
+            "软包"
+          ],
+          "外壳材质": [
+            "合金"
+          ],
+          "充电协议": [
+            "QC3.0",
+            "PE3.0",
+            "PD3.0"
+          ],
+          "最大输出功率": [
+            "22.5W"
+          ]
+        }
+      },
+      "reference_title_not_given_to_model": "乔威10050mAh大容量充电宝迷你便携小巧移动电源支持闪充超级快充",
+      "raw_output": "{\n  \"generated_title\": \"乔威JP90/199/221/213 10050mAh锂聚合物软包合金移动电源\",\n  \"selling_points\": [\n    \"支持PD3.0快充协议，充电迅速高效\",\n    \"合金外壳设计，坚固耐用\",\n    \"三重快充协议兼容多种设备\"\n  ],\n  \"short_description\": \"乔威JP90/199/221/213移动电源采用10050mAh大容量锂聚合物软包电池，搭配合金外壳，坚固耐用。支持PD3.0、QC3.0和PE3.0三重快充协议，满足不同设备充电需求。\"\n}",
+      "parsed_output": {
+        "generated_title": "乔威JP90/199/221/213 10050mAh锂聚合物软包合金移动电源",
+        "selling_points": [
+          "支持PD3.0快充协议，充电迅速高效",
+          "合金外壳设计，坚固耐用",
+          "三重快充协议兼容多种设备"
+        ],
+        "short_description": "乔威JP90/199/221/213移动电源采用10050mAh大容量锂聚合物软包电池，搭配合金外壳，坚固耐用。支持PD3.0、QC3.0和PE3.0三重快充协议，满足不同设备充电需求。"
+      },
+      "parse_error": null,
+      "generation_seconds": 7.707
+    },
+    {
+      "product_id": "556245210015",
+      "generation_input": {
+        "category_l1": "3C数码",
+        "category_l2": "耳机",
+        "attributes": {
+          "品牌": [
+            "EARDO/忆动"
+          ],
+          "型号": [
+            "E01-2"
+          ],
+          "佩戴方式": [
+            "入耳式"
+          ],
+          "耳机类别": [
+            "游戏耳机",
+            "手机线控耳机"
+          ],
+          "耳机与播放设备连接方式": [
+            "有线连接"
+          ]
+        }
+      },
+      "reference_title_not_given_to_model": "忆动2米台式电脑语音K歌吃鸡运动入耳式耳机带麦重低音直播耳塞",
+      "raw_output": "{\n  \"generated_title\": \"EARDO忆动E01-2入耳式游戏手机线控耳机\",\n  \"selling_points\": [\n    \"入耳式设计，提供稳定舒适的佩戴体验\",\n    \"支持有线连接，确保低延迟游戏体验\",\n    \"配备手机线控，方便接听电话与控制音量\"\n  ],\n  \"short_description\": \"EARDO E01-2是一款专为游戏和日常使用设计的入耳式耳机，采用有线连接方式，确保游戏时无延迟传输。耳机内置线控，轻松实现电话接听和音量调节。适合长时间游戏和通话需求，带来更佳听觉享受。\"\n}",
+      "parsed_output": {
+        "generated_title": "EARDO忆动E01-2入耳式游戏手机线控耳机",
+        "selling_points": [
+          "入耳式设计，提供稳定舒适的佩戴体验",
+          "支持有线连接，确保低延迟游戏体验",
+          "配备手机线控，方便接听电话与控制音量"
+        ],
+        "short_description": "EARDO E01-2是一款专为游戏和日常使用设计的入耳式耳机，采用有线连接方式，确保游戏时无延迟传输。耳机内置线控，轻松实现电话接听和音量调节。适合长时间游戏和通话需求，带来更佳听觉享受。"
+      },
+      "parse_error": null,
+      "generation_seconds": 6.815
+    },
+    {
+      "product_id": "565706870969",
+      "generation_input": {
+        "category_l1": "3C数码",
+        "category_l2": "耳机",
+        "attributes": {
+          "品牌": [
+            "Remax/睿量"
+          ],
+          "型号": [
+            "RB-T20"
+          ],
+          "佩戴方式": [
+            "挂耳式"
+          ],
+          "蓝牙版本": [
+            "4.1"
+          ],
+          "功能": [
+            "通话功能"
+          ]
+        }
+      },
+      "reference_title_not_given_to_model": "Remax/睿量 RB-T20不入耳蓝牙耳机骨传导挂耳式无线迷你超小开车可接听电话苹果vivo华为oppo小米通用耳挂式",
+      "raw_output": "{\n  \"generated_title\": \"Remax RB-T20 挂耳式蓝牙4.1耳机\",\n  \"selling_points\": [\n    \"支持通话功能，确保清晰沟通\",\n    \"采用蓝牙4.1技术，信号稳定无干扰\",\n    \"挂耳式设计，稳固舒适佩戴\"\n  ],\n  \"short_description\": \"Remax RB-T20是一款挂耳式的蓝牙耳机，具备通话功能，确保通话清晰。采用先进的蓝牙4.1技术，信号传输稳定，无惧干扰。适合多种场合使用，稳固舒适的设计让用户在运动或通勤时也能享受音乐。\"\n}",
+      "parsed_output": {
+        "generated_title": "Remax RB-T20 挂耳式蓝牙4.1耳机",
+        "selling_points": [
+          "支持通话功能，确保清晰沟通",
+          "采用蓝牙4.1技术，信号稳定无干扰",
+          "挂耳式设计，稳固舒适佩戴"
+        ],
+        "short_description": "Remax RB-T20是一款挂耳式的蓝牙耳机，具备通话功能，确保通话清晰。采用先进的蓝牙4.1技术，信号传输稳定，无惧干扰。适合多种场合使用，稳固舒适的设计让用户在运动或通勤时也能享受音乐。"
+      },
+      "parse_error": null,
+      "generation_seconds": 6.272
+    },
+    {
+      "product_id": "588442419126",
+      "generation_input": {
+        "category_l1": "3C数码",
+        "category_l2": "耳机",
+        "attributes": {
+          "品牌": [
+            "DACOM"
+          ],
+          "型号": [
+            "Athlete+"
+          ],
+          "佩戴方式": [
+            "挂耳式"
+          ],
+          "耳机类别": [
+            "真无线耳机"
+          ],
+          "耳机与播放设备连接方式": [
+            "蓝牙连接"
+          ],
+          "蓝牙版本": [
+            "5.0"
+          ],
+          "功能": [
+            "支持音乐"
+          ]
+        }
+      },
+      "reference_title_not_given_to_model": "DACOM Athlete+洗澡运动蓝牙耳机骑行重低大音量跑步音乐听歌耳塞",
+      "raw_output": "{\n  \"generated_title\": \"DACOM Athlete+ 挂耳式真无线蓝牙5.0耳机\",\n  \"selling_points\": [\n    \"支持蓝牙5.0技术，传输更稳定\",\n    \"挂耳式设计，运动时更稳固\",\n    \"真无线设计，便捷随身听音乐\"\n  ],\n  \"short_description\": \"DACOM Athlete+ 挂耳式真无线耳机采用蓝牙5.0技术，连接稳定快速；适合各种场合使用，尤其适合运动爱好者，稳固佩戴不易掉落；随时随地享受音乐带来的乐趣。\"\n}",
+      "parsed_output": {
+        "generated_title": "DACOM Athlete+ 挂耳式真无线蓝牙5.0耳机",
+        "selling_points": [
+          "支持蓝牙5.0技术，传输更稳定",
+          "挂耳式设计，运动时更稳固",
+          "真无线设计，便捷随身听音乐"
+        ],
+        "short_description": "DACOM Athlete+ 挂耳式真无线耳机采用蓝牙5.0技术，连接稳定快速；适合各种场合使用，尤其适合运动爱好者，稳固佩戴不易掉落；随时随地享受音乐带来的乐趣。"
+      },
+      "parse_error": null,
+      "generation_seconds": 6.005
+    },
+    {
+      "product_id": "598781167153",
+      "generation_input": {
+        "category_l1": "3C数码",
+        "category_l2": "耳机",
+        "attributes": {
+          "品牌": [
+            "SIVGA"
+          ],
+          "型号": [
+            "SM001"
+          ],
+          "佩戴方式": [
+            "入耳式"
+          ],
+          "耳机类别": [
+            "智能耳机",
+            "监听耳机",
+            "HIFI耳机"
+          ],
+          "耳机与播放设备连接方式": [
+            "有线连接"
+          ]
+        }
+      },
+      "reference_title_not_given_to_model": "SIVGA/斯唯嘉SM001耳机入耳式耳麦HiFi发烧高音质电脑可拆卸换线",
+      "raw_output": "{\n  \"generated_title\": \"SIVGA SM001 入耳式智能监听HIFI有线耳机\",\n  \"selling_points\": [\n    \"入耳式设计，贴合耳朵提供舒适佩戴体验\",\n    \"有线连接稳定可靠，音质传输无延迟\",\n    \"适用于专业录音监听及音乐欣赏\"\n  ],\n  \"short_description\": \"SIVGA SM001是一款入耳式智能监听HIFI有线耳机，专为专业音频需求设计。采用入耳式佩戴方式，确保舒适贴合。通过有线连接，提供稳定的音质传输，无延迟干扰。适合音乐爱好者和专业人士使用，无论是录音监听还是日常聆听都能带来出色表现。\"\n}",
+      "parsed_output": {
+        "generated_title": "SIVGA SM001 入耳式智能监听HIFI有线耳机",
+        "selling_points": [
+          "入耳式设计，贴合耳朵提供舒适佩戴体验",
+          "有线连接稳定可靠，音质传输无延迟",
+          "适用于专业录音监听及音乐欣赏"
+        ],
+        "short_description": "SIVGA SM001是一款入耳式智能监听HIFI有线耳机，专为专业音频需求设计。采用入耳式佩戴方式，确保舒适贴合。通过有线连接，提供稳定的音质传输，无延迟干扰。适合音乐爱好者和专业人士使用，无论是录音监听还是日常聆听都能带来出色表现。"
+      },
+      "parse_error": null,
+      "generation_seconds": 6.608
+    },
+    {
+      "product_id": "600661711292",
+      "generation_input": {
+        "category_l1": "3C数码",
+        "category_l2": "耳机",
+        "attributes": {
+          "品牌": [
+            "Edifier/漫步者"
+          ],
+          "型号": [
+            "W281BT颈挂式"
+          ],
+          "佩戴方式": [
+            "入耳式"
+          ],
+          "耳机类别": [
+            "智能耳机"
+          ],
+          "耳机与播放设备连接方式": [
+            "蓝牙连接"
+          ],
+          "蓝牙版本": [
+            "5.0"
+          ],
+          "功能": [
+            "通话功能"
+          ]
+        }
+      },
+      "reference_title_not_given_to_model": "Edifier/漫步者 W281BT颈挂蓝牙耳机双耳无线挂脖式漫威联名款钢铁侠美国队长周边纪念款复仇者联盟带智能app",
+      "raw_output": "{\n  \"generated_title\": \"Edifier W281BT智能蓝牙入耳式耳机\",\n  \"selling_points\": [\n    \"采用5.0蓝牙技术，信号传输稳定\",\n    \"具备智能通话功能，通话清晰\",\n    \"入耳式设计，佩戴舒适稳固\"\n  ],\n  \"short_description\": \"Edifier W281BT智能蓝牙入耳式耳机，采用5.0蓝牙技术，确保了稳定的信号传输和清晰的通话质量。特别设计的入耳式佩戴方式，带来稳固舒适的使用体验。\"\n}",
+      "parsed_output": {
+        "generated_title": "Edifier W281BT智能蓝牙入耳式耳机",
+        "selling_points": [
+          "采用5.0蓝牙技术，信号传输稳定",
+          "具备智能通话功能，通话清晰",
+          "入耳式设计，佩戴舒适稳固"
+        ],
+        "short_description": "Edifier W281BT智能蓝牙入耳式耳机，采用5.0蓝牙技术，确保了稳定的信号传输和清晰的通话质量。特别设计的入耳式佩戴方式，带来稳固舒适的使用体验。"
+      },
+      "parse_error": null,
+      "generation_seconds": 5.262
+    },
+    {
+      "product_id": "603102363927",
+      "generation_input": {
+        "category_l1": "3C数码",
+        "category_l2": "耳机",
+        "attributes": {
+          "品牌": [
+            "other/其他"
+          ],
+          "型号": [
+            "TW60"
+          ],
+          "佩戴方式": [
+            "入耳式"
+          ],
+          "耳机类别": [
+            "真无线耳机"
+          ],
+          "耳机与播放设备连接方式": [
+            "蓝牙连接"
+          ],
+          "蓝牙版本": [
+            "5.0"
+          ],
+          "功能": [
+            "支持音乐"
+          ]
+        }
+      },
+      "reference_title_not_given_to_model": "TWS蓝牙耳机无线双耳适用于苹果oppo小米vivo安卓通用女生款可爱",
+      "raw_output": "{\n  \"generated_title\": \"TW60蓝牙5.0入耳式真无线耳机\",\n  \"selling_points\": [\n    \"支持蓝牙5.0连接，传输更快更稳定\",\n    \"入耳式设计，佩戴稳固舒适\",\n    \"专为音乐爱好者打造\"\n  ],\n  \"short_description\": \"TW60是一款入耳式的真无线耳机，采用蓝牙5.0技术，确保了快速稳定的连接体验。适合追求高品质音乐享受的您，佩戴舒适稳固，带来出色的听觉享受。\"\n}",
+      "parsed_output": {
+        "generated_title": "TW60蓝牙5.0入耳式真无线耳机",
+        "selling_points": [
+          "支持蓝牙5.0连接，传输更快更稳定",
+          "入耳式设计，佩戴稳固舒适",
+          "专为音乐爱好者打造"
+        ],
+        "short_description": "TW60是一款入耳式的真无线耳机，采用蓝牙5.0技术，确保了快速稳定的连接体验。适合追求高品质音乐享受的您，佩戴舒适稳固，带来出色的听觉享受。"
+      },
+      "parse_error": null,
+      "generation_seconds": 5.172
+    },
+    {
+      "product_id": "607358884242",
+      "generation_input": {
+        "category_l1": "3C数码",
+        "category_l2": "耳机",
+        "attributes": {
+          "品牌": [
+            "庞派"
+          ],
+          "型号": [
+            "P47"
+          ],
+          "佩戴方式": [
+            "头戴式"
+          ],
+          "蓝牙版本": [
+            "5.0"
+          ]
+        }
+      },
+      "reference_title_not_given_to_model": "无线蓝牙耳机头戴式苹果华为耳麦双耳低音折叠便携式安卓手机通用",
+      "raw_output": "{\n  \"generated_title\": \"庞派 P47 头戴式蓝牙5.0耳机\",\n  \"selling_points\": [\n    \"支持蓝牙5.0技术，传输更稳定，连接更快\",\n    \"头戴式设计，长时间佩戴舒适不滑落\",\n    \"高清晰音质，还原真实声音细节\"\n  ],\n  \"short_description\": \"庞派P47头戴式蓝牙5.0耳机采用头戴式设计，佩戴稳固不易滑落。搭载蓝牙5.0技术，确保无线连接更加稳定快速。配备高品质扬声器，带来纯净通透的听觉享受，满足您对音质的高标准需求。\"\n}",
+      "parsed_output": {
+        "generated_title": "庞派 P47 头戴式蓝牙5.0耳机",
+        "selling_points": [
+          "支持蓝牙5.0技术，传输更稳定，连接更快",
+          "头戴式设计，长时间佩戴舒适不滑落",
+          "高清晰音质，还原真实声音细节"
+        ],
+        "short_description": "庞派P47头戴式蓝牙5.0耳机采用头戴式设计，佩戴稳固不易滑落。搭载蓝牙5.0技术，确保无线连接更加稳定快速。配备高品质扬声器，带来纯净通透的听觉享受，满足您对音质的高标准需求。"
+      },
+      "parse_error": null,
+      "generation_seconds": 6.301
+    },
+    {
+      "product_id": "613735876059",
+      "generation_input": {
+        "category_l1": "3C数码",
+        "category_l2": "耳机",
+        "attributes": {
+          "品牌": [
+            "Philips/飞利浦"
+          ],
+          "型号": [
+            "SHP2000"
+          ],
+          "佩戴方式": [
+            "头戴式"
+          ],
+          "耳机类别": [
+            "监听耳机",
+            "HIFI耳机",
+            "普通耳机"
+          ],
+          "耳机与播放设备连接方式": [
+            "蓝牙连接"
+          ],
+          "功能": [
+            "听力辅助功能"
+          ]
+        }
+      },
+      "reference_title_not_given_to_model": "飞利浦 SHP2000头戴式立体声音乐耳机电脑重低音监听耳机",
+      "raw_output": "{\n  \"generated_title\": \"Philips SHP2000 头戴式监听HIFI普通耳机 蓝牙连接\",\n  \"selling_points\": [\n    \"采用蓝牙连接技术，无线自由听音乐\",\n    \"头戴式设计，长时间佩戴舒适稳固\",\n    \"监听级音质，还原真实声音细节\"\n  ],\n  \"short_description\": \"Philips SHP2000是一款头戴式的监听HIFI普通耳机，支持蓝牙连接，带来无线自由的听觉体验。长时间佩戴依然舒适稳固，确保音质还原真实细节，满足您对高保真音质的追求。\"\n}",
+      "parsed_output": {
+        "generated_title": "Philips SHP2000 头戴式监听HIFI普通耳机 蓝牙连接",
+        "selling_points": [
+          "采用蓝牙连接技术，无线自由听音乐",
+          "头戴式设计，长时间佩戴舒适稳固",
+          "监听级音质，还原真实声音细节"
+        ],
+        "short_description": "Philips SHP2000是一款头戴式的监听HIFI普通耳机，支持蓝牙连接，带来无线自由的听觉体验。长时间佩戴依然舒适稳固，确保音质还原真实细节，满足您对高保真音质的追求。"
+      },
+      "parse_error": null,
+      "generation_seconds": 6.175
+    },
+    {
+      "product_id": "614533597181",
+      "generation_input": {
+        "category_l1": "3C数码",
+        "category_l2": "耳机",
+        "attributes": {
+          "品牌": [
+            "sena(摩托车)"
+          ],
+          "型号": [
+            "50s"
+          ],
+          "佩戴方式": [
+            "头戴式"
+          ],
+          "耳机类别": [
+            "主动降噪耳机"
+          ],
+          "耳机与播放设备连接方式": [
+            "蓝牙连接"
+          ],
+          "蓝牙版本": [
+            "5.0"
+          ],
+          "功能": [
+            "语音控制"
+          ]
+        }
+      },
+      "reference_title_not_given_to_model": "SENA塞纳50S蓝牙耳机升级网状对讲2.0摩托车新款k蓝牙耳机头盔用",
+      "raw_output": "{\n  \"generated_title\": \"SENAB 50S 头戴式主动降噪蓝牙耳机\",\n  \"selling_points\": [\n    \"支持蓝牙5.0技术，传输稳定快速\",\n    \"内置语音控制功能，操作便捷\",\n    \"主动降噪设计，有效降低环境噪音\"\n  ],\n  \"short_description\": \"SENAB 50S 头戴式主动降噪蓝牙耳机采用头戴式设计，确保佩戴舒适。它支持最新的蓝牙5.0技术，提供稳定的无线连接体验。耳机内建语音控制功能，让操控更加便捷。此外，其先进的主动降噪技术能够显著减少外界干扰，提升音质体验。\"\n}",
+      "parsed_output": {
+        "generated_title": "SENAB 50S 头戴式主动降噪蓝牙耳机",
+        "selling_points": [
+          "支持蓝牙5.0技术，传输稳定快速",
+          "内置语音控制功能，操作便捷",
+          "主动降噪设计，有效降低环境噪音"
+        ],
+        "short_description": "SENAB 50S 头戴式主动降噪蓝牙耳机采用头戴式设计，确保佩戴舒适。它支持最新的蓝牙5.0技术，提供稳定的无线连接体验。耳机内建语音控制功能，让操控更加便捷。此外，其先进的主动降噪技术能够显著减少外界干扰，提升音质体验。"
+      },
+      "parse_error": null,
+      "generation_seconds": 6.393
+    },
+    {
+      "product_id": "615386178525",
+      "generation_input": {
+        "category_l1": "3C数码",
+        "category_l2": "耳机",
+        "attributes": {
+          "品牌": [
+            "菲尼泰"
+          ],
+          "型号": [
+            "漫威联名AirPro耳机"
+          ],
+          "佩戴方式": [
+            "入耳式"
+          ],
+          "耳机类别": [
+            "真无线耳机"
+          ],
+          "耳机与播放设备连接方式": [
+            "蓝牙连接"
+          ],
+          "蓝牙版本": [
+            "5.0"
+          ],
+          "功能": [
+            "电量显示"
+          ]
+        }
+      },
+      "reference_title_not_given_to_model": "漫威联名AirPro真无线5.0蓝牙耳机苹果安卓通用 复仇者联盟正版",
+      "raw_output": "{\n  \"generated_title\": \"菲尼泰漫威联名AirPro真无线入耳式耳机\",\n  \"selling_points\": [\n    \"蓝牙5.0稳定连接，音质更清晰\",\n    \"内置电量显示，随时掌握电量状态\",\n    \"真无线设计，轻松佩戴舒适便捷\"\n  ],\n  \"short_description\": \"菲尼泰漫威联名AirPro真无线入耳式耳机采用蓝牙5.0技术，确保连接稳定且音质出众。耳机配备电量显示功能，让您可以随时查看剩余电量。入耳式设计，佩戴稳固，满足日常使用需求。\"\n}",
+      "parsed_output": {
+        "generated_title": "菲尼泰漫威联名AirPro真无线入耳式耳机",
+        "selling_points": [
+          "蓝牙5.0稳定连接，音质更清晰",
+          "内置电量显示，随时掌握电量状态",
+          "真无线设计，轻松佩戴舒适便捷"
+        ],
+        "short_description": "菲尼泰漫威联名AirPro真无线入耳式耳机采用蓝牙5.0技术，确保连接稳定且音质出众。耳机配备电量显示功能，让您可以随时查看剩余电量。入耳式设计，佩戴稳固，满足日常使用需求。"
+      },
+      "parse_error": null,
+      "generation_seconds": 5.826
+    },
+    {
+      "product_id": "621360527079",
+      "generation_input": {
+        "category_l1": "3C数码",
+        "category_l2": "耳机",
+        "attributes": {
+          "品牌": [
+            "other/其他"
+          ],
+          "型号": [
+            "3米主播耳机"
+          ],
+          "佩戴方式": [
+            "耳塞式"
+          ],
+          "耳机类别": [
+            "监听耳机"
+          ]
+        }
+      },
+      "reference_title_not_given_to_model": "直播加长3米跳舞入耳式监听主播耳机带麦手机电脑声卡线长三米",
+      "raw_output": "{\n  \"generated_title\": \"3米耳塞式监听耳机，专业主播必备\",\n  \"selling_points\": [\n    \"超长线缆设计，确保录制无干扰\",\n    \"耳塞式佩戴舒适，适合长时间使用\",\n    \"监听级音质，清晰还原声音细节\"\n  ],\n  \"short_description\": \"3米主播耳机采用耳塞式设计，专为长时间录音和直播打造。超长线缆确保录制过程中的自由移动，不会因距离问题影响录音质量。耳机提供舒适的佩戴体验，长时间使用也不会感到疲劳。音质方面，它具备监听级标准，能够清晰还原声音细节，适用于专业主播和音频制作人。\"\n}",
+      "parsed_output": {
+        "generated_title": "3米耳塞式监听耳机，专业主播必备",
+        "selling_points": [
+          "超长线缆设计，确保录制无干扰",
+          "耳塞式佩戴舒适，适合长时间使用",
+          "监听级音质，清晰还原声音细节"
+        ],
+        "short_description": "3米主播耳机采用耳塞式设计，专为长时间录音和直播打造。超长线缆确保录制过程中的自由移动，不会因距离问题影响录音质量。耳机提供舒适的佩戴体验，长时间使用也不会感到疲劳。音质方面，它具备监听级标准，能够清晰还原声音细节，适用于专业主播和音频制作人。"
+      },
+      "parse_error": null,
+      "generation_seconds": 6.381
+    },
+    {
+      "product_id": "624110108481",
+      "generation_input": {
+        "category_l1": "3C数码",
+        "category_l2": "耳机",
+        "attributes": {
+          "品牌": [
+            "陈星"
+          ],
+          "型号": [
+            "双耳蓝牙耳机"
+          ],
+          "耳机类别": [
+            "真无线耳机"
+          ],
+          "耳机与播放设备连接方式": [
+            "蓝牙连接"
+          ],
+          "蓝牙版本": [
+            "5.0"
+          ],
+          "功能": [
+            "支持音乐"
+          ]
+        }
+      },
+      "reference_title_not_given_to_model": "陈星无线双耳蓝牙耳机小迷你隐形不入耳式苹果华为vivo小米oppo安卓一加通用隐藏超小型女生款可爱肤色微型男",
+      "raw_output": "{\n  \"generated_title\": \"陈星双耳真无线蓝牙5.0耳机\",\n  \"selling_points\": [\n    \"蓝牙5.0技术，传输更稳定\",\n    \"真无线设计，佩戴舒适无束缚\",\n    \"支持音乐播放，随时享受好音质\"\n  ],\n  \"short_description\": \"这款陈星双耳真无线蓝牙耳机采用最新的蓝牙5.0技术，确保了稳定的音频传输体验。佩戴舒适度高，适合长时间使用。支持音乐播放功能，让您随时随地享受高品质音乐。\"\n}",
+      "parsed_output": {
+        "generated_title": "陈星双耳真无线蓝牙5.0耳机",
+        "selling_points": [
+          "蓝牙5.0技术，传输更稳定",
+          "真无线设计，佩戴舒适无束缚",
+          "支持音乐播放，随时享受好音质"
+        ],
+        "short_description": "这款陈星双耳真无线蓝牙耳机采用最新的蓝牙5.0技术，确保了稳定的音频传输体验。佩戴舒适度高，适合长时间使用。支持音乐播放功能，让您随时随地享受高品质音乐。"
+      },
+      "parse_error": null,
+      "generation_seconds": 4.972
+    },
+    {
+      "product_id": "624112334484",
+      "generation_input": {
+        "category_l1": "3C数码",
+        "category_l2": "耳机",
+        "attributes": {
+          "品牌": [
+            "Jabra/捷波朗"
+          ],
+          "佩戴方式": [
+            "挂耳式"
+          ],
+          "耳机类别": [
+            "真无线耳机"
+          ],
+          "耳机与播放设备连接方式": [
+            "蓝牙连接"
+          ],
+          "蓝牙版本": [
+            "4.2"
+          ],
+          "功能": [
+            "多点连接"
+          ]
+        }
+      },
+      "reference_title_not_given_to_model": "Jabra/捷波朗 TALK 55壹石无线蓝牙耳机商务降噪高清语音通话通用",
+      "raw_output": "{\n  \"generated_title\": \"Jabra捷波朗真无线挂耳式蓝牙4.2耳机\",\n  \"selling_points\": [\n    \"支持多点连接，智能切换设备\",\n    \"蓝牙4.2版本，稳定传输更远距离\",\n    \"挂耳式设计，佩戴稳固舒适\"\n  ],\n  \"short_description\": \"Jabra捷波朗真无线挂耳式蓝牙耳机，采用4.2版本蓝牙技术，确保稳定高效连接。支持多点连接，可同时连接两台设备并智能切换。挂耳式设计让佩戴更加稳固舒适，适合长时间使用。\"\n}",
+      "parsed_output": {
+        "generated_title": "Jabra捷波朗真无线挂耳式蓝牙4.2耳机",
+        "selling_points": [
+          "支持多点连接，智能切换设备",
+          "蓝牙4.2版本，稳定传输更远距离",
+          "挂耳式设计，佩戴稳固舒适"
+        ],
+        "short_description": "Jabra捷波朗真无线挂耳式蓝牙耳机，采用4.2版本蓝牙技术，确保稳定高效连接。支持多点连接，可同时连接两台设备并智能切换。挂耳式设计让佩戴更加稳固舒适，适合长时间使用。"
+      },
+      "parse_error": null,
+      "generation_seconds": 6.014
+    },
+    {
+      "product_id": "15246761632",
+      "generation_input": {
+        "category_l1": "3C数码",
+        "category_l2": "键盘",
+        "attributes": {
+          "品牌": [
+            "双飞燕"
+          ],
+          "接口类型": [
+            "USB"
+          ],
+          "是否无线": [
+            "有线"
+          ],
+          "是否机械键盘": [
+            "否"
+          ],
+          "是否有多媒体功能键": [
+            "有"
+          ],
+          "有无手托": [
+            "有"
+          ]
+        }
+      },
+      "reference_title_not_given_to_model": "双飞燕 X7-G800V QQ炫舞游戏专业键盘有线USB劲舞团打P吃鸡宏编程",
+      "raw_output": "{\n  \"generated_title\": \"双飞燕有线USB接口多媒体功能键游戏键盘带手托\",\n  \"selling_points\": [\n    \"有线设计确保稳定高效输入\",\n    \"配备多媒体快捷键提高办公效率\",\n    \"舒适手托设计减轻长时间使用的疲劳\"\n  ],\n  \"short_description\": \"这款双飞燕有线键盘采用USB接口，提供稳定高效的输入体验。键盘设有多媒体功能键，方便用户快速操作，提升工作效率。同时，附带的手托设计让用户在长时间使用时也能保持舒适，有效减少手部压力。\"\n}",
+      "parsed_output": {
+        "generated_title": "双飞燕有线USB接口多媒体功能键游戏键盘带手托",
+        "selling_points": [
+          "有线设计确保稳定高效输入",
+          "配备多媒体快捷键提高办公效率",
+          "舒适手托设计减轻长时间使用的疲劳"
+        ],
+        "short_description": "这款双飞燕有线键盘采用USB接口，提供稳定高效的输入体验。键盘设有多媒体功能键，方便用户快速操作，提升工作效率。同时，附带的手托设计让用户在长时间使用时也能保持舒适，有效减少手部压力。"
+      },
+      "parse_error": null,
+      "generation_seconds": 5.702
+    },
+    {
+      "product_id": "543556617866",
+      "generation_input": {
+        "category_l1": "3C数码",
+        "category_l2": "键盘",
+        "attributes": {
+          "品牌": [
+            "Hello Kitty"
+          ],
+          "型号": [
+            "kt-201"
+          ],
+          "接口类型": [
+            "USB"
+          ],
+          "是否无线": [
+            "有线"
+          ],
+          "是否机械键盘": [
+            "否"
+          ],
+          "是否有多媒体功能键": [
+            "无"
+          ],
+          "有无手托": [
+            "无"
+          ]
+        }
+      },
+      "reference_title_not_given_to_model": "卡通可爱女生少女心套装鼠标键盘USB有线电脑台式笔记本家用粉色",
+      "raw_output": "{\n  \"generated_title\": \"Hello Kitty kt-201 有线USB键盘\",\n  \"selling_points\": [\n    \"经典Hello Kitty设计，可爱有加\",\n    \"采用USB接口，连接稳定快速\",\n    \"有线键盘设计，使用更安全可靠\"\n  ],\n  \"short_description\": \"这款Hello Kitty kt-201有线USB键盘，采用经典卡通形象设计，既美观又实用。通过USB接口连接电脑，操作简单，传输速度快。作为一款有线键盘，它能够提供更为稳定和可靠的使用体验。\"\n}",
+      "parsed_output": {
+        "generated_title": "Hello Kitty kt-201 有线USB键盘",
+        "selling_points": [
+          "经典Hello Kitty设计，可爱有加",
+          "采用USB接口，连接稳定快速",
+          "有线键盘设计，使用更安全可靠"
+        ],
+        "short_description": "这款Hello Kitty kt-201有线USB键盘，采用经典卡通形象设计，既美观又实用。通过USB接口连接电脑，操作简单，传输速度快。作为一款有线键盘，它能够提供更为稳定和可靠的使用体验。"
+      },
+      "parse_error": null,
+      "generation_seconds": 5.955
+    },
+    {
+      "product_id": "559685535453",
+      "generation_input": {
+        "category_l1": "3C数码",
+        "category_l2": "键盘",
+        "attributes": {
+          "品牌": [
+            "翼蛇"
+          ],
+          "型号": [
+            "K6"
+          ],
+          "接口类型": [
+            "USB"
+          ],
+          "是否无线": [
+            "有线"
+          ],
+          "是否机械键盘": [
+            "是"
+          ],
+          "是否有多媒体功能键": [
+            "有"
+          ],
+          "有无手托": [
+            "无"
+          ]
+        }
+      },
+      "reference_title_not_given_to_model": "黑轴有线游戏机械键盘台式电脑usb背光发光办公用金属跑马灯防水",
+      "raw_output": "{\n  \"generated_title\": \"翼蛇K6有线机械键盘 USB接口 多媒体功能键\",\n  \"selling_points\": [\n    \"采用USB接口设计，连接稳定快捷\",\n    \"内置高品质机械轴体，手感更佳\",\n    \"配备多媒体快捷键，办公娱乐两相宜\"\n  ],\n  \"short_description\": \"翼蛇K6有线机械键盘采用USB接口设计，提供稳定便捷的连接体验。搭载高品质机械轴体，确保每一次按键都精准有力。键盘设有多媒体功能键，方便用户在办公和娱乐时快速切换音量、播放等操作。\"\n}",
+      "parsed_output": {
+        "generated_title": "翼蛇K6有线机械键盘 USB接口 多媒体功能键",
+        "selling_points": [
+          "采用USB接口设计，连接稳定快捷",
+          "内置高品质机械轴体，手感更佳",
+          "配备多媒体快捷键，办公娱乐两相宜"
+        ],
+        "short_description": "翼蛇K6有线机械键盘采用USB接口设计，提供稳定便捷的连接体验。搭载高品质机械轴体，确保每一次按键都精准有力。键盘设有多媒体功能键，方便用户在办公和娱乐时快速切换音量、播放等操作。"
+      },
+      "parse_error": null,
+      "generation_seconds": 6.018
+    },
+    {
+      "product_id": "583601853144",
+      "generation_input": {
+        "category_l1": "3C数码",
+        "category_l2": "键盘",
+        "attributes": {
+          "品牌": [
+            "MageGee"
+          ],
+          "型号": [
+            "机械风暴套装"
+          ],
+          "接口类型": [
+            "USB"
+          ],
+          "是否无线": [
+            "有线"
+          ],
+          "是否有多媒体功能键": [
+            "有"
+          ],
+          "有无手托": [
+            "无"
+          ]
+        }
+      },
+      "reference_title_not_given_to_model": "QQQ推荐机械风暴MageGee机械键盘青轴套装送鼠标电竞吃鸡鼠标",
+      "raw_output": "{\n  \"generated_title\": \"MageGee机械风暴套装有线键盘\",\n  \"selling_points\": [\n    \"支持USB接口，连接稳定高效\",\n    \"配备多媒体功能键，操作便捷\",\n    \"无手托设计，紧凑型布局节省空间\"\n  ],\n  \"short_description\": \"MageGee机械风暴套装有线键盘采用USB接口设计，确保了设备间的稳定连接。拥有专门的多媒体控制键，便于快速调整音量、播放音乐等。键盘采用紧凑型设计，无需额外的手托，节省桌面空间，适合多种使用场景。\"\n}",
+      "parsed_output": {
+        "generated_title": "MageGee机械风暴套装有线键盘",
+        "selling_points": [
+          "支持USB接口，连接稳定高效",
+          "配备多媒体功能键，操作便捷",
+          "无手托设计，紧凑型布局节省空间"
+        ],
+        "short_description": "MageGee机械风暴套装有线键盘采用USB接口设计，确保了设备间的稳定连接。拥有专门的多媒体控制键，便于快速调整音量、播放音乐等。键盘采用紧凑型设计，无需额外的手托，节省桌面空间，适合多种使用场景。"
+      },
+      "parse_error": null,
+      "generation_seconds": 6.171
+    },
+    {
+      "product_id": "590008960085",
+      "generation_input": {
+        "category_l1": "3C数码",
+        "category_l2": "键盘",
+        "attributes": {
+          "品牌": [
+            "B.O.W"
+          ],
+          "型号": [
+            "HB028"
+          ],
+          "接口类型": [
+            "蓝牙"
+          ],
+          "是否无线": [
+            "无线"
+          ],
+          "是否机械键盘": [
+            "否"
+          ],
+          "是否有多媒体功能键": [
+            "无"
+          ],
+          "有无手托": [
+            "无"
+          ]
+        }
+      },
+      "reference_title_not_given_to_model": "BOW航世蓝牙键盘适用于平板2018苹果ipadmini5无线小键盘可连手机",
+      "raw_output": "{\n  \"generated_title\": \"B.O.W HB028 蓝牙无线电脑键盘\",\n  \"selling_points\": [\n    \"蓝牙无线连接，操作便捷\",\n    \"简约设计，适合多种电脑使用\",\n    \"轻巧便携，易于携带\"\n  ],\n  \"short_description\": \"B.O.W HB028蓝牙无线键盘采用简约设计，轻巧便携，适用于多种电脑设备。通过蓝牙无线连接，操作更加便捷高效，满足日常办公和娱乐需求。\"\n}",
+      "parsed_output": {
+        "generated_title": "B.O.W HB028 蓝牙无线电脑键盘",
+        "selling_points": [
+          "蓝牙无线连接，操作便捷",
+          "简约设计，适合多种电脑使用",
+          "轻巧便携，易于携带"
+        ],
+        "short_description": "B.O.W HB028蓝牙无线键盘采用简约设计，轻巧便携，适用于多种电脑设备。通过蓝牙无线连接，操作更加便捷高效，满足日常办公和娱乐需求。"
+      },
+      "parse_error": null,
+      "generation_seconds": 5.228
+    },
+    {
+      "product_id": "601009119510",
+      "generation_input": {
+        "category_l1": "3C数码",
+        "category_l2": "键盘",
+        "attributes": {
+          "品牌": [
+            "富德"
+          ],
+          "型号": [
+            "IK8300"
+          ],
+          "接口类型": [
+            "蓝牙",
+            "USB"
+          ],
+          "是否无线": [
+            "无线"
+          ],
+          "是否机械键盘": [
+            "否"
+          ],
+          "是否有多媒体功能键": [
+            "有"
+          ],
+          "有无手托": [
+            "无"
+          ]
+        }
+      },
+      "reference_title_not_given_to_model": "蓝牙键盘平板专用可连手机无线薄膜键盘无声静音鼠标套装电脑ipad智能双模办公打字108键超薄无按键音",
+      "raw_output": "{\n  \"generated_title\": \"富德 IK8300 蓝牙+USB无线多媒体键盘\",\n  \"selling_points\": [\n    \"支持蓝牙和USB双模式连接，适应多种设备\",\n    \"内置多媒体控制键，轻松管理音量和播放\",\n    \"采用无线设计，使用更灵活自由\"\n  ],\n  \"short_description\": \"富德 IK8300 是一款无线蓝牙+USB键盘，支持多种连接方式，配备多媒体控制键，方便快捷地调整音量和播放。键盘设计简洁实用，满足日常办公与娱乐需求。\"\n}",
+      "parsed_output": {
+        "generated_title": "富德 IK8300 蓝牙+USB无线多媒体键盘",
+        "selling_points": [
+          "支持蓝牙和USB双模式连接，适应多种设备",
+          "内置多媒体控制键，轻松管理音量和播放",
+          "采用无线设计，使用更灵活自由"
+        ],
+        "short_description": "富德 IK8300 是一款无线蓝牙+USB键盘，支持多种连接方式，配备多媒体控制键，方便快捷地调整音量和播放。键盘设计简洁实用，满足日常办公与娱乐需求。"
+      },
+      "parse_error": null,
+      "generation_seconds": 5.865
+    },
+    {
+      "product_id": "614181544723",
+      "generation_input": {
+        "category_l1": "3C数码",
+        "category_l2": "键盘",
+        "attributes": {
+          "品牌": [
+            "Logitech/罗技"
+          ],
+          "接口类型": [
+            "USB"
+          ],
+          "是否无线": [
+            "有线"
+          ],
+          "是否机械键盘": [
+            "是"
+          ],
+          "是否有多媒体功能键": [
+            "有"
+          ]
+        }
+      },
+      "reference_title_not_given_to_model": "官方正品罗技G610+G502HERO有线键盘鼠标套装 cherry樱桃机械键盘",
+      "raw_output": "{\n  \"generated_title\": \"Logitech/罗技有线机械键盘，USB接口，带多媒体快捷键\",\n  \"selling_points\": [\n    \"采用机械轴体设计，提供更佳手感与更长使用寿命\",\n    \"USB有线连接，稳定性高，无延迟\",\n    \"配备多媒体功能键，轻松控制音量与播放\"\n  ],\n  \"short_description\": \"这款罗技有线机械键盘采用高品质机械轴体，确保卓越的打字体验和长久使用。通过USB接口连接，保证数据传输稳定可靠，无网络延迟问题。同时，它还内置多媒体功能键，方便用户进行快速操作，提升工作效率。\"\n}",
+      "parsed_output": {
+        "generated_title": "Logitech/罗技有线机械键盘，USB接口，带多媒体快捷键",
+        "selling_points": [
+          "采用机械轴体设计，提供更佳手感与更长使用寿命",
+          "USB有线连接，稳定性高，无延迟",
+          "配备多媒体功能键，轻松控制音量与播放"
+        ],
+        "short_description": "这款罗技有线机械键盘采用高品质机械轴体，确保卓越的打字体验和长久使用。通过USB接口连接，保证数据传输稳定可靠，无网络延迟问题。同时，它还内置多媒体功能键，方便用户进行快速操作，提升工作效率。"
+      },
+      "parse_error": null,
+      "generation_seconds": 6.338
+    },
+    {
+      "product_id": "615882518927",
+      "generation_input": {
+        "category_l1": "3C数码",
+        "category_l2": "键盘",
+        "attributes": {
+          "品牌": [
+            "Ajazz/黑爵"
+          ],
+          "型号": [
+            "AK35Ip"
+          ],
+          "接口类型": [
+            "USB"
+          ],
+          "是否无线": [
+            "有线"
+          ],
+          "是否机械键盘": [
+            "是"
+          ],
+          "是否有多媒体功能键": [
+            "有"
+          ],
+          "有无手托": [
+            "无"
+          ]
+        }
+      },
+      "reference_title_not_given_to_model": "官方正品黑爵AK35i游戏机械键盘黑轴青轴红轴茶轴宏竞技可爱女生",
+      "raw_output": "{\n  \"generated_title\": \"AJazz 黑爵 AK35Ip 有线机械键盘 USB接口\",\n  \"selling_points\": [\n    \"全机械轴体设计，手感出色\",\n    \"配备多媒体快捷键，操作高效便捷\",\n    \"USB有线连接，稳定性高\"\n  ],\n  \"short_description\": \"AJazz 黑爵 AK35Ip 有线机械键盘采用全机械轴体，提供出色的打字体验。拥有多媒体功能键，满足办公娱乐多种需求。通过USB接口稳定连接，确保键盘操作流畅无延迟。\"\n}",
+      "parsed_output": {
+        "generated_title": "AJazz 黑爵 AK35Ip 有线机械键盘 USB接口",
+        "selling_points": [
+          "全机械轴体设计，手感出色",
+          "配备多媒体快捷键，操作高效便捷",
+          "USB有线连接，稳定性高"
+        ],
+        "short_description": "AJazz 黑爵 AK35Ip 有线机械键盘采用全机械轴体，提供出色的打字体验。拥有多媒体功能键，满足办公娱乐多种需求。通过USB接口稳定连接，确保键盘操作流畅无延迟。"
+      },
+      "parse_error": null,
+      "generation_seconds": 5.64
+    },
+    {
+      "product_id": "616205758872",
+      "generation_input": {
+        "category_l1": "3C数码",
+        "category_l2": "键盘",
+        "attributes": {
+          "品牌": [
+            "AULA/狼蛛"
+          ],
+          "型号": [
+            "F2068朋克机械键盘"
+          ],
+          "接口类型": [
+            "USB"
+          ],
+          "是否无线": [
+            "有线"
+          ],
+          "是否机械键盘": [
+            "是"
+          ],
+          "是否有多媒体功能键": [
+            "有"
+          ],
+          "有无手托": [
+            "无"
+          ]
+        }
+      },
+      "reference_title_not_given_to_model": "官方正品狼蛛机械键盘青轴黑轴游戏专用电竞lol牧马人104键电脑笔",
+      "raw_output": "{\n  \"generated_title\": \"AULA狼蛛F2068朋克机械键盘 USB有线设计\",\n  \"selling_points\": [\n    \"支持多媒体快捷键，操作便捷高效\",\n    \"采用优质机械轴体，手感出色\",\n    \"有线传输稳定可靠，无需担心信号干扰\"\n  ],\n  \"short_description\": \"AULA狼蛛F2068朋克机械键盘，采用USB有线连接，提供稳定的键盘输入体验。配备多种多媒体功能键，满足日常办公娱乐需求。采用机械轴体设计，带来出色的打字手感。\"\n}",
+      "parsed_output": {
+        "generated_title": "AULA狼蛛F2068朋克机械键盘 USB有线设计",
+        "selling_points": [
+          "支持多媒体快捷键，操作便捷高效",
+          "采用优质机械轴体，手感出色",
+          "有线传输稳定可靠，无需担心信号干扰"
+        ],
+        "short_description": "AULA狼蛛F2068朋克机械键盘，采用USB有线连接，提供稳定的键盘输入体验。配备多种多媒体功能键，满足日常办公娱乐需求。采用机械轴体设计，带来出色的打字手感。"
+      },
+      "parse_error": null,
+      "generation_seconds": 5.696
+    },
+    {
+      "product_id": "617920658390",
+      "generation_input": {
+        "category_l1": "3C数码",
+        "category_l2": "键盘",
+        "attributes": {
+          "品牌": [
+            "FUNKING"
+          ],
+          "型号": [
+            "ifk28"
+          ],
+          "接口类型": [
+            "USB",
+            "蓝牙"
+          ],
+          "是否无线": [
+            "无线"
+          ],
+          "是否机械键盘": [
+            "否"
+          ],
+          "是否有多媒体功能键": [
+            "无"
+          ]
+        }
+      },
+      "reference_title_not_given_to_model": "蓝牙数字小键盘无线背光可充电金属笔记本平板电脑手机通用键盘",
+      "raw_output": "{\n  \"generated_title\": \"FUNKING ifk28 无线蓝牙双接口电脑键盘\",\n  \"selling_points\": [\n    \"双接口设计，兼容USB与蓝牙，轻松连接多台设备\",\n    \"无线操作无延迟，提供流畅稳定的使用体验\",\n    \"便捷的无线传输技术，无需频繁插拔线缆\"\n  ],\n  \"short_description\": \"FUNKING ifk28无线蓝牙双接口电脑键盘采用USB和蓝牙双重连接方式，确保兼容性和灵活性。无线设计减少线缆束缚，提升移动办公效率。适用于多种场合，轻松连接您的设备。\"\n}",
+      "parsed_output": {
+        "generated_title": "FUNKING ifk28 无线蓝牙双接口电脑键盘",
+        "selling_points": [
+          "双接口设计，兼容USB与蓝牙，轻松连接多台设备",
+          "无线操作无延迟，提供流畅稳定的使用体验",
+          "便捷的无线传输技术，无需频繁插拔线缆"
+        ],
+        "short_description": "FUNKING ifk28无线蓝牙双接口电脑键盘采用USB和蓝牙双重连接方式，确保兼容性和灵活性。无线设计减少线缆束缚，提升移动办公效率。适用于多种场合，轻松连接您的设备。"
+      },
+      "parse_error": null,
+      "generation_seconds": 5.794
+    },
+    {
+      "product_id": "618733106466",
+      "generation_input": {
+        "category_l1": "3C数码",
+        "category_l2": "键盘",
+        "attributes": {
+          "品牌": [
+            "RK"
+          ],
+          "型号": [
+            "S108"
+          ],
+          "接口类型": [
+            "USB"
+          ],
+          "是否无线": [
+            "有线"
+          ],
+          "是否机械键盘": [
+            "是"
+          ],
+          "是否有多媒体功能键": [
+            "有"
+          ],
+          "有无手托": [
+            "有"
+          ]
+        }
+      },
+      "reference_title_not_given_to_model": "正品RKS108真机械键盘女生吃鸡游戏网红RGB复古蒸汽朋克笔雷蛇级",
+      "raw_output": "{\n  \"generated_title\": \"RK S108有线机械键盘，配备多媒体键与手托\",\n  \"selling_points\": [\n    \"RK品牌，S108型号，确保品质卓越\",\n    \"有线设计稳定可靠，避免无线键盘信号不稳定问题\",\n    \"内置多媒体功能键，便捷操控音乐与视频\"\n  ],\n  \"short_description\": \"RK S108键盘采用有线连接方式，提供稳定的使用体验。作为一款机械键盘，它具有出色的打字手感。此外，键盘还配备了多媒体控制键以及手托设计，提高长时间使用的舒适度。\"\n}",
+      "parsed_output": {
+        "generated_title": "RK S108有线机械键盘，配备多媒体键与手托",
+        "selling_points": [
+          "RK品牌，S108型号，确保品质卓越",
+          "有线设计稳定可靠，避免无线键盘信号不稳定问题",
+          "内置多媒体功能键，便捷操控音乐与视频"
+        ],
+        "short_description": "RK S108键盘采用有线连接方式，提供稳定的使用体验。作为一款机械键盘，它具有出色的打字手感。此外，键盘还配备了多媒体控制键以及手托设计，提高长时间使用的舒适度。"
+      },
+      "parse_error": null,
+      "generation_seconds": 6.251
+    },
+    {
+      "product_id": "621593735132",
+      "generation_input": {
+        "category_l1": "3C数码",
+        "category_l2": "键盘",
+        "attributes": {
+          "品牌": [
+            "Technology/新盟"
+          ],
+          "型号": [
+            "X9-VR版"
+          ],
+          "接口类型": [
+            "USB"
+          ],
+          "是否无线": [
+            "有线"
+          ],
+          "是否机械键盘": [
+            "是"
+          ],
+          "是否有多媒体功能键": [
+            "有"
+          ],
+          "有无手托": [
+            "无"
+          ]
+        }
+      },
+      "reference_title_not_given_to_model": "雷蛇技术正品新盟牧马人真机械键盘鼠标套装青轴黑轴吃鸡lol外设",
+      "raw_output": "{\n  \"generated_title\": \"Technology新盟X9-VR版有线机械键盘 USB接口\",\n  \"selling_points\": [\n    \"采用USB接口设计，连接稳定快速\",\n    \"机械键盘手感出色，操作反馈直接\",\n    \"内置多媒体快捷键，提升工作效率\"\n  ],\n  \"short_description\": \"Technology新盟X9-VR版有线机械键盘，配备USB接口，确保连接稳定高效。搭载机械键盘，提供出色的打字体验与直接反馈。拥有多媒体快捷键，方便快速切换音乐、调整音量等功能，提升使用便捷性。\"\n}",
+      "parsed_output": {
+        "generated_title": "Technology新盟X9-VR版有线机械键盘 USB接口",
+        "selling_points": [
+          "采用USB接口设计，连接稳定快速",
+          "机械键盘手感出色，操作反馈直接",
+          "内置多媒体快捷键，提升工作效率"
+        ],
+        "short_description": "Technology新盟X9-VR版有线机械键盘，配备USB接口，确保连接稳定高效。搭载机械键盘，提供出色的打字体验与直接反馈。拥有多媒体快捷键，方便快速切换音乐、调整音量等功能，提升使用便捷性。"
+      },
+      "parse_error": null,
+      "generation_seconds": 5.98
+    },
+    {
+      "product_id": "8443620439",
+      "generation_input": {
+        "category_l1": "3C数码",
+        "category_l2": "键盘",
+        "attributes": {
+          "品牌": [
+            "ViewSonic/优派"
+          ],
+          "接口类型": [
+            "USB"
+          ],
+          "是否无线": [
+            "有线"
+          ],
+          "是否机械键盘": [
+            "否"
+          ],
+          "是否有多媒体功能键": [
+            "有"
+          ],
+          "有无手托": [
+            "无"
+          ]
+        }
+      },
+      "reference_title_not_given_to_model": "优派KU855巧克力键盘有线纤薄电脑笔记本USB迷你静音外接小键盘白",
+      "raw_output": "{\n  \"generated_title\": \"优派有线USB键盘，实用多媒体功能键设计\",\n  \"selling_points\": [\n    \"采用USB接口，连接稳定快捷\",\n    \"配备多媒体功能键，操作更便捷\",\n    \"有线设计确保游戏时无延迟\"\n  ],\n  \"short_description\": \"这款优派有线USB键盘，通过USB接口轻松接入电脑，提供稳定快速的连接体验。键盘内置多媒体功能键，方便用户在听歌、看视频时进行快捷控制。特别适合游戏玩家使用，有线连接无延迟，确保游戏过程流畅无阻。\"\n}",
+      "parsed_output": {
+        "generated_title": "优派有线USB键盘，实用多媒体功能键设计",
+        "selling_points": [
+          "采用USB接口，连接稳定快捷",
+          "配备多媒体功能键，操作更便捷",
+          "有线设计确保游戏时无延迟"
+        ],
+        "short_description": "这款优派有线USB键盘，通过USB接口轻松接入电脑，提供稳定快速的连接体验。键盘内置多媒体功能键，方便用户在听歌、看视频时进行快捷控制。特别适合游戏玩家使用，有线连接无延迟，确保游戏过程流畅无阻。"
+      },
+      "parse_error": null,
+      "generation_seconds": 6.123
+    },
+    {
+      "product_id": "2859211238",
+      "generation_input": {
+        "category_l1": "3C数码",
+        "category_l2": "鼠标",
+        "attributes": {
+          "品牌": [
+            "Logitech/罗技"
+          ],
+          "接口类型": [
+            "USB"
+          ],
+          "工作方式": [
+            "光电"
+          ],
+          "光学分辨率": [
+            "其他/other"
+          ],
+          "按键数": [
+            "11"
+          ]
+        }
+      },
+      "reference_title_not_given_to_model": "罗技G502 HERO主宰者有线游戏机械鼠标吃鸡绝地求生lol G502无线",
+      "raw_output": "{\n  \"generated_title\": \"罗技光电11键USB无线鼠标\",\n  \"selling_points\": [\n    \"采用光电传感技术，提供精准定位体验\",\n    \"11个独立按键设计，操作更便捷高效\",\n    \"USB接口快速连接，即插即用方便快捷\"\n  ],\n  \"short_description\": \"罗技这款光电鼠标的光学传感技术确保了卓越的追踪精度，而11个独立按键的设计使得用户能够进行更加精细的操作。通过USB接口连接，这款鼠标不仅安装简单，还支持快速启动，是办公和游戏的理想选择。\"\n}",
+      "parsed_output": {
+        "generated_title": "罗技光电11键USB无线鼠标",
+        "selling_points": [
+          "采用光电传感技术，提供精准定位体验",
+          "11个独立按键设计，操作更便捷高效",
+          "USB接口快速连接，即插即用方便快捷"
+        ],
+        "short_description": "罗技这款光电鼠标的光学传感技术确保了卓越的追踪精度，而11个独立按键的设计使得用户能够进行更加精细的操作。通过USB接口连接，这款鼠标不仅安装简单，还支持快速启动，是办公和游戏的理想选择。"
+      },
+      "parse_error": null,
+      "generation_seconds": 6.079
+    },
+    {
+      "product_id": "42149170939",
+      "generation_input": {
+        "category_l1": "3C数码",
+        "category_l2": "鼠标",
+        "attributes": {
+          "品牌": [
+            "Microsoft/微软"
+          ],
+          "工作方式": [
+            "蓝影"
+          ],
+          "光学分辨率": [
+            "1000dpi"
+          ],
+          "按键数": [
+            "4个"
+          ],
+          "无线技术": [
+            "2.4GHz"
+          ],
+          "电源方式": [
+            "1节5号电池"
+          ]
+        }
+      },
+      "reference_title_not_given_to_model": "微软 sculpt人体工学鼠标 无线大鼠标 微软无线鼠标 馒头鼠标舒适",
+      "raw_output": "{\n  \"generated_title\": \"Microsoft/微软 1000dpi 蓝影 2.4GHz无线 4键鼠标\",\n  \"selling_points\": [\n    \"采用1000dpi蓝影光学技术，精准捕捉细微移动\",\n    \"2.4GHz无线连接，信号稳定无干扰\",\n    \"配备1节5号电池供电，使用便捷\"\n  ],\n  \"short_description\": \"此款微软鼠标具备1000dpi蓝影光学分辨率，确保操作流畅准确；通过2.4GHz无线技术实现快速响应，有效避免干扰；内置1节5号电池供电，方便快捷。\"\n}",
+      "parsed_output": {
+        "generated_title": "Microsoft/微软 1000dpi 蓝影 2.4GHz无线 4键鼠标",
+        "selling_points": [
+          "采用1000dpi蓝影光学技术，精准捕捉细微移动",
+          "2.4GHz无线连接，信号稳定无干扰",
+          "配备1节5号电池供电，使用便捷"
+        ],
+        "short_description": "此款微软鼠标具备1000dpi蓝影光学分辨率，确保操作流畅准确；通过2.4GHz无线技术实现快速响应，有效避免干扰；内置1节5号电池供电，方便快捷。"
+      },
+      "parse_error": null,
+      "generation_seconds": 6.562
+    },
+    {
+      "product_id": "544826941132",
+      "generation_input": {
+        "category_l1": "3C数码",
+        "category_l2": "鼠标",
+        "attributes": {
+          "品牌": [
+            "Logitech/罗技"
+          ],
+          "接口类型": [
+            "串口"
+          ],
+          "工作方式": [
+            "光电"
+          ],
+          "光学分辨率": [
+            "8200dpi"
+          ],
+          "按键数": [
+            "10个"
+          ],
+          "无线技术": [
+            "2.4GHz"
+          ],
+          "电源方式": [
+            "一节五号电池"
+          ]
+        }
+      },
+      "reference_title_not_given_to_model": "罗技G900鼠标维修理永不双击连击换新品进口黄金微动移动失灵挑垫",
+      "raw_output": "{\n  \"generated_title\": \"罗技光电串口8200dpi10键鼠标\",\n  \"selling_points\": [\n    \"采用2.4GHz无线技术，确保稳定高效连接\",\n    \"内置一节五号电池供电，方便快捷\",\n    \"8200dpi高分辨率，精准定位，操作更顺畅\"\n  ],\n  \"short_description\": \"这款罗技光电鼠标通过2.4GHz无线技术实现快速稳定的连接，配备8200dpi高分辨率传感器，保证精准定位和流畅操作。鼠标设计简洁，采用一节五号电池供电，便于使用和维护。拥有10个按键，满足多种操作需求。\"\n}",
+      "parsed_output": {
+        "generated_title": "罗技光电串口8200dpi10键鼠标",
+        "selling_points": [
+          "采用2.4GHz无线技术，确保稳定高效连接",
+          "内置一节五号电池供电，方便快捷",
+          "8200dpi高分辨率，精准定位，操作更顺畅"
+        ],
+        "short_description": "这款罗技光电鼠标通过2.4GHz无线技术实现快速稳定的连接，配备8200dpi高分辨率传感器，保证精准定位和流畅操作。鼠标设计简洁，采用一节五号电池供电，便于使用和维护。拥有10个按键，满足多种操作需求。"
+      },
+      "parse_error": null,
+      "generation_seconds": 6.607
+    },
+    {
+      "product_id": "565468950564",
+      "generation_input": {
+        "category_l1": "3C数码",
+        "category_l2": "鼠标",
+        "attributes": {
+          "品牌": [
+            "富德"
+          ],
+          "型号": [
+            "V1"
+          ],
+          "工作方式": [
+            "光电"
+          ],
+          "光学分辨率": [
+            "1600dpi"
+          ],
+          "按键数": [
+            "3个"
+          ],
+          "无线技术": [
+            "2.4GHz"
+          ],
+          "电源方式": [
+            "1节5号电池"
+          ]
+        }
+      },
+      "reference_title_not_given_to_model": "富德女生迷你小巧无线鼠标 联想华硕戴尔惠普笔记本电脑通用鼠标",
+      "raw_output": "{\n  \"generated_title\": \"富德V1 2.4G光电无线鼠标 1600dpi 三键设计\",\n  \"selling_points\": [\n    \"采用2.4G无线传输技术，信号稳定无干扰\",\n    \"1600dpi高分辨率，精准定位更流畅\",\n    \"内置1节5号电池供电，使用便捷持久\"\n  ],\n  \"short_description\": \"富德V1无线光电鼠标，配备2.4G无线技术，确保高速传输和稳定连接；1600dpi高分辨率，提供精确的追踪体验；内置1节5号电池供电，方便省电，满足日常办公和游戏需求。\"\n}",
+      "parsed_output": {
+        "generated_title": "富德V1 2.4G光电无线鼠标 1600dpi 三键设计",
+        "selling_points": [
+          "采用2.4G无线传输技术，信号稳定无干扰",
+          "1600dpi高分辨率，精准定位更流畅",
+          "内置1节5号电池供电，使用便捷持久"
+        ],
+        "short_description": "富德V1无线光电鼠标，配备2.4G无线技术，确保高速传输和稳定连接；1600dpi高分辨率，提供精确的追踪体验；内置1节5号电池供电，方便省电，满足日常办公和游戏需求。"
+      },
+      "parse_error": null,
+      "generation_seconds": 6.677
+    },
+    {
+      "product_id": "572739978355",
+      "generation_input": {
+        "category_l1": "3C数码",
+        "category_l2": "鼠标",
+        "attributes": {
+          "品牌": [
+            "E-3LUE/宜博"
+          ],
+          "型号": [
+            "EMS128"
+          ],
+          "接口类型": [
+            "USB"
+          ],
+          "工作方式": [
+            "光电"
+          ],
+          "光学分辨率": [
+            "1600dpi"
+          ],
+          "按键数": [
+            "6个"
+          ]
+        }
+      },
+      "reference_title_not_given_to_model": "宜博Q版眼镜蛇USB游戏鼠标办公笔记本台式用鼠标",
+      "raw_output": "{\n  \"generated_title\": \"E-3LUE宜博 EMS128光电USB鼠标\",\n  \"selling_points\": [\n    \"6键设计，操作便捷高效\",\n    \"1600dpi高分辨率，精准定位\",\n    \"USB接口即插即用，安装简单\"\n  ],\n  \"short_description\": \"E-3LUE宜博 EMS128光电USB鼠标采用6键设计，操作更为便捷高效；搭载1600dpi高分辨率，确保精准定位；支持USB接口，即插即用，安装简单快捷。\"\n}",
+      "parsed_output": {
+        "generated_title": "E-3LUE宜博 EMS128光电USB鼠标",
+        "selling_points": [
+          "6键设计，操作便捷高效",
+          "1600dpi高分辨率，精准定位",
+          "USB接口即插即用，安装简单"
+        ],
+        "short_description": "E-3LUE宜博 EMS128光电USB鼠标采用6键设计，操作更为便捷高效；搭载1600dpi高分辨率，确保精准定位；支持USB接口，即插即用，安装简单快捷。"
+      },
+      "parse_error": null,
+      "generation_seconds": 5.58
+    },
+    {
+      "product_id": "578515650928",
+      "generation_input": {
+        "category_l1": "3C数码",
+        "category_l2": "鼠标",
+        "attributes": {
+          "品牌": [
+            "钛度"
+          ],
+          "型号": [
+            "TSG301"
+          ],
+          "接口类型": [
+            "USB"
+          ],
+          "工作方式": [
+            "光电"
+          ],
+          "光学分辨率": [
+            "其他/other"
+          ]
+        }
+      },
+      "reference_title_not_given_to_model": "钛度TSG301电竞者游戏绝地逃生吃鸡电脑鼠标黑色白色红色光电镜面",
+      "raw_output": "{\n  \"generated_title\": \"钛度 TSG301 USB光电鼠标\",\n  \"selling_points\": [\n    \"光电技术，精准定位，快速响应\",\n    \"USB接口设计，即插即用方便快捷\",\n    \"适合多种操作需求，办公娱乐两相宜\"\n  ],\n  \"short_description\": \"钛度TSG301是一款采用光电技术的USB鼠标，确保了精确的定位和快速的响应速度。通过简单的USB接口连接即可使用，方便快捷。适用于日常办公和游戏娱乐等多种场景，满足不同用户的操作需求。\"\n}",
+      "parsed_output": {
+        "generated_title": "钛度 TSG301 USB光电鼠标",
+        "selling_points": [
+          "光电技术，精准定位，快速响应",
+          "USB接口设计，即插即用方便快捷",
+          "适合多种操作需求，办公娱乐两相宜"
+        ],
+        "short_description": "钛度TSG301是一款采用光电技术的USB鼠标，确保了精确的定位和快速的响应速度。通过简单的USB接口连接即可使用，方便快捷。适用于日常办公和游戏娱乐等多种场景，满足不同用户的操作需求。"
+      },
+      "parse_error": null,
+      "generation_seconds": 5.515
+    },
+    {
+      "product_id": "585366825079",
+      "generation_input": {
+        "category_l1": "3C数码",
+        "category_l2": "鼠标",
+        "attributes": {
+          "品牌": [
+            "双飞燕"
+          ],
+          "接口类型": [
+            "USB"
+          ],
+          "工作方式": [
+            "光电"
+          ],
+          "光学分辨率": [
+            "3200dpi"
+          ]
+        }
+      },
+      "reference_title_not_given_to_model": "双飞燕 A91逆战塔防猎场血手鼠标V8M CF 和平精英绝地求生 红吼团",
+      "raw_output": "{\n  \"generated_title\": \"双飞燕 USB 光电鼠标 3200dpi 准确高效办公助手\",\n  \"selling_points\": [\n    \"USB接口设计，轻松连接电脑，操作简便\",\n    \"光电技术，提供3200dpi高分辨率，精准定位\",\n    \"适用于各种办公环境，提高工作效率\"\n  ],\n  \"short_description\": \"这款双飞燕USB光电鼠标采用3200dpi高分辨率技术，确保精准定位，配合USB接口轻松连接电脑，适用于各种办公场景，有效提升工作效率。\"\n}",
+      "parsed_output": {
+        "generated_title": "双飞燕 USB 光电鼠标 3200dpi 准确高效办公助手",
+        "selling_points": [
+          "USB接口设计，轻松连接电脑，操作简便",
+          "光电技术，提供3200dpi高分辨率，精准定位",
+          "适用于各种办公环境，提高工作效率"
+        ],
+        "short_description": "这款双飞燕USB光电鼠标采用3200dpi高分辨率技术，确保精准定位，配合USB接口轻松连接电脑，适用于各种办公场景，有效提升工作效率。"
+      },
+      "parse_error": null,
+      "generation_seconds": 5.601
+    },
+    {
+      "product_id": "589051188248",
+      "generation_input": {
+        "category_l1": "3C数码",
+        "category_l2": "鼠标",
+        "attributes": {
+          "品牌": [
+            "今贵"
+          ],
+          "型号": [
+            "wireless mouse-四九九"
+          ],
+          "接口类型": [
+            "USB"
+          ],
+          "工作方式": [
+            "光电"
+          ],
+          "光学分辨率": [
+            "1600dpi"
+          ],
+          "按键数": [
+            "4个"
+          ],
+          "无线技术": [
+            "蓝牙"
+          ],
+          "电源方式": [
+            "自带充电"
+          ]
+        }
+      },
+      "reference_title_not_given_to_model": "今贵 无线蓝牙鼠标可充电式静音无声男女生可爱办公游戏无限适用苹果macbook air pro联想小米微软华硕笔记本",
+      "raw_output": "{\n  \"generated_title\": \"今贵无线光电鼠标-四九九 USB接口 蓝牙连接 自带充电\",\n  \"selling_points\": [\n    \"1600dpi高精度光电定位，操作更精准\",\n    \"内置充电电池设计，使用便捷耐用\",\n    \"支持蓝牙无线连接，无需线缆束缚\"\n  ],\n  \"short_description\": \"今贵无线光电鼠标采用1600dpi高精度定位技术，确保鼠标操作的准确性。搭载内置充电电池，方便快捷。支持蓝牙无线连接，摆脱线缆束缚，适用于各种电脑设备。\"\n}",
+      "parsed_output": {
+        "generated_title": "今贵无线光电鼠标-四九九 USB接口 蓝牙连接 自带充电",
+        "selling_points": [
+          "1600dpi高精度光电定位，操作更精准",
+          "内置充电电池设计，使用便捷耐用",
+          "支持蓝牙无线连接，无需线缆束缚"
+        ],
+        "short_description": "今贵无线光电鼠标采用1600dpi高精度定位技术，确保鼠标操作的准确性。搭载内置充电电池，方便快捷。支持蓝牙无线连接，摆脱线缆束缚，适用于各种电脑设备。"
+      },
+      "parse_error": null,
+      "generation_seconds": 6.205
+    },
+    {
+      "product_id": "596152984459",
+      "generation_input": {
+        "category_l1": "3C数码",
+        "category_l2": "鼠标",
+        "attributes": {
+          "品牌": [
+            "Aigo/爱国者"
+          ],
+          "接口类型": [
+            "无线2.4G"
+          ],
+          "工作方式": [
+            "光电"
+          ],
+          "光学分辨率": [
+            "12000DPI"
+          ],
+          "按键数": [
+            "4个"
+          ]
+        }
+      },
+      "reference_title_not_given_to_model": "爱国者Q710 无线2.4G鼠标 台式机笔记本专用无线鼠标办公精品鼠标",
+      "raw_output": "{\n  \"generated_title\": \"Aigo/爱国者 无线2.4G 光电鼠标 12000DPI 4键\",\n  \"selling_points\": [\n    \"无线2.4G连接稳定，无延迟，体验流畅操作\",\n    \"12000DPI高精度光电传感器，精准定位每一处细节\",\n    \"4个按键设计，高效便捷操作，满足多种使用需求\"\n  ],\n  \"short_description\": \"Aigo/爱国者的这款无线2.4G光电鼠标，采用高精度12000DPI传感器，确保精准定位。配备4个按键，操作更加便捷高效。适用于办公、游戏等多种场景，是您电脑操作的理想伴侣。\"\n}",
+      "parsed_output": {
+        "generated_title": "Aigo/爱国者 无线2.4G 光电鼠标 12000DPI 4键",
+        "selling_points": [
+          "无线2.4G连接稳定，无延迟，体验流畅操作",
+          "12000DPI高精度光电传感器，精准定位每一处细节",
+          "4个按键设计，高效便捷操作，满足多种使用需求"
+        ],
+        "short_description": "Aigo/爱国者的这款无线2.4G光电鼠标，采用高精度12000DPI传感器，确保精准定位。配备4个按键，操作更加便捷高效。适用于办公、游戏等多种场景，是您电脑操作的理想伴侣。"
+      },
+      "parse_error": null,
+      "generation_seconds": 7.914
+    },
+    {
+      "product_id": "602684369098",
+      "generation_input": {
+        "category_l1": "3C数码",
+        "category_l2": "鼠标",
+        "attributes": {
+          "品牌": [
+            "探迅"
+          ],
+          "型号": [
+            "T6B"
+          ],
+          "接口类型": [
+            "USB"
+          ],
+          "工作方式": [
+            "光电"
+          ],
+          "光学分辨率": [
+            "1600dpi"
+          ],
+          "按键数": [
+            "6个"
+          ],
+          "无线技术": [
+            "2.4GHZ语音打字"
+          ],
+          "电源方式": [
+            "自带充电"
+          ]
+        }
+      },
+      "reference_title_not_given_to_model": "探迅Ai智能语音鼠标说话声控讯飞打字输入搜索翻译办公无线鼠标",
+      "raw_output": "{\n  \"generated_title\": \"探迅 T6B 光电USB无线鼠标 1600dpi 6键设计\",\n  \"selling_points\": [\n    \"1600dpi高精度光电传感，精准定位\",\n    \"6个按键设计，操作更便捷\",\n    \"自带充电功能，使用更加方便\"\n  ],\n  \"short_description\": \"探迅T6B是一款光电USB无线鼠标，采用1600dpi高精度传感技术，确保鼠标定位精准。拥有6个按键设计，操作更加便捷高效。支持2.4GHz无线技术，信号稳定，连接快速。同时具备自带充电功能，省去频繁更换电池的麻烦。\"\n}",
+      "parsed_output": {
+        "generated_title": "探迅 T6B 光电USB无线鼠标 1600dpi 6键设计",
+        "selling_points": [
+          "1600dpi高精度光电传感，精准定位",
+          "6个按键设计，操作更便捷",
+          "自带充电功能，使用更加方便"
+        ],
+        "short_description": "探迅T6B是一款光电USB无线鼠标，采用1600dpi高精度传感技术，确保鼠标定位精准。拥有6个按键设计，操作更加便捷高效。支持2.4GHz无线技术，信号稳定，连接快速。同时具备自带充电功能，省去频繁更换电池的麻烦。"
+      },
+      "parse_error": null,
+      "generation_seconds": 7.315
+    },
+    {
+      "product_id": "620004973618",
+      "generation_input": {
+        "category_l1": "3C数码",
+        "category_l2": "鼠标",
+        "attributes": {
+          "品牌": [
+            "Asus/华硕"
+          ],
+          "型号": [
+            "UT220"
+          ],
+          "接口类型": [
+            "USB"
+          ],
+          "工作方式": [
+            "光电"
+          ],
+          "光学分辨率": [
+            "1000dpi"
+          ],
+          "按键数": [
+            "2个"
+          ]
+        }
+      },
+      "reference_title_not_given_to_model": "华硕有线鼠标UT220pro伸缩线鼠标USB接口通用笔记本家用办公小巧",
+      "raw_output": "{\n  \"generated_title\": \"Asus UT220光电USB无线鼠标\",\n  \"selling_points\": [\n    \"光电技术，精准定位1000dpi\",\n    \"USB接口设计，即插即用方便快捷\",\n    \"2键配置，操作便捷高效\"\n  ],\n  \"short_description\": \"这款Asus UT220鼠标采用光电技术，提供1000dpi的高精度定位，确保游戏和办公使用时的精准操控。它通过USB接口连接电脑，使用简单快捷。配置了两个按键，满足基本的操作需求，是您日常工作的理想选择。\"\n}",
+      "parsed_output": {
+        "generated_title": "Asus UT220光电USB无线鼠标",
+        "selling_points": [
+          "光电技术，精准定位1000dpi",
+          "USB接口设计，即插即用方便快捷",
+          "2键配置，操作便捷高效"
+        ],
+        "short_description": "这款Asus UT220鼠标采用光电技术，提供1000dpi的高精度定位，确保游戏和办公使用时的精准操控。它通过USB接口连接电脑，使用简单快捷。配置了两个按键，满足基本的操作需求，是您日常工作的理想选择。"
+      },
+      "parse_error": null,
+      "generation_seconds": 6.467
+    },
+    {
+      "product_id": "623882882335",
+      "generation_input": {
+        "category_l1": "3C数码",
+        "category_l2": "鼠标",
+        "attributes": {
+          "型号": [
+            "360"
+          ],
+          "接口类型": [
+            "USB"
+          ],
+          "工作方式": [
+            "光电"
+          ],
+          "光学分辨率": [
+            "1600dpi"
+          ],
+          "按键数": [
+            "4个"
+          ],
+          "无线技术": [
+            "2.4GHz"
+          ],
+          "电源方式": [
+            "一节五号电池"
+          ]
+        }
+      },
+      "reference_title_not_given_to_model": "无线鼠标静音男女通用无声可爱磨砂舒适手感光电环保笔记本台式",
+      "raw_output": "{\n  \"generated_title\": \"360光电USB无线鼠标，1600dpi精准定位\",\n  \"selling_points\": [\n    \"1600dpi高分辨率，精准定位，操作更顺畅\",\n    \"2.4GHz无线连接，低延迟无干扰\",\n    \"采用一节五号电池供电，使用便捷续航久\"\n  ],\n  \"short_description\": \"这款360光电USB无线鼠标具备1600dpi高分辨率，确保了操作的精准性与流畅度。采用2.4GHz无线技术，有效避免了无线干扰，提供稳定的数据传输。使用一节五号电池供电，方便更换且具有较长的续航能力。\"\n}",
+      "parsed_output": {
+        "generated_title": "360光电USB无线鼠标，1600dpi精准定位",
+        "selling_points": [
+          "1600dpi高分辨率，精准定位，操作更顺畅",
+          "2.4GHz无线连接，低延迟无干扰",
+          "采用一节五号电池供电，使用便捷续航久"
+        ],
+        "short_description": "这款360光电USB无线鼠标具备1600dpi高分辨率，确保了操作的精准性与流畅度。采用2.4GHz无线技术，有效避免了无线干扰，提供稳定的数据传输。使用一节五号电池供电，方便更换且具有较长的续航能力。"
+      },
+      "parse_error": null,
+      "generation_seconds": 6.981
+    },
+    {
+      "product_id": "545593037598",
+      "generation_input": {
+        "category_l1": "家居日用",
+        "category_l2": "保温杯",
+        "attributes": {
+          "品牌": [
+            "将军令"
+          ],
+          "型号": [
+            "JJL260"
+          ],
+          "材质": [
+            "304不锈钢"
+          ],
+          "容量": [
+            "301mL(含)-400mL(含)"
+          ],
+          "保温时长": [
+            "6小时42度以上"
+          ],
+          "杯子样式": [
+            "大肚杯"
+          ],
+          "适用人群": [
+            "学生"
+          ],
+          "适用场景": [
+            "学校"
+          ]
+        }
+      },
+      "reference_title_not_given_to_model": "小mini可爱迷你不锈钢保温杯女男学生儿童创意便携大肚水壶杯子萌",
+      "raw_output": "{\n  \"generated_title\": \"将军令 JJL260 大肚杯 304不锈钢保温杯 学校专用\",\n  \"selling_points\": [\n    \"304不锈钢材质，耐用耐腐蚀\",\n    \"6小时内保持水温42度以上，保温效果佳\",\n    \"大肚杯设计，便于携带喝水\"\n  ],\n  \"short_description\": \"将军令 JJL260 大肚杯采用304不锈钢材质，具有良好的耐腐蚀性和耐用性。保温效果出色，能在6小时内保持水温在42度以上。特别适合学生在学校使用，大肚杯设计方便随时取用，轻松满足日常饮水需求。\"\n}",
+      "parsed_output": {
+        "generated_title": "将军令 JJL260 大肚杯 304不锈钢保温杯 学校专用",
+        "selling_points": [
+          "304不锈钢材质，耐用耐腐蚀",
+          "6小时内保持水温42度以上，保温效果佳",
+          "大肚杯设计，便于携带喝水"
+        ],
+        "short_description": "将军令 JJL260 大肚杯采用304不锈钢材质，具有良好的耐腐蚀性和耐用性。保温效果出色，能在6小时内保持水温在42度以上。特别适合学生在学校使用，大肚杯设计方便随时取用，轻松满足日常饮水需求。"
+      },
+      "parse_error": null,
+      "generation_seconds": 7.375
+    },
+    {
+      "product_id": "559887711431",
+      "generation_input": {
+        "category_l1": "家居日用",
+        "category_l2": "保温杯",
+        "attributes": {
+          "品牌": [
+            "富光"
+          ],
+          "型号": [
+            "车载弹跳杯组合"
+          ],
+          "材质": [
+            "304不锈钢"
+          ],
+          "容量": [
+            "401mL(含)-500mL(含)"
+          ],
+          "保温时长": [
+            "6小时(含)-12小时(不含)"
+          ],
+          "杯子样式": [
+            "直身杯"
+          ],
+          "适用人群": [
+            "大众"
+          ],
+          "适用场景": [
+            "日常送礼"
+          ]
+        }
+      },
+      "reference_title_not_given_to_model": "富光真空不锈钢保温杯男女士情侣时尚简约车载便携弹跳盖水杯子",
+      "raw_output": "{\n  \"generated_title\": \"富光车载弹跳杯组合，401mL-500mL直身不锈钢保温杯\",\n  \"selling_points\": [\n    \"采用304不锈钢材质，耐腐蚀易清洗\",\n    \"保温效果佳，6小时-12小时持久保温\",\n    \"直身杯设计，方便携带与使用\"\n  ],\n  \"short_description\": \"富光车载弹跳杯组合，选用优质304不锈钢材质，确保耐用易清洁。保温性能出色，能够保持饮品温度6到12小时。直身杯型便于携带，适合日常使用及送礼场合。\"\n}",
+      "parsed_output": {
+        "generated_title": "富光车载弹跳杯组合，401mL-500mL直身不锈钢保温杯",
+        "selling_points": [
+          "采用304不锈钢材质，耐腐蚀易清洗",
+          "保温效果佳，6小时-12小时持久保温",
+          "直身杯设计，方便携带与使用"
+        ],
+        "short_description": "富光车载弹跳杯组合，选用优质304不锈钢材质，确保耐用易清洁。保温性能出色，能够保持饮品温度6到12小时。直身杯型便于携带，适合日常使用及送礼场合。"
+      },
+      "parse_error": null,
+      "generation_seconds": 6.933
+    },
+    {
+      "product_id": "562660919726",
+      "generation_input": {
+        "category_l1": "家居日用",
+        "category_l2": "保温杯",
+        "attributes": {
+          "品牌": [
+            "双狮"
+          ],
+          "型号": [
+            "SS-56"
+          ],
+          "材质": [
+            "304不锈钢"
+          ],
+          "容量": [
+            "901mL(含)-1L(含)"
+          ],
+          "保温时长": [
+            "6小时(含)-12小时(不含)"
+          ],
+          "杯子样式": [
+            "直身杯"
+          ],
+          "适用人群": [
+            "大众"
+          ],
+          "适用场景": [
+            "运动"
+          ]
+        }
+      },
+      "reference_title_not_given_to_model": "高档304不锈钢保温杯1000ML大容量户外便携茶杯刻字定制礼品杯子",
+      "raw_output": "{\n  \"generated_title\": \"双狮 SS-56 304不锈钢直身杯 901mL-1L 保温6-12小时 大众运动用品\",\n  \"selling_points\": [\n    \"采用优质304不锈钢材质，耐腐蚀且持久耐用\",\n    \"直身设计，线条流畅，易于手持与携带\",\n    \"有效保温6-12小时，保持饮品温度更长时间\"\n  ],\n  \"short_description\": \"双狮SS-56保温杯选用304不锈钢材质，确保长久使用不易生锈。直身杯型便于携带，适合日常运动使用。保温效果出色，能够维持饮品温度长达6到12小时。\"\n}",
+      "parsed_output": {
+        "generated_title": "双狮 SS-56 304不锈钢直身杯 901mL-1L 保温6-12小时 大众运动用品",
+        "selling_points": [
+          "采用优质304不锈钢材质，耐腐蚀且持久耐用",
+          "直身设计，线条流畅，易于手持与携带",
+          "有效保温6-12小时，保持饮品温度更长时间"
+        ],
+        "short_description": "双狮SS-56保温杯选用304不锈钢材质，确保长久使用不易生锈。直身杯型便于携带，适合日常运动使用。保温效果出色，能够维持饮品温度长达6到12小时。"
+      },
+      "parse_error": null,
+      "generation_seconds": 7.667
+    },
+    {
+      "product_id": "566531828259",
+      "generation_input": {
+        "category_l1": "家居日用",
+        "category_l2": "保温杯",
+        "attributes": {
+          "品牌": [
+            "得力"
+          ],
+          "型号": [
+            "6148"
+          ],
+          "材质": [
+            "304不锈钢"
+          ],
+          "容量": [
+            "301mL(含)-400mL(含)"
+          ],
+          "保温时长": [
+            "6小时(含)-24小时(不含)"
+          ],
+          "杯子样式": [
+            "有手柄"
+          ],
+          "适用人群": [
+            "大众"
+          ],
+          "适用场景": [
+            "旅行"
+          ]
+        }
+      },
+      "reference_title_not_given_to_model": "得力保温杯水杯手柄304不锈钢男女学生商务旅行办公大容量真空杯",
+      "raw_output": "{\n  \"generated_title\": \"得力304不锈钢保温杯，301-400ml容量，6-24小时保温，便携旅行必备\",\n  \"selling_points\": [\n    \"304不锈钢材质，耐腐蚀、易清洁\",\n    \"6-24小时长效保温，保持饮品温度\",\n    \"有手柄设计，握持舒适不烫手\"\n  ],\n  \"short_description\": \"得力品牌的这款保温杯采用304不锈钢材质制作，耐腐蚀且容易清洗。具有6至24小时的保温功能，能够长时间保持饮品温度，适合日常旅行使用。杯身设计有手柄，便于携带和抓握，确保使用安全。\"\n}",
+      "parsed_output": {
+        "generated_title": "得力304不锈钢保温杯，301-400ml容量，6-24小时保温，便携旅行必备",
+        "selling_points": [
+          "304不锈钢材质，耐腐蚀、易清洁",
+          "6-24小时长效保温，保持饮品温度",
+          "有手柄设计，握持舒适不烫手"
+        ],
+        "short_description": "得力品牌的这款保温杯采用304不锈钢材质制作，耐腐蚀且容易清洗。具有6至24小时的保温功能，能够长时间保持饮品温度，适合日常旅行使用。杯身设计有手柄，便于携带和抓握，确保使用安全。"
+      },
+      "parse_error": null,
+      "generation_seconds": 7.598
+    },
+    {
+      "product_id": "576463385175",
+      "generation_input": {
+        "category_l1": "家居日用",
+        "category_l2": "保温杯",
+        "attributes": {
+          "品牌": [
+            "TFK(餐饮具)"
+          ],
+          "型号": [
+            "SN6004"
+          ],
+          "材质": [
+            "316不锈钢"
+          ],
+          "容量": [
+            "401mL(含)-500mL(含)"
+          ],
+          "保温时长": [
+            "6小时42度以上"
+          ],
+          "杯子样式": [
+            "直身杯"
+          ],
+          "适用人群": [
+            "大众"
+          ],
+          "适用场景": [
+            "商用"
+          ]
+        }
+      },
+      "reference_title_not_given_to_model": "TFK旋薄内胆316不锈钢商务简约保温杯男士茶水杯办公室女便携车载",
+      "raw_output": "{\n  \"generated_title\": \"TFK SN6004 316不锈钢直身杯 容量401-500ml 商用保温杯\",\n  \"selling_points\": [\n    \"采用316不锈钢材质，耐腐蚀耐用\",\n    \"保温效果卓越，6小时内保持42度以上\",\n    \"直身杯设计，便于携带与清洗\"\n  ],\n  \"short_description\": \"TFK SN6004保温杯，选用优质316不锈钢材质，确保长久使用无腐蚀。保温性能出色，可维持6小时内温度在42度以上，满足日常商用需求。杯体设计简洁大方，适合大众使用，方便携带和清洁。\"\n}",
+      "parsed_output": {
+        "generated_title": "TFK SN6004 316不锈钢直身杯 容量401-500ml 商用保温杯",
+        "selling_points": [
+          "采用316不锈钢材质，耐腐蚀耐用",
+          "保温效果卓越，6小时内保持42度以上",
+          "直身杯设计，便于携带与清洗"
+        ],
+        "short_description": "TFK SN6004保温杯，选用优质316不锈钢材质，确保长久使用无腐蚀。保温性能出色，可维持6小时内温度在42度以上，满足日常商用需求。杯体设计简洁大方，适合大众使用，方便携带和清洁。"
+      },
+      "parse_error": null,
+      "generation_seconds": 7.144
+    },
+    {
+      "product_id": "581329948812",
+      "generation_input": {
+        "category_l1": "家居日用",
+        "category_l2": "保温杯",
+        "attributes": {
+          "品牌": [
+            "御玺"
+          ],
+          "型号": [
+            "yx-1703"
+          ],
+          "材质": [
+            "304不锈钢"
+          ],
+          "容量": [
+            "601mL(含)-700mL(含)"
+          ],
+          "保温时长": [
+            "6小时(含)-24小时(不含)"
+          ],
+          "杯子样式": [
+            "子弹头型"
+          ],
+          "适用人群": [
+            "大众"
+          ],
+          "适用场景": [
+            "旅行"
+          ]
+        }
+      },
+      "reference_title_not_given_to_model": "御玺304不锈钢保温杯大容量便携户外迷彩运动车载钓鱼水杯子",
+      "raw_output": "{\n  \"generated_title\": \"御玺 yx-1703 304不锈钢子弹头型保温杯\",\n  \"selling_points\": [\n    \"采用优质304不锈钢材质，耐用耐腐蚀\",\n    \"保温效果卓越，6小时到24小时持久保温\",\n    \"子弹头型设计，便于携带适合旅行使用\"\n  ],\n  \"short_description\": \"御玺 yx-1703 保温杯，选用304不锈钢制造，确保安全健康且易于清洁。具有良好的保温性能，可以保持饮品温度长达24小时。独特的子弹头型设计让这款保温杯更加便携，特别适合日常旅行使用。\"\n}",
+      "parsed_output": {
+        "generated_title": "御玺 yx-1703 304不锈钢子弹头型保温杯",
+        "selling_points": [
+          "采用优质304不锈钢材质，耐用耐腐蚀",
+          "保温效果卓越，6小时到24小时持久保温",
+          "子弹头型设计，便于携带适合旅行使用"
+        ],
+        "short_description": "御玺 yx-1703 保温杯，选用304不锈钢制造，确保安全健康且易于清洁。具有良好的保温性能，可以保持饮品温度长达24小时。独特的子弹头型设计让这款保温杯更加便携，特别适合日常旅行使用。"
+      },
+      "parse_error": null,
+      "generation_seconds": 7.192
+    },
+    {
+      "product_id": "581689863460",
+      "generation_input": {
+        "category_l1": "家居日用",
+        "category_l2": "保温杯",
+        "attributes": {
+          "品牌": [
+            "TAFUCO/泰福高"
+          ],
+          "型号": [
+            "5490组合"
+          ],
+          "材质": [
+            "316不锈钢"
+          ],
+          "容量": [
+            "501mL(含)-600mL(含)"
+          ],
+          "保温时长": [
+            "12小时(含)-24小时(不含)"
+          ],
+          "杯子样式": [
+            "直身杯"
+          ],
+          "适用人群": [
+            "儿童"
+          ],
+          "适用场景": [
+            "日常送礼"
+          ]
+        }
+      },
+      "reference_title_not_given_to_model": "泰迪珍藏儿童保温杯带吸管两用小学生水杯男便携防摔幼儿园水壶女",
+      "raw_output": "{\n  \"generated_title\": \"TAFUCO泰福高5490组合直身杯，316不锈钢501-600mL日常送礼优选\",\n  \"selling_points\": [\n    \"采用优质316不锈钢材质，耐用抗腐蚀\",\n    \"保温效果出色，可保持12-24小时温度\",\n    \"直身杯设计，适合儿童使用，安全卫生\"\n  ],\n  \"short_description\": \"TAFUCO泰福高5490组合直身杯，选用316不锈钢材质，确保长期使用不易生锈。保温性能优越，能够维持食物或饮品在12到24小时内的适宜温度，特别适合日常送礼和儿童日常饮用。杯体设计简洁大方，既适合日常携带又易于清洗，是健康生活的理想选择。\"\n}",
+      "parsed_output": {
+        "generated_title": "TAFUCO泰福高5490组合直身杯，316不锈钢501-600mL日常送礼优选",
+        "selling_points": [
+          "采用优质316不锈钢材质，耐用抗腐蚀",
+          "保温效果出色，可保持12-24小时温度",
+          "直身杯设计，适合儿童使用，安全卫生"
+        ],
+        "short_description": "TAFUCO泰福高5490组合直身杯，选用316不锈钢材质，确保长期使用不易生锈。保温性能优越，能够维持食物或饮品在12到24小时内的适宜温度，特别适合日常送礼和儿童日常饮用。杯体设计简洁大方，既适合日常携带又易于清洗，是健康生活的理想选择。"
+      },
+      "parse_error": null,
+      "generation_seconds": 8.798
+    },
+    {
+      "product_id": "591309078741",
+      "generation_input": {
+        "category_l1": "家居日用",
+        "category_l2": "保温杯",
+        "attributes": {
+          "品牌": [
+            "other/其他"
+          ],
+          "型号": [
+            "布丁狗"
+          ],
+          "材质": [
+            "304不锈钢"
+          ],
+          "容量": [
+            "301mL(含)-400mL(含)"
+          ],
+          "保温时长": [
+            "6小时(含)-12小时(不含)"
+          ],
+          "杯子样式": [
+            "直身杯"
+          ],
+          "适用人群": [
+            "大众"
+          ],
+          "适用场景": [
+            "日常送礼"
+          ]
+        }
+      },
+      "reference_title_not_given_to_model": "蛋黄君大容量保温杯男女士学生韩版便携布丁狗不锈钢办公茶水杯子",
+      "raw_output": "{\n  \"generated_title\": \"304不锈钢布丁狗直身杯，日常送礼佳品\",\n  \"selling_points\": [\n    \"304不锈钢材质，耐腐蚀易清洗\",\n    \"直身设计，握感舒适不易倾倒\",\n    \"6-12小时长效保温，保持饮品温度\"\n  ],\n  \"short_description\": \"这款304不锈钢材质的布丁狗直身杯，采用优质不锈钢打造，不仅耐腐蚀而且容易清洁。杯身线条简洁流畅，握感舒适，不易倾倒。能够提供6到12小时的长效保温效果，无论是日常使用还是作为礼物赠送都是不错的选择。\"\n}",
+      "parsed_output": {
+        "generated_title": "304不锈钢布丁狗直身杯，日常送礼佳品",
+        "selling_points": [
+          "304不锈钢材质，耐腐蚀易清洗",
+          "直身设计，握感舒适不易倾倒",
+          "6-12小时长效保温，保持饮品温度"
+        ],
+        "short_description": "这款304不锈钢材质的布丁狗直身杯，采用优质不锈钢打造，不仅耐腐蚀而且容易清洁。杯身线条简洁流畅，握感舒适，不易倾倒。能够提供6到12小时的长效保温效果，无论是日常使用还是作为礼物赠送都是不错的选择。"
+      },
+      "parse_error": null,
+      "generation_seconds": 6.75
+    },
+    {
+      "product_id": "606991731175",
+      "generation_input": {
+        "category_l1": "家居日用",
+        "category_l2": "保温杯",
+        "attributes": {
+          "品牌": [
+            "other/其他"
+          ],
+          "型号": [
+            "纯色保温杯"
+          ],
+          "材质": [
+            "304不锈钢"
+          ],
+          "容量": [
+            "401mL(含)-500mL(含)"
+          ],
+          "保温时长": [
+            "6小时以上"
+          ],
+          "杯子样式": [
+            "直身杯"
+          ],
+          "适用人群": [
+            "学生"
+          ],
+          "适用场景": [
+            "运动"
+          ]
+        }
+      },
+      "reference_title_not_given_to_model": "保温杯女 学生 简约磨砂纯色ins原宿风便携陈意涵同款手提水杯子",
+      "raw_output": "{\n  \"generated_title\": \"401-500ml 304不锈钢直身杯 学生运动用纯色保温杯\",\n  \"selling_points\": [\n    \"采用304不锈钢材质，耐腐蚀不易生锈\",\n    \"直身杯设计，便于携带且不易打翻\",\n    \"保温效果出色，可保持饮品温度6小时以上\"\n  ],\n  \"short_description\": \"这款401-500ml的304不锈钢直身保温杯专为学生在运动时使用设计。杯体采用优质304不锈钢材质，耐腐蚀不易生锈，保证了长期使用的安全性和卫生性。直身杯设计简洁大方，不仅便于携带，而且不易打翻，非常适合户外运动爱好者。保温性能卓越，能有效保持饮品温度长达6小时，让学生随时随地享受温暖的饮品。\"\n}",
+      "parsed_output": {
+        "generated_title": "401-500ml 304不锈钢直身杯 学生运动用纯色保温杯",
+        "selling_points": [
+          "采用304不锈钢材质，耐腐蚀不易生锈",
+          "直身杯设计，便于携带且不易打翻",
+          "保温效果出色，可保持饮品温度6小时以上"
+        ],
+        "short_description": "这款401-500ml的304不锈钢直身保温杯专为学生在运动时使用设计。杯体采用优质304不锈钢材质，耐腐蚀不易生锈，保证了长期使用的安全性和卫生性。直身杯设计简洁大方，不仅便于携带，而且不易打翻，非常适合户外运动爱好者。保温性能卓越，能有效保持饮品温度长达6小时，让学生随时随地享受温暖的饮品。"
+      },
+      "parse_error": null,
+      "generation_seconds": 8.308
+    },
+    {
+      "product_id": "608335015563",
+      "generation_input": {
+        "category_l1": "家居日用",
+        "category_l2": "保温杯",
+        "attributes": {
+          "品牌": [
+            "guloo"
+          ],
+          "型号": [
+            "bwb-027"
+          ],
+          "材质": [
+            "304不锈钢"
+          ],
+          "容量": [
+            "301mL(含)-400mL(含)"
+          ],
+          "保温时长": [
+            "12小时(含)-24小时(不含)"
+          ],
+          "杯子样式": [
+            "有手柄"
+          ]
+        }
+      },
+      "reference_title_not_given_to_model": "保温杯迷你可爱24小时一盖两用情侣防烫男女便携学生运动情侣水杯",
+      "raw_output": "{\n  \"generated_title\": \"guloo bwb-027 304不锈钢保温杯，12-24小时长效保温\",\n  \"selling_points\": [\n    \"304不锈钢材质，耐用易清洗\",\n    \"12-24小时长效保温，保持饮品温度\",\n    \"有手柄设计，方便携带\"\n  ],\n  \"short_description\": \"guloo bwb-027保温杯采用优质304不锈钢材质，确保耐腐蚀与易清洁。具有12至24小时的长效保温功能，无论热饮还是冷饮都能保持适宜温度。杯身配备手柄，便于抓握和携带，适合日常办公、旅行或户外活动使用。\"\n}",
+      "parsed_output": {
+        "generated_title": "guloo bwb-027 304不锈钢保温杯，12-24小时长效保温",
+        "selling_points": [
+          "304不锈钢材质，耐用易清洗",
+          "12-24小时长效保温，保持饮品温度",
+          "有手柄设计，方便携带"
+        ],
+        "short_description": "guloo bwb-027保温杯采用优质304不锈钢材质，确保耐腐蚀与易清洁。具有12至24小时的长效保温功能，无论热饮还是冷饮都能保持适宜温度。杯身配备手柄，便于抓握和携带，适合日常办公、旅行或户外活动使用。"
+      },
+      "parse_error": null,
+      "generation_seconds": 7.14
+    },
+    {
+      "product_id": "609629279071",
+      "generation_input": {
+        "category_l1": "家居日用",
+        "category_l2": "保温杯",
+        "attributes": {
+          "品牌": [
+            "other/其他"
+          ],
+          "型号": [
+            "999"
+          ],
+          "材质": [
+            "304不锈钢"
+          ],
+          "容量": [
+            "301mL(含)-400mL(含)"
+          ],
+          "保温时长": [
+            "8小时"
+          ],
+          "杯子样式": [
+            "子弹头型"
+          ],
+          "适用人群": [
+            "大众"
+          ]
+        }
+      },
+      "reference_title_not_given_to_model": "保温茶杯茶水分离泡茶杯子男士高档大容量双层玻璃杯女便携隔热",
+      "raw_output": "{\n  \"generated_title\": \"304不锈钢子弹头保温杯 999型号 8小时长效保温\",\n  \"selling_points\": [\n    \"采用304不锈钢材质，安全健康无异味\",\n    \"子弹头造型设计，握感舒适不易滑落\",\n    \"8小时长效保温，满足日常使用需求\"\n  ],\n  \"short_description\": \"这款304不锈钢子弹头保温杯容量适中，适用于大众日常饮用。采用优质不锈钢材料，保证了产品的耐用性和安全性。独特的子弹头设计，不仅美观大方，而且手感舒适，便于携带。保温效果持久，轻松应对一天的工作和学习需求。\"\n}",
+      "parsed_output": {
+        "generated_title": "304不锈钢子弹头保温杯 999型号 8小时长效保温",
+        "selling_points": [
+          "采用304不锈钢材质，安全健康无异味",
+          "子弹头造型设计，握感舒适不易滑落",
+          "8小时长效保温，满足日常使用需求"
+        ],
+        "short_description": "这款304不锈钢子弹头保温杯容量适中，适用于大众日常饮用。采用优质不锈钢材料，保证了产品的耐用性和安全性。独特的子弹头设计，不仅美观大方，而且手感舒适，便于携带。保温效果持久，轻松应对一天的工作和学习需求。"
+      },
+      "parse_error": null,
+      "generation_seconds": 6.348
+    },
+    {
+      "product_id": "609762128375",
+      "generation_input": {
+        "category_l1": "家居日用",
+        "category_l2": "保温杯",
+        "attributes": {
+          "品牌": [
+            "卡西菲"
+          ],
+          "型号": [
+            "304内胆真空不锈钢"
+          ],
+          "材质": [
+            "304不锈钢"
+          ],
+          "容量": [
+            "201mL(含)-300mL(含)"
+          ],
+          "保温时长": [
+            "6小时(含)-12小时(不含)"
+          ],
+          "杯子样式": [
+            "大肚杯"
+          ],
+          "适用人群": [
+            "大众"
+          ],
+          "适用场景": [
+            "日常送礼"
+          ]
+        }
+      },
+      "reference_title_not_given_to_model": "保温杯矮胖型迷你喝水小杯女式小茶杯便携小巧好看的水杯外出复古",
+      "raw_output": "{\n  \"generated_title\": \"卡西菲304不锈钢大肚保温杯 201-300ml\",\n  \"selling_points\": [\n    \"采用304不锈钢材质，安全健康耐用\",\n    \"大肚设计，轻松握持，喝水更方便\",\n    \"保温效果出色，6-12小时保持水温\"\n  ],\n  \"short_description\": \"卡西菲304不锈钢大肚保温杯，容量适中，201-300ml，适合日常使用及送礼。304不锈钢材质，保证安全健康，大肚设计便于手持，保温性能优秀，可保持水温6到12小时。\"\n}",
+      "parsed_output": {
+        "generated_title": "卡西菲304不锈钢大肚保温杯 201-300ml",
+        "selling_points": [
+          "采用304不锈钢材质，安全健康耐用",
+          "大肚设计，轻松握持，喝水更方便",
+          "保温效果出色，6-12小时保持水温"
+        ],
+        "short_description": "卡西菲304不锈钢大肚保温杯，容量适中，201-300ml，适合日常使用及送礼。304不锈钢材质，保证安全健康，大肚设计便于手持，保温性能优秀，可保持水温6到12小时。"
+      },
+      "parse_error": null,
+      "generation_seconds": 6.866
+    },
+    {
+      "product_id": "625037263815",
+      "generation_input": {
+        "category_l1": "家居日用",
+        "category_l2": "保温杯",
+        "attributes": {
+          "品牌": [
+            "CMSH/草莓生活"
+          ],
+          "型号": [
+            "0706"
+          ],
+          "材质": [
+            "304不锈钢"
+          ],
+          "容量": [
+            "301mL(含)-400mL(含)"
+          ],
+          "保温时长": [
+            "6小时(含)-12小时(不含)"
+          ],
+          "杯子样式": [
+            "直身杯"
+          ],
+          "适用人群": [
+            "大众"
+          ],
+          "适用场景": [
+            "日常送礼"
+          ]
+        }
+      },
+      "reference_title_not_given_to_model": "小清新森系保温杯少女心可爱便携喝水杯子户外迷你创意学生随手杯",
+      "raw_output": "{\n  \"generated_title\": \"CMSH草莓生活0706 304不锈钢直身杯 301-400ml 6-12小时保温 日常用礼\",\n  \"selling_points\": [\n    \"304不锈钢材质，耐腐蚀易清洗\",\n    \"直身杯设计，握感舒适不易倾倒\",\n    \"6-12小时长效保温，保持饮品温度\"\n  ],\n  \"short_description\": \"这款CMSH草莓生活0706保温杯采用304不锈钢材质，耐腐蚀且易于清洁。直身杯型设计，握感舒适，不易倾倒。能够提供6-12小时的长效保温，确保饮品温度持久。适用于日常送礼，是送礼佳品。\"\n}",
+      "parsed_output": {
+        "generated_title": "CMSH草莓生活0706 304不锈钢直身杯 301-400ml 6-12小时保温 日常用礼",
+        "selling_points": [
+          "304不锈钢材质，耐腐蚀易清洗",
+          "直身杯设计，握感舒适不易倾倒",
+          "6-12小时长效保温，保持饮品温度"
+        ],
+        "short_description": "这款CMSH草莓生活0706保温杯采用304不锈钢材质，耐腐蚀且易于清洁。直身杯型设计，握感舒适，不易倾倒。能够提供6-12小时的长效保温，确保饮品温度持久。适用于日常送礼，是送礼佳品。"
+      },
+      "parse_error": null,
+      "generation_seconds": 8.105
+    },
+    {
+      "product_id": "547995479552",
+      "generation_input": {
+        "category_l1": "家居日用",
+        "category_l2": "垃圾桶",
+        "attributes": {
+          "品牌": [
+            "星日"
+          ],
+          "外壳材质": [
+            "塑料"
+          ],
+          "形状": [
+            "长筒形"
+          ],
+          "容量": [
+            "8L"
+          ],
+          "垃圾桶类型": [
+            "收纳桶"
+          ],
+          "开合方式": [
+            "无盖"
+          ],
+          "适用场景": [
+            "家庭使用"
+          ]
+        }
+      },
+      "reference_title_not_given_to_model": "塑料垃圾桶批发大号创意家用椭圆形纸篓筒卫生间C017收纳桶高30cm",
+      "raw_output": "{\n  \"generated_title\": \"星日8L长筒形塑料收纳桶，家庭日常垃圾收纳好帮手\",\n  \"selling_points\": [\n    \"采用优质塑料材质，耐用轻便，不易破损\",\n    \"长筒形设计合理利用空间，更易清理\",\n    \"无盖设计便于快速投放垃圾，操作便捷\"\n  ],\n  \"short_description\": \"这款星日8L长筒形塑料收纳桶专为家庭日常使用设计。采用环保耐用的塑料材质，轻巧稳固，适用于各种家庭环境。其独特的长筒形设计有效节省空间，同时方便清理。无盖设计让垃圾投放更加迅速方便，是您家居生活中不可或缺的好帮手。\"\n}",
+      "parsed_output": {
+        "generated_title": "星日8L长筒形塑料收纳桶，家庭日常垃圾收纳好帮手",
+        "selling_points": [
+          "采用优质塑料材质，耐用轻便，不易破损",
+          "长筒形设计合理利用空间，更易清理",
+          "无盖设计便于快速投放垃圾，操作便捷"
+        ],
+        "short_description": "这款星日8L长筒形塑料收纳桶专为家庭日常使用设计。采用环保耐用的塑料材质，轻巧稳固，适用于各种家庭环境。其独特的长筒形设计有效节省空间，同时方便清理。无盖设计让垃圾投放更加迅速方便，是您家居生活中不可或缺的好帮手。"
+      },
+      "parse_error": null,
+      "generation_seconds": 7.095
+    },
+    {
+      "product_id": "567398743698",
+      "generation_input": {
+        "category_l1": "家居日用",
+        "category_l2": "垃圾桶",
+        "attributes": {
+          "品牌": [
+            "宏大"
+          ],
+          "外壳材质": [
+            "塑料"
+          ],
+          "形状": [
+            "圆桶形"
+          ],
+          "容量": [
+            "10L"
+          ],
+          "垃圾桶类型": [
+            "收纳桶"
+          ],
+          "开合方式": [
+            "无盖"
+          ],
+          "适用场景": [
+            "家庭使用"
+          ]
+        }
+      },
+      "reference_title_not_given_to_model": "塑料圆形垃圾桶无盖酒店客房桶双层皮垃圾桶卫生间KTV垃圾桶家用",
+      "raw_output": "{\n  \"generated_title\": \"宏大10L圆桶形无盖塑料收纳桶 家庭使用\",\n  \"selling_points\": [\n    \"圆桶形设计，节省空间，适合小户型家庭使用\",\n    \"采用优质塑料材质，耐用且易清洁\",\n    \"无盖设计，方便投放垃圾，保持室内空气流通\"\n  ],\n  \"short_description\": \"宏大10L圆桶形塑料收纳桶，适用于家庭日常使用。圆桶形设计巧妙利用空间，无盖设计便于快速投放垃圾，同时塑料材质坚固耐用，易于清洗，是现代家居的理想选择。\"\n}",
+      "parsed_output": {
+        "generated_title": "宏大10L圆桶形无盖塑料收纳桶 家庭使用",
+        "selling_points": [
+          "圆桶形设计，节省空间，适合小户型家庭使用",
+          "采用优质塑料材质，耐用且易清洁",
+          "无盖设计，方便投放垃圾，保持室内空气流通"
+        ],
+        "short_description": "宏大10L圆桶形塑料收纳桶，适用于家庭日常使用。圆桶形设计巧妙利用空间，无盖设计便于快速投放垃圾，同时塑料材质坚固耐用，易于清洗，是现代家居的理想选择。"
+      },
+      "parse_error": null,
+      "generation_seconds": 6.297
+    },
+    {
+      "product_id": "576150055638",
+      "generation_input": {
+        "category_l1": "家居日用",
+        "category_l2": "垃圾桶",
+        "attributes": {
+          "品牌": [
+            "Citylong/禧天龙"
+          ],
+          "外壳材质": [
+            "塑料"
+          ],
+          "形状": [
+            "长筒形"
+          ],
+          "开合方式": [
+            "按压式"
+          ],
+          "适用场景": [
+            "家庭使用"
+          ]
+        }
+      },
+      "reference_title_not_given_to_model": "禧天龙创意垃圾桶键盘外型办公室家用纸篓简约按压式带压圈垃圾桶",
+      "raw_output": "{\n  \"generated_title\": \"Citylong/禧天龙 长筒形按压式塑料垃圾桶 家庭适用\",\n  \"selling_points\": [\n    \"采用优质塑料材质，坚固耐用，不易破损\",\n    \"长筒设计节省空间，适合小户型家庭收纳\",\n    \"按压式开合方便快捷，减少手部接触污垢\"\n  ],\n  \"short_description\": \"这款Citylong/禧天龙长筒形按压式塑料垃圾桶，采用坚固耐用的塑料材质，特别适合家庭日常使用。长筒设计有效节省空间，适用于小户型家庭。按压式开合设计简单易用，减少手部直接接触垃圾，保持清洁卫生。\"\n}",
+      "parsed_output": {
+        "generated_title": "Citylong/禧天龙 长筒形按压式塑料垃圾桶 家庭适用",
+        "selling_points": [
+          "采用优质塑料材质，坚固耐用，不易破损",
+          "长筒设计节省空间，适合小户型家庭收纳",
+          "按压式开合方便快捷，减少手部接触污垢"
+        ],
+        "short_description": "这款Citylong/禧天龙长筒形按压式塑料垃圾桶，采用坚固耐用的塑料材质，特别适合家庭日常使用。长筒设计有效节省空间，适用于小户型家庭。按压式开合设计简单易用，减少手部直接接触垃圾，保持清洁卫生。"
+      },
+      "parse_error": null,
+      "generation_seconds": 7.29
+    },
+    {
+      "product_id": "577426751464",
+      "generation_input": {
+        "category_l1": "家居日用",
+        "category_l2": "垃圾桶",
+        "attributes": {
+          "品牌": [
+            "印象泰"
+          ],
+          "形状": [
+            "长筒形"
+          ],
+          "容量": [
+            "12L"
+          ],
+          "垃圾桶类型": [
+            "摇盖式"
+          ],
+          "开合方式": [
+            "摇盖式"
+          ],
+          "适用场景": [
+            "家庭使用"
+          ]
+        }
+      },
+      "reference_title_not_given_to_model": "垃圾桶摇盖式客厅厨房家用带盖垃圾桶复古创意东南亚家居摆件装饰",
+      "raw_output": "{\n  \"generated_title\": \"印象泰长筒形12L摇盖式垃圾桶，家庭环保好选择\",\n  \"selling_points\": [\n    \"长筒形设计，节省空间，适应多种家居布局\",\n    \"12L大容量，满足日常垃圾存储需求\",\n    \"摇盖式开合，方便快捷，使用更省力\"\n  ],\n  \"short_description\": \"这款印象泰长筒形12L摇盖式垃圾桶，采用长筒形设计，有效节省家居空间，适用于各种家居环境。12L的大容量设计，可以满足家庭日常垃圾的存放需求。同时，其摇盖式的开合方式，操作简单便捷，轻松实现垃圾的投放与关闭，让垃圾分类更加省力高效。\"\n}",
+      "parsed_output": {
+        "generated_title": "印象泰长筒形12L摇盖式垃圾桶，家庭环保好选择",
+        "selling_points": [
+          "长筒形设计，节省空间，适应多种家居布局",
+          "12L大容量，满足日常垃圾存储需求",
+          "摇盖式开合，方便快捷，使用更省力"
+        ],
+        "short_description": "这款印象泰长筒形12L摇盖式垃圾桶，采用长筒形设计，有效节省家居空间，适用于各种家居环境。12L的大容量设计，可以满足家庭日常垃圾的存放需求。同时，其摇盖式的开合方式，操作简单便捷，轻松实现垃圾的投放与关闭，让垃圾分类更加省力高效。"
+      },
+      "parse_error": null,
+      "generation_seconds": 7.803
+    },
+    {
+      "product_id": "583797205123",
+      "generation_input": {
+        "category_l1": "家居日用",
+        "category_l2": "垃圾桶",
+        "attributes": {
+          "品牌": [
+            "嘉耐特"
+          ],
+          "外壳材质": [
+            "不锈钢"
+          ],
+          "形状": [
+            "长筒形"
+          ],
+          "容量": [
+            "12L"
+          ],
+          "适用场景": [
+            "家庭使用"
+          ]
+        }
+      },
+      "reference_title_not_given_to_model": "优百纳智能垃圾桶 感应家用高档客厅带盖 卧室卫生间有盖厨房大号",
+      "raw_output": "{\n  \"generated_title\": \"嘉耐特12L长筒形家用不锈钢垃圾桶\",\n  \"selling_points\": [\n    \"耐用不锈钢材质，持久耐用不易生锈\",\n    \"长筒形设计，节省空间且美观大方\",\n    \"12L大容量，满足家庭日常垃圾存储需求\"\n  ],\n  \"short_description\": \"这款嘉耐特家用垃圾桶采用优质不锈钢材质打造，经久耐用且不易生锈。其独特的长筒形设计既节省空间又具有现代感，适合多种家居环境。12升的大容量设计能够满足家庭日常生活中的垃圾收纳需求，让您的家居更加整洁有序。\"\n}",
+      "parsed_output": {
+        "generated_title": "嘉耐特12L长筒形家用不锈钢垃圾桶",
+        "selling_points": [
+          "耐用不锈钢材质，持久耐用不易生锈",
+          "长筒形设计，节省空间且美观大方",
+          "12L大容量，满足家庭日常垃圾存储需求"
+        ],
+        "short_description": "这款嘉耐特家用垃圾桶采用优质不锈钢材质打造，经久耐用且不易生锈。其独特的长筒形设计既节省空间又具有现代感，适合多种家居环境。12升的大容量设计能够满足家庭日常生活中的垃圾收纳需求，让您的家居更加整洁有序。"
+      },
+      "parse_error": null,
+      "generation_seconds": 6.564
+    },
+    {
+      "product_id": "595487807549",
+      "generation_input": {
+        "category_l1": "家居日用",
+        "category_l2": "垃圾桶",
+        "attributes": {
+          "品牌": [
+            "泰禾"
+          ],
+          "外壳材质": [
+            "塑料"
+          ],
+          "形状": [
+            "圆桶形"
+          ],
+          "容量": [
+            "8L"
+          ],
+          "垃圾桶类型": [
+            "脚踏式"
+          ],
+          "开合方式": [
+            "脚踏式"
+          ],
+          "适用场景": [
+            "家庭使用"
+          ]
+        }
+      },
+      "reference_title_not_given_to_model": "脚踏式带盖垃圾桶家用卫生间厕所小号拉圾桶厨房脚踩垃圾桶有内桶",
+      "raw_output": "{\n  \"generated_title\": \"泰禾8L脚踏式圆桶形塑料垃圾桶，家庭适用\",\n  \"selling_points\": [\n    \"脚踏式设计，操作便捷卫生\",\n    \"圆桶形外观，节省空间易摆放\",\n    \"8L大容量，满足日常使用需求\"\n  ],\n  \"short_description\": \"这款泰禾8L脚踏式圆桶形塑料垃圾桶，采用环保耐用的塑料材质，适用于家庭日常使用。其独特的脚踏开合设计，让操作更加方便卫生；圆桶形设计不仅节省空间，还能有效避免角落堆放垃圾。大容量设计，能够满足家庭日常使用的需求。\"\n}",
+      "parsed_output": {
+        "generated_title": "泰禾8L脚踏式圆桶形塑料垃圾桶，家庭适用",
+        "selling_points": [
+          "脚踏式设计，操作便捷卫生",
+          "圆桶形外观，节省空间易摆放",
+          "8L大容量，满足日常使用需求"
+        ],
+        "short_description": "这款泰禾8L脚踏式圆桶形塑料垃圾桶，采用环保耐用的塑料材质，适用于家庭日常使用。其独特的脚踏开合设计，让操作更加方便卫生；圆桶形设计不仅节省空间，还能有效避免角落堆放垃圾。大容量设计，能够满足家庭日常使用的需求。"
+      },
+      "parse_error": null,
+      "generation_seconds": 6.623
+    },
+    {
+      "product_id": "602079265226",
+      "generation_input": {
+        "category_l1": "家居日用",
+        "category_l2": "垃圾桶",
+        "attributes": {
+          "品牌": [
+            "福殿(厨房用具)"
+          ],
+          "外壳材质": [
+            "塑料"
+          ],
+          "容量": [
+            "12L以上"
+          ],
+          "垃圾桶类型": [
+            "收纳桶"
+          ],
+          "适用场景": [
+            "家庭使用"
+          ]
+        }
+      },
+      "reference_title_not_given_to_model": "西安垃圾分类垃圾桶家用双层客厅带盖大号创意厨房干湿分离日式葙",
+      "raw_output": "{\n  \"generated_title\": \"福殿12L以上塑料收纳桶 家庭使用环保垃圾桶\",\n  \"selling_points\": [\n    \"大容量设计，轻松满足家庭日常垃圾处理需求\",\n    \"耐用塑料材质，安全环保，易清洁\",\n    \"简约收纳设计，节省空间，美观大方\"\n  ],\n  \"short_description\": \"福殿品牌的这款垃圾桶采用优质塑料材质制成，容量达到12L以上，能够满足家庭日常使用。外观设计简约而不失时尚感，方便收纳，同时易于清洁，适合多种室内环境。\"\n}",
+      "parsed_output": {
+        "generated_title": "福殿12L以上塑料收纳桶 家庭使用环保垃圾桶",
+        "selling_points": [
+          "大容量设计，轻松满足家庭日常垃圾处理需求",
+          "耐用塑料材质，安全环保，易清洁",
+          "简约收纳设计，节省空间，美观大方"
+        ],
+        "short_description": "福殿品牌的这款垃圾桶采用优质塑料材质制成，容量达到12L以上，能够满足家庭日常使用。外观设计简约而不失时尚感，方便收纳，同时易于清洁，适合多种室内环境。"
+      },
+      "parse_error": null,
+      "generation_seconds": 5.848
+    },
+    {
+      "product_id": "609039324433",
+      "generation_input": {
+        "category_l1": "家居日用",
+        "category_l2": "垃圾桶",
+        "attributes": {
+          "品牌": [
+            "EXPED SMART/西卫"
+          ],
+          "外壳材质": [
+            "塑料"
+          ],
+          "形状": [
+            "长筒形"
+          ],
+          "容量": [
+            "12L以上"
+          ],
+          "适用场景": [
+            "家庭使用"
+          ]
+        }
+      },
+      "reference_title_not_given_to_model": "轻奢家用智能感应垃圾桶大号厕所厨房客厅卫生间全自动充电款踢桶",
+      "raw_output": "{\n  \"generated_title\": \"EXPED SMART西卫长筒形12L以上家庭用塑料垃圾桶\",\n  \"selling_points\": [\n    \"采用环保塑料材质，安全耐用\",\n    \"长筒设计，节省空间，更易倾倒\",\n    \"大容量设计，适合家庭日常使用\"\n  ],\n  \"short_description\": \"这款EXPED SMART西卫长筒形塑料垃圾桶，适用于家庭日常使用，采用环保塑料材质，确保安全耐用。其独特的长筒设计，不仅节省空间，还能轻松倾倒垃圾。大容量设计满足家庭需求，让您的家居环境更加整洁有序。\"\n}",
+      "parsed_output": {
+        "generated_title": "EXPED SMART西卫长筒形12L以上家庭用塑料垃圾桶",
+        "selling_points": [
+          "采用环保塑料材质，安全耐用",
+          "长筒设计，节省空间，更易倾倒",
+          "大容量设计，适合家庭日常使用"
+        ],
+        "short_description": "这款EXPED SMART西卫长筒形塑料垃圾桶，适用于家庭日常使用，采用环保塑料材质，确保安全耐用。其独特的长筒设计，不仅节省空间，还能轻松倾倒垃圾。大容量设计满足家庭需求，让您的家居环境更加整洁有序。"
+      },
+      "parse_error": null,
+      "generation_seconds": 6.216
+    },
+    {
+      "product_id": "618263479034",
+      "generation_input": {
+        "category_l1": "家居日用",
+        "category_l2": "垃圾桶",
+        "attributes": {
+          "外壳材质": [
+            "塑料"
+          ],
+          "形状": [
+            "长筒形"
+          ],
+          "容量": [
+            "12L以上"
+          ],
+          "适用场景": [
+            "家庭使用"
+          ]
+        }
+      },
+      "reference_title_not_given_to_model": "家用智能感应垃圾桶客厅厨房带盖卫生间自动圾垃桶",
+      "raw_output": "{\n  \"generated_title\": \"12L以上长筒形塑料垃圾桶，适合家庭使用\",\n  \"selling_points\": [\n    \"长筒设计，节省空间，更显美观\",\n    \"采用优质塑料材质，耐用抗刮\",\n    \"大容量12L以上，满足日常垃圾处理需求\"\n  ],\n  \"short_description\": \"这款垃圾桶采用优质塑料材质，结实耐用，不易损坏。其长筒形设计不仅节省空间，还能让家居环境更加整洁美观。大容量12L以上的设计，非常适合家庭使用，能够有效解决日常垃圾处理问题。\"\n}",
+      "parsed_output": {
+        "generated_title": "12L以上长筒形塑料垃圾桶，适合家庭使用",
+        "selling_points": [
+          "长筒设计，节省空间，更显美观",
+          "采用优质塑料材质，耐用抗刮",
+          "大容量12L以上，满足日常垃圾处理需求"
+        ],
+        "short_description": "这款垃圾桶采用优质塑料材质，结实耐用，不易损坏。其长筒形设计不仅节省空间，还能让家居环境更加整洁美观。大容量12L以上的设计，非常适合家庭使用，能够有效解决日常垃圾处理问题。"
+      },
+      "parse_error": null,
+      "generation_seconds": 5.611
+    },
+    {
+      "product_id": "619501332263",
+      "generation_input": {
+        "category_l1": "家居日用",
+        "category_l2": "垃圾桶",
+        "attributes": {
+          "品牌": [
+            "日惜"
+          ],
+          "外壳材质": [
+            "塑料"
+          ],
+          "形状": [
+            "长筒形"
+          ],
+          "容量": [
+            "10L"
+          ],
+          "垃圾桶类型": [
+            "收纳桶"
+          ],
+          "开合方式": [
+            "按压式"
+          ],
+          "适用场景": [
+            "家庭使用"
+          ]
+        }
+      },
+      "reference_title_not_given_to_model": "家用夹缝卫生间垃圾桶有盖带内桶按压式客厅卧室高档窄缝厕所纸篓",
+      "raw_output": "{\n  \"generated_title\": \"日惜长筒形10L按压式收纳垃圾桶，家庭使用\",\n  \"selling_points\": [\n    \"长筒形设计，节省空间，适合小户型家庭使用\",\n    \"10L大容量，满足日常垃圾投放需求\",\n    \"按压式开合，操作便捷，减少异味扩散\"\n  ],\n  \"short_description\": \"日惜长筒形10L收纳垃圾桶采用塑料材质，造型美观大方。10L的大容量设计能够满足家庭日常使用，按压式的开合方式方便又卫生，有效防止异味外溢。适用于各种家庭环境，是理想的家居收纳选择。\"\n}",
+      "parsed_output": {
+        "generated_title": "日惜长筒形10L按压式收纳垃圾桶，家庭使用",
+        "selling_points": [
+          "长筒形设计，节省空间，适合小户型家庭使用",
+          "10L大容量，满足日常垃圾投放需求",
+          "按压式开合，操作便捷，减少异味扩散"
+        ],
+        "short_description": "日惜长筒形10L收纳垃圾桶采用塑料材质，造型美观大方。10L的大容量设计能够满足家庭日常使用，按压式的开合方式方便又卫生，有效防止异味外溢。适用于各种家庭环境，是理想的家居收纳选择。"
+      },
+      "parse_error": null,
+      "generation_seconds": 6.29
+    },
+    {
+      "product_id": "620165221976",
+      "generation_input": {
+        "category_l1": "家居日用",
+        "category_l2": "垃圾桶",
+        "attributes": {
+          "品牌": [
+            "勤业"
+          ],
+          "外壳材质": [
+            "塑料"
+          ],
+          "形状": [
+            "圆桶形"
+          ],
+          "容量": [
+            "8L"
+          ],
+          "垃圾桶类型": [
+            "纸篓"
+          ],
+          "开合方式": [
+            "摇盖式"
+          ],
+          "适用场景": [
+            "家庭使用"
+          ]
+        }
+      },
+      "reference_title_not_given_to_model": "创意动物可爱小猪卡通垃圾桶家用卫生间客厅厨房翻盖欧式塑料纸篓",
+      "raw_output": "{\n  \"generated_title\": \"勤业8L圆桶形塑料纸篓，摇盖式设计，家庭适用\",\n  \"selling_points\": [\n    \"圆桶形设计，节省空间，适应多种摆放位置\",\n    \"塑料材质，环保耐用，易于清洁\",\n    \"摇盖式开合，使用方便快捷，减少异味\"\n  ],\n  \"short_description\": \"这款勤业8L圆桶形塑料纸篓，采用塑料材质制成，既环保又耐用，适合家庭日常使用。其独特的摇盖式设计，操作简便，有效防止异味散发，同时节省空间，适合放置在客厅、厨房等地方。\"\n}",
+      "parsed_output": {
+        "generated_title": "勤业8L圆桶形塑料纸篓，摇盖式设计，家庭适用",
+        "selling_points": [
+          "圆桶形设计，节省空间，适应多种摆放位置",
+          "塑料材质，环保耐用，易于清洁",
+          "摇盖式开合，使用方便快捷，减少异味"
+        ],
+        "short_description": "这款勤业8L圆桶形塑料纸篓，采用塑料材质制成，既环保又耐用，适合家庭日常使用。其独特的摇盖式设计，操作简便，有效防止异味散发，同时节省空间，适合放置在客厅、厨房等地方。"
+      },
+      "parse_error": null,
+      "generation_seconds": 6.232
+    },
+    {
+      "product_id": "623126145078",
+      "generation_input": {
+        "category_l1": "家居日用",
+        "category_l2": "垃圾桶",
+        "attributes": {
+          "外壳材质": [
+            "塑料"
+          ],
+          "形状": [
+            "圆桶形"
+          ],
+          "垃圾桶类型": [
+            "收纳桶"
+          ],
+          "开合方式": [
+            "摇盖式"
+          ]
+        }
+      },
+      "reference_title_not_given_to_model": "餐桌室内垃圾桶家用客厅可爱卧室卫生间创意厨房翻盖厕所带盖卡通",
+      "raw_output": "{\n  \"generated_title\": \"圆桶形塑料摇盖式收纳垃圾桶，实用环保家居必备\",\n  \"selling_points\": [\n    \"摇盖设计轻松开合，使用便捷省力\",\n    \"圆桶形美观大方，适合多种家居环境\",\n    \"塑料材质轻便耐用，易于清洁\"\n  ],\n  \"short_description\": \"这款圆桶形塑料摇盖式收纳垃圾桶，采用摇盖开合设计，使用时既方便又省力。其圆桶形外观不仅美观大方，还适用于多种家居装饰风格。塑料材质轻巧且耐久，清洁起来非常方便，是现代家居生活的理想选择。\"\n}",
+      "parsed_output": {
+        "generated_title": "圆桶形塑料摇盖式收纳垃圾桶，实用环保家居必备",
+        "selling_points": [
+          "摇盖设计轻松开合，使用便捷省力",
+          "圆桶形美观大方，适合多种家居环境",
+          "塑料材质轻便耐用，易于清洁"
+        ],
+        "short_description": "这款圆桶形塑料摇盖式收纳垃圾桶，采用摇盖开合设计，使用时既方便又省力。其圆桶形外观不仅美观大方，还适用于多种家居装饰风格。塑料材质轻巧且耐久，清洁起来非常方便，是现代家居生活的理想选择。"
+      },
+      "parse_error": null,
+      "generation_seconds": 6.236
+    },
+    {
+      "product_id": "547702894728",
+      "generation_input": {
+        "category_l1": "家居日用",
+        "category_l2": "拖把",
+        "attributes": {
+          "品牌": [
+            "奥尊"
+          ],
+          "型号": [
+            "AZ-T010"
+          ],
+          "杆材质": [
+            "不锈钢"
+          ],
+          "拖布材质": [
+            "超细纤维"
+          ],
+          "拖把杆类型": [
+            "提升杆+塑料盘",
+            "提升杆+不锈钢盘"
+          ],
+          "驱动类型": [
+            "双驱动"
+          ],
+          "电源方式": [
+            "手动"
+          ]
+        }
+      },
+      "reference_title_not_given_to_model": "拖把桶旋转拖把双驱动自动甩干水家用免手洗不锈钢墩布拖布桶地拖",
+      "raw_output": "{\n  \"generated_title\": \"奥尊 AZ-T010 双驱动手动提拉拖把 超细纤维拖布 家居清洁必备\",\n  \"selling_points\": [\n    \"双驱动设计，操作更省力\",\n    \"不锈钢材质杆体，耐用抗腐蚀\",\n    \"超细纤维拖布，吸水性强易清洗\"\n  ],\n  \"short_description\": \"奥尊 AZ-T010 手动提拉拖把采用双驱动设计，使用时更加省力便捷；拖把杆选用不锈钢材质，确保长久耐用且不易生锈；拖布采用超细纤维制作，具有超强吸水性和易于清洗的特点，是家居清洁的理想选择。\"\n}",
+      "parsed_output": {
+        "generated_title": "奥尊 AZ-T010 双驱动手动提拉拖把 超细纤维拖布 家居清洁必备",
+        "selling_points": [
+          "双驱动设计，操作更省力",
+          "不锈钢材质杆体，耐用抗腐蚀",
+          "超细纤维拖布，吸水性强易清洗"
+        ],
+        "short_description": "奥尊 AZ-T010 手动提拉拖把采用双驱动设计，使用时更加省力便捷；拖把杆选用不锈钢材质，确保长久耐用且不易生锈；拖布采用超细纤维制作，具有超强吸水性和易于清洗的特点，是家居清洁的理想选择。"
+      },
+      "parse_error": null,
+      "generation_seconds": 6.734
+    },
+    {
+      "product_id": "562289059045",
+      "generation_input": {
+        "category_l1": "家居日用",
+        "category_l2": "拖把",
+        "attributes": {
+          "品牌": [
+            "other/其他"
+          ],
+          "型号": [
+            "084"
+          ],
+          "杆材质": [
+            "不锈钢"
+          ],
+          "拖布材质": [
+            "超细纤维"
+          ],
+          "电源方式": [
+            "手动"
+          ]
+        }
+      },
+      "reference_title_not_given_to_model": "包邮可旋转纤维方扫大扫除除尘掸天花板清洁扫把灰尘可拆洗拖把",
+      "raw_output": "{\n  \"generated_title\": \"不锈钢杆超细纤维拖布084款手动拖把\",\n  \"selling_points\": [\n    \"采用优质不锈钢材质杆体，坚固耐用，不易生锈\",\n    \"超细纤维拖布吸水性强，清洁效果出色\",\n    \"纯手动操作设计，环保节能，无需电力驱动\"\n  ],\n  \"short_description\": \"这款084款拖把采用不锈钢杆体，不仅坚固耐用，而且不易生锈。搭配超细纤维拖布，吸水性极佳，有效提升清洁效率。采用手动操作方式，使用更加环保节能，适合各种家庭清洁需求。\"\n}",
+      "parsed_output": {
+        "generated_title": "不锈钢杆超细纤维拖布084款手动拖把",
+        "selling_points": [
+          "采用优质不锈钢材质杆体，坚固耐用，不易生锈",
+          "超细纤维拖布吸水性强，清洁效果出色",
+          "纯手动操作设计，环保节能，无需电力驱动"
+        ],
+        "short_description": "这款084款拖把采用不锈钢杆体，不仅坚固耐用，而且不易生锈。搭配超细纤维拖布，吸水性极佳，有效提升清洁效率。采用手动操作方式，使用更加环保节能，适合各种家庭清洁需求。"
+      },
+      "parse_error": null,
+      "generation_seconds": 6.079
+    },
+    {
+      "product_id": "582839837483",
+      "generation_input": {
+        "category_l1": "家居日用",
+        "category_l2": "拖把",
+        "attributes": {
+          "品牌": [
+            "轩源世佳"
+          ],
+          "型号": [
+            "001"
+          ],
+          "杆材质": [
+            "不锈钢"
+          ],
+          "拖把杆类型": [
+            "提升杆+不锈钢盘"
+          ],
+          "驱动类型": [
+            "双驱动"
+          ],
+          "电源方式": [
+            "手动"
+          ]
+        }
+      },
+      "reference_title_not_given_to_model": "加厚旋转拖把免手洗干湿两用不锈钢自动家用双驱动好神拖地墩布桶",
+      "raw_output": "{\n  \"generated_title\": \"轩源世佳001款双驱动手动拖把，不锈钢提升杆\",\n  \"selling_points\": [\n    \"采用双驱动设计，提升清洁效率\",\n    \"不锈钢材质拖把杆，坚固耐用\",\n    \"提升杆+不锈钢盘设计，操作灵活方便\"\n  ],\n  \"short_description\": \"轩源世佳001款双驱动手动拖把，选用不锈钢材质制作拖把杆，不仅坚固耐用，而且提升杆与不锈钢盘的设计让使用更加灵活便捷。适用于家庭日常清洁，有效提高清洁效率。\"\n}",
+      "parsed_output": {
+        "generated_title": "轩源世佳001款双驱动手动拖把，不锈钢提升杆",
+        "selling_points": [
+          "采用双驱动设计，提升清洁效率",
+          "不锈钢材质拖把杆，坚固耐用",
+          "提升杆+不锈钢盘设计，操作灵活方便"
+        ],
+        "short_description": "轩源世佳001款双驱动手动拖把，选用不锈钢材质制作拖把杆，不仅坚固耐用，而且提升杆与不锈钢盘的设计让使用更加灵活便捷。适用于家庭日常清洁，有效提高清洁效率。"
+      },
+      "parse_error": null,
+      "generation_seconds": 5.578
+    },
+    {
+      "product_id": "583457250405",
+      "generation_input": {
+        "category_l1": "家居日用",
+        "category_l2": "拖把",
+        "attributes": {
+          "品牌": [
+            "艾妻"
+          ],
+          "型号": [
+            "1802-2"
+          ],
+          "杆材质": [
+            "不锈钢"
+          ],
+          "拖布材质": [
+            "超细纤维"
+          ],
+          "拖把杆类型": [
+            "提升杆+不锈钢盘"
+          ],
+          "驱动类型": [
+            "双驱动"
+          ]
+        }
+      },
+      "reference_title_not_given_to_model": "拖把杆旋转通用式免手洗地拖家用自动甩水懒人拖地神器墩布桶拖布",
+      "raw_output": "{\n  \"generated_title\": \"艾妻 1802-2 双驱动不锈钢提升杆拖把\",\n  \"selling_points\": [\n    \"采用不锈钢提升杆设计，稳固耐用，轻松提拉水桶\",\n    \"超细纤维拖布材质，高效吸水，擦拭更干净\",\n    \"双驱动设计，动力强劲，清洁速度快\"\n  ],\n  \"short_description\": \"这款艾妻1802-2拖把采用不锈钢提升杆，配合超细纤维拖布，不仅稳固耐用，还能高效吸水。双驱动设计让清洁更加省力高效，是家庭日常清洁的理想选择。\"\n}",
+      "parsed_output": {
+        "generated_title": "艾妻 1802-2 双驱动不锈钢提升杆拖把",
+        "selling_points": [
+          "采用不锈钢提升杆设计，稳固耐用，轻松提拉水桶",
+          "超细纤维拖布材质，高效吸水，擦拭更干净",
+          "双驱动设计，动力强劲，清洁速度快"
+        ],
+        "short_description": "这款艾妻1802-2拖把采用不锈钢提升杆，配合超细纤维拖布，不仅稳固耐用，还能高效吸水。双驱动设计让清洁更加省力高效，是家庭日常清洁的理想选择。"
+      },
+      "parse_error": null,
+      "generation_seconds": 6.098
+    },
+    {
+      "product_id": "587244433192",
+      "generation_input": {
+        "category_l1": "家居日用",
+        "category_l2": "拖把",
+        "attributes": {
+          "品牌": [
+            "千木寻"
+          ],
+          "型号": [
+            "qmx6108"
+          ],
+          "杆材质": [
+            "不锈钢"
+          ],
+          "拖布材质": [
+            "超细纤维"
+          ],
+          "拖把杆类型": [
+            "提升杆+不锈钢盘"
+          ],
+          "驱动类型": [
+            "双驱动"
+          ],
+          "电源方式": [
+            "手动"
+          ]
+        }
+      },
+      "reference_title_not_given_to_model": "拖把旋转式家用双驱动手压免手洗自动甩水干湿两用好神拖地墩布桶",
+      "raw_output": "{\n  \"generated_title\": \"千木寻 qmx6108 超细纤维拖把 手动双驱动不锈钢提升杆家居清洁神器\",\n  \"selling_points\": [\n    \"双驱动设计，清洁更高效\",\n    \"不锈钢材质提升杆，坚固耐用\",\n    \"超细纤维拖布，吸水性强\"\n  ],\n  \"short_description\": \"这款千木寻 qmx6108 拖把采用超细纤维拖布，具有超强吸水性，轻松应对各种污渍。搭配双驱动设计，手动操作也能实现高效清洁。同时，它还采用了不锈钢材质的提升杆，确保了产品的坚固耐用性。\"\n}",
+      "parsed_output": {
+        "generated_title": "千木寻 qmx6108 超细纤维拖把 手动双驱动不锈钢提升杆家居清洁神器",
+        "selling_points": [
+          "双驱动设计，清洁更高效",
+          "不锈钢材质提升杆，坚固耐用",
+          "超细纤维拖布，吸水性强"
+        ],
+        "short_description": "这款千木寻 qmx6108 拖把采用超细纤维拖布，具有超强吸水性，轻松应对各种污渍。搭配双驱动设计，手动操作也能实现高效清洁。同时，它还采用了不锈钢材质的提升杆，确保了产品的坚固耐用性。"
+      },
+      "parse_error": null,
+      "generation_seconds": 6.561
+    },
+    {
+      "product_id": "599620329880",
+      "generation_input": {
+        "category_l1": "家居日用",
+        "category_l2": "拖把",
+        "attributes": {
+          "品牌": [
+            "喜佳优"
+          ],
+          "型号": [
+            "7283"
+          ],
+          "杆材质": [
+            "不锈钢"
+          ],
+          "挤水方式": [
+            "对折式"
+          ]
+        }
+      },
+      "reference_title_not_given_to_model": "喜佳优吸水海绵拖把家用对折式懒人免手洗挤水胶棉头卫生间地拖干",
+      "raw_output": "{\n  \"generated_title\": \"喜佳优7283不锈钢对折式拖把 家居清洁必备\",\n  \"selling_points\": [\n    \"采用不锈钢材质，坚固耐用不易生锈\",\n    \"对折式设计，方便收纳节省空间\",\n    \"适用于多种家居环境，轻松清理污渍\"\n  ],\n  \"short_description\": \"喜佳优7283拖把使用不锈钢材料制成，不仅耐用而且防锈。独特的对折式设计让收纳更加便捷，非常适合小户型家庭。无论是厨房还是浴室，都能轻松应对各种污渍，保持家居清洁。\"\n}",
+      "parsed_output": {
+        "generated_title": "喜佳优7283不锈钢对折式拖把 家居清洁必备",
+        "selling_points": [
+          "采用不锈钢材质，坚固耐用不易生锈",
+          "对折式设计，方便收纳节省空间",
+          "适用于多种家居环境，轻松清理污渍"
+        ],
+        "short_description": "喜佳优7283拖把使用不锈钢材料制成，不仅耐用而且防锈。独特的对折式设计让收纳更加便捷，非常适合小户型家庭。无论是厨房还是浴室，都能轻松应对各种污渍，保持家居清洁。"
+      },
+      "parse_error": null,
+      "generation_seconds": 6.188
+    },
+    {
+      "product_id": "604829061336",
+      "generation_input": {
+        "category_l1": "家居日用",
+        "category_l2": "拖把",
+        "attributes": {
+          "品牌": [
+            "益伟"
+          ],
+          "型号": [
+            "YW-JMTB"
+          ],
+          "杆材质": [
+            "不锈钢"
+          ],
+          "挤水方式": [
+            "滚轮式"
+          ]
+        }
+      },
+      "reference_title_not_given_to_model": "海绵拖把头免手洗挤水家用拖地神器胶棉吸水一拖地拖布懒人大号净",
+      "raw_output": "{\n  \"generated_title\": \"益伟 YW-JMTB 不锈钢杆 滚轮式挤水家居拖把\",\n  \"selling_points\": [\n    \"不锈钢材质，坚固耐用不易生锈\",\n    \"滚轮式设计，快速高效挤干水分\",\n    \"适用于家庭日常清洁，操作便捷\"\n  ],\n  \"short_description\": \"益伟 YW-JMTB 家居拖把采用不锈钢杆设计，坚固耐用，有效防止生锈；滚轮式挤水方式，使用时能够快速高效地将拖把上的水分挤出，大大节省清洁时间。非常适合家庭日常清洁使用，操作便捷省力。\"\n}",
+      "parsed_output": {
+        "generated_title": "益伟 YW-JMTB 不锈钢杆 滚轮式挤水家居拖把",
+        "selling_points": [
+          "不锈钢材质，坚固耐用不易生锈",
+          "滚轮式设计，快速高效挤干水分",
+          "适用于家庭日常清洁，操作便捷"
+        ],
+        "short_description": "益伟 YW-JMTB 家居拖把采用不锈钢杆设计，坚固耐用，有效防止生锈；滚轮式挤水方式，使用时能够快速高效地将拖把上的水分挤出，大大节省清洁时间。非常适合家庭日常清洁使用，操作便捷省力。"
+      },
+      "parse_error": null,
+      "generation_seconds": 6.715
+    },
+    {
+      "product_id": "607256389125",
+      "generation_input": {
+        "category_l1": "家居日用",
+        "category_l2": "拖把",
+        "attributes": {
+          "品牌": [
+            "福奉祥"
+          ],
+          "型号": [
+            "B2234"
+          ],
+          "杆材质": [
+            "不锈钢"
+          ],
+          "拖布材质": [
+            "超细纤维"
+          ],
+          "电源方式": [
+            "手动"
+          ]
+        }
+      },
+      "reference_title_not_given_to_model": "拖把免手洗家用一拖净干湿两用网红懒人大号平板拖把拖地拖布神器",
+      "raw_output": "{\n  \"generated_title\": \"福奉祥 B2234 不锈钢杆超细纤维拖把\",\n  \"selling_points\": [\n    \"采用不锈钢材质杆，坚固耐用不易生锈\",\n    \"超细纤维拖布，高效吸水快速干燥\",\n    \"手动操作设计，环保节能省力\"\n  ],\n  \"short_description\": \"福奉祥B2234拖把，选用优质不锈钢杆，确保长期使用依旧稳固可靠。搭配超细纤维拖布，具有出色的吸水性和快速干燥能力，清洁效果更佳。操作简便，无需电力驱动，环保节能，是您日常家居清洁的理想选择。\"\n}",
+      "parsed_output": {
+        "generated_title": "福奉祥 B2234 不锈钢杆超细纤维拖把",
+        "selling_points": [
+          "采用不锈钢材质杆，坚固耐用不易生锈",
+          "超细纤维拖布，高效吸水快速干燥",
+          "手动操作设计，环保节能省力"
+        ],
+        "short_description": "福奉祥B2234拖把，选用优质不锈钢杆，确保长期使用依旧稳固可靠。搭配超细纤维拖布，具有出色的吸水性和快速干燥能力，清洁效果更佳。操作简便，无需电力驱动，环保节能，是您日常家居清洁的理想选择。"
+      },
+      "parse_error": null,
+      "generation_seconds": 6.829
+    },
+    {
+      "product_id": "614194957336",
+      "generation_input": {
+        "category_l1": "家居日用",
+        "category_l2": "拖把",
+        "attributes": {
+          "品牌": [
+            "阿普达(家居)"
+          ],
+          "型号": [
+            "BD-123"
+          ],
+          "杆材质": [
+            "不锈钢"
+          ],
+          "挤水方式": [
+            "对折式"
+          ]
+        }
+      },
+      "reference_title_not_given_to_model": "海绵挤水免手洗干湿一拖胶棉拖把对折挤水两用地拖布净卫生间专用",
+      "raw_output": "{\n  \"generated_title\": \"阿普达不锈钢杆对折式拖把BD-123\",\n  \"selling_points\": [\n    \"采用不锈钢材质杆，耐用抗腐蚀\",\n    \"对折式设计，收纳方便省空间\",\n    \"适用于家庭清洁，轻松应对各种地面\"\n  ],\n  \"short_description\": \"阿普达BD-123拖把，选用优质不锈钢杆，耐腐蚀且坚固耐用。对折式设计让拖把轻松收纳，节省家居空间。适用于家庭日常地面清洁，操作便捷，适合多种地面使用。\"\n}",
+      "parsed_output": {
+        "generated_title": "阿普达不锈钢杆对折式拖把BD-123",
+        "selling_points": [
+          "采用不锈钢材质杆，耐用抗腐蚀",
+          "对折式设计，收纳方便省空间",
+          "适用于家庭清洁，轻松应对各种地面"
+        ],
+        "short_description": "阿普达BD-123拖把，选用优质不锈钢杆，耐腐蚀且坚固耐用。对折式设计让拖把轻松收纳，节省家居空间。适用于家庭日常地面清洁，操作便捷，适合多种地面使用。"
+      },
+      "parse_error": null,
+      "generation_seconds": 5.973
+    },
+    {
+      "product_id": "618416951039",
+      "generation_input": {
+        "category_l1": "家居日用",
+        "category_l2": "拖把",
+        "attributes": {
+          "品牌": [
+            "粉吾"
+          ],
+          "型号": [
+            "XBL-CDPT_MozQJ"
+          ],
+          "杆材质": [
+            "不锈钢"
+          ],
+          "拖布材质": [
+            "超细纤维"
+          ],
+          "电源方式": [
+            "手动"
+          ]
+        }
+      },
+      "reference_title_not_given_to_model": "家用平板大号懒人拖把免手洗办公室拖布尘推长木净拖地网红神器",
+      "raw_output": "{\n  \"generated_title\": \"粉吾 XBL-CDPT 手动超细纤维拖把 不锈钢杆\",\n  \"selling_points\": [\n    \"采用优质不锈钢材质杆，坚固耐用，不易生锈。\",\n    \"超细纤维拖布设计，吸水性强，清洁效果佳。\",\n    \"手动操作，省力便捷，适用于各种家庭清洁需求。\"\n  ],\n  \"short_description\": \"粉吾 XBL-CDPT 手动超细纤维拖把，以不锈钢材质杆保证了产品的长久耐用性，同时超细纤维拖布有效提升清洁效率。操作简便，适用于多种家庭清洁场合，是您日常家居清洁的理想选择。\"\n}",
+      "parsed_output": {
+        "generated_title": "粉吾 XBL-CDPT 手动超细纤维拖把 不锈钢杆",
+        "selling_points": [
+          "采用优质不锈钢材质杆，坚固耐用，不易生锈。",
+          "超细纤维拖布设计，吸水性强，清洁效果佳。",
+          "手动操作，省力便捷，适用于各种家庭清洁需求。"
+        ],
+        "short_description": "粉吾 XBL-CDPT 手动超细纤维拖把，以不锈钢材质杆保证了产品的长久耐用性，同时超细纤维拖布有效提升清洁效率。操作简便，适用于多种家庭清洁场合，是您日常家居清洁的理想选择。"
+      },
+      "parse_error": null,
+      "generation_seconds": 6.899
+    },
+    {
+      "product_id": "620625786758",
+      "generation_input": {
+        "category_l1": "家居日用",
+        "category_l2": "拖把",
+        "attributes": {
+          "品牌": [
+            "东方亮洁"
+          ],
+          "型号": [
+            "洗衣机拖把"
+          ],
+          "杆材质": [
+            "不锈钢"
+          ],
+          "拖布材质": [
+            "超细纤维"
+          ],
+          "电源方式": [
+            "手动"
+          ]
+        }
+      },
+      "reference_title_not_given_to_model": "洗衣机拖把家用免手洗懒人刮刮乐平板拖把拖地神器清水冲洗更卫生",
+      "raw_output": "{\n  \"generated_title\": \"东方亮洁 洗衣机专用不锈钢杆超细纤维拖把\",\n  \"selling_points\": [\n    \"采用不锈钢材质杆，坚固耐用不易生锈\",\n    \"超细纤维拖布设计，吸水力强，清洁效果更佳\",\n    \"手动操作设计，节水节能更环保\"\n  ],\n  \"short_description\": \"东方亮洁洗衣机专用拖把，精选不锈钢杆，持久耐用；超细纤维拖布，高效吸水，深层清洁；手动操作，环保节能，适合家庭日常使用。\"\n}",
+      "parsed_output": {
+        "generated_title": "东方亮洁 洗衣机专用不锈钢杆超细纤维拖把",
+        "selling_points": [
+          "采用不锈钢材质杆，坚固耐用不易生锈",
+          "超细纤维拖布设计，吸水力强，清洁效果更佳",
+          "手动操作设计，节水节能更环保"
+        ],
+        "short_description": "东方亮洁洗衣机专用拖把，精选不锈钢杆，持久耐用；超细纤维拖布，高效吸水，深层清洁；手动操作，环保节能，适合家庭日常使用。"
+      },
+      "parse_error": null,
+      "generation_seconds": 5.773
+    },
+    {
+      "product_id": "621173570641",
+      "generation_input": {
+        "category_l1": "家居日用",
+        "category_l2": "拖把",
+        "attributes": {
+          "品牌": [
+            "见描述"
+          ],
+          "型号": [
+            "见描述"
+          ],
+          "驱动类型": [
+            "单驱动"
+          ],
+          "电源方式": [
+            "充电式"
+          ]
+        }
+      },
+      "reference_title_not_given_to_model": "拖把杆旋转式通用免手洗家用拖地拖布自动甩水一拖地拖带墩布桶净",
+      "raw_output": "{\n  \"generated_title\": \"单驱动充电式拖把 见描述\",\n  \"selling_points\": [\n    \"单驱动设计，操作简单高效\",\n    \"充电式使用，省电便捷\",\n    \"适用于各种地面，清洁无忧\"\n  ],\n  \"short_description\": \"这款单驱动充电式拖把采用简约设计，操作方便快捷。通过充电即可长时间使用，节能环保。无论是木地板还是瓷砖地面，都能轻松应对，带来高效清洁体验。\"\n}",
+      "parsed_output": {
+        "generated_title": "单驱动充电式拖把 见描述",
+        "selling_points": [
+          "单驱动设计，操作简单高效",
+          "充电式使用，省电便捷",
+          "适用于各种地面，清洁无忧"
+        ],
+        "short_description": "这款单驱动充电式拖把采用简约设计，操作方便快捷。通过充电即可长时间使用，节能环保。无论是木地板还是瓷砖地面，都能轻松应对，带来高效清洁体验。"
+      },
+      "parse_error": null,
+      "generation_seconds": 4.619
+    },
+    {
+      "product_id": "24497168737",
+      "generation_input": {
+        "category_l1": "家居日用",
+        "category_l2": "收纳箱",
+        "attributes": {
+          "品牌": [
+            "Jeko&Jeko"
+          ],
+          "材质": [
+            "塑料"
+          ],
+          "尺寸": [
+            "2个装",
+            "1个装",
+            "3个装"
+          ],
+          "适用对象": [
+            "化妆用品/首饰",
+            "毛衣",
+            "包包",
+            "耳机线/电线",
+            "遥控器",
+            "内衣",
+            "大衣/西服",
+            "被子",
+            "磁卡",
+            "卫生棉/卫生巾"
+          ],
+          "适用空间": [
+            "卧室"
+          ],
+          "净重": [
+            "3.8kg"
+          ]
+        }
+      },
+      "reference_title_not_given_to_model": "Jeko透明收纳箱塑料储物箱加厚有盖整理箱学生宿舍大号周转箱",
+      "raw_output": "{\n  \"generated_title\": \"Jeko&Jeko 2个装塑料收纳箱 化妆用品/毛衣专用\",\n  \"selling_points\": [\n    \"采用优质塑料材质，耐摔耐用，轻松应对日常收纳需求\",\n    \"多种尺寸可选，适合不同物品收纳，满足多样化收纳需求\",\n    \"适用于卧室等私密空间，有效保持物品整洁有序\"\n  ],\n  \"short_description\": \"Jeko&Jeko系列塑料收纳箱，专为您的卧室打造，精选优质塑料材质，轻盈耐用。提供2个装尺寸，适用于化妆用品及毛衣等多种物品，有效整理卧室空间，让物品摆放更加整齐有序。\"\n}",
+      "parsed_output": {
+        "generated_title": "Jeko&Jeko 2个装塑料收纳箱 化妆用品/毛衣专用",
+        "selling_points": [
+          "采用优质塑料材质，耐摔耐用，轻松应对日常收纳需求",
+          "多种尺寸可选，适合不同物品收纳，满足多样化收纳需求",
+          "适用于卧室等私密空间，有效保持物品整洁有序"
+        ],
+        "short_description": "Jeko&Jeko系列塑料收纳箱，专为您的卧室打造，精选优质塑料材质，轻盈耐用。提供2个装尺寸，适用于化妆用品及毛衣等多种物品，有效整理卧室空间，让物品摆放更加整齐有序。"
+      },
+      "parse_error": null,
+      "generation_seconds": 6.651
+    },
+    {
+      "product_id": "43297860634",
+      "generation_input": {
+        "category_l1": "家居日用",
+        "category_l2": "收纳箱",
+        "attributes": {
+          "品牌": [
+            "奥特威尔"
+          ],
+          "型号": [
+            "AY"
+          ],
+          "材质": [
+            "塑料"
+          ],
+          "尺寸": [
+            "灰色",
+            "蓝色"
+          ],
+          "净重": [
+            "3kg"
+          ]
+        }
+      },
+      "reference_title_not_given_to_model": "塑料周转箱带盖物流运输箱加厚物料框长方形斜插式收纳汽配医药箱",
+      "raw_output": "{\n  \"generated_title\": \"奥特威尔AY系列塑料收纳箱，灰色/蓝色\",\n  \"selling_points\": [\n    \"环保耐用的塑料材质，轻松应对各种家居收纳需求\",\n    \"多种颜色可选，满足不同家庭装饰风格\",\n    \"轻巧设计，便于移动，适合日常使用\"\n  ],\n  \"short_description\": \"奥特威尔AY系列收纳箱采用优质塑料材质，提供灰色和蓝色两种选择，既环保又耐用。轻巧便携的设计使其非常适合日常使用，无论是厨房还是书房都能轻松收纳整理，让家居生活更加整洁有序。\"\n}",
+      "parsed_output": {
+        "generated_title": "奥特威尔AY系列塑料收纳箱，灰色/蓝色",
+        "selling_points": [
+          "环保耐用的塑料材质，轻松应对各种家居收纳需求",
+          "多种颜色可选，满足不同家庭装饰风格",
+          "轻巧设计，便于移动，适合日常使用"
+        ],
+        "short_description": "奥特威尔AY系列收纳箱采用优质塑料材质，提供灰色和蓝色两种选择，既环保又耐用。轻巧便携的设计使其非常适合日常使用，无论是厨房还是书房都能轻松收纳整理，让家居生活更加整洁有序。"
+      },
+      "parse_error": null,
+      "generation_seconds": 5.925
+    },
+    {
+      "product_id": "530504970904",
+      "generation_input": {
+        "category_l1": "家居日用",
+        "category_l2": "收纳箱",
+        "attributes": {
+          "品牌": [
+            "朴者(住宅家具)"
+          ],
+          "型号": [
+            "PZ012"
+          ],
+          "尺寸": [
+            "小号[34*20*20]",
+            "中号[40*25*25]",
+            "大号[46*30*30]",
+            "厂家直销、尺寸定制专拍"
+          ],
+          "净重": [
+            "3kg"
+          ]
+        }
+      },
+      "reference_title_not_given_to_model": "复古木盒带锁实木质木箱收纳盒储物整理樟木大木箱子小木箱木盒子",
+      "raw_output": "{\n  \"generated_title\": \"朴者(住宅家具) PZ012 多尺寸可选小中大号收纳箱\",\n  \"selling_points\": [\n    \"多种尺寸选择，满足不同存储需求\",\n    \"轻巧设计，易于搬运与收纳\",\n    \"厂家直销，确保正品质量\"\n  ],\n  \"short_description\": \"朴者(住宅家具) PZ012 收纳箱，采用坚固材质制作，适用于家庭及办公室使用。提供小号、中号和大号三种尺寸，可根据实际需要灵活选择。轻便易搬，方便日常使用。\"\n}",
+      "parsed_output": {
+        "generated_title": "朴者(住宅家具) PZ012 多尺寸可选小中大号收纳箱",
+        "selling_points": [
+          "多种尺寸选择，满足不同存储需求",
+          "轻巧设计，易于搬运与收纳",
+          "厂家直销，确保正品质量"
+        ],
+        "short_description": "朴者(住宅家具) PZ012 收纳箱，采用坚固材质制作，适用于家庭及办公室使用。提供小号、中号和大号三种尺寸，可根据实际需要灵活选择。轻便易搬，方便日常使用。"
+      },
+      "parse_error": null,
+      "generation_seconds": 5.958
+    },
+    {
+      "product_id": "540395966499",
+      "generation_input": {
+        "category_l1": "家居日用",
+        "category_l2": "收纳箱",
+        "attributes": {
+          "品牌": [
+            "阿诺欣"
+          ],
+          "型号": [
+            "KOO-12"
+          ],
+          "材质": [
+            "塑料"
+          ],
+          "尺寸": [
+            "加厚环保"
+          ],
+          "适用对象": [
+            "毛衣",
+            "大衣/西服",
+            "被子",
+            "包包"
+          ],
+          "净重": [
+            "1.5kg"
+          ]
+        }
+      },
+      "reference_title_not_given_to_model": "特大号塑料有盖床底收纳箱衣服玩具宿舍整理储物箱床下滑轮置物箱",
+      "raw_output": "{\n  \"generated_title\": \"阿诺欣KOO-12加厚环保塑料收纳箱\",\n  \"selling_points\": [\n    \"加厚设计，耐用承重\",\n    \"适用于多种衣物存储\",\n    \"轻便易携带，1.5kg净重\"\n  ],\n  \"short_description\": \"这款阿诺欣KOO-12加厚环保塑料收纳箱，采用坚固的塑料材质，确保物品安全存放。它适合收纳毛衣、大衣/西服、被子及各类包包等。重量仅为1.5kg，便于移动和存储。\"\n}",
+      "parsed_output": {
+        "generated_title": "阿诺欣KOO-12加厚环保塑料收纳箱",
+        "selling_points": [
+          "加厚设计，耐用承重",
+          "适用于多种衣物存储",
+          "轻便易携带，1.5kg净重"
+        ],
+        "short_description": "这款阿诺欣KOO-12加厚环保塑料收纳箱，采用坚固的塑料材质，确保物品安全存放。它适合收纳毛衣、大衣/西服、被子及各类包包等。重量仅为1.5kg，便于移动和存储。"
+      },
+      "parse_error": null,
+      "generation_seconds": 5.916
+    },
+    {
+      "product_id": "587907612086",
+      "generation_input": {
+        "category_l1": "家居日用",
+        "category_l2": "收纳箱",
+        "attributes": {
+          "品牌": [
+            "物末"
+          ],
+          "型号": [
+            "桌面多层收纳盒"
+          ],
+          "材质": [
+            "塑料"
+          ],
+          "尺寸": [
+            "小号(约长23.5x宽18cm)",
+            "大号(约长34x宽25.5cm)"
+          ],
+          "适用空间": [
+            "书房"
+          ],
+          "净重": [
+            "0.5kg"
+          ]
+        }
+      },
+      "reference_title_not_given_to_model": "桌面多层抽屉式收纳盒 北欧化妆品口红塑料整理柜 简约文件功能盒",
+      "raw_output": "{\n  \"generated_title\": \"物末桌面多层收纳盒，塑料材质，便携美观\",\n  \"selling_points\": [\n    \"简约设计，适合多种桌面环境\",\n    \"轻巧便携，易于移动收纳\",\n    \"分类清晰，提升桌面整洁度\"\n  ],\n  \"short_description\": \"物末桌面多层收纳盒采用塑料材质，尺寸小巧，适用于书房等桌面空间。轻便易搬，层次分明的设计让物品分类更有序，提升办公学习效率，保持桌面整洁。\"\n}",
+      "parsed_output": {
+        "generated_title": "物末桌面多层收纳盒，塑料材质，便携美观",
+        "selling_points": [
+          "简约设计，适合多种桌面环境",
+          "轻巧便携，易于移动收纳",
+          "分类清晰，提升桌面整洁度"
+        ],
+        "short_description": "物末桌面多层收纳盒采用塑料材质，尺寸小巧，适用于书房等桌面空间。轻便易搬，层次分明的设计让物品分类更有序，提升办公学习效率，保持桌面整洁。"
+      },
+      "parse_error": null,
+      "generation_seconds": 5.406
+    },
+    {
+      "product_id": "594880547645",
+      "generation_input": {
+        "category_l1": "家居日用",
+        "category_l2": "收纳箱",
+        "attributes": {
+          "品牌": [
+            "YJ"
+          ],
+          "型号": [
+            "YJ3"
+          ],
+          "材质": [
+            "金属"
+          ],
+          "尺寸": [
+            "35.5 * 21.5 * 21.5cm"
+          ],
+          "适用对象": [
+            "遥控器",
+            "化妆用品/首饰",
+            "耳机线/电线",
+            "磁卡",
+            "大衣/西服",
+            "包包",
+            "卫生棉/卫生巾",
+            "毛衣",
+            "被子",
+            "内衣"
+          ],
+          "适用空间": [
+            "书房",
+            "餐厅",
+            "客厅",
+            "厨房",
+            "桌面",
+            "儿童房",
+            "宿舍",
+            "卧室"
+          ],
+          "净重": [
+            "1.38kg"
+          ]
+        }
+      },
+      "reference_title_not_given_to_model": "新款北欧风格掀盖式收纳盒 置物盒厨房碗柜 家居储物盒 面包箱",
+      "raw_output": "{\n  \"generated_title\": \"YJ品牌金属收纳箱 YJ3 35.5*21.5*21.5cm 多用途家居收纳\",\n  \"selling_points\": [\n    \"金属材质坚固耐用，承重力强\",\n    \"多用途设计适用于各种小物件收纳\",\n    \"简约风格适用于多种家居环境\"\n  ],\n  \"short_description\": \"这款YJ品牌金属收纳箱采用金属材质打造，坚固耐用，承重力强。它具有多用途设计，适合收纳遥控器、化妆用品、耳机线等多种小物件。简洁大方的设计风格，适用于书房、餐厅等各类家居环境，是提升家居美观度的好帮手。\"\n}",
+      "parsed_output": {
+        "generated_title": "YJ品牌金属收纳箱 YJ3 35.5*21.5*21.5cm 多用途家居收纳",
+        "selling_points": [
+          "金属材质坚固耐用，承重力强",
+          "多用途设计适用于各种小物件收纳",
+          "简约风格适用于多种家居环境"
+        ],
+        "short_description": "这款YJ品牌金属收纳箱采用金属材质打造，坚固耐用，承重力强。它具有多用途设计，适合收纳遥控器、化妆用品、耳机线等多种小物件。简洁大方的设计风格，适用于书房、餐厅等各类家居环境，是提升家居美观度的好帮手。"
+      },
+      "parse_error": null,
+      "generation_seconds": 7.12
+    },
+    {
+      "product_id": "599485472276",
+      "generation_input": {
+        "category_l1": "家居日用",
+        "category_l2": "收纳箱",
+        "attributes": {
+          "品牌": [
+            "沐春"
+          ],
+          "型号": [
+            "520"
+          ],
+          "材质": [
+            "塑料"
+          ],
+          "尺寸": [
+            "33*15*85 cm"
+          ],
+          "适用空间": [
+            "桌面",
+            "儿童房",
+            "卧室",
+            "门厅/玄关",
+            "阳台/庭院",
+            "厨房",
+            "客厅",
+            "户外",
+            "书房",
+            "衣橱/衣帽间",
+            "宿舍",
+            "餐厅",
+            "车载",
+            "浴室"
+          ],
+          "净重": [
+            "1.25kg"
+          ]
+        }
+      },
+      "reference_title_not_given_to_model": "大菜篮整理工业用分货卖菜塑料框筐长方形加厚熟料镂空杂物周转箱",
+      "raw_output": "{\n  \"generated_title\": \"沐春 520 塑料收纳箱 多场景适用\",\n  \"selling_points\": [\n    \"采用高质量塑料材质，耐用不易变形\",\n    \"适合多种家居环境，满足日常收纳需求\",\n    \"设计合理，易于移动搬运，方便整理物品\"\n  ],\n  \"short_description\": \"沐春520收纳箱，选用优质塑料制成，尺寸为33*15*85 cm，重量仅为1.25kg，轻便易移动。适用于家庭各个角落，无论是桌面、儿童房还是户外空间，都能提供高效收纳解决方案。\"\n}",
+      "parsed_output": {
+        "generated_title": "沐春 520 塑料收纳箱 多场景适用",
+        "selling_points": [
+          "采用高质量塑料材质，耐用不易变形",
+          "适合多种家居环境，满足日常收纳需求",
+          "设计合理，易于移动搬运，方便整理物品"
+        ],
+        "short_description": "沐春520收纳箱，选用优质塑料制成，尺寸为33*15*85 cm，重量仅为1.25kg，轻便易移动。适用于家庭各个角落，无论是桌面、儿童房还是户外空间，都能提供高效收纳解决方案。"
+      },
+      "parse_error": null,
+      "generation_seconds": 6.415
+    },
+    {
+      "product_id": "600538024615",
+      "generation_input": {
+        "category_l1": "家居日用",
+        "category_l2": "收纳箱",
+        "attributes": {
+          "品牌": [
+            "见描述"
+          ],
+          "型号": [
+            "575系列周转箱"
+          ],
+          "材质": [
+            "塑料"
+          ],
+          "尺寸": [
+            "绿色箱带盖",
+            "绿色箱(无盖)",
+            "黄色箱带盖",
+            "蓝色箱带盖",
+            "蓝色箱(无盖)",
+            "红色箱带盖",
+            "红色箱(无盖)",
+            "白色箱(无盖)",
+            "白色箱带盖",
+            "黄色箱(无盖)"
+          ],
+          "适用对象": [
+            "内衣",
+            "毛衣",
+            "大衣/西服"
+          ],
+          "适用空间": [
+            "户外"
+          ],
+          "净重": [
+            "3kg"
+          ]
+        }
+      },
+      "reference_title_not_given_to_model": "朔料快递匡无盖小周转箱塑料带盖子货框堆放物料箱箩有盖塑胶盒萝",
+      "raw_output": "{\n  \"generated_title\": \"575系列塑料收纳箱 多色可选\",\n  \"selling_points\": [\n    \"多种颜色可选，满足不同场合需求\",\n    \"适用于各种衣物收纳，保持整洁有序\",\n    \"轻便设计，易于移动搬运\"\n  ],\n  \"short_description\": \"这款575系列塑料收纳箱采用耐用的塑料材质制作，具有多种颜色供您选择，包括绿色、蓝色、红色、白色和黄色。它适用于内衣、毛衣及大衣等衣物的收纳，特别适合户外使用，能够有效整理并保护您的物品。箱子轻巧易搬，方便日常使用。\"\n}",
+      "parsed_output": {
+        "generated_title": "575系列塑料收纳箱 多色可选",
+        "selling_points": [
+          "多种颜色可选，满足不同场合需求",
+          "适用于各种衣物收纳，保持整洁有序",
+          "轻便设计，易于移动搬运"
+        ],
+        "short_description": "这款575系列塑料收纳箱采用耐用的塑料材质制作，具有多种颜色供您选择，包括绿色、蓝色、红色、白色和黄色。它适用于内衣、毛衣及大衣等衣物的收纳，特别适合户外使用，能够有效整理并保护您的物品。箱子轻巧易搬，方便日常使用。"
+      },
+      "parse_error": null,
+      "generation_seconds": 6.611
+    },
+    {
+      "product_id": "608516760684",
+      "generation_input": {
+        "category_l1": "家居日用",
+        "category_l2": "收纳箱",
+        "attributes": {
+          "品牌": [
+            "other其他"
+          ],
+          "型号": [
+            "YT"
+          ],
+          "材质": [
+            "塑料"
+          ],
+          "尺寸": [
+            "80#L适合儿童衣物玩具长53宽38高",
+            "三件套装:280#+280#+280#已降52",
+            "200#L适合冬衣、棉被长66宽51高4",
+            "280#L适合:可装40斤以上厚棉被",
+            "三件套装:200#L+200#L+200#L已",
+            "二件套装:280#L+280#L已降25元",
+            "30#L适合零食、杂物长30宽22高17",
+            "二件套装:120#L+120#L已降12元",
+            "二件套装:[120#L+80#L]已降12元",
+            "二件套装:200#L+200#L已降12元",
+            "120#L适合冬衣棉被长60宽45高34C"
+          ],
+          "适用对象": [
+            "毛衣",
+            "遥控器",
+            "耳机线/电线",
+            "化妆用品/首饰",
+            "磁卡",
+            "被子",
+            "内衣",
+            "包包",
+            "大衣/西服",
+            "卫生棉/卫生巾"
+          ],
+          "适用空间": [
+            "宿舍"
+          ],
+          "净重": [
+            "6.2kg"
+          ]
+        }
+      },
+      "reference_title_not_given_to_model": "收纳箱塑料特大号衣服儿童零食整理箱车载有盖箱子家用储物三件套",
+      "raw_output": "{\n  \"generated_title\": \"YT塑料收纳箱 多尺寸可选 宿舍宿舍必备\",\n  \"selling_points\": [\n    \"多种尺寸可选，满足不同存储需求\",\n    \"耐用塑料材质，安全环保无毒\",\n    \"适合作宿舍收纳，整理小物品\",\n    \"三件套组合装，优惠更划算\"\n  ],\n  \"short_description\": \"这款YT塑料收纳箱采用环保无毒塑料材质，坚固耐用。提供多种尺寸选择，方便根据实际需要进行挑选。特别适合宿舍使用，能够有效整理和收纳各种小物件，保持空间整洁有序。此外，购买三件套还有额外优惠哦！\"\n}",
+      "parsed_output": null,
+      "parse_error": "selling_points 必须是包含三个非空字符串的数组。",
+      "generation_seconds": 6.485
+    },
+    {
+      "product_id": "610255708567",
+      "generation_input": {
+        "category_l1": "家居日用",
+        "category_l2": "收纳箱",
+        "attributes": {
+          "品牌": [
+            "纳份爱"
+          ],
+          "型号": [
+            "NRF5025"
+          ],
+          "材质": [
+            "塑料"
+          ],
+          "尺寸": [
+            "特大号",
+            "小号",
+            "大号",
+            "中号"
+          ],
+          "适用对象": [
+            "遥控器",
+            "内衣",
+            "化妆用品/首饰",
+            "毛衣",
+            "卫生棉/卫生巾",
+            "大衣/西服",
+            "被子",
+            "磁卡",
+            "耳机线/电线",
+            "包包"
+          ],
+          "适用空间": [
+            "卧室"
+          ],
+          "净重": [
+            "5.88kg"
+          ]
+        }
+      },
+      "reference_title_not_given_to_model": "特大号加厚家用收纳箱抽屉式储物箱盒塑料多层玩具整理箱衣服柜子",
+      "raw_output": "{\n  \"generated_title\": \"纳份爱 NRF5025 特大号塑料收纳箱，多功能家居存储解决方案\",\n  \"selling_points\": [\n    \"采用坚固塑料材质，耐用不易破损\",\n    \"多种尺寸可选，满足不同收纳需求\",\n    \"适用于卧室及各类物品，高效整理收纳\"\n  ],\n  \"short_description\": \"纳份爱 NRF5025 收纳箱采用优质塑料材质，结构稳固，承重力强。拥有特大号、大号、中号、小号四种尺寸，可根据实际需要灵活选择。适用于卧室等居住空间，以及各类小物件如遥控器、内衣、化妆用品等，帮助您轻松整理家居，保持整洁有序。\"\n}",
+      "parsed_output": {
+        "generated_title": "纳份爱 NRF5025 特大号塑料收纳箱，多功能家居存储解决方案",
+        "selling_points": [
+          "采用坚固塑料材质，耐用不易破损",
+          "多种尺寸可选，满足不同收纳需求",
+          "适用于卧室及各类物品，高效整理收纳"
+        ],
+        "short_description": "纳份爱 NRF5025 收纳箱采用优质塑料材质，结构稳固，承重力强。拥有特大号、大号、中号、小号四种尺寸，可根据实际需要灵活选择。适用于卧室等居住空间，以及各类小物件如遥控器、内衣、化妆用品等，帮助您轻松整理家居，保持整洁有序。"
+      },
+      "parse_error": null,
+      "generation_seconds": 7.157
+    },
+    {
+      "product_id": "610445355179",
+      "generation_input": {
+        "category_l1": "家居日用",
+        "category_l2": "收纳箱",
+        "attributes": {
+          "品牌": [
+            "黎贝卡"
+          ],
+          "型号": [
+            "Y-820_HZChj"
+          ],
+          "材质": [
+            "塑料"
+          ],
+          "尺寸": [
+            "大号",
+            "45*35*23 cm",
+            "32cmx22cmx16cm",
+            "小号",
+            "中号"
+          ],
+          "适用对象": [
+            "化妆用品/首饰",
+            "内衣",
+            "毛衣"
+          ],
+          "净重": [
+            "0kg"
+          ]
+        }
+      },
+      "reference_title_not_given_to_model": "合子盒子 多功能 塑料 便携小收纳盒透明带盖装米衣服家用长方形",
+      "raw_output": "{\n  \"generated_title\": \"黎贝卡 Y-820 大号塑料收纳箱，适用于化妆用品收纳\",\n  \"selling_points\": [\n    \"采用耐用塑料材质，承重力强，适合多种物品存储\",\n    \"大号设计，空间充裕，可容纳化妆用品、内衣等多种物品\",\n    \"多尺寸可选，满足不同收纳需求，适用于家庭及个人使用\"\n  ],\n  \"short_description\": \"这款黎贝卡Y-820收纳箱采用环保塑料材质，具有良好的承重能力，适合存放各种物品。大号尺寸提供宽敞的存储空间，方便收纳化妆用品、内衣等。此外，还提供中号和小号选择，适用于不同场合和收纳需求。\"\n}",
+      "parsed_output": {
+        "generated_title": "黎贝卡 Y-820 大号塑料收纳箱，适用于化妆用品收纳",
+        "selling_points": [
+          "采用耐用塑料材质，承重力强，适合多种物品存储",
+          "大号设计，空间充裕，可容纳化妆用品、内衣等多种物品",
+          "多尺寸可选，满足不同收纳需求，适用于家庭及个人使用"
+        ],
+        "short_description": "这款黎贝卡Y-820收纳箱采用环保塑料材质，具有良好的承重能力，适合存放各种物品。大号尺寸提供宽敞的存储空间，方便收纳化妆用品、内衣等。此外，还提供中号和小号选择，适用于不同场合和收纳需求。"
+      },
+      "parse_error": null,
+      "generation_seconds": 7.388
+    },
+    {
+      "product_id": "618820646060",
+      "generation_input": {
+        "category_l1": "家居日用",
+        "category_l2": "收纳箱",
+        "attributes": {
+          "品牌": [
+            "other/其他"
+          ],
+          "型号": [
+            "C30711"
+          ],
+          "材质": [
+            "塑料"
+          ],
+          "尺寸": [
+            "~~特大号72*48*40CM",
+            "小号 42*29*24CM",
+            "大号52*36*29cm"
+          ],
+          "适用对象": [
+            "大衣/西服",
+            "内衣"
+          ],
+          "适用空间": [
+            "卧室"
+          ],
+          "净重": [
+            "2.4kg"
+          ]
+        }
+      },
+      "reference_title_not_given_to_model": ".搬宿舍神器装书装书的箱子收纳箱收纳筐有轮子可折叠学生教室。",
+      "raw_output": "{\n  \"generated_title\": \"C30711特大号塑料收纳箱，大衣西服内衣专用\",\n  \"selling_points\": [\n    \"特大号设计，轻松收纳大衣和西服\",\n    \"采用优质塑料材质，坚固耐用\",\n    \"适用于卧室收纳，整洁美观\"\n  ],\n  \"short_description\": \"这款C30711特大号塑料收纳箱采用坚固耐用的塑料材质，特别适合存放大衣和西服。其特大号尺寸能够满足大件衣物的收纳需求。同时，它小巧的款式也非常适合卧室使用，帮助保持空间整洁有序。\"\n}",
+      "parsed_output": {
+        "generated_title": "C30711特大号塑料收纳箱，大衣西服内衣专用",
+        "selling_points": [
+          "特大号设计，轻松收纳大衣和西服",
+          "采用优质塑料材质，坚固耐用",
+          "适用于卧室收纳，整洁美观"
+        ],
+        "short_description": "这款C30711特大号塑料收纳箱采用坚固耐用的塑料材质，特别适合存放大衣和西服。其特大号尺寸能够满足大件衣物的收纳需求。同时，它小巧的款式也非常适合卧室使用，帮助保持空间整洁有序。"
+      },
+      "parse_error": null,
+      "generation_seconds": 6.326
+    },
+    {
+      "product_id": "624392441174",
+      "generation_input": {
+        "category_l1": "家居日用",
+        "category_l2": "收纳箱",
+        "attributes": {
+          "品牌": [
+            "五优家家"
+          ],
+          "型号": [
+            "reerewrwer"
+          ],
+          "材质": [
+            "塑料"
+          ],
+          "尺寸": [
+            "32cmx22cmx16cm"
+          ],
+          "适用对象": [
+            "大衣/西服",
+            "毛衣"
+          ],
+          "适用空间": [
+            "卧室"
+          ],
+          "净重": [
+            "0kg"
+          ]
+        }
+      },
+      "reference_title_not_given_to_model": "懒人叠衣板衣服收纳神器衣柜整理折衣板 裤子恤衬衫抽屉式收纳柜",
+      "raw_output": "{\n  \"generated_title\": \"五优家家塑料收纳箱 reerewrwer 大衣毛衣专用卧室整理箱\",\n  \"selling_points\": [\n    \"优质塑料材质，轻巧耐用，适合长期存放衣物\",\n    \"专为大衣和毛衣设计，保持衣物形状完美无损\",\n    \"简约尺寸32cmx22cmx16cm，适用于卧室空间收纳\"\n  ],\n  \"short_description\": \"这款五优家家塑料收纳箱专为大衣和毛衣设计，采用轻质塑料材质，轻巧耐摔。其简约尺寸非常适合卧室使用，能够有效保护衣物不受压变形，保持整洁美观。\"\n}",
+      "parsed_output": {
+        "generated_title": "五优家家塑料收纳箱 reerewrwer 大衣毛衣专用卧室整理箱",
+        "selling_points": [
+          "优质塑料材质，轻巧耐用，适合长期存放衣物",
+          "专为大衣和毛衣设计，保持衣物形状完美无损",
+          "简约尺寸32cmx22cmx16cm，适用于卧室空间收纳"
+        ],
+        "short_description": "这款五优家家塑料收纳箱专为大衣和毛衣设计，采用轻质塑料材质，轻巧耐摔。其简约尺寸非常适合卧室使用，能够有效保护衣物不受压变形，保持整洁美观。"
+      },
+      "parse_error": null,
+      "generation_seconds": 7.159
+    }
+  ]
+}

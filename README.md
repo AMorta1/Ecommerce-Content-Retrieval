@@ -60,10 +60,11 @@ conda create -n ecommerce-retrieval python=3.10 pip=25.2 -y
 conda activate ecommerce-retrieval
 python -m pip install --use-pep517 -r requirements-retrieval.txt
 python scripts/build_index.py
+python scripts/build_text_features.py
 python scripts/smoke_test_retrieval.py
 ```
 
-`build_index.py` 为 1,992 张商品图片提取向量，并建立精确余弦检索索引。默认不会覆盖已有输出；确实需要重建时使用 `--overwrite`。模型代码会自动处理 Windows 下 Paddle wheel 自带 CUDA DLL 的加载路径，不需要修改系统全局 PATH。
+`build_index.py` 为 1,992 张商品图片提取向量；`build_text_features.py` 使用商品标题提取文本向量。脚本还保留了文本、图片各 50% 的融合向量，供后续优化对照，但它不属于当前纯跨模态 Baseline。两个入口都默认拒绝覆盖已有输出；确实需要重建时使用 `--overwrite`。模型代码会自动处理 Windows 下 Paddle wheel 自带 CUDA DLL 的加载路径，不需要修改系统全局 PATH。
 
 建立索引后，可以直接检索：
 
@@ -71,6 +72,8 @@ python scripts/smoke_test_retrieval.py
 python scripts/search.py --text "USB接口的迷你有线键盘" --top-k 5
 python scripts/search.py --image data/images/week1_v3/16454614360.webp --top-k 5
 ```
+
+默认执行纯跨模态 Baseline：文本查询检索商品图片索引，图片查询检索商品文本索引。`--catalog-feature image|text|fused` 只用于显式覆盖默认策略和后续对照实验。当前来源数据的 `description` 全为空，因此商品文本特征实际只使用标题，该限制记录在 `reports/retrieval/baseline/feature_library.json`。
 
 当前实测为 768 维向量，完整图片库编码约 92 秒；五条文本批量编码约 0.276 秒，搜索全部候选约 0.002 秒。五条检查查询的 50 个 Top-10 结果都命中查询对应品类，但细粒度属性并不稳定。这些查询不是独立人工相关性标签，因此只能作为基础效果观察，不能当作正式 Recall@10 或 Precision@10。
 
@@ -92,6 +95,32 @@ python scripts/evaluate_retrieval.py
 
 当前基线 Precision@10 为 49.58%，低于 PRD 参考目标 55%；候选池 Recall@10 为 67.08%。Recall 只能基于已检查候选池计算，因此明确写为 `pooled_recall_at_10`，不能冒充覆盖全库的完整 Recall。
 
+PRD 对应的正式 test50 按 3C、家居各 25 条以及八个二级品类各 6–7 条抽样。当前查询版本为 `week1_v3_test50_crossmodal_v3`：在首次计算正式 test 指标前，又将两个经完整人工复核后发现没有相关候选的查询分别换为“带盖塑料衣物收纳箱”和“按压式带盖垃圾桶”。test200 划分不变，其余 48 条查询及其 1,152 行人工标签保留。50 条查询文字均已确认，查询审核表位于：
+
+```text
+reports/retrieval/test_evaluation/query_review.csv
+```
+
+两条新查询的 `review_query_ok` 已按用户明确确认的文字填写为 `1`。正式评测现已完成，当前版本不要再运行 `--confirm-review`；脚本会拒绝将已完成的冻结清单退回“等待人工标注”。若以后需要改查询文字，须先讨论新的评测版本及人工标注处理方式，再同步更新查询清单、标注表和版本记录，不能单独修改 CSV。在尚未完成正式评测的全新版本中，查询审核表确认后才使用：
+
+```powershell
+python scripts/prepare_test_retrieval_evaluation.py --confirm-review
+```
+
+查询清单和 1,200 行相关性标注表已经同步更新，不要在当前目录重复运行 `--finalize`。若从干净副本重新准备，查询审核通过后才运行：
+
+```powershell
+python scripts/prepare_test_retrieval_evaluation.py --finalize
+```
+
+两条新查询的 48 行也已由用户逐行复核，全部 1,200 行均无空标签或“AI初标”。Excel 保存造成的商品编号科学计数法问题已按图片文件名修复并复查。正式评测已经运行，结果位于 `reports/retrieval/test_evaluation/baseline_metrics.json`，Top-10 明细位于 `reports/retrieval/test_evaluation/baseline_rankings.csv`。在当前目录不要重复运行以下命令，因为评测入口会拒绝覆盖现有结果：
+
+```powershell
+python scripts/evaluate_test_retrieval.py
+```
+
+该入口按照纯跨模态策略计算完整 test50 指标：文本搜商品图片 P@10 为 43.60%、R@10 为 61.22%；图片搜商品文本 P@10 为 45.40%、R@10 为 62.68%，均未达到 PRD 参考目标 P@10 55%、R@10 65%。查询商品自身已排除；跨二级品类由标准品类规则视为不相关。被换掉的两条零相关查询的原 48 行标注保存在 `reports/retrieval/test_evaluation/superseded_query_judgments_v2.csv`，仅作审计，不参与评测。
+
 如果审核 CSV 被 Excel 保存成科学计数法，可用 `scripts/repair_csv.py` 检查，并增加 `--repair` 从对应图片文件名恢复原始商品编号；人工填写的审核结果不会被清除。
 
 ## 运行 Qwen 文案生成试验
@@ -102,24 +131,30 @@ python scripts/evaluate_retrieval.py
 conda create -n ecommerce-generation python=3.10 pip=25.2 -y
 conda activate ecommerce-generation
 python -m pip install -r requirements-generation.txt
-python scripts/generate.py --sample-count 5
-python scripts/generate.py --sample-count 5 --offline
+python scripts/generate.py --sample-count 5 --output reports/generation/baseline/smoke_test_sampling_prompt_v2.json
+python scripts/generate.py --sample-count 5 --offline --output reports/generation/baseline/smoke_test_sampling_prompt_v2.json
 ```
 
 真正送入模型的只有 `generation_input` 中的品类和筛选后属性，不包含作为对照的原始标题。输出固定为生成标题、三个卖点和短描述。完整的环境变量设置、输入边界和报告解释见 `docs/generation.md`。
 
 当前五条可行性样本均成功生成并通过 JSON 结构校验。内容仍存在把普通材质扩写成“环保”、把普通键盘写成“游戏键盘”等事实外扩，后续需通过提示词或微调优化。
 
+当前 `configs/generation.json` 已启用采样，`temperature=0.7`、`top_p=0.9` 因而生效；新版 Prompt 也更明确要求恰好三个卖点。下面的 Week 1 指标来自原来的确定性解码和旧 Prompt，历史配置保存在 `configs/generation_greedy_baseline.json`。新采样输出不能直接沿用旧人工评分。
+
+首次采样试跑仍用旧 Prompt，5条中有2条生成了4个卖点。加强提示词后，固定100条重新生成的结构成功率为99%，平均耗时6.430秒，结果见 `reports/generation/baseline/evaluation_outputs_sampling_v2.json`。这次结构成功率高于旧版，耗时与旧版接近，但仍有1条四卖点错误；内容已另行完成人工评测。
+
+新版采样文案的独立复核表 `reports/generation/evaluation/annotation_pool_sampling_v2.csv` 已完成人工复核，正式指标保存在 `reports/generation/evaluation/baseline_metrics_sampling_v2.json`。同一批100条 test 商品上，新版属性命中率88.16%、通顺率98%、事实错误样本率73%、结构成功率99%、平均耗时6.430秒。事实错误样本率高于旧版56%；本次同时调整了解码方式与 Prompt，不能将差异归因于单一改动。旧版标注和指标不覆盖，详情见 `docs/generation.md`。
+
 PRD 要求从 test 集抽取100条人工评估核心属性命中率和通顺度。正式评测池按两大类各50条分层抽样并完成人工复核：核心属性命中率88%，通顺率99%，均通过75%和80%的门槛；平均生成6.443秒，也通过12秒门槛。严格结构成功率为96%，事实错误样本率为56%，说明 Baseline 虽达到PRD基础门槛，但事实约束仍是后续优化重点。标注表和正式指标分别位于 `reports/generation/evaluation/annotation_pool.csv`、`reports/generation/evaluation/baseline_metrics.json`，填写方法和复现命令见 `docs/generation.md`。
 
 ## 记录和对比实验版本
 
-`scripts/track_experiment.py` 将生成、检索的正式指标登记到同一张 `reports/experiment_log.csv`。每行代表一个实验版本，包含模型、方法、固定评测集标识、完整配置快照、关键指标和相对 Baseline 的变化。当前已登记两个 Week 1 Baseline。
+`scripts/track_experiment.py` 将生成、检索的正式指标登记到同一张 `reports/experiment_log.csv`。每行代表一个实验版本，包含模型、方法、固定评测集标识、完整配置快照、关键指标和相对 Baseline 的变化。当前已登记两个 Week 1 Baseline 和一次采样解码 + Prompt 联合变更实验。
 
 登记生成实验：
 
 ```powershell
-python scripts/track_experiment.py --module generation --method baseline --metrics reports/generation/evaluation/baseline_metrics.json --manifest reports/generation/evaluation/annotation_manifest.json --config configs/generation.json --config configs/generation_evaluation.json
+python scripts/track_experiment.py --module generation --method baseline --metrics reports/generation/evaluation/baseline_metrics.json --manifest reports/generation/evaluation/annotation_manifest.json --config configs/generation_greedy_baseline.json --config configs/generation_evaluation.json
 ```
 
 登记检索实验：
@@ -129,6 +164,14 @@ python scripts/track_experiment.py --module retrieval --method baseline --metric
 ```
 
 后续版本将 `--method` 改为 `lora`、`rag` 或 `rerank`，并传入该版本独立的指标、清单和配置文件。同一模块和版本会更新原行，不会重复追加；只有评测集标识相同的版本才会自动计算差值。优化版指标不能覆盖现有 Baseline 文件。
+
+构建防止评测泄漏的 Week 2 训练版本：
+
+```powershell
+python scripts/deduplicate_training_data.py
+```
+
+该命令冻结现有验证集和测试集，只从新训练版本中排除跨划分的同品牌型号或近似图片。原始 `week1_v3` 不会被修改；处理结果位于 `data/processed/week2_train_v1/`，可提交的小型证据位于 `reports/data/training_deduplication_week2_v1.*`。
 
 ## 后续模型验证读取位置
 
@@ -156,9 +199,12 @@ JSONL 中仍保留原始标题、原始属性和来源。看图检查不等于�
 - [检索人工评测说明](docs/evaluation.md)
 - [多版本实验汇总](reports/experiment_log.csv)
 - [v3 全量索引构建记录](reports/retrieval/baseline/index_build.json)
+- [v3 文本、图片及实验性融合特征库记录](reports/retrieval/baseline/feature_library.json)
 - [v3 ERNIE-ViL 五样本试跑结果](reports/retrieval/baseline/smoke_test.json)
+- [正式 test50 查询审核表](reports/retrieval/test_evaluation/query_review.csv)
 - [全量标签频数](reports/data/census/label_counts.csv)
 - [v3 独立校验结果](reports/data/validation.json)
 - [v3 的 40 条抽查结果](reports/data/category_review.csv)
 - [v3 近重复与同型号检查](reports/data/duplicate_audit.json)
+- [Week 2 训练集近重复处理统计](reports/data/training_deduplication_week2_v1.json)
 - [v2 原始抽查证据](reports/history/category_review_week1_v2.csv)

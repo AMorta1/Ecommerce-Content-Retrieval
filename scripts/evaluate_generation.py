@@ -192,7 +192,7 @@ def evaluate(config: dict[str, Any], allow_assistant_draft: bool = False) -> Non
             if assistant_draft_rows
             else "human_evaluation_completed"
         ),
-        "version": "generation_baseline_v1",
+        "version": config.get("version", "generation_baseline_v1"),
         "created_at_utc": datetime.now(timezone.utc).isoformat(timespec="seconds"),
         "annotation_file_sha256": file_sha256(annotation_path),
         "annotation_progress": progress,

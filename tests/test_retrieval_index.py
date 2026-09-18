@@ -7,6 +7,11 @@ import numpy as np
 
 from src.retrieval.catalog import load_catalog, load_metadata, write_metadata
 from src.retrieval.ernie_vil import ErnieVilEmbedder, normalize_rows
+from src.retrieval.feature_library import (
+    build_product_text,
+    catalog_index_path,
+    fuse_product_features,
+)
 
 
 class RetrievalCatalogTests(unittest.TestCase):
@@ -69,6 +74,20 @@ class RetrievalCatalogTests(unittest.TestCase):
 
 
 class RetrievalFeatureTests(unittest.TestCase):
+    def test_formal_baseline_uses_pure_cross_modal_indexes(self) -> None:
+        config_path = (
+            Path(__file__).resolve().parents[1]
+            / "configs"
+            / "retrieval_test_evaluation.json"
+        )
+        config = json.loads(config_path.read_text(encoding="utf-8"))
+
+        self.assertEqual(config["retrieval_strategy"], "pure_cross_modal")
+        self.assertEqual(
+            config["catalog_feature_by_query_mode"],
+            {"text": "image", "image": "text"},
+        )
+
     def test_normalize_rows_returns_unit_vectors(self) -> None:
         normalized = normalize_rows(np.array([[3.0, 4.0], [0.0, 2.0]], dtype=np.float32))
         np.testing.assert_allclose(np.linalg.norm(normalized, axis=1), np.ones(2), atol=1e-6)
@@ -76,6 +95,22 @@ class RetrievalFeatureTests(unittest.TestCase):
     def test_embedder_rejects_invalid_batch_before_loading_model(self) -> None:
         with self.assertRaisesRegex(ValueError, "batch_size"):
             ErnieVilEmbedder(batch_size=0)
+
+    def test_product_text_skips_missing_description(self) -> None:
+        record = {"product_id": "1", "title": "商品标题", "description": None}
+        self.assertEqual(build_product_text(record, ["title", "description"]), "商品标题")
+
+    def test_fused_features_are_normalized(self) -> None:
+        text = np.array([[1.0, 0.0]], dtype=np.float32)
+        image = np.array([[0.0, 1.0]], dtype=np.float32)
+        fused = fuse_product_features(text, image, 0.5, 0.5)
+        np.testing.assert_allclose(np.linalg.norm(fused, axis=1), [1.0], atol=1e-6)
+
+    def test_catalog_index_path_validates_mode(self) -> None:
+        config = {"index_path": "image.faiss"}
+        self.assertEqual(catalog_index_path(config, "image"), "image.faiss")
+        with self.assertRaisesRegex(ValueError, "不支持"):
+            catalog_index_path(config, "unknown")
 
 
 if __name__ == "__main__":
