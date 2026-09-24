@@ -1,0 +1,30 @@
+{
+  "version": "generation_rag_validation_v3",
+  "model_name": "Qwen/Qwen2.5-7B-Instruct",
+  "revision": "a09a35458c702b33eeacc393d103063234e8bc28",
+  "cache_dir": "../.model-cache/huggingface/hub",
+  "device": "cuda",
+  "load_in_4bit": true,
+  "bnb_4bit_quant_type": "nf4",
+  "bnb_4bit_compute_dtype": "bfloat16",
+  "max_input_tokens": 2048,
+  "max_new_tokens": 320,
+  "do_sample": true,
+  "temperature": 0.7,
+  "top_p": 0.9,
+  "seed": 42,
+  "prompt_version": "rag_v3",
+  "baseline_prompt_version": "baseline_v2",
+  "validation_source": "data/processed/week1_v3/multimodal/validation.jsonl",
+  "fact_units_path": "data/processed/week2_rag_v1/validation_fact_units.jsonl",
+  "fact_policy_path": "configs/rag_fact_policy_v1.json",
+  "audit_path": "reports/data/week2_rag_fact_quality_audit.csv",
+  "initial_top_k": 3,
+  "top_k_status": "validation_initial_not_frozen",
+  "joint_ranking": "reciprocal_rank_fusion",
+  "pairing": {
+    "baseline_and_rag_use_same_model_instance": true,
+    "paired_seed_rule": "base_seed_plus_stable_sample_index",
+    "formal_test100": false
+  }
+}

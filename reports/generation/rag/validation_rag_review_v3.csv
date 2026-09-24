@@ -1,0 +1,25 @@
+product_id,category_l2,rag_parse_status,selected_fact_used,selected_fact_total,review_status,issue_type,review_note
+576694559149,保温杯,PASS,3,3,PASS,none,三条任务事实均直接表达
+584648531319,保温杯,PASS,3,3,PASS,none,三条任务事实均直接表达
+600702277714,保温杯,PASS,3,3,PASS,none,三条任务事实均直接表达
+535858215415,垃圾桶,PASS,3,3,PASS,none,三条任务事实均直接表达
+596561935088,垃圾桶,PASS,3,3,PASS,none,三条任务事实均直接表达
+585183140226,垃圾桶,PASS,3,3,REVIEW,unsupported_scenario,短详情新增“适用于家居日用”
+610727155009,拖把,PASS,1,1,REVIEW,identity_filler,仅一条任务事实时用品类和型号补足卖点
+44604493546,拖把,PASS,3,3,PASS,none,三条任务事实均直接表达
+620488672878,拖把,PASS,3,3,PASS,none,三条任务事实均直接表达
+556912823177,收纳箱,PASS,2,2,REVIEW,identity_filler,仅两条任务事实时用品牌补足第三条卖点
+625309591565,收纳箱,PASS,1,1,REVIEW,identity_filler,仅一条任务事实时用品牌和型号补足卖点
+613971147597,收纳箱,PASS,2,2,REVIEW,unsupported_scenario,卖点和短详情新增“适用于家居收纳”
+584308818142,移动电源,PASS,3,3,PASS,none,三条任务事实均直接表达
+610408134586,移动电源,PASS,3,3,PASS,none,三条任务事实均直接表达
+569958345076,移动电源,PASS,3,3,PASS,none,三条任务事实均直接表达
+621656965008,耳机,PASS,3,3,PASS,none,三条任务事实均直接表达
+572645689177,耳机,PASS,2,3,REVIEW,omitted_fact_and_identity_filler,未表达“是否有麦克风=无”且用品类和型号补足卖点
+556404503382,耳机,PASS,2,2,REVIEW,identity_filler,仅两条任务事实时用型号补足第三条卖点
+621341696263,键盘,PASS,2,3,REVIEW,omitted_fact_and_identity_filler,未表达“是否机械键盘=否”且用型号补足卖点
+606784877914,键盘,PASS,3,3,PASS,none,三条任务事实均直接表达
+621326718016,键盘,PASS,3,3,PASS,none,RAG 三条任务事实均直接表达；对应 Baseline 解析失败
+609932288958,鼠标,PASS,3,3,PASS,none,三条任务事实均直接表达
+614646720550,鼠标,PASS,3,3,PASS,none,三条任务事实均直接表达
+580390189481,鼠标,PASS,3,3,PASS,none,三条任务事实均直接表达

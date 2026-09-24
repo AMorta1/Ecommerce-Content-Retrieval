@@ -1,0 +1,4498 @@
+{
+  "version": "validation_fact_build_v1",
+  "status": "passed",
+  "scope": "validation",
+  "dataset_version": "week1_v3",
+  "source": {
+    "path": "data/processed/week1_v3/multimodal/validation.jsonl",
+    "sha256": "dd2bc1d6c21567176d95f5414bfd9304f48979b3bb39ab0b038627b1f346af0b",
+    "record_count": 200
+  },
+  "audit": {
+    "path": "reports/data/week2_rag_fact_quality_audit.csv",
+    "sha256": "887ca944c9725f92b213687f1fbebbed82effd8f2bf3f3ae8734eb3e8e290ce0"
+  },
+  "policy": {
+    "path": "configs/rag_fact_policy_v1.json",
+    "sha256": "dd22949eb151434dfee1890fc3376a08f4735d869550bac7d6967b9889bbe6d2",
+    "version": "rag_fact_policy_v1"
+  },
+  "top_k": 3,
+  "top_k_status": "validation_initial_not_frozen",
+  "fact_count": 1637,
+  "fact_role_counts": {
+    "identity": 755,
+    "task": 882
+  },
+  "quality_status_counts": {
+    "blocked_conflict": 34,
+    "eligible": 1547,
+    "withhold_review": 56
+  },
+  "task_selection_totals": {
+    "title": {
+      "identity_facts": 730,
+      "selected_facts": 530
+    },
+    "selling_points": {
+      "identity_facts": 730,
+      "selected_facts": 530
+    },
+    "short_description": {
+      "identity_facts": 730,
+      "selected_facts": 530
+    }
+  },
+  "model_execution": false,
+  "test100_execution": false,
+  "products": [
+    {
+      "product_id": "37547557851",
+      "audit_status": "PASS",
+      "fact_count": 9,
+      "quality_status_counts": {
+        "eligible": 8,
+        "withhold_review": 1
+      },
+      "task_selection": {
+        "title": {
+          "identity_fact_count": 4,
+          "selected_fact_count": 3
+        },
+        "selling_points": {
+          "identity_fact_count": 4,
+          "selected_fact_count": 3
+        },
+        "short_description": {
+          "identity_fact_count": 4,
+          "selected_fact_count": 3
+        }
+      }
+    },
+    {
+      "product_id": "41137975381",
+      "audit_status": "REVIEW",
+      "fact_count": 9,
+      "quality_status_counts": {
+        "eligible": 7,
+        "withhold_review": 2
+      },
+      "task_selection": {
+        "title": {
+          "identity_fact_count": 3,
+          "selected_fact_count": 3
+        },
+        "selling_points": {
+          "identity_fact_count": 3,
+          "selected_fact_count": 3
+        },
+        "short_description": {
+          "identity_fact_count": 3,
+          "selected_fact_count": 3
+        }
+      }
+    },
+    {
+      "product_id": "44167486558",
+      "audit_status": "PASS",
+      "fact_count": 8,
+      "quality_status_counts": {
+        "eligible": 8
+      },
+      "task_selection": {
+        "title": {
+          "identity_fact_count": 3,
+          "selected_fact_count": 3
+        },
+        "selling_points": {
+          "identity_fact_count": 3,
+          "selected_fact_count": 3
+        },
+        "short_description": {
+          "identity_fact_count": 3,
+          "selected_fact_count": 3
+        }
+      }
+    },
+    {
+      "product_id": "44604493546",
+      "audit_status": "PASS",
+      "fact_count": 8,
+      "quality_status_counts": {
+        "eligible": 8
+      },
+      "task_selection": {
+        "title": {
+          "identity_fact_count": 4,
+          "selected_fact_count": 3
+        },
+        "selling_points": {
+          "identity_fact_count": 4,
+          "selected_fact_count": 3
+        },
+        "short_description": {
+          "identity_fact_count": 4,
+          "selected_fact_count": 3
+        }
+      }
+    },
+    {
+      "product_id": "520540561631",
+      "audit_status": "PASS",
+      "fact_count": 9,
+      "quality_status_counts": {
+        "eligible": 9
+      },
+      "task_selection": {
+        "title": {
+          "identity_fact_count": 4,
+          "selected_fact_count": 3
+        },
+        "selling_points": {
+          "identity_fact_count": 4,
+          "selected_fact_count": 3
+        },
+        "short_description": {
+          "identity_fact_count": 4,
+          "selected_fact_count": 3
+        }
+      }
+    },
+    {
+      "product_id": "522712107019",
+      "audit_status": "PASS",
+      "fact_count": 11,
+      "quality_status_counts": {
+        "eligible": 11
+      },
+      "task_selection": {
+        "title": {
+          "identity_fact_count": 4,
+          "selected_fact_count": 3
+        },
+        "selling_points": {
+          "identity_fact_count": 4,
+          "selected_fact_count": 3
+        },
+        "short_description": {
+          "identity_fact_count": 4,
+          "selected_fact_count": 3
+        }
+      }
+    },
+    {
+      "product_id": "524047928075",
+      "audit_status": "PASS",
+      "fact_count": 9,
+      "quality_status_counts": {
+        "eligible": 9
+      },
+      "task_selection": {
+        "title": {
+          "identity_fact_count": 4,
+          "selected_fact_count": 3
+        },
+        "selling_points": {
+          "identity_fact_count": 4,
+          "selected_fact_count": 3
+        },
+        "short_description": {
+          "identity_fact_count": 4,
+          "selected_fact_count": 3
+        }
+      }
+    },
+    {
+      "product_id": "526413502198",
+      "audit_status": "REVIEW",
+      "fact_count": 9,
+      "quality_status_counts": {
+        "eligible": 6,
+        "withhold_review": 3
+      },
+      "task_selection": {
+        "title": {
+          "identity_fact_count": 2,
+          "selected_fact_count": 3
+        },
+        "selling_points": {
+          "identity_fact_count": 2,
+          "selected_fact_count": 3
+        },
+        "short_description": {
+          "identity_fact_count": 2,
+          "selected_fact_count": 3
+        }
+      }
+    },
+    {
+      "product_id": "529465827962",
+      "audit_status": "PASS",
+      "fact_count": 5,
+      "quality_status_counts": {
+        "eligible": 4,
+        "withhold_review": 1
+      },
+      "task_selection": {
+        "title": {
+          "identity_fact_count": 4,
+          "selected_fact_count": 0
+        },
+        "selling_points": {
+          "identity_fact_count": 4,
+          "selected_fact_count": 0
+        },
+        "short_description": {
+          "identity_fact_count": 4,
+          "selected_fact_count": 0
+        }
+      }
+    },
+    {
+      "product_id": "530346398599",
+      "audit_status": "PASS",
+      "fact_count": 8,
+      "quality_status_counts": {
+        "eligible": 8
+      },
+      "task_selection": {
+        "title": {
+          "identity_fact_count": 3,
+          "selected_fact_count": 3
+        },
+        "selling_points": {
+          "identity_fact_count": 3,
+          "selected_fact_count": 3
+        },
+        "short_description": {
+          "identity_fact_count": 3,
+          "selected_fact_count": 3
+        }
+      }
+    },
+    {
+      "product_id": "534591817203",
+      "audit_status": "PASS",
+      "fact_count": 8,
+      "quality_status_counts": {
+        "eligible": 8
+      },
+      "task_selection": {
+        "title": {
+          "identity_fact_count": 4,
+          "selected_fact_count": 3
+        },
+        "selling_points": {
+          "identity_fact_count": 4,
+          "selected_fact_count": 3
+        },
+        "short_description": {
+          "identity_fact_count": 4,
+          "selected_fact_count": 3
+        }
+      }
+    },
+    {
+      "product_id": "535288743349",
+      "audit_status": "PASS",
+      "fact_count": 8,
+      "quality_status_counts": {
+        "eligible": 8
+      },
+      "task_selection": {
+        "title": {
+          "identity_fact_count": 4,
+          "selected_fact_count": 3
+        },
+        "selling_points": {
+          "identity_fact_count": 4,
+          "selected_fact_count": 3
+        },
+        "short_description": {
+          "identity_fact_count": 4,
+          "selected_fact_count": 3
+        }
+      }
+    },
+    {
+      "product_id": "535858215415",
+      "audit_status": "PASS",
+      "fact_count": 8,
+      "quality_status_counts": {
+        "eligible": 8
+      },
+      "task_selection": {
+        "title": {
+          "identity_fact_count": 3,
+          "selected_fact_count": 3
+        },
+        "selling_points": {
+          "identity_fact_count": 3,
+          "selected_fact_count": 3
+        },
+        "short_description": {
+          "identity_fact_count": 3,
+          "selected_fact_count": 3
+        }
+      }
+    },
+    {
+      "product_id": "537212951088",
+      "audit_status": "PASS",
+      "fact_count": 3,
+      "quality_status_counts": {
+        "eligible": 2,
+        "withhold_review": 1
+      },
+      "task_selection": {
+        "title": {
+          "identity_fact_count": 2,
+          "selected_fact_count": 0
+        },
+        "selling_points": {
+          "identity_fact_count": 2,
+          "selected_fact_count": 0
+        },
+        "short_description": {
+          "identity_fact_count": 2,
+          "selected_fact_count": 0
+        }
+      }
+    },
+    {
+      "product_id": "547969224770",
+      "audit_status": "PASS",
+      "fact_count": 9,
+      "quality_status_counts": {
+        "eligible": 9
+      },
+      "task_selection": {
+        "title": {
+          "identity_fact_count": 4,
+          "selected_fact_count": 3
+        },
+        "selling_points": {
+          "identity_fact_count": 4,
+          "selected_fact_count": 3
+        },
+        "short_description": {
+          "identity_fact_count": 4,
+          "selected_fact_count": 3
+        }
+      }
+    },
+    {
+      "product_id": "550858221146",
+      "audit_status": "PASS",
+      "fact_count": 7,
+      "quality_status_counts": {
+        "eligible": 6,
+        "withhold_review": 1
+      },
+      "task_selection": {
+        "title": {
+          "identity_fact_count": 4,
+          "selected_fact_count": 2
+        },
+        "selling_points": {
+          "identity_fact_count": 4,
+          "selected_fact_count": 2
+        },
+        "short_description": {
+          "identity_fact_count": 4,
+          "selected_fact_count": 2
+        }
+      }
+    },
+    {
+      "product_id": "551505692433",
+      "audit_status": "PASS",
+      "fact_count": 12,
+      "quality_status_counts": {
+        "eligible": 12
+      },
+      "task_selection": {
+        "title": {
+          "identity_fact_count": 4,
+          "selected_fact_count": 3
+        },
+        "selling_points": {
+          "identity_fact_count": 4,
+          "selected_fact_count": 3
+        },
+        "short_description": {
+          "identity_fact_count": 4,
+          "selected_fact_count": 3
+        }
+      }
+    },
+    {
+      "product_id": "552025795571",
+      "audit_status": "REVIEW",
+      "fact_count": 7,
+      "quality_status_counts": {
+        "eligible": 5,
+        "withhold_review": 2
+      },
+      "task_selection": {
+        "title": {
+          "identity_fact_count": 3,
+          "selected_fact_count": 2
+        },
+        "selling_points": {
+          "identity_fact_count": 3,
+          "selected_fact_count": 2
+        },
+        "short_description": {
+          "identity_fact_count": 3,
+          "selected_fact_count": 2
+        }
+      }
+    },
+    {
+      "product_id": "556323099133",
+      "audit_status": "PASS",
+      "fact_count": 5,
+      "quality_status_counts": {
+        "eligible": 5
+      },
+      "task_selection": {
+        "title": {
+          "identity_fact_count": 4,
+          "selected_fact_count": 1
+        },
+        "selling_points": {
+          "identity_fact_count": 4,
+          "selected_fact_count": 1
+        },
+        "short_description": {
+          "identity_fact_count": 4,
+          "selected_fact_count": 1
+        }
+      }
+    },
+    {
+      "product_id": "556404503382",
+      "audit_status": "PASS",
+      "fact_count": 6,
+      "quality_status_counts": {
+        "eligible": 6
+      },
+      "task_selection": {
+        "title": {
+          "identity_fact_count": 4,
+          "selected_fact_count": 2
+        },
+        "selling_points": {
+          "identity_fact_count": 4,
+          "selected_fact_count": 2
+        },
+        "short_description": {
+          "identity_fact_count": 4,
+          "selected_fact_count": 2
+        }
+      }
+    },
+    {
+      "product_id": "556912823177",
+      "audit_status": "PASS",
+      "fact_count": 7,
+      "quality_status_counts": {
+        "eligible": 6,
+        "withhold_review": 1
+      },
+      "task_selection": {
+        "title": {
+          "identity_fact_count": 4,
+          "selected_fact_count": 2
+        },
+        "selling_points": {
+          "identity_fact_count": 4,
+          "selected_fact_count": 2
+        },
+        "short_description": {
+          "identity_fact_count": 4,
+          "selected_fact_count": 2
+        }
+      }
+    },
+    {
+      "product_id": "557414216305",
+      "audit_status": "PASS",
+      "fact_count": 9,
+      "quality_status_counts": {
+        "eligible": 9
+      },
+      "task_selection": {
+        "title": {
+          "identity_fact_count": 4,
+          "selected_fact_count": 3
+        },
+        "selling_points": {
+          "identity_fact_count": 4,
+          "selected_fact_count": 3
+        },
+        "short_description": {
+          "identity_fact_count": 4,
+          "selected_fact_count": 3
+        }
+      }
+    },
+    {
+      "product_id": "558895854325",
+      "audit_status": "PASS",
+      "fact_count": 9,
+      "quality_status_counts": {
+        "eligible": 9
+      },
+      "task_selection": {
+        "title": {
+          "identity_fact_count": 4,
+          "selected_fact_count": 3
+        },
+        "selling_points": {
+          "identity_fact_count": 4,
+          "selected_fact_count": 3
+        },
+        "short_description": {
+          "identity_fact_count": 4,
+          "selected_fact_count": 3
+        }
+      }
+    },
+    {
+      "product_id": "559163599708",
+      "audit_status": "PASS",
+      "fact_count": 6,
+      "quality_status_counts": {
+        "eligible": 5,
+        "withhold_review": 1
+      },
+      "task_selection": {
+        "title": {
+          "identity_fact_count": 3,
+          "selected_fact_count": 2
+        },
+        "selling_points": {
+          "identity_fact_count": 3,
+          "selected_fact_count": 2
+        },
+        "short_description": {
+          "identity_fact_count": 3,
+          "selected_fact_count": 2
+        }
+      }
+    },
+    {
+      "product_id": "559329008070",
+      "audit_status": "PASS",
+      "fact_count": 11,
+      "quality_status_counts": {
+        "eligible": 10,
+        "withhold_review": 1
+      },
+      "task_selection": {
+        "title": {
+          "identity_fact_count": 4,
+          "selected_fact_count": 3
+        },
+        "selling_points": {
+          "identity_fact_count": 4,
+          "selected_fact_count": 3
+        },
+        "short_description": {
+          "identity_fact_count": 4,
+          "selected_fact_count": 3
+        }
+      }
+    },
+    {
+      "product_id": "559348202154",
+      "audit_status": "PASS",
+      "fact_count": 8,
+      "quality_status_counts": {
+        "eligible": 8
+      },
+      "task_selection": {
+        "title": {
+          "identity_fact_count": 4,
+          "selected_fact_count": 3
+        },
+        "selling_points": {
+          "identity_fact_count": 4,
+          "selected_fact_count": 3
+        },
+        "short_description": {
+          "identity_fact_count": 4,
+          "selected_fact_count": 3
+        }
+      }
+    },
+    {
+      "product_id": "559530161916",
+      "audit_status": "PASS",
+      "fact_count": 9,
+      "quality_status_counts": {
+        "eligible": 9
+      },
+      "task_selection": {
+        "title": {
+          "identity_fact_count": 4,
+          "selected_fact_count": 3
+        },
+        "selling_points": {
+          "identity_fact_count": 4,
+          "selected_fact_count": 3
+        },
+        "short_description": {
+          "identity_fact_count": 4,
+          "selected_fact_count": 3
+        }
+      }
+    },
+    {
+      "product_id": "560142904030",
+      "audit_status": "PASS",
+      "fact_count": 8,
+      "quality_status_counts": {
+        "eligible": 8
+      },
+      "task_selection": {
+        "title": {
+          "identity_fact_count": 4,
+          "selected_fact_count": 3
+        },
+        "selling_points": {
+          "identity_fact_count": 4,
+          "selected_fact_count": 3
+        },
+        "short_description": {
+          "identity_fact_count": 4,
+          "selected_fact_count": 3
+        }
+      }
+    },
+    {
+      "product_id": "561194272917",
+      "audit_status": "PASS",
+      "fact_count": 12,
+      "quality_status_counts": {
+        "eligible": 11,
+        "withhold_review": 1
+      },
+      "task_selection": {
+        "title": {
+          "identity_fact_count": 4,
+          "selected_fact_count": 3
+        },
+        "selling_points": {
+          "identity_fact_count": 4,
+          "selected_fact_count": 3
+        },
+        "short_description": {
+          "identity_fact_count": 4,
+          "selected_fact_count": 3
+        }
+      }
+    },
+    {
+      "product_id": "561395704571",
+      "audit_status": "PASS",
+      "fact_count": 9,
+      "quality_status_counts": {
+        "eligible": 9
+      },
+      "task_selection": {
+        "title": {
+          "identity_fact_count": 4,
+          "selected_fact_count": 3
+        },
+        "selling_points": {
+          "identity_fact_count": 4,
+          "selected_fact_count": 3
+        },
+        "short_description": {
+          "identity_fact_count": 4,
+          "selected_fact_count": 3
+        }
+      }
+    },
+    {
+      "product_id": "562000639610",
+      "audit_status": "PASS",
+      "fact_count": 6,
+      "quality_status_counts": {
+        "eligible": 6
+      },
+      "task_selection": {
+        "title": {
+          "identity_fact_count": 4,
+          "selected_fact_count": 2
+        },
+        "selling_points": {
+          "identity_fact_count": 4,
+          "selected_fact_count": 2
+        },
+        "short_description": {
+          "identity_fact_count": 4,
+          "selected_fact_count": 2
+        }
+      }
+    },
+    {
+      "product_id": "562137902252",
+      "audit_status": "PASS",
+      "fact_count": 10,
+      "quality_status_counts": {
+        "eligible": 9,
+        "withhold_review": 1
+      },
+      "task_selection": {
+        "title": {
+          "identity_fact_count": 4,
+          "selected_fact_count": 3
+        },
+        "selling_points": {
+          "identity_fact_count": 4,
+          "selected_fact_count": 3
+        },
+        "short_description": {
+          "identity_fact_count": 4,
+          "selected_fact_count": 3
+        }
+      }
+    },
+    {
+      "product_id": "562296958075",
+      "audit_status": "PASS",
+      "fact_count": 12,
+      "quality_status_counts": {
+        "eligible": 12
+      },
+      "task_selection": {
+        "title": {
+          "identity_fact_count": 4,
+          "selected_fact_count": 3
+        },
+        "selling_points": {
+          "identity_fact_count": 4,
+          "selected_fact_count": 3
+        },
+        "short_description": {
+          "identity_fact_count": 4,
+          "selected_fact_count": 3
+        }
+      }
+    },
+    {
+      "product_id": "564110705919",
+      "audit_status": "PASS",
+      "fact_count": 12,
+      "quality_status_counts": {
+        "eligible": 12
+      },
+      "task_selection": {
+        "title": {
+          "identity_fact_count": 4,
+          "selected_fact_count": 3
+        },
+        "selling_points": {
+          "identity_fact_count": 4,
+          "selected_fact_count": 3
+        },
+        "short_description": {
+          "identity_fact_count": 4,
+          "selected_fact_count": 3
+        }
+      }
+    },
+    {
+      "product_id": "564373089785",
+      "audit_status": "PASS",
+      "fact_count": 7,
+      "quality_status_counts": {
+        "eligible": 7
+      },
+      "task_selection": {
+        "title": {
+          "identity_fact_count": 4,
+          "selected_fact_count": 3
+        },
+        "selling_points": {
+          "identity_fact_count": 4,
+          "selected_fact_count": 3
+        },
+        "short_description": {
+          "identity_fact_count": 4,
+          "selected_fact_count": 3
+        }
+      }
+    },
+    {
+      "product_id": "565078231259",
+      "audit_status": "CONFLICT",
+      "fact_count": 6,
+      "quality_status_counts": {
+        "blocked_conflict": 6
+      },
+      "task_selection": {
+        "title": {
+          "identity_fact_count": 0,
+          "selected_fact_count": 0
+        },
+        "selling_points": {
+          "identity_fact_count": 0,
+          "selected_fact_count": 0
+        },
+        "short_description": {
+          "identity_fact_count": 0,
+          "selected_fact_count": 0
+        }
+      }
+    },
+    {
+      "product_id": "565810629297",
+      "audit_status": "PASS",
+      "fact_count": 8,
+      "quality_status_counts": {
+        "eligible": 8
+      },
+      "task_selection": {
+        "title": {
+          "identity_fact_count": 4,
+          "selected_fact_count": 3
+        },
+        "selling_points": {
+          "identity_fact_count": 4,
+          "selected_fact_count": 3
+        },
+        "short_description": {
+          "identity_fact_count": 4,
+          "selected_fact_count": 3
+        }
+      }
+    },
+    {
+      "product_id": "566986927827",
+      "audit_status": "PASS",
+      "fact_count": 9,
+      "quality_status_counts": {
+        "eligible": 9
+      },
+      "task_selection": {
+        "title": {
+          "identity_fact_count": 4,
+          "selected_fact_count": 3
+        },
+        "selling_points": {
+          "identity_fact_count": 4,
+          "selected_fact_count": 3
+        },
+        "short_description": {
+          "identity_fact_count": 4,
+          "selected_fact_count": 3
+        }
+      }
+    },
+    {
+      "product_id": "569958345076",
+      "audit_status": "PASS",
+      "fact_count": 9,
+      "quality_status_counts": {
+        "eligible": 9
+      },
+      "task_selection": {
+        "title": {
+          "identity_fact_count": 4,
+          "selected_fact_count": 3
+        },
+        "selling_points": {
+          "identity_fact_count": 4,
+          "selected_fact_count": 3
+        },
+        "short_description": {
+          "identity_fact_count": 4,
+          "selected_fact_count": 3
+        }
+      }
+    },
+    {
+      "product_id": "571248535069",
+      "audit_status": "PASS",
+      "fact_count": 8,
+      "quality_status_counts": {
+        "eligible": 8
+      },
+      "task_selection": {
+        "title": {
+          "identity_fact_count": 4,
+          "selected_fact_count": 3
+        },
+        "selling_points": {
+          "identity_fact_count": 4,
+          "selected_fact_count": 3
+        },
+        "short_description": {
+          "identity_fact_count": 4,
+          "selected_fact_count": 3
+        }
+      }
+    },
+    {
+      "product_id": "571596142685",
+      "audit_status": "PASS",
+      "fact_count": 7,
+      "quality_status_counts": {
+        "eligible": 7
+      },
+      "task_selection": {
+        "title": {
+          "identity_fact_count": 4,
+          "selected_fact_count": 3
+        },
+        "selling_points": {
+          "identity_fact_count": 4,
+          "selected_fact_count": 3
+        },
+        "short_description": {
+          "identity_fact_count": 4,
+          "selected_fact_count": 3
+        }
+      }
+    },
+    {
+      "product_id": "572168959881",
+      "audit_status": "PASS",
+      "fact_count": 9,
+      "quality_status_counts": {
+        "eligible": 9
+      },
+      "task_selection": {
+        "title": {
+          "identity_fact_count": 4,
+          "selected_fact_count": 3
+        },
+        "selling_points": {
+          "identity_fact_count": 4,
+          "selected_fact_count": 3
+        },
+        "short_description": {
+          "identity_fact_count": 4,
+          "selected_fact_count": 3
+        }
+      }
+    },
+    {
+      "product_id": "572484530247",
+      "audit_status": "PASS",
+      "fact_count": 9,
+      "quality_status_counts": {
+        "eligible": 9
+      },
+      "task_selection": {
+        "title": {
+          "identity_fact_count": 4,
+          "selected_fact_count": 3
+        },
+        "selling_points": {
+          "identity_fact_count": 4,
+          "selected_fact_count": 3
+        },
+        "short_description": {
+          "identity_fact_count": 4,
+          "selected_fact_count": 3
+        }
+      }
+    },
+    {
+      "product_id": "572645689177",
+      "audit_status": "PASS",
+      "fact_count": 10,
+      "quality_status_counts": {
+        "eligible": 9,
+        "withhold_review": 1
+      },
+      "task_selection": {
+        "title": {
+          "identity_fact_count": 4,
+          "selected_fact_count": 3
+        },
+        "selling_points": {
+          "identity_fact_count": 4,
+          "selected_fact_count": 3
+        },
+        "short_description": {
+          "identity_fact_count": 4,
+          "selected_fact_count": 3
+        }
+      }
+    },
+    {
+      "product_id": "573914060697",
+      "audit_status": "PASS",
+      "fact_count": 11,
+      "quality_status_counts": {
+        "eligible": 10,
+        "withhold_review": 1
+      },
+      "task_selection": {
+        "title": {
+          "identity_fact_count": 4,
+          "selected_fact_count": 3
+        },
+        "selling_points": {
+          "identity_fact_count": 4,
+          "selected_fact_count": 3
+        },
+        "short_description": {
+          "identity_fact_count": 4,
+          "selected_fact_count": 3
+        }
+      }
+    },
+    {
+      "product_id": "574249081746",
+      "audit_status": "PASS",
+      "fact_count": 8,
+      "quality_status_counts": {
+        "eligible": 8
+      },
+      "task_selection": {
+        "title": {
+          "identity_fact_count": 3,
+          "selected_fact_count": 3
+        },
+        "selling_points": {
+          "identity_fact_count": 3,
+          "selected_fact_count": 3
+        },
+        "short_description": {
+          "identity_fact_count": 3,
+          "selected_fact_count": 3
+        }
+      }
+    },
+    {
+      "product_id": "574970160109",
+      "audit_status": "PASS",
+      "fact_count": 10,
+      "quality_status_counts": {
+        "eligible": 10
+      },
+      "task_selection": {
+        "title": {
+          "identity_fact_count": 4,
+          "selected_fact_count": 3
+        },
+        "selling_points": {
+          "identity_fact_count": 4,
+          "selected_fact_count": 3
+        },
+        "short_description": {
+          "identity_fact_count": 4,
+          "selected_fact_count": 3
+        }
+      }
+    },
+    {
+      "product_id": "576028049893",
+      "audit_status": "PASS",
+      "fact_count": 9,
+      "quality_status_counts": {
+        "eligible": 9
+      },
+      "task_selection": {
+        "title": {
+          "identity_fact_count": 4,
+          "selected_fact_count": 3
+        },
+        "selling_points": {
+          "identity_fact_count": 4,
+          "selected_fact_count": 3
+        },
+        "short_description": {
+          "identity_fact_count": 4,
+          "selected_fact_count": 3
+        }
+      }
+    },
+    {
+      "product_id": "576694559149",
+      "audit_status": "PASS",
+      "fact_count": 8,
+      "quality_status_counts": {
+        "eligible": 8
+      },
+      "task_selection": {
+        "title": {
+          "identity_fact_count": 4,
+          "selected_fact_count": 3
+        },
+        "selling_points": {
+          "identity_fact_count": 4,
+          "selected_fact_count": 3
+        },
+        "short_description": {
+          "identity_fact_count": 4,
+          "selected_fact_count": 3
+        }
+      }
+    },
+    {
+      "product_id": "576904378076",
+      "audit_status": "PASS",
+      "fact_count": 9,
+      "quality_status_counts": {
+        "eligible": 9
+      },
+      "task_selection": {
+        "title": {
+          "identity_fact_count": 4,
+          "selected_fact_count": 3
+        },
+        "selling_points": {
+          "identity_fact_count": 4,
+          "selected_fact_count": 3
+        },
+        "short_description": {
+          "identity_fact_count": 4,
+          "selected_fact_count": 3
+        }
+      }
+    },
+    {
+      "product_id": "579600375674",
+      "audit_status": "REVIEW",
+      "fact_count": 8,
+      "quality_status_counts": {
+        "eligible": 6,
+        "withhold_review": 2
+      },
+      "task_selection": {
+        "title": {
+          "identity_fact_count": 3,
+          "selected_fact_count": 3
+        },
+        "selling_points": {
+          "identity_fact_count": 3,
+          "selected_fact_count": 3
+        },
+        "short_description": {
+          "identity_fact_count": 3,
+          "selected_fact_count": 3
+        }
+      }
+    },
+    {
+      "product_id": "580298584089",
+      "audit_status": "CONFLICT",
+      "fact_count": 7,
+      "quality_status_counts": {
+        "blocked_conflict": 1,
+        "eligible": 6
+      },
+      "task_selection": {
+        "title": {
+          "identity_fact_count": 4,
+          "selected_fact_count": 2
+        },
+        "selling_points": {
+          "identity_fact_count": 4,
+          "selected_fact_count": 2
+        },
+        "short_description": {
+          "identity_fact_count": 4,
+          "selected_fact_count": 2
+        }
+      }
+    },
+    {
+      "product_id": "580333585585",
+      "audit_status": "PASS",
+      "fact_count": 8,
+      "quality_status_counts": {
+        "eligible": 8
+      },
+      "task_selection": {
+        "title": {
+          "identity_fact_count": 4,
+          "selected_fact_count": 3
+        },
+        "selling_points": {
+          "identity_fact_count": 4,
+          "selected_fact_count": 3
+        },
+        "short_description": {
+          "identity_fact_count": 4,
+          "selected_fact_count": 3
+        }
+      }
+    },
+    {
+      "product_id": "580390189481",
+      "audit_status": "PASS",
+      "fact_count": 8,
+      "quality_status_counts": {
+        "eligible": 8
+      },
+      "task_selection": {
+        "title": {
+          "identity_fact_count": 3,
+          "selected_fact_count": 3
+        },
+        "selling_points": {
+          "identity_fact_count": 3,
+          "selected_fact_count": 3
+        },
+        "short_description": {
+          "identity_fact_count": 3,
+          "selected_fact_count": 3
+        }
+      }
+    },
+    {
+      "product_id": "580397149507",
+      "audit_status": "PASS",
+      "fact_count": 6,
+      "quality_status_counts": {
+        "eligible": 6
+      },
+      "task_selection": {
+        "title": {
+          "identity_fact_count": 3,
+          "selected_fact_count": 3
+        },
+        "selling_points": {
+          "identity_fact_count": 3,
+          "selected_fact_count": 3
+        },
+        "short_description": {
+          "identity_fact_count": 3,
+          "selected_fact_count": 3
+        }
+      }
+    },
+    {
+      "product_id": "580709425243",
+      "audit_status": "PASS",
+      "fact_count": 12,
+      "quality_status_counts": {
+        "eligible": 12
+      },
+      "task_selection": {
+        "title": {
+          "identity_fact_count": 4,
+          "selected_fact_count": 3
+        },
+        "selling_points": {
+          "identity_fact_count": 4,
+          "selected_fact_count": 3
+        },
+        "short_description": {
+          "identity_fact_count": 4,
+          "selected_fact_count": 3
+        }
+      }
+    },
+    {
+      "product_id": "581300584985",
+      "audit_status": "PASS",
+      "fact_count": 9,
+      "quality_status_counts": {
+        "eligible": 9
+      },
+      "task_selection": {
+        "title": {
+          "identity_fact_count": 4,
+          "selected_fact_count": 3
+        },
+        "selling_points": {
+          "identity_fact_count": 4,
+          "selected_fact_count": 3
+        },
+        "short_description": {
+          "identity_fact_count": 4,
+          "selected_fact_count": 3
+        }
+      }
+    },
+    {
+      "product_id": "584308818142",
+      "audit_status": "PASS",
+      "fact_count": 10,
+      "quality_status_counts": {
+        "eligible": 10
+      },
+      "task_selection": {
+        "title": {
+          "identity_fact_count": 4,
+          "selected_fact_count": 3
+        },
+        "selling_points": {
+          "identity_fact_count": 4,
+          "selected_fact_count": 3
+        },
+        "short_description": {
+          "identity_fact_count": 4,
+          "selected_fact_count": 3
+        }
+      }
+    },
+    {
+      "product_id": "584648531319",
+      "audit_status": "PASS",
+      "fact_count": 9,
+      "quality_status_counts": {
+        "eligible": 9
+      },
+      "task_selection": {
+        "title": {
+          "identity_fact_count": 4,
+          "selected_fact_count": 3
+        },
+        "selling_points": {
+          "identity_fact_count": 4,
+          "selected_fact_count": 3
+        },
+        "short_description": {
+          "identity_fact_count": 4,
+          "selected_fact_count": 3
+        }
+      }
+    },
+    {
+      "product_id": "585183140226",
+      "audit_status": "PASS",
+      "fact_count": 8,
+      "quality_status_counts": {
+        "eligible": 8
+      },
+      "task_selection": {
+        "title": {
+          "identity_fact_count": 3,
+          "selected_fact_count": 3
+        },
+        "selling_points": {
+          "identity_fact_count": 3,
+          "selected_fact_count": 3
+        },
+        "short_description": {
+          "identity_fact_count": 3,
+          "selected_fact_count": 3
+        }
+      }
+    },
+    {
+      "product_id": "586203674883",
+      "audit_status": "REVIEW",
+      "fact_count": 6,
+      "quality_status_counts": {
+        "eligible": 4,
+        "withhold_review": 2
+      },
+      "task_selection": {
+        "title": {
+          "identity_fact_count": 4,
+          "selected_fact_count": 0
+        },
+        "selling_points": {
+          "identity_fact_count": 4,
+          "selected_fact_count": 0
+        },
+        "short_description": {
+          "identity_fact_count": 4,
+          "selected_fact_count": 0
+        }
+      }
+    },
+    {
+      "product_id": "587180176821",
+      "audit_status": "PASS",
+      "fact_count": 6,
+      "quality_status_counts": {
+        "eligible": 6
+      },
+      "task_selection": {
+        "title": {
+          "identity_fact_count": 4,
+          "selected_fact_count": 2
+        },
+        "selling_points": {
+          "identity_fact_count": 4,
+          "selected_fact_count": 2
+        },
+        "short_description": {
+          "identity_fact_count": 4,
+          "selected_fact_count": 2
+        }
+      }
+    },
+    {
+      "product_id": "587823728552",
+      "audit_status": "CONFLICT",
+      "fact_count": 6,
+      "quality_status_counts": {
+        "blocked_conflict": 6
+      },
+      "task_selection": {
+        "title": {
+          "identity_fact_count": 0,
+          "selected_fact_count": 0
+        },
+        "selling_points": {
+          "identity_fact_count": 0,
+          "selected_fact_count": 0
+        },
+        "short_description": {
+          "identity_fact_count": 0,
+          "selected_fact_count": 0
+        }
+      }
+    },
+    {
+      "product_id": "590013076786",
+      "audit_status": "PASS",
+      "fact_count": 5,
+      "quality_status_counts": {
+        "eligible": 5
+      },
+      "task_selection": {
+        "title": {
+          "identity_fact_count": 2,
+          "selected_fact_count": 3
+        },
+        "selling_points": {
+          "identity_fact_count": 2,
+          "selected_fact_count": 3
+        },
+        "short_description": {
+          "identity_fact_count": 2,
+          "selected_fact_count": 3
+        }
+      }
+    },
+    {
+      "product_id": "590454993449",
+      "audit_status": "REVIEW",
+      "fact_count": 11,
+      "quality_status_counts": {
+        "eligible": 9,
+        "withhold_review": 2
+      },
+      "task_selection": {
+        "title": {
+          "identity_fact_count": 4,
+          "selected_fact_count": 3
+        },
+        "selling_points": {
+          "identity_fact_count": 4,
+          "selected_fact_count": 3
+        },
+        "short_description": {
+          "identity_fact_count": 4,
+          "selected_fact_count": 3
+        }
+      }
+    },
+    {
+      "product_id": "591205504897",
+      "audit_status": "PASS",
+      "fact_count": 7,
+      "quality_status_counts": {
+        "eligible": 7
+      },
+      "task_selection": {
+        "title": {
+          "identity_fact_count": 3,
+          "selected_fact_count": 3
+        },
+        "selling_points": {
+          "identity_fact_count": 3,
+          "selected_fact_count": 3
+        },
+        "short_description": {
+          "identity_fact_count": 3,
+          "selected_fact_count": 3
+        }
+      }
+    },
+    {
+      "product_id": "591829516020",
+      "audit_status": "PASS",
+      "fact_count": 9,
+      "quality_status_counts": {
+        "eligible": 9
+      },
+      "task_selection": {
+        "title": {
+          "identity_fact_count": 4,
+          "selected_fact_count": 3
+        },
+        "selling_points": {
+          "identity_fact_count": 4,
+          "selected_fact_count": 3
+        },
+        "short_description": {
+          "identity_fact_count": 4,
+          "selected_fact_count": 3
+        }
+      }
+    },
+    {
+      "product_id": "593174187042",
+      "audit_status": "PASS",
+      "fact_count": 9,
+      "quality_status_counts": {
+        "eligible": 9
+      },
+      "task_selection": {
+        "title": {
+          "identity_fact_count": 4,
+          "selected_fact_count": 3
+        },
+        "selling_points": {
+          "identity_fact_count": 4,
+          "selected_fact_count": 3
+        },
+        "short_description": {
+          "identity_fact_count": 4,
+          "selected_fact_count": 3
+        }
+      }
+    },
+    {
+      "product_id": "594070208995",
+      "audit_status": "PASS",
+      "fact_count": 8,
+      "quality_status_counts": {
+        "eligible": 8
+      },
+      "task_selection": {
+        "title": {
+          "identity_fact_count": 4,
+          "selected_fact_count": 3
+        },
+        "selling_points": {
+          "identity_fact_count": 4,
+          "selected_fact_count": 3
+        },
+        "short_description": {
+          "identity_fact_count": 4,
+          "selected_fact_count": 3
+        }
+      }
+    },
+    {
+      "product_id": "594155212844",
+      "audit_status": "PASS",
+      "fact_count": 5,
+      "quality_status_counts": {
+        "eligible": 5
+      },
+      "task_selection": {
+        "title": {
+          "identity_fact_count": 3,
+          "selected_fact_count": 2
+        },
+        "selling_points": {
+          "identity_fact_count": 3,
+          "selected_fact_count": 2
+        },
+        "short_description": {
+          "identity_fact_count": 3,
+          "selected_fact_count": 2
+        }
+      }
+    },
+    {
+      "product_id": "594163110869",
+      "audit_status": "PASS",
+      "fact_count": 9,
+      "quality_status_counts": {
+        "eligible": 9
+      },
+      "task_selection": {
+        "title": {
+          "identity_fact_count": 4,
+          "selected_fact_count": 3
+        },
+        "selling_points": {
+          "identity_fact_count": 4,
+          "selected_fact_count": 3
+        },
+        "short_description": {
+          "identity_fact_count": 4,
+          "selected_fact_count": 3
+        }
+      }
+    },
+    {
+      "product_id": "594811177137",
+      "audit_status": "PASS",
+      "fact_count": 7,
+      "quality_status_counts": {
+        "eligible": 7
+      },
+      "task_selection": {
+        "title": {
+          "identity_fact_count": 4,
+          "selected_fact_count": 3
+        },
+        "selling_points": {
+          "identity_fact_count": 4,
+          "selected_fact_count": 3
+        },
+        "short_description": {
+          "identity_fact_count": 4,
+          "selected_fact_count": 3
+        }
+      }
+    },
+    {
+      "product_id": "594830440707",
+      "audit_status": "PASS",
+      "fact_count": 9,
+      "quality_status_counts": {
+        "eligible": 9
+      },
+      "task_selection": {
+        "title": {
+          "identity_fact_count": 4,
+          "selected_fact_count": 3
+        },
+        "selling_points": {
+          "identity_fact_count": 4,
+          "selected_fact_count": 3
+        },
+        "short_description": {
+          "identity_fact_count": 4,
+          "selected_fact_count": 3
+        }
+      }
+    },
+    {
+      "product_id": "595059390848",
+      "audit_status": "PASS",
+      "fact_count": 8,
+      "quality_status_counts": {
+        "eligible": 8
+      },
+      "task_selection": {
+        "title": {
+          "identity_fact_count": 4,
+          "selected_fact_count": 3
+        },
+        "selling_points": {
+          "identity_fact_count": 4,
+          "selected_fact_count": 3
+        },
+        "short_description": {
+          "identity_fact_count": 4,
+          "selected_fact_count": 3
+        }
+      }
+    },
+    {
+      "product_id": "596561935088",
+      "audit_status": "PASS",
+      "fact_count": 6,
+      "quality_status_counts": {
+        "eligible": 6
+      },
+      "task_selection": {
+        "title": {
+          "identity_fact_count": 3,
+          "selected_fact_count": 3
+        },
+        "selling_points": {
+          "identity_fact_count": 3,
+          "selected_fact_count": 3
+        },
+        "short_description": {
+          "identity_fact_count": 3,
+          "selected_fact_count": 3
+        }
+      }
+    },
+    {
+      "product_id": "596692429930",
+      "audit_status": "PASS",
+      "fact_count": 8,
+      "quality_status_counts": {
+        "eligible": 8
+      },
+      "task_selection": {
+        "title": {
+          "identity_fact_count": 3,
+          "selected_fact_count": 3
+        },
+        "selling_points": {
+          "identity_fact_count": 3,
+          "selected_fact_count": 3
+        },
+        "short_description": {
+          "identity_fact_count": 3,
+          "selected_fact_count": 3
+        }
+      }
+    },
+    {
+      "product_id": "597102621828",
+      "audit_status": "REVIEW",
+      "fact_count": 9,
+      "quality_status_counts": {
+        "eligible": 7,
+        "withhold_review": 2
+      },
+      "task_selection": {
+        "title": {
+          "identity_fact_count": 4,
+          "selected_fact_count": 3
+        },
+        "selling_points": {
+          "identity_fact_count": 4,
+          "selected_fact_count": 3
+        },
+        "short_description": {
+          "identity_fact_count": 4,
+          "selected_fact_count": 3
+        }
+      }
+    },
+    {
+      "product_id": "597205994580",
+      "audit_status": "PASS",
+      "fact_count": 10,
+      "quality_status_counts": {
+        "eligible": 9,
+        "withhold_review": 1
+      },
+      "task_selection": {
+        "title": {
+          "identity_fact_count": 4,
+          "selected_fact_count": 3
+        },
+        "selling_points": {
+          "identity_fact_count": 4,
+          "selected_fact_count": 3
+        },
+        "short_description": {
+          "identity_fact_count": 4,
+          "selected_fact_count": 3
+        }
+      }
+    },
+    {
+      "product_id": "597328189786",
+      "audit_status": "REVIEW",
+      "fact_count": 10,
+      "quality_status_counts": {
+        "eligible": 9,
+        "withhold_review": 1
+      },
+      "task_selection": {
+        "title": {
+          "identity_fact_count": 4,
+          "selected_fact_count": 3
+        },
+        "selling_points": {
+          "identity_fact_count": 4,
+          "selected_fact_count": 3
+        },
+        "short_description": {
+          "identity_fact_count": 4,
+          "selected_fact_count": 3
+        }
+      }
+    },
+    {
+      "product_id": "597352950256",
+      "audit_status": "PASS",
+      "fact_count": 6,
+      "quality_status_counts": {
+        "eligible": 6
+      },
+      "task_selection": {
+        "title": {
+          "identity_fact_count": 3,
+          "selected_fact_count": 3
+        },
+        "selling_points": {
+          "identity_fact_count": 3,
+          "selected_fact_count": 3
+        },
+        "short_description": {
+          "identity_fact_count": 3,
+          "selected_fact_count": 3
+        }
+      }
+    },
+    {
+      "product_id": "597667566007",
+      "audit_status": "PASS",
+      "fact_count": 5,
+      "quality_status_counts": {
+        "eligible": 5
+      },
+      "task_selection": {
+        "title": {
+          "identity_fact_count": 3,
+          "selected_fact_count": 2
+        },
+        "selling_points": {
+          "identity_fact_count": 3,
+          "selected_fact_count": 2
+        },
+        "short_description": {
+          "identity_fact_count": 3,
+          "selected_fact_count": 2
+        }
+      }
+    },
+    {
+      "product_id": "598779879631",
+      "audit_status": "PASS",
+      "fact_count": 8,
+      "quality_status_counts": {
+        "eligible": 8
+      },
+      "task_selection": {
+        "title": {
+          "identity_fact_count": 3,
+          "selected_fact_count": 3
+        },
+        "selling_points": {
+          "identity_fact_count": 3,
+          "selected_fact_count": 3
+        },
+        "short_description": {
+          "identity_fact_count": 3,
+          "selected_fact_count": 3
+        }
+      }
+    },
+    {
+      "product_id": "599057480741",
+      "audit_status": "PASS",
+      "fact_count": 8,
+      "quality_status_counts": {
+        "eligible": 8
+      },
+      "task_selection": {
+        "title": {
+          "identity_fact_count": 4,
+          "selected_fact_count": 3
+        },
+        "selling_points": {
+          "identity_fact_count": 4,
+          "selected_fact_count": 3
+        },
+        "short_description": {
+          "identity_fact_count": 4,
+          "selected_fact_count": 3
+        }
+      }
+    },
+    {
+      "product_id": "599816096782",
+      "audit_status": "PASS",
+      "fact_count": 9,
+      "quality_status_counts": {
+        "eligible": 9
+      },
+      "task_selection": {
+        "title": {
+          "identity_fact_count": 4,
+          "selected_fact_count": 3
+        },
+        "selling_points": {
+          "identity_fact_count": 4,
+          "selected_fact_count": 3
+        },
+        "short_description": {
+          "identity_fact_count": 4,
+          "selected_fact_count": 3
+        }
+      }
+    },
+    {
+      "product_id": "599958487813",
+      "audit_status": "PASS",
+      "fact_count": 6,
+      "quality_status_counts": {
+        "eligible": 6
+      },
+      "task_selection": {
+        "title": {
+          "identity_fact_count": 4,
+          "selected_fact_count": 2
+        },
+        "selling_points": {
+          "identity_fact_count": 4,
+          "selected_fact_count": 2
+        },
+        "short_description": {
+          "identity_fact_count": 4,
+          "selected_fact_count": 2
+        }
+      }
+    },
+    {
+      "product_id": "600221038133",
+      "audit_status": "PASS",
+      "fact_count": 5,
+      "quality_status_counts": {
+        "eligible": 5
+      },
+      "task_selection": {
+        "title": {
+          "identity_fact_count": 2,
+          "selected_fact_count": 3
+        },
+        "selling_points": {
+          "identity_fact_count": 2,
+          "selected_fact_count": 3
+        },
+        "short_description": {
+          "identity_fact_count": 2,
+          "selected_fact_count": 3
+        }
+      }
+    },
+    {
+      "product_id": "600255465931",
+      "audit_status": "CONFLICT",
+      "fact_count": 10,
+      "quality_status_counts": {
+        "blocked_conflict": 1,
+        "eligible": 8,
+        "withhold_review": 1
+      },
+      "task_selection": {
+        "title": {
+          "identity_fact_count": 4,
+          "selected_fact_count": 3
+        },
+        "selling_points": {
+          "identity_fact_count": 4,
+          "selected_fact_count": 3
+        },
+        "short_description": {
+          "identity_fact_count": 4,
+          "selected_fact_count": 3
+        }
+      }
+    },
+    {
+      "product_id": "600307012365",
+      "audit_status": "PASS",
+      "fact_count": 5,
+      "quality_status_counts": {
+        "eligible": 4,
+        "withhold_review": 1
+      },
+      "task_selection": {
+        "title": {
+          "identity_fact_count": 3,
+          "selected_fact_count": 1
+        },
+        "selling_points": {
+          "identity_fact_count": 3,
+          "selected_fact_count": 1
+        },
+        "short_description": {
+          "identity_fact_count": 3,
+          "selected_fact_count": 1
+        }
+      }
+    },
+    {
+      "product_id": "600424925621",
+      "audit_status": "PASS",
+      "fact_count": 8,
+      "quality_status_counts": {
+        "eligible": 8
+      },
+      "task_selection": {
+        "title": {
+          "identity_fact_count": 4,
+          "selected_fact_count": 3
+        },
+        "selling_points": {
+          "identity_fact_count": 4,
+          "selected_fact_count": 3
+        },
+        "short_description": {
+          "identity_fact_count": 4,
+          "selected_fact_count": 3
+        }
+      }
+    },
+    {
+      "product_id": "600694488553",
+      "audit_status": "PASS",
+      "fact_count": 8,
+      "quality_status_counts": {
+        "eligible": 8
+      },
+      "task_selection": {
+        "title": {
+          "identity_fact_count": 4,
+          "selected_fact_count": 3
+        },
+        "selling_points": {
+          "identity_fact_count": 4,
+          "selected_fact_count": 3
+        },
+        "short_description": {
+          "identity_fact_count": 4,
+          "selected_fact_count": 3
+        }
+      }
+    },
+    {
+      "product_id": "600702277714",
+      "audit_status": "PASS",
+      "fact_count": 8,
+      "quality_status_counts": {
+        "eligible": 8
+      },
+      "task_selection": {
+        "title": {
+          "identity_fact_count": 4,
+          "selected_fact_count": 3
+        },
+        "selling_points": {
+          "identity_fact_count": 4,
+          "selected_fact_count": 3
+        },
+        "short_description": {
+          "identity_fact_count": 4,
+          "selected_fact_count": 3
+        }
+      }
+    },
+    {
+      "product_id": "600955779275",
+      "audit_status": "PASS",
+      "fact_count": 9,
+      "quality_status_counts": {
+        "eligible": 9
+      },
+      "task_selection": {
+        "title": {
+          "identity_fact_count": 4,
+          "selected_fact_count": 3
+        },
+        "selling_points": {
+          "identity_fact_count": 4,
+          "selected_fact_count": 3
+        },
+        "short_description": {
+          "identity_fact_count": 4,
+          "selected_fact_count": 3
+        }
+      }
+    },
+    {
+      "product_id": "601065850690",
+      "audit_status": "PASS",
+      "fact_count": 8,
+      "quality_status_counts": {
+        "eligible": 8
+      },
+      "task_selection": {
+        "title": {
+          "identity_fact_count": 4,
+          "selected_fact_count": 3
+        },
+        "selling_points": {
+          "identity_fact_count": 4,
+          "selected_fact_count": 3
+        },
+        "short_description": {
+          "identity_fact_count": 4,
+          "selected_fact_count": 3
+        }
+      }
+    },
+    {
+      "product_id": "601447163749",
+      "audit_status": "PASS",
+      "fact_count": 12,
+      "quality_status_counts": {
+        "eligible": 12
+      },
+      "task_selection": {
+        "title": {
+          "identity_fact_count": 4,
+          "selected_fact_count": 3
+        },
+        "selling_points": {
+          "identity_fact_count": 4,
+          "selected_fact_count": 3
+        },
+        "short_description": {
+          "identity_fact_count": 4,
+          "selected_fact_count": 3
+        }
+      }
+    },
+    {
+      "product_id": "601468709350",
+      "audit_status": "PASS",
+      "fact_count": 6,
+      "quality_status_counts": {
+        "eligible": 5,
+        "withhold_review": 1
+      },
+      "task_selection": {
+        "title": {
+          "identity_fact_count": 4,
+          "selected_fact_count": 1
+        },
+        "selling_points": {
+          "identity_fact_count": 4,
+          "selected_fact_count": 1
+        },
+        "short_description": {
+          "identity_fact_count": 4,
+          "selected_fact_count": 1
+        }
+      }
+    },
+    {
+      "product_id": "601768324618",
+      "audit_status": "PASS",
+      "fact_count": 11,
+      "quality_status_counts": {
+        "eligible": 10,
+        "withhold_review": 1
+      },
+      "task_selection": {
+        "title": {
+          "identity_fact_count": 4,
+          "selected_fact_count": 3
+        },
+        "selling_points": {
+          "identity_fact_count": 4,
+          "selected_fact_count": 3
+        },
+        "short_description": {
+          "identity_fact_count": 4,
+          "selected_fact_count": 3
+        }
+      }
+    },
+    {
+      "product_id": "601845417488",
+      "audit_status": "PASS",
+      "fact_count": 7,
+      "quality_status_counts": {
+        "eligible": 6,
+        "withhold_review": 1
+      },
+      "task_selection": {
+        "title": {
+          "identity_fact_count": 4,
+          "selected_fact_count": 2
+        },
+        "selling_points": {
+          "identity_fact_count": 4,
+          "selected_fact_count": 2
+        },
+        "short_description": {
+          "identity_fact_count": 4,
+          "selected_fact_count": 2
+        }
+      }
+    },
+    {
+      "product_id": "601943728885",
+      "audit_status": "CONFLICT",
+      "fact_count": 8,
+      "quality_status_counts": {
+        "blocked_conflict": 1,
+        "eligible": 7
+      },
+      "task_selection": {
+        "title": {
+          "identity_fact_count": 4,
+          "selected_fact_count": 3
+        },
+        "selling_points": {
+          "identity_fact_count": 4,
+          "selected_fact_count": 3
+        },
+        "short_description": {
+          "identity_fact_count": 4,
+          "selected_fact_count": 3
+        }
+      }
+    },
+    {
+      "product_id": "602178087570",
+      "audit_status": "PASS",
+      "fact_count": 10,
+      "quality_status_counts": {
+        "eligible": 10
+      },
+      "task_selection": {
+        "title": {
+          "identity_fact_count": 4,
+          "selected_fact_count": 3
+        },
+        "selling_points": {
+          "identity_fact_count": 4,
+          "selected_fact_count": 3
+        },
+        "short_description": {
+          "identity_fact_count": 4,
+          "selected_fact_count": 3
+        }
+      }
+    },
+    {
+      "product_id": "602598244496",
+      "audit_status": "PASS",
+      "fact_count": 8,
+      "quality_status_counts": {
+        "eligible": 8
+      },
+      "task_selection": {
+        "title": {
+          "identity_fact_count": 3,
+          "selected_fact_count": 3
+        },
+        "selling_points": {
+          "identity_fact_count": 3,
+          "selected_fact_count": 3
+        },
+        "short_description": {
+          "identity_fact_count": 3,
+          "selected_fact_count": 3
+        }
+      }
+    },
+    {
+      "product_id": "602673260976",
+      "audit_status": "PASS",
+      "fact_count": 7,
+      "quality_status_counts": {
+        "eligible": 7
+      },
+      "task_selection": {
+        "title": {
+          "identity_fact_count": 4,
+          "selected_fact_count": 3
+        },
+        "selling_points": {
+          "identity_fact_count": 4,
+          "selected_fact_count": 3
+        },
+        "short_description": {
+          "identity_fact_count": 4,
+          "selected_fact_count": 3
+        }
+      }
+    },
+    {
+      "product_id": "602865649489",
+      "audit_status": "PASS",
+      "fact_count": 9,
+      "quality_status_counts": {
+        "eligible": 8,
+        "withhold_review": 1
+      },
+      "task_selection": {
+        "title": {
+          "identity_fact_count": 4,
+          "selected_fact_count": 3
+        },
+        "selling_points": {
+          "identity_fact_count": 4,
+          "selected_fact_count": 3
+        },
+        "short_description": {
+          "identity_fact_count": 4,
+          "selected_fact_count": 3
+        }
+      }
+    },
+    {
+      "product_id": "604304655707",
+      "audit_status": "PASS",
+      "fact_count": 9,
+      "quality_status_counts": {
+        "eligible": 9
+      },
+      "task_selection": {
+        "title": {
+          "identity_fact_count": 4,
+          "selected_fact_count": 3
+        },
+        "selling_points": {
+          "identity_fact_count": 4,
+          "selected_fact_count": 3
+        },
+        "short_description": {
+          "identity_fact_count": 4,
+          "selected_fact_count": 3
+        }
+      }
+    },
+    {
+      "product_id": "604712328413",
+      "audit_status": "PASS",
+      "fact_count": 8,
+      "quality_status_counts": {
+        "eligible": 8
+      },
+      "task_selection": {
+        "title": {
+          "identity_fact_count": 4,
+          "selected_fact_count": 3
+        },
+        "selling_points": {
+          "identity_fact_count": 4,
+          "selected_fact_count": 3
+        },
+        "short_description": {
+          "identity_fact_count": 4,
+          "selected_fact_count": 3
+        }
+      }
+    },
+    {
+      "product_id": "604970248763",
+      "audit_status": "PASS",
+      "fact_count": 9,
+      "quality_status_counts": {
+        "eligible": 9
+      },
+      "task_selection": {
+        "title": {
+          "identity_fact_count": 4,
+          "selected_fact_count": 3
+        },
+        "selling_points": {
+          "identity_fact_count": 4,
+          "selected_fact_count": 3
+        },
+        "short_description": {
+          "identity_fact_count": 4,
+          "selected_fact_count": 3
+        }
+      }
+    },
+    {
+      "product_id": "605201240573",
+      "audit_status": "PASS",
+      "fact_count": 6,
+      "quality_status_counts": {
+        "eligible": 6
+      },
+      "task_selection": {
+        "title": {
+          "identity_fact_count": 3,
+          "selected_fact_count": 3
+        },
+        "selling_points": {
+          "identity_fact_count": 3,
+          "selected_fact_count": 3
+        },
+        "short_description": {
+          "identity_fact_count": 3,
+          "selected_fact_count": 3
+        }
+      }
+    },
+    {
+      "product_id": "605255125826",
+      "audit_status": "PASS",
+      "fact_count": 6,
+      "quality_status_counts": {
+        "eligible": 6
+      },
+      "task_selection": {
+        "title": {
+          "identity_fact_count": 3,
+          "selected_fact_count": 3
+        },
+        "selling_points": {
+          "identity_fact_count": 3,
+          "selected_fact_count": 3
+        },
+        "short_description": {
+          "identity_fact_count": 3,
+          "selected_fact_count": 3
+        }
+      }
+    },
+    {
+      "product_id": "605543095877",
+      "audit_status": "PASS",
+      "fact_count": 8,
+      "quality_status_counts": {
+        "eligible": 8
+      },
+      "task_selection": {
+        "title": {
+          "identity_fact_count": 3,
+          "selected_fact_count": 3
+        },
+        "selling_points": {
+          "identity_fact_count": 3,
+          "selected_fact_count": 3
+        },
+        "short_description": {
+          "identity_fact_count": 3,
+          "selected_fact_count": 3
+        }
+      }
+    },
+    {
+      "product_id": "606532556056",
+      "audit_status": "PASS",
+      "fact_count": 7,
+      "quality_status_counts": {
+        "eligible": 7
+      },
+      "task_selection": {
+        "title": {
+          "identity_fact_count": 4,
+          "selected_fact_count": 3
+        },
+        "selling_points": {
+          "identity_fact_count": 4,
+          "selected_fact_count": 3
+        },
+        "short_description": {
+          "identity_fact_count": 4,
+          "selected_fact_count": 3
+        }
+      }
+    },
+    {
+      "product_id": "606784877914",
+      "audit_status": "PASS",
+      "fact_count": 9,
+      "quality_status_counts": {
+        "eligible": 9
+      },
+      "task_selection": {
+        "title": {
+          "identity_fact_count": 4,
+          "selected_fact_count": 3
+        },
+        "selling_points": {
+          "identity_fact_count": 4,
+          "selected_fact_count": 3
+        },
+        "short_description": {
+          "identity_fact_count": 4,
+          "selected_fact_count": 3
+        }
+      }
+    },
+    {
+      "product_id": "606828457125",
+      "audit_status": "REVIEW",
+      "fact_count": 9,
+      "quality_status_counts": {
+        "eligible": 7,
+        "withhold_review": 2
+      },
+      "task_selection": {
+        "title": {
+          "identity_fact_count": 3,
+          "selected_fact_count": 3
+        },
+        "selling_points": {
+          "identity_fact_count": 3,
+          "selected_fact_count": 3
+        },
+        "short_description": {
+          "identity_fact_count": 3,
+          "selected_fact_count": 3
+        }
+      }
+    },
+    {
+      "product_id": "607251527159",
+      "audit_status": "PASS",
+      "fact_count": 9,
+      "quality_status_counts": {
+        "eligible": 9
+      },
+      "task_selection": {
+        "title": {
+          "identity_fact_count": 4,
+          "selected_fact_count": 3
+        },
+        "selling_points": {
+          "identity_fact_count": 4,
+          "selected_fact_count": 3
+        },
+        "short_description": {
+          "identity_fact_count": 4,
+          "selected_fact_count": 3
+        }
+      }
+    },
+    {
+      "product_id": "608257923053",
+      "audit_status": "PASS",
+      "fact_count": 8,
+      "quality_status_counts": {
+        "eligible": 8
+      },
+      "task_selection": {
+        "title": {
+          "identity_fact_count": 4,
+          "selected_fact_count": 3
+        },
+        "selling_points": {
+          "identity_fact_count": 4,
+          "selected_fact_count": 3
+        },
+        "short_description": {
+          "identity_fact_count": 4,
+          "selected_fact_count": 3
+        }
+      }
+    },
+    {
+      "product_id": "608426906212",
+      "audit_status": "PASS",
+      "fact_count": 12,
+      "quality_status_counts": {
+        "eligible": 11,
+        "withhold_review": 1
+      },
+      "task_selection": {
+        "title": {
+          "identity_fact_count": 4,
+          "selected_fact_count": 3
+        },
+        "selling_points": {
+          "identity_fact_count": 4,
+          "selected_fact_count": 3
+        },
+        "short_description": {
+          "identity_fact_count": 4,
+          "selected_fact_count": 3
+        }
+      }
+    },
+    {
+      "product_id": "608451231848",
+      "audit_status": "PASS",
+      "fact_count": 6,
+      "quality_status_counts": {
+        "eligible": 6
+      },
+      "task_selection": {
+        "title": {
+          "identity_fact_count": 4,
+          "selected_fact_count": 2
+        },
+        "selling_points": {
+          "identity_fact_count": 4,
+          "selected_fact_count": 2
+        },
+        "short_description": {
+          "identity_fact_count": 4,
+          "selected_fact_count": 2
+        }
+      }
+    },
+    {
+      "product_id": "608705236488",
+      "audit_status": "PASS",
+      "fact_count": 7,
+      "quality_status_counts": {
+        "eligible": 7
+      },
+      "task_selection": {
+        "title": {
+          "identity_fact_count": 4,
+          "selected_fact_count": 3
+        },
+        "selling_points": {
+          "identity_fact_count": 4,
+          "selected_fact_count": 3
+        },
+        "short_description": {
+          "identity_fact_count": 4,
+          "selected_fact_count": 3
+        }
+      }
+    },
+    {
+      "product_id": "608759790760",
+      "audit_status": "PASS",
+      "fact_count": 8,
+      "quality_status_counts": {
+        "eligible": 8
+      },
+      "task_selection": {
+        "title": {
+          "identity_fact_count": 4,
+          "selected_fact_count": 3
+        },
+        "selling_points": {
+          "identity_fact_count": 4,
+          "selected_fact_count": 3
+        },
+        "short_description": {
+          "identity_fact_count": 4,
+          "selected_fact_count": 3
+        }
+      }
+    },
+    {
+      "product_id": "609321986854",
+      "audit_status": "PASS",
+      "fact_count": 9,
+      "quality_status_counts": {
+        "eligible": 9
+      },
+      "task_selection": {
+        "title": {
+          "identity_fact_count": 4,
+          "selected_fact_count": 3
+        },
+        "selling_points": {
+          "identity_fact_count": 4,
+          "selected_fact_count": 3
+        },
+        "short_description": {
+          "identity_fact_count": 4,
+          "selected_fact_count": 3
+        }
+      }
+    },
+    {
+      "product_id": "609338175816",
+      "audit_status": "PASS",
+      "fact_count": 8,
+      "quality_status_counts": {
+        "eligible": 8
+      },
+      "task_selection": {
+        "title": {
+          "identity_fact_count": 4,
+          "selected_fact_count": 3
+        },
+        "selling_points": {
+          "identity_fact_count": 4,
+          "selected_fact_count": 3
+        },
+        "short_description": {
+          "identity_fact_count": 4,
+          "selected_fact_count": 3
+        }
+      }
+    },
+    {
+      "product_id": "609435434783",
+      "audit_status": "PASS",
+      "fact_count": 6,
+      "quality_status_counts": {
+        "eligible": 5,
+        "withhold_review": 1
+      },
+      "task_selection": {
+        "title": {
+          "identity_fact_count": 3,
+          "selected_fact_count": 2
+        },
+        "selling_points": {
+          "identity_fact_count": 3,
+          "selected_fact_count": 2
+        },
+        "short_description": {
+          "identity_fact_count": 3,
+          "selected_fact_count": 2
+        }
+      }
+    },
+    {
+      "product_id": "609624141756",
+      "audit_status": "PASS",
+      "fact_count": 3,
+      "quality_status_counts": {
+        "eligible": 3
+      },
+      "task_selection": {
+        "title": {
+          "identity_fact_count": 2,
+          "selected_fact_count": 1
+        },
+        "selling_points": {
+          "identity_fact_count": 2,
+          "selected_fact_count": 1
+        },
+        "short_description": {
+          "identity_fact_count": 2,
+          "selected_fact_count": 1
+        }
+      }
+    },
+    {
+      "product_id": "609687285042",
+      "audit_status": "PASS",
+      "fact_count": 7,
+      "quality_status_counts": {
+        "eligible": 7
+      },
+      "task_selection": {
+        "title": {
+          "identity_fact_count": 2,
+          "selected_fact_count": 3
+        },
+        "selling_points": {
+          "identity_fact_count": 2,
+          "selected_fact_count": 3
+        },
+        "short_description": {
+          "identity_fact_count": 2,
+          "selected_fact_count": 3
+        }
+      }
+    },
+    {
+      "product_id": "609873477504",
+      "audit_status": "PASS",
+      "fact_count": 9,
+      "quality_status_counts": {
+        "eligible": 9
+      },
+      "task_selection": {
+        "title": {
+          "identity_fact_count": 4,
+          "selected_fact_count": 3
+        },
+        "selling_points": {
+          "identity_fact_count": 4,
+          "selected_fact_count": 3
+        },
+        "short_description": {
+          "identity_fact_count": 4,
+          "selected_fact_count": 3
+        }
+      }
+    },
+    {
+      "product_id": "609932288958",
+      "audit_status": "PASS",
+      "fact_count": 7,
+      "quality_status_counts": {
+        "eligible": 7
+      },
+      "task_selection": {
+        "title": {
+          "identity_fact_count": 4,
+          "selected_fact_count": 3
+        },
+        "selling_points": {
+          "identity_fact_count": 4,
+          "selected_fact_count": 3
+        },
+        "short_description": {
+          "identity_fact_count": 4,
+          "selected_fact_count": 3
+        }
+      }
+    },
+    {
+      "product_id": "609973546605",
+      "audit_status": "REVIEW",
+      "fact_count": 11,
+      "quality_status_counts": {
+        "eligible": 8,
+        "withhold_review": 3
+      },
+      "task_selection": {
+        "title": {
+          "identity_fact_count": 2,
+          "selected_fact_count": 3
+        },
+        "selling_points": {
+          "identity_fact_count": 2,
+          "selected_fact_count": 3
+        },
+        "short_description": {
+          "identity_fact_count": 2,
+          "selected_fact_count": 3
+        }
+      }
+    },
+    {
+      "product_id": "610270058585",
+      "audit_status": "PASS",
+      "fact_count": 6,
+      "quality_status_counts": {
+        "eligible": 5,
+        "withhold_review": 1
+      },
+      "task_selection": {
+        "title": {
+          "identity_fact_count": 4,
+          "selected_fact_count": 1
+        },
+        "selling_points": {
+          "identity_fact_count": 4,
+          "selected_fact_count": 1
+        },
+        "short_description": {
+          "identity_fact_count": 4,
+          "selected_fact_count": 1
+        }
+      }
+    },
+    {
+      "product_id": "610408134586",
+      "audit_status": "PASS",
+      "fact_count": 9,
+      "quality_status_counts": {
+        "eligible": 9
+      },
+      "task_selection": {
+        "title": {
+          "identity_fact_count": 4,
+          "selected_fact_count": 3
+        },
+        "selling_points": {
+          "identity_fact_count": 4,
+          "selected_fact_count": 3
+        },
+        "short_description": {
+          "identity_fact_count": 4,
+          "selected_fact_count": 3
+        }
+      }
+    },
+    {
+      "product_id": "610672244355",
+      "audit_status": "PASS",
+      "fact_count": 9,
+      "quality_status_counts": {
+        "eligible": 9
+      },
+      "task_selection": {
+        "title": {
+          "identity_fact_count": 4,
+          "selected_fact_count": 3
+        },
+        "selling_points": {
+          "identity_fact_count": 4,
+          "selected_fact_count": 3
+        },
+        "short_description": {
+          "identity_fact_count": 4,
+          "selected_fact_count": 3
+        }
+      }
+    },
+    {
+      "product_id": "610727155009",
+      "audit_status": "PASS",
+      "fact_count": 5,
+      "quality_status_counts": {
+        "eligible": 5
+      },
+      "task_selection": {
+        "title": {
+          "identity_fact_count": 4,
+          "selected_fact_count": 1
+        },
+        "selling_points": {
+          "identity_fact_count": 4,
+          "selected_fact_count": 1
+        },
+        "short_description": {
+          "identity_fact_count": 4,
+          "selected_fact_count": 1
+        }
+      }
+    },
+    {
+      "product_id": "610810381846",
+      "audit_status": "PASS",
+      "fact_count": 6,
+      "quality_status_counts": {
+        "eligible": 6
+      },
+      "task_selection": {
+        "title": {
+          "identity_fact_count": 3,
+          "selected_fact_count": 3
+        },
+        "selling_points": {
+          "identity_fact_count": 3,
+          "selected_fact_count": 3
+        },
+        "short_description": {
+          "identity_fact_count": 3,
+          "selected_fact_count": 3
+        }
+      }
+    },
+    {
+      "product_id": "610888219389",
+      "audit_status": "CONFLICT",
+      "fact_count": 10,
+      "quality_status_counts": {
+        "blocked_conflict": 10
+      },
+      "task_selection": {
+        "title": {
+          "identity_fact_count": 0,
+          "selected_fact_count": 0
+        },
+        "selling_points": {
+          "identity_fact_count": 0,
+          "selected_fact_count": 0
+        },
+        "short_description": {
+          "identity_fact_count": 0,
+          "selected_fact_count": 0
+        }
+      }
+    },
+    {
+      "product_id": "611019353720",
+      "audit_status": "PASS",
+      "fact_count": 11,
+      "quality_status_counts": {
+        "eligible": 11
+      },
+      "task_selection": {
+        "title": {
+          "identity_fact_count": 4,
+          "selected_fact_count": 3
+        },
+        "selling_points": {
+          "identity_fact_count": 4,
+          "selected_fact_count": 3
+        },
+        "short_description": {
+          "identity_fact_count": 4,
+          "selected_fact_count": 3
+        }
+      }
+    },
+    {
+      "product_id": "611024203808",
+      "audit_status": "PASS",
+      "fact_count": 10,
+      "quality_status_counts": {
+        "eligible": 10
+      },
+      "task_selection": {
+        "title": {
+          "identity_fact_count": 4,
+          "selected_fact_count": 3
+        },
+        "selling_points": {
+          "identity_fact_count": 4,
+          "selected_fact_count": 3
+        },
+        "short_description": {
+          "identity_fact_count": 4,
+          "selected_fact_count": 3
+        }
+      }
+    },
+    {
+      "product_id": "611717619144",
+      "audit_status": "PASS",
+      "fact_count": 6,
+      "quality_status_counts": {
+        "eligible": 6
+      },
+      "task_selection": {
+        "title": {
+          "identity_fact_count": 3,
+          "selected_fact_count": 3
+        },
+        "selling_points": {
+          "identity_fact_count": 3,
+          "selected_fact_count": 3
+        },
+        "short_description": {
+          "identity_fact_count": 3,
+          "selected_fact_count": 3
+        }
+      }
+    },
+    {
+      "product_id": "611726909441",
+      "audit_status": "PASS",
+      "fact_count": 9,
+      "quality_status_counts": {
+        "eligible": 9
+      },
+      "task_selection": {
+        "title": {
+          "identity_fact_count": 4,
+          "selected_fact_count": 3
+        },
+        "selling_points": {
+          "identity_fact_count": 4,
+          "selected_fact_count": 3
+        },
+        "short_description": {
+          "identity_fact_count": 4,
+          "selected_fact_count": 3
+        }
+      }
+    },
+    {
+      "product_id": "612182471234",
+      "audit_status": "PASS",
+      "fact_count": 6,
+      "quality_status_counts": {
+        "eligible": 5,
+        "withhold_review": 1
+      },
+      "task_selection": {
+        "title": {
+          "identity_fact_count": 4,
+          "selected_fact_count": 1
+        },
+        "selling_points": {
+          "identity_fact_count": 4,
+          "selected_fact_count": 1
+        },
+        "short_description": {
+          "identity_fact_count": 4,
+          "selected_fact_count": 1
+        }
+      }
+    },
+    {
+      "product_id": "612390432201",
+      "audit_status": "PASS",
+      "fact_count": 9,
+      "quality_status_counts": {
+        "eligible": 9
+      },
+      "task_selection": {
+        "title": {
+          "identity_fact_count": 4,
+          "selected_fact_count": 3
+        },
+        "selling_points": {
+          "identity_fact_count": 4,
+          "selected_fact_count": 3
+        },
+        "short_description": {
+          "identity_fact_count": 4,
+          "selected_fact_count": 3
+        }
+      }
+    },
+    {
+      "product_id": "612638540610",
+      "audit_status": "PASS",
+      "fact_count": 8,
+      "quality_status_counts": {
+        "eligible": 8
+      },
+      "task_selection": {
+        "title": {
+          "identity_fact_count": 4,
+          "selected_fact_count": 3
+        },
+        "selling_points": {
+          "identity_fact_count": 4,
+          "selected_fact_count": 3
+        },
+        "short_description": {
+          "identity_fact_count": 4,
+          "selected_fact_count": 3
+        }
+      }
+    },
+    {
+      "product_id": "613342790955",
+      "audit_status": "PASS",
+      "fact_count": 10,
+      "quality_status_counts": {
+        "eligible": 10
+      },
+      "task_selection": {
+        "title": {
+          "identity_fact_count": 4,
+          "selected_fact_count": 3
+        },
+        "selling_points": {
+          "identity_fact_count": 4,
+          "selected_fact_count": 3
+        },
+        "short_description": {
+          "identity_fact_count": 4,
+          "selected_fact_count": 3
+        }
+      }
+    },
+    {
+      "product_id": "613623155562",
+      "audit_status": "PASS",
+      "fact_count": 10,
+      "quality_status_counts": {
+        "eligible": 10
+      },
+      "task_selection": {
+        "title": {
+          "identity_fact_count": 4,
+          "selected_fact_count": 3
+        },
+        "selling_points": {
+          "identity_fact_count": 4,
+          "selected_fact_count": 3
+        },
+        "short_description": {
+          "identity_fact_count": 4,
+          "selected_fact_count": 3
+        }
+      }
+    },
+    {
+      "product_id": "613838754353",
+      "audit_status": "PASS",
+      "fact_count": 9,
+      "quality_status_counts": {
+        "eligible": 9
+      },
+      "task_selection": {
+        "title": {
+          "identity_fact_count": 4,
+          "selected_fact_count": 3
+        },
+        "selling_points": {
+          "identity_fact_count": 4,
+          "selected_fact_count": 3
+        },
+        "short_description": {
+          "identity_fact_count": 4,
+          "selected_fact_count": 3
+        }
+      }
+    },
+    {
+      "product_id": "613971147597",
+      "audit_status": "PASS",
+      "fact_count": 5,
+      "quality_status_counts": {
+        "eligible": 5
+      },
+      "task_selection": {
+        "title": {
+          "identity_fact_count": 3,
+          "selected_fact_count": 2
+        },
+        "selling_points": {
+          "identity_fact_count": 3,
+          "selected_fact_count": 2
+        },
+        "short_description": {
+          "identity_fact_count": 3,
+          "selected_fact_count": 2
+        }
+      }
+    },
+    {
+      "product_id": "614287670938",
+      "audit_status": "REVIEW",
+      "fact_count": 9,
+      "quality_status_counts": {
+        "eligible": 6,
+        "withhold_review": 3
+      },
+      "task_selection": {
+        "title": {
+          "identity_fact_count": 2,
+          "selected_fact_count": 3
+        },
+        "selling_points": {
+          "identity_fact_count": 2,
+          "selected_fact_count": 3
+        },
+        "short_description": {
+          "identity_fact_count": 2,
+          "selected_fact_count": 3
+        }
+      }
+    },
+    {
+      "product_id": "614446358778",
+      "audit_status": "PASS",
+      "fact_count": 8,
+      "quality_status_counts": {
+        "eligible": 8
+      },
+      "task_selection": {
+        "title": {
+          "identity_fact_count": 3,
+          "selected_fact_count": 3
+        },
+        "selling_points": {
+          "identity_fact_count": 3,
+          "selected_fact_count": 3
+        },
+        "short_description": {
+          "identity_fact_count": 3,
+          "selected_fact_count": 3
+        }
+      }
+    },
+    {
+      "product_id": "614646720550",
+      "audit_status": "PASS",
+      "fact_count": 8,
+      "quality_status_counts": {
+        "eligible": 8
+      },
+      "task_selection": {
+        "title": {
+          "identity_fact_count": 4,
+          "selected_fact_count": 3
+        },
+        "selling_points": {
+          "identity_fact_count": 4,
+          "selected_fact_count": 3
+        },
+        "short_description": {
+          "identity_fact_count": 4,
+          "selected_fact_count": 3
+        }
+      }
+    },
+    {
+      "product_id": "614822484917",
+      "audit_status": "PASS",
+      "fact_count": 9,
+      "quality_status_counts": {
+        "eligible": 9
+      },
+      "task_selection": {
+        "title": {
+          "identity_fact_count": 4,
+          "selected_fact_count": 3
+        },
+        "selling_points": {
+          "identity_fact_count": 4,
+          "selected_fact_count": 3
+        },
+        "short_description": {
+          "identity_fact_count": 4,
+          "selected_fact_count": 3
+        }
+      }
+    },
+    {
+      "product_id": "615221478811",
+      "audit_status": "PASS",
+      "fact_count": 11,
+      "quality_status_counts": {
+        "eligible": 11
+      },
+      "task_selection": {
+        "title": {
+          "identity_fact_count": 4,
+          "selected_fact_count": 3
+        },
+        "selling_points": {
+          "identity_fact_count": 4,
+          "selected_fact_count": 3
+        },
+        "short_description": {
+          "identity_fact_count": 4,
+          "selected_fact_count": 3
+        }
+      }
+    },
+    {
+      "product_id": "615406528064",
+      "audit_status": "PASS",
+      "fact_count": 7,
+      "quality_status_counts": {
+        "eligible": 7
+      },
+      "task_selection": {
+        "title": {
+          "identity_fact_count": 4,
+          "selected_fact_count": 3
+        },
+        "selling_points": {
+          "identity_fact_count": 4,
+          "selected_fact_count": 3
+        },
+        "short_description": {
+          "identity_fact_count": 4,
+          "selected_fact_count": 3
+        }
+      }
+    },
+    {
+      "product_id": "615426464241",
+      "audit_status": "PASS",
+      "fact_count": 10,
+      "quality_status_counts": {
+        "eligible": 10
+      },
+      "task_selection": {
+        "title": {
+          "identity_fact_count": 4,
+          "selected_fact_count": 3
+        },
+        "selling_points": {
+          "identity_fact_count": 4,
+          "selected_fact_count": 3
+        },
+        "short_description": {
+          "identity_fact_count": 4,
+          "selected_fact_count": 3
+        }
+      }
+    },
+    {
+      "product_id": "615883126177",
+      "audit_status": "PASS",
+      "fact_count": 10,
+      "quality_status_counts": {
+        "eligible": 10
+      },
+      "task_selection": {
+        "title": {
+          "identity_fact_count": 4,
+          "selected_fact_count": 3
+        },
+        "selling_points": {
+          "identity_fact_count": 4,
+          "selected_fact_count": 3
+        },
+        "short_description": {
+          "identity_fact_count": 4,
+          "selected_fact_count": 3
+        }
+      }
+    },
+    {
+      "product_id": "616519866490",
+      "audit_status": "PASS",
+      "fact_count": 5,
+      "quality_status_counts": {
+        "eligible": 5
+      },
+      "task_selection": {
+        "title": {
+          "identity_fact_count": 4,
+          "selected_fact_count": 1
+        },
+        "selling_points": {
+          "identity_fact_count": 4,
+          "selected_fact_count": 1
+        },
+        "short_description": {
+          "identity_fact_count": 4,
+          "selected_fact_count": 1
+        }
+      }
+    },
+    {
+      "product_id": "616655611311",
+      "audit_status": "PASS",
+      "fact_count": 10,
+      "quality_status_counts": {
+        "eligible": 10
+      },
+      "task_selection": {
+        "title": {
+          "identity_fact_count": 4,
+          "selected_fact_count": 3
+        },
+        "selling_points": {
+          "identity_fact_count": 4,
+          "selected_fact_count": 3
+        },
+        "short_description": {
+          "identity_fact_count": 4,
+          "selected_fact_count": 3
+        }
+      }
+    },
+    {
+      "product_id": "616655671226",
+      "audit_status": "PASS",
+      "fact_count": 9,
+      "quality_status_counts": {
+        "eligible": 9
+      },
+      "task_selection": {
+        "title": {
+          "identity_fact_count": 4,
+          "selected_fact_count": 3
+        },
+        "selling_points": {
+          "identity_fact_count": 4,
+          "selected_fact_count": 3
+        },
+        "short_description": {
+          "identity_fact_count": 4,
+          "selected_fact_count": 3
+        }
+      }
+    },
+    {
+      "product_id": "616853015046",
+      "audit_status": "PASS",
+      "fact_count": 10,
+      "quality_status_counts": {
+        "eligible": 10
+      },
+      "task_selection": {
+        "title": {
+          "identity_fact_count": 4,
+          "selected_fact_count": 3
+        },
+        "selling_points": {
+          "identity_fact_count": 4,
+          "selected_fact_count": 3
+        },
+        "short_description": {
+          "identity_fact_count": 4,
+          "selected_fact_count": 3
+        }
+      }
+    },
+    {
+      "product_id": "616914231244",
+      "audit_status": "CONFLICT",
+      "fact_count": 10,
+      "quality_status_counts": {
+        "blocked_conflict": 1,
+        "eligible": 8,
+        "withhold_review": 1
+      },
+      "task_selection": {
+        "title": {
+          "identity_fact_count": 4,
+          "selected_fact_count": 3
+        },
+        "selling_points": {
+          "identity_fact_count": 4,
+          "selected_fact_count": 3
+        },
+        "short_description": {
+          "identity_fact_count": 4,
+          "selected_fact_count": 3
+        }
+      }
+    },
+    {
+      "product_id": "617219746831",
+      "audit_status": "CONFLICT",
+      "fact_count": 11,
+      "quality_status_counts": {
+        "blocked_conflict": 1,
+        "eligible": 9,
+        "withhold_review": 1
+      },
+      "task_selection": {
+        "title": {
+          "identity_fact_count": 4,
+          "selected_fact_count": 3
+        },
+        "selling_points": {
+          "identity_fact_count": 4,
+          "selected_fact_count": 3
+        },
+        "short_description": {
+          "identity_fact_count": 4,
+          "selected_fact_count": 3
+        }
+      }
+    },
+    {
+      "product_id": "617300397884",
+      "audit_status": "PASS",
+      "fact_count": 5,
+      "quality_status_counts": {
+        "eligible": 5
+      },
+      "task_selection": {
+        "title": {
+          "identity_fact_count": 2,
+          "selected_fact_count": 3
+        },
+        "selling_points": {
+          "identity_fact_count": 2,
+          "selected_fact_count": 3
+        },
+        "short_description": {
+          "identity_fact_count": 2,
+          "selected_fact_count": 3
+        }
+      }
+    },
+    {
+      "product_id": "617312923135",
+      "audit_status": "PASS",
+      "fact_count": 12,
+      "quality_status_counts": {
+        "eligible": 11,
+        "withhold_review": 1
+      },
+      "task_selection": {
+        "title": {
+          "identity_fact_count": 4,
+          "selected_fact_count": 3
+        },
+        "selling_points": {
+          "identity_fact_count": 4,
+          "selected_fact_count": 3
+        },
+        "short_description": {
+          "identity_fact_count": 4,
+          "selected_fact_count": 3
+        }
+      }
+    },
+    {
+      "product_id": "617425544078",
+      "audit_status": "PASS",
+      "fact_count": 8,
+      "quality_status_counts": {
+        "eligible": 8
+      },
+      "task_selection": {
+        "title": {
+          "identity_fact_count": 4,
+          "selected_fact_count": 3
+        },
+        "selling_points": {
+          "identity_fact_count": 4,
+          "selected_fact_count": 3
+        },
+        "short_description": {
+          "identity_fact_count": 4,
+          "selected_fact_count": 3
+        }
+      }
+    },
+    {
+      "product_id": "617444664281",
+      "audit_status": "PASS",
+      "fact_count": 8,
+      "quality_status_counts": {
+        "eligible": 8
+      },
+      "task_selection": {
+        "title": {
+          "identity_fact_count": 4,
+          "selected_fact_count": 3
+        },
+        "selling_points": {
+          "identity_fact_count": 4,
+          "selected_fact_count": 3
+        },
+        "short_description": {
+          "identity_fact_count": 4,
+          "selected_fact_count": 3
+        }
+      }
+    },
+    {
+      "product_id": "617608860391",
+      "audit_status": "PASS",
+      "fact_count": 8,
+      "quality_status_counts": {
+        "eligible": 8
+      },
+      "task_selection": {
+        "title": {
+          "identity_fact_count": 3,
+          "selected_fact_count": 3
+        },
+        "selling_points": {
+          "identity_fact_count": 3,
+          "selected_fact_count": 3
+        },
+        "short_description": {
+          "identity_fact_count": 3,
+          "selected_fact_count": 3
+        }
+      }
+    },
+    {
+      "product_id": "617777678378",
+      "audit_status": "PASS",
+      "fact_count": 7,
+      "quality_status_counts": {
+        "eligible": 7
+      },
+      "task_selection": {
+        "title": {
+          "identity_fact_count": 4,
+          "selected_fact_count": 3
+        },
+        "selling_points": {
+          "identity_fact_count": 4,
+          "selected_fact_count": 3
+        },
+        "short_description": {
+          "identity_fact_count": 4,
+          "selected_fact_count": 3
+        }
+      }
+    },
+    {
+      "product_id": "618097112440",
+      "audit_status": "PASS",
+      "fact_count": 8,
+      "quality_status_counts": {
+        "eligible": 8
+      },
+      "task_selection": {
+        "title": {
+          "identity_fact_count": 4,
+          "selected_fact_count": 3
+        },
+        "selling_points": {
+          "identity_fact_count": 4,
+          "selected_fact_count": 3
+        },
+        "short_description": {
+          "identity_fact_count": 4,
+          "selected_fact_count": 3
+        }
+      }
+    },
+    {
+      "product_id": "618173057392",
+      "audit_status": "PASS",
+      "fact_count": 6,
+      "quality_status_counts": {
+        "eligible": 5,
+        "withhold_review": 1
+      },
+      "task_selection": {
+        "title": {
+          "identity_fact_count": 4,
+          "selected_fact_count": 1
+        },
+        "selling_points": {
+          "identity_fact_count": 4,
+          "selected_fact_count": 1
+        },
+        "short_description": {
+          "identity_fact_count": 4,
+          "selected_fact_count": 1
+        }
+      }
+    },
+    {
+      "product_id": "618379166068",
+      "audit_status": "PASS",
+      "fact_count": 5,
+      "quality_status_counts": {
+        "eligible": 5
+      },
+      "task_selection": {
+        "title": {
+          "identity_fact_count": 4,
+          "selected_fact_count": 1
+        },
+        "selling_points": {
+          "identity_fact_count": 4,
+          "selected_fact_count": 1
+        },
+        "short_description": {
+          "identity_fact_count": 4,
+          "selected_fact_count": 1
+        }
+      }
+    },
+    {
+      "product_id": "618832075257",
+      "audit_status": "PASS",
+      "fact_count": 9,
+      "quality_status_counts": {
+        "eligible": 9
+      },
+      "task_selection": {
+        "title": {
+          "identity_fact_count": 4,
+          "selected_fact_count": 3
+        },
+        "selling_points": {
+          "identity_fact_count": 4,
+          "selected_fact_count": 3
+        },
+        "short_description": {
+          "identity_fact_count": 4,
+          "selected_fact_count": 3
+        }
+      }
+    },
+    {
+      "product_id": "618922207097",
+      "audit_status": "PASS",
+      "fact_count": 4,
+      "quality_status_counts": {
+        "eligible": 4
+      },
+      "task_selection": {
+        "title": {
+          "identity_fact_count": 3,
+          "selected_fact_count": 1
+        },
+        "selling_points": {
+          "identity_fact_count": 3,
+          "selected_fact_count": 1
+        },
+        "short_description": {
+          "identity_fact_count": 3,
+          "selected_fact_count": 1
+        }
+      }
+    },
+    {
+      "product_id": "619001269290",
+      "audit_status": "PASS",
+      "fact_count": 9,
+      "quality_status_counts": {
+        "eligible": 9
+      },
+      "task_selection": {
+        "title": {
+          "identity_fact_count": 4,
+          "selected_fact_count": 3
+        },
+        "selling_points": {
+          "identity_fact_count": 4,
+          "selected_fact_count": 3
+        },
+        "short_description": {
+          "identity_fact_count": 4,
+          "selected_fact_count": 3
+        }
+      }
+    },
+    {
+      "product_id": "619085598337",
+      "audit_status": "PASS",
+      "fact_count": 9,
+      "quality_status_counts": {
+        "eligible": 9
+      },
+      "task_selection": {
+        "title": {
+          "identity_fact_count": 4,
+          "selected_fact_count": 3
+        },
+        "selling_points": {
+          "identity_fact_count": 4,
+          "selected_fact_count": 3
+        },
+        "short_description": {
+          "identity_fact_count": 4,
+          "selected_fact_count": 3
+        }
+      }
+    },
+    {
+      "product_id": "619598651152",
+      "audit_status": "PASS",
+      "fact_count": 8,
+      "quality_status_counts": {
+        "eligible": 8
+      },
+      "task_selection": {
+        "title": {
+          "identity_fact_count": 4,
+          "selected_fact_count": 3
+        },
+        "selling_points": {
+          "identity_fact_count": 4,
+          "selected_fact_count": 3
+        },
+        "short_description": {
+          "identity_fact_count": 4,
+          "selected_fact_count": 3
+        }
+      }
+    },
+    {
+      "product_id": "619634747474",
+      "audit_status": "PASS",
+      "fact_count": 8,
+      "quality_status_counts": {
+        "eligible": 8
+      },
+      "task_selection": {
+        "title": {
+          "identity_fact_count": 4,
+          "selected_fact_count": 3
+        },
+        "selling_points": {
+          "identity_fact_count": 4,
+          "selected_fact_count": 3
+        },
+        "short_description": {
+          "identity_fact_count": 4,
+          "selected_fact_count": 3
+        }
+      }
+    },
+    {
+      "product_id": "619636184496",
+      "audit_status": "PASS",
+      "fact_count": 7,
+      "quality_status_counts": {
+        "eligible": 7
+      },
+      "task_selection": {
+        "title": {
+          "identity_fact_count": 4,
+          "selected_fact_count": 3
+        },
+        "selling_points": {
+          "identity_fact_count": 4,
+          "selected_fact_count": 3
+        },
+        "short_description": {
+          "identity_fact_count": 4,
+          "selected_fact_count": 3
+        }
+      }
+    },
+    {
+      "product_id": "619879857875",
+      "audit_status": "PASS",
+      "fact_count": 6,
+      "quality_status_counts": {
+        "eligible": 6
+      },
+      "task_selection": {
+        "title": {
+          "identity_fact_count": 3,
+          "selected_fact_count": 3
+        },
+        "selling_points": {
+          "identity_fact_count": 3,
+          "selected_fact_count": 3
+        },
+        "short_description": {
+          "identity_fact_count": 3,
+          "selected_fact_count": 3
+        }
+      }
+    },
+    {
+      "product_id": "619941129652",
+      "audit_status": "PASS",
+      "fact_count": 6,
+      "quality_status_counts": {
+        "eligible": 5,
+        "withhold_review": 1
+      },
+      "task_selection": {
+        "title": {
+          "identity_fact_count": 3,
+          "selected_fact_count": 2
+        },
+        "selling_points": {
+          "identity_fact_count": 3,
+          "selected_fact_count": 2
+        },
+        "short_description": {
+          "identity_fact_count": 3,
+          "selected_fact_count": 2
+        }
+      }
+    },
+    {
+      "product_id": "620092020178",
+      "audit_status": "PASS",
+      "fact_count": 12,
+      "quality_status_counts": {
+        "eligible": 12
+      },
+      "task_selection": {
+        "title": {
+          "identity_fact_count": 4,
+          "selected_fact_count": 3
+        },
+        "selling_points": {
+          "identity_fact_count": 4,
+          "selected_fact_count": 3
+        },
+        "short_description": {
+          "identity_fact_count": 4,
+          "selected_fact_count": 3
+        }
+      }
+    },
+    {
+      "product_id": "620263779404",
+      "audit_status": "PASS",
+      "fact_count": 12,
+      "quality_status_counts": {
+        "eligible": 12
+      },
+      "task_selection": {
+        "title": {
+          "identity_fact_count": 4,
+          "selected_fact_count": 3
+        },
+        "selling_points": {
+          "identity_fact_count": 4,
+          "selected_fact_count": 3
+        },
+        "short_description": {
+          "identity_fact_count": 4,
+          "selected_fact_count": 3
+        }
+      }
+    },
+    {
+      "product_id": "620488672878",
+      "audit_status": "PASS",
+      "fact_count": 8,
+      "quality_status_counts": {
+        "eligible": 8
+      },
+      "task_selection": {
+        "title": {
+          "identity_fact_count": 4,
+          "selected_fact_count": 3
+        },
+        "selling_points": {
+          "identity_fact_count": 4,
+          "selected_fact_count": 3
+        },
+        "short_description": {
+          "identity_fact_count": 4,
+          "selected_fact_count": 3
+        }
+      }
+    },
+    {
+      "product_id": "620559887770",
+      "audit_status": "PASS",
+      "fact_count": 12,
+      "quality_status_counts": {
+        "eligible": 11,
+        "withhold_review": 1
+      },
+      "task_selection": {
+        "title": {
+          "identity_fact_count": 4,
+          "selected_fact_count": 3
+        },
+        "selling_points": {
+          "identity_fact_count": 4,
+          "selected_fact_count": 3
+        },
+        "short_description": {
+          "identity_fact_count": 4,
+          "selected_fact_count": 3
+        }
+      }
+    },
+    {
+      "product_id": "620565721994",
+      "audit_status": "PASS",
+      "fact_count": 5,
+      "quality_status_counts": {
+        "eligible": 4,
+        "withhold_review": 1
+      },
+      "task_selection": {
+        "title": {
+          "identity_fact_count": 4,
+          "selected_fact_count": 0
+        },
+        "selling_points": {
+          "identity_fact_count": 4,
+          "selected_fact_count": 0
+        },
+        "short_description": {
+          "identity_fact_count": 4,
+          "selected_fact_count": 0
+        }
+      }
+    },
+    {
+      "product_id": "621326718016",
+      "audit_status": "PASS",
+      "fact_count": 9,
+      "quality_status_counts": {
+        "eligible": 9
+      },
+      "task_selection": {
+        "title": {
+          "identity_fact_count": 4,
+          "selected_fact_count": 3
+        },
+        "selling_points": {
+          "identity_fact_count": 4,
+          "selected_fact_count": 3
+        },
+        "short_description": {
+          "identity_fact_count": 4,
+          "selected_fact_count": 3
+        }
+      }
+    },
+    {
+      "product_id": "621341696263",
+      "audit_status": "PASS",
+      "fact_count": 9,
+      "quality_status_counts": {
+        "eligible": 9
+      },
+      "task_selection": {
+        "title": {
+          "identity_fact_count": 4,
+          "selected_fact_count": 3
+        },
+        "selling_points": {
+          "identity_fact_count": 4,
+          "selected_fact_count": 3
+        },
+        "short_description": {
+          "identity_fact_count": 4,
+          "selected_fact_count": 3
+        }
+      }
+    },
+    {
+      "product_id": "621400991855",
+      "audit_status": "PASS",
+      "fact_count": 12,
+      "quality_status_counts": {
+        "eligible": 11,
+        "withhold_review": 1
+      },
+      "task_selection": {
+        "title": {
+          "identity_fact_count": 4,
+          "selected_fact_count": 3
+        },
+        "selling_points": {
+          "identity_fact_count": 4,
+          "selected_fact_count": 3
+        },
+        "short_description": {
+          "identity_fact_count": 4,
+          "selected_fact_count": 3
+        }
+      }
+    },
+    {
+      "product_id": "621592467720",
+      "audit_status": "PASS",
+      "fact_count": 9,
+      "quality_status_counts": {
+        "eligible": 8,
+        "withhold_review": 1
+      },
+      "task_selection": {
+        "title": {
+          "identity_fact_count": 4,
+          "selected_fact_count": 3
+        },
+        "selling_points": {
+          "identity_fact_count": 4,
+          "selected_fact_count": 3
+        },
+        "short_description": {
+          "identity_fact_count": 4,
+          "selected_fact_count": 3
+        }
+      }
+    },
+    {
+      "product_id": "621593539222",
+      "audit_status": "PASS",
+      "fact_count": 9,
+      "quality_status_counts": {
+        "eligible": 9
+      },
+      "task_selection": {
+        "title": {
+          "identity_fact_count": 4,
+          "selected_fact_count": 3
+        },
+        "selling_points": {
+          "identity_fact_count": 4,
+          "selected_fact_count": 3
+        },
+        "short_description": {
+          "identity_fact_count": 4,
+          "selected_fact_count": 3
+        }
+      }
+    },
+    {
+      "product_id": "621646793043",
+      "audit_status": "PASS",
+      "fact_count": 9,
+      "quality_status_counts": {
+        "eligible": 9
+      },
+      "task_selection": {
+        "title": {
+          "identity_fact_count": 4,
+          "selected_fact_count": 3
+        },
+        "selling_points": {
+          "identity_fact_count": 4,
+          "selected_fact_count": 3
+        },
+        "short_description": {
+          "identity_fact_count": 4,
+          "selected_fact_count": 3
+        }
+      }
+    },
+    {
+      "product_id": "621656965008",
+      "audit_status": "PASS",
+      "fact_count": 9,
+      "quality_status_counts": {
+        "eligible": 9
+      },
+      "task_selection": {
+        "title": {
+          "identity_fact_count": 4,
+          "selected_fact_count": 3
+        },
+        "selling_points": {
+          "identity_fact_count": 4,
+          "selected_fact_count": 3
+        },
+        "short_description": {
+          "identity_fact_count": 4,
+          "selected_fact_count": 3
+        }
+      }
+    },
+    {
+      "product_id": "621946386369",
+      "audit_status": "PASS",
+      "fact_count": 8,
+      "quality_status_counts": {
+        "eligible": 8
+      },
+      "task_selection": {
+        "title": {
+          "identity_fact_count": 3,
+          "selected_fact_count": 3
+        },
+        "selling_points": {
+          "identity_fact_count": 3,
+          "selected_fact_count": 3
+        },
+        "short_description": {
+          "identity_fact_count": 3,
+          "selected_fact_count": 3
+        }
+      }
+    },
+    {
+      "product_id": "622147332171",
+      "audit_status": "PASS",
+      "fact_count": 8,
+      "quality_status_counts": {
+        "eligible": 8
+      },
+      "task_selection": {
+        "title": {
+          "identity_fact_count": 4,
+          "selected_fact_count": 3
+        },
+        "selling_points": {
+          "identity_fact_count": 4,
+          "selected_fact_count": 3
+        },
+        "short_description": {
+          "identity_fact_count": 4,
+          "selected_fact_count": 3
+        }
+      }
+    },
+    {
+      "product_id": "622189743894",
+      "audit_status": "PASS",
+      "fact_count": 9,
+      "quality_status_counts": {
+        "eligible": 9
+      },
+      "task_selection": {
+        "title": {
+          "identity_fact_count": 4,
+          "selected_fact_count": 3
+        },
+        "selling_points": {
+          "identity_fact_count": 4,
+          "selected_fact_count": 3
+        },
+        "short_description": {
+          "identity_fact_count": 4,
+          "selected_fact_count": 3
+        }
+      }
+    },
+    {
+      "product_id": "622189803860",
+      "audit_status": "PASS",
+      "fact_count": 9,
+      "quality_status_counts": {
+        "eligible": 9
+      },
+      "task_selection": {
+        "title": {
+          "identity_fact_count": 4,
+          "selected_fact_count": 3
+        },
+        "selling_points": {
+          "identity_fact_count": 4,
+          "selected_fact_count": 3
+        },
+        "short_description": {
+          "identity_fact_count": 4,
+          "selected_fact_count": 3
+        }
+      }
+    },
+    {
+      "product_id": "622298798961",
+      "audit_status": "PASS",
+      "fact_count": 6,
+      "quality_status_counts": {
+        "eligible": 6
+      },
+      "task_selection": {
+        "title": {
+          "identity_fact_count": 4,
+          "selected_fact_count": 2
+        },
+        "selling_points": {
+          "identity_fact_count": 4,
+          "selected_fact_count": 2
+        },
+        "short_description": {
+          "identity_fact_count": 4,
+          "selected_fact_count": 2
+        }
+      }
+    },
+    {
+      "product_id": "622433254974",
+      "audit_status": "PASS",
+      "fact_count": 6,
+      "quality_status_counts": {
+        "eligible": 6
+      },
+      "task_selection": {
+        "title": {
+          "identity_fact_count": 4,
+          "selected_fact_count": 2
+        },
+        "selling_points": {
+          "identity_fact_count": 4,
+          "selected_fact_count": 2
+        },
+        "short_description": {
+          "identity_fact_count": 4,
+          "selected_fact_count": 2
+        }
+      }
+    },
+    {
+      "product_id": "622494812796",
+      "audit_status": "PASS",
+      "fact_count": 5,
+      "quality_status_counts": {
+        "eligible": 5
+      },
+      "task_selection": {
+        "title": {
+          "identity_fact_count": 3,
+          "selected_fact_count": 2
+        },
+        "selling_points": {
+          "identity_fact_count": 3,
+          "selected_fact_count": 2
+        },
+        "short_description": {
+          "identity_fact_count": 3,
+          "selected_fact_count": 2
+        }
+      }
+    },
+    {
+      "product_id": "622990752649",
+      "audit_status": "PASS",
+      "fact_count": 10,
+      "quality_status_counts": {
+        "eligible": 10
+      },
+      "task_selection": {
+        "title": {
+          "identity_fact_count": 4,
+          "selected_fact_count": 3
+        },
+        "selling_points": {
+          "identity_fact_count": 4,
+          "selected_fact_count": 3
+        },
+        "short_description": {
+          "identity_fact_count": 4,
+          "selected_fact_count": 3
+        }
+      }
+    },
+    {
+      "product_id": "623350125420",
+      "audit_status": "PASS",
+      "fact_count": 8,
+      "quality_status_counts": {
+        "eligible": 8
+      },
+      "task_selection": {
+        "title": {
+          "identity_fact_count": 3,
+          "selected_fact_count": 3
+        },
+        "selling_points": {
+          "identity_fact_count": 3,
+          "selected_fact_count": 3
+        },
+        "short_description": {
+          "identity_fact_count": 3,
+          "selected_fact_count": 3
+        }
+      }
+    },
+    {
+      "product_id": "623600716657",
+      "audit_status": "PASS",
+      "fact_count": 9,
+      "quality_status_counts": {
+        "eligible": 9
+      },
+      "task_selection": {
+        "title": {
+          "identity_fact_count": 4,
+          "selected_fact_count": 3
+        },
+        "selling_points": {
+          "identity_fact_count": 4,
+          "selected_fact_count": 3
+        },
+        "short_description": {
+          "identity_fact_count": 4,
+          "selected_fact_count": 3
+        }
+      }
+    },
+    {
+      "product_id": "624000064339",
+      "audit_status": "CONFLICT",
+      "fact_count": 7,
+      "quality_status_counts": {
+        "blocked_conflict": 7
+      },
+      "task_selection": {
+        "title": {
+          "identity_fact_count": 0,
+          "selected_fact_count": 0
+        },
+        "selling_points": {
+          "identity_fact_count": 0,
+          "selected_fact_count": 0
+        },
+        "short_description": {
+          "identity_fact_count": 0,
+          "selected_fact_count": 0
+        }
+      }
+    },
+    {
+      "product_id": "624045706761",
+      "audit_status": "PASS",
+      "fact_count": 11,
+      "quality_status_counts": {
+        "eligible": 11
+      },
+      "task_selection": {
+        "title": {
+          "identity_fact_count": 4,
+          "selected_fact_count": 3
+        },
+        "selling_points": {
+          "identity_fact_count": 4,
+          "selected_fact_count": 3
+        },
+        "short_description": {
+          "identity_fact_count": 4,
+          "selected_fact_count": 3
+        }
+      }
+    },
+    {
+      "product_id": "624381044177",
+      "audit_status": "PASS",
+      "fact_count": 5,
+      "quality_status_counts": {
+        "eligible": 4,
+        "withhold_review": 1
+      },
+      "task_selection": {
+        "title": {
+          "identity_fact_count": 4,
+          "selected_fact_count": 0
+        },
+        "selling_points": {
+          "identity_fact_count": 4,
+          "selected_fact_count": 0
+        },
+        "short_description": {
+          "identity_fact_count": 4,
+          "selected_fact_count": 0
+        }
+      }
+    },
+    {
+      "product_id": "625309591565",
+      "audit_status": "PASS",
+      "fact_count": 5,
+      "quality_status_counts": {
+        "eligible": 5
+      },
+      "task_selection": {
+        "title": {
+          "identity_fact_count": 4,
+          "selected_fact_count": 1
+        },
+        "selling_points": {
+          "identity_fact_count": 4,
+          "selected_fact_count": 1
+        },
+        "short_description": {
+          "identity_fact_count": 4,
+          "selected_fact_count": 1
+        }
+      }
+    }
+  ]
+}

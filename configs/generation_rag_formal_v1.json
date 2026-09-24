@@ -1,0 +1,194 @@
+{
+  "schema_version": "1.0",
+  "version": "rag_v1_formal",
+  "status": "frozen_pending_single_test100_execution",
+  "formal_test100_executed": false,
+  "frozen_at_utc": "2026-09-24T11:48:09+00:00",
+  "scope": "generation_test100",
+  "model": {
+    "name": "Qwen/Qwen2.5-7B-Instruct",
+    "revision": "a09a35458c702b33eeacc393d103063234e8bc28",
+    "snapshot_id": "a09a35458c702b33eeacc393d103063234e8bc28",
+    "cache_dir": "../.model-cache/huggingface/hub",
+    "observed_snapshot_path": "E:\\Projects\\Baidu\\.model-cache\\huggingface\\hub\\models--Qwen--Qwen2.5-7B-Instruct\\snapshots\\a09a35458c702b33eeacc393d103063234e8bc28",
+    "observed_snapshot_path_role": "current local development observation only; model name plus revision identify the formal model",
+    "device": "cuda",
+    "load_in_4bit": true,
+    "bnb_4bit_quant_type": "nf4",
+    "bnb_4bit_compute_dtype": "bfloat16"
+  },
+  "prompt": {
+    "version": "rag_v6",
+    "implementation": "src/generation/qwen.py::build_rag_messages",
+    "implementation_sha256": "15ca1e911b160c4a934608549b685e9de9a7ae590ef9b4b928f5b5a859c2f2d4",
+    "hash_basis": "UTF-8 source bytes for build_rag_messages extracted with Python ast.get_source_segment",
+    "baseline_prompt_version": "baseline_v2",
+    "input_structure": "eligible identity facts plus global shared Top-3 content facts plus independent read-only negative constraints",
+    "output_contract": "JSON object with title, exactly three selling_points strings, and short_description"
+  },
+  "rag": {
+    "policy_version": "rag_fact_policy_v3",
+    "policy_path": "configs/rag_fact_policy_v3.json",
+    "policy_sha256": "df738407e72b4280e9d286118ac84ff6442284195d7b763ddb32ead0ccb68ae1",
+    "fact_source": "same-product normalized structured attributes plus standardized category",
+    "fact_builder": "scripts/build_rag_facts.py",
+    "test100_fact_units_path": "data/processed/week2_rag_formal_v1/test100_fact_units.jsonl",
+    "test100_fact_units_status": "not_created_before_formal_test_execution",
+    "quality_audit_path": "reports/data/week2_rag_fact_quality_audit.csv",
+    "quality_audit_sha256": "887ca944c9725f92b213687f1fbebbed82effd8f2bf3f3ae8734eb3e8e290ce0",
+    "candidate_filter": "same product_id and quality_status=eligible only",
+    "identity_information": [
+      "category_l1",
+      "category_l2",
+      "品牌",
+      "型号"
+    ],
+    "identity_counts_toward_top_k": false,
+    "top_k": 3,
+    "top_k_status": "frozen_for_rag_v1_formal",
+    "joint_ranking": {
+      "method": "reciprocal_rank_fusion",
+      "tasks": [
+        "title",
+        "selling_points",
+        "short_description"
+      ],
+      "rrf_k": 60,
+      "tie_breakers": [
+        "sum_task_ranks",
+        "field_order",
+        "canonical_field",
+        "fact_id"
+      ]
+    },
+    "negative_constraints": {
+      "enabled": true,
+      "role": "read_only_constraint_outside_content_top_k",
+      "quality_gate": "same-product task fact with quality_status=eligible only",
+      "exact_values": [
+        "无",
+        "否",
+        "不支持",
+        "有线",
+        "没有",
+        "未配备"
+      ],
+      "contains_values": [
+        "不支持"
+      ],
+      "active_generation": false,
+      "requires_same_product_id": true
+    },
+    "placeholder_gate": {
+      "policy": "exclude exact placeholders and composite values whose separated tokens are all configured placeholders; retain mixed placeholder-plus-real values",
+      "separator_pattern": "[/\\\\|,，;；、]+"
+    }
+  },
+  "validator": {
+    "version": "rag_grounding_validator_v1",
+    "implementation": "src/generation/grounding.py",
+    "mode": "detect_and_record_only",
+    "auto_delete": false,
+    "auto_rewrite": false,
+    "auto_regenerate": false,
+    "replaces_human_evaluation": false,
+    "classifications": [
+      "supported_paraphrase",
+      "unsupported_usage_scenario",
+      "unsupported_evaluative_claim",
+      "grounding_failure"
+    ]
+  },
+  "generation_parameters": {
+    "max_input_tokens": 2048,
+    "max_new_tokens": 320,
+    "do_sample": true,
+    "temperature": 0.7,
+    "top_p": 0.9,
+    "seed": 42
+  },
+  "frozen_test100": {
+    "path": "data/processed/week1_v3/generation_evaluation_samples.jsonl",
+    "sha256": "ce057356a9a0c48e4298daac545fafb0c83ad07ae2f74f1b1211c834b048a557",
+    "sample_count": 100,
+    "role": "single formal evaluation only after this configuration is locked; never used for tuning"
+  },
+  "baseline_comparison": {
+    "version": "generation_sampling_prompt_v2",
+    "prompt_version": "baseline_v2",
+    "manifest_path": "reports/formal_baseline_manifest.json",
+    "manifest_sha256": "eaf4eeb826b31ce67203dab290cbfd51aa573f9e8dd41386149a8995f30a6871",
+    "git_commit": "beaf9d1c77719a2b0d1a4968b05444cc357e8e7e",
+    "raw_outputs_path": "reports/generation/baseline/evaluation_outputs_sampling_v2.json",
+    "human_annotations_path": "reports/generation/evaluation/annotation_pool_sampling_v2.csv",
+    "metrics_path": "reports/generation/evaluation/baseline_metrics_sampling_v2.json"
+  },
+  "formal_outputs": {
+    "overwrite_existing": false,
+    "raw_outputs_path": "reports/generation/rag/formal_rag_v1_test100_outputs.json",
+    "validator_report_path": "reports/generation/rag/formal_rag_v1_test100_validator.json",
+    "human_annotations_path": "reports/generation/rag/formal_rag_v1_test100_human_review.csv",
+    "metrics_path": "reports/generation/rag/formal_rag_v1_test100_metrics.json",
+    "report_path": "reports/generation/rag/formal_rag_v1_test100_report.md"
+  },
+  "execution": {
+    "entrypoint": "scripts/run_rag_formal_test.py",
+    "preflight_flag": "--preflight-only",
+    "execution_confirmation_flag": "--confirm-formal-test100",
+    "seed_rule": "base_seed_plus_stable_sample_index",
+    "local_files_only": true,
+    "test100_record_order": "frozen JSONL order",
+    "sample_filtering": "none; retain all 100 frozen records",
+    "output_overwrite": false
+  },
+  "evaluation": {
+    "same_test_data_as_baseline": true,
+    "same_metric_definitions_as_baseline": true,
+    "formal_metrics": [
+      "core_attribute_hit_rate",
+      "fluency_pass_rate",
+      "factual_error_sample_rate",
+      "average_factual_errors_per_sample",
+      "category_style_pass_rate",
+      "structured_output_success_rate",
+      "generation_time_seconds.average",
+      "generation_time_seconds.p95",
+      "generation_time_seconds.maximum"
+    ],
+    "human_review": {
+      "required_rows": 100,
+      "assistant_draft_rows_allowed_for_formal_metrics": 0,
+      "required_fields": [
+        "matched_attribute_count",
+        "fluency_pass",
+        "factual_error_count",
+        "category_style_pass",
+        "review_notes"
+      ],
+      "validator_role": "diagnostic aid only; every row still requires human review"
+    }
+  },
+  "error_attribution": {
+    "Source Fact Error / Source Fact Quality": "source data error, placeholder value, or field displacement",
+    "Retrieval Error": "a correct fact exists in the eligible source facts but is not retrieved",
+    "Grounding Failure": "the Prompt supplies a fact or negative constraint but the model produces contradictory content",
+    "Unsupported Generation": "the Prompt contains no support but the model adds a scenario, effect, or parameter",
+    "supported_paraphrase": "a direct category semantic paraphrase that adds no new fact; not counted as a factual error"
+  },
+  "immutability": {
+    "validation_tuning_closed": true,
+    "do_not_change_after_freeze": [
+      "prompt",
+      "RAG policy",
+      "Top-K",
+      "RRF settings",
+      "negative constraints",
+      "validator classification policy",
+      "model revision",
+      "generation parameters",
+      "test100 data",
+      "evaluation metrics"
+    ],
+    "test_result_must_not_trigger_retuning_and_rerun": true
+  }
+}

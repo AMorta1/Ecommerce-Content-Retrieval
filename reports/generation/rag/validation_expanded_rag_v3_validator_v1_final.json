@@ -1,0 +1,434 @@
+{
+  "version": "rag_grounding_validator_v1",
+  "scope": "validation_only",
+  "formal_test100_executed": false,
+  "mode": "detect_and_record_only",
+  "source_report": {
+    "path": "E:\\Projects\\Baidu\\Ecommerce-Content-Retrieval\\reports\\generation\\rag\\validation_expanded_rag_v3.json",
+    "sha256": "2202ce1b28ba1d130bdc139114cf86634493cd11ec2752a638abfee6d0a343de"
+  },
+  "top_k": 3,
+  "completed_at_utc": "2026-09-24T11:00:18.352383+00:00",
+  "summary": {
+    "sample_count": 24,
+    "status_counts": {
+      "PASS": 24
+    },
+    "classification_counts": {
+      "supported_paraphrase": 3
+    }
+  },
+  "results": [
+    {
+      "product_id": "576694559149",
+      "category_l1": "家居日用",
+      "category_l2": "保温杯",
+      "validation": {
+        "validator_version": "rag_grounding_validator_v1",
+        "mode": "detect_and_record_only",
+        "output_modified": false,
+        "regeneration_triggered": false,
+        "replaces_human_evaluation": false,
+        "status": "PASS",
+        "error_count": 0,
+        "classification_counts": {},
+        "findings": []
+      }
+    },
+    {
+      "product_id": "584648531319",
+      "category_l1": "家居日用",
+      "category_l2": "保温杯",
+      "validation": {
+        "validator_version": "rag_grounding_validator_v1",
+        "mode": "detect_and_record_only",
+        "output_modified": false,
+        "regeneration_triggered": false,
+        "replaces_human_evaluation": false,
+        "status": "PASS",
+        "error_count": 0,
+        "classification_counts": {},
+        "findings": []
+      }
+    },
+    {
+      "product_id": "600702277714",
+      "category_l1": "家居日用",
+      "category_l2": "保温杯",
+      "validation": {
+        "validator_version": "rag_grounding_validator_v1",
+        "mode": "detect_and_record_only",
+        "output_modified": false,
+        "regeneration_triggered": false,
+        "replaces_human_evaluation": false,
+        "status": "PASS",
+        "error_count": 0,
+        "classification_counts": {},
+        "findings": []
+      }
+    },
+    {
+      "product_id": "535858215415",
+      "category_l1": "家居日用",
+      "category_l2": "垃圾桶",
+      "validation": {
+        "validator_version": "rag_grounding_validator_v1",
+        "mode": "detect_and_record_only",
+        "output_modified": false,
+        "regeneration_triggered": false,
+        "replaces_human_evaluation": false,
+        "status": "PASS",
+        "error_count": 0,
+        "classification_counts": {},
+        "findings": []
+      }
+    },
+    {
+      "product_id": "596561935088",
+      "category_l1": "家居日用",
+      "category_l2": "垃圾桶",
+      "validation": {
+        "validator_version": "rag_grounding_validator_v1",
+        "mode": "detect_and_record_only",
+        "output_modified": false,
+        "regeneration_triggered": false,
+        "replaces_human_evaluation": false,
+        "status": "PASS",
+        "error_count": 0,
+        "classification_counts": {},
+        "findings": []
+      }
+    },
+    {
+      "product_id": "585183140226",
+      "category_l1": "家居日用",
+      "category_l2": "垃圾桶",
+      "validation": {
+        "validator_version": "rag_grounding_validator_v1",
+        "mode": "detect_and_record_only",
+        "output_modified": false,
+        "regeneration_triggered": false,
+        "replaces_human_evaluation": false,
+        "status": "PASS",
+        "error_count": 0,
+        "classification_counts": {
+          "supported_paraphrase": 1
+        },
+        "findings": [
+          {
+            "classification": "supported_paraphrase",
+            "location": "short_description",
+            "text_span": "适用于家居日用",
+            "reason": "direct_category_label",
+            "potential_false_positive": false
+          }
+        ]
+      }
+    },
+    {
+      "product_id": "610727155009",
+      "category_l1": "家居日用",
+      "category_l2": "拖把",
+      "validation": {
+        "validator_version": "rag_grounding_validator_v1",
+        "mode": "detect_and_record_only",
+        "output_modified": false,
+        "regeneration_triggered": false,
+        "replaces_human_evaluation": false,
+        "status": "PASS",
+        "error_count": 0,
+        "classification_counts": {},
+        "findings": []
+      }
+    },
+    {
+      "product_id": "44604493546",
+      "category_l1": "家居日用",
+      "category_l2": "拖把",
+      "validation": {
+        "validator_version": "rag_grounding_validator_v1",
+        "mode": "detect_and_record_only",
+        "output_modified": false,
+        "regeneration_triggered": false,
+        "replaces_human_evaluation": false,
+        "status": "PASS",
+        "error_count": 0,
+        "classification_counts": {},
+        "findings": []
+      }
+    },
+    {
+      "product_id": "620488672878",
+      "category_l1": "家居日用",
+      "category_l2": "拖把",
+      "validation": {
+        "validator_version": "rag_grounding_validator_v1",
+        "mode": "detect_and_record_only",
+        "output_modified": false,
+        "regeneration_triggered": false,
+        "replaces_human_evaluation": false,
+        "status": "PASS",
+        "error_count": 0,
+        "classification_counts": {},
+        "findings": []
+      }
+    },
+    {
+      "product_id": "556912823177",
+      "category_l1": "家居日用",
+      "category_l2": "收纳箱",
+      "validation": {
+        "validator_version": "rag_grounding_validator_v1",
+        "mode": "detect_and_record_only",
+        "output_modified": false,
+        "regeneration_triggered": false,
+        "replaces_human_evaluation": false,
+        "status": "PASS",
+        "error_count": 0,
+        "classification_counts": {},
+        "findings": []
+      }
+    },
+    {
+      "product_id": "625309591565",
+      "category_l1": "家居日用",
+      "category_l2": "收纳箱",
+      "validation": {
+        "validator_version": "rag_grounding_validator_v1",
+        "mode": "detect_and_record_only",
+        "output_modified": false,
+        "regeneration_triggered": false,
+        "replaces_human_evaluation": false,
+        "status": "PASS",
+        "error_count": 0,
+        "classification_counts": {},
+        "findings": []
+      }
+    },
+    {
+      "product_id": "613971147597",
+      "category_l1": "家居日用",
+      "category_l2": "收纳箱",
+      "validation": {
+        "validator_version": "rag_grounding_validator_v1",
+        "mode": "detect_and_record_only",
+        "output_modified": false,
+        "regeneration_triggered": false,
+        "replaces_human_evaluation": false,
+        "status": "PASS",
+        "error_count": 0,
+        "classification_counts": {
+          "supported_paraphrase": 2
+        },
+        "findings": [
+          {
+            "classification": "supported_paraphrase",
+            "location": "selling_points[2]",
+            "text_span": "适用于家居收纳",
+            "reason": "direct_category_semantics",
+            "potential_false_positive": false
+          },
+          {
+            "classification": "supported_paraphrase",
+            "location": "short_description",
+            "text_span": "适用于家居收纳",
+            "reason": "direct_category_semantics",
+            "potential_false_positive": false
+          }
+        ]
+      }
+    },
+    {
+      "product_id": "584308818142",
+      "category_l1": "3C数码",
+      "category_l2": "移动电源",
+      "validation": {
+        "validator_version": "rag_grounding_validator_v1",
+        "mode": "detect_and_record_only",
+        "output_modified": false,
+        "regeneration_triggered": false,
+        "replaces_human_evaluation": false,
+        "status": "PASS",
+        "error_count": 0,
+        "classification_counts": {},
+        "findings": []
+      }
+    },
+    {
+      "product_id": "610408134586",
+      "category_l1": "3C数码",
+      "category_l2": "移动电源",
+      "validation": {
+        "validator_version": "rag_grounding_validator_v1",
+        "mode": "detect_and_record_only",
+        "output_modified": false,
+        "regeneration_triggered": false,
+        "replaces_human_evaluation": false,
+        "status": "PASS",
+        "error_count": 0,
+        "classification_counts": {},
+        "findings": []
+      }
+    },
+    {
+      "product_id": "569958345076",
+      "category_l1": "3C数码",
+      "category_l2": "移动电源",
+      "validation": {
+        "validator_version": "rag_grounding_validator_v1",
+        "mode": "detect_and_record_only",
+        "output_modified": false,
+        "regeneration_triggered": false,
+        "replaces_human_evaluation": false,
+        "status": "PASS",
+        "error_count": 0,
+        "classification_counts": {},
+        "findings": []
+      }
+    },
+    {
+      "product_id": "621656965008",
+      "category_l1": "3C数码",
+      "category_l2": "耳机",
+      "validation": {
+        "validator_version": "rag_grounding_validator_v1",
+        "mode": "detect_and_record_only",
+        "output_modified": false,
+        "regeneration_triggered": false,
+        "replaces_human_evaluation": false,
+        "status": "PASS",
+        "error_count": 0,
+        "classification_counts": {},
+        "findings": []
+      }
+    },
+    {
+      "product_id": "572645689177",
+      "category_l1": "3C数码",
+      "category_l2": "耳机",
+      "validation": {
+        "validator_version": "rag_grounding_validator_v1",
+        "mode": "detect_and_record_only",
+        "output_modified": false,
+        "regeneration_triggered": false,
+        "replaces_human_evaluation": false,
+        "status": "PASS",
+        "error_count": 0,
+        "classification_counts": {},
+        "findings": []
+      }
+    },
+    {
+      "product_id": "556404503382",
+      "category_l1": "3C数码",
+      "category_l2": "耳机",
+      "validation": {
+        "validator_version": "rag_grounding_validator_v1",
+        "mode": "detect_and_record_only",
+        "output_modified": false,
+        "regeneration_triggered": false,
+        "replaces_human_evaluation": false,
+        "status": "PASS",
+        "error_count": 0,
+        "classification_counts": {},
+        "findings": []
+      }
+    },
+    {
+      "product_id": "621341696263",
+      "category_l1": "3C数码",
+      "category_l2": "键盘",
+      "validation": {
+        "validator_version": "rag_grounding_validator_v1",
+        "mode": "detect_and_record_only",
+        "output_modified": false,
+        "regeneration_triggered": false,
+        "replaces_human_evaluation": false,
+        "status": "PASS",
+        "error_count": 0,
+        "classification_counts": {},
+        "findings": []
+      }
+    },
+    {
+      "product_id": "606784877914",
+      "category_l1": "3C数码",
+      "category_l2": "键盘",
+      "validation": {
+        "validator_version": "rag_grounding_validator_v1",
+        "mode": "detect_and_record_only",
+        "output_modified": false,
+        "regeneration_triggered": false,
+        "replaces_human_evaluation": false,
+        "status": "PASS",
+        "error_count": 0,
+        "classification_counts": {},
+        "findings": []
+      }
+    },
+    {
+      "product_id": "621326718016",
+      "category_l1": "3C数码",
+      "category_l2": "键盘",
+      "validation": {
+        "validator_version": "rag_grounding_validator_v1",
+        "mode": "detect_and_record_only",
+        "output_modified": false,
+        "regeneration_triggered": false,
+        "replaces_human_evaluation": false,
+        "status": "PASS",
+        "error_count": 0,
+        "classification_counts": {},
+        "findings": []
+      }
+    },
+    {
+      "product_id": "609932288958",
+      "category_l1": "3C数码",
+      "category_l2": "鼠标",
+      "validation": {
+        "validator_version": "rag_grounding_validator_v1",
+        "mode": "detect_and_record_only",
+        "output_modified": false,
+        "regeneration_triggered": false,
+        "replaces_human_evaluation": false,
+        "status": "PASS",
+        "error_count": 0,
+        "classification_counts": {},
+        "findings": []
+      }
+    },
+    {
+      "product_id": "614646720550",
+      "category_l1": "3C数码",
+      "category_l2": "鼠标",
+      "validation": {
+        "validator_version": "rag_grounding_validator_v1",
+        "mode": "detect_and_record_only",
+        "output_modified": false,
+        "regeneration_triggered": false,
+        "replaces_human_evaluation": false,
+        "status": "PASS",
+        "error_count": 0,
+        "classification_counts": {},
+        "findings": []
+      }
+    },
+    {
+      "product_id": "580390189481",
+      "category_l1": "3C数码",
+      "category_l2": "鼠标",
+      "validation": {
+        "validator_version": "rag_grounding_validator_v1",
+        "mode": "detect_and_record_only",
+        "output_modified": false,
+        "regeneration_triggered": false,
+        "replaces_human_evaluation": false,
+        "status": "PASS",
+        "error_count": 0,
+        "classification_counts": {},
+        "findings": []
+      }
+    }
+  ]
+}
