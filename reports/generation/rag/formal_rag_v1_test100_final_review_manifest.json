@@ -1,0 +1,117 @@
+{
+  "version": "rag_v1_formal_final_review_v1",
+  "status": "human_evaluation_completed",
+  "created_at_utc": "2026-10-01T06:19:44Z",
+  "git_baseline": {
+    "commit": "67201fdea1b95ec3e7cea26bd7a040c52ba51822",
+    "secondary_review_path": "reports/generation/rag/formal_rag_v1_test100_secondary_review.csv",
+    "secondary_review_blob_sha1": "f2381b0c54eb2a45c906f17d0486832d0cc2b9fb"
+  },
+  "inputs": [
+    {
+      "role": "user_saved_secondary_review",
+      "path": "reports/generation/rag/formal_rag_v1_test100_secondary_review.csv",
+      "sha256": "76bcfe2f9cf1a4b9276f10f7fb46bef10738accf79b22d5bd9de37082138e362"
+    },
+    {
+      "role": "original_human_review_draft",
+      "path": "reports/generation/rag/formal_rag_v1_test100_human_review.csv",
+      "sha256": "58c37006e7720cc8fef6ab8806281136695587c88722d264a66673bfb9551eb6"
+    },
+    {
+      "role": "secondary_rule_review_change_log",
+      "path": "reports/generation/rag/formal_rag_v1_test100_secondary_review_changes.csv",
+      "sha256": "3e176159f2b35780bb19a0374c2ad1cb489ff593e33b75336471e3d1d545345a"
+    },
+    {
+      "role": "formal_outputs",
+      "path": "reports/generation/rag/formal_rag_v1_test100_outputs.json",
+      "sha256": "36edf46d4a4db42254713a823265a36937439860e3c3593dad86a37976bbc298"
+    },
+    {
+      "role": "validator",
+      "path": "reports/generation/rag/formal_rag_v1_test100_validator.json",
+      "sha256": "2c83d36d5da7b3bd7fd0f6e96e3c405e53e9169a94f237ee5930a9be92339d36"
+    },
+    {
+      "role": "fact_units",
+      "path": "data/processed/week2_rag_formal_v1/test100_fact_units.jsonl",
+      "sha256": "5deb2934bbe9500235c034a700d89ba0c5ea6920dd2c37cb3eaeeb051a94b3b8"
+    },
+    {
+      "role": "source_quality_audit",
+      "path": "reports/data/week2_rag_fact_quality_audit.csv",
+      "sha256": "887ca944c9725f92b213687f1fbebbed82effd8f2bf3f3ae8734eb3e8e290ce0"
+    },
+    {
+      "role": "formal_baseline_metrics",
+      "path": "reports/generation/evaluation/baseline_metrics_sampling_v2.json",
+      "sha256": "308ed68e74cf6e31fa2e4ba1fa091b9abdacb65bf4e8cc4a31b360c5629edd22"
+    }
+  ],
+  "outputs": [
+    {
+      "role": "final_review",
+      "path": "reports/generation/rag/formal_rag_v1_test100_final_review.csv",
+      "sha256": "bd3aaaf4485b3cf69fc5bfda8b6ebe25d9a4104647c29343c8990fd93042d036"
+    },
+    {
+      "role": "final_review_change_log",
+      "path": "reports/generation/rag/formal_rag_v1_test100_final_review_changes.csv",
+      "sha256": "6d292d64faf38102c009efdcab5586ba9ad1b904d7cf1c161aa922856986c584"
+    },
+    {
+      "role": "evaluation_config",
+      "path": "configs/generation_rag_formal_evaluation_final_v1.json",
+      "sha256": "e54b28b06a38feac967579f177f809f09f044acfb362f7de5ca5d52387e2dece"
+    },
+    {
+      "role": "formal_metrics",
+      "path": "reports/generation/rag/formal_rag_v1_test100_metrics.json",
+      "sha256": "80f6dbc6b0edbfb12e0a8da66f35e0e4dbb6e627c3bc78a46606e11c1ab170fe"
+    },
+    {
+      "role": "formal_report",
+      "path": "reports/generation/rag/formal_rag_v1_test100_report.md",
+      "sha256": "452cb4408c3ea625274b417bdf05585c52a469e7fd2770ad48aafd8f389a5b32"
+    }
+  ],
+  "finalization": {
+    "sample_count": 100,
+    "assistant_draft_rows": 0,
+    "pending_human_review_rows": 0,
+    "human_confirmed_rows": 100,
+    "source_quality_status_counts": {
+      "PASS": 84,
+      "REVIEW": 11,
+      "CONFLICT": 5
+    },
+    "removed_helper_columns": [
+      "人工复核指引_是否重点复核",
+      "人工复核指引_重点查看列",
+      "人工复核指引_列含义",
+      "人工复核指引_本行待确认事项",
+      "人工复核指引_填写边界"
+    ],
+    "change_log_rows": 233,
+    "change_log_basis": "Diff from the committed secondary-review baseline to the independent final review."
+  },
+  "validation": {
+    "row_count_valid": true,
+    "product_ids_unique": true,
+    "product_ids_match_frozen_scope": true,
+    "required_fields_complete": true,
+    "binary_fields_valid": true,
+    "matched_count_within_denominator": true,
+    "factual_error_attribution_equation_valid": true,
+    "source_quality_status_matches_frozen_audit": true,
+    "final_fields_match_user_saved_review": true,
+    "formal_evaluator_status": "human_evaluation_completed"
+  },
+  "immutability": {
+    "formal_outputs_modified": false,
+    "validator_modified": false,
+    "original_human_review_modified": false,
+    "secondary_rule_review_change_log_modified": false
+  }
+}
