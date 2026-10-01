@@ -10,7 +10,12 @@ from scripts.evaluate_generation import (
     validate_attribution_rows,
     validate_output_report,
 )
-from scripts.run_rag_validation import load_excluded_product_ids
+from scripts.run_rag_validation import (
+    load_excluded_product_ids,
+    paired_sample_seed,
+    select_development_samples,
+    verify_p2_holdout_guard,
+)
 from src.generation.grounding import validate_generation_grounding
 from src.generation.evaluation import (
     GenerationJudgment,
@@ -19,11 +24,18 @@ from src.generation.evaluation import (
     evaluate_judgments,
     parse_judgments,
 )
-from src.generation.qwen import build_messages, build_rag_messages, parse_generation_output
+from src.generation.qwen import (
+    build_messages,
+    build_rag_messages,
+    mandatory_fact_lines,
+    parse_generation_output,
+    preflight_chat_prompt,
+)
 from src.generation.rag import (
     build_fact_units,
     is_placeholder_value,
     select_global_top_k_facts,
+    select_rag_v2_context,
     select_top_k_facts,
 )
 
@@ -96,6 +108,27 @@ class GenerationConfigTests(unittest.TestCase):
             self.assertEqual(rag["baseline_prompt_version"], baseline["prompt_version"])
             self.assertEqual(rag["prompt_version"], f"rag_{version}")
             self.assertFalse(rag["pairing"]["formal_test100"])
+
+    def test_rag_v2_policy_matches_frozen_core_fields_and_denominator_contract(self) -> None:
+        config_dir = Path(__file__).resolve().parents[1] / "configs"
+        policy = json.loads(
+            (config_dir / "rag_fact_policy_v4.json").read_text(encoding="utf-8")
+        )
+        evaluation = json.loads(
+            (config_dir / "generation_evaluation.json").read_text(encoding="utf-8")
+        )
+        validation = json.loads(
+            (config_dir / "generation_rag_validation_v7.json").read_text(
+                encoding="utf-8"
+            )
+        )
+
+        self.assertEqual(policy["mandatory_core_fields"], evaluation["core_attributes"])
+        contract = validation["denominator_contract"]
+        self.assertEqual(contract["static_category_field_opportunities"], 1500)
+        self.assertFalse(contract["source_missing_is_mandatory_injection_failure"])
+        self.assertFalse(contract["official_denominator_modified"])
+        self.assertIn("core_attribute_count", contract["official_attribute_hit_denominator"])
 
 
 class GenerationPromptTests(unittest.TestCase):
@@ -345,6 +378,173 @@ class GenerationPromptTests(unittest.TestCase):
         self.assertIn("只用于禁止相反内容", combined)
         self.assertIn("品类可以做不增加新事实的直接语义释义", combined)
 
+    def test_rag_v2_context_and_coverage_share_four_zones_but_only_coverage_is_strong(self) -> None:
+        def fact(fact_id: str, field: str, value: str) -> dict[str, object]:
+            return {
+                "fact_id": fact_id,
+                "product_id": "1",
+                "canonical_field": field,
+                "normalized_values": [value],
+                "quality_status": "eligible",
+            }
+
+        context = {
+            "product_id": "1",
+            "top_k": 1,
+            "identity_facts": [fact("identity", "category_l2", "保温杯")],
+            "mandatory_core_facts": [fact("mandatory", "容量", "500mL")],
+            "supplemental_facts": [fact("supplemental", "是否带吸管", "是")],
+            "selected_facts": [fact("supplemental", "是否带吸管", "是")],
+            "negative_constraint_facts": [],
+            "mandatory_injection_expected_fact_ids": ["mandatory"],
+        }
+
+        context_prompt = "\n".join(
+            message["content"]
+            for message in build_rag_messages(
+                self.generation_input, context, prompt_version="rag_v2_context_v1"
+            )
+        )
+        coverage_prompt = "\n".join(
+            message["content"]
+            for message in build_rag_messages(
+                self.generation_input, context, prompt_version="rag_v2_coverage_v1"
+            )
+        )
+
+        self.assertIn("[mandatory] 容量=500mL", context_prompt)
+        self.assertIn("Supplemental Top-3", context_prompt)
+        self.assertNotIn("每一条 Mandatory Reliable Core Fact 至少完整出现一次", context_prompt)
+        self.assertIn("每一条 Mandatory Reliable Core Fact 至少完整出现一次", coverage_prompt)
+        self.assertEqual(mandatory_fact_lines(context), ["[mandatory] 容量=500mL"])
+
+    def test_rag_v2_controlled_factual_prompt_is_fact_only_and_soft_coverage(self) -> None:
+        def fact(fact_id: str, field: str, value: str) -> dict[str, object]:
+            return {
+                "fact_id": fact_id,
+                "product_id": "1",
+                "canonical_field": field,
+                "normalized_values": [value],
+                "quality_status": "eligible",
+            }
+
+        context = {
+            "product_id": "1",
+            "top_k": 1,
+            "identity_facts": [fact("identity", "品牌", "示例品牌")],
+            "mandatory_core_facts": [fact("mandatory", "容量", "500mL")],
+            "supplemental_facts": [fact("supplemental", "材质", "不锈钢")],
+            "negative_constraint_facts": [],
+            "mandatory_injection_expected_fact_ids": ["mandatory"],
+        }
+
+        prompt = "\n".join(
+            message["content"]
+            for message in build_rag_messages(
+                self.generation_input,
+                context,
+                prompt_version="rag_v2_controlled_factual_v1",
+            )
+        )
+
+        self.assertIn("商品事实转写器，不是营销文案创作者", prompt)
+        self.assertIn("只能陈述事实是什么，禁止解释因此有什么好处", prompt)
+        self.assertIn("品牌和型号只能逐字来自 Identity", prompt)
+        self.assertIn("禁止舍入、估算、换算、扩大、缩小", prompt)
+        self.assertIn("禁止改写成各种设备、全部设备、广泛兼容", prompt)
+        self.assertIn("不得从品类推导具体场所、人群、兼容对象、性能或效果", prompt)
+        self.assertIn("三个卖点优先逐条写成“字段：值”", prompt)
+        self.assertIn("若某条事实无法自然放入文案，可以不写", prompt)
+        self.assertNotIn("每一条 Mandatory Reliable Core Fact 至少完整出现一次", prompt)
+        self.assertIn("[mandatory] 容量=500mL", prompt)
+
+    def test_rag_v2_rejects_duplicate_zones_and_mandatory_id_mismatch(self) -> None:
+        fact = {
+            "fact_id": "same",
+            "product_id": "1",
+            "canonical_field": "容量",
+            "normalized_values": ["500mL"],
+            "quality_status": "eligible",
+        }
+        context = {
+            "product_id": "1",
+            "top_k": 1,
+            "identity_facts": [],
+            "mandatory_core_facts": [fact],
+            "supplemental_facts": [fact],
+            "negative_constraint_facts": [],
+            "mandatory_injection_expected_fact_ids": ["same"],
+        }
+
+        with self.assertRaisesRegex(ValueError, "不得重复"):
+            build_rag_messages(
+                self.generation_input, context, prompt_version="rag_v2_context_v1"
+            )
+
+
+class PromptPreflightTests(unittest.TestCase):
+    class FakeTokenizer:
+        def __init__(self, *, drop_mandatory_when_tokenized: bool = False) -> None:
+            self.drop_mandatory_when_tokenized = drop_mandatory_when_tokenized
+            self.truncation_values: list[bool] = []
+
+        @staticmethod
+        def encode(text: str) -> list[int]:
+            return [ord(character) for character in text]
+
+        def apply_chat_template(
+            self,
+            messages: list[dict[str, str]],
+            *,
+            tokenize: bool,
+            truncation: bool | None = None,
+            **_: object,
+        ) -> object:
+            rendered = "\n".join(message["content"] for message in messages)
+            if not tokenize:
+                return rendered
+            self.truncation_values.append(bool(truncation))
+            if self.drop_mandatory_when_tokenized:
+                rendered = rendered.replace("[f1] 容量=500mL", "")
+            return {"input_ids": [self.encode(rendered)]}
+
+        def __call__(self, text: str, *, truncation: bool, **_: object) -> object:
+            self.truncation_values.append(bool(truncation))
+            return {"input_ids": self.encode(text)}
+
+        @staticmethod
+        def decode(input_ids: list[int], **_: object) -> str:
+            return "".join(chr(token_id) for token_id in input_ids)
+
+    def test_preflight_disables_truncation_and_verifies_mandatory_tokens(self) -> None:
+        tokenizer = self.FakeTokenizer()
+        _, metadata = preflight_chat_prompt(
+            tokenizer,
+            [{"role": "user", "content": "事实：[f1] 容量=500mL"}],
+            max_input_tokens=100,
+            mandatory_lines=["[f1] 容量=500mL"],
+        )
+
+        self.assertEqual(tokenizer.truncation_values, [False, False])
+        self.assertTrue(metadata["mandatory_injection_complete"])
+        self.assertEqual(metadata["mandatory_verified_count"], 1)
+
+    def test_preflight_fails_on_overflow_or_tokenizer_loss(self) -> None:
+        with self.assertRaisesRegex(ValueError, "禁止截断"):
+            preflight_chat_prompt(
+                self.FakeTokenizer(),
+                [{"role": "user", "content": "事实：[f1] 容量=500mL"}],
+                max_input_tokens=3,
+                mandatory_lines=["[f1] 容量=500mL"],
+            )
+        with self.assertRaisesRegex(ValueError, "tokenizer 后"):
+            preflight_chat_prompt(
+                self.FakeTokenizer(drop_mandatory_when_tokenized=True),
+                [{"role": "user", "content": "事实：[f1] 容量=500mL"}],
+                max_input_tokens=100,
+                mandatory_lines=["[f1] 容量=500mL"],
+            )
+
 
 class RagValidationRunnerTests(unittest.TestCase):
     def test_loads_excluded_ids_only_from_validation_report(self) -> None:
@@ -361,6 +561,93 @@ class RagValidationRunnerTests(unittest.TestCase):
             )
 
             self.assertEqual(load_excluded_product_ids([path]), {"1", "2"})
+
+    def test_paired_seed_is_independent_of_variant(self) -> None:
+        seeds = {
+            name: paired_sample_seed(42, 7)
+            for name in (
+                "V1-control",
+                "V2-context",
+                "V2-coverage",
+                "V2-controlled-factual",
+            )
+        }
+
+        self.assertEqual(set(seeds.values()), {49})
+
+    def test_p26_config_keeps_frozen_generation_and_retrieval_settings(self) -> None:
+        project_root = Path(__file__).resolve().parents[1]
+        p2 = json.loads(
+            (project_root / "configs/generation_rag_validation_v7.json").read_text(
+                encoding="utf-8"
+            )
+        )
+        p26 = json.loads(
+            (project_root / "configs/generation_rag_validation_v8_p26.json").read_text(
+                encoding="utf-8"
+            )
+        )
+        frozen_keys = [
+            "model_name",
+            "revision",
+            "cache_dir",
+            "device",
+            "load_in_4bit",
+            "bnb_4bit_quant_type",
+            "bnb_4bit_compute_dtype",
+            "max_input_tokens",
+            "max_new_tokens",
+            "do_sample",
+            "temperature",
+            "top_p",
+            "seed",
+            "validation_source",
+            "audit_path",
+            "development_sample_source",
+            "protected_holdout",
+            "denominator_contract",
+            "grounding_validator",
+        ]
+        for key in frozen_keys:
+            self.assertEqual(p26[key], p2[key], key)
+        self.assertEqual(
+            p26["pairing"]["variants"],
+            ["V1-control", "V2-controlled-factual"],
+        )
+        candidate = p26["comparison_variants"][1]
+        self.assertEqual(candidate["prompt_version"], "rag_v2_controlled_factual_v1")
+        self.assertEqual(candidate["context_selector"], "rag_v2_four_zone")
+        self.assertEqual(candidate["fact_policy_path"], "configs/rag_fact_policy_v4.json")
+
+    def test_frozen_holdout_manifest_and_p2_sample_guard(self) -> None:
+        project_root = Path(__file__).resolve().parents[1]
+        config = json.loads(
+            (project_root / "configs/generation_rag_validation_v7.json").read_text(
+                encoding="utf-8"
+            )
+        )
+        holdout_path = project_root / config["protected_holdout"]["path"]
+        protected = verify_p2_holdout_guard(
+            holdout_path,
+            expected_manifest_sha256=config["protected_holdout"]["sha256"],
+            validation_path=project_root / config["validation_source"],
+            audit_path=project_root / config["audit_path"],
+        )
+
+        self.assertEqual(len(protected), 32)
+        product_id = next(iter(protected))
+        records = [
+            {"product_id": product_id, "category_l2": "键盘"},
+        ]
+        audit = {product_id: {"status": "PASS"}}
+        with self.assertRaisesRegex(ValueError, "holdout 重叠"):
+            select_development_samples(
+                records,
+                [product_id],
+                audit,
+                per_category=1,
+                protected_product_ids=protected,
+            )
 
 
 class GenerationOutputTests(unittest.TestCase):
@@ -400,6 +687,9 @@ class RagFactTests(unittest.TestCase):
         )
         cls.policy_v3 = json.loads(
             (project_root / "configs/rag_fact_policy_v3.json").read_text(encoding="utf-8")
+        )
+        cls.policy_v4 = json.loads(
+            (project_root / "configs/rag_fact_policy_v4.json").read_text(encoding="utf-8")
         )
 
     def build_facts(
@@ -632,6 +922,110 @@ class RagFactTests(unittest.TestCase):
     def test_missing_audit_status_fails_closed(self) -> None:
         with self.assertRaisesRegex(ValueError, "质量审计状态"):
             self.build_facts(status="")
+
+    def test_rag_v2_four_zones_are_disjoint_and_quality_gated(self) -> None:
+        facts = self.build_facts(
+            policy=self.policy_v4,
+            attributes={
+                "品牌": ["双飞燕"],
+                "双飞燕型号": ["KR-6A"],
+                "接口类型": ["USB"],
+                "是否无线": ["有线"],
+                "是否机械键盘": ["是"],
+                "轴体": ["青轴"],
+            },
+        )
+        context = select_rag_v2_context(facts, self.policy_v4, top_k=3)
+        zones = [
+            context["identity_facts"],
+            context["mandatory_core_facts"],
+            context["supplemental_facts"],
+            context["negative_constraint_facts"],
+        ]
+        zone_ids = [{fact["fact_id"] for fact in zone} for zone in zones]
+
+        for index, left in enumerate(zone_ids):
+            for right in zone_ids[index + 1 :]:
+                self.assertFalse(left & right)
+        self.assertIn(
+            "接口类型",
+            {fact["canonical_field"] for fact in context["mandatory_core_facts"]},
+        )
+        self.assertIn(
+            "是否无线",
+            {fact["canonical_field"] for fact in context["negative_constraint_facts"]},
+        )
+        self.assertLessEqual(len(context["supplemental_facts"]), 3)
+        self.assertTrue(
+            all(
+                fact["quality_status"] == "eligible"
+                for zone in zones
+                for fact in zone
+            )
+        )
+
+    def test_missing_source_core_field_is_not_mandatory_injection_failure(self) -> None:
+        facts = self.build_facts(
+            policy=self.policy_v4,
+            attributes={"品牌": ["双飞燕"], "接口类型": ["USB"]},
+        )
+        context = select_rag_v2_context(facts, self.policy_v4, top_k=3)
+        mandatory_fields = {
+            fact["canonical_field"] for fact in context["mandatory_core_facts"]
+        }
+
+        self.assertIn("接口类型", mandatory_fields)
+        self.assertNotIn("是否机械键盘", mandatory_fields)
+        self.assertEqual(
+            len(context["mandatory_injection_expected_fact_ids"]),
+            len(context["mandatory_core_facts"]),
+        )
+
+    def test_rag_v2_withholds_multivalue_review_conflict_and_invalid_weight(self) -> None:
+        multivalue = self.build_facts(
+            category_l2="收纳箱",
+            policy=self.policy_v4,
+            attributes={
+                "品牌": ["测试品牌"],
+                "材质": ["塑料"],
+                "适用空间": ["卧室", "客厅"],
+                "净重": ["0kg"],
+            },
+        )
+        by_field = {fact["canonical_field"]: fact for fact in multivalue}
+
+        self.assertEqual(by_field["适用空间"]["quality_status"], "withhold_review")
+        self.assertNotIn("净重", by_field)
+        reviewed = self.build_facts(
+            policy=self.policy_v4,
+            status="REVIEW",
+            blocked_fields="接口类型",
+        )
+        conflicted = self.build_facts(
+            policy=self.policy_v4,
+            status="CONFLICT",
+            blocked_fields="品牌",
+        )
+        self.assertNotIn(
+            "接口类型",
+            {
+                fact["canonical_field"]
+                for fact in select_rag_v2_context(reviewed, self.policy_v4)[
+                    "mandatory_core_facts"
+                ]
+            },
+        )
+        self.assertFalse(
+            any(
+                select_rag_v2_context(conflicted, self.policy_v4)[key]
+                for key in (
+                    "identity_facts",
+                    "mandatory_core_facts",
+                    "supplemental_facts",
+                    "negative_constraint_facts",
+                )
+            )
+        )
 
 
 class GroundingValidatorTests(unittest.TestCase):

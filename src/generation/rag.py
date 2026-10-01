@@ -141,6 +141,9 @@ def _make_fact(
     field_order: int,
     quality_status: str,
     quality_reasons: list[str],
+    is_core_attribute: bool = False,
+    mandatory_status: str = "not_core",
+    mandatory_reasons: list[str] | None = None,
 ) -> dict[str, Any]:
     audit_status = audit_row.get("status", "")
     consistency = "not_flagged" if audit_status == "PASS" else "see_audit_record"
@@ -166,6 +169,9 @@ def _make_fact(
         "task_tags": list(SUPPORTED_TASKS),
         "quality_status": quality_status,
         "quality_reasons": quality_reasons,
+        "is_core_attribute": is_core_attribute,
+        "mandatory_status": mandatory_status,
+        "mandatory_reasons": list(mandatory_reasons or []),
         "evidence": {
             "structured_source": "standardized_category"
             if field_name.startswith("category_")
@@ -180,6 +186,96 @@ def _make_fact(
         "source_path": source_path,
         "source_sha256": source_sha256,
     }
+
+
+def _is_negative_values(values: Iterable[Any], policy: dict[str, Any]) -> bool:
+    negative_policy = policy.get("negative_constraint_policy", {})
+    exact_values = {
+        normalize_fact_value(value).casefold()
+        for value in negative_policy.get("exact_values", [])
+    }
+    contains_values = tuple(
+        normalize_fact_value(value).casefold()
+        for value in negative_policy.get("contains_values", [])
+    )
+    normalized = [normalize_fact_value(value).casefold() for value in values]
+    return bool(normalized) and all(
+        value in exact_values
+        or any(token and token in value for token in contains_values)
+        for value in normalized
+    )
+
+
+def _matches_supplemental_only_rule(
+    category_l2: str,
+    canonical_field: str,
+    normalized_values: list[str],
+    policy: dict[str, Any],
+) -> str | None:
+    mandatory_policy = policy.get("mandatory_core_policy", {})
+    for rule in mandatory_policy.get("supplemental_only_rules", []):
+        if rule.get("category_l2") != category_l2 or rule.get("field") != canonical_field:
+            continue
+        exact_values = {
+            normalize_fact_value(value).casefold()
+            for value in rule.get("exact_values", [])
+        }
+        regex_values = [re.compile(pattern) for pattern in rule.get("regex_values", [])]
+        if all(
+            value.casefold() in exact_values
+            or any(pattern.fullmatch(value) for pattern in regex_values)
+            for value in normalized_values
+        ):
+            return str(rule.get("reason", "supplemental_only_rule"))
+    return None
+
+
+def _invalid_value_shape_reason(
+    category_l2: str,
+    canonical_field: str,
+    normalized_values: list[str],
+    policy: dict[str, Any],
+) -> str | None:
+    mandatory_policy = policy.get("mandatory_core_policy", {})
+    for rule in mandatory_policy.get("value_shape_rules", []):
+        if rule.get("category_l2") != category_l2 or rule.get("field") != canonical_field:
+            continue
+        pattern = re.compile(str(rule["regex"]))
+        if not all(pattern.fullmatch(value) for value in normalized_values):
+            return "invalid_value_shape"
+        if rule.get("must_be_positive"):
+            for value in normalized_values:
+                match = re.match(r"[0-9]+(?:\.[0-9]+)?", value)
+                if match is None or float(match.group()) <= 0:
+                    return "nonpositive_value"
+    return None
+
+
+def _mandatory_metadata(
+    *,
+    category_l2: str,
+    canonical_field: str,
+    normalized_values: list[str],
+    fact_role: str,
+    quality_status: str,
+    policy: dict[str, Any],
+) -> tuple[bool, str, list[str]]:
+    mandatory_fields = set(policy.get("mandatory_core_fields", {}).get(category_l2, []))
+    is_core = canonical_field in mandatory_fields
+    if not is_core:
+        return False, "not_core", []
+    if quality_status != "eligible":
+        return True, "withheld_quality", [quality_status]
+    if fact_role == "identity":
+        return True, "identity_coverage", ["render_once_in_identity"]
+    if _is_negative_values(normalized_values, policy):
+        return True, "negative_constraint", ["negative_core_not_forced"]
+    supplemental_reason = _matches_supplemental_only_rule(
+        category_l2, canonical_field, normalized_values, policy
+    )
+    if supplemental_reason:
+        return True, "supplemental_only", [supplemental_reason]
+    return True, "mandatory", ["eligible_positive_or_neutral_core_fact"]
 
 
 def build_fact_units(
@@ -216,6 +312,20 @@ def build_fact_units(
     excluded_fields = set(policy["global_excluded_fields"]["fields"])
     excluded_patterns = policy["global_excluded_fields"]["patterns"]
     conditional_enabled = bool(policy["selection_policy"]["conditional_fields_enabled"])
+    mandatory_fields = set(policy.get("mandatory_core_fields", {}).get(category_l2, []))
+    excluded_values_by_attribute = {
+        field: {
+            normalize_fact_value(value).casefold()
+            for value in values
+        }
+        for field, values in policy["global_value_gates"].get(
+            "excluded_values_by_attribute", {}
+        ).items()
+    }
+    identity_absent_values = {
+        normalize_fact_value(value).casefold()
+        for value in policy["global_value_gates"].get("identity_absent_values", [])
+    }
     facts: list[dict[str, Any]] = []
 
     for order, field_name in enumerate(("category_l1", "category_l2")):
@@ -266,9 +376,14 @@ def build_fact_units(
             preferred_identity_fields[canonical_identity] = raw_field
 
     for raw_field, raw_value in attributes.items():
-        if raw_field in excluded_fields or any(pattern in raw_field for pattern in excluded_patterns):
-            continue
         canonical_identity = _canonical_identity_field(raw_field)
+        canonical_candidate = canonical_identity or raw_field
+        is_mandatory_candidate = canonical_candidate in mandatory_fields
+        if (
+            raw_field in excluded_fields
+            or any(pattern in raw_field for pattern in excluded_patterns)
+        ) and not is_mandatory_candidate:
+            continue
         fact_role = "task"
         field_group = ""
         knowledge_level = ""
@@ -305,6 +420,12 @@ def build_fact_units(
                     placeholders,
                     composite_separator_pattern=composite_placeholder_separator,
                 )
+                and value.casefold()
+                not in excluded_values_by_attribute.get(canonical_field, set())
+                and not (
+                    fact_role == "identity"
+                    and value.casefold() in identity_absent_values
+                )
                 and value not in normalized_values
             ):
                 normalized_values.append(value)
@@ -319,9 +440,23 @@ def build_fact_units(
             block_entire_product,
             distinct_multiple,
         )
+        invalid_shape = _invalid_value_shape_reason(
+            category_l2, canonical_field, normalized_values, policy
+        )
+        if status == "eligible" and invalid_shape:
+            status = "withhold_review"
+            reasons = [*reasons, invalid_shape]
         removed_placeholders = len(normalized_all) - len(normalized_values)
         if removed_placeholders:
             reasons = [*reasons, "placeholder_value_removed"]
+        is_core_attribute, mandatory_status, mandatory_reasons = _mandatory_metadata(
+            category_l2=category_l2,
+            canonical_field=canonical_field,
+            normalized_values=normalized_values,
+            fact_role=fact_role,
+            quality_status=status,
+            policy=policy,
+        )
         facts.append(
             _make_fact(
                 record=record,
@@ -339,6 +474,9 @@ def build_fact_units(
                 field_order=field_order,
                 quality_status=status,
                 quality_reasons=reasons,
+                is_core_attribute=is_core_attribute,
+                mandatory_status=mandatory_status,
+                mandatory_reasons=mandatory_reasons,
             )
         )
 
@@ -557,5 +695,142 @@ def select_global_top_k_facts(
             "tasks": list(tasks),
             "rrf_k": rrf_k,
         },
+        "quality_status_counts": dict(sorted(quality_counts.items())),
+    }
+
+
+def select_rag_v2_context(
+    fact_units: Iterable[dict[str, Any]],
+    policy: dict[str, Any],
+    *,
+    top_k: int | None = None,
+) -> dict[str, Any]:
+    """构造 Identity、Mandatory、Supplemental 与 Negative 四个互斥事实区。"""
+    units = list(fact_units)
+    product_ids = {str(unit["product_id"]) for unit in units}
+    if len(product_ids) > 1:
+        raise ValueError("一次事实选择只能处理同一商品，禁止跨商品补充事实。")
+    product_id = next(iter(product_ids), "")
+
+    identity_order = {
+        field: index
+        for index, field in enumerate(policy["selection_policy"]["identity_order"])
+    }
+    identity_facts = sorted(
+        (
+            unit
+            for unit in units
+            if unit["fact_role"] == "identity" and unit["quality_status"] == "eligible"
+        ),
+        key=lambda unit: (
+            identity_order.get(unit["canonical_field"], len(identity_order)),
+            unit["field_order"],
+            unit["fact_id"],
+        ),
+    )
+    mandatory_core_facts = sorted(
+        (
+            unit
+            for unit in units
+            if unit.get("mandatory_status") == "mandatory"
+            and unit["fact_role"] == "task"
+            and unit["quality_status"] == "eligible"
+        ),
+        key=lambda unit: (
+            unit["field_order"],
+            unit["canonical_field"],
+            unit["fact_id"],
+        ),
+    )
+    negative_constraint_facts = sorted(
+        (
+            {
+                **unit,
+                "constraint_reason": "eligible_negative_fact_outside_active_content",
+            }
+            for unit in units
+            if unit["fact_role"] == "task"
+            and unit["quality_status"] == "eligible"
+            and _is_negative_values(unit.get("normalized_values", []), policy)
+        ),
+        key=lambda unit: (
+            unit["field_order"],
+            unit["canonical_field"],
+            unit["fact_id"],
+        ),
+    )
+
+    excluded_ids = {
+        fact["fact_id"]
+        for fact in [*mandatory_core_facts, *negative_constraint_facts]
+    }
+    supplemental_pool = [
+        unit for unit in units if unit["fact_id"] not in excluded_ids
+    ]
+    supplemental_selection = select_global_top_k_facts(
+        supplemental_pool,
+        policy,
+        top_k=top_k,
+        separate_negative_constraints=False,
+    )
+    supplemental_facts = supplemental_selection["selected_facts"]
+
+    zones = {
+        "identity": identity_facts,
+        "mandatory": mandatory_core_facts,
+        "supplemental": supplemental_facts,
+        "negative": negative_constraint_facts,
+    }
+    zone_ids = {
+        name: {fact["fact_id"] for fact in facts}
+        for name, facts in zones.items()
+    }
+    zone_names = tuple(zone_ids)
+    for index, left in enumerate(zone_names):
+        for right in zone_names[index + 1 :]:
+            overlap = zone_ids[left] & zone_ids[right]
+            if overlap:
+                raise ValueError(f"RAG v2 事实区重复：{left}/{right}={sorted(overlap)}")
+    injected = [fact for facts in zones.values() for fact in facts]
+    if any(fact["quality_status"] != "eligible" for fact in injected):
+        raise ValueError("RAG v2 只能注入 quality_status=eligible 的事实。")
+    if any(str(fact["product_id"]) != product_id for fact in injected):
+        raise ValueError("RAG v2 上下文中存在跨商品事实。")
+
+    identity_coverage_facts = [
+        fact
+        for fact in identity_facts
+        if fact.get("mandatory_status") == "identity_coverage"
+    ]
+    core_status_counts = Counter(
+        unit.get("mandatory_status", "not_core")
+        for unit in units
+        if unit.get("is_core_attribute", False)
+    )
+    quality_counts = Counter(unit["quality_status"] for unit in units)
+    return {
+        "product_id": product_id,
+        "task": "rag_v2_four_zone_context",
+        "top_k": supplemental_selection["top_k"],
+        "identity_facts": identity_facts,
+        "mandatory_core_facts": mandatory_core_facts,
+        "supplemental_facts": supplemental_facts,
+        # 兼容现有报告与人工评测展示；与 supplemental_facts 是同一事实集合。
+        "selected_facts": supplemental_facts,
+        "negative_constraint_facts": negative_constraint_facts,
+        "identity_mandatory_coverage_fact_ids": [
+            fact["fact_id"] for fact in identity_coverage_facts
+        ],
+        "mandatory_injection_expected_fact_ids": [
+            fact["fact_id"] for fact in mandatory_core_facts
+        ],
+        "existing_core_fact_count": sum(
+            1 for unit in units if unit.get("is_core_attribute", False)
+        ),
+        "mandatory_status_counts": dict(sorted(core_status_counts.items())),
+        "eligible_supplemental_candidate_count": supplemental_selection[
+            "eligible_candidate_count"
+        ],
+        "joint_ranking": supplemental_selection["joint_ranking"],
         "quality_status_counts": dict(sorted(quality_counts.items())),
     }

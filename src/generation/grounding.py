@@ -65,7 +65,13 @@ def _normalized(text: str) -> str:
 def _facts(rag_context: dict[str, Any]) -> list[dict[str, Any]]:
     facts = []
     seen = set()
-    for key in ("identity_facts", "selected_facts", "negative_constraint_facts"):
+    for key in (
+        "identity_facts",
+        "mandatory_core_facts",
+        "supplemental_facts",
+        "selected_facts",
+        "negative_constraint_facts",
+    ):
         for fact in rag_context.get(key, []):
             fact_id = fact.get("fact_id") or (
                 fact.get("canonical_field"),

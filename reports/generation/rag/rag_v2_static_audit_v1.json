@@ -1,0 +1,136 @@
+{
+  "version": "rag_v2_static_audit_v1",
+  "status": "completed",
+  "scope": "train_plus_validation_without_generation",
+  "model_executed": false,
+  "formal_test100_used_for_rules": false,
+  "inputs": {
+    "frozen_core_definition": {
+      "path": "configs/generation_evaluation.json",
+      "sha256": "66e97e3d620c83584f2a9bff1757127117043dfe154e4dcbfbfd40cccc7e00bd"
+    },
+    "train": {
+      "path": "data/processed/week2_train_v1/train.jsonl",
+      "sha256": "6ba7179da3339c638aaace1a331cdc50648e58aa75c6a6852e33666bda512fb1",
+      "record_count": 1559
+    },
+    "train_consistency_review": {
+      "path": "reports/data/week2_train_consistency_review.csv",
+      "sha256": "d39ac8eadb1c59eaca298f234dfe5c3924fcc94dd9bc299b41c10848ae0a680f",
+      "confirmed_conflict_count": 15,
+      "review_count": 28
+    },
+    "validation": {
+      "path": "data/processed/week1_v3/multimodal/validation.jsonl",
+      "sha256": "dd2bc1d6c21567176d95f5414bfd9304f48979b3bb39ab0b038627b1f346af0b",
+      "record_count": 200
+    },
+    "validation_quality_audit": {
+      "path": "reports/data/week2_rag_fact_quality_audit.csv",
+      "sha256": "887ca944c9725f92b213687f1fbebbed82effd8f2bf3f3ae8734eb3e8e290ce0",
+      "scope_filter": "validation",
+      "status_counts": {"PASS": 180, "REVIEW": 11, "CONFLICT": 9}
+    },
+    "rag_v1_policy_reference": {
+      "path": "configs/rag_fact_policy_v3.json",
+      "sha256": "df738407e72b4280e9d286118ac84ff6442284195d7b763ddb32ead0ccb68ae1"
+    },
+    "rag_v1_validation_facts_reference": {
+      "path": "data/processed/week2_rag_v2/validation_fact_units.jsonl",
+      "sha256": "8aab6cdaaed0f7e472869632681e3271c6fbf9fabd2da9be4cbf06c201c1feed"
+    }
+  },
+  "denominator_definitions": {
+    "static_category_field_opportunities": "For every record, count every category-level frozen core field, including source-missing fields.",
+    "existing_core_facts": "Frozen core fields that have a non-placeholder value in the same-product structured source.",
+    "formal_core_attribute_count": "Per-sample count already frozen in the generation evaluation input and annotation; this alone is the attribute-hit denominator.",
+    "mandatory_injection_denominator": "Only actual Mandatory facts produced after source presence and quality gates. Missing source fields are not expected Mandatory facts.",
+    "invariants": [
+      "Static opportunities never replace formal core_attribute_count.",
+      "A source-missing core field is not a Mandatory injection failure.",
+      "RAG v2 does not modify attribute_checklist, core_attribute_count, matching rules, or the formal denominator."
+    ]
+  },
+  "train_summary": {
+    "record_count": 1559,
+    "category_field_opportunities": 11694,
+    "non_placeholder_present_core_fields": 9043,
+    "present_rate": 0.7733025483153754,
+    "distinct_multi_value_core_fields": 395,
+    "negative_value_core_fields": 355,
+    "quality_rule_basis": "General issue classes only; no product-specific allow or block patches."
+  },
+  "validation_summary": {
+    "record_count": 200,
+    "category_field_opportunities": 1500,
+    "non_placeholder_present_core_fields": 1159,
+    "rag_v1_classification": {
+      "eligible": 967,
+      "missing": 297,
+      "policy_excluded": 124,
+      "withhold_review": 46,
+      "placeholder": 44,
+      "blocked_conflict": 22
+    },
+    "rag_v2_proposed_classification": {
+      "mandatory": 662,
+      "identity_mandatory_coverage": 323,
+      "negative_constraint": 43,
+      "supplemental_only": 43,
+      "review_multi_value": 49,
+      "review": 13,
+      "conflict": 22,
+      "placeholder_or_invalid_identity": 48,
+      "missing": 297
+    },
+    "mandatory_coverage_total": 985,
+    "mandatory_coverage_average_per_product": 4.925,
+    "mandatory_coverage_by_category": {
+      "耳机": {"average": 4.12, "minimum": 0, "maximum": 7},
+      "键盘": {"average": 4.88, "minimum": 2, "maximum": 6},
+      "鼠标": {"average": 5.84, "minimum": 2, "maximum": 8},
+      "移动电源": {"average": 5.48, "minimum": 0, "maximum": 8},
+      "保温杯": {"average": 6.24, "minimum": 5, "maximum": 8},
+      "收纳箱": {"average": 4.16, "minimum": 2, "maximum": 5},
+      "拖把": {"average": 4.08, "minimum": 0, "maximum": 7},
+      "垃圾桶": {"average": 4.6, "minimum": 0, "maximum": 6}
+    }
+  },
+  "general_rules": {
+    "mandatory_candidate_fields": "Exactly match configs/generation_evaluation.json core_attributes by category.",
+    "identity": "Category plus quality-eligible brand/model. Core brand/model also receive an identity coverage marker but are not duplicated in the Prompt.",
+    "mandatory": "Same-product frozen core field; source value present; quality_status eligible; one distinct normalized value; positive or neutral; suitable for active expression.",
+    "negative": "Eligible negative task facts are read-only constraints and are excluded from Mandatory and Supplemental.",
+    "supplemental": "Remaining eligible non-identity, non-Mandatory, non-Negative facts, ranked by the unchanged RRF and capped at three without padding.",
+    "multivalue": "Different normalized values require SKU resolution and are withheld from Mandatory and Supplemental.",
+    "review": "Withhold only audit-flagged fields. Unrelated eligible fields remain available.",
+    "conflict": "Identity/category conflict blocks the product; an ordinary field conflict blocks only that field.",
+    "placeholder": "Drop configured placeholders, all-placeholder composites, frozen category names used as model values, and negative/absence values used as brand or model.",
+    "traceability": "Every injected fact retains product_id, source field/value, source path/hash, audit status, quality reasons, and fact_id.",
+    "product_specific_patches": false
+  },
+  "field_decisions": {
+    "耳机.功能": "Mandatory when single-valued and eligible.",
+    "保温杯.适用人群": "Specific values such as 儿童 or 学生 may be Mandatory; 大众 and generational marketing labels are Supplemental-only.",
+    "保温杯.适用场景": "Specific values such as 运动、旅行、商用 may be Mandatory; 日常送礼 and 通用 are Supplemental-only.",
+    "收纳箱.适用对象": "Single eligible value may be Mandatory; different multiple values are withheld.",
+    "收纳箱.适用空间": "Single eligible value may be Mandatory; different multiple values are withheld.",
+    "收纳箱.净重": "Mandatory only for a single positive parseable g/kg value; 0kg, placeholders, and malformed values are withheld.",
+    "垃圾桶.适用场景": "家庭使用 is generic and remains Supplemental-only rather than forced Mandatory coverage."
+  },
+  "zone_simulation": {
+    "identity_candidates": 713,
+    "mandatory_non_identity_candidates": 662,
+    "supplemental_candidates": 203,
+    "negative_candidates": 59,
+    "pairwise_intersection_count": 0,
+    "mandatory_traceability_failures": 0,
+    "products_with_fewer_than_three_supplemental_candidates": 183,
+    "no_padding_required": true
+  },
+  "implementation_guards": {
+    "paired_seed": "V1-control, V2-context, and V2-coverage use base_seed + frozen_sample_index; variant name never affects seed.",
+    "token_preflight": "Render and tokenize without truncation. Verify every serialized Mandatory fact is present, reject length above max_input_tokens, and verify the exact token IDs passed to the model.",
+    "mandatory_injection_failure": "Any missing/truncated Mandatory fact is an error and cannot be counted as 100% injection completeness."
+  }
+}

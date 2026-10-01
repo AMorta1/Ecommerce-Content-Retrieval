@@ -1,0 +1,61 @@
+{
+  "version": "rag_v2_p25_checkpoint_manifest_v1",
+  "status": "frozen_before_p26_prompt_change",
+  "frozen_at_utc": "2026-10-01T14:15:47.4050606Z",
+  "scope": "P1_P2_P25_code_config_outputs_reviews_and_protected_holdout_manifest",
+  "git": {
+    "head": "c29b9f76da6cdedc9d66d27e9df02ea3ed8b1f09",
+    "commit_created": false,
+    "push_performed": false,
+    "worktree_status_snapshot": [
+      " M scripts/build_rag_facts.py",
+      " M scripts/run_rag_validation.py",
+      " M src/generation/grounding.py",
+      " M src/generation/qwen.py",
+      " M src/generation/rag.py",
+      " M tests/test_generation.py",
+      "?? configs/generation_rag_validation_v7.json",
+      "?? configs/rag_fact_policy_v4.json",
+      "?? reports/generation/rag/rag_v2_generation_output_holdout_v1.json",
+      "?? reports/generation/rag/rag_v2_p25_development24_human_review.csv",
+      "?? reports/generation/rag/rag_v2_p25_development24_report.md",
+      "?? reports/generation/rag/rag_v2_p25_development24_review_workbook.xlsx",
+      "?? reports/generation/rag/rag_v2_p2_development24.json",
+      "?? reports/generation/rag/rag_v2_p2_smoke8.json",
+      "?? reports/generation/rag/rag_v2_p2_smoke8_candidate2.json",
+      "?? reports/generation/rag/rag_v2_p2_smoke8_candidate3.json",
+      "?? reports/generation/rag/rag_v2_p2_summary_v1.json",
+      "?? reports/generation/rag/rag_v2_static_audit_v1.json",
+      "?? reports/generation/rag/rag_v2_validation_fact_build_v1.json"
+    ]
+  },
+  "constraints": {
+    "existing_results_are_immutable": true,
+    "protected_holdout_generation_executed": false,
+    "formal_test100_executed": false,
+    "p26_may_add_exactly_one_content_prompt_candidate": true,
+    "commit_requires_separate_user_confirmation": true
+  },
+  "artifacts": [
+    {"path": "scripts/build_rag_facts.py", "bytes": 7072, "sha256": "f6cc867825e661cb8bce52b0d386565a745d46dcfd7d20186c4bd72f62ebbc1d"},
+    {"path": "scripts/run_rag_validation.py", "bytes": 30747, "sha256": "0b6757c330133d1d6852773ea6982284f98ef3c74358506c58e56d852735f612"},
+    {"path": "src/generation/grounding.py", "bytes": 12135, "sha256": "1973b457ab888f4dad077da4ce2c1114ba7bea7530bbbd4a172cc97153f85845"},
+    {"path": "src/generation/qwen.py", "bytes": 31085, "sha256": "3f85bd9aeb4f27b28bb6be5f083741a864349b99315c45740c65f00c371bcac0"},
+    {"path": "src/generation/rag.py", "bytes": 31426, "sha256": "20d9654b775692bedbe995faf07376eda652ddbba8046f58cb068ac0a053a2ef"},
+    {"path": "tests/test_generation.py", "bytes": 51257, "sha256": "787e78a2f294190b904af57d5c2e80174d89943a4d5dd84a001db6de75566f93"},
+    {"path": "configs/generation_rag_validation_v7.json", "bytes": 2976, "sha256": "4b061de967ab2bd6a5b9fd73e3da010d57850503068869c4bcf986de075e2356"},
+    {"path": "configs/rag_fact_policy_v4.json", "bytes": 16077, "sha256": "b032bf8835a4bfa11338a6bfddba05392aaa896c103473aa402b4ead25029fea"},
+    {"path": "data/processed/week2_rag_mandatory_core_v2/validation_fact_units.jsonl", "bytes": 2139091, "sha256": "956cbb567d11c9d603d34f875895f64baa3bdabe584ba185de028f5a7869a798"},
+    {"path": "reports/generation/rag/rag_v2_static_audit_v1.json", "bytes": 7529, "sha256": "efc5e88da9131e3d4f24298e085215f2040c39f15093693313c4c038ab0df474"},
+    {"path": "reports/generation/rag/rag_v2_validation_fact_build_v1.json", "bytes": 108177, "sha256": "221e1659752d5a3bee32962d843f35c2f8a1ef6f152c61c609dc6081d25851d6"},
+    {"path": "reports/generation/rag/rag_v2_generation_output_holdout_v1.json", "bytes": 5218, "sha256": "31fae8cbfc53e0f5ef3329cbee6812963b36ddf48e61858d8d9f65fa17ff8da1"},
+    {"path": "reports/generation/rag/rag_v2_p2_smoke8.json", "bytes": 558976, "sha256": "d27b447be2ac6efdc3af892cb2bd2e79c506df485d17fd447febca4ad994ac93"},
+    {"path": "reports/generation/rag/rag_v2_p2_smoke8_candidate2.json", "bytes": 545541, "sha256": "781c6f678ae4b4469f10e10a6511ee03500ee1fdc6c81edeffe423b64ce4c6ac"},
+    {"path": "reports/generation/rag/rag_v2_p2_smoke8_candidate3.json", "bytes": 539077, "sha256": "f94a4bbed472398349e17718d42eeafad4d19a787a3ceef97eae9f34e8d436a4"},
+    {"path": "reports/generation/rag/rag_v2_p2_development24.json", "bytes": 1666410, "sha256": "78accdb37ae70916559368d32ebff439ed8f35f7998cba3d43249787eb50a8c0"},
+    {"path": "reports/generation/rag/rag_v2_p2_summary_v1.json", "bytes": 7443, "sha256": "23236372e5248438a23548d1c115ce1b8d0f5300acaeaaf8b50ed4a37d08010c"},
+    {"path": "reports/generation/rag/rag_v2_p25_development24_human_review.csv", "bytes": 9343, "sha256": "46046077171e0fb4071300a45dc3633e94cd174aa50a5798636f219b2f8eefcf"},
+    {"path": "reports/generation/rag/rag_v2_p25_development24_report.md", "bytes": 6771, "sha256": "da41e9383132675b59719a96bebb7740b61cb911b5fc8a5a8edd599fa96db629"},
+    {"path": "reports/generation/rag/rag_v2_p25_development24_review_workbook.xlsx", "bytes": 29921, "sha256": "55b61664955fce7a03a298dfca964e6abdb76e4971acbd191ef5d8965ff06be9"}
+  ]
+}

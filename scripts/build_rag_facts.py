@@ -136,7 +136,7 @@ def main() -> None:
 
     write_jsonl(args.output.resolve(), all_facts)
     report = {
-        "version": "validation_fact_build_v1",
+        "version": policy.get("fact_build_version", "validation_fact_build_v1"),
         "status": "passed",
         "scope": args.scope,
         "dataset_version": args.dataset_version,
@@ -162,6 +162,9 @@ def main() -> None:
         "fact_role_counts": dict(sorted(Counter(f["fact_role"] for f in all_facts).items())),
         "quality_status_counts": dict(
             sorted(Counter(f["quality_status"] for f in all_facts).items())
+        ),
+        "mandatory_status_counts": dict(
+            sorted(Counter(f.get("mandatory_status", "not_core") for f in all_facts).items())
         ),
         "task_selection_totals": {
             task: dict(counts) for task, counts in selection_counts.items()

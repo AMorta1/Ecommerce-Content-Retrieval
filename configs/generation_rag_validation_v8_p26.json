@@ -1,0 +1,66 @@
+{
+  "version": "generation_rag_validation_v8_p26",
+  "mode": "rag_v2_paired_comparison",
+  "status": "p26_single_controlled_factual_candidate",
+  "formal_test100_executed": false,
+  "generation_output_holdout_executed": false,
+  "model_name": "Qwen/Qwen2.5-7B-Instruct",
+  "revision": "a09a35458c702b33eeacc393d103063234e8bc28",
+  "cache_dir": "../.model-cache/huggingface/hub",
+  "device": "cuda",
+  "load_in_4bit": true,
+  "bnb_4bit_quant_type": "nf4",
+  "bnb_4bit_compute_dtype": "bfloat16",
+  "max_input_tokens": 2048,
+  "max_new_tokens": 320,
+  "do_sample": true,
+  "temperature": 0.7,
+  "top_p": 0.9,
+  "seed": 42,
+  "validation_source": "data/processed/week1_v3/multimodal/validation.jsonl",
+  "audit_path": "reports/data/week2_rag_fact_quality_audit.csv",
+  "development_sample_source": "reports/generation/rag/validation_expanded_rag_v3.json",
+  "protected_holdout": {
+    "path": "reports/generation/rag/rag_v2_generation_output_holdout_v1.json",
+    "sha256": "31fae8cbfc53e0f5ef3329cbee6812963b36ddf48e61858d8d9f65fa17ff8da1",
+    "p2_execution_allowed": false
+  },
+  "comparison_variants": [
+    {
+      "name": "V1-control",
+      "prompt_version": "rag_v6",
+      "context_selector": "rag_v1_global_top_k",
+      "fact_units_path": "data/processed/week2_rag_v1/validation_fact_units.jsonl",
+      "fact_policy_path": "configs/rag_fact_policy_v3.json"
+    },
+    {
+      "name": "V2-controlled-factual",
+      "prompt_version": "rag_v2_controlled_factual_v1",
+      "context_selector": "rag_v2_four_zone",
+      "fact_units_path": "data/processed/week2_rag_mandatory_core_v2/validation_fact_units.jsonl",
+      "fact_policy_path": "configs/rag_fact_policy_v4.json"
+    }
+  ],
+  "pairing": {
+    "variants": ["V1-control", "V2-controlled-factual"],
+    "same_model_instance": true,
+    "paired_seed_rule": "base_seed_plus_stable_sample_index",
+    "variant_name_affects_seed": false,
+    "formal_test100": false
+  },
+  "denominator_contract": {
+    "static_category_field_opportunities": 1500,
+    "static_opportunity_role": "P1 field-policy audit only",
+    "existing_core_facts_role": "source-present core facts after value normalization and quality classification",
+    "mandatory_injection_denominator": "only mandatory_injection_expected_fact_ids for source-present eligible active facts",
+    "source_missing_is_mandatory_injection_failure": false,
+    "official_attribute_hit_denominator": "frozen per-row core_attribute_count from the existing generation evaluation workflow",
+    "official_denominator_modified": false
+  },
+  "grounding_validator": {
+    "enabled": true,
+    "version": "rag_grounding_validator_v1",
+    "mode": "detect_and_record_only",
+    "replaces_human_evaluation": false
+  }
+}
