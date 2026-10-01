@@ -1,0 +1,2360 @@
+{
+  "version": "rag_grounding_validator_v1",
+  "status": "completed",
+  "scope": "formal_test100",
+  "formal_test100_executed": true,
+  "mode": "detect_and_record_only",
+  "replaces_human_evaluation": false,
+  "source_outputs": {
+    "path": "reports/generation/rag/formal_rag_v1_test100_outputs.json",
+    "sha256": "36edf46d4a4db42254713a823265a36937439860e3c3593dad86a37976bbc298"
+  },
+  "sample_count": 100,
+  "results": [
+    {
+      "sample_index": 0,
+      "product_id": "522783084872",
+      "audit_status": "REVIEW",
+      "parse_error": null,
+      "grounding_validation": {
+        "validator_version": "rag_grounding_validator_v1",
+        "mode": "detect_and_record_only",
+        "output_modified": false,
+        "regeneration_triggered": false,
+        "replaces_human_evaluation": false,
+        "status": "PASS",
+        "error_count": 0,
+        "classification_counts": {},
+        "findings": []
+      }
+    },
+    {
+      "sample_index": 1,
+      "product_id": "562615192976",
+      "audit_status": "PASS",
+      "parse_error": null,
+      "grounding_validation": {
+        "validator_version": "rag_grounding_validator_v1",
+        "mode": "detect_and_record_only",
+        "output_modified": false,
+        "regeneration_triggered": false,
+        "replaces_human_evaluation": false,
+        "status": "PASS",
+        "error_count": 0,
+        "classification_counts": {},
+        "findings": []
+      }
+    },
+    {
+      "sample_index": 2,
+      "product_id": "583014299804",
+      "audit_status": "CONFLICT",
+      "parse_error": null,
+      "grounding_validation": {
+        "validator_version": "rag_grounding_validator_v1",
+        "mode": "detect_and_record_only",
+        "output_modified": false,
+        "regeneration_triggered": false,
+        "replaces_human_evaluation": false,
+        "status": "PASS",
+        "error_count": 0,
+        "classification_counts": {},
+        "findings": []
+      }
+    },
+    {
+      "sample_index": 3,
+      "product_id": "587556959797",
+      "audit_status": "PASS",
+      "parse_error": null,
+      "grounding_validation": {
+        "validator_version": "rag_grounding_validator_v1",
+        "mode": "detect_and_record_only",
+        "output_modified": false,
+        "regeneration_triggered": false,
+        "replaces_human_evaluation": false,
+        "status": "FAIL",
+        "error_count": 1,
+        "classification_counts": {
+          "unsupported_evaluative_claim": 1
+        },
+        "findings": [
+          {
+            "classification": "unsupported_evaluative_claim",
+            "location": "selling_points[0]",
+            "text_span": "大容量",
+            "reason": "no_explicit_source_support:relative_capacity",
+            "potential_false_positive": false
+          }
+        ]
+      }
+    },
+    {
+      "sample_index": 4,
+      "product_id": "589508217209",
+      "audit_status": "CONFLICT",
+      "parse_error": null,
+      "grounding_validation": {
+        "validator_version": "rag_grounding_validator_v1",
+        "mode": "detect_and_record_only",
+        "output_modified": false,
+        "regeneration_triggered": false,
+        "replaces_human_evaluation": false,
+        "status": "PASS",
+        "error_count": 0,
+        "classification_counts": {},
+        "findings": []
+      }
+    },
+    {
+      "sample_index": 5,
+      "product_id": "590175217614",
+      "audit_status": "PASS",
+      "parse_error": null,
+      "grounding_validation": {
+        "validator_version": "rag_grounding_validator_v1",
+        "mode": "detect_and_record_only",
+        "output_modified": false,
+        "regeneration_triggered": false,
+        "replaces_human_evaluation": false,
+        "status": "PASS",
+        "error_count": 0,
+        "classification_counts": {},
+        "findings": []
+      }
+    },
+    {
+      "sample_index": 6,
+      "product_id": "609861568866",
+      "audit_status": "PASS",
+      "parse_error": null,
+      "grounding_validation": {
+        "validator_version": "rag_grounding_validator_v1",
+        "mode": "detect_and_record_only",
+        "output_modified": false,
+        "regeneration_triggered": false,
+        "replaces_human_evaluation": false,
+        "status": "PASS",
+        "error_count": 0,
+        "classification_counts": {},
+        "findings": []
+      }
+    },
+    {
+      "sample_index": 7,
+      "product_id": "609923870759",
+      "audit_status": "PASS",
+      "parse_error": null,
+      "grounding_validation": {
+        "validator_version": "rag_grounding_validator_v1",
+        "mode": "detect_and_record_only",
+        "output_modified": false,
+        "regeneration_triggered": false,
+        "replaces_human_evaluation": false,
+        "status": "FAIL",
+        "error_count": 1,
+        "classification_counts": {
+          "unsupported_evaluative_claim": 1
+        },
+        "findings": [
+          {
+            "classification": "unsupported_evaluative_claim",
+            "location": "selling_points[1]",
+            "text_span": "大容量",
+            "reason": "no_explicit_source_support:relative_capacity",
+            "potential_false_positive": false
+          }
+        ]
+      }
+    },
+    {
+      "sample_index": 8,
+      "product_id": "610605050479",
+      "audit_status": "PASS",
+      "parse_error": null,
+      "grounding_validation": {
+        "validator_version": "rag_grounding_validator_v1",
+        "mode": "detect_and_record_only",
+        "output_modified": false,
+        "regeneration_triggered": false,
+        "replaces_human_evaluation": false,
+        "status": "FAIL",
+        "error_count": 2,
+        "classification_counts": {
+          "unsupported_evaluative_claim": 2
+        },
+        "findings": [
+          {
+            "classification": "unsupported_evaluative_claim",
+            "location": "selling_points[1]",
+            "text_span": "大容量",
+            "reason": "no_explicit_source_support:relative_capacity",
+            "potential_false_positive": false
+          },
+          {
+            "classification": "unsupported_evaluative_claim",
+            "location": "short_description",
+            "text_span": "大容量",
+            "reason": "no_explicit_source_support:relative_capacity",
+            "potential_false_positive": false
+          }
+        ]
+      }
+    },
+    {
+      "sample_index": 9,
+      "product_id": "616413073658",
+      "audit_status": "PASS",
+      "parse_error": null,
+      "grounding_validation": {
+        "validator_version": "rag_grounding_validator_v1",
+        "mode": "detect_and_record_only",
+        "output_modified": false,
+        "regeneration_triggered": false,
+        "replaces_human_evaluation": false,
+        "status": "FAIL",
+        "error_count": 1,
+        "classification_counts": {
+          "unsupported_evaluative_claim": 1
+        },
+        "findings": [
+          {
+            "classification": "unsupported_evaluative_claim",
+            "location": "short_description",
+            "text_span": "大容量",
+            "reason": "no_explicit_source_support:relative_capacity",
+            "potential_false_positive": false
+          }
+        ]
+      }
+    },
+    {
+      "sample_index": 10,
+      "product_id": "621846828786",
+      "audit_status": "REVIEW",
+      "parse_error": null,
+      "grounding_validation": {
+        "validator_version": "rag_grounding_validator_v1",
+        "mode": "detect_and_record_only",
+        "output_modified": false,
+        "regeneration_triggered": false,
+        "replaces_human_evaluation": false,
+        "status": "PASS",
+        "error_count": 0,
+        "classification_counts": {},
+        "findings": []
+      }
+    },
+    {
+      "sample_index": 11,
+      "product_id": "624105227976",
+      "audit_status": "PASS",
+      "parse_error": null,
+      "grounding_validation": {
+        "validator_version": "rag_grounding_validator_v1",
+        "mode": "detect_and_record_only",
+        "output_modified": false,
+        "regeneration_triggered": false,
+        "replaces_human_evaluation": false,
+        "status": "FAIL",
+        "error_count": 1,
+        "classification_counts": {
+          "unsupported_evaluative_claim": 1
+        },
+        "findings": [
+          {
+            "classification": "unsupported_evaluative_claim",
+            "location": "short_description",
+            "text_span": "大容量",
+            "reason": "no_explicit_source_support:relative_capacity",
+            "potential_false_positive": false
+          }
+        ]
+      }
+    },
+    {
+      "sample_index": 12,
+      "product_id": "556245210015",
+      "audit_status": "PASS",
+      "parse_error": null,
+      "grounding_validation": {
+        "validator_version": "rag_grounding_validator_v1",
+        "mode": "detect_and_record_only",
+        "output_modified": false,
+        "regeneration_triggered": false,
+        "replaces_human_evaluation": false,
+        "status": "PASS",
+        "error_count": 0,
+        "classification_counts": {},
+        "findings": []
+      }
+    },
+    {
+      "sample_index": 13,
+      "product_id": "565706870969",
+      "audit_status": "PASS",
+      "parse_error": null,
+      "grounding_validation": {
+        "validator_version": "rag_grounding_validator_v1",
+        "mode": "detect_and_record_only",
+        "output_modified": false,
+        "regeneration_triggered": false,
+        "replaces_human_evaluation": false,
+        "status": "PASS",
+        "error_count": 0,
+        "classification_counts": {},
+        "findings": []
+      }
+    },
+    {
+      "sample_index": 14,
+      "product_id": "588442419126",
+      "audit_status": "PASS",
+      "parse_error": null,
+      "grounding_validation": {
+        "validator_version": "rag_grounding_validator_v1",
+        "mode": "detect_and_record_only",
+        "output_modified": false,
+        "regeneration_triggered": false,
+        "replaces_human_evaluation": false,
+        "status": "FAIL",
+        "error_count": 1,
+        "classification_counts": {
+          "unsupported_usage_scenario": 1
+        },
+        "findings": [
+          {
+            "classification": "unsupported_usage_scenario",
+            "location": "selling_points[2]",
+            "text_span": "适用于3C数码产品",
+            "reason": "no_category_or_explicit_usage_support",
+            "potential_false_positive": false
+          }
+        ]
+      }
+    },
+    {
+      "sample_index": 15,
+      "product_id": "598781167153",
+      "audit_status": "PASS",
+      "parse_error": null,
+      "grounding_validation": {
+        "validator_version": "rag_grounding_validator_v1",
+        "mode": "detect_and_record_only",
+        "output_modified": false,
+        "regeneration_triggered": false,
+        "replaces_human_evaluation": false,
+        "status": "PASS",
+        "error_count": 0,
+        "classification_counts": {},
+        "findings": []
+      }
+    },
+    {
+      "sample_index": 16,
+      "product_id": "600661711292",
+      "audit_status": "REVIEW",
+      "parse_error": null,
+      "grounding_validation": {
+        "validator_version": "rag_grounding_validator_v1",
+        "mode": "detect_and_record_only",
+        "output_modified": false,
+        "regeneration_triggered": false,
+        "replaces_human_evaluation": false,
+        "status": "FAIL",
+        "error_count": 1,
+        "classification_counts": {
+          "unsupported_usage_scenario": 1
+        },
+        "findings": [
+          {
+            "classification": "unsupported_usage_scenario",
+            "location": "short_description",
+            "text_span": "适用于各类3C数码设备",
+            "reason": "no_category_or_explicit_usage_support",
+            "potential_false_positive": false
+          }
+        ]
+      }
+    },
+    {
+      "sample_index": 17,
+      "product_id": "603102363927",
+      "audit_status": "PASS",
+      "parse_error": null,
+      "grounding_validation": {
+        "validator_version": "rag_grounding_validator_v1",
+        "mode": "detect_and_record_only",
+        "output_modified": false,
+        "regeneration_triggered": false,
+        "replaces_human_evaluation": false,
+        "status": "PASS",
+        "error_count": 0,
+        "classification_counts": {},
+        "findings": []
+      }
+    },
+    {
+      "sample_index": 18,
+      "product_id": "607358884242",
+      "audit_status": "PASS",
+      "parse_error": null,
+      "grounding_validation": {
+        "validator_version": "rag_grounding_validator_v1",
+        "mode": "detect_and_record_only",
+        "output_modified": false,
+        "regeneration_triggered": false,
+        "replaces_human_evaluation": false,
+        "status": "PASS",
+        "error_count": 0,
+        "classification_counts": {},
+        "findings": []
+      }
+    },
+    {
+      "sample_index": 19,
+      "product_id": "613735876059",
+      "audit_status": "PASS",
+      "parse_error": null,
+      "grounding_validation": {
+        "validator_version": "rag_grounding_validator_v1",
+        "mode": "detect_and_record_only",
+        "output_modified": false,
+        "regeneration_triggered": false,
+        "replaces_human_evaluation": false,
+        "status": "PASS",
+        "error_count": 0,
+        "classification_counts": {},
+        "findings": []
+      }
+    },
+    {
+      "sample_index": 20,
+      "product_id": "614533597181",
+      "audit_status": "PASS",
+      "parse_error": null,
+      "grounding_validation": {
+        "validator_version": "rag_grounding_validator_v1",
+        "mode": "detect_and_record_only",
+        "output_modified": false,
+        "regeneration_triggered": false,
+        "replaces_human_evaluation": false,
+        "status": "PASS",
+        "error_count": 0,
+        "classification_counts": {},
+        "findings": []
+      }
+    },
+    {
+      "sample_index": 21,
+      "product_id": "615386178525",
+      "audit_status": "PASS",
+      "parse_error": null,
+      "grounding_validation": {
+        "validator_version": "rag_grounding_validator_v1",
+        "mode": "detect_and_record_only",
+        "output_modified": false,
+        "regeneration_triggered": false,
+        "replaces_human_evaluation": false,
+        "status": "FAIL",
+        "error_count": 1,
+        "classification_counts": {
+          "unsupported_evaluative_claim": 1
+        },
+        "findings": [
+          {
+            "classification": "unsupported_evaluative_claim",
+            "location": "short_description",
+            "text_span": "舒适",
+            "reason": "no_explicit_source_support:generic_evaluative_claim",
+            "potential_false_positive": false
+          }
+        ]
+      }
+    },
+    {
+      "sample_index": 22,
+      "product_id": "621360527079",
+      "audit_status": "PASS",
+      "parse_error": null,
+      "grounding_validation": {
+        "validator_version": "rag_grounding_validator_v1",
+        "mode": "detect_and_record_only",
+        "output_modified": false,
+        "regeneration_triggered": false,
+        "replaces_human_evaluation": false,
+        "status": "PASS",
+        "error_count": 0,
+        "classification_counts": {},
+        "findings": []
+      }
+    },
+    {
+      "sample_index": 23,
+      "product_id": "624110108481",
+      "audit_status": "PASS",
+      "parse_error": null,
+      "grounding_validation": {
+        "validator_version": "rag_grounding_validator_v1",
+        "mode": "detect_and_record_only",
+        "output_modified": false,
+        "regeneration_triggered": false,
+        "replaces_human_evaluation": false,
+        "status": "PASS",
+        "error_count": 0,
+        "classification_counts": {},
+        "findings": []
+      }
+    },
+    {
+      "sample_index": 24,
+      "product_id": "624112334484",
+      "audit_status": "PASS",
+      "parse_error": null,
+      "grounding_validation": {
+        "validator_version": "rag_grounding_validator_v1",
+        "mode": "detect_and_record_only",
+        "output_modified": false,
+        "regeneration_triggered": false,
+        "replaces_human_evaluation": false,
+        "status": "FAIL",
+        "error_count": 1,
+        "classification_counts": {
+          "unsupported_usage_scenario": 1
+        },
+        "findings": [
+          {
+            "classification": "unsupported_usage_scenario",
+            "location": "short_description",
+            "text_span": "适用于多种播放设备",
+            "reason": "no_category_or_explicit_usage_support",
+            "potential_false_positive": false
+          }
+        ]
+      }
+    },
+    {
+      "sample_index": 25,
+      "product_id": "15246761632",
+      "audit_status": "PASS",
+      "parse_error": null,
+      "grounding_validation": {
+        "validator_version": "rag_grounding_validator_v1",
+        "mode": "detect_and_record_only",
+        "output_modified": false,
+        "regeneration_triggered": false,
+        "replaces_human_evaluation": false,
+        "status": "PASS",
+        "error_count": 0,
+        "classification_counts": {},
+        "findings": []
+      }
+    },
+    {
+      "sample_index": 26,
+      "product_id": "543556617866",
+      "audit_status": "PASS",
+      "parse_error": null,
+      "grounding_validation": {
+        "validator_version": "rag_grounding_validator_v1",
+        "mode": "detect_and_record_only",
+        "output_modified": false,
+        "regeneration_triggered": false,
+        "replaces_human_evaluation": false,
+        "status": "FAIL",
+        "error_count": 2,
+        "classification_counts": {
+          "unsupported_usage_scenario": 2
+        },
+        "findings": [
+          {
+            "classification": "unsupported_usage_scenario",
+            "location": "selling_points[2]",
+            "text_span": "适用于多种办公环境",
+            "reason": "no_category_or_explicit_usage_support",
+            "potential_false_positive": false
+          },
+          {
+            "classification": "unsupported_usage_scenario",
+            "location": "short_description",
+            "text_span": "适用于多种办公环境的键盘",
+            "reason": "no_category_or_explicit_usage_support",
+            "potential_false_positive": false
+          }
+        ]
+      }
+    },
+    {
+      "sample_index": 27,
+      "product_id": "559685535453",
+      "audit_status": "PASS",
+      "parse_error": null,
+      "grounding_validation": {
+        "validator_version": "rag_grounding_validator_v1",
+        "mode": "detect_and_record_only",
+        "output_modified": false,
+        "regeneration_triggered": false,
+        "replaces_human_evaluation": false,
+        "status": "PASS",
+        "error_count": 0,
+        "classification_counts": {},
+        "findings": []
+      }
+    },
+    {
+      "sample_index": 28,
+      "product_id": "583601853144",
+      "audit_status": "PASS",
+      "parse_error": null,
+      "grounding_validation": {
+        "validator_version": "rag_grounding_validator_v1",
+        "mode": "detect_and_record_only",
+        "output_modified": false,
+        "regeneration_triggered": false,
+        "replaces_human_evaluation": false,
+        "status": "PASS",
+        "error_count": 0,
+        "classification_counts": {},
+        "findings": []
+      }
+    },
+    {
+      "sample_index": 29,
+      "product_id": "590008960085",
+      "audit_status": "PASS",
+      "parse_error": null,
+      "grounding_validation": {
+        "validator_version": "rag_grounding_validator_v1",
+        "mode": "detect_and_record_only",
+        "output_modified": false,
+        "regeneration_triggered": false,
+        "replaces_human_evaluation": false,
+        "status": "FAIL",
+        "error_count": 2,
+        "classification_counts": {
+          "unsupported_evaluative_claim": 1,
+          "unsupported_usage_scenario": 1
+        },
+        "findings": [
+          {
+            "classification": "unsupported_usage_scenario",
+            "location": "selling_points[2]",
+            "text_span": "适用于3C数码设备",
+            "reason": "no_category_or_explicit_usage_support",
+            "potential_false_positive": false
+          },
+          {
+            "classification": "unsupported_evaluative_claim",
+            "location": "short_description",
+            "text_span": "便捷",
+            "reason": "no_explicit_source_support:generic_evaluative_claim",
+            "potential_false_positive": false
+          }
+        ]
+      }
+    },
+    {
+      "sample_index": 30,
+      "product_id": "601009119510",
+      "audit_status": "PASS",
+      "parse_error": null,
+      "grounding_validation": {
+        "validator_version": "rag_grounding_validator_v1",
+        "mode": "detect_and_record_only",
+        "output_modified": false,
+        "regeneration_triggered": false,
+        "replaces_human_evaluation": false,
+        "status": "PASS",
+        "error_count": 0,
+        "classification_counts": {},
+        "findings": []
+      }
+    },
+    {
+      "sample_index": 31,
+      "product_id": "614181544723",
+      "audit_status": "PASS",
+      "parse_error": null,
+      "grounding_validation": {
+        "validator_version": "rag_grounding_validator_v1",
+        "mode": "detect_and_record_only",
+        "output_modified": false,
+        "regeneration_triggered": false,
+        "replaces_human_evaluation": false,
+        "status": "PASS",
+        "error_count": 0,
+        "classification_counts": {},
+        "findings": []
+      }
+    },
+    {
+      "sample_index": 32,
+      "product_id": "615882518927",
+      "audit_status": "PASS",
+      "parse_error": null,
+      "grounding_validation": {
+        "validator_version": "rag_grounding_validator_v1",
+        "mode": "detect_and_record_only",
+        "output_modified": false,
+        "regeneration_triggered": false,
+        "replaces_human_evaluation": false,
+        "status": "PASS",
+        "error_count": 0,
+        "classification_counts": {},
+        "findings": []
+      }
+    },
+    {
+      "sample_index": 33,
+      "product_id": "616205758872",
+      "audit_status": "PASS",
+      "parse_error": null,
+      "grounding_validation": {
+        "validator_version": "rag_grounding_validator_v1",
+        "mode": "detect_and_record_only",
+        "output_modified": false,
+        "regeneration_triggered": false,
+        "replaces_human_evaluation": false,
+        "status": "FAIL",
+        "error_count": 1,
+        "classification_counts": {
+          "unsupported_usage_scenario": 1
+        },
+        "findings": [
+          {
+            "classification": "unsupported_usage_scenario",
+            "location": "short_description",
+            "text_span": "适用于多种办公及娱乐场景",
+            "reason": "no_category_or_explicit_usage_support",
+            "potential_false_positive": false
+          }
+        ]
+      }
+    },
+    {
+      "sample_index": 34,
+      "product_id": "617920658390",
+      "audit_status": "PASS",
+      "parse_error": null,
+      "grounding_validation": {
+        "validator_version": "rag_grounding_validator_v1",
+        "mode": "detect_and_record_only",
+        "output_modified": false,
+        "regeneration_triggered": false,
+        "replaces_human_evaluation": false,
+        "status": "FAIL",
+        "error_count": 2,
+        "classification_counts": {
+          "unsupported_usage_scenario": 2
+        },
+        "findings": [
+          {
+            "classification": "unsupported_usage_scenario",
+            "location": "selling_points[1]",
+            "text_span": "适用于3C数码产品",
+            "reason": "no_category_or_explicit_usage_support",
+            "potential_false_positive": false
+          },
+          {
+            "classification": "unsupported_usage_scenario",
+            "location": "short_description",
+            "text_span": "适用于3C数码产品",
+            "reason": "no_category_or_explicit_usage_support",
+            "potential_false_positive": false
+          }
+        ]
+      }
+    },
+    {
+      "sample_index": 35,
+      "product_id": "618733106466",
+      "audit_status": "PASS",
+      "parse_error": null,
+      "grounding_validation": {
+        "validator_version": "rag_grounding_validator_v1",
+        "mode": "detect_and_record_only",
+        "output_modified": false,
+        "regeneration_triggered": false,
+        "replaces_human_evaluation": false,
+        "status": "FAIL",
+        "error_count": 1,
+        "classification_counts": {
+          "unsupported_usage_scenario": 1
+        },
+        "findings": [
+          {
+            "classification": "unsupported_usage_scenario",
+            "location": "short_description",
+            "text_span": "适用于3C数码设备使用",
+            "reason": "no_category_or_explicit_usage_support",
+            "potential_false_positive": false
+          }
+        ]
+      }
+    },
+    {
+      "sample_index": 36,
+      "product_id": "621593735132",
+      "audit_status": "PASS",
+      "parse_error": null,
+      "grounding_validation": {
+        "validator_version": "rag_grounding_validator_v1",
+        "mode": "detect_and_record_only",
+        "output_modified": false,
+        "regeneration_triggered": false,
+        "replaces_human_evaluation": false,
+        "status": "FAIL",
+        "error_count": 2,
+        "classification_counts": {
+          "unsupported_usage_scenario": 2
+        },
+        "findings": [
+          {
+            "classification": "unsupported_usage_scenario",
+            "location": "selling_points[2]",
+            "text_span": "适用于游戏办公",
+            "reason": "no_category_or_explicit_usage_support",
+            "potential_false_positive": false
+          },
+          {
+            "classification": "unsupported_usage_scenario",
+            "location": "short_description",
+            "text_span": "适合游戏和办公使用",
+            "reason": "no_category_or_explicit_usage_support",
+            "potential_false_positive": false
+          }
+        ]
+      }
+    },
+    {
+      "sample_index": 37,
+      "product_id": "8443620439",
+      "audit_status": "PASS",
+      "parse_error": null,
+      "grounding_validation": {
+        "validator_version": "rag_grounding_validator_v1",
+        "mode": "detect_and_record_only",
+        "output_modified": false,
+        "regeneration_triggered": false,
+        "replaces_human_evaluation": false,
+        "status": "FAIL",
+        "error_count": 2,
+        "classification_counts": {
+          "unsupported_evaluative_claim": 2
+        },
+        "findings": [
+          {
+            "classification": "unsupported_evaluative_claim",
+            "location": "selling_points[2]",
+            "text_span": "传输更稳定",
+            "reason": "no_explicit_source_support:stability_claim",
+            "potential_false_positive": false
+          },
+          {
+            "classification": "unsupported_evaluative_claim",
+            "location": "short_description",
+            "text_span": "传输更稳定",
+            "reason": "no_explicit_source_support:stability_claim",
+            "potential_false_positive": false
+          }
+        ]
+      }
+    },
+    {
+      "sample_index": 38,
+      "product_id": "2859211238",
+      "audit_status": "REVIEW",
+      "parse_error": null,
+      "grounding_validation": {
+        "validator_version": "rag_grounding_validator_v1",
+        "mode": "detect_and_record_only",
+        "output_modified": false,
+        "regeneration_triggered": false,
+        "replaces_human_evaluation": false,
+        "status": "PASS",
+        "error_count": 0,
+        "classification_counts": {},
+        "findings": []
+      }
+    },
+    {
+      "sample_index": 39,
+      "product_id": "42149170939",
+      "audit_status": "PASS",
+      "parse_error": null,
+      "grounding_validation": {
+        "validator_version": "rag_grounding_validator_v1",
+        "mode": "detect_and_record_only",
+        "output_modified": false,
+        "regeneration_triggered": false,
+        "replaces_human_evaluation": false,
+        "status": "PASS",
+        "error_count": 0,
+        "classification_counts": {},
+        "findings": []
+      }
+    },
+    {
+      "sample_index": 40,
+      "product_id": "544826941132",
+      "audit_status": "REVIEW",
+      "parse_error": null,
+      "grounding_validation": {
+        "validator_version": "rag_grounding_validator_v1",
+        "mode": "detect_and_record_only",
+        "output_modified": false,
+        "regeneration_triggered": false,
+        "replaces_human_evaluation": false,
+        "status": "PASS",
+        "error_count": 0,
+        "classification_counts": {},
+        "findings": []
+      }
+    },
+    {
+      "sample_index": 41,
+      "product_id": "565468950564",
+      "audit_status": "PASS",
+      "parse_error": null,
+      "grounding_validation": {
+        "validator_version": "rag_grounding_validator_v1",
+        "mode": "detect_and_record_only",
+        "output_modified": false,
+        "regeneration_triggered": false,
+        "replaces_human_evaluation": false,
+        "status": "PASS",
+        "error_count": 0,
+        "classification_counts": {},
+        "findings": []
+      }
+    },
+    {
+      "sample_index": 42,
+      "product_id": "572739978355",
+      "audit_status": "PASS",
+      "parse_error": null,
+      "grounding_validation": {
+        "validator_version": "rag_grounding_validator_v1",
+        "mode": "detect_and_record_only",
+        "output_modified": false,
+        "regeneration_triggered": false,
+        "replaces_human_evaluation": false,
+        "status": "PASS",
+        "error_count": 0,
+        "classification_counts": {},
+        "findings": []
+      }
+    },
+    {
+      "sample_index": 43,
+      "product_id": "578515650928",
+      "audit_status": "PASS",
+      "parse_error": null,
+      "grounding_validation": {
+        "validator_version": "rag_grounding_validator_v1",
+        "mode": "detect_and_record_only",
+        "output_modified": false,
+        "regeneration_triggered": false,
+        "replaces_human_evaluation": false,
+        "status": "PASS",
+        "error_count": 0,
+        "classification_counts": {},
+        "findings": []
+      }
+    },
+    {
+      "sample_index": 44,
+      "product_id": "585366825079",
+      "audit_status": "PASS",
+      "parse_error": null,
+      "grounding_validation": {
+        "validator_version": "rag_grounding_validator_v1",
+        "mode": "detect_and_record_only",
+        "output_modified": false,
+        "regeneration_triggered": false,
+        "replaces_human_evaluation": false,
+        "status": "FAIL",
+        "error_count": 2,
+        "classification_counts": {
+          "unsupported_evaluative_claim": 2
+        },
+        "findings": [
+          {
+            "classification": "unsupported_evaluative_claim",
+            "location": "short_description",
+            "text_span": "稳定的性能",
+            "reason": "no_explicit_source_support:stability_claim",
+            "potential_false_positive": false
+          },
+          {
+            "classification": "unsupported_evaluative_claim",
+            "location": "short_description",
+            "text_span": "精准",
+            "reason": "no_explicit_source_support:generic_evaluative_claim",
+            "potential_false_positive": false
+          }
+        ]
+      }
+    },
+    {
+      "sample_index": 45,
+      "product_id": "589051188248",
+      "audit_status": "PASS",
+      "parse_error": null,
+      "grounding_validation": {
+        "validator_version": "rag_grounding_validator_v1",
+        "mode": "detect_and_record_only",
+        "output_modified": false,
+        "regeneration_triggered": false,
+        "replaces_human_evaluation": false,
+        "status": "PASS",
+        "error_count": 0,
+        "classification_counts": {},
+        "findings": []
+      }
+    },
+    {
+      "sample_index": 46,
+      "product_id": "596152984459",
+      "audit_status": "PASS",
+      "parse_error": null,
+      "grounding_validation": {
+        "validator_version": "rag_grounding_validator_v1",
+        "mode": "detect_and_record_only",
+        "output_modified": false,
+        "regeneration_triggered": false,
+        "replaces_human_evaluation": false,
+        "status": "PASS",
+        "error_count": 0,
+        "classification_counts": {},
+        "findings": []
+      }
+    },
+    {
+      "sample_index": 47,
+      "product_id": "602684369098",
+      "audit_status": "PASS",
+      "parse_error": null,
+      "grounding_validation": {
+        "validator_version": "rag_grounding_validator_v1",
+        "mode": "detect_and_record_only",
+        "output_modified": false,
+        "regeneration_triggered": false,
+        "replaces_human_evaluation": false,
+        "status": "PASS",
+        "error_count": 0,
+        "classification_counts": {},
+        "findings": []
+      }
+    },
+    {
+      "sample_index": 48,
+      "product_id": "620004973618",
+      "audit_status": "PASS",
+      "parse_error": null,
+      "grounding_validation": {
+        "validator_version": "rag_grounding_validator_v1",
+        "mode": "detect_and_record_only",
+        "output_modified": false,
+        "regeneration_triggered": false,
+        "replaces_human_evaluation": false,
+        "status": "PASS",
+        "error_count": 0,
+        "classification_counts": {},
+        "findings": []
+      }
+    },
+    {
+      "sample_index": 49,
+      "product_id": "623882882335",
+      "audit_status": "PASS",
+      "parse_error": null,
+      "grounding_validation": {
+        "validator_version": "rag_grounding_validator_v1",
+        "mode": "detect_and_record_only",
+        "output_modified": false,
+        "regeneration_triggered": false,
+        "replaces_human_evaluation": false,
+        "status": "PASS",
+        "error_count": 0,
+        "classification_counts": {},
+        "findings": []
+      }
+    },
+    {
+      "sample_index": 50,
+      "product_id": "545593037598",
+      "audit_status": "REVIEW",
+      "parse_error": null,
+      "grounding_validation": {
+        "validator_version": "rag_grounding_validator_v1",
+        "mode": "detect_and_record_only",
+        "output_modified": false,
+        "regeneration_triggered": false,
+        "replaces_human_evaluation": false,
+        "status": "PASS",
+        "error_count": 0,
+        "classification_counts": {},
+        "findings": []
+      }
+    },
+    {
+      "sample_index": 51,
+      "product_id": "559887711431",
+      "audit_status": "PASS",
+      "parse_error": null,
+      "grounding_validation": {
+        "validator_version": "rag_grounding_validator_v1",
+        "mode": "detect_and_record_only",
+        "output_modified": false,
+        "regeneration_triggered": false,
+        "replaces_human_evaluation": false,
+        "status": "PASS",
+        "error_count": 0,
+        "classification_counts": {},
+        "findings": []
+      }
+    },
+    {
+      "sample_index": 52,
+      "product_id": "562660919726",
+      "audit_status": "PASS",
+      "parse_error": null,
+      "grounding_validation": {
+        "validator_version": "rag_grounding_validator_v1",
+        "mode": "detect_and_record_only",
+        "output_modified": false,
+        "regeneration_triggered": false,
+        "replaces_human_evaluation": false,
+        "status": "PASS",
+        "error_count": 0,
+        "classification_counts": {},
+        "findings": []
+      }
+    },
+    {
+      "sample_index": 53,
+      "product_id": "566531828259",
+      "audit_status": "CONFLICT",
+      "parse_error": null,
+      "grounding_validation": {
+        "validator_version": "rag_grounding_validator_v1",
+        "mode": "detect_and_record_only",
+        "output_modified": false,
+        "regeneration_triggered": false,
+        "replaces_human_evaluation": false,
+        "status": "PASS",
+        "error_count": 0,
+        "classification_counts": {},
+        "findings": []
+      }
+    },
+    {
+      "sample_index": 54,
+      "product_id": "576463385175",
+      "audit_status": "PASS",
+      "parse_error": null,
+      "grounding_validation": {
+        "validator_version": "rag_grounding_validator_v1",
+        "mode": "detect_and_record_only",
+        "output_modified": false,
+        "regeneration_triggered": false,
+        "replaces_human_evaluation": false,
+        "status": "PASS",
+        "error_count": 0,
+        "classification_counts": {},
+        "findings": []
+      }
+    },
+    {
+      "sample_index": 55,
+      "product_id": "581329948812",
+      "audit_status": "PASS",
+      "parse_error": null,
+      "grounding_validation": {
+        "validator_version": "rag_grounding_validator_v1",
+        "mode": "detect_and_record_only",
+        "output_modified": false,
+        "regeneration_triggered": false,
+        "replaces_human_evaluation": false,
+        "status": "FAIL",
+        "error_count": 1,
+        "classification_counts": {
+          "unsupported_usage_scenario": 1
+        },
+        "findings": [
+          {
+            "classification": "unsupported_usage_scenario",
+            "location": "short_description",
+            "text_span": "适合日常使用",
+            "reason": "no_category_or_explicit_usage_support",
+            "potential_false_positive": false
+          }
+        ]
+      }
+    },
+    {
+      "sample_index": 56,
+      "product_id": "581689863460",
+      "audit_status": "PASS",
+      "parse_error": null,
+      "grounding_validation": {
+        "validator_version": "rag_grounding_validator_v1",
+        "mode": "detect_and_record_only",
+        "output_modified": false,
+        "regeneration_triggered": false,
+        "replaces_human_evaluation": false,
+        "status": "FAIL",
+        "error_count": 3,
+        "classification_counts": {
+          "unsupported_evaluative_claim": 3
+        },
+        "findings": [
+          {
+            "classification": "unsupported_evaluative_claim",
+            "location": "selling_points[0]",
+            "text_span": "大容量",
+            "reason": "no_explicit_source_support:relative_capacity",
+            "potential_false_positive": false
+          },
+          {
+            "classification": "unsupported_evaluative_claim",
+            "location": "selling_points[2]",
+            "text_span": "耐用",
+            "reason": "no_explicit_source_support:generic_evaluative_claim",
+            "potential_false_positive": false
+          },
+          {
+            "classification": "unsupported_evaluative_claim",
+            "location": "short_description",
+            "text_span": "大容量",
+            "reason": "no_explicit_source_support:relative_capacity",
+            "potential_false_positive": false
+          }
+        ]
+      }
+    },
+    {
+      "sample_index": 57,
+      "product_id": "591309078741",
+      "audit_status": "REVIEW",
+      "parse_error": null,
+      "grounding_validation": {
+        "validator_version": "rag_grounding_validator_v1",
+        "mode": "detect_and_record_only",
+        "output_modified": false,
+        "regeneration_triggered": false,
+        "replaces_human_evaluation": false,
+        "status": "PASS",
+        "error_count": 0,
+        "classification_counts": {},
+        "findings": []
+      }
+    },
+    {
+      "sample_index": 58,
+      "product_id": "606991731175",
+      "audit_status": "PASS",
+      "parse_error": null,
+      "grounding_validation": {
+        "validator_version": "rag_grounding_validator_v1",
+        "mode": "detect_and_record_only",
+        "output_modified": false,
+        "regeneration_triggered": false,
+        "replaces_human_evaluation": false,
+        "status": "PASS",
+        "error_count": 0,
+        "classification_counts": {},
+        "findings": []
+      }
+    },
+    {
+      "sample_index": 59,
+      "product_id": "608335015563",
+      "audit_status": "PASS",
+      "parse_error": null,
+      "grounding_validation": {
+        "validator_version": "rag_grounding_validator_v1",
+        "mode": "detect_and_record_only",
+        "output_modified": false,
+        "regeneration_triggered": false,
+        "replaces_human_evaluation": false,
+        "status": "PASS",
+        "error_count": 0,
+        "classification_counts": {},
+        "findings": []
+      }
+    },
+    {
+      "sample_index": 60,
+      "product_id": "609629279071",
+      "audit_status": "CONFLICT",
+      "parse_error": null,
+      "grounding_validation": {
+        "validator_version": "rag_grounding_validator_v1",
+        "mode": "detect_and_record_only",
+        "output_modified": false,
+        "regeneration_triggered": false,
+        "replaces_human_evaluation": false,
+        "status": "FAIL",
+        "error_count": 2,
+        "classification_counts": {
+          "unsupported_usage_scenario": 2
+        },
+        "findings": [
+          {
+            "classification": "unsupported_usage_scenario",
+            "location": "selling_points[2]",
+            "text_span": "适合家居日常使用",
+            "reason": "no_category_or_explicit_usage_support",
+            "potential_false_positive": false
+          },
+          {
+            "classification": "unsupported_usage_scenario",
+            "location": "short_description",
+            "text_span": "适合家居日常使用",
+            "reason": "no_category_or_explicit_usage_support",
+            "potential_false_positive": false
+          }
+        ]
+      }
+    },
+    {
+      "sample_index": 61,
+      "product_id": "609762128375",
+      "audit_status": "REVIEW",
+      "parse_error": null,
+      "grounding_validation": {
+        "validator_version": "rag_grounding_validator_v1",
+        "mode": "detect_and_record_only",
+        "output_modified": false,
+        "regeneration_triggered": false,
+        "replaces_human_evaluation": false,
+        "status": "PASS",
+        "error_count": 0,
+        "classification_counts": {},
+        "findings": []
+      }
+    },
+    {
+      "sample_index": 62,
+      "product_id": "625037263815",
+      "audit_status": "PASS",
+      "parse_error": null,
+      "grounding_validation": {
+        "validator_version": "rag_grounding_validator_v1",
+        "mode": "detect_and_record_only",
+        "output_modified": false,
+        "regeneration_triggered": false,
+        "replaces_human_evaluation": false,
+        "status": "PASS",
+        "error_count": 0,
+        "classification_counts": {},
+        "findings": []
+      }
+    },
+    {
+      "sample_index": 63,
+      "product_id": "547995479552",
+      "audit_status": "PASS",
+      "parse_error": null,
+      "grounding_validation": {
+        "validator_version": "rag_grounding_validator_v1",
+        "mode": "detect_and_record_only",
+        "output_modified": false,
+        "regeneration_triggered": false,
+        "replaces_human_evaluation": false,
+        "status": "FAIL",
+        "error_count": 2,
+        "classification_counts": {
+          "unsupported_evaluative_claim": 2
+        },
+        "findings": [
+          {
+            "classification": "unsupported_evaluative_claim",
+            "location": "short_description",
+            "text_span": "坚固",
+            "reason": "no_explicit_source_support:generic_evaluative_claim",
+            "potential_false_positive": false
+          },
+          {
+            "classification": "unsupported_evaluative_claim",
+            "location": "short_description",
+            "text_span": "耐用",
+            "reason": "no_explicit_source_support:generic_evaluative_claim",
+            "potential_false_positive": false
+          }
+        ]
+      }
+    },
+    {
+      "sample_index": 64,
+      "product_id": "567398743698",
+      "audit_status": "PASS",
+      "parse_error": null,
+      "grounding_validation": {
+        "validator_version": "rag_grounding_validator_v1",
+        "mode": "detect_and_record_only",
+        "output_modified": false,
+        "regeneration_triggered": false,
+        "replaces_human_evaluation": false,
+        "status": "PASS",
+        "error_count": 0,
+        "classification_counts": {},
+        "findings": []
+      }
+    },
+    {
+      "sample_index": 65,
+      "product_id": "576150055638",
+      "audit_status": "PASS",
+      "parse_error": null,
+      "grounding_validation": {
+        "validator_version": "rag_grounding_validator_v1",
+        "mode": "detect_and_record_only",
+        "output_modified": false,
+        "regeneration_triggered": false,
+        "replaces_human_evaluation": false,
+        "status": "PASS",
+        "error_count": 0,
+        "classification_counts": {},
+        "findings": []
+      }
+    },
+    {
+      "sample_index": 66,
+      "product_id": "577426751464",
+      "audit_status": "PASS",
+      "parse_error": null,
+      "grounding_validation": {
+        "validator_version": "rag_grounding_validator_v1",
+        "mode": "detect_and_record_only",
+        "output_modified": false,
+        "regeneration_triggered": false,
+        "replaces_human_evaluation": false,
+        "status": "PASS",
+        "error_count": 0,
+        "classification_counts": {},
+        "findings": []
+      }
+    },
+    {
+      "sample_index": 67,
+      "product_id": "583797205123",
+      "audit_status": "PASS",
+      "parse_error": null,
+      "grounding_validation": {
+        "validator_version": "rag_grounding_validator_v1",
+        "mode": "detect_and_record_only",
+        "output_modified": false,
+        "regeneration_triggered": false,
+        "replaces_human_evaluation": false,
+        "status": "PASS",
+        "error_count": 0,
+        "classification_counts": {},
+        "findings": []
+      }
+    },
+    {
+      "sample_index": 68,
+      "product_id": "595487807549",
+      "audit_status": "PASS",
+      "parse_error": null,
+      "grounding_validation": {
+        "validator_version": "rag_grounding_validator_v1",
+        "mode": "detect_and_record_only",
+        "output_modified": false,
+        "regeneration_triggered": false,
+        "replaces_human_evaluation": false,
+        "status": "FAIL",
+        "error_count": 2,
+        "classification_counts": {
+          "supported_paraphrase": 1,
+          "unsupported_evaluative_claim": 2
+        },
+        "findings": [
+          {
+            "classification": "supported_paraphrase",
+            "location": "short_description",
+            "text_span": "适用于家居日用",
+            "reason": "direct_category_label",
+            "potential_false_positive": false
+          },
+          {
+            "classification": "unsupported_evaluative_claim",
+            "location": "short_description",
+            "text_span": "优质",
+            "reason": "no_explicit_source_support:generic_evaluative_claim",
+            "potential_false_positive": false
+          },
+          {
+            "classification": "unsupported_evaluative_claim",
+            "location": "short_description",
+            "text_span": "方便",
+            "reason": "no_explicit_source_support:generic_evaluative_claim",
+            "potential_false_positive": false
+          }
+        ]
+      }
+    },
+    {
+      "sample_index": 69,
+      "product_id": "602079265226",
+      "audit_status": "PASS",
+      "parse_error": null,
+      "grounding_validation": {
+        "validator_version": "rag_grounding_validator_v1",
+        "mode": "detect_and_record_only",
+        "output_modified": false,
+        "regeneration_triggered": false,
+        "replaces_human_evaluation": false,
+        "status": "FAIL",
+        "error_count": 1,
+        "classification_counts": {
+          "unsupported_usage_scenario": 1
+        },
+        "findings": [
+          {
+            "classification": "unsupported_usage_scenario",
+            "location": "short_description",
+            "text_span": "适用于家居收纳",
+            "reason": "no_category_or_explicit_usage_support",
+            "potential_false_positive": false
+          }
+        ]
+      }
+    },
+    {
+      "sample_index": 70,
+      "product_id": "609039324433",
+      "audit_status": "PASS",
+      "parse_error": null,
+      "grounding_validation": {
+        "validator_version": "rag_grounding_validator_v1",
+        "mode": "detect_and_record_only",
+        "output_modified": false,
+        "regeneration_triggered": false,
+        "replaces_human_evaluation": false,
+        "status": "PASS",
+        "error_count": 0,
+        "classification_counts": {},
+        "findings": []
+      }
+    },
+    {
+      "sample_index": 71,
+      "product_id": "618263479034",
+      "audit_status": "PASS",
+      "parse_error": null,
+      "grounding_validation": {
+        "validator_version": "rag_grounding_validator_v1",
+        "mode": "detect_and_record_only",
+        "output_modified": false,
+        "regeneration_triggered": false,
+        "replaces_human_evaluation": false,
+        "status": "FAIL",
+        "error_count": 1,
+        "classification_counts": {
+          "unsupported_evaluative_claim": 1
+        },
+        "findings": [
+          {
+            "classification": "unsupported_evaluative_claim",
+            "location": "selling_points[2]",
+            "text_span": "大容量",
+            "reason": "no_explicit_source_support:relative_capacity",
+            "potential_false_positive": false
+          }
+        ]
+      }
+    },
+    {
+      "sample_index": 72,
+      "product_id": "619501332263",
+      "audit_status": "PASS",
+      "parse_error": null,
+      "grounding_validation": {
+        "validator_version": "rag_grounding_validator_v1",
+        "mode": "detect_and_record_only",
+        "output_modified": false,
+        "regeneration_triggered": false,
+        "replaces_human_evaluation": false,
+        "status": "FAIL",
+        "error_count": 3,
+        "classification_counts": {
+          "unsupported_evaluative_claim": 2,
+          "unsupported_usage_scenario": 1
+        },
+        "findings": [
+          {
+            "classification": "unsupported_usage_scenario",
+            "location": "short_description",
+            "text_span": "适用于家庭厨房、卫生间等多种场合",
+            "reason": "no_category_or_explicit_usage_support",
+            "potential_false_positive": false
+          },
+          {
+            "classification": "unsupported_evaluative_claim",
+            "location": "short_description",
+            "text_span": "坚固",
+            "reason": "no_explicit_source_support:generic_evaluative_claim",
+            "potential_false_positive": false
+          },
+          {
+            "classification": "unsupported_evaluative_claim",
+            "location": "short_description",
+            "text_span": "耐用",
+            "reason": "no_explicit_source_support:generic_evaluative_claim",
+            "potential_false_positive": false
+          }
+        ]
+      }
+    },
+    {
+      "sample_index": 73,
+      "product_id": "620165221976",
+      "audit_status": "PASS",
+      "parse_error": null,
+      "grounding_validation": {
+        "validator_version": "rag_grounding_validator_v1",
+        "mode": "detect_and_record_only",
+        "output_modified": false,
+        "regeneration_triggered": false,
+        "replaces_human_evaluation": false,
+        "status": "FAIL",
+        "error_count": 3,
+        "classification_counts": {
+          "unsupported_evaluative_claim": 2,
+          "unsupported_usage_scenario": 1
+        },
+        "findings": [
+          {
+            "classification": "unsupported_evaluative_claim",
+            "location": "selling_points[0]",
+            "text_span": "方便",
+            "reason": "no_explicit_source_support:generic_evaluative_claim",
+            "potential_false_positive": false
+          },
+          {
+            "classification": "unsupported_evaluative_claim",
+            "location": "selling_points[1]",
+            "text_span": "耐用",
+            "reason": "no_explicit_source_support:generic_evaluative_claim",
+            "potential_false_positive": false
+          },
+          {
+            "classification": "unsupported_usage_scenario",
+            "location": "selling_points[2]",
+            "text_span": "适合家庭使用",
+            "reason": "no_category_or_explicit_usage_support",
+            "potential_false_positive": false
+          }
+        ]
+      }
+    },
+    {
+      "sample_index": 74,
+      "product_id": "623126145078",
+      "audit_status": "PASS",
+      "parse_error": null,
+      "grounding_validation": {
+        "validator_version": "rag_grounding_validator_v1",
+        "mode": "detect_and_record_only",
+        "output_modified": false,
+        "regeneration_triggered": false,
+        "replaces_human_evaluation": false,
+        "status": "PASS",
+        "error_count": 0,
+        "classification_counts": {},
+        "findings": []
+      }
+    },
+    {
+      "sample_index": 75,
+      "product_id": "547702894728",
+      "audit_status": "PASS",
+      "parse_error": null,
+      "grounding_validation": {
+        "validator_version": "rag_grounding_validator_v1",
+        "mode": "detect_and_record_only",
+        "output_modified": false,
+        "regeneration_triggered": false,
+        "replaces_human_evaluation": false,
+        "status": "FAIL",
+        "error_count": 1,
+        "classification_counts": {
+          "unsupported_usage_scenario": 1
+        },
+        "findings": [
+          {
+            "classification": "unsupported_usage_scenario",
+            "location": "short_description",
+            "text_span": "适合不同高度的清洁需求",
+            "reason": "no_category_or_explicit_usage_support",
+            "potential_false_positive": false
+          }
+        ]
+      }
+    },
+    {
+      "sample_index": 76,
+      "product_id": "562289059045",
+      "audit_status": "PASS",
+      "parse_error": null,
+      "grounding_validation": {
+        "validator_version": "rag_grounding_validator_v1",
+        "mode": "detect_and_record_only",
+        "output_modified": false,
+        "regeneration_triggered": false,
+        "replaces_human_evaluation": false,
+        "status": "FAIL",
+        "error_count": 3,
+        "classification_counts": {
+          "unsupported_evaluative_claim": 3
+        },
+        "findings": [
+          {
+            "classification": "unsupported_evaluative_claim",
+            "location": "selling_points[0]",
+            "text_span": "耐用",
+            "reason": "no_explicit_source_support:generic_evaluative_claim",
+            "potential_false_positive": false
+          },
+          {
+            "classification": "unsupported_evaluative_claim",
+            "location": "short_description",
+            "text_span": "方便",
+            "reason": "no_explicit_source_support:generic_evaluative_claim",
+            "potential_false_positive": false
+          },
+          {
+            "classification": "unsupported_evaluative_claim",
+            "location": "short_description",
+            "text_span": "省力",
+            "reason": "no_explicit_source_support:generic_evaluative_claim",
+            "potential_false_positive": false
+          }
+        ]
+      }
+    },
+    {
+      "sample_index": 77,
+      "product_id": "582839837483",
+      "audit_status": "PASS",
+      "parse_error": null,
+      "grounding_validation": {
+        "validator_version": "rag_grounding_validator_v1",
+        "mode": "detect_and_record_only",
+        "output_modified": false,
+        "regeneration_triggered": false,
+        "replaces_human_evaluation": false,
+        "status": "FAIL",
+        "error_count": 1,
+        "classification_counts": {
+          "unsupported_evaluative_claim": 1
+        },
+        "findings": [
+          {
+            "classification": "unsupported_evaluative_claim",
+            "location": "short_description",
+            "text_span": "方便",
+            "reason": "no_explicit_source_support:generic_evaluative_claim",
+            "potential_false_positive": false
+          }
+        ]
+      }
+    },
+    {
+      "sample_index": 78,
+      "product_id": "583457250405",
+      "audit_status": "REVIEW",
+      "parse_error": null,
+      "grounding_validation": {
+        "validator_version": "rag_grounding_validator_v1",
+        "mode": "detect_and_record_only",
+        "output_modified": false,
+        "regeneration_triggered": false,
+        "replaces_human_evaluation": false,
+        "status": "PASS",
+        "error_count": 0,
+        "classification_counts": {},
+        "findings": []
+      }
+    },
+    {
+      "sample_index": 79,
+      "product_id": "587244433192",
+      "audit_status": "PASS",
+      "parse_error": null,
+      "grounding_validation": {
+        "validator_version": "rag_grounding_validator_v1",
+        "mode": "detect_and_record_only",
+        "output_modified": false,
+        "regeneration_triggered": false,
+        "replaces_human_evaluation": false,
+        "status": "PASS",
+        "error_count": 0,
+        "classification_counts": {},
+        "findings": []
+      }
+    },
+    {
+      "sample_index": 80,
+      "product_id": "599620329880",
+      "audit_status": "PASS",
+      "parse_error": null,
+      "grounding_validation": {
+        "validator_version": "rag_grounding_validator_v1",
+        "mode": "detect_and_record_only",
+        "output_modified": false,
+        "regeneration_triggered": false,
+        "replaces_human_evaluation": false,
+        "status": "FAIL",
+        "error_count": 1,
+        "classification_counts": {
+          "unsupported_usage_scenario": 1
+        },
+        "findings": [
+          {
+            "classification": "unsupported_usage_scenario",
+            "location": "short_description",
+            "text_span": "适用于家庭日常清洁",
+            "reason": "no_category_or_explicit_usage_support",
+            "potential_false_positive": false
+          }
+        ]
+      }
+    },
+    {
+      "sample_index": 81,
+      "product_id": "604829061336",
+      "audit_status": "PASS",
+      "parse_error": null,
+      "grounding_validation": {
+        "validator_version": "rag_grounding_validator_v1",
+        "mode": "detect_and_record_only",
+        "output_modified": false,
+        "regeneration_triggered": false,
+        "replaces_human_evaluation": false,
+        "status": "PASS",
+        "error_count": 0,
+        "classification_counts": {
+          "supported_paraphrase": 1
+        },
+        "findings": [
+          {
+            "classification": "supported_paraphrase",
+            "location": "short_description",
+            "text_span": "适用于家居清洁",
+            "reason": "direct_category_semantics",
+            "potential_false_positive": false
+          }
+        ]
+      }
+    },
+    {
+      "sample_index": 82,
+      "product_id": "607256389125",
+      "audit_status": "PASS",
+      "parse_error": null,
+      "grounding_validation": {
+        "validator_version": "rag_grounding_validator_v1",
+        "mode": "detect_and_record_only",
+        "output_modified": false,
+        "regeneration_triggered": false,
+        "replaces_human_evaluation": false,
+        "status": "FAIL",
+        "error_count": 1,
+        "classification_counts": {
+          "unsupported_usage_scenario": 1
+        },
+        "findings": [
+          {
+            "classification": "unsupported_usage_scenario",
+            "location": "short_description",
+            "text_span": "适合家庭清洁使用",
+            "reason": "no_category_or_explicit_usage_support",
+            "potential_false_positive": false
+          }
+        ]
+      }
+    },
+    {
+      "sample_index": 83,
+      "product_id": "614194957336",
+      "audit_status": "PASS",
+      "parse_error": null,
+      "grounding_validation": {
+        "validator_version": "rag_grounding_validator_v1",
+        "mode": "detect_and_record_only",
+        "output_modified": false,
+        "regeneration_triggered": false,
+        "replaces_human_evaluation": false,
+        "status": "PASS",
+        "error_count": 0,
+        "classification_counts": {
+          "supported_paraphrase": 1
+        },
+        "findings": [
+          {
+            "classification": "supported_paraphrase",
+            "location": "short_description",
+            "text_span": "适用于家居清洁",
+            "reason": "direct_category_semantics",
+            "potential_false_positive": false
+          }
+        ]
+      }
+    },
+    {
+      "sample_index": 84,
+      "product_id": "618416951039",
+      "audit_status": "PASS",
+      "parse_error": null,
+      "grounding_validation": {
+        "validator_version": "rag_grounding_validator_v1",
+        "mode": "detect_and_record_only",
+        "output_modified": false,
+        "regeneration_triggered": false,
+        "replaces_human_evaluation": false,
+        "status": "PASS",
+        "error_count": 0,
+        "classification_counts": {},
+        "findings": []
+      }
+    },
+    {
+      "sample_index": 85,
+      "product_id": "620625786758",
+      "audit_status": "PASS",
+      "parse_error": null,
+      "grounding_validation": {
+        "validator_version": "rag_grounding_validator_v1",
+        "mode": "detect_and_record_only",
+        "output_modified": false,
+        "regeneration_triggered": false,
+        "replaces_human_evaluation": false,
+        "status": "PASS",
+        "error_count": 0,
+        "classification_counts": {},
+        "findings": []
+      }
+    },
+    {
+      "sample_index": 86,
+      "product_id": "621173570641",
+      "audit_status": "REVIEW",
+      "parse_error": null,
+      "grounding_validation": {
+        "validator_version": "rag_grounding_validator_v1",
+        "mode": "detect_and_record_only",
+        "output_modified": false,
+        "regeneration_triggered": false,
+        "replaces_human_evaluation": false,
+        "status": "FAIL",
+        "error_count": 1,
+        "classification_counts": {
+          "unsupported_usage_scenario": 1
+        },
+        "findings": [
+          {
+            "classification": "unsupported_usage_scenario",
+            "location": "short_description",
+            "text_span": "适用于家庭清洁",
+            "reason": "no_category_or_explicit_usage_support",
+            "potential_false_positive": false
+          }
+        ]
+      }
+    },
+    {
+      "sample_index": 87,
+      "product_id": "24497168737",
+      "audit_status": "PASS",
+      "parse_error": null,
+      "grounding_validation": {
+        "validator_version": "rag_grounding_validator_v1",
+        "mode": "detect_and_record_only",
+        "output_modified": false,
+        "regeneration_triggered": false,
+        "replaces_human_evaluation": false,
+        "status": "FAIL",
+        "error_count": 1,
+        "classification_counts": {
+          "supported_paraphrase": 1,
+          "unsupported_evaluative_claim": 1
+        },
+        "findings": [
+          {
+            "classification": "supported_paraphrase",
+            "location": "short_description",
+            "text_span": "适用于家居日用收纳箱",
+            "reason": "direct_category_label_combination",
+            "potential_false_positive": false
+          },
+          {
+            "classification": "unsupported_evaluative_claim",
+            "location": "short_description",
+            "text_span": "便捷",
+            "reason": "no_explicit_source_support:generic_evaluative_claim",
+            "potential_false_positive": false
+          }
+        ]
+      }
+    },
+    {
+      "sample_index": 88,
+      "product_id": "43297860634",
+      "audit_status": "PASS",
+      "parse_error": null,
+      "grounding_validation": {
+        "validator_version": "rag_grounding_validator_v1",
+        "mode": "detect_and_record_only",
+        "output_modified": false,
+        "regeneration_triggered": false,
+        "replaces_human_evaluation": false,
+        "status": "PASS",
+        "error_count": 0,
+        "classification_counts": {
+          "supported_paraphrase": 2
+        },
+        "findings": [
+          {
+            "classification": "supported_paraphrase",
+            "location": "selling_points[1]",
+            "text_span": "适用于家居收纳",
+            "reason": "direct_category_semantics",
+            "potential_false_positive": false
+          },
+          {
+            "classification": "supported_paraphrase",
+            "location": "short_description",
+            "text_span": "适用于家居收纳",
+            "reason": "direct_category_semantics",
+            "potential_false_positive": false
+          }
+        ]
+      }
+    },
+    {
+      "sample_index": 89,
+      "product_id": "530504970904",
+      "audit_status": "PASS",
+      "parse_error": null,
+      "grounding_validation": {
+        "validator_version": "rag_grounding_validator_v1",
+        "mode": "detect_and_record_only",
+        "output_modified": false,
+        "regeneration_triggered": false,
+        "replaces_human_evaluation": false,
+        "status": "PASS",
+        "error_count": 0,
+        "classification_counts": {},
+        "findings": []
+      }
+    },
+    {
+      "sample_index": 90,
+      "product_id": "540395966499",
+      "audit_status": "PASS",
+      "parse_error": null,
+      "grounding_validation": {
+        "validator_version": "rag_grounding_validator_v1",
+        "mode": "detect_and_record_only",
+        "output_modified": false,
+        "regeneration_triggered": false,
+        "replaces_human_evaluation": false,
+        "status": "FAIL",
+        "error_count": 1,
+        "classification_counts": {
+          "supported_paraphrase": 1,
+          "unsupported_usage_scenario": 1
+        },
+        "findings": [
+          {
+            "classification": "supported_paraphrase",
+            "location": "short_description",
+            "text_span": "适用于家居日用收纳",
+            "reason": "direct_category_semantics",
+            "potential_false_positive": false
+          },
+          {
+            "classification": "unsupported_usage_scenario",
+            "location": "short_description",
+            "text_span": "适合家庭日常使用",
+            "reason": "no_category_or_explicit_usage_support",
+            "potential_false_positive": false
+          }
+        ]
+      }
+    },
+    {
+      "sample_index": 91,
+      "product_id": "587907612086",
+      "audit_status": "PASS",
+      "parse_error": null,
+      "grounding_validation": {
+        "validator_version": "rag_grounding_validator_v1",
+        "mode": "detect_and_record_only",
+        "output_modified": false,
+        "regeneration_triggered": false,
+        "replaces_human_evaluation": false,
+        "status": "FAIL",
+        "error_count": 1,
+        "classification_counts": {
+          "supported_paraphrase": 1,
+          "unsupported_usage_scenario": 1
+        },
+        "findings": [
+          {
+            "classification": "supported_paraphrase",
+            "location": "selling_points[2]",
+            "text_span": "适用于家居日用",
+            "reason": "direct_category_label",
+            "potential_false_positive": false
+          },
+          {
+            "classification": "unsupported_usage_scenario",
+            "location": "short_description",
+            "text_span": "适用于家居日用收纳需求",
+            "reason": "no_category_or_explicit_usage_support",
+            "potential_false_positive": false
+          }
+        ]
+      }
+    },
+    {
+      "sample_index": 92,
+      "product_id": "594880547645",
+      "audit_status": "PASS",
+      "parse_error": null,
+      "grounding_validation": {
+        "validator_version": "rag_grounding_validator_v1",
+        "mode": "detect_and_record_only",
+        "output_modified": false,
+        "regeneration_triggered": false,
+        "replaces_human_evaluation": false,
+        "status": "PASS",
+        "error_count": 0,
+        "classification_counts": {},
+        "findings": []
+      }
+    },
+    {
+      "sample_index": 93,
+      "product_id": "599485472276",
+      "audit_status": "CONFLICT",
+      "parse_error": null,
+      "grounding_validation": {
+        "validator_version": "rag_grounding_validator_v1",
+        "mode": "detect_and_record_only",
+        "output_modified": false,
+        "regeneration_triggered": false,
+        "replaces_human_evaluation": false,
+        "status": "PASS",
+        "error_count": 0,
+        "classification_counts": {
+          "supported_paraphrase": 2
+        },
+        "findings": [
+          {
+            "classification": "supported_paraphrase",
+            "location": "selling_points[1]",
+            "text_span": "适用于家居收纳",
+            "reason": "direct_category_semantics",
+            "potential_false_positive": false
+          },
+          {
+            "classification": "supported_paraphrase",
+            "location": "short_description",
+            "text_span": "适用于家居收纳",
+            "reason": "direct_category_semantics",
+            "potential_false_positive": false
+          }
+        ]
+      }
+    },
+    {
+      "sample_index": 94,
+      "product_id": "600538024615",
+      "audit_status": "PASS",
+      "parse_error": null,
+      "grounding_validation": {
+        "validator_version": "rag_grounding_validator_v1",
+        "mode": "detect_and_record_only",
+        "output_modified": false,
+        "regeneration_triggered": false,
+        "replaces_human_evaluation": false,
+        "status": "PASS",
+        "error_count": 0,
+        "classification_counts": {
+          "supported_paraphrase": 2
+        },
+        "findings": [
+          {
+            "classification": "supported_paraphrase",
+            "location": "selling_points[2]",
+            "text_span": "适用于家居收纳",
+            "reason": "direct_category_semantics",
+            "potential_false_positive": false
+          },
+          {
+            "classification": "supported_paraphrase",
+            "location": "short_description",
+            "text_span": "适用于家居收纳",
+            "reason": "direct_category_semantics",
+            "potential_false_positive": false
+          }
+        ]
+      }
+    },
+    {
+      "sample_index": 95,
+      "product_id": "608516760684",
+      "audit_status": "PASS",
+      "parse_error": null,
+      "grounding_validation": {
+        "validator_version": "rag_grounding_validator_v1",
+        "mode": "detect_and_record_only",
+        "output_modified": false,
+        "regeneration_triggered": false,
+        "replaces_human_evaluation": false,
+        "status": "PASS",
+        "error_count": 0,
+        "classification_counts": {
+          "supported_paraphrase": 2
+        },
+        "findings": [
+          {
+            "classification": "supported_paraphrase",
+            "location": "selling_points[1]",
+            "text_span": "适用于家居收纳",
+            "reason": "direct_category_semantics",
+            "potential_false_positive": false
+          },
+          {
+            "classification": "supported_paraphrase",
+            "location": "short_description",
+            "text_span": "适用于家居收纳",
+            "reason": "direct_category_semantics",
+            "potential_false_positive": false
+          }
+        ]
+      }
+    },
+    {
+      "sample_index": 96,
+      "product_id": "610255708567",
+      "audit_status": "PASS",
+      "parse_error": null,
+      "grounding_validation": {
+        "validator_version": "rag_grounding_validator_v1",
+        "mode": "detect_and_record_only",
+        "output_modified": false,
+        "regeneration_triggered": false,
+        "replaces_human_evaluation": false,
+        "status": "PASS",
+        "error_count": 0,
+        "classification_counts": {},
+        "findings": []
+      }
+    },
+    {
+      "sample_index": 97,
+      "product_id": "610445355179",
+      "audit_status": "PASS",
+      "parse_error": null,
+      "grounding_validation": {
+        "validator_version": "rag_grounding_validator_v1",
+        "mode": "detect_and_record_only",
+        "output_modified": false,
+        "regeneration_triggered": false,
+        "replaces_human_evaluation": false,
+        "status": "PASS",
+        "error_count": 0,
+        "classification_counts": {
+          "supported_paraphrase": 1
+        },
+        "findings": [
+          {
+            "classification": "supported_paraphrase",
+            "location": "short_description",
+            "text_span": "适用于家居日用",
+            "reason": "direct_category_label",
+            "potential_false_positive": false
+          }
+        ]
+      }
+    },
+    {
+      "sample_index": 98,
+      "product_id": "618820646060",
+      "audit_status": "PASS",
+      "parse_error": null,
+      "grounding_validation": {
+        "validator_version": "rag_grounding_validator_v1",
+        "mode": "detect_and_record_only",
+        "output_modified": false,
+        "regeneration_triggered": false,
+        "replaces_human_evaluation": false,
+        "status": "FAIL",
+        "error_count": 1,
+        "classification_counts": {
+          "supported_paraphrase": 1,
+          "unsupported_usage_scenario": 1
+        },
+        "findings": [
+          {
+            "classification": "supported_paraphrase",
+            "location": "selling_points[2]",
+            "text_span": "适合家居收纳",
+            "reason": "direct_category_semantics",
+            "potential_false_positive": false
+          },
+          {
+            "classification": "unsupported_usage_scenario",
+            "location": "short_description",
+            "text_span": "适用于家居收纳需求",
+            "reason": "no_category_or_explicit_usage_support",
+            "potential_false_positive": false
+          }
+        ]
+      }
+    },
+    {
+      "sample_index": 99,
+      "product_id": "624392441174",
+      "audit_status": "REVIEW",
+      "parse_error": null,
+      "grounding_validation": {
+        "validator_version": "rag_grounding_validator_v1",
+        "mode": "detect_and_record_only",
+        "output_modified": false,
+        "regeneration_triggered": false,
+        "replaces_human_evaluation": false,
+        "status": "FAIL",
+        "error_count": 2,
+        "classification_counts": {
+          "unsupported_evaluative_claim": 1,
+          "unsupported_usage_scenario": 1
+        },
+        "findings": [
+          {
+            "classification": "unsupported_usage_scenario",
+            "location": "short_description",
+            "text_span": "适用于家居日常",
+            "reason": "no_category_or_explicit_usage_support",
+            "potential_false_positive": false
+          },
+          {
+            "classification": "unsupported_evaluative_claim",
+            "location": "short_description",
+            "text_span": "优质",
+            "reason": "no_explicit_source_support:generic_evaluative_claim",
+            "potential_false_positive": false
+          }
+        ]
+      }
+    }
+  ]
+}

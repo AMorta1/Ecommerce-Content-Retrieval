@@ -3,6 +3,13 @@ import unittest
 from pathlib import Path
 from tempfile import TemporaryDirectory
 
+from scripts.evaluate_generation import (
+    build_annotation_rows,
+    draft_formal_rows,
+    structured_output_success_rate,
+    validate_attribution_rows,
+    validate_output_report,
+)
 from scripts.run_rag_validation import load_excluded_product_ids
 from src.generation.grounding import validate_generation_grounding
 from src.generation.evaluation import (
@@ -759,6 +766,87 @@ class GroundingValidatorTests(unittest.TestCase):
 
 
 class GenerationEvaluationTests(unittest.TestCase):
+    @staticmethod
+    def draft_fixture() -> tuple[
+        list[dict[str, str]],
+        dict[str, object],
+        dict[str, object],
+        list[dict[str, object]],
+        dict[str, dict[str, str]],
+    ]:
+        row = {
+            "product_id": "1",
+            "core_attribute_count": "2",
+            "matched_attribute_count": "",
+            "fluency_pass": "",
+            "factual_error_count": "",
+            "category_style_pass": "",
+            "source_fact_quality_count": "",
+            "retrieval_error_count": "",
+            "grounding_failure_count": "",
+            "unsupported_generation_count": "",
+            "supported_paraphrase_count": "",
+            "review_notes": "",
+        }
+        output_report = {
+            "results": [
+                {
+                    "product_id": "1",
+                    "generation_input": {
+                        "attributes": {"接口类型": ["USB"], "键数": ["104键"]}
+                    },
+                    "parsed_output": {
+                        "generated_title": "USB键盘",
+                        "selling_points": ["接口为USB", "有线连接", "键盘产品"],
+                        "short_description": "这是一款USB接口键盘。",
+                    },
+                    "rag_context": {
+                        "identity_facts": [],
+                        "selected_facts": [
+                            {"canonical_field": "接口类型", "normalized_values": ["USB"]}
+                        ],
+                        "negative_constraint_facts": [],
+                    },
+                }
+            ]
+        }
+        validator_report = {
+            "results": [
+                {
+                    "product_id": "1",
+                    "grounding_validation": {
+                        "classification_counts": {
+                            "unsupported_evaluative_claim": 1,
+                            "unsupported_usage_scenario": 1,
+                            "grounding_failure": 1,
+                            "supported_paraphrase": 2,
+                        },
+                        "findings": [],
+                    },
+                }
+            ]
+        }
+        facts = [
+            {
+                "product_id": "1",
+                "canonical_field": "接口类型",
+                "quality_status": "eligible",
+            },
+            {
+                "product_id": "1",
+                "canonical_field": "键数",
+                "quality_status": "eligible",
+            },
+        ]
+        audit = {
+            "1": {
+                "status": "REVIEW",
+                "issue_code": "test_review",
+                "review_note": "测试审计记录",
+            }
+        }
+        return [row], output_report, validator_report, facts, audit
+
     def test_zero_values_are_completed_annotations(self) -> None:
         rows = [
             {
@@ -808,6 +896,131 @@ class GenerationEvaluationTests(unittest.TestCase):
 
         with self.assertRaisesRegex(ValueError, "属性命中数"):
             parse_judgments(rows)
+
+    def test_formal_rag_annotation_exposes_injected_facts_without_prefilling_labels(
+        self,
+    ) -> None:
+        output_report = {
+            "results": [
+                {
+                    "product_id": "1",
+                    "audit_status": "REVIEW",
+                    "generation_input": {
+                        "category_l1": "3C数码",
+                        "category_l2": "键盘",
+                        "attributes": {"接口类型": ["USB"], "键数": ["104键"]},
+                    },
+                    "parsed_output": {
+                        "generated_title": "USB键盘",
+                        "selling_points": ["接口：USB", "键数：104键", "品类：键盘"],
+                        "short_description": "键盘采用USB接口，共104键。",
+                    },
+                    "raw_output": "",
+                    "rag_context": {
+                        "identity_facts": [
+                            {
+                                "canonical_field": "category_l2",
+                                "normalized_values": ["键盘"],
+                            }
+                        ],
+                        "selected_facts": [
+                            {
+                                "canonical_field": "接口类型",
+                                "normalized_values": ["USB"],
+                            }
+                        ],
+                        "negative_constraint_facts": [
+                            {
+                                "canonical_field": "是否无线",
+                                "normalized_values": ["有线"],
+                            }
+                        ],
+                    },
+                }
+            ]
+        }
+
+        row = build_annotation_rows(output_report)[0]
+
+        self.assertEqual(row["core_attribute_count"], 2)
+        self.assertEqual(row["source_quality_status"], "REVIEW")
+        self.assertEqual(row["rag_identity_facts"], "category_l2=键盘")
+        self.assertEqual(row["rag_selected_facts"], "接口类型=USB")
+        self.assertEqual(row["rag_negative_constraints"], "是否无线=有线")
+        self.assertEqual(row["matched_attribute_count"], "")
+        self.assertEqual(row["unsupported_generation_count"], "")
+
+    def test_formal_output_success_rate_uses_parsed_count(self) -> None:
+        self.assertEqual(
+            structured_output_success_rate(
+                {"sample_count": 100, "parsed_output_count": 100}
+            ),
+            1.0,
+        )
+
+    def test_error_attribution_must_match_factual_error_count(self) -> None:
+        rows = [
+            {
+                "product_id": "1",
+                "factual_error_count": "2",
+                "source_fact_quality_count": "1",
+                "retrieval_error_count": "0",
+                "grounding_failure_count": "1",
+                "unsupported_generation_count": "0",
+                "supported_paraphrase_count": "0",
+            }
+        ]
+        fields = (
+            "source_fact_quality_count",
+            "retrieval_error_count",
+            "grounding_failure_count",
+            "unsupported_generation_count",
+            "supported_paraphrase_count",
+        )
+
+        with self.assertRaisesRegex(ValueError, "必须等于"):
+            validate_attribution_rows(rows, fields)
+
+    def test_formal_output_report_rejects_hash_mismatch(self) -> None:
+        with TemporaryDirectory() as temporary_directory:
+            path = Path(temporary_directory) / "outputs.json"
+            report = {
+                "scope": "formal_test100",
+                "formal_test100_executed": True,
+                "results": [{"product_id": "1"}],
+            }
+            path.write_text(json.dumps(report), encoding="utf-8")
+            config = {
+                "expected_outputs_sha256": "0" * 64,
+                "expected_scope": "formal_test100",
+                "expected_sample_count": 1,
+                "require_formal_test100_executed": True,
+            }
+
+            with self.assertRaisesRegex(ValueError, "SHA256"):
+                validate_output_report(config, path, report)
+
+    def test_formal_ai_draft_is_marked_and_uses_traceable_counts(self) -> None:
+        rows, outputs, validator, facts, audit = self.draft_fixture()
+
+        drafted = draft_formal_rows(rows, outputs, validator, facts, audit)[0]
+
+        self.assertEqual(drafted["matched_attribute_count"], "1")
+        self.assertEqual(drafted["source_fact_quality_count"], "1")
+        self.assertEqual(drafted["retrieval_error_count"], "1")
+        self.assertEqual(drafted["grounding_failure_count"], "1")
+        self.assertEqual(drafted["unsupported_generation_count"], "2")
+        self.assertEqual(drafted["supported_paraphrase_count"], "2")
+        self.assertEqual(drafted["factual_error_count"], "3")
+        self.assertTrue(drafted["review_notes"].startswith("AI初标："))
+        self.assertIn("疑似未召回字段=键数", drafted["review_notes"])
+
+    def test_formal_ai_draft_refuses_to_overwrite_existing_review(self) -> None:
+        rows, outputs, validator, facts, audit = self.draft_fixture()
+        rows[0]["fluency_pass"] = "1"
+
+        with self.assertRaisesRegex(ValueError, "拒绝覆盖"):
+            draft_formal_rows(rows, outputs, validator, facts, audit)
 
 
 if __name__ == "__main__":

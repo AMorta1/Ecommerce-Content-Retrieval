@@ -38,8 +38,14 @@ def load_annotation_rows(path: Path) -> list[dict[str, str]]:
     return rows
 
 
-def annotation_progress(rows: list[dict[str, str]]) -> dict[str, int]:
-    completed = sum(all(row[field].strip() for field in MANUAL_FIELDS) for row in rows)
+def annotation_progress(
+    rows: list[dict[str, str]],
+    required_fields: tuple[str, ...] = MANUAL_FIELDS,
+) -> dict[str, int]:
+    missing = [field for field in required_fields if field not in rows[0]] if rows else []
+    if missing:
+        raise ValueError(f"标注表缺少必填人工字段：{missing}")
+    completed = sum(all(row[field].strip() for field in required_fields) for row in rows)
     return {
         "total_rows": len(rows),
         "completed_rows": completed,
