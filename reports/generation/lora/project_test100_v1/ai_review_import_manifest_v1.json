@@ -1,0 +1,2976 @@
+{
+  "status": "AI_assisted_review_draft_pending_user_confirmation",
+  "created_at_utc": "2026-10-04T14:27:47.213867+00:00",
+  "source_path": "E:\\WebDownload\\project_test100_blind_review_rechecked.xlsx",
+  "source_sha256": "ab56300c3f7e2b1b999ed9d2df66c97f28660ddf39d4c78b249f425229cb0776",
+  "target_path": "E:\\Projects\\Baidu\\Ecommerce-Content-Retrieval\\reports\\generation\\lora\\project_test100_v1\\project_test100_blind_review.xlsx",
+  "target_sha256": "6ce864176277e5efb890e4afcf5799c6c31f182393eb17ccc00c64696f082a20",
+  "blank_backup_path": "E:\\Projects\\Baidu\\Ecommerce-Content-Retrieval\\reports\\generation\\lora\\project_test100_v1\\project_test100_blind_review.pre_ai_import.xlsx",
+  "blank_backup_sha256": "76c395c9099c2b667cd33ea26b1d6d495025e7d7e5599827c5953d19b9653028",
+  "amendments_sha256": "cee4823dde31a9d8f9fa99e480fa57ece18b2f5af776db2b21e6d6b0213a38b0",
+  "import_script_sha256": "54811bfd34d02d1e9df8d80ee7b25dd5de20972f7c12309eba218967e2f5dcbc",
+  "products": 100,
+  "model_documents": 200,
+  "core_attribute_total": 625,
+  "imported_editable_cells": 2500,
+  "revised_pairs_excluding_metadata": 70,
+  "pairs_with_formal_score_corrections": 61,
+  "preference_votes_changed": 0,
+  "user_confirmed_rows": 0,
+  "immutable_cells_verified": true,
+  "all_original_sheets_preserved": true,
+  "sealed_mapping_preserved": true,
+  "original_delivery_workbook_hash_preserved_in_backup": true,
+  "official_aggregation_performed": false,
+  "unblinding_performed": false,
+  "inference_performed": false,
+  "amended_fields_vs_supplied": [
+    {
+      "pair_id": "PT001",
+      "product_id": "620004973618",
+      "field": "reviewer",
+      "from_user_file": "ChatGPT复核",
+      "written_value": "AI初审：ChatGPT填写，Codex复核修正；待用户确认"
+    },
+    {
+      "pair_id": "PT001",
+      "product_id": "620004973618",
+      "field": "review_confirmed",
+      "from_user_file": 1,
+      "written_value": 0
+    },
+    {
+      "pair_id": "PT002",
+      "product_id": "576150055638",
+      "field": "reviewer",
+      "from_user_file": "ChatGPT复核",
+      "written_value": "AI初审：ChatGPT填写，Codex复核修正；待用户确认"
+    },
+    {
+      "pair_id": "PT002",
+      "product_id": "576150055638",
+      "field": "review_confirmed",
+      "from_user_file": 1,
+      "written_value": 0
+    },
+    {
+      "pair_id": "PT003",
+      "product_id": "588442419126",
+      "field": "reviewer",
+      "from_user_file": "ChatGPT复核",
+      "written_value": "AI初审：ChatGPT填写，Codex复核修正；待用户确认"
+    },
+    {
+      "pair_id": "PT003",
+      "product_id": "588442419126",
+      "field": "review_confirmed",
+      "from_user_file": 1,
+      "written_value": 0
+    },
+    {
+      "pair_id": "PT004",
+      "product_id": "587556959797",
+      "field": "pair_notes",
+      "from_user_file": "A覆盖更完整（8/8 vs 5/8）；B事实更克制。",
+      "written_value": "AI复核后：核心命中A 8/8、B 5/8；独立事实错误A 3、B 0；表达偏好沿用原稿，待用户确认。"
+    },
+    {
+      "pair_id": "PT004",
+      "product_id": "587556959797",
+      "field": "A_notes",
+      "from_user_file": "“稳定耐用”“坚固耐磨”为无依据评价；“快速充电”有源属性“支持快充”支撑。",
+      "written_value": "AI复查：独立错误3点：1. 电芯稳定性：稳定耐用中的稳定；2. 电芯耐用性：稳定耐用中的耐用；3. 合金外壳坚固耐磨的材料质量评价 电芯运行稳定与耐用不是同一效果。快速充电有完整源附加功能支持快充，不计错。"
+    },
+    {
+      "pair_id": "PT004",
+      "product_id": "587556959797",
+      "field": "reviewer",
+      "from_user_file": "ChatGPT复核",
+      "written_value": "AI初审：ChatGPT填写，Codex复核修正；待用户确认"
+    },
+    {
+      "pair_id": "PT004",
+      "product_id": "587556959797",
+      "field": "A_factual_error_count",
+      "from_user_file": 2,
+      "written_value": 3
+    },
+    {
+      "pair_id": "PT004",
+      "product_id": "587556959797",
+      "field": "review_confirmed",
+      "from_user_file": 1,
+      "written_value": 0
+    },
+    {
+      "pair_id": "PT005",
+      "product_id": "556245210015",
+      "field": "pair_notes",
+      "from_user_file": "两侧核心覆盖相同（5/5）；A事实更克制。",
+      "written_value": "AI复核后：核心命中A 5/5、B 5/5；独立事实错误A 0、B 0；表达偏好沿用原稿，待用户确认。"
+    },
+    {
+      "pair_id": "PT005",
+      "product_id": "556245210015",
+      "field": "B_unsupported_evaluation_effect_scenario",
+      "from_user_file": 1,
+      "written_value": 0
+    },
+    {
+      "pair_id": "PT005",
+      "product_id": "556245210015",
+      "field": "B_notes",
+      "from_user_file": "“适合……日常使用”扩大了使用场景；游戏用途由“游戏耳机”支持。",
+      "written_value": "AI复查：独立错误0点：未发现事实错误。 游戏耳机及手机线控耳机均有来源；适合游戏和日常使用未新增具体场所、人群、设备范围或性能，按低风险泛用途表达处理，不单独计场景错误。此边界判断请用户确认。"
+    },
+    {
+      "pair_id": "PT005",
+      "product_id": "556245210015",
+      "field": "B_factual_error_count",
+      "from_user_file": 1,
+      "written_value": 0
+    },
+    {
+      "pair_id": "PT005",
+      "product_id": "556245210015",
+      "field": "reviewer",
+      "from_user_file": "ChatGPT复核",
+      "written_value": "AI初审：ChatGPT填写，Codex复核修正；待用户确认"
+    },
+    {
+      "pair_id": "PT005",
+      "product_id": "556245210015",
+      "field": "review_confirmed",
+      "from_user_file": 1,
+      "written_value": 0
+    },
+    {
+      "pair_id": "PT006",
+      "product_id": "587907612086",
+      "field": "A_notes",
+      "from_user_file": "“环保塑料”“轻巧便携”“便于整理书籍、文具”均缺少直接事实依据。",
+      "written_value": "AI复查：独立错误3点：1. 环保塑料的环保性；2. 轻巧便携的便携性评价；3. 书籍、文具具体收纳对象 原3点保留。书房仅支持空间，不直接证明适用于书籍、文具；0.5kg是规格，不自动证明便携。轻巧便携按同一便携性诉求合并，不逐字加分。"
+    },
+    {
+      "pair_id": "PT006",
+      "product_id": "587907612086",
+      "field": "reviewer",
+      "from_user_file": "ChatGPT复核",
+      "written_value": "AI初审：ChatGPT填写，Codex复核修正；待用户确认"
+    },
+    {
+      "pair_id": "PT006",
+      "product_id": "587907612086",
+      "field": "review_confirmed",
+      "from_user_file": 1,
+      "written_value": 0
+    },
+    {
+      "pair_id": "PT007",
+      "product_id": "624110108481",
+      "field": "reviewer",
+      "from_user_file": "ChatGPT复核",
+      "written_value": "AI初审：ChatGPT填写，Codex复核修正；待用户确认"
+    },
+    {
+      "pair_id": "PT007",
+      "product_id": "624110108481",
+      "field": "review_confirmed",
+      "from_user_file": 1,
+      "written_value": 0
+    },
+    {
+      "pair_id": "PT008",
+      "product_id": "621593735132",
+      "field": "pair_notes",
+      "from_user_file": "B覆盖更完整（7/7 vs 5/7）；A事实更克制。",
+      "written_value": "AI复核后：核心命中A 5/7、B 7/7；独立事实错误A 0、B 6；表达偏好沿用原稿，待用户确认。"
+    },
+    {
+      "pair_id": "PT008",
+      "product_id": "621593735132",
+      "field": "B_notes",
+      "from_user_file": "“稳定输入/稳定高效体验”“更佳敲击手感和使用寿命”“长时间使用减轻疲劳”等缺少事实依据。",
+      "written_value": "AI复查：独立错误6点：1. 稳定输入/稳定高效使用体验的性能评价；2. USB便捷连接及便捷操作的便利性评价；3. 更佳敲击手感；4. 更佳使用寿命；5. 快速音量调节的具体能力；6. 额外手托减轻长时间使用疲劳 手感和寿命为不同命题；多媒体键不直接证明具体音量功能及速度，人体工程学支持也不直接证明减轻疲劳。具体多媒体功能是否属于正常转述请用户重点确认。"
+    },
+    {
+      "pair_id": "PT008",
+      "product_id": "621593735132",
+      "field": "B_factual_error_count",
+      "from_user_file": 4,
+      "written_value": 6
+    },
+    {
+      "pair_id": "PT008",
+      "product_id": "621593735132",
+      "field": "reviewer",
+      "from_user_file": "ChatGPT复核",
+      "written_value": "AI初审：ChatGPT填写，Codex复核修正；待用户确认"
+    },
+    {
+      "pair_id": "PT008",
+      "product_id": "621593735132",
+      "field": "review_confirmed",
+      "from_user_file": 1,
+      "written_value": 0
+    },
+    {
+      "pair_id": "PT009",
+      "product_id": "614181544723",
+      "field": "reviewer",
+      "from_user_file": "ChatGPT复核",
+      "written_value": "AI初审：ChatGPT填写，Codex复核修正；待用户确认"
+    },
+    {
+      "pair_id": "PT009",
+      "product_id": "614181544723",
+      "field": "review_confirmed",
+      "from_user_file": 1,
+      "written_value": 0
+    },
+    {
+      "pair_id": "PT010",
+      "product_id": "615386178525",
+      "field": "pair_notes",
+      "from_user_file": "A覆盖更完整（7/7 vs 5/7）；B事实更克制。",
+      "written_value": "AI复核后：核心命中A 7/7、B 5/7；独立事实错误A 4、B 0；表达偏好沿用原稿，待用户确认。"
+    },
+    {
+      "pair_id": "PT010",
+      "product_id": "615386178525",
+      "field": "A_notes",
+      "from_user_file": "“佩戴稳固舒适”“传输更稳定速度快”为无依据体验/性能评价。",
+      "written_value": "AI复查：独立错误4点：1. 佩戴稳固；2. 佩戴舒适/舒适佩戴体验；3. 传输更稳定；4. 传输速度快 稳固与舒适、传输稳定与速度分别独立；舒适跨任务去重。电量显示支持查看电量，方便查看电量在本条作为直接功能解释，不另加错误。"
+    },
+    {
+      "pair_id": "PT010",
+      "product_id": "615386178525",
+      "field": "reviewer",
+      "from_user_file": "ChatGPT复核",
+      "written_value": "AI初审：ChatGPT填写，Codex复核修正；待用户确认"
+    },
+    {
+      "pair_id": "PT010",
+      "product_id": "615386178525",
+      "field": "A_factual_error_count",
+      "from_user_file": 2,
+      "written_value": 4
+    },
+    {
+      "pair_id": "PT010",
+      "product_id": "615386178525",
+      "field": "review_confirmed",
+      "from_user_file": 1,
+      "written_value": 0
+    },
+    {
+      "pair_id": "PT011",
+      "product_id": "613735876059",
+      "field": "pair_notes",
+      "from_user_file": "B覆盖更完整（6/6 vs 5/6）；A事实更克制。",
+      "written_value": "AI复核后：核心命中A 5/6、B 6/6；独立事实错误A 0、B 3；表达偏好沿用原稿，待用户确认。"
+    },
+    {
+      "pair_id": "PT011",
+      "product_id": "613735876059",
+      "field": "B_notes",
+      "from_user_file": "“佩戴舒适稳固”“满足专业监听需求”为无依据评价/效果。",
+      "written_value": "AI复查：独立错误3点：1. 佩戴舒适；2. 佩戴稳固；3. 满足专业监听需求的效果保证 源蓝牙连接与是否无线=有线、3.5mm存在内部争议，单列源问题；不因沿用核心蓝牙字段就判模型幻觉。"
+    },
+    {
+      "pair_id": "PT011",
+      "product_id": "613735876059",
+      "field": "B_factual_error_count",
+      "from_user_file": 2,
+      "written_value": 3
+    },
+    {
+      "pair_id": "PT011",
+      "product_id": "613735876059",
+      "field": "reviewer",
+      "from_user_file": "ChatGPT复核",
+      "written_value": "AI初审：ChatGPT填写，Codex复核修正；待用户确认"
+    },
+    {
+      "pair_id": "PT011",
+      "product_id": "613735876059",
+      "field": "review_confirmed",
+      "from_user_file": 1,
+      "written_value": 0
+    },
+    {
+      "pair_id": "PT012",
+      "product_id": "599485472276",
+      "field": "reviewer",
+      "from_user_file": "ChatGPT复核",
+      "written_value": "AI初审：ChatGPT填写，Codex复核修正；待用户确认"
+    },
+    {
+      "pair_id": "PT012",
+      "product_id": "599485472276",
+      "field": "review_confirmed",
+      "from_user_file": 1,
+      "written_value": 0
+    },
+    {
+      "pair_id": "PT013",
+      "product_id": "617920658390",
+      "field": "A_notes",
+      "from_user_file": "标题写成“无线机械键盘”，与“是否机械键盘=否”矛盾；正文后文又正确写“非机械键盘”。",
+      "written_value": "AI复查：标题机械键盘与源是否机械键盘=否相反，标记身份/品类诊断1；正文非机械已正确表达，因此保留5项核心命中和1个事实错误，不跨任务重复计错。"
+    },
+    {
+      "pair_id": "PT013",
+      "product_id": "617920658390",
+      "field": "reviewer",
+      "from_user_file": "ChatGPT复核",
+      "written_value": "AI初审：ChatGPT填写，Codex复核修正；待用户确认"
+    },
+    {
+      "pair_id": "PT013",
+      "product_id": "617920658390",
+      "field": "A_identity_category_error",
+      "from_user_file": 0,
+      "written_value": 1
+    },
+    {
+      "pair_id": "PT013",
+      "product_id": "617920658390",
+      "field": "review_confirmed",
+      "from_user_file": 1,
+      "written_value": 0
+    },
+    {
+      "pair_id": "PT014",
+      "product_id": "618263479034",
+      "field": "pair_notes",
+      "from_user_file": "两侧核心覆盖相同（4/4）；A事实更克制。",
+      "written_value": "AI复核后：核心命中A 4/4、B 4/4；独立事实错误A 0、B 4；表达偏好沿用原稿，待用户确认。"
+    },
+    {
+      "pair_id": "PT014",
+      "product_id": "618263479034",
+      "field": "B_notes",
+      "from_user_file": "“耐用轻便”“节省空间”“满足家庭日常需求”为无依据评价/效果。",
+      "written_value": "AI复查：独立错误4点：1. 耐用；2. 轻便；3. 节省空间；4. 容量满足家庭日常需求 耐用与轻便不是同一性质；家庭使用本身有源支持，错误是容量足以满足需求的推导。"
+    },
+    {
+      "pair_id": "PT014",
+      "product_id": "618263479034",
+      "field": "B_factual_error_count",
+      "from_user_file": 3,
+      "written_value": 4
+    },
+    {
+      "pair_id": "PT014",
+      "product_id": "618263479034",
+      "field": "reviewer",
+      "from_user_file": "ChatGPT复核",
+      "written_value": "AI初审：ChatGPT填写，Codex复核修正；待用户确认"
+    },
+    {
+      "pair_id": "PT014",
+      "product_id": "618263479034",
+      "field": "review_confirmed",
+      "from_user_file": 1,
+      "written_value": 0
+    },
+    {
+      "pair_id": "PT015",
+      "product_id": "607256389125",
+      "field": "pair_notes",
+      "from_user_file": "两侧核心覆盖相同（5/5）；B事实更克制。",
+      "written_value": "AI复核后：核心命中A 5/5、B 5/5；独立事实错误A 6、B 0；表达偏好沿用原稿，待用户确认。"
+    },
+    {
+      "pair_id": "PT015",
+      "product_id": "607256389125",
+      "field": "A_notes",
+      "from_user_file": "“坚固耐用”“吸水性强”“安全省力”“操作便捷/带来便利”为无依据效果或体验表述。",
+      "written_value": "AI复查：独立错误6点：1. 坚固耐用的材料质量评价；2. 吸水性强；3. 安全；4. 省力；5. 设计合理；6. 操作便捷/为家庭清洁带来便利 安全与省力拆分，补记设计合理评价。家庭清洁只作为直接品类用途，不另计场景错误。"
+    },
+    {
+      "pair_id": "PT015",
+      "product_id": "607256389125",
+      "field": "reviewer",
+      "from_user_file": "ChatGPT复核",
+      "written_value": "AI初审：ChatGPT填写，Codex复核修正；待用户确认"
+    },
+    {
+      "pair_id": "PT015",
+      "product_id": "607256389125",
+      "field": "A_factual_error_count",
+      "from_user_file": 4,
+      "written_value": 6
+    },
+    {
+      "pair_id": "PT015",
+      "product_id": "607256389125",
+      "field": "review_confirmed",
+      "from_user_file": 1,
+      "written_value": 0
+    },
+    {
+      "pair_id": "PT016",
+      "product_id": "585366825079",
+      "field": "pair_notes",
+      "from_user_file": "两侧核心覆盖相同（4/4）；B事实更克制。",
+      "written_value": "AI复核后：核心命中A 4/4、B 4/4；独立事实错误A 5、B 0；表达偏好沿用原稿，待用户确认。"
+    },
+    {
+      "pair_id": "PT016",
+      "product_id": "585366825079",
+      "field": "A_notes",
+      "from_user_file": "“品质有保证”“连接方便快捷”“精准定位无延迟”“清晰稳定的追踪体验”为无依据扩写。",
+      "written_value": "AI复查：独立错误5点：1. 品质有保证；2. 连接方便快捷；3. 精准定位/清晰追踪；4. 无延迟；5. 追踪稳定 精准与无延迟独立；正文重复定位精准去重，清晰追踪按同一精度诉求合并；稳定追踪另为稳定性保证。"
+    },
+    {
+      "pair_id": "PT016",
+      "product_id": "585366825079",
+      "field": "reviewer",
+      "from_user_file": "ChatGPT复核",
+      "written_value": "AI初审：ChatGPT填写，Codex复核修正；待用户确认"
+    },
+    {
+      "pair_id": "PT016",
+      "product_id": "585366825079",
+      "field": "A_factual_error_count",
+      "from_user_file": 4,
+      "written_value": 5
+    },
+    {
+      "pair_id": "PT016",
+      "product_id": "585366825079",
+      "field": "review_confirmed",
+      "from_user_file": 1,
+      "written_value": 0
+    },
+    {
+      "pair_id": "PT017",
+      "product_id": "566531828259",
+      "field": "pair_notes",
+      "from_user_file": "A覆盖更完整（7/8 vs 5/8）；B事实更克制。",
+      "written_value": "AI复核后：核心命中A 6/8、B 5/8；独立事实错误A 6、B 0；表达偏好沿用原稿，待用户确认。"
+    },
+    {
+      "pair_id": "PT017",
+      "product_id": "566531828259",
+      "field": "A_notes",
+      "from_user_file": "“安全耐用”“长效保温性能”“握持舒适便捷”为无依据评价；源容量字段存在CONFLICT但未生成容量。",
+      "written_value": "AI复查：独立错误6点：1. 安全；2. 耐用；3. 长效保温性能的评价；4. 握持舒适；5. 握持便捷；6. 6到24小时遗漏24小时不含的范围边界 全文没有保留6小时(含)-24小时(不含)，保温字段不计正确命中。源辅助45°C以上大于6小时不能证明包含24小时；容量源冲突未生成，不计模型错误。"
+    },
+    {
+      "pair_id": "PT017",
+      "product_id": "566531828259",
+      "field": "A_matched_attribute_count",
+      "from_user_file": 7,
+      "written_value": 6
+    },
+    {
+      "pair_id": "PT017",
+      "product_id": "566531828259",
+      "field": "reviewer",
+      "from_user_file": "ChatGPT复核",
+      "written_value": "AI初审：ChatGPT填写，Codex复核修正；待用户确认"
+    },
+    {
+      "pair_id": "PT017",
+      "product_id": "566531828259",
+      "field": "A_numeric_range_distortion",
+      "from_user_file": 0,
+      "written_value": 1
+    },
+    {
+      "pair_id": "PT017",
+      "product_id": "566531828259",
+      "field": "A_factual_error_count",
+      "from_user_file": 3,
+      "written_value": 6
+    },
+    {
+      "pair_id": "PT017",
+      "product_id": "566531828259",
+      "field": "review_confirmed",
+      "from_user_file": 1,
+      "written_value": 0
+    },
+    {
+      "pair_id": "PT018",
+      "product_id": "583457250405",
+      "field": "pair_notes",
+      "from_user_file": "两侧核心覆盖相同（5/6）；A事实更克制。",
+      "written_value": "AI复核后：核心命中A 5/6、B 5/6；独立事实错误A 0、B 4；表达偏好沿用原稿，待用户确认。"
+    },
+    {
+      "pair_id": "PT018",
+      "product_id": "583457250405",
+      "field": "B_identity_category_error",
+      "from_user_file": 0,
+      "written_value": 1
+    },
+    {
+      "pair_id": "PT018",
+      "product_id": "583457250405",
+      "field": "B_notes",
+      "from_user_file": "“品质保证”“坚固耐用”“清洁更高效”为无依据评价/效果；源SKU为REVIEW。",
+      "written_value": "AI复查：独立错误4点：1. 品质保证；2. 坚固耐用的材料质量评价；3. 清洁更高效；4. 艾 Wife 品牌的身份失真 源仅艾妻，无英文品牌艾 Wife；标题及正文正确品牌仍可命中，但不能抹去卖点的错误名称。源SKU争议单列。"
+    },
+    {
+      "pair_id": "PT018",
+      "product_id": "583457250405",
+      "field": "B_factual_error_count",
+      "from_user_file": 3,
+      "written_value": 4
+    },
+    {
+      "pair_id": "PT018",
+      "product_id": "583457250405",
+      "field": "reviewer",
+      "from_user_file": "ChatGPT复核",
+      "written_value": "AI初审：ChatGPT填写，Codex复核修正；待用户确认"
+    },
+    {
+      "pair_id": "PT018",
+      "product_id": "583457250405",
+      "field": "review_confirmed",
+      "from_user_file": 1,
+      "written_value": 0
+    },
+    {
+      "pair_id": "PT019",
+      "product_id": "621360527079",
+      "field": "pair_notes",
+      "from_user_file": "两侧核心覆盖相同（3/4）；B事实更克制。",
+      "written_value": "AI复核后：核心命中A 3/4、B 3/4；独立事实错误A 6、B 0；表达偏好沿用原稿，待用户确认。"
+    },
+    {
+      "pair_id": "PT019",
+      "product_id": "621360527079",
+      "field": "A_notes",
+      "from_user_file": "“长时间录音/直播需求”“稳固舒适”“清晰准确音频”“适合长时间聆听”“专业主播设计/清晰音质”为无依据扩写。",
+      "written_value": "AI复查：独立错误6点：1. 适合长时间录音/直播/聆听的持续使用适用性；2. 佩戴稳固；3. 佩戴舒适；4. 清晰音质/清晰音频；5. 准确音频表现；6. 专为专业主播设计 长期使用适用性按近义同一诉求合并，清晰音质跨任务去重；清晰与准确音频、稳固与舒适拆分。型号主播耳机不证明专业主播专用设计。"
+    },
+    {
+      "pair_id": "PT019",
+      "product_id": "621360527079",
+      "field": "reviewer",
+      "from_user_file": "ChatGPT复核",
+      "written_value": "AI初审：ChatGPT填写，Codex复核修正；待用户确认"
+    },
+    {
+      "pair_id": "PT019",
+      "product_id": "621360527079",
+      "field": "A_factual_error_count",
+      "from_user_file": 5,
+      "written_value": 6
+    },
+    {
+      "pair_id": "PT019",
+      "product_id": "621360527079",
+      "field": "review_confirmed",
+      "from_user_file": 1,
+      "written_value": 0
+    },
+    {
+      "pair_id": "PT020",
+      "product_id": "565706870969",
+      "field": "pair_notes",
+      "from_user_file": "两侧核心覆盖相同（5/5）；B事实更克制。",
+      "written_value": "AI复核后：核心命中A 5/5、B 5/5；独立事实错误A 6、B 0；表达偏好沿用原稿，待用户确认。"
+    },
+    {
+      "pair_id": "PT020",
+      "product_id": "565706870969",
+      "field": "A_notes",
+      "from_user_file": "“佩戴稳固舒适”“连接稳定无延迟”“清晰沟通”“方便实用”为无依据体验/效果。",
+      "written_value": "AI复查：独立错误6点：1. 佩戴稳固；2. 佩戴舒适；3. 连接稳定；4. 无延迟；5. 清晰沟通；6. 方便实用 稳固和舒适、稳定和无延迟分别独立，通话功能不证明清晰度。"
+    },
+    {
+      "pair_id": "PT020",
+      "product_id": "565706870969",
+      "field": "reviewer",
+      "from_user_file": "ChatGPT复核",
+      "written_value": "AI初审：ChatGPT填写，Codex复核修正；待用户确认"
+    },
+    {
+      "pair_id": "PT020",
+      "product_id": "565706870969",
+      "field": "A_factual_error_count",
+      "from_user_file": 4,
+      "written_value": 6
+    },
+    {
+      "pair_id": "PT020",
+      "product_id": "565706870969",
+      "field": "review_confirmed",
+      "from_user_file": 1,
+      "written_value": 0
+    },
+    {
+      "pair_id": "PT021",
+      "product_id": "572739978355",
+      "field": "reviewer",
+      "from_user_file": "ChatGPT复核",
+      "written_value": "AI初审：ChatGPT填写，Codex复核修正；待用户确认"
+    },
+    {
+      "pair_id": "PT021",
+      "product_id": "572739978355",
+      "field": "review_confirmed",
+      "from_user_file": 1,
+      "written_value": 0
+    },
+    {
+      "pair_id": "PT022",
+      "product_id": "577426751464",
+      "field": "pair_notes",
+      "from_user_file": "A覆盖更完整（6/6 vs 5/6）；B事实更克制。",
+      "written_value": "AI复核后：核心命中A 6/6、B 5/6；独立事实错误A 4、B 0；表达偏好沿用原稿，待用户确认。"
+    },
+    {
+      "pair_id": "PT022",
+      "product_id": "577426751464",
+      "field": "A_notes",
+      "from_user_file": "“简约大方”“便捷卫生”“简洁实用”为无依据评价。",
+      "written_value": "AI复查：独立错误4点：1. 简约大方/设计简洁的外观评价；2. 使用便捷；3. 卫生；4. 实用 便捷与卫生不同；简洁外观跨任务去重。家庭日常使用有源场景支持，不计错。"
+    },
+    {
+      "pair_id": "PT022",
+      "product_id": "577426751464",
+      "field": "reviewer",
+      "from_user_file": "ChatGPT复核",
+      "written_value": "AI初审：ChatGPT填写，Codex复核修正；待用户确认"
+    },
+    {
+      "pair_id": "PT022",
+      "product_id": "577426751464",
+      "field": "A_factual_error_count",
+      "from_user_file": 3,
+      "written_value": 4
+    },
+    {
+      "pair_id": "PT022",
+      "product_id": "577426751464",
+      "field": "review_confirmed",
+      "from_user_file": 1,
+      "written_value": 0
+    },
+    {
+      "pair_id": "PT023",
+      "product_id": "595487807549",
+      "field": "pair_notes",
+      "from_user_file": "B覆盖更完整（7/7 vs 6/7）；A事实更克制。",
+      "written_value": "AI复核后：核心命中A 6/7、B 7/7；独立事实错误A 0、B 6；表达偏好沿用原稿，待用户确认。"
+    },
+    {
+      "pair_id": "PT023",
+      "product_id": "595487807549",
+      "field": "B_notes",
+      "from_user_file": "“品牌保证品质”“耐用环保”“节省空间”“操作便捷卫生”为无依据评价/效果。",
+      "written_value": "AI复查：独立错误6点：1. 品牌保证品质；2. 耐用；3. 环保；4. 节省空间；5. 操作便捷；6. 卫生 耐用与环保、便捷与卫生分别独立，塑料及脚踏式仅支持材质和开合方式。"
+    },
+    {
+      "pair_id": "PT023",
+      "product_id": "595487807549",
+      "field": "B_factual_error_count",
+      "from_user_file": 4,
+      "written_value": 6
+    },
+    {
+      "pair_id": "PT023",
+      "product_id": "595487807549",
+      "field": "reviewer",
+      "from_user_file": "ChatGPT复核",
+      "written_value": "AI初审：ChatGPT填写，Codex复核修正；待用户确认"
+    },
+    {
+      "pair_id": "PT023",
+      "product_id": "595487807549",
+      "field": "review_confirmed",
+      "from_user_file": 1,
+      "written_value": 0
+    },
+    {
+      "pair_id": "PT024",
+      "product_id": "589508217209",
+      "field": "B_notes",
+      "from_user_file": "“安全性能更佳”“轻薄便携”“坚固耐用”“提升能量密度与安全性能”为无依据扩写；源容量存在CONFLICT。",
+      "written_value": "AI复查：独立错误4点：1. 安全性能更佳/提升安全性能；2. 轻薄便携/轻巧便携的便携性评价；3. 坚固耐用的材料质量评价；4. 提升能量密度 总数4保留，明确去重安全和便携；源容量冲突未生成。型号others被译为其他型号沿用原稿命中判断，但其占位性质请用户重点确认，不修改冻结核心清单。"
+    },
+    {
+      "pair_id": "PT024",
+      "product_id": "589508217209",
+      "field": "reviewer",
+      "from_user_file": "ChatGPT复核",
+      "written_value": "AI初审：ChatGPT填写，Codex复核修正；待用户确认"
+    },
+    {
+      "pair_id": "PT024",
+      "product_id": "589508217209",
+      "field": "review_confirmed",
+      "from_user_file": 1,
+      "written_value": 0
+    },
+    {
+      "pair_id": "PT025",
+      "product_id": "2859211238",
+      "field": "pair_notes",
+      "from_user_file": "两侧核心覆盖相同（3/5）；A事实更克制。",
+      "written_value": "AI复核后：核心命中A 3/5、B 3/5；独立事实错误A 0、B 4；表达偏好沿用原稿，待用户确认。"
+    },
+    {
+      "pair_id": "PT025",
+      "product_id": "2859211238",
+      "field": "B_notes",
+      "from_user_file": "“品质值得信赖”“定位精准无延迟”“操作便捷高效”为无依据评价；源SKU为REVIEW。",
+      "written_value": "AI复查：独立错误4点：1. 品质值得信赖；2. 定位精准；3. 无延迟；4. 操作便捷高效 定位精度与时延保证拆分；源SKU争议单列。"
+    },
+    {
+      "pair_id": "PT025",
+      "product_id": "2859211238",
+      "field": "B_factual_error_count",
+      "from_user_file": 3,
+      "written_value": 4
+    },
+    {
+      "pair_id": "PT025",
+      "product_id": "2859211238",
+      "field": "reviewer",
+      "from_user_file": "ChatGPT复核",
+      "written_value": "AI初审：ChatGPT填写，Codex复核修正；待用户确认"
+    },
+    {
+      "pair_id": "PT025",
+      "product_id": "2859211238",
+      "field": "review_confirmed",
+      "from_user_file": 1,
+      "written_value": 0
+    },
+    {
+      "pair_id": "PT026",
+      "product_id": "616205758872",
+      "field": "pair_notes",
+      "from_user_file": "B覆盖更完整（7/7 vs 5/7）；A事实更克制。",
+      "written_value": "AI复核后：核心命中A 5/7、B 7/7；独立事实错误A 0、B 6；表达偏好沿用原稿，待用户确认。"
+    },
+    {
+      "pair_id": "PT026",
+      "product_id": "616205758872",
+      "field": "B_notes",
+      "from_user_file": "“稳定高效连接”“操作流畅无延迟”“出色敲击手感与耐用性”“长时间使用需手托改善体验”为无依据扩写。",
+      "written_value": "AI复查：独立错误6点：1. 稳定高效连接/操作流畅的传输体验评价；2. 无延迟；3. 出色敲击手感；4. 耐用性；5. 快捷操控音量和播放的具体能力；6. 自行准备手托获得更好体验 手感、寿命、时延及手托体验独立；近义连接体验合并。多媒体具体功能转述边界请用户确认，不按营销词数量计分。"
+    },
+    {
+      "pair_id": "PT026",
+      "product_id": "616205758872",
+      "field": "B_factual_error_count",
+      "from_user_file": 4,
+      "written_value": 6
+    },
+    {
+      "pair_id": "PT026",
+      "product_id": "616205758872",
+      "field": "reviewer",
+      "from_user_file": "ChatGPT复核",
+      "written_value": "AI初审：ChatGPT填写，Codex复核修正；待用户确认"
+    },
+    {
+      "pair_id": "PT026",
+      "product_id": "616205758872",
+      "field": "review_confirmed",
+      "from_user_file": 1,
+      "written_value": 0
+    },
+    {
+      "pair_id": "PT027",
+      "product_id": "540395966499",
+      "field": "B_notes",
+      "from_user_file": "“品牌保障品质”“轻巧便携”“适合家庭日常收纳”为无依据扩写。",
+      "written_value": "AI复查：独立错误3点：1. 品牌保障品质；2. 型号易于辨识的评价；3. 轻巧便携的便携性评价 总数仍3，但不再把家庭日常收纳作为错误，统一PT041/PT088的低风险品类语义口径；补记易于辨识评价。该可读性评价与便携性边界请用户重点确认。"
+    },
+    {
+      "pair_id": "PT027",
+      "product_id": "540395966499",
+      "field": "reviewer",
+      "from_user_file": "ChatGPT复核",
+      "written_value": "AI初审：ChatGPT填写，Codex复核修正；待用户确认"
+    },
+    {
+      "pair_id": "PT027",
+      "product_id": "540395966499",
+      "field": "review_confirmed",
+      "from_user_file": 1,
+      "written_value": 0
+    },
+    {
+      "pair_id": "PT028",
+      "product_id": "590175217614",
+      "field": "pair_notes",
+      "from_user_file": "A覆盖更完整（7/7 vs 5/7）；B事实更克制。",
+      "written_value": "AI复核后：核心命中A 7/7、B 5/7；独立事实错误A 6、B 0；表达偏好沿用原稿，待用户确认。"
+    },
+    {
+      "pair_id": "PT028",
+      "product_id": "590175217614",
+      "field": "A_notes",
+      "from_user_file": "“大容量/持久电力”“安全稳定”“轻巧耐用”为无依据评价；QC2.0快充表述可由协议支持。",
+      "written_value": "AI复查：独立错误6点：1. 大容量评价；2. 持久电力支持；3. 安全；4. 稳定；5. 轻巧；6. 耐用 30000mAh仅为容量，持续供电、运行稳定、安全、重量轻和耐用分别需要依据；QC2.0快充是源协议正常转述，不计错。"
+    },
+    {
+      "pair_id": "PT028",
+      "product_id": "590175217614",
+      "field": "reviewer",
+      "from_user_file": "ChatGPT复核",
+      "written_value": "AI初审：ChatGPT填写，Codex复核修正；待用户确认"
+    },
+    {
+      "pair_id": "PT028",
+      "product_id": "590175217614",
+      "field": "A_factual_error_count",
+      "from_user_file": 3,
+      "written_value": 6
+    },
+    {
+      "pair_id": "PT028",
+      "product_id": "590175217614",
+      "field": "review_confirmed",
+      "from_user_file": 1,
+      "written_value": 0
+    },
+    {
+      "pair_id": "PT029",
+      "product_id": "625037263815",
+      "field": "pair_notes",
+      "from_user_file": "A覆盖更完整（8/8 vs 5/8）；B事实更克制。",
+      "written_value": "AI复核后：核心命中A 7/8、B 5/8；独立事实错误A 8、B 0；表达偏好沿用原稿，待用户确认。"
+    },
+    {
+      "pair_id": "PT029",
+      "product_id": "625037263815",
+      "field": "A_notes",
+      "from_user_file": "“高品质”“耐用且易清洗”“容量适中/满足日常饮用需求”“大众日常生活需求”“送礼佳选”为无依据评价或场景扩写。",
+      "written_value": "AI复查：独立错误8点：1. 高品质；2. 耐用；3. 易清洗；4. 容量适中；5. 满足日常饮用需求；6. 适用于大众日常生活需求的场景扩写；7. 送礼佳选的评价；8. 6到12小时遗漏12小时不含的边界 耐用与易清洗、容量适中与满足需求拆分；送礼场景本身正确，仅佳选评价计错。保温半开上界未保留。日常使用与日常送礼的场景边界沿用validation，仍请人工确认。"
+    },
+    {
+      "pair_id": "PT029",
+      "product_id": "625037263815",
+      "field": "A_matched_attribute_count",
+      "from_user_file": 8,
+      "written_value": 7
+    },
+    {
+      "pair_id": "PT029",
+      "product_id": "625037263815",
+      "field": "reviewer",
+      "from_user_file": "ChatGPT复核",
+      "written_value": "AI初审：ChatGPT填写，Codex复核修正；待用户确认"
+    },
+    {
+      "pair_id": "PT029",
+      "product_id": "625037263815",
+      "field": "A_numeric_range_distortion",
+      "from_user_file": 0,
+      "written_value": 1
+    },
+    {
+      "pair_id": "PT029",
+      "product_id": "625037263815",
+      "field": "A_factual_error_count",
+      "from_user_file": 5,
+      "written_value": 8
+    },
+    {
+      "pair_id": "PT029",
+      "product_id": "625037263815",
+      "field": "review_confirmed",
+      "from_user_file": 1,
+      "written_value": 0
+    },
+    {
+      "pair_id": "PT030",
+      "product_id": "565468950564",
+      "field": "pair_notes",
+      "from_user_file": "B覆盖更完整（7/7 vs 5/7）；A事实更克制。",
+      "written_value": "AI复核后：核心命中A 5/7、B 7/7；独立事实错误A 0、B 4；表达偏好沿用原稿，待用户确认。"
+    },
+    {
+      "pair_id": "PT030",
+      "product_id": "565468950564",
+      "field": "B_notes",
+      "from_user_file": "“精准定位体验”“游戏低延迟传输”“方便快捷更换”为无依据效果/场景评价。",
+      "written_value": "AI复查：独立错误4点：1. 精准定位体验；2. 游戏具体用途；3. 低延迟传输；4. 方便快捷更换电池 游戏用途与时延性能分别独立；可换五号电池不证明更换方便快捷。"
+    },
+    {
+      "pair_id": "PT030",
+      "product_id": "565468950564",
+      "field": "B_factual_error_count",
+      "from_user_file": 3,
+      "written_value": 4
+    },
+    {
+      "pair_id": "PT030",
+      "product_id": "565468950564",
+      "field": "reviewer",
+      "from_user_file": "ChatGPT复核",
+      "written_value": "AI初审：ChatGPT填写，Codex复核修正；待用户确认"
+    },
+    {
+      "pair_id": "PT030",
+      "product_id": "565468950564",
+      "field": "review_confirmed",
+      "from_user_file": 1,
+      "written_value": 0
+    },
+    {
+      "pair_id": "PT031",
+      "product_id": "583014299804",
+      "field": "pair_notes",
+      "from_user_file": "两侧核心覆盖相同（0/4）；A事实更克制。",
+      "written_value": "AI复核后：核心命中A 0/4、B 0/4；独立事实错误A 5、B 5；表达偏好沿用原稿，待用户确认。"
+    },
+    {
+      "pair_id": "PT031",
+      "product_id": "583014299804",
+      "field": "A_notes",
+      "from_user_file": "实际输入为空；“多设备充电”“高效节能”“安全防护”“10000mAh”“USB Type-C”均无可靠输入支持。",
+      "written_value": "AI复查：独立错误5点：1. 高效；2. 节能；3. 安全防护技术；4. 10000mAh与源8000mAh不符；5. USB Type-C接口 不能只看空输入：完整源多U口输出可支持不限定数量/同时性的多设备充电，不再为这句单独计错；高效与节能为不同效果，总数仍5。源身份CONFLICT单列，容量和Type-C等错误仍保留。"
+    },
+    {
+      "pair_id": "PT031",
+      "product_id": "583014299804",
+      "field": "B_notes",
+      "from_user_file": "实际输入为空；“便携/容量大或适中”“快速充电”“兼容性强”“多设备快充”“接口齐全/各类电子设备”等均无可靠输入支持。",
+      "written_value": "AI复查：独立错误5点：1. 便携；2. 容量大/适中的无基准容量评价；3. 快速充电/多设备快充中的速度能力；4. 兼容性强/各类电子设备的兼容范围扩大；5. 接口齐全 多U口输出支持泛多设备充电，但不证明快充、各种设备兼容或接口齐全；快充跨区去重。输入为空不能代替完整源属性核对。源身份CONFLICT单列。"
+    },
+    {
+      "pair_id": "PT031",
+      "product_id": "583014299804",
+      "field": "B_factual_error_count",
+      "from_user_file": 6,
+      "written_value": 5
+    },
+    {
+      "pair_id": "PT031",
+      "product_id": "583014299804",
+      "field": "reviewer",
+      "from_user_file": "ChatGPT复核",
+      "written_value": "AI初审：ChatGPT填写，Codex复核修正；待用户确认"
+    },
+    {
+      "pair_id": "PT031",
+      "product_id": "583014299804",
+      "field": "review_confirmed",
+      "from_user_file": 1,
+      "written_value": 0
+    },
+    {
+      "pair_id": "PT032",
+      "product_id": "559685535453",
+      "field": "pair_notes",
+      "from_user_file": "B覆盖更完整（7/7 vs 5/7）；A事实更克制。",
+      "written_value": "AI复核后：核心命中A 5/7、B 7/7；独立事实错误A 0、B 3；表达偏好沿用原稿，待用户确认。"
+    },
+    {
+      "pair_id": "PT032",
+      "product_id": "559685535453",
+      "field": "B_notes",
+      "from_user_file": "“稳定传输”“适合长时间打字使用”为无依据效果/场景评价。",
+      "written_value": "AI复查：独立错误3点：1. 稳定传输；2. 方便快捷操作；3. 适合长时间打字 补记正文快捷操作评价；人体工程学及机械类别不证明长时间打字适用性。"
+    },
+    {
+      "pair_id": "PT032",
+      "product_id": "559685535453",
+      "field": "B_factual_error_count",
+      "from_user_file": 2,
+      "written_value": 3
+    },
+    {
+      "pair_id": "PT032",
+      "product_id": "559685535453",
+      "field": "reviewer",
+      "from_user_file": "ChatGPT复核",
+      "written_value": "AI初审：ChatGPT填写，Codex复核修正；待用户确认"
+    },
+    {
+      "pair_id": "PT032",
+      "product_id": "559685535453",
+      "field": "review_confirmed",
+      "from_user_file": 1,
+      "written_value": 0
+    },
+    {
+      "pair_id": "PT033",
+      "product_id": "623882882335",
+      "field": "pair_notes",
+      "from_user_file": "B覆盖更完整（7/7 vs 5/7）；A事实更克制。",
+      "written_value": "AI复核后：核心命中A 5/7、B 7/7；独立事实错误A 0、B 5；表达偏好沿用原稿，待用户确认。"
+    },
+    {
+      "pair_id": "PT033",
+      "product_id": "623882882335",
+      "field": "B_identity_category_error",
+      "from_user_file": 0,
+      "written_value": 1
+    },
+    {
+      "pair_id": "PT033",
+      "product_id": "623882882335",
+      "field": "B_notes",
+      "from_user_file": "“连接稳定快捷”“精准定位游戏需求”“操作灵活便捷”为无依据效果/场景评价。",
+      "written_value": "AI复查：独立错误5点：1. 连接稳定快捷的性能评价；2. 精准定位；3. 游戏需求的具体用途；4. 操作灵活便捷；5. 将型号360写为360品牌 品牌源为OTHER，360仅为型号。游戏用途与定位效果拆开；保留标题型号及其余字段的7项覆盖。"
+    },
+    {
+      "pair_id": "PT033",
+      "product_id": "623882882335",
+      "field": "B_factual_error_count",
+      "from_user_file": 3,
+      "written_value": 5
+    },
+    {
+      "pair_id": "PT033",
+      "product_id": "623882882335",
+      "field": "reviewer",
+      "from_user_file": "ChatGPT复核",
+      "written_value": "AI初审：ChatGPT填写，Codex复核修正；待用户确认"
+    },
+    {
+      "pair_id": "PT033",
+      "product_id": "623882882335",
+      "field": "review_confirmed",
+      "from_user_file": 1,
+      "written_value": 0
+    },
+    {
+      "pair_id": "PT034",
+      "product_id": "543556617866",
+      "field": "reviewer",
+      "from_user_file": "ChatGPT复核",
+      "written_value": "AI初审：ChatGPT填写，Codex复核修正；待用户确认"
+    },
+    {
+      "pair_id": "PT034",
+      "product_id": "543556617866",
+      "field": "review_confirmed",
+      "from_user_file": 1,
+      "written_value": 0
+    },
+    {
+      "pair_id": "PT035",
+      "product_id": "547702894728",
+      "field": "pair_notes",
+      "from_user_file": "A覆盖更完整（6/7 vs 5/7）；B事实更克制。",
+      "written_value": "AI复核后：核心命中A 6/7、B 5/7；独立事实错误A 6、B 0；表达偏好沿用原稿，待用户确认。"
+    },
+    {
+      "pair_id": "PT035",
+      "product_id": "547702894728",
+      "field": "A_notes",
+      "from_user_file": "“坚固耐用”“吸水性强/清洁更彻底”“操作省力便捷”“高效清洁体验”为无依据效果。",
+      "written_value": "AI复查：独立错误6点：1. 坚固耐用的材料质量评价；2. 吸水性强；3. 清洁更彻底；4. 操作省力；5. 操作便捷；6. 高效清洁体验 吸水与清洁效果、省力与便利不是同一性质。源10s以下等规格没有评价或比较基准，不能直接证明更彻底、更高效。"
+    },
+    {
+      "pair_id": "PT035",
+      "product_id": "547702894728",
+      "field": "reviewer",
+      "from_user_file": "ChatGPT复核",
+      "written_value": "AI初审：ChatGPT填写，Codex复核修正；待用户确认"
+    },
+    {
+      "pair_id": "PT035",
+      "product_id": "547702894728",
+      "field": "A_factual_error_count",
+      "from_user_file": 4,
+      "written_value": 6
+    },
+    {
+      "pair_id": "PT035",
+      "product_id": "547702894728",
+      "field": "review_confirmed",
+      "from_user_file": 1,
+      "written_value": 0
+    },
+    {
+      "pair_id": "PT036",
+      "product_id": "583797205123",
+      "field": "pair_notes",
+      "from_user_file": "两侧核心覆盖相同（5/5）；B事实更克制。",
+      "written_value": "AI复核后：核心命中A 5/5、B 5/5；独立事实错误A 4、B 0；表达偏好沿用原稿，待用户确认。"
+    },
+    {
+      "pair_id": "PT036",
+      "product_id": "583797205123",
+      "field": "A_notes",
+      "from_user_file": "“品牌保证品质”“耐用防锈”“节省空间”为无依据评价/效果。",
+      "written_value": "AI复查：独立错误4点：1. 品牌保证品质；2. 耐用；3. 防锈；4. 节省空间 耐用与防锈拆分；不锈钢材质不是无条件防锈性能保证。"
+    },
+    {
+      "pair_id": "PT036",
+      "product_id": "583797205123",
+      "field": "reviewer",
+      "from_user_file": "ChatGPT复核",
+      "written_value": "AI初审：ChatGPT填写，Codex复核修正；待用户确认"
+    },
+    {
+      "pair_id": "PT036",
+      "product_id": "583797205123",
+      "field": "A_factual_error_count",
+      "from_user_file": 3,
+      "written_value": 4
+    },
+    {
+      "pair_id": "PT036",
+      "product_id": "583797205123",
+      "field": "review_confirmed",
+      "from_user_file": 1,
+      "written_value": 0
+    },
+    {
+      "pair_id": "PT037",
+      "product_id": "590008960085",
+      "field": "reviewer",
+      "from_user_file": "ChatGPT复核",
+      "written_value": "AI初审：ChatGPT填写，Codex复核修正；待用户确认"
+    },
+    {
+      "pair_id": "PT037",
+      "product_id": "590008960085",
+      "field": "review_confirmed",
+      "from_user_file": 1,
+      "written_value": 0
+    },
+    {
+      "pair_id": "PT038",
+      "product_id": "603102363927",
+      "field": "pair_notes",
+      "from_user_file": "A覆盖更完整（6/7 vs 5/7）；B事实更克制。",
+      "written_value": "AI复核后：核心命中A 6/7、B 5/7；独立事实错误A 3、B 0；表达偏好沿用原稿，待用户确认。"
+    },
+    {
+      "pair_id": "PT038",
+      "product_id": "603102363927",
+      "field": "A_notes",
+      "from_user_file": "“佩戴舒适稳固”“稳定流畅的音乐传输”为无依据体验/性能评价。",
+      "written_value": "AI复查：独立错误3点：1. 佩戴舒适；2. 佩戴稳固；3. 稳定流畅的音乐传输 佩戴稳固与舒适拆分；稳定流畅按同一传输质量诉求合并。支持音乐仅支持播放。"
+    },
+    {
+      "pair_id": "PT038",
+      "product_id": "603102363927",
+      "field": "reviewer",
+      "from_user_file": "ChatGPT复核",
+      "written_value": "AI初审：ChatGPT填写，Codex复核修正；待用户确认"
+    },
+    {
+      "pair_id": "PT038",
+      "product_id": "603102363927",
+      "field": "A_factual_error_count",
+      "from_user_file": 2,
+      "written_value": 3
+    },
+    {
+      "pair_id": "PT038",
+      "product_id": "603102363927",
+      "field": "review_confirmed",
+      "from_user_file": 1,
+      "written_value": 0
+    },
+    {
+      "pair_id": "PT039",
+      "product_id": "609039324433",
+      "field": "reviewer",
+      "from_user_file": "ChatGPT复核",
+      "written_value": "AI初审：ChatGPT填写，Codex复核修正；待用户确认"
+    },
+    {
+      "pair_id": "PT039",
+      "product_id": "609039324433",
+      "field": "review_confirmed",
+      "from_user_file": 1,
+      "written_value": 0
+    },
+    {
+      "pair_id": "PT040",
+      "product_id": "615882518927",
+      "field": "reviewer",
+      "from_user_file": "ChatGPT复核",
+      "written_value": "AI初审：ChatGPT填写，Codex复核修正；待用户确认"
+    },
+    {
+      "pair_id": "PT040",
+      "product_id": "615882518927",
+      "field": "review_confirmed",
+      "from_user_file": 1,
+      "written_value": 0
+    },
+    {
+      "pair_id": "PT041",
+      "product_id": "530504970904",
+      "field": "pair_notes",
+      "from_user_file": "两侧核心覆盖相同（3/4）；两侧均未发现事实错误。",
+      "written_value": "AI复核后：核心命中A 3/4、B 3/4；独立事实错误A 0、B 0；表达偏好沿用原稿，待用户确认。"
+    },
+    {
+      "pair_id": "PT041",
+      "product_id": "530504970904",
+      "field": "B_fluency_pass",
+      "from_user_file": 1,
+      "written_value": 0
+    },
+    {
+      "pair_id": "PT041",
+      "product_id": "530504970904",
+      "field": "B_notes",
+      "from_user_file": "“家居整理收纳”视为收纳箱的低风险品类语义。",
+      "written_value": "AI复查：家居整理收纳仍按低风险品类语义，不计事实错误。标题纳入箱为不自然错误搭配，整份文案通顺度暂改0供用户确认；正文清楚指收纳箱，不另编造身份错误。"
+    },
+    {
+      "pair_id": "PT041",
+      "product_id": "530504970904",
+      "field": "reviewer",
+      "from_user_file": "ChatGPT复核",
+      "written_value": "AI初审：ChatGPT填写，Codex复核修正；待用户确认"
+    },
+    {
+      "pair_id": "PT041",
+      "product_id": "530504970904",
+      "field": "review_confirmed",
+      "from_user_file": 1,
+      "written_value": 0
+    },
+    {
+      "pair_id": "PT042",
+      "product_id": "618733106466",
+      "field": "reviewer",
+      "from_user_file": "ChatGPT复核",
+      "written_value": "AI初审：ChatGPT填写，Codex复核修正；待用户确认"
+    },
+    {
+      "pair_id": "PT042",
+      "product_id": "618733106466",
+      "field": "review_confirmed",
+      "from_user_file": 1,
+      "written_value": 0
+    },
+    {
+      "pair_id": "PT043",
+      "product_id": "598781167153",
+      "field": "reviewer",
+      "from_user_file": "ChatGPT复核",
+      "written_value": "AI初审：ChatGPT填写，Codex复核修正；待用户确认"
+    },
+    {
+      "pair_id": "PT043",
+      "product_id": "598781167153",
+      "field": "review_confirmed",
+      "from_user_file": 1,
+      "written_value": 0
+    },
+    {
+      "pair_id": "PT044",
+      "product_id": "599620329880",
+      "field": "pair_notes",
+      "from_user_file": "两侧核心覆盖相同（4/4）；A事实更克制。",
+      "written_value": "AI复核后：核心命中A 4/4、B 4/4；独立事实错误A 0、B 5；表达偏好沿用原稿，待用户确认。"
+    },
+    {
+      "pair_id": "PT044",
+      "product_id": "599620329880",
+      "field": "B_notes",
+      "from_user_file": "“坚固耐用”“操作便捷”“品质保证”“清洁更高效”为无依据评价/效果。",
+      "written_value": "AI复查：独立错误5点：1. 坚固/稳固耐用的材料质量评价；2. 操作便捷；3. 品质保证；4. 清洁更高效；5. 独特的对折式挤水设计 重复材质质量、便利去重；对折式有来源，独特性比较没有来源。"
+    },
+    {
+      "pair_id": "PT044",
+      "product_id": "599620329880",
+      "field": "B_factual_error_count",
+      "from_user_file": 4,
+      "written_value": 5
+    },
+    {
+      "pair_id": "PT044",
+      "product_id": "599620329880",
+      "field": "reviewer",
+      "from_user_file": "ChatGPT复核",
+      "written_value": "AI初审：ChatGPT填写，Codex复核修正；待用户确认"
+    },
+    {
+      "pair_id": "PT044",
+      "product_id": "599620329880",
+      "field": "review_confirmed",
+      "from_user_file": 1,
+      "written_value": 0
+    },
+    {
+      "pair_id": "PT045",
+      "product_id": "616413073658",
+      "field": "pair_notes",
+      "from_user_file": "A覆盖更完整（6/7 vs 5/7）；B事实更克制。",
+      "written_value": "AI复核后：核心命中A 6/7、B 5/7；独立事实错误A 5、B 0；表达偏好沿用原稿，待用户确认。"
+    },
+    {
+      "pair_id": "PT045",
+      "product_id": "616413073658",
+      "field": "A_notes",
+      "from_user_file": "“稳定高效的电力支持”“大容量/长时间用电”“安全性能更卓越”为无依据评价。",
+      "written_value": "AI复查：独立错误5点：1. 稳定电力支持；2. 高效电力支持；3. 大容量评价；4. 满足长时间用电需求；5. 安全性能更卓越 稳定与供电效率、容量评价与持久用电拆分；源支持快充及PD2.0支持快充表述，不直接证明上述安全或效率优势。"
+    },
+    {
+      "pair_id": "PT045",
+      "product_id": "616413073658",
+      "field": "reviewer",
+      "from_user_file": "ChatGPT复核",
+      "written_value": "AI初审：ChatGPT填写，Codex复核修正；待用户确认"
+    },
+    {
+      "pair_id": "PT045",
+      "product_id": "616413073658",
+      "field": "A_factual_error_count",
+      "from_user_file": 3,
+      "written_value": 5
+    },
+    {
+      "pair_id": "PT045",
+      "product_id": "616413073658",
+      "field": "review_confirmed",
+      "from_user_file": 1,
+      "written_value": 0
+    },
+    {
+      "pair_id": "PT046",
+      "product_id": "624105227976",
+      "field": "reviewer",
+      "from_user_file": "ChatGPT复核",
+      "written_value": "AI初审：ChatGPT填写，Codex复核修正；待用户确认"
+    },
+    {
+      "pair_id": "PT046",
+      "product_id": "624105227976",
+      "field": "review_confirmed",
+      "from_user_file": 1,
+      "written_value": 0
+    },
+    {
+      "pair_id": "PT047",
+      "product_id": "8443620439",
+      "field": "pair_notes",
+      "from_user_file": "两侧核心覆盖相同（4/6）；B事实更克制。",
+      "written_value": "AI复核后：核心命中A 5/6、B 4/6；独立事实错误A 4、B 0；表达偏好沿用原稿，待用户确认。"
+    },
+    {
+      "pair_id": "PT047",
+      "product_id": "8443620439",
+      "field": "A_notes",
+      "from_user_file": "标题误写为“机械键盘”，与“是否机械键盘=否”矛盾；另有“稳定传输”“多设备连接需求”“操作便捷高效”等无依据扩写。",
+      "written_value": "AI复查：补计标题无手托：品牌、USB、有线、多媒体功能键、无手托共5项正确；机械键盘与源否相反，不能命中。原4点错误保留：机械反转、稳定传输、多种设备连接、便捷高效操作；身份/品类诊断补1。"
+    },
+    {
+      "pair_id": "PT047",
+      "product_id": "8443620439",
+      "field": "A_matched_attribute_count",
+      "from_user_file": 4,
+      "written_value": 5
+    },
+    {
+      "pair_id": "PT047",
+      "product_id": "8443620439",
+      "field": "reviewer",
+      "from_user_file": "ChatGPT复核",
+      "written_value": "AI初审：ChatGPT填写，Codex复核修正；待用户确认"
+    },
+    {
+      "pair_id": "PT047",
+      "product_id": "8443620439",
+      "field": "A_identity_category_error",
+      "from_user_file": 0,
+      "written_value": 1
+    },
+    {
+      "pair_id": "PT047",
+      "product_id": "8443620439",
+      "field": "review_confirmed",
+      "from_user_file": 1,
+      "written_value": 0
+    },
+    {
+      "pair_id": "PT048",
+      "product_id": "600538024615",
+      "field": "reviewer",
+      "from_user_file": "ChatGPT复核",
+      "written_value": "AI初审：ChatGPT填写，Codex复核修正；待用户确认"
+    },
+    {
+      "pair_id": "PT048",
+      "product_id": "600538024615",
+      "field": "review_confirmed",
+      "from_user_file": 1,
+      "written_value": 0
+    },
+    {
+      "pair_id": "PT049",
+      "product_id": "559887711431",
+      "field": "pair_notes",
+      "from_user_file": "A覆盖更完整（8/8 vs 5/8）；B事实更克制。",
+      "written_value": "AI复核后：核心命中A 7/8、B 5/8；独立事实错误A 7、B 0；表达偏好沿用原稿，待用户确认。"
+    },
+    {
+      "pair_id": "PT049",
+      "product_id": "559887711431",
+      "field": "A_notes",
+      "from_user_file": "“品质保障”“安全耐用”“适中便携”“大众日常使用”均缺少直接事实依据；送礼场景本身有源支持。",
+      "written_value": "AI复查：独立错误7点：1. 品质保障/专业制造的品牌质量评价；2. 安全；3. 耐用；4. 容量适中；5. 便携；6. 大众日常使用的场景扩写；7. 6到12小时遗漏12小时不含边界 送礼场景正确，不计错误；辅助保温测试6小时后≥42°C不证明包含12小时。日常使用与送礼的边界沿用validation，供人工确认。"
+    },
+    {
+      "pair_id": "PT049",
+      "product_id": "559887711431",
+      "field": "A_matched_attribute_count",
+      "from_user_file": 8,
+      "written_value": 7
+    },
+    {
+      "pair_id": "PT049",
+      "product_id": "559887711431",
+      "field": "reviewer",
+      "from_user_file": "ChatGPT复核",
+      "written_value": "AI初审：ChatGPT填写，Codex复核修正；待用户确认"
+    },
+    {
+      "pair_id": "PT049",
+      "product_id": "559887711431",
+      "field": "A_numeric_range_distortion",
+      "from_user_file": 0,
+      "written_value": 1
+    },
+    {
+      "pair_id": "PT049",
+      "product_id": "559887711431",
+      "field": "A_factual_error_count",
+      "from_user_file": 4,
+      "written_value": 7
+    },
+    {
+      "pair_id": "PT049",
+      "product_id": "559887711431",
+      "field": "review_confirmed",
+      "from_user_file": 1,
+      "written_value": 0
+    },
+    {
+      "pair_id": "PT050",
+      "product_id": "620625786758",
+      "field": "pair_notes",
+      "from_user_file": "两侧核心覆盖相同（5/5）；A事实更克制。",
+      "written_value": "AI复核后：核心命中A 5/5、B 5/5；独立事实错误A 0、B 4；表达偏好沿用原稿，待用户确认。"
+    },
+    {
+      "pair_id": "PT050",
+      "product_id": "620625786758",
+      "field": "B_notes",
+      "from_user_file": "“坚固耐用”“吸水性强”“安全环保”为无依据评价/效果。",
+      "written_value": "AI复查：独立错误4点：1. 坚固耐用的材料质量评价；2. 吸水性强；3. 安全；4. 环保 安全与环保拆分。手动可支持无需电力，但不自动证明安全环保。"
+    },
+    {
+      "pair_id": "PT050",
+      "product_id": "620625786758",
+      "field": "B_factual_error_count",
+      "from_user_file": 3,
+      "written_value": 4
+    },
+    {
+      "pair_id": "PT050",
+      "product_id": "620625786758",
+      "field": "reviewer",
+      "from_user_file": "ChatGPT复核",
+      "written_value": "AI初审：ChatGPT填写，Codex复核修正；待用户确认"
+    },
+    {
+      "pair_id": "PT050",
+      "product_id": "620625786758",
+      "field": "review_confirmed",
+      "from_user_file": 1,
+      "written_value": 0
+    },
+    {
+      "pair_id": "PT051",
+      "product_id": "42149170939",
+      "field": "reviewer",
+      "from_user_file": "ChatGPT复核",
+      "written_value": "AI初审：ChatGPT填写，Codex复核修正；待用户确认"
+    },
+    {
+      "pair_id": "PT051",
+      "product_id": "42149170939",
+      "field": "review_confirmed",
+      "from_user_file": 1,
+      "written_value": 0
+    },
+    {
+      "pair_id": "PT052",
+      "product_id": "547995479552",
+      "field": "pair_notes",
+      "from_user_file": "A覆盖更完整（7/7 vs 5/7）；B事实更克制。",
+      "written_value": "AI复核后：核心命中A 7/7、B 5/7；独立事实错误A 5、B 0；表达偏好沿用原稿，待用户确认。"
+    },
+    {
+      "pair_id": "PT052",
+      "product_id": "547995479552",
+      "field": "A_notes",
+      "from_user_file": "“优质/坚固耐用”“简洁美观/多种室内摆放”“满足家庭日常使用需求”均为无依据评价或场景扩写。",
+      "written_value": "AI复查：独立错误5点：1. 优质塑料；2. 坚固耐用；3. 简洁美观；4. 多种室内摆放的范围扩写；5. 容量满足家庭日常使用需求 家庭使用和收纳垃圾本身有支持，不计错；优质材料、耐用、外观与容量充分性不是同一评价。多种室内是否仅泛家庭用途请用户重点确认。"
+    },
+    {
+      "pair_id": "PT052",
+      "product_id": "547995479552",
+      "field": "reviewer",
+      "from_user_file": "ChatGPT复核",
+      "written_value": "AI初审：ChatGPT填写，Codex复核修正；待用户确认"
+    },
+    {
+      "pair_id": "PT052",
+      "product_id": "547995479552",
+      "field": "A_factual_error_count",
+      "from_user_file": 4,
+      "written_value": 5
+    },
+    {
+      "pair_id": "PT052",
+      "product_id": "547995479552",
+      "field": "review_confirmed",
+      "from_user_file": 1,
+      "written_value": 0
+    },
+    {
+      "pair_id": "PT053",
+      "product_id": "624392441174",
+      "field": "pair_notes",
+      "from_user_file": "两侧核心覆盖相同（4/7）；B事实更克制。",
+      "written_value": "AI复核后：核心命中A 4/7、B 4/7；独立事实错误A 5、B 0；表达偏好沿用原稿，待用户确认。"
+    },
+    {
+      "pair_id": "PT053",
+      "product_id": "624392441174",
+      "field": "A_notes",
+      "from_user_file": "“耐用且易清洁”“保持衣物平整”“节省空间”为无依据效果；源品类边界为REVIEW。",
+      "written_value": "AI复查：独立错误5点：1. 优质塑料；2. 耐用；3. 易清洁；4. 保持衣物平整；5. 节省空间 补记优质，耐用与易清洁拆分；存放衣物有源支持，但不证明防皱/平整效果。源品类REVIEW单列。"
+    },
+    {
+      "pair_id": "PT053",
+      "product_id": "624392441174",
+      "field": "reviewer",
+      "from_user_file": "ChatGPT复核",
+      "written_value": "AI初审：ChatGPT填写，Codex复核修正；待用户确认"
+    },
+    {
+      "pair_id": "PT053",
+      "product_id": "624392441174",
+      "field": "A_factual_error_count",
+      "from_user_file": 3,
+      "written_value": 5
+    },
+    {
+      "pair_id": "PT053",
+      "product_id": "624392441174",
+      "field": "review_confirmed",
+      "from_user_file": 1,
+      "written_value": 0
+    },
+    {
+      "pair_id": "PT054",
+      "product_id": "618820646060",
+      "field": "reviewer",
+      "from_user_file": "ChatGPT复核",
+      "written_value": "AI初审：ChatGPT填写，Codex复核修正；待用户确认"
+    },
+    {
+      "pair_id": "PT054",
+      "product_id": "618820646060",
+      "field": "review_confirmed",
+      "from_user_file": 1,
+      "written_value": 0
+    },
+    {
+      "pair_id": "PT055",
+      "product_id": "24497168737",
+      "field": "pair_notes",
+      "from_user_file": "两侧核心覆盖相同（4/6）；A事实更克制。",
+      "written_value": "AI复核后：核心命中A 4/6、B 4/6；独立事实错误A 0、B 3；表达偏好沿用原稿，待用户确认。"
+    },
+    {
+      "pair_id": "PT055",
+      "product_id": "24497168737",
+      "field": "B_notes",
+      "from_user_file": "“坚固耐用”“轻巧便携”为无依据评价。",
+      "written_value": "AI复查：独立错误3点：1. 优质塑料；2. 坚固耐用；3. 轻巧便携 补记优质评价；摆放整齐作为低风险收纳语义，不另计错误。3.8kg仅为规格，不自动证明便携。"
+    },
+    {
+      "pair_id": "PT055",
+      "product_id": "24497168737",
+      "field": "B_factual_error_count",
+      "from_user_file": 2,
+      "written_value": 3
+    },
+    {
+      "pair_id": "PT055",
+      "product_id": "24497168737",
+      "field": "reviewer",
+      "from_user_file": "ChatGPT复核",
+      "written_value": "AI初审：ChatGPT填写，Codex复核修正；待用户确认"
+    },
+    {
+      "pair_id": "PT055",
+      "product_id": "24497168737",
+      "field": "review_confirmed",
+      "from_user_file": 1,
+      "written_value": 0
+    },
+    {
+      "pair_id": "PT056",
+      "product_id": "578515650928",
+      "field": "reviewer",
+      "from_user_file": "ChatGPT复核",
+      "written_value": "AI初审：ChatGPT填写，Codex复核修正；待用户确认"
+    },
+    {
+      "pair_id": "PT056",
+      "product_id": "578515650928",
+      "field": "review_confirmed",
+      "from_user_file": 1,
+      "written_value": 0
+    },
+    {
+      "pair_id": "PT057",
+      "product_id": "618416951039",
+      "field": "pair_notes",
+      "from_user_file": "两侧核心覆盖相同（5/5）；A事实更克制。",
+      "written_value": "AI复核后：核心命中A 5/5、B 5/5；独立事实错误A 0、B 4；表达偏好沿用原稿，待用户确认。"
+    },
+    {
+      "pair_id": "PT057",
+      "product_id": "618416951039",
+      "field": "B_notes",
+      "from_user_file": "“坚固耐用”“吸水性强”“安全可靠”为无依据评价/效果。",
+      "written_value": "AI复查：独立错误4点：1. 坚固耐用；2. 吸水性强；3. 安全；4. 可靠 安全与可靠分别为安全性和操作可靠性；手动、吸水10s以下等源指标不直接证明这些评价。"
+    },
+    {
+      "pair_id": "PT057",
+      "product_id": "618416951039",
+      "field": "B_factual_error_count",
+      "from_user_file": 3,
+      "written_value": 4
+    },
+    {
+      "pair_id": "PT057",
+      "product_id": "618416951039",
+      "field": "reviewer",
+      "from_user_file": "ChatGPT复核",
+      "written_value": "AI初审：ChatGPT填写，Codex复核修正；待用户确认"
+    },
+    {
+      "pair_id": "PT057",
+      "product_id": "618416951039",
+      "field": "review_confirmed",
+      "from_user_file": 1,
+      "written_value": 0
+    },
+    {
+      "pair_id": "PT058",
+      "product_id": "589051188248",
+      "field": "pair_notes",
+      "from_user_file": "B覆盖更完整（8/8 vs 6/8）；A事实更克制。",
+      "written_value": "AI复核后：核心命中A 6/8、B 8/8；独立事实错误A 0、B 1；表达偏好沿用原稿，待用户确认。"
+    },
+    {
+      "pair_id": "PT058",
+      "product_id": "589051188248",
+      "field": "B_field_stacking",
+      "from_user_file": 0,
+      "written_value": 1
+    },
+    {
+      "pair_id": "PT058",
+      "product_id": "589051188248",
+      "field": "B_fluency_pass",
+      "from_user_file": 1,
+      "written_value": 0
+    },
+    {
+      "pair_id": "PT058",
+      "product_id": "589051188248",
+      "field": "B_notes",
+      "from_user_file": "“方便实用”为无依据评价。",
+      "written_value": "AI复查：原1点事实错误方便实用跨任务去重。标题无线鼠无线光电鼠标…蓝牙接口4键USB接口四九九重复且无组织串接，影响可读性，暂判通顺0、堆叠1、模板化1供人工确认；不是因正常字段句式固定而扣分。"
+    },
+    {
+      "pair_id": "PT058",
+      "product_id": "589051188248",
+      "field": "reviewer",
+      "from_user_file": "ChatGPT复核",
+      "written_value": "AI初审：ChatGPT填写，Codex复核修正；待用户确认"
+    },
+    {
+      "pair_id": "PT058",
+      "product_id": "589051188248",
+      "field": "B_mechanical_template",
+      "from_user_file": 0,
+      "written_value": 1
+    },
+    {
+      "pair_id": "PT058",
+      "product_id": "589051188248",
+      "field": "review_confirmed",
+      "from_user_file": 1,
+      "written_value": 0
+    },
+    {
+      "pair_id": "PT059",
+      "product_id": "545593037598",
+      "field": "pair_notes",
+      "from_user_file": "B覆盖更完整（7/8 vs 5/8）；A事实更克制。",
+      "written_value": "AI复核后：核心命中A 5/8、B 7/8；独立事实错误A 0、B 4；表达偏好沿用原稿，待用户确认。"
+    },
+    {
+      "pair_id": "PT059",
+      "product_id": "545593037598",
+      "field": "B_notes",
+      "from_user_file": "“品质与信赖”“安全健康/耐用长久”为无依据评价；源容量为REVIEW但未生成容量。",
+      "written_value": "AI复查：独立错误4点：1. 品质与信赖；2. 安全健康；3. 耐用长久；4. 学校专用的用途强化 安全健康按同一安全诉求合并，耐用另计。学生和学校有来源，但专用较适用强化；保温时长标题已原样保留，维持核心命中。源容量REVIEW且未生成。"
+    },
+    {
+      "pair_id": "PT059",
+      "product_id": "545593037598",
+      "field": "B_factual_error_count",
+      "from_user_file": 2,
+      "written_value": 4
+    },
+    {
+      "pair_id": "PT059",
+      "product_id": "545593037598",
+      "field": "reviewer",
+      "from_user_file": "ChatGPT复核",
+      "written_value": "AI初审：ChatGPT填写，Codex复核修正；待用户确认"
+    },
+    {
+      "pair_id": "PT059",
+      "product_id": "545593037598",
+      "field": "review_confirmed",
+      "from_user_file": 1,
+      "written_value": 0
+    },
+    {
+      "pair_id": "PT060",
+      "product_id": "623126145078",
+      "field": "pair_notes",
+      "from_user_file": "两侧核心覆盖相同（4/4）；A事实更克制。",
+      "written_value": "AI复核后：核心命中A 4/4、B 4/4；独立事实错误A 0、B 7；表达偏好沿用原稿，待用户确认。"
+    },
+    {
+      "pair_id": "PT060",
+      "product_id": "623126145078",
+      "field": "B_notes",
+      "from_user_file": "“环保/耐用易清洁”“节省空间/摆放灵活”“操作便捷省力/方便快捷”为无依据评价/效果。",
+      "written_value": "AI复查：独立错误7点：1. 环保；2. 耐用；3. 易清洁；4. 节省空间；5. 摆放灵活；6. 操作便捷/方便快捷；7. 省力 重复方便快捷去重；环保、寿命、清洁难易、空间、摆放灵活和体力节省为不同效果。日常垃圾作为直接品类语义不计错。"
+    },
+    {
+      "pair_id": "PT060",
+      "product_id": "623126145078",
+      "field": "B_factual_error_count",
+      "from_user_file": 3,
+      "written_value": 7
+    },
+    {
+      "pair_id": "PT060",
+      "product_id": "623126145078",
+      "field": "reviewer",
+      "from_user_file": "ChatGPT复核",
+      "written_value": "AI初审：ChatGPT填写，Codex复核修正；待用户确认"
+    },
+    {
+      "pair_id": "PT060",
+      "product_id": "623126145078",
+      "field": "review_confirmed",
+      "from_user_file": 1,
+      "written_value": 0
+    },
+    {
+      "pair_id": "PT061",
+      "product_id": "544826941132",
+      "field": "reviewer",
+      "from_user_file": "ChatGPT复核",
+      "written_value": "AI初审：ChatGPT填写，Codex复核修正；待用户确认"
+    },
+    {
+      "pair_id": "PT061",
+      "product_id": "544826941132",
+      "field": "review_confirmed",
+      "from_user_file": 1,
+      "written_value": 0
+    },
+    {
+      "pair_id": "PT062",
+      "product_id": "567398743698",
+      "field": "pair_notes",
+      "from_user_file": "B覆盖更完整（7/7 vs 6/7）；A事实更克制。",
+      "written_value": "AI复核后：核心命中A 6/7、B 7/7；独立事实错误A 0、B 4；表达偏好沿用原稿，待用户确认。"
+    },
+    {
+      "pair_id": "PT062",
+      "product_id": "567398743698",
+      "field": "B_notes",
+      "from_user_file": "“品牌保证品质”“轻便耐用”“节省空间”为无依据评价/效果。",
+      "written_value": "AI复查：独立错误4点：1. 品牌保证品质；2. 轻便；3. 耐用；4. 节省空间 轻便与耐用拆分。"
+    },
+    {
+      "pair_id": "PT062",
+      "product_id": "567398743698",
+      "field": "B_factual_error_count",
+      "from_user_file": 3,
+      "written_value": 4
+    },
+    {
+      "pair_id": "PT062",
+      "product_id": "567398743698",
+      "field": "reviewer",
+      "from_user_file": "ChatGPT复核",
+      "written_value": "AI初审：ChatGPT填写，Codex复核修正；待用户确认"
+    },
+    {
+      "pair_id": "PT062",
+      "product_id": "567398743698",
+      "field": "review_confirmed",
+      "from_user_file": 1,
+      "written_value": 0
+    },
+    {
+      "pair_id": "PT063",
+      "product_id": "596152984459",
+      "field": "pair_notes",
+      "from_user_file": "两侧核心覆盖相同（5/5）；B事实更克制。",
+      "written_value": "AI复核后：核心命中A 5/5、B 5/5；独立事实错误A 5、B 0；表达偏好沿用原稿，待用户确认。"
+    },
+    {
+      "pair_id": "PT063",
+      "product_id": "596152984459",
+      "field": "A_notes",
+      "from_user_file": "“稳定无延迟”“精准定位与快速响应”“满足多种操作需求”为无依据效果/范围扩写。",
+      "written_value": "AI复查：独立错误5点：1. 连接稳定；2. 无延迟；3. 精准定位；4. 快速响应；5. 满足多种操作需求 稳定与时延、精度与响应速度拆分；12000DPI是规格，不直接证明这些效果。"
+    },
+    {
+      "pair_id": "PT063",
+      "product_id": "596152984459",
+      "field": "reviewer",
+      "from_user_file": "ChatGPT复核",
+      "written_value": "AI初审：ChatGPT填写，Codex复核修正；待用户确认"
+    },
+    {
+      "pair_id": "PT063",
+      "product_id": "596152984459",
+      "field": "A_factual_error_count",
+      "from_user_file": 3,
+      "written_value": 5
+    },
+    {
+      "pair_id": "PT063",
+      "product_id": "596152984459",
+      "field": "review_confirmed",
+      "from_user_file": 1,
+      "written_value": 0
+    },
+    {
+      "pair_id": "PT064",
+      "product_id": "582839837483",
+      "field": "reviewer",
+      "from_user_file": "ChatGPT复核",
+      "written_value": "AI初审：ChatGPT填写，Codex复核修正；待用户确认"
+    },
+    {
+      "pair_id": "PT064",
+      "product_id": "582839837483",
+      "field": "review_confirmed",
+      "from_user_file": 1,
+      "written_value": 0
+    },
+    {
+      "pair_id": "PT065",
+      "product_id": "522783084872",
+      "field": "pair_notes",
+      "from_user_file": "两侧核心覆盖相同（4/6）；A事实更克制。",
+      "written_value": "AI复核后：核心命中A 4/6、B 4/6；独立事实错误A 0、B 2；表达偏好沿用原稿，待用户确认。"
+    },
+    {
+      "pair_id": "PT065",
+      "product_id": "522783084872",
+      "field": "B_notes",
+      "from_user_file": "“轻巧耐用”为无依据评价；源容量/型号为REVIEW。",
+      "written_value": "AI复查：独立错误2点：1. 轻巧；2. 耐用 重量体验和寿命拆分；源型号/容量REVIEW单列，不因未生成而调整分母。"
+    },
+    {
+      "pair_id": "PT065",
+      "product_id": "522783084872",
+      "field": "B_factual_error_count",
+      "from_user_file": 1,
+      "written_value": 2
+    },
+    {
+      "pair_id": "PT065",
+      "product_id": "522783084872",
+      "field": "reviewer",
+      "from_user_file": "ChatGPT复核",
+      "written_value": "AI初审：ChatGPT填写，Codex复核修正；待用户确认"
+    },
+    {
+      "pair_id": "PT065",
+      "product_id": "522783084872",
+      "field": "review_confirmed",
+      "from_user_file": 1,
+      "written_value": 0
+    },
+    {
+      "pair_id": "PT066",
+      "product_id": "608335015563",
+      "field": "pair_notes",
+      "from_user_file": "A覆盖更完整（6/6 vs 5/6）；B事实更克制。",
+      "written_value": "AI复核后：核心命中A 5/6、B 5/6；独立事实错误A 5、B 0；表达偏好沿用原稿，待用户确认。"
+    },
+    {
+      "pair_id": "PT066",
+      "product_id": "608335015563",
+      "field": "A_notes",
+      "from_user_file": "“耐用耐腐蚀”“容量适中/满足日常所需”为无依据评价。",
+      "written_value": "AI复查：独立错误5点：1. 耐用；2. 耐腐蚀；3. 容量适中；4. 满足日常所需；5. 12至24小时遗漏24小时不含边界 全文仅可达12小时至24小时等，无正确半开范围；保温不计命中。寿命与耐腐蚀、容量评价与满足需求独立。"
+    },
+    {
+      "pair_id": "PT066",
+      "product_id": "608335015563",
+      "field": "A_matched_attribute_count",
+      "from_user_file": 6,
+      "written_value": 5
+    },
+    {
+      "pair_id": "PT066",
+      "product_id": "608335015563",
+      "field": "reviewer",
+      "from_user_file": "ChatGPT复核",
+      "written_value": "AI初审：ChatGPT填写，Codex复核修正；待用户确认"
+    },
+    {
+      "pair_id": "PT066",
+      "product_id": "608335015563",
+      "field": "A_numeric_range_distortion",
+      "from_user_file": 0,
+      "written_value": 1
+    },
+    {
+      "pair_id": "PT066",
+      "product_id": "608335015563",
+      "field": "A_factual_error_count",
+      "from_user_file": 2,
+      "written_value": 5
+    },
+    {
+      "pair_id": "PT066",
+      "product_id": "608335015563",
+      "field": "review_confirmed",
+      "from_user_file": 1,
+      "written_value": 0
+    },
+    {
+      "pair_id": "PT067",
+      "product_id": "15246761632",
+      "field": "pair_notes",
+      "from_user_file": "B覆盖更完整（5/6 vs 4/6）；A事实更克制。",
+      "written_value": "AI复核后：核心命中A 4/6、B 5/6；独立事实错误A 0、B 5；表达偏好沿用原稿，待用户确认。"
+    },
+    {
+      "pair_id": "PT067",
+      "product_id": "15246761632",
+      "field": "B_notes",
+      "from_user_file": "“品牌保障品质”“连接稳定快速”“使用更加舒适”“可拆卸手托”缺少直接事实依据。",
+      "written_value": "AI复查：独立错误5点：1. 品牌保障品质；2. 连接稳定快速；3. 使用舒适/舒适打字；4. 可拆卸手托；5. 方便操作 可拆卸是源有手托未证明的具体结构能力。舒适重复去重；补记操作便利。"
+    },
+    {
+      "pair_id": "PT067",
+      "product_id": "15246761632",
+      "field": "B_factual_error_count",
+      "from_user_file": 4,
+      "written_value": 5
+    },
+    {
+      "pair_id": "PT067",
+      "product_id": "15246761632",
+      "field": "reviewer",
+      "from_user_file": "ChatGPT复核",
+      "written_value": "AI初审：ChatGPT填写，Codex复核修正；待用户确认"
+    },
+    {
+      "pair_id": "PT067",
+      "product_id": "15246761632",
+      "field": "review_confirmed",
+      "from_user_file": 1,
+      "written_value": 0
+    },
+    {
+      "pair_id": "PT068",
+      "product_id": "583601853144",
+      "field": "B_notes",
+      "from_user_file": "“品质与性能”“连接稳定快捷”“操作便捷高效”“稳定输入体验”“快速调整音量/播放”等存在无依据效果或具体能力扩写。",
+      "written_value": "AI复查：独立错误5点：1. 确保品质；2. 确保性能；3. 连接稳定/稳定输入；4. 连接及操作便捷高效；5. 快速调整音量和播放控制的具体能力 保留5点但明确去重连接稳定与稳定输入；补明品质和性能不同，便利近义合并。具体多媒体功能转述边界请用户重点确认。"
+    },
+    {
+      "pair_id": "PT068",
+      "product_id": "583601853144",
+      "field": "reviewer",
+      "from_user_file": "ChatGPT复核",
+      "written_value": "AI初审：ChatGPT填写，Codex复核修正；待用户确认"
+    },
+    {
+      "pair_id": "PT068",
+      "product_id": "583601853144",
+      "field": "review_confirmed",
+      "from_user_file": 1,
+      "written_value": 0
+    },
+    {
+      "pair_id": "PT069",
+      "product_id": "609923870759",
+      "field": "pair_notes",
+      "from_user_file": "两侧核心覆盖相同（5/5）；B事实更克制。",
+      "written_value": "AI复核后：核心命中A 5/5、B 5/5；独立事实错误A 6、B 0；表达偏好沿用原稿，待用户确认。"
+    },
+    {
+      "pair_id": "PT069",
+      "product_id": "609923870759",
+      "field": "A_notes",
+      "from_user_file": "“大容量”“安全稳定”“高效能/安全使用”为无依据评价。",
+      "written_value": "AI复查：独立错误6点：1. 大容量评价；2. 安全/安全使用；3. 稳定；4. 更薄的比较性断言；5. 更轻便；6. 保证高效能 安全跨区去重；源厚6mm不证明比什么更薄，也没有重量或轻便评价来源。"
+    },
+    {
+      "pair_id": "PT069",
+      "product_id": "609923870759",
+      "field": "reviewer",
+      "from_user_file": "ChatGPT复核",
+      "written_value": "AI初审：ChatGPT填写，Codex复核修正；待用户确认"
+    },
+    {
+      "pair_id": "PT069",
+      "product_id": "609923870759",
+      "field": "A_factual_error_count",
+      "from_user_file": 3,
+      "written_value": 6
+    },
+    {
+      "pair_id": "PT069",
+      "product_id": "609923870759",
+      "field": "review_confirmed",
+      "from_user_file": 1,
+      "written_value": 0
+    },
+    {
+      "pair_id": "PT070",
+      "product_id": "610255708567",
+      "field": "reviewer",
+      "from_user_file": "ChatGPT复核",
+      "written_value": "AI初审：ChatGPT填写，Codex复核修正；待用户确认"
+    },
+    {
+      "pair_id": "PT070",
+      "product_id": "610255708567",
+      "field": "review_confirmed",
+      "from_user_file": 1,
+      "written_value": 0
+    },
+    {
+      "pair_id": "PT071",
+      "product_id": "610445355179",
+      "field": "pair_notes",
+      "from_user_file": "两侧核心覆盖相同（4/6）；A事实更克制。",
+      "written_value": "AI复核后：核心命中A 4/6、B 4/6；独立事实错误A 0、B 4；表达偏好沿用原稿，待用户确认。"
+    },
+    {
+      "pair_id": "PT071",
+      "product_id": "610445355179",
+      "field": "B_notes",
+      "from_user_file": "“坚固耐用”“节省空间”“保护物品”为无依据评价/效果。",
+      "written_value": "AI复查：独立错误4点：1. 优质塑料；2. 坚固耐用；3. 节省空间；4. 保护物品 补记优质；存放/整理源对象本身有支持，但保护作用和空间节省无依据。"
+    },
+    {
+      "pair_id": "PT071",
+      "product_id": "610445355179",
+      "field": "B_factual_error_count",
+      "from_user_file": 3,
+      "written_value": 4
+    },
+    {
+      "pair_id": "PT071",
+      "product_id": "610445355179",
+      "field": "reviewer",
+      "from_user_file": "ChatGPT复核",
+      "written_value": "AI初审：ChatGPT填写，Codex复核修正；待用户确认"
+    },
+    {
+      "pair_id": "PT071",
+      "product_id": "610445355179",
+      "field": "review_confirmed",
+      "from_user_file": 1,
+      "written_value": 0
+    },
+    {
+      "pair_id": "PT072",
+      "product_id": "609762128375",
+      "field": "pair_notes",
+      "from_user_file": "A覆盖更完整（7/8 vs 5/8）；B事实更克制。",
+      "written_value": "AI复核后：核心命中A 6/8、B 5/8；独立事实错误A 6、B 0；表达偏好沿用原稿，待用户确认。"
+    },
+    {
+      "pair_id": "PT072",
+      "product_id": "609762128375",
+      "field": "A_notes",
+      "from_user_file": "“耐用且不易生锈”“长效保温效果”“容量更大/满足日常饮用需求”为无依据评价；源容量为REVIEW且未生成。",
+      "written_value": "AI复查：独立错误6点：1. 耐用；2. 不易生锈；3. 长效保温效果的评价；4. 容量更大；5. 满足日常饮用需求；6. 6至12小时未保留12小时不含边界 源辅助保温性能描述为保温6-12小时，与冻结核心6小时(含)-12小时(不含)存在精度差异；不称12小时完全凭空编造，但失去半开上界不计核心命中，范围标记请人工重点确认。型号内胆真空有源支持；容量REVIEW未生成具体容量，容量更大评价仍无比较依据。"
+    },
+    {
+      "pair_id": "PT072",
+      "product_id": "609762128375",
+      "field": "A_matched_attribute_count",
+      "from_user_file": 7,
+      "written_value": 6
+    },
+    {
+      "pair_id": "PT072",
+      "product_id": "609762128375",
+      "field": "reviewer",
+      "from_user_file": "ChatGPT复核",
+      "written_value": "AI初审：ChatGPT填写，Codex复核修正；待用户确认"
+    },
+    {
+      "pair_id": "PT072",
+      "product_id": "609762128375",
+      "field": "A_numeric_range_distortion",
+      "from_user_file": 0,
+      "written_value": 1
+    },
+    {
+      "pair_id": "PT072",
+      "product_id": "609762128375",
+      "field": "A_factual_error_count",
+      "from_user_file": 3,
+      "written_value": 6
+    },
+    {
+      "pair_id": "PT072",
+      "product_id": "609762128375",
+      "field": "review_confirmed",
+      "from_user_file": 1,
+      "written_value": 0
+    },
+    {
+      "pair_id": "PT073",
+      "product_id": "604829061336",
+      "field": "pair_notes",
+      "from_user_file": "两侧核心覆盖相同（4/4）；A事实更克制。",
+      "written_value": "AI复核后：核心命中A 4/4、B 4/4；独立事实错误A 0、B 6；表达偏好沿用原稿，待用户确认。"
+    },
+    {
+      "pair_id": "PT073",
+      "product_id": "604829061336",
+      "field": "B_notes",
+      "from_user_file": "“坚固耐用”“有效快速挤水”“品质保证”“操作简便/清洁更高效”为无依据效果评价。",
+      "written_value": "AI复查：独立错误6点：1. 坚固/结实耐用；2. 快速挤水；3. 品质保证；4. 操作简便；5. 清洁更高效；6. 独特的滚轮式设计 滚轮式挤水本身及泛有效挤水属于直接功能语义，不整句判错；快速需要速度依据，源30秒以下是胶棉头软化速度而非挤水速度。独特无比较依据。"
+    },
+    {
+      "pair_id": "PT073",
+      "product_id": "604829061336",
+      "field": "B_factual_error_count",
+      "from_user_file": 4,
+      "written_value": 6
+    },
+    {
+      "pair_id": "PT073",
+      "product_id": "604829061336",
+      "field": "reviewer",
+      "from_user_file": "ChatGPT复核",
+      "written_value": "AI初审：ChatGPT填写，Codex复核修正；待用户确认"
+    },
+    {
+      "pair_id": "PT073",
+      "product_id": "604829061336",
+      "field": "review_confirmed",
+      "from_user_file": 1,
+      "written_value": 0
+    },
+    {
+      "pair_id": "PT074",
+      "product_id": "600661711292",
+      "field": "A_notes",
+      "from_user_file": "“更便捷的使用体验”“稳定高效连接”“清晰通话质量”“适用于多种蓝牙播放设备”为无依据效果/范围扩写；源型号/佩戴方式为REVIEW。",
+      "written_value": "AI复查：原4点保留：便捷体验、稳定高效连接、清晰通话、多种设备兼容。补列源争议：核心耳机类别智能耳机与完整源智能类型不支持智能冲突；搭载智能技术应人工重点核对，但不在源含混时机械追加模型幻觉。型号/佩戴方式REVIEW单列。"
+    },
+    {
+      "pair_id": "PT074",
+      "product_id": "600661711292",
+      "field": "reviewer",
+      "from_user_file": "ChatGPT复核",
+      "written_value": "AI初审：ChatGPT填写，Codex复核修正；待用户确认"
+    },
+    {
+      "pair_id": "PT074",
+      "product_id": "600661711292",
+      "field": "review_confirmed",
+      "from_user_file": 1,
+      "written_value": 0
+    },
+    {
+      "pair_id": "PT075",
+      "product_id": "619501332263",
+      "field": "pair_notes",
+      "from_user_file": "A覆盖更完整（7/7 vs 5/7）；B事实更克制。",
+      "written_value": "AI复核后：核心命中A 7/7、B 5/7；独立事实错误A 6、B 0；表达偏好沿用原稿，待用户确认。"
+    },
+    {
+      "pair_id": "PT075",
+      "product_id": "619501332263",
+      "field": "A_notes",
+      "from_user_file": "“值得信赖”“耐用/环保安全”“大容量”“按压方便快捷”为无依据评价/效果。",
+      "written_value": "AI复查：独立错误6点：1. 值得信赖；2. 耐用；3. 环保；4. 安全；5. 10L大容量评价；6. 按压方便快捷 耐用、环保、安全独立；家庭日常使用有来源，不计错误。"
+    },
+    {
+      "pair_id": "PT075",
+      "product_id": "619501332263",
+      "field": "reviewer",
+      "from_user_file": "ChatGPT复核",
+      "written_value": "AI初审：ChatGPT填写，Codex复核修正；待用户确认"
+    },
+    {
+      "pair_id": "PT075",
+      "product_id": "619501332263",
+      "field": "A_factual_error_count",
+      "from_user_file": 4,
+      "written_value": 6
+    },
+    {
+      "pair_id": "PT075",
+      "product_id": "619501332263",
+      "field": "review_confirmed",
+      "from_user_file": 1,
+      "written_value": 0
+    },
+    {
+      "pair_id": "PT076",
+      "product_id": "562660919726",
+      "field": "pair_notes",
+      "from_user_file": "A覆盖更完整（8/8 vs 5/8）；B事实更克制。",
+      "written_value": "AI复核后：核心命中A 7/8、B 5/8；独立事实错误A 6、B 0；表达偏好沿用原稿，待用户确认。"
+    },
+    {
+      "pair_id": "PT076",
+      "product_id": "562660919726",
+      "field": "A_notes",
+      "from_user_file": "“安全耐用”“满足日常饮水需求”“携带方便”为无依据评价/效果。",
+      "written_value": "AI复查：独立错误6点：1. 安全；2. 耐用；3. 满足日常饮水需求；4. 携带方便；5. 各种运动场合的范围扩大；6. 6到12小时遗漏12小时不含边界 正文日常运动场合仍有源运动支持，故运动字段可命中；卖点各种运动另为范围扩大，不能抹去该错误。保温全文边界未正确表达，不命中。"
+    },
+    {
+      "pair_id": "PT076",
+      "product_id": "562660919726",
+      "field": "A_matched_attribute_count",
+      "from_user_file": 8,
+      "written_value": 7
+    },
+    {
+      "pair_id": "PT076",
+      "product_id": "562660919726",
+      "field": "reviewer",
+      "from_user_file": "ChatGPT复核",
+      "written_value": "AI初审：ChatGPT填写，Codex复核修正；待用户确认"
+    },
+    {
+      "pair_id": "PT076",
+      "product_id": "562660919726",
+      "field": "A_numeric_range_distortion",
+      "from_user_file": 0,
+      "written_value": 1
+    },
+    {
+      "pair_id": "PT076",
+      "product_id": "562660919726",
+      "field": "A_factual_error_count",
+      "from_user_file": 3,
+      "written_value": 6
+    },
+    {
+      "pair_id": "PT076",
+      "product_id": "562660919726",
+      "field": "review_confirmed",
+      "from_user_file": 1,
+      "written_value": 0
+    },
+    {
+      "pair_id": "PT077",
+      "product_id": "576463385175",
+      "field": "pair_notes",
+      "from_user_file": "A覆盖更完整（8/8 vs 5/8）；B事实更克制。",
+      "written_value": "AI复核后：核心命中A 8/8、B 5/8；独立事实错误A 6、B 0；表达偏好沿用原稿，待用户确认。"
+    },
+    {
+      "pair_id": "PT077",
+      "product_id": "576463385175",
+      "field": "A_notes",
+      "from_user_file": "“耐用且易清洁”“适中容量满足日常需求”“保温性能出色”“大众日常使用”为无依据评价/场景扩写。",
+      "written_value": "AI复查：独立错误6点：1. 耐用；2. 易清洁；3. 容量适中；4. 满足日常饮用需求；5. 保温性能出色；6. 大众日常使用的场景扩写 耐用与易清洁、容量适中与充分性拆分。6小时42度以上标题已正确表达；源测试20±5°C、95°C水满容量、6小时≥42°C与正文6小时内均≥42°C的转述边界请人工确认，暂不额外追加错误。日常使用与商用场景的边界也请确认。"
+    },
+    {
+      "pair_id": "PT077",
+      "product_id": "576463385175",
+      "field": "reviewer",
+      "from_user_file": "ChatGPT复核",
+      "written_value": "AI初审：ChatGPT填写，Codex复核修正；待用户确认"
+    },
+    {
+      "pair_id": "PT077",
+      "product_id": "576463385175",
+      "field": "A_factual_error_count",
+      "from_user_file": 4,
+      "written_value": 6
+    },
+    {
+      "pair_id": "PT077",
+      "product_id": "576463385175",
+      "field": "review_confirmed",
+      "from_user_file": 1,
+      "written_value": 0
+    },
+    {
+      "pair_id": "PT078",
+      "product_id": "610605050479",
+      "field": "pair_notes",
+      "from_user_file": "两侧核心覆盖相同（5/5）；B事实更克制。",
+      "written_value": "AI复核后：核心命中A 5/5、B 5/5；独立事实错误A 6、B 0；表达偏好沿用原稿，待用户确认。"
+    },
+    {
+      "pair_id": "PT078",
+      "product_id": "610605050479",
+      "field": "A_notes",
+      "from_user_file": "“品质保障”“大容量/持久续航”“安全可靠”“耐用稳固”为无依据评价。",
+      "written_value": "AI复查：独立错误6点：1. 品质保障；2. 大容量评价；3. 持久续航；4. 安全；5. 可靠；6. 耐用稳固的材料质量评价 容量大小评价和续航、安全和可靠分别独立；源支持快充未用于上述结论的证明。"
+    },
+    {
+      "pair_id": "PT078",
+      "product_id": "610605050479",
+      "field": "reviewer",
+      "from_user_file": "ChatGPT复核",
+      "written_value": "AI初审：ChatGPT填写，Codex复核修正；待用户确认"
+    },
+    {
+      "pair_id": "PT078",
+      "product_id": "610605050479",
+      "field": "A_factual_error_count",
+      "from_user_file": 4,
+      "written_value": 6
+    },
+    {
+      "pair_id": "PT078",
+      "product_id": "610605050479",
+      "field": "review_confirmed",
+      "from_user_file": 1,
+      "written_value": 0
+    },
+    {
+      "pair_id": "PT079",
+      "product_id": "607358884242",
+      "field": "pair_notes",
+      "from_user_file": "两侧核心覆盖相同（4/4）；A事实更克制。",
+      "written_value": "AI复核后：核心命中A 4/4、B 4/4；独立事实错误A 0、B 3；表达偏好沿用原稿，待用户确认。"
+    },
+    {
+      "pair_id": "PT079",
+      "product_id": "607358884242",
+      "field": "B_notes",
+      "from_user_file": "“稳定可靠的佩戴体验”“稳定连接与清晰音质”为无依据体验/效果。",
+      "written_value": "AI复查：独立错误3点：1. 稳定可靠的佩戴体验；2. 稳定连接；3. 清晰音质 佩戴稳定、传输稳定和音质清晰是三个不同性质。"
+    },
+    {
+      "pair_id": "PT079",
+      "product_id": "607358884242",
+      "field": "B_factual_error_count",
+      "from_user_file": 2,
+      "written_value": 3
+    },
+    {
+      "pair_id": "PT079",
+      "product_id": "607358884242",
+      "field": "reviewer",
+      "from_user_file": "ChatGPT复核",
+      "written_value": "AI初审：ChatGPT填写，Codex复核修正；待用户确认"
+    },
+    {
+      "pair_id": "PT079",
+      "product_id": "607358884242",
+      "field": "review_confirmed",
+      "from_user_file": 1,
+      "written_value": 0
+    },
+    {
+      "pair_id": "PT080",
+      "product_id": "602079265226",
+      "field": "reviewer",
+      "from_user_file": "ChatGPT复核",
+      "written_value": "AI初审：ChatGPT填写，Codex复核修正；待用户确认"
+    },
+    {
+      "pair_id": "PT080",
+      "product_id": "602079265226",
+      "field": "review_confirmed",
+      "from_user_file": 1,
+      "written_value": 0
+    },
+    {
+      "pair_id": "PT081",
+      "product_id": "587244433192",
+      "field": "pair_notes",
+      "from_user_file": "B覆盖更完整（7/7 vs 6/7）；A事实更克制。",
+      "written_value": "AI复核后：核心命中A 6/7、B 7/7；独立事实错误A 0、B 5；表达偏好沿用原稿，待用户确认。"
+    },
+    {
+      "pair_id": "PT081",
+      "product_id": "587244433192",
+      "field": "B_notes",
+      "from_user_file": "“坚固耐用”“吸水性强/清洁效果更佳”“操作省力/提升清洁效率”为无依据效果。",
+      "written_value": "AI复查：独立错误5点：1. 坚固耐用；2. 吸水性强；3. 清洁效果更佳；4. 操作更省力；5. 提升清洁效率 吸水与清洁效果、省力与效率拆分；源吸水10s以下和双驱动没有评价/比较基准，不能直接证明这些效果。"
+    },
+    {
+      "pair_id": "PT081",
+      "product_id": "587244433192",
+      "field": "B_factual_error_count",
+      "from_user_file": 3,
+      "written_value": 5
+    },
+    {
+      "pair_id": "PT081",
+      "product_id": "587244433192",
+      "field": "reviewer",
+      "from_user_file": "ChatGPT复核",
+      "written_value": "AI初审：ChatGPT填写，Codex复核修正；待用户确认"
+    },
+    {
+      "pair_id": "PT081",
+      "product_id": "587244433192",
+      "field": "review_confirmed",
+      "from_user_file": 1,
+      "written_value": 0
+    },
+    {
+      "pair_id": "PT082",
+      "product_id": "620165221976",
+      "field": "reviewer",
+      "from_user_file": "ChatGPT复核",
+      "written_value": "AI初审：ChatGPT填写，Codex复核修正；待用户确认"
+    },
+    {
+      "pair_id": "PT082",
+      "product_id": "620165221976",
+      "field": "review_confirmed",
+      "from_user_file": 1,
+      "written_value": 0
+    },
+    {
+      "pair_id": "PT083",
+      "product_id": "594880547645",
+      "field": "reviewer",
+      "from_user_file": "ChatGPT复核",
+      "written_value": "AI初审：ChatGPT填写，Codex复核修正；待用户确认"
+    },
+    {
+      "pair_id": "PT083",
+      "product_id": "594880547645",
+      "field": "review_confirmed",
+      "from_user_file": 1,
+      "written_value": 0
+    },
+    {
+      "pair_id": "PT084",
+      "product_id": "609861568866",
+      "field": "A_notes",
+      "from_user_file": "“便于携带”“确保耐用性和便携性”为无依据效果/评价。",
+      "written_value": "AI复查：独立错误2点：1. 便于携带/确保便携性；2. 确保耐用性 总数2不变，明确便携跨任务去重；两个错误是便携与耐用，不是出现两次便携计两次。"
+    },
+    {
+      "pair_id": "PT084",
+      "product_id": "609861568866",
+      "field": "reviewer",
+      "from_user_file": "ChatGPT复核",
+      "written_value": "AI初审：ChatGPT填写，Codex复核修正；待用户确认"
+    },
+    {
+      "pair_id": "PT084",
+      "product_id": "609861568866",
+      "field": "review_confirmed",
+      "from_user_file": 1,
+      "written_value": 0
+    },
+    {
+      "pair_id": "PT085",
+      "product_id": "562289059045",
+      "field": "B_notes",
+      "from_user_file": "“坚固耐用”“吸水性强”“轻松操作”“清洁效果好”“安全省力”为无依据评价/效果。",
+      "written_value": "AI复查：独立错误5点：1. 坚固耐用；2. 吸水性强；3. 轻松操作/省力；4. 清洁效果好；5. 安全 总数5保留，但轻松操作与省力同一体力诉求去重，安全独立；手动支持无需电力，不另计该句错误。"
+    },
+    {
+      "pair_id": "PT085",
+      "product_id": "562289059045",
+      "field": "reviewer",
+      "from_user_file": "ChatGPT复核",
+      "written_value": "AI初审：ChatGPT填写，Codex复核修正；待用户确认"
+    },
+    {
+      "pair_id": "PT085",
+      "product_id": "562289059045",
+      "field": "review_confirmed",
+      "from_user_file": 1,
+      "written_value": 0
+    },
+    {
+      "pair_id": "PT086",
+      "product_id": "609629279071",
+      "field": "reviewer",
+      "from_user_file": "ChatGPT复核",
+      "written_value": "AI初审：ChatGPT填写，Codex复核修正；待用户确认"
+    },
+    {
+      "pair_id": "PT086",
+      "product_id": "609629279071",
+      "field": "review_confirmed",
+      "from_user_file": 1,
+      "written_value": 0
+    },
+    {
+      "pair_id": "PT087",
+      "product_id": "614533597181",
+      "field": "pair_notes",
+      "from_user_file": "A覆盖更完整（7/7 vs 5/7）；B事实更克制。",
+      "written_value": "AI复核后：核心命中A 7/7、B 5/7；独立事实错误A 4、B 0；表达偏好沿用原稿，待用户确认。"
+    },
+    {
+      "pair_id": "PT087",
+      "product_id": "614533597181",
+      "field": "A_notes",
+      "from_user_file": "“舒适稳固”“稳定流畅的无线音频传输”“适合摩托车骑行”缺少直接事实依据；主动降噪降低噪音视为品类直接语义。",
+      "written_value": "AI复查：独立错误4点：1. 佩戴舒适；2. 佩戴稳固；3. 稳定流畅的无线音频传输；4. 适合摩托车骑行的具体场景 主动降噪降低噪音保留为直接功能语义；品牌括号摩托车不单独证明骑行适用性，原标题不独立支持场景能力。此场景边界请用户确认。"
+    },
+    {
+      "pair_id": "PT087",
+      "product_id": "614533597181",
+      "field": "reviewer",
+      "from_user_file": "ChatGPT复核",
+      "written_value": "AI初审：ChatGPT填写，Codex复核修正；待用户确认"
+    },
+    {
+      "pair_id": "PT087",
+      "product_id": "614533597181",
+      "field": "A_factual_error_count",
+      "from_user_file": 3,
+      "written_value": 4
+    },
+    {
+      "pair_id": "PT087",
+      "product_id": "614533597181",
+      "field": "review_confirmed",
+      "from_user_file": 1,
+      "written_value": 0
+    },
+    {
+      "pair_id": "PT088",
+      "product_id": "43297860634",
+      "field": "reviewer",
+      "from_user_file": "ChatGPT复核",
+      "written_value": "AI初审：ChatGPT填写，Codex复核修正；待用户确认"
+    },
+    {
+      "pair_id": "PT088",
+      "product_id": "43297860634",
+      "field": "review_confirmed",
+      "from_user_file": 1,
+      "written_value": 0
+    },
+    {
+      "pair_id": "PT089",
+      "product_id": "621173570641",
+      "field": "pair_notes",
+      "from_user_file": "两侧核心覆盖相同（2/4）；A事实更克制。",
+      "written_value": "AI复核后：核心命中A 2/4、B 2/4；独立事实错误A 0、B 4；表达偏好沿用原稿，待用户确认。"
+    },
+    {
+      "pair_id": "PT089",
+      "product_id": "621173570641",
+      "field": "A_notes",
+      "from_user_file": "“适用范围：家庭清洁”为无依据场景；品牌/型号占位值已门控。",
+      "written_value": "AI复查：独立错误0点：未发现事实错误。 家居日用+拖把的泛家庭清洁按与validation QV11一致的低风险直接用途，不新增具体房间、人群或效果，不计事实错误。源SKU/品牌型号占位争议单列。"
+    },
+    {
+      "pair_id": "PT089",
+      "product_id": "621173570641",
+      "field": "B_notes",
+      "from_user_file": "“操作省力”“使用便捷”“简洁高效/满足日常清洁需求”“清洁更省心”为无依据效果/场景评价。",
+      "written_value": "AI复查：独立错误4点：1. 操作更加省力；2. 使用便捷/操作简便/清洁省心；3. 高效；4. 满足日常清洁需求的充分性保证 原4点保留但调整去重：便利/简便/省心同一便捷诉求合并，省力单独；不因家庭清洁或日常清洁这几个词本身计场景错误，满足需求仍是效果保证。"
+    },
+    {
+      "pair_id": "PT089",
+      "product_id": "621173570641",
+      "field": "reviewer",
+      "from_user_file": "ChatGPT复核",
+      "written_value": "AI初审：ChatGPT填写，Codex复核修正；待用户确认"
+    },
+    {
+      "pair_id": "PT089",
+      "product_id": "621173570641",
+      "field": "A_factual_error_count",
+      "from_user_file": 1,
+      "written_value": 0
+    },
+    {
+      "pair_id": "PT089",
+      "product_id": "621173570641",
+      "field": "A_unsupported_evaluation_effect_scenario",
+      "from_user_file": 1,
+      "written_value": 0
+    },
+    {
+      "pair_id": "PT089",
+      "product_id": "621173570641",
+      "field": "review_confirmed",
+      "from_user_file": 1,
+      "written_value": 0
+    },
+    {
+      "pair_id": "PT090",
+      "product_id": "624112334484",
+      "field": "reviewer",
+      "from_user_file": "ChatGPT复核",
+      "written_value": "AI初审：ChatGPT填写，Codex复核修正；待用户确认"
+    },
+    {
+      "pair_id": "PT090",
+      "product_id": "624112334484",
+      "field": "review_confirmed",
+      "from_user_file": 1,
+      "written_value": 0
+    },
+    {
+      "pair_id": "PT091",
+      "product_id": "614194957336",
+      "field": "pair_notes",
+      "from_user_file": "两侧核心覆盖相同（4/4）；B事实更克制。",
+      "written_value": "AI复核后：核心命中A 4/4、B 4/4；独立事实错误A 6、B 0；表达偏好沿用原稿，待用户确认。"
+    },
+    {
+      "pair_id": "PT091",
+      "product_id": "614194957336",
+      "field": "A_notes",
+      "from_user_file": "“坚固耐用”“操作方便快捷”“品质值得信赖”“耐腐蚀性”“保持地面干燥”等均缺少直接事实依据。",
+      "written_value": "AI复查：独立错误6点：1. 坚固耐用/良好坚固性的材料质量评价；2. 操作方便快捷/方便快捷清理水分；3. 品质值得信赖；4. 良好耐腐蚀性；5. 保持地面干燥；6. 独特的对折式设计 重复强度、便利跨区去重；对折式挤水本身有源支持，地面干燥效果及独特性没有。"
+    },
+    {
+      "pair_id": "PT091",
+      "product_id": "614194957336",
+      "field": "reviewer",
+      "from_user_file": "ChatGPT复核",
+      "written_value": "AI初审：ChatGPT填写，Codex复核修正；待用户确认"
+    },
+    {
+      "pair_id": "PT091",
+      "product_id": "614194957336",
+      "field": "A_factual_error_count",
+      "from_user_file": 5,
+      "written_value": 6
+    },
+    {
+      "pair_id": "PT091",
+      "product_id": "614194957336",
+      "field": "review_confirmed",
+      "from_user_file": 1,
+      "written_value": 0
+    },
+    {
+      "pair_id": "PT092",
+      "product_id": "602684369098",
+      "field": "reviewer",
+      "from_user_file": "ChatGPT复核",
+      "written_value": "AI初审：ChatGPT填写，Codex复核修正；待用户确认"
+    },
+    {
+      "pair_id": "PT092",
+      "product_id": "602684369098",
+      "field": "review_confirmed",
+      "from_user_file": 1,
+      "written_value": 0
+    },
+    {
+      "pair_id": "PT093",
+      "product_id": "621846828786",
+      "field": "pair_notes",
+      "from_user_file": "两侧核心覆盖相同（5/7）；B事实更克制。",
+      "written_value": "AI复核后：核心命中A 5/7、B 5/7；独立事实错误A 5、B 0；表达偏好沿用原稿，待用户确认。"
+    },
+    {
+      "pair_id": "PT093",
+      "product_id": "621846828786",
+      "field": "A_notes",
+      "from_user_file": "“安全稳定”“结构稳固”“轻巧便携”为无依据评价；源商品对象为REVIEW。",
+      "written_value": "AI复查：独立错误5点：1. 安全；2. 稳定；3. 结构稳固；4. 轻巧便携；5. 高效充电 安全、运行稳定、结构强度不同；补记标题高效充电。源支持快充支持快充能力，不直接证明充电效率优势；高效是否仅快充同义表达请用户重点确认。源商品对象REVIEW单列。"
+    },
+    {
+      "pair_id": "PT093",
+      "product_id": "621846828786",
+      "field": "reviewer",
+      "from_user_file": "ChatGPT复核",
+      "written_value": "AI初审：ChatGPT填写，Codex复核修正；待用户确认"
+    },
+    {
+      "pair_id": "PT093",
+      "product_id": "621846828786",
+      "field": "A_factual_error_count",
+      "from_user_file": 3,
+      "written_value": 5
+    },
+    {
+      "pair_id": "PT093",
+      "product_id": "621846828786",
+      "field": "review_confirmed",
+      "from_user_file": 1,
+      "written_value": 0
+    },
+    {
+      "pair_id": "PT094",
+      "product_id": "606991731175",
+      "field": "pair_notes",
+      "from_user_file": "B覆盖更完整（7/8 vs 5/8）；A事实更克制。",
+      "written_value": "AI复核后：核心命中A 5/8、B 7/8；独立事实错误A 0、B 9；表达偏好沿用原稿，待用户确认。"
+    },
+    {
+      "pair_id": "PT094",
+      "product_id": "606991731175",
+      "field": "B_notes",
+      "from_user_file": "“简约大方”“耐用耐腐蚀/安全健康”“容量适中/方便携带”“长效保温性能”等为无依据评价；学生/运动信息本身有源支持。",
+      "written_value": "AI复查：独立错误9点：1. 简约/简洁大方；2. 耐用；3. 耐腐蚀；4. 安全健康；5. 容量适中；6. 方便携带；7. 长效保温性能的评价；8. 学生专用/专为学生设计；9. 各种运动场合的范围扩大 安全健康按同一安全诉求合并，寿命与耐腐蚀拆分；适用学生/运动本身有源支持，专用设计目的与各种运动范围强化无支持。6小时以上正确，不额外追加范围错误。"
+    },
+    {
+      "pair_id": "PT094",
+      "product_id": "606991731175",
+      "field": "B_factual_error_count",
+      "from_user_file": 5,
+      "written_value": 9
+    },
+    {
+      "pair_id": "PT094",
+      "product_id": "606991731175",
+      "field": "reviewer",
+      "from_user_file": "ChatGPT复核",
+      "written_value": "AI初审：ChatGPT填写，Codex复核修正；待用户确认"
+    },
+    {
+      "pair_id": "PT094",
+      "product_id": "606991731175",
+      "field": "review_confirmed",
+      "from_user_file": 1,
+      "written_value": 0
+    },
+    {
+      "pair_id": "PT095",
+      "product_id": "581329948812",
+      "field": "pair_notes",
+      "from_user_file": "B覆盖更完整（8/8 vs 5/8）；A事实更克制。",
+      "written_value": "AI复核后：核心命中A 5/8、B 7/8；独立事实错误A 0、B 5；表达偏好沿用原稿，待用户确认。"
+    },
+    {
+      "pair_id": "PT095",
+      "product_id": "581329948812",
+      "field": "B_numeric_range_distortion",
+      "from_user_file": 0,
+      "written_value": 1
+    },
+    {
+      "pair_id": "PT095",
+      "product_id": "581329948812",
+      "field": "B_notes",
+      "from_user_file": "“坚固耐用”“满足日常饮水需求”“保持饮品温度适中”“大众日常使用”为无依据评价/场景扩写。",
+      "written_value": "AI复查：独立错误5点：1. 坚固耐用；2. 满足日常饮水需求；3. 保持饮品温度适中；4. 大众日常使用的场景扩写；5. 6至24小时未保留24小时不含边界 源辅助保温性能描述24小时与核心6小时(含)-24小时(不含)有源口径争议；不称24小时为完全无来源，但全文未保留冻结半开边界，保温不计核心命中，范围判断请人工重点确认。日常使用场景边界沿用validation，待用户确认。"
+    },
+    {
+      "pair_id": "PT095",
+      "product_id": "581329948812",
+      "field": "B_factual_error_count",
+      "from_user_file": 4,
+      "written_value": 5
+    },
+    {
+      "pair_id": "PT095",
+      "product_id": "581329948812",
+      "field": "reviewer",
+      "from_user_file": "ChatGPT复核",
+      "written_value": "AI初审：ChatGPT填写，Codex复核修正；待用户确认"
+    },
+    {
+      "pair_id": "PT095",
+      "product_id": "581329948812",
+      "field": "B_matched_attribute_count",
+      "from_user_file": 8,
+      "written_value": 7
+    },
+    {
+      "pair_id": "PT095",
+      "product_id": "581329948812",
+      "field": "review_confirmed",
+      "from_user_file": 1,
+      "written_value": 0
+    },
+    {
+      "pair_id": "PT096",
+      "product_id": "608516760684",
+      "field": "reviewer",
+      "from_user_file": "ChatGPT复核",
+      "written_value": "AI初审：ChatGPT填写，Codex复核修正；待用户确认"
+    },
+    {
+      "pair_id": "PT096",
+      "product_id": "608516760684",
+      "field": "review_confirmed",
+      "from_user_file": 1,
+      "written_value": 0
+    },
+    {
+      "pair_id": "PT097",
+      "product_id": "591309078741",
+      "field": "pair_notes",
+      "from_user_file": "A覆盖更完整（6/8 vs 5/8）；B事实更克制。",
+      "written_value": "AI复核后：核心命中A 5/8、B 5/8；独立事实错误A 5、B 0；表达偏好沿用原稿，待用户确认。"
+    },
+    {
+      "pair_id": "PT097",
+      "product_id": "591309078741",
+      "field": "A_notes",
+      "from_user_file": "“线条/外观简洁大方”“6至12小时内温度稳定不变”“大众日常使用”为无依据评价/效果/场景扩写；源容量为REVIEW且未生成。",
+      "written_value": "AI复查：独立错误5点：1. 线条简洁流畅/外观简洁大方的外观评价；2. 良好的保温性能评价；3. 饮品温度稳定不变；4. 大众日常使用的场景扩写；5. 6至12小时遗漏12小时不含边界 保温不等于温度恒定；恒温效果与区间边界两个不同问题。标题保温6-12小时也没有正确半开边界。源容量REVIEW未生成；日常使用与送礼的场景边界请用户确认。"
+    },
+    {
+      "pair_id": "PT097",
+      "product_id": "591309078741",
+      "field": "A_matched_attribute_count",
+      "from_user_file": 6,
+      "written_value": 5
+    },
+    {
+      "pair_id": "PT097",
+      "product_id": "591309078741",
+      "field": "reviewer",
+      "from_user_file": "ChatGPT复核",
+      "written_value": "AI初审：ChatGPT填写，Codex复核修正；待用户确认"
+    },
+    {
+      "pair_id": "PT097",
+      "product_id": "591309078741",
+      "field": "A_numeric_range_distortion",
+      "from_user_file": 0,
+      "written_value": 1
+    },
+    {
+      "pair_id": "PT097",
+      "product_id": "591309078741",
+      "field": "A_factual_error_count",
+      "from_user_file": 3,
+      "written_value": 5
+    },
+    {
+      "pair_id": "PT097",
+      "product_id": "591309078741",
+      "field": "review_confirmed",
+      "from_user_file": 1,
+      "written_value": 0
+    },
+    {
+      "pair_id": "PT098",
+      "product_id": "601009119510",
+      "field": "A_notes",
+      "from_user_file": null,
+      "written_value": "AI复查：标题富德 IK8300 无线 有 键盘将多媒体布尔值有直接拼入标题而未给字段名，造成不自然串接；保留通顺0、堆叠1，补记模板化1，非因正常字段句式固定扣分。正文正确表达品牌、型号、无线、多媒体共4项，事实错误仍0。"
+    },
+    {
+      "pair_id": "PT098",
+      "product_id": "601009119510",
+      "field": "A_mechanical_template",
+      "from_user_file": 0,
+      "written_value": 1
+    },
+    {
+      "pair_id": "PT098",
+      "product_id": "601009119510",
+      "field": "reviewer",
+      "from_user_file": "ChatGPT复核",
+      "written_value": "AI初审：ChatGPT填写，Codex复核修正；待用户确认"
+    },
+    {
+      "pair_id": "PT098",
+      "product_id": "601009119510",
+      "field": "review_confirmed",
+      "from_user_file": 1,
+      "written_value": 0
+    },
+    {
+      "pair_id": "PT099",
+      "product_id": "581689863460",
+      "field": "pair_notes",
+      "from_user_file": "A覆盖更完整（8/8 vs 6/8）；B事实更克制。",
+      "written_value": "AI复核后：核心命中A 7/8、B 6/8；独立事实错误A 5、B 0；表达偏好沿用原稿，待用户确认。"
+    },
+    {
+      "pair_id": "PT099",
+      "product_id": "581689863460",
+      "field": "A_notes",
+      "from_user_file": "“耐用且安全”“长效保温功能”“儿童日常使用”为无依据评价/场景扩写；儿童人群和送礼场景本身有源支持。",
+      "written_value": "AI复查：独立错误5点：1. 耐用；2. 安全；3. 长效保温功能的评价；4. 儿童日常使用的场景扩写；5. 12至24小时遗漏24小时不含边界 源12小时大于50度不能证明包括24小时；保温不计命中。儿童人群、日常送礼本身有来源，不计错；日常使用与送礼的边界沿用validation，请用户确认。"
+    },
+    {
+      "pair_id": "PT099",
+      "product_id": "581689863460",
+      "field": "A_matched_attribute_count",
+      "from_user_file": 8,
+      "written_value": 7
+    },
+    {
+      "pair_id": "PT099",
+      "product_id": "581689863460",
+      "field": "reviewer",
+      "from_user_file": "ChatGPT复核",
+      "written_value": "AI初审：ChatGPT填写，Codex复核修正；待用户确认"
+    },
+    {
+      "pair_id": "PT099",
+      "product_id": "581689863460",
+      "field": "A_numeric_range_distortion",
+      "from_user_file": 0,
+      "written_value": 1
+    },
+    {
+      "pair_id": "PT099",
+      "product_id": "581689863460",
+      "field": "A_factual_error_count",
+      "from_user_file": 3,
+      "written_value": 5
+    },
+    {
+      "pair_id": "PT099",
+      "product_id": "581689863460",
+      "field": "review_confirmed",
+      "from_user_file": 1,
+      "written_value": 0
+    },
+    {
+      "pair_id": "PT100",
+      "product_id": "562615192976",
+      "field": "reviewer",
+      "from_user_file": "ChatGPT复核",
+      "written_value": "AI初审：ChatGPT填写，Codex复核修正；待用户确认"
+    },
+    {
+      "pair_id": "PT100",
+      "product_id": "562615192976",
+      "field": "review_confirmed",
+      "from_user_file": 1,
+      "written_value": 0
+    }
+  ]
+}

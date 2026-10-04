@@ -1,0 +1,606 @@
+{
+  "status": "passed",
+  "mode": "acceptance",
+  "started_at_utc": "2026-10-04T06:11:24.823192+00:00",
+  "pid": 30668,
+  "counts": {
+    "micro_steps_per_epoch": 3618,
+    "optimizer_steps_per_epoch": 453,
+    "total_optimizer_steps": 1359,
+    "last_group_records": 2
+  },
+  "config_sha256": "1afb8ed3ecca91aa3d8bdd55fb5e456dbb9a60deef8d52f4805c70cc24d7d1e0",
+  "project_validation_read": false,
+  "project_test_read": false,
+  "rag_holdout_read": false,
+  "identity": {
+    "run_kind": "acceptance_only",
+    "config": {
+      "version": "lora_qlora_train_v1",
+      "status": "p6_2_candidate_pending_final_full_training_confirmation",
+      "execution": {
+        "default_mode": "prepare",
+        "full_training_requires_explicit_cli_confirmation": true,
+        "acceptance_max_global_steps": 4,
+        "acceptance_is_quality_experiment": false
+      },
+      "data": {
+        "version": "lora_instruction_data_v1",
+        "manifest": "reports/generation/lora/lora_instruction_data_v1_final_manifest.json",
+        "manifest_sha256": "e21b9f278dbe533f038008840bce313564e702b6b5ff7ba5e0f8714156814a5d",
+        "template_version": "lora_copy_templates_v1",
+        "lora_train": {
+          "path": "data/processed/lora_instruction_data_v1/train.jsonl",
+          "sha256": "c31b00f3d19d503b3f7c7529cc2ce7e115143214b0d9ab40f07412becd6a5434",
+          "source_split": "train",
+          "records": 3618,
+          "products": 1206
+        },
+        "lora_train_dev": {
+          "path": "data/processed/lora_instruction_data_v1/validation.jsonl",
+          "sha256": "20a32d5f67a8ac6dd0743bb90445522fe28cd4099ed318e71a4f0e8e33fa0a94",
+          "source_split": "validation",
+          "records": 402,
+          "products": 134
+        },
+        "task_types": [
+          "title",
+          "selling_points",
+          "short_description"
+        ]
+      },
+      "model": {
+        "name": "Qwen/Qwen2.5-7B-Instruct",
+        "revision": "a09a35458c702b33eeacc393d103063234e8bc28",
+        "cache_dir": "../.model-cache/huggingface/hub",
+        "offline": true,
+        "load_in_4bit": true,
+        "quant_type": "nf4",
+        "double_quant": true,
+        "compute_dtype": "bfloat16",
+        "tokenizer_config_sha256": "5b5d4f65d0acd3b2d56a35b56d374a36cbc1c8fa5cf3b3febbbfabf22f359583",
+        "model_config_sha256": "7463bb0ea78315365e6c6b74de4e73bbcc8359dfb0c5a737584e077d42c0b03c"
+      },
+      "lora": {
+        "task_type": "CAUSAL_LM",
+        "target_modules": [
+          "q_proj",
+          "v_proj"
+        ],
+        "r": 8,
+        "lora_alpha": 32,
+        "lora_dropout": 0.05,
+        "bias": "none",
+        "expected_trainable_parameters": 2523136
+      },
+      "engineering": {
+        "reference_smoke_config": "configs/lora_qlora_low_memory_smoke_v1.json",
+        "reference_smoke_config_sha256": "10d5782a280201923eed92d08243d359d99f5d41ce78ff1f3032f6b0653eb582",
+        "memory_module_sha256": "9b4d9a72248dca51ec825d18b05833af3a0f3f8f1bb7b3b8a3a3c4767323f848",
+        "frozen_embedding_head_dtype": "bfloat16",
+        "norm_and_trainable_lora_dtype": "float32",
+        "autocast_dtype": "bfloat16",
+        "initialization": "cpu_stage_large_frozen_layers_during_peft_preparation",
+        "loss": "native_shape_bf16_logits_assistant_only_chunked_fp32_mean_causal_cross_entropy",
+        "loss_chunk_tokens": 16,
+        "micro_batch_size": 1,
+        "gradient_accumulation_steps": 8,
+        "max_sequence_length": 320,
+        "truncation": false,
+        "fixed_length_padding": false,
+        "gradient_checkpointing": true,
+        "gradient_checkpointing_use_reentrant": false,
+        "use_cache": false
+      },
+      "training": {
+        "seed": 42,
+        "epochs": 3,
+        "shuffle": "python_random_local_seed_plus_epoch",
+        "optimizer": "torch.optim.AdamW",
+        "learning_rate": 0.0002,
+        "betas": [
+          0.9,
+          0.999
+        ],
+        "eps": 1e-08,
+        "weight_decay": 0.01,
+        "max_grad_norm": null,
+        "scheduler": "constant_lambda_1",
+        "warmup_steps": 0,
+        "partial_accumulation": "normalize_by_actual_records_in_group",
+        "early_stopping": false
+      },
+      "evaluation": {
+        "dataset": "lora_train_dev",
+        "frequency": "each_epoch_end",
+        "metric": "mean_per_record_assistant_token_causal_cross_entropy",
+        "model_selection": "lowest_dev_loss",
+        "task_type_breakdown": true,
+        "batch_size": 1,
+        "no_grad": true
+      },
+      "checkpoint": {
+        "save_steps": 151,
+        "save_at_epoch_end": true,
+        "keep": "latest_and_best",
+        "acceptance_keep": "all_bounded_checkpoints",
+        "save_full_base": false,
+        "save_optimizer_scheduler_rng": true,
+        "resume_only_complete_latest_checkpoint": true
+      },
+      "output": {
+        "directory": "artifacts/lora/lora_v1",
+        "report_directory": "reports/generation/lora/lora_v1_training"
+      },
+      "guards": {
+        "project_validation_read": false,
+        "project_test_read": false,
+        "rag_holdout_read": false,
+        "p5_mutation": false,
+        "smoke_adapter_initialization": false
+      }
+    },
+    "config_sha256": "1afb8ed3ecca91aa3d8bdd55fb5e456dbb9a60deef8d52f4805c70cc24d7d1e0",
+    "base_snapshot": "E:\\Projects\\Baidu\\.model-cache\\huggingface\\hub\\models--Qwen--Qwen2.5-7B-Instruct\\snapshots\\a09a35458c702b33eeacc393d103063234e8bc28",
+    "chat_template_sha256": "2e2d2512cfe46af53dc1eed45368ecaab26ac4461c480e6b69fe571cf0ceaa75",
+    "environment": {
+      "python": "3.10.21 | packaged by Anaconda, Inc. | (main, Aug 27 2026, 14:35:39) [MSC v.1942 64 bit (AMD64)]",
+      "packages": {
+        "torch": "2.12.0+cu130",
+        "transformers": "5.16.1",
+        "peft": "0.21.1",
+        "bitsandbytes": "0.50.2",
+        "accelerate": "1.14.0",
+        "safetensors": "0.8.0"
+      },
+      "cuda": "13.0",
+      "gpu": "NVIDIA GeForce RTX 4070 Laptop GPU",
+      "deterministic_algorithms": false
+    },
+    "code_sha256": {
+      "scripts/train_lora.py": "669876c69ae689b9449aa4a68064f33f8681fdbf8ffe94ae5eda7cb53b07b019",
+      "src/generation/lora_training.py": "9ac9587e71b6f892bb3c429f7726ff17edddc354ee57372c22da48ccd22e107e",
+      "src/generation/qlora_memory.py": "9b4d9a72248dca51ec825d18b05833af3a0f3f8f1bb7b3b8a3a3c4767323f848"
+    }
+  },
+  "trainable_parameters": 2523136,
+  "model_signature": {
+    "trainable": {
+      "base_model.model.model.layers.0.self_attn.q_proj.lora_A.default.weight": "torch.float32",
+      "base_model.model.model.layers.0.self_attn.q_proj.lora_B.default.weight": "torch.float32",
+      "base_model.model.model.layers.0.self_attn.v_proj.lora_A.default.weight": "torch.float32",
+      "base_model.model.model.layers.0.self_attn.v_proj.lora_B.default.weight": "torch.float32",
+      "base_model.model.model.layers.1.self_attn.q_proj.lora_A.default.weight": "torch.float32",
+      "base_model.model.model.layers.1.self_attn.q_proj.lora_B.default.weight": "torch.float32",
+      "base_model.model.model.layers.1.self_attn.v_proj.lora_A.default.weight": "torch.float32",
+      "base_model.model.model.layers.1.self_attn.v_proj.lora_B.default.weight": "torch.float32",
+      "base_model.model.model.layers.2.self_attn.q_proj.lora_A.default.weight": "torch.float32",
+      "base_model.model.model.layers.2.self_attn.q_proj.lora_B.default.weight": "torch.float32",
+      "base_model.model.model.layers.2.self_attn.v_proj.lora_A.default.weight": "torch.float32",
+      "base_model.model.model.layers.2.self_attn.v_proj.lora_B.default.weight": "torch.float32",
+      "base_model.model.model.layers.3.self_attn.q_proj.lora_A.default.weight": "torch.float32",
+      "base_model.model.model.layers.3.self_attn.q_proj.lora_B.default.weight": "torch.float32",
+      "base_model.model.model.layers.3.self_attn.v_proj.lora_A.default.weight": "torch.float32",
+      "base_model.model.model.layers.3.self_attn.v_proj.lora_B.default.weight": "torch.float32",
+      "base_model.model.model.layers.4.self_attn.q_proj.lora_A.default.weight": "torch.float32",
+      "base_model.model.model.layers.4.self_attn.q_proj.lora_B.default.weight": "torch.float32",
+      "base_model.model.model.layers.4.self_attn.v_proj.lora_A.default.weight": "torch.float32",
+      "base_model.model.model.layers.4.self_attn.v_proj.lora_B.default.weight": "torch.float32",
+      "base_model.model.model.layers.5.self_attn.q_proj.lora_A.default.weight": "torch.float32",
+      "base_model.model.model.layers.5.self_attn.q_proj.lora_B.default.weight": "torch.float32",
+      "base_model.model.model.layers.5.self_attn.v_proj.lora_A.default.weight": "torch.float32",
+      "base_model.model.model.layers.5.self_attn.v_proj.lora_B.default.weight": "torch.float32",
+      "base_model.model.model.layers.6.self_attn.q_proj.lora_A.default.weight": "torch.float32",
+      "base_model.model.model.layers.6.self_attn.q_proj.lora_B.default.weight": "torch.float32",
+      "base_model.model.model.layers.6.self_attn.v_proj.lora_A.default.weight": "torch.float32",
+      "base_model.model.model.layers.6.self_attn.v_proj.lora_B.default.weight": "torch.float32",
+      "base_model.model.model.layers.7.self_attn.q_proj.lora_A.default.weight": "torch.float32",
+      "base_model.model.model.layers.7.self_attn.q_proj.lora_B.default.weight": "torch.float32",
+      "base_model.model.model.layers.7.self_attn.v_proj.lora_A.default.weight": "torch.float32",
+      "base_model.model.model.layers.7.self_attn.v_proj.lora_B.default.weight": "torch.float32",
+      "base_model.model.model.layers.8.self_attn.q_proj.lora_A.default.weight": "torch.float32",
+      "base_model.model.model.layers.8.self_attn.q_proj.lora_B.default.weight": "torch.float32",
+      "base_model.model.model.layers.8.self_attn.v_proj.lora_A.default.weight": "torch.float32",
+      "base_model.model.model.layers.8.self_attn.v_proj.lora_B.default.weight": "torch.float32",
+      "base_model.model.model.layers.9.self_attn.q_proj.lora_A.default.weight": "torch.float32",
+      "base_model.model.model.layers.9.self_attn.q_proj.lora_B.default.weight": "torch.float32",
+      "base_model.model.model.layers.9.self_attn.v_proj.lora_A.default.weight": "torch.float32",
+      "base_model.model.model.layers.9.self_attn.v_proj.lora_B.default.weight": "torch.float32",
+      "base_model.model.model.layers.10.self_attn.q_proj.lora_A.default.weight": "torch.float32",
+      "base_model.model.model.layers.10.self_attn.q_proj.lora_B.default.weight": "torch.float32",
+      "base_model.model.model.layers.10.self_attn.v_proj.lora_A.default.weight": "torch.float32",
+      "base_model.model.model.layers.10.self_attn.v_proj.lora_B.default.weight": "torch.float32",
+      "base_model.model.model.layers.11.self_attn.q_proj.lora_A.default.weight": "torch.float32",
+      "base_model.model.model.layers.11.self_attn.q_proj.lora_B.default.weight": "torch.float32",
+      "base_model.model.model.layers.11.self_attn.v_proj.lora_A.default.weight": "torch.float32",
+      "base_model.model.model.layers.11.self_attn.v_proj.lora_B.default.weight": "torch.float32",
+      "base_model.model.model.layers.12.self_attn.q_proj.lora_A.default.weight": "torch.float32",
+      "base_model.model.model.layers.12.self_attn.q_proj.lora_B.default.weight": "torch.float32",
+      "base_model.model.model.layers.12.self_attn.v_proj.lora_A.default.weight": "torch.float32",
+      "base_model.model.model.layers.12.self_attn.v_proj.lora_B.default.weight": "torch.float32",
+      "base_model.model.model.layers.13.self_attn.q_proj.lora_A.default.weight": "torch.float32",
+      "base_model.model.model.layers.13.self_attn.q_proj.lora_B.default.weight": "torch.float32",
+      "base_model.model.model.layers.13.self_attn.v_proj.lora_A.default.weight": "torch.float32",
+      "base_model.model.model.layers.13.self_attn.v_proj.lora_B.default.weight": "torch.float32",
+      "base_model.model.model.layers.14.self_attn.q_proj.lora_A.default.weight": "torch.float32",
+      "base_model.model.model.layers.14.self_attn.q_proj.lora_B.default.weight": "torch.float32",
+      "base_model.model.model.layers.14.self_attn.v_proj.lora_A.default.weight": "torch.float32",
+      "base_model.model.model.layers.14.self_attn.v_proj.lora_B.default.weight": "torch.float32",
+      "base_model.model.model.layers.15.self_attn.q_proj.lora_A.default.weight": "torch.float32",
+      "base_model.model.model.layers.15.self_attn.q_proj.lora_B.default.weight": "torch.float32",
+      "base_model.model.model.layers.15.self_attn.v_proj.lora_A.default.weight": "torch.float32",
+      "base_model.model.model.layers.15.self_attn.v_proj.lora_B.default.weight": "torch.float32",
+      "base_model.model.model.layers.16.self_attn.q_proj.lora_A.default.weight": "torch.float32",
+      "base_model.model.model.layers.16.self_attn.q_proj.lora_B.default.weight": "torch.float32",
+      "base_model.model.model.layers.16.self_attn.v_proj.lora_A.default.weight": "torch.float32",
+      "base_model.model.model.layers.16.self_attn.v_proj.lora_B.default.weight": "torch.float32",
+      "base_model.model.model.layers.17.self_attn.q_proj.lora_A.default.weight": "torch.float32",
+      "base_model.model.model.layers.17.self_attn.q_proj.lora_B.default.weight": "torch.float32",
+      "base_model.model.model.layers.17.self_attn.v_proj.lora_A.default.weight": "torch.float32",
+      "base_model.model.model.layers.17.self_attn.v_proj.lora_B.default.weight": "torch.float32",
+      "base_model.model.model.layers.18.self_attn.q_proj.lora_A.default.weight": "torch.float32",
+      "base_model.model.model.layers.18.self_attn.q_proj.lora_B.default.weight": "torch.float32",
+      "base_model.model.model.layers.18.self_attn.v_proj.lora_A.default.weight": "torch.float32",
+      "base_model.model.model.layers.18.self_attn.v_proj.lora_B.default.weight": "torch.float32",
+      "base_model.model.model.layers.19.self_attn.q_proj.lora_A.default.weight": "torch.float32",
+      "base_model.model.model.layers.19.self_attn.q_proj.lora_B.default.weight": "torch.float32",
+      "base_model.model.model.layers.19.self_attn.v_proj.lora_A.default.weight": "torch.float32",
+      "base_model.model.model.layers.19.self_attn.v_proj.lora_B.default.weight": "torch.float32",
+      "base_model.model.model.layers.20.self_attn.q_proj.lora_A.default.weight": "torch.float32",
+      "base_model.model.model.layers.20.self_attn.q_proj.lora_B.default.weight": "torch.float32",
+      "base_model.model.model.layers.20.self_attn.v_proj.lora_A.default.weight": "torch.float32",
+      "base_model.model.model.layers.20.self_attn.v_proj.lora_B.default.weight": "torch.float32",
+      "base_model.model.model.layers.21.self_attn.q_proj.lora_A.default.weight": "torch.float32",
+      "base_model.model.model.layers.21.self_attn.q_proj.lora_B.default.weight": "torch.float32",
+      "base_model.model.model.layers.21.self_attn.v_proj.lora_A.default.weight": "torch.float32",
+      "base_model.model.model.layers.21.self_attn.v_proj.lora_B.default.weight": "torch.float32",
+      "base_model.model.model.layers.22.self_attn.q_proj.lora_A.default.weight": "torch.float32",
+      "base_model.model.model.layers.22.self_attn.q_proj.lora_B.default.weight": "torch.float32",
+      "base_model.model.model.layers.22.self_attn.v_proj.lora_A.default.weight": "torch.float32",
+      "base_model.model.model.layers.22.self_attn.v_proj.lora_B.default.weight": "torch.float32",
+      "base_model.model.model.layers.23.self_attn.q_proj.lora_A.default.weight": "torch.float32",
+      "base_model.model.model.layers.23.self_attn.q_proj.lora_B.default.weight": "torch.float32",
+      "base_model.model.model.layers.23.self_attn.v_proj.lora_A.default.weight": "torch.float32",
+      "base_model.model.model.layers.23.self_attn.v_proj.lora_B.default.weight": "torch.float32",
+      "base_model.model.model.layers.24.self_attn.q_proj.lora_A.default.weight": "torch.float32",
+      "base_model.model.model.layers.24.self_attn.q_proj.lora_B.default.weight": "torch.float32",
+      "base_model.model.model.layers.24.self_attn.v_proj.lora_A.default.weight": "torch.float32",
+      "base_model.model.model.layers.24.self_attn.v_proj.lora_B.default.weight": "torch.float32",
+      "base_model.model.model.layers.25.self_attn.q_proj.lora_A.default.weight": "torch.float32",
+      "base_model.model.model.layers.25.self_attn.q_proj.lora_B.default.weight": "torch.float32",
+      "base_model.model.model.layers.25.self_attn.v_proj.lora_A.default.weight": "torch.float32",
+      "base_model.model.model.layers.25.self_attn.v_proj.lora_B.default.weight": "torch.float32",
+      "base_model.model.model.layers.26.self_attn.q_proj.lora_A.default.weight": "torch.float32",
+      "base_model.model.model.layers.26.self_attn.q_proj.lora_B.default.weight": "torch.float32",
+      "base_model.model.model.layers.26.self_attn.v_proj.lora_A.default.weight": "torch.float32",
+      "base_model.model.model.layers.26.self_attn.v_proj.lora_B.default.weight": "torch.float32",
+      "base_model.model.model.layers.27.self_attn.q_proj.lora_A.default.weight": "torch.float32",
+      "base_model.model.model.layers.27.self_attn.q_proj.lora_B.default.weight": "torch.float32",
+      "base_model.model.model.layers.27.self_attn.v_proj.lora_A.default.weight": "torch.float32",
+      "base_model.model.model.layers.27.self_attn.v_proj.lora_B.default.weight": "torch.float32"
+    },
+    "embedding": "torch.bfloat16",
+    "head": "torch.bfloat16",
+    "norm_dtypes": [
+      "torch.float32"
+    ],
+    "use_cache": false,
+    "quantization": {
+      "quant_method": "bitsandbytes",
+      "_load_in_8bit": false,
+      "_load_in_4bit": true,
+      "llm_int8_threshold": 6.0,
+      "llm_int8_skip_modules": null,
+      "llm_int8_enable_fp32_cpu_offload": false,
+      "llm_int8_has_fp16_weight": false,
+      "bnb_4bit_quant_type": "nf4",
+      "bnb_4bit_use_double_quant": true,
+      "bnb_4bit_compute_dtype": "bfloat16",
+      "bnb_4bit_quant_storage": "uint8",
+      "load_in_4bit": true,
+      "load_in_8bit": false
+    }
+  },
+  "initialization_memory": {
+    "allocated_mib": 5312.7,
+    "reserved_mib": 5472.0,
+    "peak_allocated_mib": 5425.5,
+    "peak_reserved_mib": 5472.0
+  },
+  "precision_storage_changes": [
+    {
+      "layer": "input_embedding",
+      "before_dtype": "torch.float32",
+      "after_dtype": "torch.bfloat16",
+      "parameters": 544997376,
+      "saved_bytes": 1089994752,
+      "requires_grad": false
+    },
+    {
+      "layer": "output_head",
+      "before_dtype": "torch.float32",
+      "after_dtype": "torch.bfloat16",
+      "parameters": 544997376,
+      "saved_bytes": 1089994752,
+      "requires_grad": false
+    }
+  ],
+  "start_state": {
+    "epoch": 0,
+    "cursor": 0,
+    "global_step": 0,
+    "global_micro_step": 0,
+    "train_seconds": 0.0,
+    "epoch_train_loss_sum": 0.0,
+    "epoch_train_records": 0,
+    "train_peak_allocated_mib": 0.0,
+    "best": null,
+    "completed_epochs": 0
+  },
+  "completed_at_utc": "2026-10-04T06:11:58.680831+00:00",
+  "wall_seconds": 33.8592548000006,
+  "final_state": {
+    "epoch": 0,
+    "cursor": 32,
+    "global_step": 4,
+    "global_micro_step": 32,
+    "train_seconds": 17.08494239999891,
+    "epoch_train_loss_sum": 42.773590207099915,
+    "epoch_train_records": 32,
+    "train_peak_allocated_mib": 5647.7,
+    "best": null,
+    "completed_epochs": 0
+  },
+  "optimizer_steps": [
+    {
+      "global_step": 1,
+      "epoch": 0.002211166390270868,
+      "cursor": 8,
+      "epoch_order_sha256": "735d304fae2b93a017a7b37540289e7783aa481b938c8ecd8fffaa9da903ff14",
+      "train_loss": 1.3892979174852371,
+      "micro_losses": [
+        1.6963040828704834,
+        0.5397971272468567,
+        1.9527511596679688,
+        0.9521137475967407,
+        2.159349203109741,
+        1.41560697555542,
+        1.7354519367218018,
+        0.6630091071128845
+      ],
+      "records": [
+        {
+          "product_id": "603562625463",
+          "task_type": "selling_points"
+        },
+        {
+          "product_id": "611796785168",
+          "task_type": "title"
+        },
+        {
+          "product_id": "584805962682",
+          "task_type": "selling_points"
+        },
+        {
+          "product_id": "614328395908",
+          "task_type": "short_description"
+        },
+        {
+          "product_id": "600604632480",
+          "task_type": "selling_points"
+        },
+        {
+          "product_id": "610984315602",
+          "task_type": "short_description"
+        },
+        {
+          "product_id": "613596234128",
+          "task_type": "short_description"
+        },
+        {
+          "product_id": "575117674099",
+          "task_type": "title"
+        }
+      ],
+      "actual_accumulation_records": 8,
+      "learning_rate": 0.0002,
+      "scheduler_last_epoch": 1,
+      "seconds": 4.584166799999366,
+      "memory": {
+        "allocated_mib": 5347.9,
+        "reserved_mib": 5770.0,
+        "peak_allocated_mib": 5597.7,
+        "peak_reserved_mib": 5770.0
+      }
+    },
+    {
+      "global_step": 2,
+      "epoch": 0.004422332780541736,
+      "cursor": 16,
+      "epoch_order_sha256": "735d304fae2b93a017a7b37540289e7783aa481b938c8ecd8fffaa9da903ff14",
+      "train_loss": 1.6233580484986305,
+      "micro_losses": [
+        1.7647451162338257,
+        0.7893825769424438,
+        1.0444175004959106,
+        3.876568078994751,
+        1.0080500841140747,
+        2.0777664184570312,
+        0.5622947812080383,
+        1.8636398315429688
+      ],
+      "records": [
+        {
+          "product_id": "614459989285",
+          "task_type": "short_description"
+        },
+        {
+          "product_id": "602016959381",
+          "task_type": "title"
+        },
+        {
+          "product_id": "613024818109",
+          "task_type": "title"
+        },
+        {
+          "product_id": "565053063618",
+          "task_type": "title"
+        },
+        {
+          "product_id": "607813114155",
+          "task_type": "short_description"
+        },
+        {
+          "product_id": "540534317208",
+          "task_type": "title"
+        },
+        {
+          "product_id": "616572801651",
+          "task_type": "title"
+        },
+        {
+          "product_id": "616491355911",
+          "task_type": "title"
+        }
+      ],
+      "actual_accumulation_records": 8,
+      "learning_rate": 0.0002,
+      "scheduler_last_epoch": 2,
+      "seconds": 4.0647400999996535,
+      "memory": {
+        "allocated_mib": 5347.9,
+        "reserved_mib": 5772.0,
+        "peak_allocated_mib": 5647.7,
+        "peak_reserved_mib": 5772.0
+      }
+    },
+    {
+      "global_step": 3,
+      "epoch": 0.006633499170812604,
+      "cursor": 24,
+      "epoch_order_sha256": "735d304fae2b93a017a7b37540289e7783aa481b938c8ecd8fffaa9da903ff14",
+      "train_loss": 1.3050032630562782,
+      "micro_losses": [
+        2.1186814308166504,
+        0.7452959418296814,
+        1.100075602531433,
+        0.3581838011741638,
+        1.1002647876739502,
+        0.805785596370697,
+        1.899408221244812,
+        2.312330722808838
+      ],
+      "records": [
+        {
+          "product_id": "603298966476",
+          "task_type": "selling_points"
+        },
+        {
+          "product_id": "603075077592",
+          "task_type": "short_description"
+        },
+        {
+          "product_id": "610601747118",
+          "task_type": "short_description"
+        },
+        {
+          "product_id": "599924687609",
+          "task_type": "title"
+        },
+        {
+          "product_id": "623752954950",
+          "task_type": "selling_points"
+        },
+        {
+          "product_id": "610392298842",
+          "task_type": "title"
+        },
+        {
+          "product_id": "621593611171",
+          "task_type": "selling_points"
+        },
+        {
+          "product_id": "622308119511",
+          "task_type": "title"
+        }
+      ],
+      "actual_accumulation_records": 8,
+      "learning_rate": 0.0002,
+      "scheduler_last_epoch": 3,
+      "seconds": 4.33058230000006,
+      "memory": {
+        "allocated_mib": 5347.9,
+        "reserved_mib": 5772.0,
+        "peak_allocated_mib": 5638.9,
+        "peak_reserved_mib": 5772.0
+      }
+    },
+    {
+      "global_step": 4,
+      "epoch": 0.008844665561083471,
+      "cursor": 32,
+      "epoch_order_sha256": "735d304fae2b93a017a7b37540289e7783aa481b938c8ecd8fffaa9da903ff14",
+      "train_loss": 1.0290395468473434,
+      "micro_losses": [
+        0.8516553640365601,
+        1.3594738245010376,
+        0.947659969329834,
+        1.2944532632827759,
+        1.1164110898971558,
+        0.8104002475738525,
+        1.5598409175872803,
+        0.29242169857025146
+      ],
+      "records": [
+        {
+          "product_id": "577439914242",
+          "task_type": "short_description"
+        },
+        {
+          "product_id": "611011870033",
+          "task_type": "selling_points"
+        },
+        {
+          "product_id": "618151673608",
+          "task_type": "title"
+        },
+        {
+          "product_id": "593536241796",
+          "task_type": "selling_points"
+        },
+        {
+          "product_id": "609101917683",
+          "task_type": "selling_points"
+        },
+        {
+          "product_id": "589117014444",
+          "task_type": "title"
+        },
+        {
+          "product_id": "609607473295",
+          "task_type": "selling_points"
+        },
+        {
+          "product_id": "561864046537",
+          "task_type": "short_description"
+        }
+      ],
+      "actual_accumulation_records": 8,
+      "learning_rate": 0.0002,
+      "scheduler_last_epoch": 4,
+      "seconds": 4.105453199999829,
+      "memory": {
+        "allocated_mib": 5347.9,
+        "reserved_mib": 5772.0,
+        "peak_allocated_mib": 5605.2,
+        "peak_reserved_mib": 5772.0
+      }
+    }
+  ],
+  "evaluations": [],
+  "final_optimizer_digest": "e6bd3cba8ae9f69b167a6ae01f05f1f2ebe7a193882962f666b55a833210a92c",
+  "final_scheduler_digest": "c459f2cbc6d33416a0c1c3871975dca0b4594343a503a71b1c72c3d81143b128",
+  "final_rng_digest": "13533352bf6a161eb6806fee9ee2a15dd1c6e983f05233ce983bf1e3547138d0",
+  "latest_checkpoint": "artifacts/lora/p6_2_acceptance_v1/uninterrupted/checkpoints/checkpoint-step-000004",
+  "best_checkpoint": null
+}

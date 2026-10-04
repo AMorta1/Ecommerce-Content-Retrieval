@@ -1,0 +1,605 @@
+{
+  "status": "sealed_until_complete_review",
+  "pairs": [
+    {
+      "pair_id": "CT001",
+      "product_id": "589051188248",
+      "A": "LoRA_RAG",
+      "B": "LoRA_control"
+    },
+    {
+      "pair_id": "CT002",
+      "product_id": "540395966499",
+      "A": "LoRA_control",
+      "B": "LoRA_RAG"
+    },
+    {
+      "pair_id": "CT003",
+      "product_id": "624110108481",
+      "A": "LoRA_RAG",
+      "B": "LoRA_control"
+    },
+    {
+      "pair_id": "CT004",
+      "product_id": "596152984459",
+      "A": "LoRA_control",
+      "B": "LoRA_RAG"
+    },
+    {
+      "pair_id": "CT005",
+      "product_id": "583797205123",
+      "A": "LoRA_RAG",
+      "B": "LoRA_control"
+    },
+    {
+      "pair_id": "CT006",
+      "product_id": "623126145078",
+      "A": "LoRA_control",
+      "B": "LoRA_RAG"
+    },
+    {
+      "pair_id": "CT007",
+      "product_id": "598781167153",
+      "A": "LoRA_RAG",
+      "B": "LoRA_control"
+    },
+    {
+      "pair_id": "CT008",
+      "product_id": "8443620439",
+      "A": "LoRA_RAG",
+      "B": "LoRA_control"
+    },
+    {
+      "pair_id": "CT009",
+      "product_id": "543556617866",
+      "A": "LoRA_control",
+      "B": "LoRA_RAG"
+    },
+    {
+      "pair_id": "CT010",
+      "product_id": "609861568866",
+      "A": "LoRA_RAG",
+      "B": "LoRA_control"
+    },
+    {
+      "pair_id": "CT011",
+      "product_id": "589508217209",
+      "A": "LoRA_control",
+      "B": "LoRA_RAG"
+    },
+    {
+      "pair_id": "CT012",
+      "product_id": "624392441174",
+      "A": "LoRA_control",
+      "B": "LoRA_RAG"
+    },
+    {
+      "pair_id": "CT013",
+      "product_id": "576463385175",
+      "A": "LoRA_control",
+      "B": "LoRA_RAG"
+    },
+    {
+      "pair_id": "CT014",
+      "product_id": "583601853144",
+      "A": "LoRA_control",
+      "B": "LoRA_RAG"
+    },
+    {
+      "pair_id": "CT015",
+      "product_id": "614194957336",
+      "A": "LoRA_RAG",
+      "B": "LoRA_control"
+    },
+    {
+      "pair_id": "CT016",
+      "product_id": "599485472276",
+      "A": "LoRA_control",
+      "B": "LoRA_RAG"
+    },
+    {
+      "pair_id": "CT017",
+      "product_id": "620625786758",
+      "A": "LoRA_RAG",
+      "B": "LoRA_control"
+    },
+    {
+      "pair_id": "CT018",
+      "product_id": "565468950564",
+      "A": "LoRA_RAG",
+      "B": "LoRA_control"
+    },
+    {
+      "pair_id": "CT019",
+      "product_id": "618820646060",
+      "A": "LoRA_RAG",
+      "B": "LoRA_control"
+    },
+    {
+      "pair_id": "CT020",
+      "product_id": "562660919726",
+      "A": "LoRA_control",
+      "B": "LoRA_RAG"
+    },
+    {
+      "pair_id": "CT021",
+      "product_id": "530504970904",
+      "A": "LoRA_control",
+      "B": "LoRA_RAG"
+    },
+    {
+      "pair_id": "CT022",
+      "product_id": "559685535453",
+      "A": "LoRA_control",
+      "B": "LoRA_RAG"
+    },
+    {
+      "pair_id": "CT023",
+      "product_id": "545593037598",
+      "A": "LoRA_control",
+      "B": "LoRA_RAG"
+    },
+    {
+      "pair_id": "CT024",
+      "product_id": "616205758872",
+      "A": "LoRA_RAG",
+      "B": "LoRA_control"
+    },
+    {
+      "pair_id": "CT025",
+      "product_id": "556245210015",
+      "A": "LoRA_RAG",
+      "B": "LoRA_control"
+    },
+    {
+      "pair_id": "CT026",
+      "product_id": "602079265226",
+      "A": "LoRA_RAG",
+      "B": "LoRA_control"
+    },
+    {
+      "pair_id": "CT027",
+      "product_id": "547702894728",
+      "A": "LoRA_control",
+      "B": "LoRA_RAG"
+    },
+    {
+      "pair_id": "CT028",
+      "product_id": "599620329880",
+      "A": "LoRA_control",
+      "B": "LoRA_RAG"
+    },
+    {
+      "pair_id": "CT029",
+      "product_id": "619501332263",
+      "A": "LoRA_RAG",
+      "B": "LoRA_control"
+    },
+    {
+      "pair_id": "CT030",
+      "product_id": "600538024615",
+      "A": "LoRA_RAG",
+      "B": "LoRA_control"
+    },
+    {
+      "pair_id": "CT031",
+      "product_id": "562615192976",
+      "A": "LoRA_control",
+      "B": "LoRA_RAG"
+    },
+    {
+      "pair_id": "CT032",
+      "product_id": "614533597181",
+      "A": "LoRA_control",
+      "B": "LoRA_RAG"
+    },
+    {
+      "pair_id": "CT033",
+      "product_id": "581329948812",
+      "A": "LoRA_control",
+      "B": "LoRA_RAG"
+    },
+    {
+      "pair_id": "CT034",
+      "product_id": "567398743698",
+      "A": "LoRA_control",
+      "B": "LoRA_RAG"
+    },
+    {
+      "pair_id": "CT035",
+      "product_id": "624112334484",
+      "A": "LoRA_control",
+      "B": "LoRA_RAG"
+    },
+    {
+      "pair_id": "CT036",
+      "product_id": "624105227976",
+      "A": "LoRA_RAG",
+      "B": "LoRA_control"
+    },
+    {
+      "pair_id": "CT037",
+      "product_id": "610605050479",
+      "A": "LoRA_RAG",
+      "B": "LoRA_control"
+    },
+    {
+      "pair_id": "CT038",
+      "product_id": "581689863460",
+      "A": "LoRA_RAG",
+      "B": "LoRA_control"
+    },
+    {
+      "pair_id": "CT039",
+      "product_id": "621593735132",
+      "A": "LoRA_control",
+      "B": "LoRA_RAG"
+    },
+    {
+      "pair_id": "CT040",
+      "product_id": "616413073658",
+      "A": "LoRA_control",
+      "B": "LoRA_RAG"
+    },
+    {
+      "pair_id": "CT041",
+      "product_id": "609039324433",
+      "A": "LoRA_control",
+      "B": "LoRA_RAG"
+    },
+    {
+      "pair_id": "CT042",
+      "product_id": "621360527079",
+      "A": "LoRA_control",
+      "B": "LoRA_RAG"
+    },
+    {
+      "pair_id": "CT043",
+      "product_id": "591309078741",
+      "A": "LoRA_control",
+      "B": "LoRA_RAG"
+    },
+    {
+      "pair_id": "CT044",
+      "product_id": "604829061336",
+      "A": "LoRA_RAG",
+      "B": "LoRA_control"
+    },
+    {
+      "pair_id": "CT045",
+      "product_id": "609629279071",
+      "A": "LoRA_RAG",
+      "B": "LoRA_control"
+    },
+    {
+      "pair_id": "CT046",
+      "product_id": "603102363927",
+      "A": "LoRA_RAG",
+      "B": "LoRA_control"
+    },
+    {
+      "pair_id": "CT047",
+      "product_id": "585366825079",
+      "A": "LoRA_RAG",
+      "B": "LoRA_control"
+    },
+    {
+      "pair_id": "CT048",
+      "product_id": "578515650928",
+      "A": "LoRA_control",
+      "B": "LoRA_RAG"
+    },
+    {
+      "pair_id": "CT049",
+      "product_id": "618733106466",
+      "A": "LoRA_RAG",
+      "B": "LoRA_control"
+    },
+    {
+      "pair_id": "CT050",
+      "product_id": "609923870759",
+      "A": "LoRA_control",
+      "B": "LoRA_RAG"
+    },
+    {
+      "pair_id": "CT051",
+      "product_id": "15246761632",
+      "A": "LoRA_control",
+      "B": "LoRA_RAG"
+    },
+    {
+      "pair_id": "CT052",
+      "product_id": "623882882335",
+      "A": "LoRA_RAG",
+      "B": "LoRA_control"
+    },
+    {
+      "pair_id": "CT053",
+      "product_id": "621173570641",
+      "A": "LoRA_RAG",
+      "B": "LoRA_control"
+    },
+    {
+      "pair_id": "CT054",
+      "product_id": "590175217614",
+      "A": "LoRA_RAG",
+      "B": "LoRA_control"
+    },
+    {
+      "pair_id": "CT055",
+      "product_id": "43297860634",
+      "A": "LoRA_control",
+      "B": "LoRA_RAG"
+    },
+    {
+      "pair_id": "CT056",
+      "product_id": "583457250405",
+      "A": "LoRA_control",
+      "B": "LoRA_RAG"
+    },
+    {
+      "pair_id": "CT057",
+      "product_id": "601009119510",
+      "A": "LoRA_control",
+      "B": "LoRA_RAG"
+    },
+    {
+      "pair_id": "CT058",
+      "product_id": "610445355179",
+      "A": "LoRA_RAG",
+      "B": "LoRA_control"
+    },
+    {
+      "pair_id": "CT059",
+      "product_id": "607358884242",
+      "A": "LoRA_control",
+      "B": "LoRA_RAG"
+    },
+    {
+      "pair_id": "CT060",
+      "product_id": "588442419126",
+      "A": "LoRA_RAG",
+      "B": "LoRA_control"
+    },
+    {
+      "pair_id": "CT061",
+      "product_id": "608335015563",
+      "A": "LoRA_RAG",
+      "B": "LoRA_control"
+    },
+    {
+      "pair_id": "CT062",
+      "product_id": "625037263815",
+      "A": "LoRA_RAG",
+      "B": "LoRA_control"
+    },
+    {
+      "pair_id": "CT063",
+      "product_id": "617920658390",
+      "A": "LoRA_control",
+      "B": "LoRA_RAG"
+    },
+    {
+      "pair_id": "CT064",
+      "product_id": "565706870969",
+      "A": "LoRA_RAG",
+      "B": "LoRA_control"
+    },
+    {
+      "pair_id": "CT065",
+      "product_id": "587907612086",
+      "A": "LoRA_RAG",
+      "B": "LoRA_control"
+    },
+    {
+      "pair_id": "CT066",
+      "product_id": "606991731175",
+      "A": "LoRA_control",
+      "B": "LoRA_RAG"
+    },
+    {
+      "pair_id": "CT067",
+      "product_id": "2859211238",
+      "A": "LoRA_control",
+      "B": "LoRA_RAG"
+    },
+    {
+      "pair_id": "CT068",
+      "product_id": "615882518927",
+      "A": "LoRA_RAG",
+      "B": "LoRA_control"
+    },
+    {
+      "pair_id": "CT069",
+      "product_id": "594880547645",
+      "A": "LoRA_RAG",
+      "B": "LoRA_control"
+    },
+    {
+      "pair_id": "CT070",
+      "product_id": "613735876059",
+      "A": "LoRA_RAG",
+      "B": "LoRA_control"
+    },
+    {
+      "pair_id": "CT071",
+      "product_id": "572739978355",
+      "A": "LoRA_control",
+      "B": "LoRA_RAG"
+    },
+    {
+      "pair_id": "CT072",
+      "product_id": "522783084872",
+      "A": "LoRA_control",
+      "B": "LoRA_RAG"
+    },
+    {
+      "pair_id": "CT073",
+      "product_id": "610255708567",
+      "A": "LoRA_RAG",
+      "B": "LoRA_control"
+    },
+    {
+      "pair_id": "CT074",
+      "product_id": "620165221976",
+      "A": "LoRA_control",
+      "B": "LoRA_RAG"
+    },
+    {
+      "pair_id": "CT075",
+      "product_id": "614181544723",
+      "A": "LoRA_RAG",
+      "B": "LoRA_control"
+    },
+    {
+      "pair_id": "CT076",
+      "product_id": "587244433192",
+      "A": "LoRA_control",
+      "B": "LoRA_RAG"
+    },
+    {
+      "pair_id": "CT077",
+      "product_id": "618416951039",
+      "A": "LoRA_control",
+      "B": "LoRA_RAG"
+    },
+    {
+      "pair_id": "CT078",
+      "product_id": "602684369098",
+      "A": "LoRA_control",
+      "B": "LoRA_RAG"
+    },
+    {
+      "pair_id": "CT079",
+      "product_id": "600661711292",
+      "A": "LoRA_control",
+      "B": "LoRA_RAG"
+    },
+    {
+      "pair_id": "CT080",
+      "product_id": "577426751464",
+      "A": "LoRA_RAG",
+      "B": "LoRA_control"
+    },
+    {
+      "pair_id": "CT081",
+      "product_id": "576150055638",
+      "A": "LoRA_control",
+      "B": "LoRA_RAG"
+    },
+    {
+      "pair_id": "CT082",
+      "product_id": "547995479552",
+      "A": "LoRA_RAG",
+      "B": "LoRA_control"
+    },
+    {
+      "pair_id": "CT083",
+      "product_id": "615386178525",
+      "A": "LoRA_control",
+      "B": "LoRA_RAG"
+    },
+    {
+      "pair_id": "CT084",
+      "product_id": "590008960085",
+      "A": "LoRA_RAG",
+      "B": "LoRA_control"
+    },
+    {
+      "pair_id": "CT085",
+      "product_id": "595487807549",
+      "A": "LoRA_RAG",
+      "B": "LoRA_control"
+    },
+    {
+      "pair_id": "CT086",
+      "product_id": "42149170939",
+      "A": "LoRA_control",
+      "B": "LoRA_RAG"
+    },
+    {
+      "pair_id": "CT087",
+      "product_id": "559887711431",
+      "A": "LoRA_RAG",
+      "B": "LoRA_control"
+    },
+    {
+      "pair_id": "CT088",
+      "product_id": "562289059045",
+      "A": "LoRA_control",
+      "B": "LoRA_RAG"
+    },
+    {
+      "pair_id": "CT089",
+      "product_id": "608516760684",
+      "A": "LoRA_control",
+      "B": "LoRA_RAG"
+    },
+    {
+      "pair_id": "CT090",
+      "product_id": "621846828786",
+      "A": "LoRA_RAG",
+      "B": "LoRA_control"
+    },
+    {
+      "pair_id": "CT091",
+      "product_id": "609762128375",
+      "A": "LoRA_RAG",
+      "B": "LoRA_control"
+    },
+    {
+      "pair_id": "CT092",
+      "product_id": "544826941132",
+      "A": "LoRA_RAG",
+      "B": "LoRA_control"
+    },
+    {
+      "pair_id": "CT093",
+      "product_id": "618263479034",
+      "A": "LoRA_control",
+      "B": "LoRA_RAG"
+    },
+    {
+      "pair_id": "CT094",
+      "product_id": "583014299804",
+      "A": "LoRA_RAG",
+      "B": "LoRA_control"
+    },
+    {
+      "pair_id": "CT095",
+      "product_id": "566531828259",
+      "A": "LoRA_control",
+      "B": "LoRA_RAG"
+    },
+    {
+      "pair_id": "CT096",
+      "product_id": "24497168737",
+      "A": "LoRA_RAG",
+      "B": "LoRA_control"
+    },
+    {
+      "pair_id": "CT097",
+      "product_id": "582839837483",
+      "A": "LoRA_RAG",
+      "B": "LoRA_control"
+    },
+    {
+      "pair_id": "CT098",
+      "product_id": "620004973618",
+      "A": "LoRA_RAG",
+      "B": "LoRA_control"
+    },
+    {
+      "pair_id": "CT099",
+      "product_id": "607256389125",
+      "A": "LoRA_RAG",
+      "B": "LoRA_control"
+    },
+    {
+      "pair_id": "CT100",
+      "product_id": "587556959797",
+      "A": "LoRA_control",
+      "B": "LoRA_RAG"
+    }
+  ]
+}

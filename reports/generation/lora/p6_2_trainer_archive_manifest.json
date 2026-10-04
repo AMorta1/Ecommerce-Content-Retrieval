@@ -1,0 +1,458 @@
+{
+  "version": "p6_2_trainer_archive_v1",
+  "status": "p6_2_passed_await_final_training_authorization",
+  "created_at_utc": "2026-10-04T06:25:58.871Z",
+  "authoritative_summary": "reports/generation/lora/p6_2_acceptance_v1/acceptance_summary.json",
+  "complete_candidate_config": "configs/lora_qlora_train_v1.json",
+  "base_revision": "a09a35458c702b33eeacc393d103063234e8bc28",
+  "formal_training_started": false,
+  "model_generation_performed": false,
+  "project_validation_read": false,
+  "project_test_read": false,
+  "rag_holdout_read": false,
+  "strict_holdout_note": "No test/holdout contents or their manifest/checksum files opened by this phase",
+  "checkpoint_policy": "formal:latest_and_best;acceptance:all_bounded_checkpoints;do_not_use_acceptance_adapter_for_formal_training",
+  "dependency_changes": false,
+  "git_commit_push": false,
+  "acceptance_summary": {
+    "version": "p6_2_trainer_acceptance_v1",
+    "status": "passed_no_full_training",
+    "scope": "independent_trainer_preparation_and_bounded_engineering_acceptance",
+    "formal_config": "configs/lora_qlora_train_v1.json",
+    "formal_config_sha256": "1afb8ed3ecca91aa3d8bdd55fb5e456dbb9a60deef8d52f4805c70cc24d7d1e0",
+    "step_counts": {
+      "micro_steps_per_epoch": 3618,
+      "optimizer_steps_per_epoch": 453,
+      "total_micro_steps_3_epochs": 10854,
+      "total_optimizer_steps_3_epochs": 1359,
+      "last_accumulation_group": 2
+    },
+    "checkpoint_interval": 151,
+    "checkpoint_saves_per_epoch": 3,
+    "training_time_estimate": {
+      "micro_step_seconds_reference": 0.5339044499999659,
+      "worst_length_micro_step_seconds_reference": 0.5982740500001,
+      "pure_training_minutes_reference": 96.58331500499384,
+      "pure_training_minutes_worst_length": 108.22777564501808,
+      "three_dev_evaluations_minutes": 3.6131636399999936,
+      "estimated_training_plus_dev_minutes": [
+        100.19647864499383,
+        111.84093928501808
+      ],
+      "caveat": "short-measurement extrapolation; not a full-epoch measurement; initialization/checkpoint/thermal variability extra"
+    },
+    "process_reports": [
+      "reports/generation/lora/p6_2_acceptance_v1/uninterrupted/invocation_20261004T061124823192.json",
+      "reports/generation/lora/p6_2_acceptance_v1/split/invocation_20261004T061330239919.json",
+      "reports/generation/lora/p6_2_acceptance_v1/split/invocation_20261004T061515141752.json"
+    ],
+    "resume_and_dev": {
+      "reference_pid": 30668,
+      "prefix_pid": 6932,
+      "resumed_pid": 20612,
+      "different_processes": true,
+      "restored": {
+        "restored_global_step": 2,
+        "restored_epoch": 0,
+        "restored_cursor": 16,
+        "optimizer_digest": "70b6b81709c3bbc1ab788b896d88f8f934934f5b172368947986e276d9f28560",
+        "scheduler_digest": "eb024d54fab26a5e3421b5702e486cc13c410defbebe78452926bfce482f10c4",
+        "rng_digest": "570fb9f4a2b8c69ba60bbe74ee02b11af699856ccdc8971ec1dfb2558364aebb",
+        "optimizer_scheduler_rng_restored": true
+      },
+      "final_global_step": 4,
+      "final_epoch": 0,
+      "final_cursor": 32,
+      "final_micro_step": 32,
+      "data_order_identical": true,
+      "max_micro_loss_absolute_delta": 0,
+      "adapter_sha256_reference": "4360f91f7250351ace2de0af732b3da2f1a57bda0b630d3a77c40c484e4adb30",
+      "adapter_sha256_resumed": "4360f91f7250351ace2de0af732b3da2f1a57bda0b630d3a77c40c484e4adb30",
+      "adapter_identical": true,
+      "optimizer_identical": true,
+      "scheduler_identical": true,
+      "rng_identical": true,
+      "reference_train_seconds": 17.08494239999891,
+      "train_peak_allocated_mib": 5647.7,
+      "dev": {
+        "dataset": "lora_train_dev",
+        "records": 402,
+        "dev_loss": 0.9523777201753202,
+        "task_losses": {
+          "title": 1.1990867374715075,
+          "selling_points": 0.9366371760617441,
+          "short_description": 0.721409246992709
+        },
+        "no_grad": true,
+        "parameter_updates": 0,
+        "configuration_unchanged": true,
+        "seconds": 72.26327279999987,
+        "memory": {
+          "allocated_mib": 5347.9,
+          "reserved_mib": 5772,
+          "peak_allocated_mib": 5535.6,
+          "peak_reserved_mib": 5772
+        }
+      },
+      "dev_longest_tokens": 269,
+      "configuration_sha256": "1afb8ed3ecca91aa3d8bdd55fb5e456dbb9a60deef8d52f4805c70cc24d7d1e0"
+    },
+    "tests": {
+      "new_tests_passed": 20,
+      "total_passed": 164,
+      "pip_check": "No broken requirements found."
+    },
+    "guards": {
+      "full_training_started": false,
+      "project_validation_read": false,
+      "project_test_read": false,
+      "rag_holdout_read": false,
+      "p5_mutated": false,
+      "dependencies_changed": false,
+      "commit_or_push": false
+    },
+    "stop": "await_user_final_confirmation_before_three_epoch_training"
+  },
+  "files": [
+    {
+      "path": "artifacts/lora/p6_2_acceptance_v1/split/checkpoints/checkpoint-step-000002/adapter/adapter_config.json",
+      "bytes": 1262,
+      "sha256": "e2b82fe411b779d95322c2207d1245b9c4b171650456f0c483c481ac666aa3fe",
+      "git_ignore_expected": true
+    },
+    {
+      "path": "artifacts/lora/p6_2_acceptance_v1/split/checkpoints/checkpoint-step-000002/adapter/adapter_model.safetensors",
+      "bytes": 10107280,
+      "sha256": "a34e9e3082a8f02c31d19f6853a7912d921fe841afe8cc13cfdbc014000bf141",
+      "git_ignore_expected": true
+    },
+    {
+      "path": "artifacts/lora/p6_2_acceptance_v1/split/checkpoints/checkpoint-step-000002/adapter/README.md",
+      "bytes": 5416,
+      "sha256": "1e733fc9176aa2816149a3a7fed36957c44659aeb390ec251dc9051be6ba2fc6",
+      "git_ignore_expected": true
+    },
+    {
+      "path": "artifacts/lora/p6_2_acceptance_v1/split/checkpoints/checkpoint-step-000002/checkpoint_manifest.json",
+      "bytes": 1135,
+      "sha256": "b503b80f9ebd080628bdfbb7064601aa7dcaa027a055a0e125cc7c41c212cc97",
+      "git_ignore_expected": true
+    },
+    {
+      "path": "artifacts/lora/p6_2_acceptance_v1/split/checkpoints/checkpoint-step-000002/config_snapshot.json",
+      "bytes": 4290,
+      "sha256": "b31e61e27bed5bc283a54cf6d018ed7eb7dcfebfbc491b5080244c89b87e9739",
+      "git_ignore_expected": true
+    },
+    {
+      "path": "artifacts/lora/p6_2_acceptance_v1/split/checkpoints/checkpoint-step-000002/trainer_state.json",
+      "bytes": 6897,
+      "sha256": "85b8c8b31410a203c987c369e11a1507b0347748299433482598e374b61cc0a6",
+      "git_ignore_expected": true
+    },
+    {
+      "path": "artifacts/lora/p6_2_acceptance_v1/split/checkpoints/checkpoint-step-000002/training_state.pt",
+      "bytes": 20297155,
+      "sha256": "bbc4231bdc1cbb1ffa8ec84e499996972bb8576651dbc462408999675be1b060",
+      "git_ignore_expected": true
+    },
+    {
+      "path": "artifacts/lora/p6_2_acceptance_v1/split/checkpoints/checkpoint-step-000004/adapter/adapter_config.json",
+      "bytes": 1262,
+      "sha256": "8c0443a49eb8535c4883ec9d90cad883508917230777033c405e3a87a0b33925",
+      "git_ignore_expected": true
+    },
+    {
+      "path": "artifacts/lora/p6_2_acceptance_v1/split/checkpoints/checkpoint-step-000004/adapter/adapter_model.safetensors",
+      "bytes": 10107280,
+      "sha256": "4360f91f7250351ace2de0af732b3da2f1a57bda0b630d3a77c40c484e4adb30",
+      "git_ignore_expected": true
+    },
+    {
+      "path": "artifacts/lora/p6_2_acceptance_v1/split/checkpoints/checkpoint-step-000004/adapter/README.md",
+      "bytes": 5416,
+      "sha256": "1e733fc9176aa2816149a3a7fed36957c44659aeb390ec251dc9051be6ba2fc6",
+      "git_ignore_expected": true
+    },
+    {
+      "path": "artifacts/lora/p6_2_acceptance_v1/split/checkpoints/checkpoint-step-000004/checkpoint_manifest.json",
+      "bytes": 1135,
+      "sha256": "bcecee293375200e723b94e7bd710bdba038e4708499edb43fe541f1bd231957",
+      "git_ignore_expected": true
+    },
+    {
+      "path": "artifacts/lora/p6_2_acceptance_v1/split/checkpoints/checkpoint-step-000004/config_snapshot.json",
+      "bytes": 4290,
+      "sha256": "b31e61e27bed5bc283a54cf6d018ed7eb7dcfebfbc491b5080244c89b87e9739",
+      "git_ignore_expected": true
+    },
+    {
+      "path": "artifacts/lora/p6_2_acceptance_v1/split/checkpoints/checkpoint-step-000004/trainer_state.json",
+      "bytes": 6899,
+      "sha256": "435ed4c7247cf1de071b42c8f4a755d2bd9d0d1abe239ac1263a11d29a3df282",
+      "git_ignore_expected": true
+    },
+    {
+      "path": "artifacts/lora/p6_2_acceptance_v1/split/checkpoints/checkpoint-step-000004/training_state.pt",
+      "bytes": 20297155,
+      "sha256": "b9a034fda082f562fe5792c8af72a34634d4c88fd79b65a38bcd2fdb67a9073b",
+      "git_ignore_expected": true
+    },
+    {
+      "path": "artifacts/lora/p6_2_acceptance_v1/split/latest.json",
+      "bytes": 205,
+      "sha256": "488ee98c2ff7aa79d3d2582bd6ebe9a92b739ae119a51424597ead96e802b93d",
+      "git_ignore_expected": true
+    },
+    {
+      "path": "artifacts/lora/p6_2_acceptance_v1/uninterrupted/checkpoints/checkpoint-step-000004/adapter/adapter_config.json",
+      "bytes": 1262,
+      "sha256": "8c0443a49eb8535c4883ec9d90cad883508917230777033c405e3a87a0b33925",
+      "git_ignore_expected": true
+    },
+    {
+      "path": "artifacts/lora/p6_2_acceptance_v1/uninterrupted/checkpoints/checkpoint-step-000004/adapter/adapter_model.safetensors",
+      "bytes": 10107280,
+      "sha256": "4360f91f7250351ace2de0af732b3da2f1a57bda0b630d3a77c40c484e4adb30",
+      "git_ignore_expected": true
+    },
+    {
+      "path": "artifacts/lora/p6_2_acceptance_v1/uninterrupted/checkpoints/checkpoint-step-000004/adapter/README.md",
+      "bytes": 5416,
+      "sha256": "1e733fc9176aa2816149a3a7fed36957c44659aeb390ec251dc9051be6ba2fc6",
+      "git_ignore_expected": true
+    },
+    {
+      "path": "artifacts/lora/p6_2_acceptance_v1/uninterrupted/checkpoints/checkpoint-step-000004/checkpoint_manifest.json",
+      "bytes": 1135,
+      "sha256": "259afcf408e5b9059791cf42b18544e49e8c6d82c30bc20b7c7b6e1f5bddf62a",
+      "git_ignore_expected": true
+    },
+    {
+      "path": "artifacts/lora/p6_2_acceptance_v1/uninterrupted/checkpoints/checkpoint-step-000004/config_snapshot.json",
+      "bytes": 4290,
+      "sha256": "b31e61e27bed5bc283a54cf6d018ed7eb7dcfebfbc491b5080244c89b87e9739",
+      "git_ignore_expected": true
+    },
+    {
+      "path": "artifacts/lora/p6_2_acceptance_v1/uninterrupted/checkpoints/checkpoint-step-000004/trainer_state.json",
+      "bytes": 6899,
+      "sha256": "305f85b49ab01a20977217e67df036d8aaf92cf43ff8c7416e510c4cf399d94c",
+      "git_ignore_expected": true
+    },
+    {
+      "path": "artifacts/lora/p6_2_acceptance_v1/uninterrupted/checkpoints/checkpoint-step-000004/training_state.pt",
+      "bytes": 20297155,
+      "sha256": "73fc737358d45467b9c9f755f0869daa593ca07488816f959127c65683c427ac",
+      "git_ignore_expected": true
+    },
+    {
+      "path": "artifacts/lora/p6_2_acceptance_v1/uninterrupted/latest.json",
+      "bytes": 213,
+      "sha256": "cb82aec670e889c17319fcdbb7f4e9cecd0d4c5e57440bcdeccd5a6711389c78",
+      "git_ignore_expected": true
+    },
+    {
+      "path": "configs/lora_qlora_train_v1.json",
+      "bytes": 4104,
+      "sha256": "1afb8ed3ecca91aa3d8bdd55fb5e456dbb9a60deef8d52f4805c70cc24d7d1e0",
+      "git_ignore_expected": false
+    },
+    {
+      "path": "reports/generation/lora/p6_2_acceptance_v1/acceptance_summary.json",
+      "bytes": 3770,
+      "sha256": "bd9e5b6f24ea38eceb64941dc60a2f53da8dda7e43ce7996a400082fbb3ed2ca",
+      "git_ignore_expected": false
+    },
+    {
+      "path": "reports/generation/lora/p6_2_acceptance_v1/split/dev_acceptance_step_000004.json",
+      "bytes": 62011,
+      "sha256": "6ea04d7e935b0156459d2869b756178aafe90bf29732dd799174b32b4f43e074",
+      "git_ignore_expected": false
+    },
+    {
+      "path": "reports/generation/lora/p6_2_acceptance_v1/split/environment_20261004T061330239919.txt",
+      "bytes": 702,
+      "sha256": "5596644df337a7bd02ff4d4439074d1c61c409606cf1c83e4b1e351c3d1d5990",
+      "git_ignore_expected": false
+    },
+    {
+      "path": "reports/generation/lora/p6_2_acceptance_v1/split/environment_20261004T061515141752.txt",
+      "bytes": 702,
+      "sha256": "5596644df337a7bd02ff4d4439074d1c61c409606cf1c83e4b1e351c3d1d5990",
+      "git_ignore_expected": false
+    },
+    {
+      "path": "reports/generation/lora/p6_2_acceptance_v1/split/events_20261004T061330239919.jsonl",
+      "bytes": 6197,
+      "sha256": "be97f82880f05aca0b45d8ed46c4f21598c7ee71c08f062d0b193cf87b642c0f",
+      "git_ignore_expected": false
+    },
+    {
+      "path": "reports/generation/lora/p6_2_acceptance_v1/split/events_20261004T061515141752.jsonl",
+      "bytes": 7341,
+      "sha256": "33515b4a1383601cc79129815a3247ecf4cf98508ceccabf6f1c324af959080e",
+      "git_ignore_expected": false
+    },
+    {
+      "path": "reports/generation/lora/p6_2_acceptance_v1/split/invocation_20261004T061330239919.json",
+      "bytes": 23463,
+      "sha256": "5a5adf5739215eb46dc6cc87a0ccd274aa17222da4022f517bf2eb3ff5d50964",
+      "git_ignore_expected": false
+    },
+    {
+      "path": "reports/generation/lora/p6_2_acceptance_v1/split/invocation_20261004T061515141752.json",
+      "bytes": 95707,
+      "sha256": "19c0fb76189206fbb25714925f7e953a2d595d008adc3692f72b60bb84b50dc4",
+      "git_ignore_expected": false
+    },
+    {
+      "path": "reports/generation/lora/p6_2_acceptance_v1/uninterrupted/environment_20261004T061124823192.txt",
+      "bytes": 702,
+      "sha256": "5596644df337a7bd02ff4d4439074d1c61c409606cf1c83e4b1e351c3d1d5990",
+      "git_ignore_expected": false
+    },
+    {
+      "path": "reports/generation/lora/p6_2_acceptance_v1/uninterrupted/events_20261004T061124823192.jsonl",
+      "bytes": 11851,
+      "sha256": "80c08610d9f53034bd3e2abdf1b0526b24da9bf2e25303072d14a2701719f4e0",
+      "git_ignore_expected": false
+    },
+    {
+      "path": "reports/generation/lora/p6_2_acceptance_v1/uninterrupted/invocation_20261004T061124823192.json",
+      "bytes": 26809,
+      "sha256": "591798b73d8004e9f225a4b2c045969f5f16183fdfcf3cfb856e451b8eff64b7",
+      "git_ignore_expected": false
+    },
+    {
+      "path": "reports/generation/lora/p6_2_trainer_acceptance_report.md",
+      "bytes": 13738,
+      "sha256": "4cee475314ceeecfa58422cf9e35e0879a0c9cf05a7093ff54b1c72bc04e3e3a",
+      "git_ignore_expected": false
+    },
+    {
+      "path": "scripts/train_lora.py",
+      "bytes": 1182,
+      "sha256": "669876c69ae689b9449aa4a68064f33f8681fdbf8ffe94ae5eda7cb53b07b019",
+      "git_ignore_expected": false
+    },
+    {
+      "path": "src/generation/lora_training.py",
+      "bytes": 36573,
+      "sha256": "9ac9587e71b6f892bb3c429f7726ff17edddc354ee57372c22da48ccd22e107e",
+      "git_ignore_expected": false
+    },
+    {
+      "path": "tests/test_lora_training.py",
+      "bytes": 8941,
+      "sha256": "48bfc2072d1d1f58c7d15d16a0acbe63f143ae8d9b1fd333ae66693aec28453b",
+      "git_ignore_expected": false
+    }
+  ],
+  "p5_checks": [
+    {
+      "path": "configs/lora_instruction_data_v1.json",
+      "expected_sha256": "fa3d2de49f4802b842848c31c0370f29798b576a5b3d0666c76d6aa6b277a7c6",
+      "actual_sha256": "fa3d2de49f4802b842848c31c0370f29798b576a5b3d0666c76d6aa6b277a7c6",
+      "unchanged": true
+    },
+    {
+      "path": "src/generation/lora_data.py",
+      "expected_sha256": "6fa199d16edbca11c2ece97c6b43ca18583df55ddf18a4f3113d47d10018efa3",
+      "actual_sha256": "6fa199d16edbca11c2ece97c6b43ca18583df55ddf18a4f3113d47d10018efa3",
+      "unchanged": true
+    },
+    {
+      "path": "scripts/build_lora_instruction_data.py",
+      "expected_sha256": "99e9a9f70b9b7625d63ce6dc0c8995ccad378a8efb3be59d24dcc52ad5cc5b6b",
+      "actual_sha256": "99e9a9f70b9b7625d63ce6dc0c8995ccad378a8efb3be59d24dcc52ad5cc5b6b",
+      "unchanged": true
+    },
+    {
+      "path": "tests/test_lora_data.py",
+      "expected_sha256": "2eba1b4f2198d1d46f2001be2e4a1442bb6b926c245ae5a2523025e80ccb488b",
+      "actual_sha256": "2eba1b4f2198d1d46f2001be2e4a1442bb6b926c245ae5a2523025e80ccb488b",
+      "unchanged": true
+    },
+    {
+      "path": "reports/generation/lora/lora_instruction_data_v1_report.json",
+      "expected_sha256": "df58dece0690812a3f8f8ec3187cdc8db1a91aa8b68d6826b43fa4e01e37c96f",
+      "actual_sha256": "df58dece0690812a3f8f8ec3187cdc8db1a91aa8b68d6826b43fa4e01e37c96f",
+      "unchanged": true
+    },
+    {
+      "path": "reports/generation/lora/lora_instruction_data_v1_samples.csv",
+      "expected_sha256": "f87358bfb7e369a61d6fe656e2754814b546727ac249d281698099771830f939",
+      "actual_sha256": "f87358bfb7e369a61d6fe656e2754814b546727ac249d281698099771830f939",
+      "unchanged": true
+    },
+    {
+      "path": "reports/generation/lora/lora_instruction_data_v1_spot_check.md",
+      "expected_sha256": "cbab9ff8f5df35e32c5679b30d138e051b2288cde8afff67c0a0c15bd64c4dce",
+      "actual_sha256": "cbab9ff8f5df35e32c5679b30d138e051b2288cde8afff67c0a0c15bd64c4dce",
+      "unchanged": true
+    },
+    {
+      "path": "reports/generation/lora/lora_instruction_data_v1_phase_report.md",
+      "expected_sha256": "430774f2eb190c3ebcb6fbb3ab66d1579a548b66da4099b30ead03b9e5850ad9",
+      "actual_sha256": "430774f2eb190c3ebcb6fbb3ab66d1579a548b66da4099b30ead03b9e5850ad9",
+      "unchanged": true
+    },
+    {
+      "path": "data/processed/lora_instruction_data_v1/products.jsonl",
+      "expected_sha256": "1156e8f8466927c1ece4cb89577ee534ccdd66856f640512bd56f0c164d72868",
+      "actual_sha256": "1156e8f8466927c1ece4cb89577ee534ccdd66856f640512bd56f0c164d72868",
+      "unchanged": true
+    },
+    {
+      "path": "data/processed/lora_instruction_data_v1/excluded_products.jsonl",
+      "expected_sha256": "da0e69078a3ddeb474952ccbe68d48c0c219f1ba946b47161f82e044457cc4d2",
+      "actual_sha256": "da0e69078a3ddeb474952ccbe68d48c0c219f1ba946b47161f82e044457cc4d2",
+      "unchanged": true
+    },
+    {
+      "path": "data/processed/lora_instruction_data_v1/train.jsonl",
+      "expected_sha256": "c31b00f3d19d503b3f7c7529cc2ce7e115143214b0d9ab40f07412becd6a5434",
+      "actual_sha256": "c31b00f3d19d503b3f7c7529cc2ce7e115143214b0d9ab40f07412becd6a5434",
+      "unchanged": true
+    },
+    {
+      "path": "data/processed/lora_instruction_data_v1/validation.jsonl",
+      "expected_sha256": "20a32d5f67a8ac6dd0743bb90445522fe28cd4099ed318e71a4f0e8e33fa0a94",
+      "actual_sha256": "20a32d5f67a8ac6dd0743bb90445522fe28cd4099ed318e71a4f0e8e33fa0a94",
+      "unchanged": true
+    },
+    {
+      "path": "data/processed/lora_instruction_data_v1/summary.json",
+      "expected_sha256": "1ce2c8d9a08483989d620def30bfa825c51a4f84bc2c71bf3ef9df9113bafd79",
+      "actual_sha256": "1ce2c8d9a08483989d620def30bfa825c51a4f84bc2c71bf3ef9df9113bafd79",
+      "unchanged": true
+    }
+  ],
+  "frozen_engineering_checks": [
+    {
+      "path": "reports/generation/lora/lora_instruction_data_v1_final_manifest.json",
+      "expected_sha256": "e21b9f278dbe533f038008840bce313564e702b6b5ff7ba5e0f8714156814a5d",
+      "actual_sha256": "e21b9f278dbe533f038008840bce313564e702b6b5ff7ba5e0f8714156814a5d",
+      "unchanged": true
+    },
+    {
+      "path": "configs/lora_qlora_low_memory_smoke_v1.json",
+      "expected_sha256": "10d5782a280201923eed92d08243d359d99f5d41ce78ff1f3032f6b0653eb582",
+      "actual_sha256": "10d5782a280201923eed92d08243d359d99f5d41ce78ff1f3032f6b0653eb582",
+      "unchanged": true
+    },
+    {
+      "path": "scripts/run_qlora_low_memory_smoke.py",
+      "expected_sha256": "901c8fbfd4f8be8190c9f9f3a1c7e0100372cf2768e521dccaaa2ff1a030a4ab",
+      "actual_sha256": "901c8fbfd4f8be8190c9f9f3a1c7e0100372cf2768e521dccaaa2ff1a030a4ab",
+      "unchanged": true
+    },
+    {
+      "path": "src/generation/qlora_memory.py",
+      "expected_sha256": "9b4d9a72248dca51ec825d18b05833af3a0f3f8f1bb7b3b8a3a3c4767323f848",
+      "actual_sha256": "9b4d9a72248dca51ec825d18b05833af3a0f3f8f1bb7b3b8a3a3c4767323f848",
+      "unchanged": true
+    }
+  ]
+}

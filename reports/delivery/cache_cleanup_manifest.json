@@ -1,0 +1,374 @@
+{
+  "status": "completed",
+  "scope": "user-approved exact 49 cache files only",
+  "archive_action": "preserve_in_place",
+  "git_head": "08d2e8fdadd3540495563edd2ad3fa5d33e839b4",
+  "gitignore_sha256": "406ce82b532c78ed28b46db99da06674d233a8b622f77b8fa52af8f7134e4a68",
+  "original_baseline_sha256": "89b3a194d4c7a65cfd44f46881d3d66d0b452039d253f4f81e13003495b94a6d",
+  "inventory_sha256": "c5d52f0c6c604316f5a8431d1a1a3dbf66cc01df7675d5c53a5f869baf607422",
+  "targets": [
+    {
+      "path": ".pytest_cache/.gitignore",
+      "absolute_path": "E:\\Projects\\Baidu\\Ecommerce-Content-Retrieval\\.pytest_cache\\.gitignore",
+      "bytes": 39,
+      "sha256": "e7c6bb30148cf667606dcd63e7ca77acaa3cfb0c8303bf09e6419e1e1669dc6d",
+      "frozen_references": []
+    },
+    {
+      "path": ".pytest_cache/CACHEDIR.TAG",
+      "absolute_path": "E:\\Projects\\Baidu\\Ecommerce-Content-Retrieval\\.pytest_cache\\CACHEDIR.TAG",
+      "bytes": 191,
+      "sha256": "37dc88ef9a0abeddbe81053a6dd8fdfb13afb613045ea1eb4a5c815a74a3bde4",
+      "frozen_references": []
+    },
+    {
+      "path": ".pytest_cache/README.md",
+      "absolute_path": "E:\\Projects\\Baidu\\Ecommerce-Content-Retrieval\\.pytest_cache\\README.md",
+      "bytes": 310,
+      "sha256": "420e808d79a6c25d3cda0af33bc4782314a14949866682c68ce8149e89b66b70",
+      "frozen_references": []
+    },
+    {
+      "path": ".pytest_cache/v/cache/lastfailed",
+      "absolute_path": "E:\\Projects\\Baidu\\Ecommerce-Content-Retrieval\\.pytest_cache\\v\\cache\\lastfailed",
+      "bytes": 2,
+      "sha256": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+      "frozen_references": []
+    },
+    {
+      "path": ".pytest_cache/v/cache/nodeids",
+      "absolute_path": "E:\\Projects\\Baidu\\Ecommerce-Content-Retrieval\\.pytest_cache\\v\\cache\\nodeids",
+      "bytes": 23794,
+      "sha256": "42b78895ab3f0ac6f531d30e41d5713d55d0044bf5c227b6ffb5da6e910dde14",
+      "frozen_references": []
+    },
+    {
+      "path": ".pytest_cache/v/cache/stepwise",
+      "absolute_path": "E:\\Projects\\Baidu\\Ecommerce-Content-Retrieval\\.pytest_cache\\v\\cache\\stepwise",
+      "bytes": 2,
+      "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "frozen_references": []
+    },
+    {
+      "path": "__pycache__/_tmp_match_analysis.cpython-313.pyc",
+      "absolute_path": "E:\\Projects\\Baidu\\Ecommerce-Content-Retrieval\\__pycache__\\_tmp_match_analysis.cpython-313.pyc",
+      "bytes": 7892,
+      "sha256": "9de50420a7254cd24f1371d26300f7610a0a239c2245f2c940347a2c8112fc78",
+      "frozen_references": []
+    },
+    {
+      "path": "scripts/__pycache__/archive_lora_project_validation.cpython-313.pyc",
+      "absolute_path": "E:\\Projects\\Baidu\\Ecommerce-Content-Retrieval\\scripts\\__pycache__\\archive_lora_project_validation.cpython-313.pyc",
+      "bytes": 13845,
+      "sha256": "8f3fffc20e389fea63ff130cafb2fa4f0b059fb491b0296a38ccba7de7d05708",
+      "frozen_references": []
+    },
+    {
+      "path": "scripts/__pycache__/run_qlora_low_memory_smoke.cpython-313.pyc",
+      "absolute_path": "E:\\Projects\\Baidu\\Ecommerce-Content-Retrieval\\scripts\\__pycache__\\run_qlora_low_memory_smoke.cpython-313.pyc",
+      "bytes": 34529,
+      "sha256": "839e086d70c0e2c490931329f71a85f351310d9a945460c302d6b27ddf134ab1",
+      "frozen_references": []
+    },
+    {
+      "path": "scripts/__pycache__/run_qlora_smoke.cpython-310.pyc",
+      "absolute_path": "E:\\Projects\\Baidu\\Ecommerce-Content-Retrieval\\scripts\\__pycache__\\run_qlora_smoke.cpython-310.pyc",
+      "bytes": 17065,
+      "sha256": "5921f7be25749d0928407004859820418d5ec2b71196892ec4d696f9d7cbfc68",
+      "frozen_references": []
+    },
+    {
+      "path": "scripts/__pycache__/verify_lora_v1_best.cpython-310.pyc",
+      "absolute_path": "E:\\Projects\\Baidu\\Ecommerce-Content-Retrieval\\scripts\\__pycache__\\verify_lora_v1_best.cpython-310.pyc",
+      "bytes": 7601,
+      "sha256": "b7548016da71a9543669657b1d715dba60c956468aa5b4539cf5e25afef13d3d",
+      "frozen_references": []
+    },
+    {
+      "path": "src/__pycache__/__init__.cpython-310.pyc",
+      "absolute_path": "E:\\Projects\\Baidu\\Ecommerce-Content-Retrieval\\src\\__pycache__\\__init__.cpython-310.pyc",
+      "bytes": 197,
+      "sha256": "5083c67d69245f653fb7eabb67d51c11dc4f2c00080599a35eaa608a11e9cd51",
+      "frozen_references": []
+    },
+    {
+      "path": "src/generation/__pycache__/__init__.cpython-310.pyc",
+      "absolute_path": "E:\\Projects\\Baidu\\Ecommerce-Content-Retrieval\\src\\generation\\__pycache__\\__init__.cpython-310.pyc",
+      "bytes": 207,
+      "sha256": "c7c464ae74c342cad1820fbe0d033c467da69ea77061fb954c7e44026c08a35b",
+      "frozen_references": []
+    },
+    {
+      "path": "src/generation/__pycache__/lora_training.cpython-310.pyc",
+      "absolute_path": "E:\\Projects\\Baidu\\Ecommerce-Content-Retrieval\\src\\generation\\__pycache__\\lora_training.cpython-310.pyc",
+      "bytes": 30646,
+      "sha256": "2b3fbe8d23dc6c37b9e7af1247b7e63b62cc5ccec49cf2629390ba0eb87d7b50",
+      "frozen_references": []
+    },
+    {
+      "path": "src/generation/__pycache__/qlora_memory.cpython-310.pyc",
+      "absolute_path": "E:\\Projects\\Baidu\\Ecommerce-Content-Retrieval\\src\\generation\\__pycache__\\qlora_memory.cpython-310.pyc",
+      "bytes": 4919,
+      "sha256": "a0718e72e52afcf33a185ac4aa04f191c5fc48449e0afff1bd8692ca98a5ba56",
+      "frozen_references": []
+    },
+    {
+      "path": "src/generation/__pycache__/qlora_memory.cpython-313.pyc",
+      "absolute_path": "E:\\Projects\\Baidu\\Ecommerce-Content-Retrieval\\src\\generation\\__pycache__\\qlora_memory.cpython-313.pyc",
+      "bytes": 5434,
+      "sha256": "518efdf3ba564243b43debeb7f4d2d586056b97ef91363a6fb3a59f20280e82f",
+      "frozen_references": []
+    },
+    {
+      "path": "tests/__pycache__/test_data.cpython-313-pytest-8.3.4.pyc",
+      "absolute_path": "E:\\Projects\\Baidu\\Ecommerce-Content-Retrieval\\tests\\__pycache__\\test_data.cpython-313-pytest-8.3.4.pyc",
+      "bytes": 10269,
+      "sha256": "d46dcc8b6a7705bd47311f94970300051e0cd816ef0e199f55005691fdae86ec",
+      "frozen_references": []
+    },
+    {
+      "path": "tests/__pycache__/test_data.cpython-313.pyc",
+      "absolute_path": "E:\\Projects\\Baidu\\Ecommerce-Content-Retrieval\\tests\\__pycache__\\test_data.cpython-313.pyc",
+      "bytes": 10156,
+      "sha256": "cc6d00cf9a4402ce5e4947ac528aec2bcb50dee8b9c177d58bd2336eb2280118",
+      "frozen_references": []
+    },
+    {
+      "path": "tests/__pycache__/test_deduplication.cpython-313-pytest-8.3.4.pyc",
+      "absolute_path": "E:\\Projects\\Baidu\\Ecommerce-Content-Retrieval\\tests\\__pycache__\\test_deduplication.cpython-313-pytest-8.3.4.pyc",
+      "bytes": 4459,
+      "sha256": "eb10213ffcc7101b3aa23f82d8bb217f6ddcfe830c8b6f504880e411ab78e916",
+      "frozen_references": []
+    },
+    {
+      "path": "tests/__pycache__/test_deduplication.cpython-313.pyc",
+      "absolute_path": "E:\\Projects\\Baidu\\Ecommerce-Content-Retrieval\\tests\\__pycache__\\test_deduplication.cpython-313.pyc",
+      "bytes": 4345,
+      "sha256": "2df48f1a403d05cc9e6b895c62f130fd97d431f70efa7855f59ab5fde234b4b8",
+      "frozen_references": []
+    },
+    {
+      "path": "tests/__pycache__/test_experiment_tracking.cpython-313-pytest-8.3.4.pyc",
+      "absolute_path": "E:\\Projects\\Baidu\\Ecommerce-Content-Retrieval\\tests\\__pycache__\\test_experiment_tracking.cpython-313-pytest-8.3.4.pyc",
+      "bytes": 6086,
+      "sha256": "83bd250da0ff758fa01c60eb410a70bda6c02a164debb42d191e79f0d5ed3b2a",
+      "frozen_references": []
+    },
+    {
+      "path": "tests/__pycache__/test_experiment_tracking.cpython-313.pyc",
+      "absolute_path": "E:\\Projects\\Baidu\\Ecommerce-Content-Retrieval\\tests\\__pycache__\\test_experiment_tracking.cpython-313.pyc",
+      "bytes": 4538,
+      "sha256": "91307fd6f9f0784f0c45c7440254cb0c3b8a6cb4078b5d23db1db94dee80ec38",
+      "frozen_references": []
+    },
+    {
+      "path": "tests/__pycache__/test_generation.cpython-310.pyc",
+      "absolute_path": "E:\\Projects\\Baidu\\Ecommerce-Content-Retrieval\\tests\\__pycache__\\test_generation.cpython-310.pyc",
+      "bytes": 33740,
+      "sha256": "03bdea76475ec49957d5a5ac42ff8c3fd5190324f81af713926ab4ed86873b78",
+      "frozen_references": []
+    },
+    {
+      "path": "tests/__pycache__/test_generation.cpython-313-pytest-8.3.4.pyc",
+      "absolute_path": "E:\\Projects\\Baidu\\Ecommerce-Content-Retrieval\\tests\\__pycache__\\test_generation.cpython-313-pytest-8.3.4.pyc",
+      "bytes": 66462,
+      "sha256": "e0d18baf9d4e508eecfe49d18f85d22e46d99606583f7e2c53032509adcf0041",
+      "frozen_references": []
+    },
+    {
+      "path": "tests/__pycache__/test_generation.cpython-313.pyc",
+      "absolute_path": "E:\\Projects\\Baidu\\Ecommerce-Content-Retrieval\\tests\\__pycache__\\test_generation.cpython-313.pyc",
+      "bytes": 46830,
+      "sha256": "703d9535fd261c4cb4fb7eaabc58f8b4a4d9e7e662ddd4439285264feb29eedc",
+      "frozen_references": []
+    },
+    {
+      "path": "tests/__pycache__/test_images.cpython-313-pytest-8.3.4.pyc",
+      "absolute_path": "E:\\Projects\\Baidu\\Ecommerce-Content-Retrieval\\tests\\__pycache__\\test_images.cpython-313-pytest-8.3.4.pyc",
+      "bytes": 4973,
+      "sha256": "7cd77a1487680a88d885fdc98ec8bfcb631860f16861df91c414df62ec10881c",
+      "frozen_references": []
+    },
+    {
+      "path": "tests/__pycache__/test_images.cpython-313.pyc",
+      "absolute_path": "E:\\Projects\\Baidu\\Ecommerce-Content-Retrieval\\tests\\__pycache__\\test_images.cpython-313.pyc",
+      "bytes": 4859,
+      "sha256": "22bcafa120e9c04b57c80bedc73954aae2133efd8f399b3fd19f871711ead20d",
+      "frozen_references": []
+    },
+    {
+      "path": "tests/__pycache__/test_lora_data.cpython-313-pytest-8.3.4.pyc",
+      "absolute_path": "E:\\Projects\\Baidu\\Ecommerce-Content-Retrieval\\tests\\__pycache__\\test_lora_data.cpython-313-pytest-8.3.4.pyc",
+      "bytes": 11571,
+      "sha256": "d138995721db2c530a5286b6891479ad6341ed2ac8fd5f107b4a37937fcc6b6b",
+      "frozen_references": []
+    },
+    {
+      "path": "tests/__pycache__/test_lora_training.cpython-313-pytest-8.3.4.pyc",
+      "absolute_path": "E:\\Projects\\Baidu\\Ecommerce-Content-Retrieval\\tests\\__pycache__\\test_lora_training.cpython-313-pytest-8.3.4.pyc",
+      "bytes": 41232,
+      "sha256": "7a980c43658695ad3a6f35a68a4f50b5ad1ae54960c52f287b3e42cf5b298ee3",
+      "frozen_references": []
+    },
+    {
+      "path": "tests/__pycache__/test_lora_validation.cpython-313-pytest-8.3.4.pyc",
+      "absolute_path": "E:\\Projects\\Baidu\\Ecommerce-Content-Retrieval\\tests\\__pycache__\\test_lora_validation.cpython-313-pytest-8.3.4.pyc",
+      "bytes": 39225,
+      "sha256": "727da543f4f1baf18a6b3005a706d04e74f024d22ccbfcff911ffc28a3a183f0",
+      "frozen_references": []
+    },
+    {
+      "path": "tests/__pycache__/test_lora_validation_quick32.cpython-313-pytest-8.3.4.pyc",
+      "absolute_path": "E:\\Projects\\Baidu\\Ecommerce-Content-Retrieval\\tests\\__pycache__\\test_lora_validation_quick32.cpython-313-pytest-8.3.4.pyc",
+      "bytes": 19887,
+      "sha256": "81a0a5c20b20815a9bf235129c3803cf503191846225c5bf193f5d1a571b3a30",
+      "frozen_references": []
+    },
+    {
+      "path": "tests/__pycache__/test_pipeline.cpython-313-pytest-8.3.4.pyc",
+      "absolute_path": "E:\\Projects\\Baidu\\Ecommerce-Content-Retrieval\\tests\\__pycache__\\test_pipeline.cpython-313-pytest-8.3.4.pyc",
+      "bytes": 5577,
+      "sha256": "0b48752d5ba8f391a32ffb51d2f32e4d08afbe621a73799d679a1b22b52e082e",
+      "frozen_references": []
+    },
+    {
+      "path": "tests/__pycache__/test_pipeline.cpython-313.pyc",
+      "absolute_path": "E:\\Projects\\Baidu\\Ecommerce-Content-Retrieval\\tests\\__pycache__\\test_pipeline.cpython-313.pyc",
+      "bytes": 5463,
+      "sha256": "5d7d9b2b47c0a0c690ecbc6acee445d7cbb24735bbf7c1bdbc61729c648295f2",
+      "frozen_references": []
+    },
+    {
+      "path": "tests/__pycache__/test_qlora_memory.cpython-313-pytest-8.3.4.pyc",
+      "absolute_path": "E:\\Projects\\Baidu\\Ecommerce-Content-Retrieval\\tests\\__pycache__\\test_qlora_memory.cpython-313-pytest-8.3.4.pyc",
+      "bytes": 24642,
+      "sha256": "27877d5e4af752a776cb723514cbaf825c5a91436f01d284ce55dcb0a291ed9c",
+      "frozen_references": []
+    },
+    {
+      "path": "tests/__pycache__/test_qlora_smoke.cpython-313-pytest-8.3.4.pyc",
+      "absolute_path": "E:\\Projects\\Baidu\\Ecommerce-Content-Retrieval\\tests\\__pycache__\\test_qlora_smoke.cpython-313-pytest-8.3.4.pyc",
+      "bytes": 5782,
+      "sha256": "cb4aa5b7209f6127ecc8eec7b1ba85db7ac8833946f7cdbee244853fe9e7954c",
+      "frozen_references": []
+    },
+    {
+      "path": "tests/__pycache__/test_rag_formal.cpython-313-pytest-8.3.4.pyc",
+      "absolute_path": "E:\\Projects\\Baidu\\Ecommerce-Content-Retrieval\\tests\\__pycache__\\test_rag_formal.cpython-313-pytest-8.3.4.pyc",
+      "bytes": 12048,
+      "sha256": "20d0729514762427f9853cdb9efdf28da604143a6610a10c641f19a6234fe7eb",
+      "frozen_references": []
+    },
+    {
+      "path": "tests/__pycache__/test_rag_formal.cpython-313.pyc",
+      "absolute_path": "E:\\Projects\\Baidu\\Ecommerce-Content-Retrieval\\tests\\__pycache__\\test_rag_formal.cpython-313.pyc",
+      "bytes": 11935,
+      "sha256": "fd95c8feb7155a4ed0fb19d91362e499eaa2d27c8c936a92c308625414682a75",
+      "frozen_references": []
+    },
+    {
+      "path": "tests/__pycache__/test_retrieval_evaluation.cpython-313-pytest-8.3.4.pyc",
+      "absolute_path": "E:\\Projects\\Baidu\\Ecommerce-Content-Retrieval\\tests\\__pycache__\\test_retrieval_evaluation.cpython-313-pytest-8.3.4.pyc",
+      "bytes": 11591,
+      "sha256": "720f2c00493a61c932979f35e744dec457a1358a6a3f4ec644d4675adedb2830",
+      "frozen_references": []
+    },
+    {
+      "path": "tests/__pycache__/test_retrieval_evaluation.cpython-313.pyc",
+      "absolute_path": "E:\\Projects\\Baidu\\Ecommerce-Content-Retrieval\\tests\\__pycache__\\test_retrieval_evaluation.cpython-313.pyc",
+      "bytes": 11477,
+      "sha256": "5d4056c8306340656a3d19e5412a8c65af30c37f404df58eabee06f819921b94",
+      "frozen_references": []
+    },
+    {
+      "path": "tests/__pycache__/test_retrieval_index.cpython-313-pytest-8.3.4.pyc",
+      "absolute_path": "E:\\Projects\\Baidu\\Ecommerce-Content-Retrieval\\tests\\__pycache__\\test_retrieval_index.cpython-313-pytest-8.3.4.pyc",
+      "bytes": 7794,
+      "sha256": "40ac2099296a512ce02bc88111a6093ce9d5da8cb307aabfbd91336a62f722cb",
+      "frozen_references": []
+    },
+    {
+      "path": "tests/__pycache__/test_retrieval_index.cpython-313.pyc",
+      "absolute_path": "E:\\Projects\\Baidu\\Ecommerce-Content-Retrieval\\tests\\__pycache__\\test_retrieval_index.cpython-313.pyc",
+      "bytes": 7681,
+      "sha256": "5b3a2a8c0f05cbe71e6bb1b7e67a2753da6eaf67ef3d6d61b37cf806eb54d783",
+      "frozen_references": []
+    },
+    {
+      "path": "tests/__pycache__/test_retrieval_rerank.cpython-313-pytest-8.3.4.pyc",
+      "absolute_path": "E:\\Projects\\Baidu\\Ecommerce-Content-Retrieval\\tests\\__pycache__\\test_retrieval_rerank.cpython-313-pytest-8.3.4.pyc",
+      "bytes": 6306,
+      "sha256": "f3b09a4719a213128b753c53829b9a5304a9ca7b01c43a9b35723eb4daa4cf92",
+      "frozen_references": []
+    },
+    {
+      "path": "tests/__pycache__/test_retrieval_rerank.cpython-313.pyc",
+      "absolute_path": "E:\\Projects\\Baidu\\Ecommerce-Content-Retrieval\\tests\\__pycache__\\test_retrieval_rerank.cpython-313.pyc",
+      "bytes": 6193,
+      "sha256": "b6ca88a313f1d43d54fe28a6162dbbbf200bd9575de04cf4886a7f0d597978b2",
+      "frozen_references": []
+    },
+    {
+      "path": "tests/__pycache__/test_retrieval_rerank_formal.cpython-313-pytest-8.3.4.pyc",
+      "absolute_path": "E:\\Projects\\Baidu\\Ecommerce-Content-Retrieval\\tests\\__pycache__\\test_retrieval_rerank_formal.cpython-313-pytest-8.3.4.pyc",
+      "bytes": 4560,
+      "sha256": "6fffb00669e1d5942e0f6b11147754a210e6baab7345d2555b62558bd96d51d6",
+      "frozen_references": []
+    },
+    {
+      "path": "tests/__pycache__/test_retrieval_rerank_formal.cpython-313.pyc",
+      "absolute_path": "E:\\Projects\\Baidu\\Ecommerce-Content-Retrieval\\tests\\__pycache__\\test_retrieval_rerank_formal.cpython-313.pyc",
+      "bytes": 4447,
+      "sha256": "b8896776238e90e9ba05b44f95f5e6b9f03cc740fd4fdf52f1646b9a032d676b",
+      "frozen_references": []
+    },
+    {
+      "path": "tests/__pycache__/test_retrieval_runtime.cpython-313-pytest-8.3.4.pyc",
+      "absolute_path": "E:\\Projects\\Baidu\\Ecommerce-Content-Retrieval\\tests\\__pycache__\\test_retrieval_runtime.cpython-313-pytest-8.3.4.pyc",
+      "bytes": 2157,
+      "sha256": "76e89f45653097d999c933787257f4f1bf86cacd02732d0a5eedf347ccfc788d",
+      "frozen_references": []
+    },
+    {
+      "path": "tests/__pycache__/test_retrieval_runtime.cpython-313.pyc",
+      "absolute_path": "E:\\Projects\\Baidu\\Ecommerce-Content-Retrieval\\tests\\__pycache__\\test_retrieval_runtime.cpython-313.pyc",
+      "bytes": 2044,
+      "sha256": "8ea2f72e33a7f5502cba3ed296df86dba924e5976ad93cfd23be4acfbd7d53ee",
+      "frozen_references": []
+    },
+    {
+      "path": "tests/__pycache__/test_review.cpython-313-pytest-8.3.4.pyc",
+      "absolute_path": "E:\\Projects\\Baidu\\Ecommerce-Content-Retrieval\\tests\\__pycache__\\test_review.cpython-313-pytest-8.3.4.pyc",
+      "bytes": 5215,
+      "sha256": "d068ef800cf1e9b567248fde991a14bd43f75875b1ea85f53c4e187a46d41067",
+      "frozen_references": []
+    },
+    {
+      "path": "tests/__pycache__/test_review.cpython-313.pyc",
+      "absolute_path": "E:\\Projects\\Baidu\\Ecommerce-Content-Retrieval\\tests\\__pycache__\\test_review.cpython-313.pyc",
+      "bytes": 5102,
+      "sha256": "c03e890392c2371b69610fd1b16ef8b29d1816631622eb27d32070c621ce69be",
+      "frozen_references": []
+    }
+  ],
+  "target_count": 49,
+  "total_bytes": 595319,
+  "reference_hits": [],
+  "authorized_prior_change": ".gitignore: ignore /Colab迁移指南.md",
+  "model_calls": 0,
+  "training_runs": 0,
+  "test_runs": 0,
+  "holdout_content_opened": false,
+  "execution": {
+    "deleted_files": 49,
+    "deleted_bytes": 595319,
+    "deleted_directories": 0,
+    "recursive_delete": false,
+    "archive_files_moved_or_deleted": 0,
+    "initial_sandbox_attempt_deleted": 7,
+    "controlled_escalation_deleted": 42,
+    "acl_changed": false,
+    "recycle_bin": false,
+    "recovery": "Caches can be regenerated by Python/pytest; original cache bytes are not backed up."
+  }
+}

@@ -1,0 +1,1411 @@
+{
+  "version": "lora_qlora_low_memory_smoke_v1",
+  "scope": "engineering_smoke_only",
+  "started_at_utc": "2026-10-04T05:31:30.746656+00:00",
+  "status": "passed",
+  "guards": {
+    "formal_training": false,
+    "full_epoch_over_p5_train": false,
+    "project_validation_used": false,
+    "project_test_used": false,
+    "rag_v2_holdout_used": false,
+    "p5_data_mutation_allowed": false,
+    "effect_evaluation_allowed": false
+  },
+  "protected_hashes_before": {
+    "data/processed/lora_instruction_data_v1/train.jsonl": "c31b00f3d19d503b3f7c7529cc2ce7e115143214b0d9ab40f07412becd6a5434",
+    "data/processed/lora_instruction_data_v1/validation.jsonl": "20a32d5f67a8ac6dd0743bb90445522fe28cd4099ed318e71a4f0e8e33fa0a94",
+    "reports/generation/lora/lora_instruction_data_v1_final_manifest.json": "e21b9f278dbe533f038008840bce313564e702b6b5ff7ba5e0f8714156814a5d",
+    "reports/generation/rag/rag_v2_generation_output_holdout_v1.json": "31fae8cbfc53e0f5ef3329cbee6812963b36ddf48e61858d8d9f65fa17ff8da1",
+    "configs/lora_qlora_smoke_v1.json": "fbb3ba16a2dd9c1bc183d738fa93f3b7d55b6b6418c6b83a5e6fbade89a1e92c",
+    "scripts/run_qlora_smoke.py": "26de32d05db70d6e3b9d8c1c40dedf3886f961f740b445959d545433561a28fe"
+  },
+  "environment": {
+    "python": "3.10.21 | packaged by Anaconda, Inc. | (main, Aug 27 2026, 14:35:39) [MSC v.1942 64 bit (AMD64)]",
+    "cuda": "13.0",
+    "gpu": "NVIDIA GeForce RTX 4070 Laptop GPU",
+    "bf16_supported": true,
+    "packages": {
+      "torch": "2.12.0+cu130",
+      "transformers": "5.16.1",
+      "peft": "0.21.1",
+      "bitsandbytes": "0.50.2",
+      "accelerate": "1.14.0"
+    }
+  },
+  "pip_check": {
+    "returncode": 0,
+    "stdout": "No broken requirements found.\n",
+    "stderr": ""
+  },
+  "data": {
+    "split": "lora_train",
+    "all_train_records_tokenized": 3618,
+    "truncation": false,
+    "max_sequence_length": 320,
+    "all_train_max_tokens": 249,
+    "smoke_products": [
+      {
+        "category_l2": "保温杯",
+        "product_id": "563530713946"
+      },
+      {
+        "category_l2": "垃圾桶",
+        "product_id": "616082475147"
+      },
+      {
+        "category_l2": "拖把",
+        "product_id": "581934839340"
+      },
+      {
+        "category_l2": "收纳箱",
+        "product_id": "567783459700"
+      },
+      {
+        "category_l2": "移动电源",
+        "product_id": "590007457808"
+      },
+      {
+        "category_l2": "耳机",
+        "product_id": "571560325386"
+      },
+      {
+        "category_l2": "键盘",
+        "product_id": "584641469378"
+      },
+      {
+        "category_l2": "鼠标",
+        "product_id": "622308119511"
+      }
+    ],
+    "smoke_records": [
+      {
+        "product_id": "563530713946",
+        "task_type": "title",
+        "sequence_tokens": 192
+      },
+      {
+        "product_id": "563530713946",
+        "task_type": "selling_points",
+        "sequence_tokens": 205
+      },
+      {
+        "product_id": "563530713946",
+        "task_type": "short_description",
+        "sequence_tokens": 223
+      },
+      {
+        "product_id": "616082475147",
+        "task_type": "title",
+        "sequence_tokens": 117
+      },
+      {
+        "product_id": "616082475147",
+        "task_type": "selling_points",
+        "sequence_tokens": 131
+      },
+      {
+        "product_id": "616082475147",
+        "task_type": "short_description",
+        "sequence_tokens": 133
+      },
+      {
+        "product_id": "581934839340",
+        "task_type": "title",
+        "sequence_tokens": 136
+      },
+      {
+        "product_id": "581934839340",
+        "task_type": "selling_points",
+        "sequence_tokens": 140
+      },
+      {
+        "product_id": "581934839340",
+        "task_type": "short_description",
+        "sequence_tokens": 151
+      },
+      {
+        "product_id": "567783459700",
+        "task_type": "title",
+        "sequence_tokens": 132
+      },
+      {
+        "product_id": "567783459700",
+        "task_type": "selling_points",
+        "sequence_tokens": 142
+      },
+      {
+        "product_id": "567783459700",
+        "task_type": "short_description",
+        "sequence_tokens": 155
+      },
+      {
+        "product_id": "590007457808",
+        "task_type": "title",
+        "sequence_tokens": 121
+      },
+      {
+        "product_id": "590007457808",
+        "task_type": "selling_points",
+        "sequence_tokens": 133
+      },
+      {
+        "product_id": "590007457808",
+        "task_type": "short_description",
+        "sequence_tokens": 139
+      },
+      {
+        "product_id": "571560325386",
+        "task_type": "title",
+        "sequence_tokens": 140
+      },
+      {
+        "product_id": "571560325386",
+        "task_type": "selling_points",
+        "sequence_tokens": 157
+      },
+      {
+        "product_id": "571560325386",
+        "task_type": "short_description",
+        "sequence_tokens": 164
+      },
+      {
+        "product_id": "584641469378",
+        "task_type": "title",
+        "sequence_tokens": 148
+      },
+      {
+        "product_id": "584641469378",
+        "task_type": "selling_points",
+        "sequence_tokens": 160
+      },
+      {
+        "product_id": "584641469378",
+        "task_type": "short_description",
+        "sequence_tokens": 172
+      },
+      {
+        "product_id": "622308119511",
+        "task_type": "title",
+        "sequence_tokens": 142
+      },
+      {
+        "product_id": "622308119511",
+        "task_type": "selling_points",
+        "sequence_tokens": 154
+      },
+      {
+        "product_id": "622308119511",
+        "task_type": "short_description",
+        "sequence_tokens": 167
+      }
+    ],
+    "stress_records": [
+      {
+        "product_id": "558448633117",
+        "category_l2": "保温杯",
+        "task_type": "short_description",
+        "sequence_tokens": 249,
+        "supervised_tokens": 71
+      },
+      {
+        "product_id": "565379787445",
+        "category_l2": "保温杯",
+        "task_type": "short_description",
+        "sequence_tokens": 249,
+        "supervised_tokens": 72
+      },
+      {
+        "product_id": "558550605843",
+        "category_l2": "保温杯",
+        "task_type": "short_description",
+        "sequence_tokens": 247,
+        "supervised_tokens": 70
+      },
+      {
+        "product_id": "587776118547",
+        "category_l2": "保温杯",
+        "task_type": "short_description",
+        "sequence_tokens": 247,
+        "supervised_tokens": 70
+      },
+      {
+        "product_id": "599150978006",
+        "category_l2": "保温杯",
+        "task_type": "short_description",
+        "sequence_tokens": 247,
+        "supervised_tokens": 71
+      },
+      {
+        "product_id": "603000266496",
+        "category_l2": "保温杯",
+        "task_type": "short_description",
+        "sequence_tokens": 243,
+        "supervised_tokens": 68
+      },
+      {
+        "product_id": "605308510885",
+        "category_l2": "保温杯",
+        "task_type": "short_description",
+        "sequence_tokens": 243,
+        "supervised_tokens": 69
+      },
+      {
+        "product_id": "581345676955",
+        "category_l2": "保温杯",
+        "task_type": "short_description",
+        "sequence_tokens": 241,
+        "supervised_tokens": 67
+      }
+    ]
+  },
+  "model": {
+    "name": "Qwen/Qwen2.5-7B-Instruct",
+    "revision": "a09a35458c702b33eeacc393d103063234e8bc28",
+    "cache_dir": "../.model-cache/huggingface/hub",
+    "local_files_only": true,
+    "load_in_4bit": true,
+    "bnb_4bit_quant_type": "nf4",
+    "bnb_4bit_use_double_quant": true,
+    "bnb_4bit_compute_dtype": "bfloat16",
+    "actual_load_path": "E:\\Projects\\Baidu\\.model-cache\\huggingface\\hub\\models--Qwen--Qwen2.5-7B-Instruct\\snapshots\\a09a35458c702b33eeacc393d103063234e8bc28",
+    "network_access": false
+  },
+  "lora": {
+    "task_type": "CAUSAL_LM",
+    "target_modules": [
+      "q_proj",
+      "v_proj"
+    ],
+    "r": 8,
+    "lora_alpha": 32,
+    "lora_dropout": 0.05,
+    "bias": "none",
+    "trainable_parameters": 2523136
+  },
+  "precision_loss_validation": {
+    "storage_changes": [
+      {
+        "layer": "input_embedding",
+        "before_dtype": "torch.float32",
+        "after_dtype": "torch.bfloat16",
+        "parameters": 544997376,
+        "saved_bytes": 1089994752,
+        "requires_grad": false
+      },
+      {
+        "layer": "output_head",
+        "before_dtype": "torch.float32",
+        "after_dtype": "torch.bfloat16",
+        "parameters": 544997376,
+        "saved_bytes": 1089994752,
+        "requires_grad": false
+      }
+    ],
+    "before_cast_loss": 0.8745776414871216,
+    "after_cast_loss": 0.8883368968963623,
+    "before_cast_loss_source": "reports/generation/lora/p6_low_memory_smoke_v1_retry1/smoke_report.json",
+    "before_cast_source_sha256": "7a8d62e8f1b4738c372c5d4aeba368cd51d4fc4bd956ee0ac68e9d9b761605c7",
+    "cpu_staged_initialization_matches_verified_bf16_loss": true,
+    "precision_absolute_loss_delta": 0.013759255409240723,
+    "dense_loss": 0.8883368968963623,
+    "dense_chunk_absolute_loss_delta": 0.0,
+    "actual_lora_gradient_max_absolute_delta": 0.0,
+    "actual_lora_gradient_relative_l2": 0.0,
+    "actual_lora_gradient_close": true,
+    "validation_memory": {
+      "allocated_mib": 5328.7,
+      "reserved_mib": 7510.0,
+      "peak_allocated_mib": 7394.1,
+      "peak_reserved_mib": 7510.0
+    }
+  },
+  "smoke24": {
+    "micro_steps": 24,
+    "optimizer_steps": 3,
+    "finite_loss_and_gradients": true,
+    "seconds": 13.073938699999871,
+    "steps": [
+      {
+        "micro_step": 1,
+        "sequence_tokens": 192,
+        "loss": 0.8883368968963623,
+        "seconds": 0.5578635000001668,
+        "allocated_mib": 5338.3,
+        "reserved_mib": 5746.0,
+        "peak_allocated_mib": 5591.1,
+        "peak_reserved_mib": 5746.0
+      },
+      {
+        "micro_step": 2,
+        "sequence_tokens": 205,
+        "loss": 0.9021652936935425,
+        "seconds": 0.5818925999997191,
+        "allocated_mib": 5338.3,
+        "reserved_mib": 5750.0,
+        "peak_allocated_mib": 5611.1,
+        "peak_reserved_mib": 5750.0
+      },
+      {
+        "micro_step": 3,
+        "sequence_tokens": 223,
+        "loss": 0.9809136986732483,
+        "seconds": 0.5925832000002629,
+        "allocated_mib": 5338.3,
+        "reserved_mib": 5750.0,
+        "peak_allocated_mib": 5623.3,
+        "peak_reserved_mib": 5750.0
+      },
+      {
+        "micro_step": 4,
+        "sequence_tokens": 117,
+        "loss": 3.264375925064087,
+        "seconds": 0.40386149999994814,
+        "allocated_mib": 5338.3,
+        "reserved_mib": 5752.0,
+        "peak_allocated_mib": 5623.3,
+        "peak_reserved_mib": 5752.0
+      },
+      {
+        "micro_step": 5,
+        "sequence_tokens": 131,
+        "loss": 2.091423749923706,
+        "seconds": 0.5275385999998434,
+        "allocated_mib": 5338.3,
+        "reserved_mib": 5752.0,
+        "peak_allocated_mib": 5623.3,
+        "peak_reserved_mib": 5752.0
+      },
+      {
+        "micro_step": 6,
+        "sequence_tokens": 133,
+        "loss": 1.6374282836914062,
+        "seconds": 0.5217781000001196,
+        "allocated_mib": 5338.3,
+        "reserved_mib": 5752.0,
+        "peak_allocated_mib": 5623.3,
+        "peak_reserved_mib": 5752.0
+      },
+      {
+        "micro_step": 7,
+        "sequence_tokens": 136,
+        "loss": 0.5542152523994446,
+        "seconds": 0.513422300000002,
+        "allocated_mib": 5338.3,
+        "reserved_mib": 5752.0,
+        "peak_allocated_mib": 5623.3,
+        "peak_reserved_mib": 5752.0
+      },
+      {
+        "micro_step": 8,
+        "sequence_tokens": 140,
+        "loss": 2.387526035308838,
+        "seconds": 0.5845681999999215,
+        "allocated_mib": 5347.9,
+        "reserved_mib": 5772.0,
+        "peak_allocated_mib": 5623.3,
+        "peak_reserved_mib": 5772.0
+      },
+      {
+        "micro_step": 9,
+        "sequence_tokens": 151,
+        "loss": 0.9310821890830994,
+        "seconds": 0.5474582000001647,
+        "allocated_mib": 5357.5,
+        "reserved_mib": 5772.0,
+        "peak_allocated_mib": 5623.3,
+        "peak_reserved_mib": 5772.0
+      },
+      {
+        "micro_step": 10,
+        "sequence_tokens": 132,
+        "loss": 2.4614057540893555,
+        "seconds": 0.5494318000000931,
+        "allocated_mib": 5357.5,
+        "reserved_mib": 5772.0,
+        "peak_allocated_mib": 5623.3,
+        "peak_reserved_mib": 5772.0
+      },
+      {
+        "micro_step": 11,
+        "sequence_tokens": 142,
+        "loss": 1.8291925191879272,
+        "seconds": 0.5510998999998264,
+        "allocated_mib": 5357.5,
+        "reserved_mib": 5772.0,
+        "peak_allocated_mib": 5623.3,
+        "peak_reserved_mib": 5772.0
+      },
+      {
+        "micro_step": 12,
+        "sequence_tokens": 155,
+        "loss": 1.1886842250823975,
+        "seconds": 0.5606293999999252,
+        "allocated_mib": 5357.5,
+        "reserved_mib": 5772.0,
+        "peak_allocated_mib": 5623.3,
+        "peak_reserved_mib": 5772.0
+      },
+      {
+        "micro_step": 13,
+        "sequence_tokens": 121,
+        "loss": 1.4395354986190796,
+        "seconds": 0.41489240000009886,
+        "allocated_mib": 5357.5,
+        "reserved_mib": 5772.0,
+        "peak_allocated_mib": 5623.3,
+        "peak_reserved_mib": 5772.0
+      },
+      {
+        "micro_step": 14,
+        "sequence_tokens": 133,
+        "loss": 1.8368867635726929,
+        "seconds": 0.5457722999999532,
+        "allocated_mib": 5357.5,
+        "reserved_mib": 5772.0,
+        "peak_allocated_mib": 5623.3,
+        "peak_reserved_mib": 5772.0
+      },
+      {
+        "micro_step": 15,
+        "sequence_tokens": 139,
+        "loss": 0.8107637166976929,
+        "seconds": 0.5529233000002023,
+        "allocated_mib": 5357.5,
+        "reserved_mib": 5772.0,
+        "peak_allocated_mib": 5623.3,
+        "peak_reserved_mib": 5772.0
+      },
+      {
+        "micro_step": 16,
+        "sequence_tokens": 140,
+        "loss": 1.763833999633789,
+        "seconds": 0.5710933999998815,
+        "allocated_mib": 5347.9,
+        "reserved_mib": 5772.0,
+        "peak_allocated_mib": 5623.3,
+        "peak_reserved_mib": 5772.0
+      },
+      {
+        "micro_step": 17,
+        "sequence_tokens": 157,
+        "loss": 1.0803993940353394,
+        "seconds": 0.561882400000286,
+        "allocated_mib": 5357.5,
+        "reserved_mib": 5772.0,
+        "peak_allocated_mib": 5623.3,
+        "peak_reserved_mib": 5772.0
+      },
+      {
+        "micro_step": 18,
+        "sequence_tokens": 164,
+        "loss": 1.4045871496200562,
+        "seconds": 0.5737569999996595,
+        "allocated_mib": 5357.5,
+        "reserved_mib": 5772.0,
+        "peak_allocated_mib": 5623.3,
+        "peak_reserved_mib": 5772.0
+      },
+      {
+        "micro_step": 19,
+        "sequence_tokens": 148,
+        "loss": 0.8774550557136536,
+        "seconds": 0.5567120999999133,
+        "allocated_mib": 5357.5,
+        "reserved_mib": 5772.0,
+        "peak_allocated_mib": 5623.3,
+        "peak_reserved_mib": 5772.0
+      },
+      {
+        "micro_step": 20,
+        "sequence_tokens": 160,
+        "loss": 1.8219966888427734,
+        "seconds": 0.5665246000003208,
+        "allocated_mib": 5357.5,
+        "reserved_mib": 5772.0,
+        "peak_allocated_mib": 5623.3,
+        "peak_reserved_mib": 5772.0
+      },
+      {
+        "micro_step": 21,
+        "sequence_tokens": 172,
+        "loss": 1.202510952949524,
+        "seconds": 0.5509789000002456,
+        "allocated_mib": 5357.5,
+        "reserved_mib": 5772.0,
+        "peak_allocated_mib": 5623.3,
+        "peak_reserved_mib": 5772.0
+      },
+      {
+        "micro_step": 22,
+        "sequence_tokens": 142,
+        "loss": 2.275085926055908,
+        "seconds": 0.5425955000000613,
+        "allocated_mib": 5357.5,
+        "reserved_mib": 5772.0,
+        "peak_allocated_mib": 5623.3,
+        "peak_reserved_mib": 5772.0
+      },
+      {
+        "micro_step": 23,
+        "sequence_tokens": 154,
+        "loss": 1.3314974308013916,
+        "seconds": 0.5595247999999629,
+        "allocated_mib": 5357.5,
+        "reserved_mib": 5772.0,
+        "peak_allocated_mib": 5623.3,
+        "peak_reserved_mib": 5772.0
+      },
+      {
+        "micro_step": 24,
+        "sequence_tokens": 167,
+        "loss": 1.2060744762420654,
+        "seconds": 0.5736560000000281,
+        "allocated_mib": 5347.9,
+        "reserved_mib": 5772.0,
+        "peak_allocated_mib": 5623.3,
+        "peak_reserved_mib": 5772.0
+      }
+    ],
+    "memory": {
+      "allocated_mib": 5347.9,
+      "reserved_mib": 5772.0,
+      "peak_allocated_mib": 5623.3,
+      "peak_reserved_mib": 5772.0
+    },
+    "optimizer_boundary_snapshots": [
+      {
+        "micro_step": 8,
+        "sequence_tokens": 140,
+        "loss": 2.387526035308838,
+        "seconds": 0.5845681999999215,
+        "allocated_mib": 5347.9,
+        "reserved_mib": 5772.0,
+        "peak_allocated_mib": 5623.3,
+        "peak_reserved_mib": 5772.0
+      },
+      {
+        "micro_step": 16,
+        "sequence_tokens": 140,
+        "loss": 1.763833999633789,
+        "seconds": 0.5710933999998815,
+        "allocated_mib": 5347.9,
+        "reserved_mib": 5772.0,
+        "peak_allocated_mib": 5623.3,
+        "peak_reserved_mib": 5772.0
+      },
+      {
+        "micro_step": 24,
+        "sequence_tokens": 167,
+        "loss": 1.2060744762420654,
+        "seconds": 0.5736560000000281,
+        "allocated_mib": 5347.9,
+        "reserved_mib": 5772.0,
+        "peak_allocated_mib": 5623.3,
+        "peak_reserved_mib": 5772.0
+      }
+    ],
+    "median_micro_step_seconds": 0.5548177000000578,
+    "optimizer_changed_parameters": true
+  },
+  "longest_stress": {
+    "micro_steps": 64,
+    "optimizer_steps": 8,
+    "finite_loss_and_gradients": true,
+    "seconds": 38.398345399999926,
+    "steps": [
+      {
+        "micro_step": 1,
+        "sequence_tokens": 249,
+        "loss": 0.746872067451477,
+        "seconds": 0.6049473000002763,
+        "allocated_mib": 5357.5,
+        "reserved_mib": 5772.0,
+        "peak_allocated_mib": 5652.7,
+        "peak_reserved_mib": 5772.0
+      },
+      {
+        "micro_step": 2,
+        "sequence_tokens": 249,
+        "loss": 0.6454159617424011,
+        "seconds": 0.5981164999998327,
+        "allocated_mib": 5357.5,
+        "reserved_mib": 5772.0,
+        "peak_allocated_mib": 5662.3,
+        "peak_reserved_mib": 5772.0
+      },
+      {
+        "micro_step": 3,
+        "sequence_tokens": 247,
+        "loss": 0.7914679646492004,
+        "seconds": 0.6094509999998081,
+        "allocated_mib": 5357.5,
+        "reserved_mib": 5772.0,
+        "peak_allocated_mib": 5662.3,
+        "peak_reserved_mib": 5772.0
+      },
+      {
+        "micro_step": 4,
+        "sequence_tokens": 247,
+        "loss": 0.7525985836982727,
+        "seconds": 0.619556300000113,
+        "allocated_mib": 5357.5,
+        "reserved_mib": 5772.0,
+        "peak_allocated_mib": 5662.3,
+        "peak_reserved_mib": 5772.0
+      },
+      {
+        "micro_step": 5,
+        "sequence_tokens": 247,
+        "loss": 0.6886345148086548,
+        "seconds": 0.6040917999998783,
+        "allocated_mib": 5357.5,
+        "reserved_mib": 5772.0,
+        "peak_allocated_mib": 5662.3,
+        "peak_reserved_mib": 5772.0
+      },
+      {
+        "micro_step": 6,
+        "sequence_tokens": 243,
+        "loss": 0.7652164101600647,
+        "seconds": 0.5994117000000188,
+        "allocated_mib": 5357.5,
+        "reserved_mib": 5772.0,
+        "peak_allocated_mib": 5662.3,
+        "peak_reserved_mib": 5772.0
+      },
+      {
+        "micro_step": 7,
+        "sequence_tokens": 243,
+        "loss": 0.7014170289039612,
+        "seconds": 0.6289403000000675,
+        "allocated_mib": 5357.5,
+        "reserved_mib": 5772.0,
+        "peak_allocated_mib": 5662.3,
+        "peak_reserved_mib": 5772.0
+      },
+      {
+        "micro_step": 8,
+        "sequence_tokens": 241,
+        "loss": 0.7781943678855896,
+        "seconds": 0.6208008999997219,
+        "allocated_mib": 5347.9,
+        "reserved_mib": 5772.0,
+        "peak_allocated_mib": 5662.3,
+        "peak_reserved_mib": 5772.0
+      },
+      {
+        "micro_step": 9,
+        "sequence_tokens": 249,
+        "loss": 0.4642484784126282,
+        "seconds": 0.6041623999999501,
+        "allocated_mib": 5357.5,
+        "reserved_mib": 5772.0,
+        "peak_allocated_mib": 5662.3,
+        "peak_reserved_mib": 5772.0
+      },
+      {
+        "micro_step": 10,
+        "sequence_tokens": 249,
+        "loss": 0.3740973472595215,
+        "seconds": 0.6058118999999351,
+        "allocated_mib": 5357.5,
+        "reserved_mib": 5772.0,
+        "peak_allocated_mib": 5662.3,
+        "peak_reserved_mib": 5772.0
+      },
+      {
+        "micro_step": 11,
+        "sequence_tokens": 247,
+        "loss": 0.4993593394756317,
+        "seconds": 0.6111424000000625,
+        "allocated_mib": 5357.5,
+        "reserved_mib": 5772.0,
+        "peak_allocated_mib": 5662.3,
+        "peak_reserved_mib": 5772.0
+      },
+      {
+        "micro_step": 12,
+        "sequence_tokens": 247,
+        "loss": 0.459969162940979,
+        "seconds": 0.6171116000000438,
+        "allocated_mib": 5357.5,
+        "reserved_mib": 5772.0,
+        "peak_allocated_mib": 5662.3,
+        "peak_reserved_mib": 5772.0
+      },
+      {
+        "micro_step": 13,
+        "sequence_tokens": 247,
+        "loss": 0.3940708339214325,
+        "seconds": 0.6143277999999555,
+        "allocated_mib": 5357.5,
+        "reserved_mib": 5772.0,
+        "peak_allocated_mib": 5662.3,
+        "peak_reserved_mib": 5772.0
+      },
+      {
+        "micro_step": 14,
+        "sequence_tokens": 243,
+        "loss": 0.5173535943031311,
+        "seconds": 0.6078652000001057,
+        "allocated_mib": 5357.5,
+        "reserved_mib": 5772.0,
+        "peak_allocated_mib": 5662.3,
+        "peak_reserved_mib": 5772.0
+      },
+      {
+        "micro_step": 15,
+        "sequence_tokens": 243,
+        "loss": 0.4042733907699585,
+        "seconds": 0.6202514000001429,
+        "allocated_mib": 5357.5,
+        "reserved_mib": 5772.0,
+        "peak_allocated_mib": 5662.3,
+        "peak_reserved_mib": 5772.0
+      },
+      {
+        "micro_step": 16,
+        "sequence_tokens": 241,
+        "loss": 0.467415988445282,
+        "seconds": 0.6159778000001097,
+        "allocated_mib": 5347.9,
+        "reserved_mib": 5772.0,
+        "peak_allocated_mib": 5662.3,
+        "peak_reserved_mib": 5772.0
+      },
+      {
+        "micro_step": 17,
+        "sequence_tokens": 249,
+        "loss": 0.2955106794834137,
+        "seconds": 0.5977333999999246,
+        "allocated_mib": 5357.5,
+        "reserved_mib": 5772.0,
+        "peak_allocated_mib": 5662.3,
+        "peak_reserved_mib": 5772.0
+      },
+      {
+        "micro_step": 18,
+        "sequence_tokens": 249,
+        "loss": 0.2438778579235077,
+        "seconds": 0.5984337999998388,
+        "allocated_mib": 5357.5,
+        "reserved_mib": 5772.0,
+        "peak_allocated_mib": 5662.3,
+        "peak_reserved_mib": 5772.0
+      },
+      {
+        "micro_step": 19,
+        "sequence_tokens": 247,
+        "loss": 0.3035219609737396,
+        "seconds": 0.6065571999997701,
+        "allocated_mib": 5357.5,
+        "reserved_mib": 5772.0,
+        "peak_allocated_mib": 5662.3,
+        "peak_reserved_mib": 5772.0
+      },
+      {
+        "micro_step": 20,
+        "sequence_tokens": 247,
+        "loss": 0.28711166977882385,
+        "seconds": 0.6072736000000987,
+        "allocated_mib": 5357.5,
+        "reserved_mib": 5772.0,
+        "peak_allocated_mib": 5662.3,
+        "peak_reserved_mib": 5772.0
+      },
+      {
+        "micro_step": 21,
+        "sequence_tokens": 247,
+        "loss": 0.24289853870868683,
+        "seconds": 0.5864181000001736,
+        "allocated_mib": 5357.5,
+        "reserved_mib": 5772.0,
+        "peak_allocated_mib": 5662.3,
+        "peak_reserved_mib": 5772.0
+      },
+      {
+        "micro_step": 22,
+        "sequence_tokens": 243,
+        "loss": 0.28110265731811523,
+        "seconds": 0.5820276999997986,
+        "allocated_mib": 5357.5,
+        "reserved_mib": 5772.0,
+        "peak_allocated_mib": 5662.3,
+        "peak_reserved_mib": 5772.0
+      },
+      {
+        "micro_step": 23,
+        "sequence_tokens": 243,
+        "loss": 0.24732446670532227,
+        "seconds": 0.5842468000000736,
+        "allocated_mib": 5357.5,
+        "reserved_mib": 5772.0,
+        "peak_allocated_mib": 5662.3,
+        "peak_reserved_mib": 5772.0
+      },
+      {
+        "micro_step": 24,
+        "sequence_tokens": 241,
+        "loss": 0.2752515971660614,
+        "seconds": 0.6541391999999178,
+        "allocated_mib": 5347.9,
+        "reserved_mib": 5772.0,
+        "peak_allocated_mib": 5662.3,
+        "peak_reserved_mib": 5772.0
+      },
+      {
+        "micro_step": 25,
+        "sequence_tokens": 249,
+        "loss": 0.19183731079101562,
+        "seconds": 0.590005900000051,
+        "allocated_mib": 5357.5,
+        "reserved_mib": 5772.0,
+        "peak_allocated_mib": 5662.3,
+        "peak_reserved_mib": 5772.0
+      },
+      {
+        "micro_step": 26,
+        "sequence_tokens": 249,
+        "loss": 0.18016672134399414,
+        "seconds": 0.5985657000001083,
+        "allocated_mib": 5357.5,
+        "reserved_mib": 5772.0,
+        "peak_allocated_mib": 5662.3,
+        "peak_reserved_mib": 5772.0
+      },
+      {
+        "micro_step": 27,
+        "sequence_tokens": 247,
+        "loss": 0.19994156062602997,
+        "seconds": 0.6012830999998187,
+        "allocated_mib": 5357.5,
+        "reserved_mib": 5772.0,
+        "peak_allocated_mib": 5662.3,
+        "peak_reserved_mib": 5772.0
+      },
+      {
+        "micro_step": 28,
+        "sequence_tokens": 247,
+        "loss": 0.19272257387638092,
+        "seconds": 0.6215649999999187,
+        "allocated_mib": 5357.5,
+        "reserved_mib": 5772.0,
+        "peak_allocated_mib": 5662.3,
+        "peak_reserved_mib": 5772.0
+      },
+      {
+        "micro_step": 29,
+        "sequence_tokens": 247,
+        "loss": 0.1761486977338791,
+        "seconds": 0.5996028999998089,
+        "allocated_mib": 5357.5,
+        "reserved_mib": 5772.0,
+        "peak_allocated_mib": 5662.3,
+        "peak_reserved_mib": 5772.0
+      },
+      {
+        "micro_step": 30,
+        "sequence_tokens": 243,
+        "loss": 0.19975703954696655,
+        "seconds": 0.5879285000000891,
+        "allocated_mib": 5357.5,
+        "reserved_mib": 5772.0,
+        "peak_allocated_mib": 5662.3,
+        "peak_reserved_mib": 5772.0
+      },
+      {
+        "micro_step": 31,
+        "sequence_tokens": 243,
+        "loss": 0.17741261422634125,
+        "seconds": 0.5826775999998972,
+        "allocated_mib": 5357.5,
+        "reserved_mib": 5772.0,
+        "peak_allocated_mib": 5662.3,
+        "peak_reserved_mib": 5772.0
+      },
+      {
+        "micro_step": 32,
+        "sequence_tokens": 241,
+        "loss": 0.1887732744216919,
+        "seconds": 0.6096630999995796,
+        "allocated_mib": 5347.9,
+        "reserved_mib": 5772.0,
+        "peak_allocated_mib": 5662.3,
+        "peak_reserved_mib": 5772.0
+      },
+      {
+        "micro_step": 33,
+        "sequence_tokens": 249,
+        "loss": 0.14249925315380096,
+        "seconds": 0.5925742999997965,
+        "allocated_mib": 5357.5,
+        "reserved_mib": 5772.0,
+        "peak_allocated_mib": 5662.3,
+        "peak_reserved_mib": 5772.0
+      },
+      {
+        "micro_step": 34,
+        "sequence_tokens": 249,
+        "loss": 0.14865660667419434,
+        "seconds": 0.5864430999999968,
+        "allocated_mib": 5357.5,
+        "reserved_mib": 5772.0,
+        "peak_allocated_mib": 5662.3,
+        "peak_reserved_mib": 5772.0
+      },
+      {
+        "micro_step": 35,
+        "sequence_tokens": 247,
+        "loss": 0.15498362481594086,
+        "seconds": 0.583093899999767,
+        "allocated_mib": 5357.5,
+        "reserved_mib": 5772.0,
+        "peak_allocated_mib": 5662.3,
+        "peak_reserved_mib": 5772.0
+      },
+      {
+        "micro_step": 36,
+        "sequence_tokens": 247,
+        "loss": 0.149010568857193,
+        "seconds": 0.5982614999998077,
+        "allocated_mib": 5357.5,
+        "reserved_mib": 5772.0,
+        "peak_allocated_mib": 5662.3,
+        "peak_reserved_mib": 5772.0
+      },
+      {
+        "micro_step": 37,
+        "sequence_tokens": 247,
+        "loss": 0.14471597969532013,
+        "seconds": 0.5960877000002256,
+        "allocated_mib": 5357.5,
+        "reserved_mib": 5772.0,
+        "peak_allocated_mib": 5662.3,
+        "peak_reserved_mib": 5772.0
+      },
+      {
+        "micro_step": 38,
+        "sequence_tokens": 243,
+        "loss": 0.15385021269321442,
+        "seconds": 0.5846183999997265,
+        "allocated_mib": 5357.5,
+        "reserved_mib": 5772.0,
+        "peak_allocated_mib": 5662.3,
+        "peak_reserved_mib": 5772.0
+      },
+      {
+        "micro_step": 39,
+        "sequence_tokens": 243,
+        "loss": 0.1422889083623886,
+        "seconds": 0.5843379000002642,
+        "allocated_mib": 5357.5,
+        "reserved_mib": 5772.0,
+        "peak_allocated_mib": 5662.3,
+        "peak_reserved_mib": 5772.0
+      },
+      {
+        "micro_step": 40,
+        "sequence_tokens": 241,
+        "loss": 0.14529640972614288,
+        "seconds": 0.6007463000000826,
+        "allocated_mib": 5347.9,
+        "reserved_mib": 5772.0,
+        "peak_allocated_mib": 5662.3,
+        "peak_reserved_mib": 5772.0
+      },
+      {
+        "micro_step": 41,
+        "sequence_tokens": 249,
+        "loss": 0.10698551684617996,
+        "seconds": 0.6015022999999928,
+        "allocated_mib": 5357.5,
+        "reserved_mib": 5772.0,
+        "peak_allocated_mib": 5662.3,
+        "peak_reserved_mib": 5772.0
+      },
+      {
+        "micro_step": 42,
+        "sequence_tokens": 249,
+        "loss": 0.1189328283071518,
+        "seconds": 0.5930272000000514,
+        "allocated_mib": 5357.5,
+        "reserved_mib": 5772.0,
+        "peak_allocated_mib": 5662.3,
+        "peak_reserved_mib": 5772.0
+      },
+      {
+        "micro_step": 43,
+        "sequence_tokens": 247,
+        "loss": 0.1180831640958786,
+        "seconds": 0.5875060999997004,
+        "allocated_mib": 5357.5,
+        "reserved_mib": 5772.0,
+        "peak_allocated_mib": 5662.3,
+        "peak_reserved_mib": 5772.0
+      },
+      {
+        "micro_step": 44,
+        "sequence_tokens": 247,
+        "loss": 0.11491791903972626,
+        "seconds": 0.597212799999852,
+        "allocated_mib": 5357.5,
+        "reserved_mib": 5772.0,
+        "peak_allocated_mib": 5662.3,
+        "peak_reserved_mib": 5772.0
+      },
+      {
+        "micro_step": 45,
+        "sequence_tokens": 247,
+        "loss": 0.11470642685890198,
+        "seconds": 0.5962490000001708,
+        "allocated_mib": 5357.5,
+        "reserved_mib": 5772.0,
+        "peak_allocated_mib": 5662.3,
+        "peak_reserved_mib": 5772.0
+      },
+      {
+        "micro_step": 46,
+        "sequence_tokens": 243,
+        "loss": 0.1227709949016571,
+        "seconds": 0.5890897000003861,
+        "allocated_mib": 5357.5,
+        "reserved_mib": 5772.0,
+        "peak_allocated_mib": 5662.3,
+        "peak_reserved_mib": 5772.0
+      },
+      {
+        "micro_step": 47,
+        "sequence_tokens": 243,
+        "loss": 0.11789924651384354,
+        "seconds": 0.5889581000001272,
+        "allocated_mib": 5357.5,
+        "reserved_mib": 5772.0,
+        "peak_allocated_mib": 5662.3,
+        "peak_reserved_mib": 5772.0
+      },
+      {
+        "micro_step": 48,
+        "sequence_tokens": 241,
+        "loss": 0.11259643733501434,
+        "seconds": 0.5980773999999656,
+        "allocated_mib": 5347.9,
+        "reserved_mib": 5772.0,
+        "peak_allocated_mib": 5662.3,
+        "peak_reserved_mib": 5772.0
+      },
+      {
+        "micro_step": 49,
+        "sequence_tokens": 249,
+        "loss": 0.08524525165557861,
+        "seconds": 0.6089882999999645,
+        "allocated_mib": 5357.5,
+        "reserved_mib": 5772.0,
+        "peak_allocated_mib": 5662.3,
+        "peak_reserved_mib": 5772.0
+      },
+      {
+        "micro_step": 50,
+        "sequence_tokens": 249,
+        "loss": 0.09356138855218887,
+        "seconds": 0.6094774000002872,
+        "allocated_mib": 5357.5,
+        "reserved_mib": 5772.0,
+        "peak_allocated_mib": 5662.3,
+        "peak_reserved_mib": 5772.0
+      },
+      {
+        "micro_step": 51,
+        "sequence_tokens": 247,
+        "loss": 0.08890644460916519,
+        "seconds": 0.5985054000002492,
+        "allocated_mib": 5357.5,
+        "reserved_mib": 5772.0,
+        "peak_allocated_mib": 5662.3,
+        "peak_reserved_mib": 5772.0
+      },
+      {
+        "micro_step": 52,
+        "sequence_tokens": 247,
+        "loss": 0.08808761090040207,
+        "seconds": 0.5943581999999878,
+        "allocated_mib": 5357.5,
+        "reserved_mib": 5772.0,
+        "peak_allocated_mib": 5662.3,
+        "peak_reserved_mib": 5772.0
+      },
+      {
+        "micro_step": 53,
+        "sequence_tokens": 247,
+        "loss": 0.08767308294773102,
+        "seconds": 0.6021548999997322,
+        "allocated_mib": 5357.5,
+        "reserved_mib": 5772.0,
+        "peak_allocated_mib": 5662.3,
+        "peak_reserved_mib": 5772.0
+      },
+      {
+        "micro_step": 54,
+        "sequence_tokens": 243,
+        "loss": 0.0896984115242958,
+        "seconds": 0.5858539999999266,
+        "allocated_mib": 5357.5,
+        "reserved_mib": 5772.0,
+        "peak_allocated_mib": 5662.3,
+        "peak_reserved_mib": 5772.0
+      },
+      {
+        "micro_step": 55,
+        "sequence_tokens": 243,
+        "loss": 0.09271121025085449,
+        "seconds": 0.5820808999997098,
+        "allocated_mib": 5357.5,
+        "reserved_mib": 5772.0,
+        "peak_allocated_mib": 5662.3,
+        "peak_reserved_mib": 5772.0
+      },
+      {
+        "micro_step": 56,
+        "sequence_tokens": 241,
+        "loss": 0.08599618822336197,
+        "seconds": 0.5940232000002652,
+        "allocated_mib": 5347.9,
+        "reserved_mib": 5772.0,
+        "peak_allocated_mib": 5662.3,
+        "peak_reserved_mib": 5772.0
+      },
+      {
+        "micro_step": 57,
+        "sequence_tokens": 249,
+        "loss": 0.06406070291996002,
+        "seconds": 0.5841292999998586,
+        "allocated_mib": 5357.5,
+        "reserved_mib": 5772.0,
+        "peak_allocated_mib": 5662.3,
+        "peak_reserved_mib": 5772.0
+      },
+      {
+        "micro_step": 58,
+        "sequence_tokens": 249,
+        "loss": 0.06913697719573975,
+        "seconds": 0.5942451000000801,
+        "allocated_mib": 5357.5,
+        "reserved_mib": 5772.0,
+        "peak_allocated_mib": 5662.3,
+        "peak_reserved_mib": 5772.0
+      },
+      {
+        "micro_step": 59,
+        "sequence_tokens": 247,
+        "loss": 0.06921923160552979,
+        "seconds": 0.5864203999999518,
+        "allocated_mib": 5357.5,
+        "reserved_mib": 5772.0,
+        "peak_allocated_mib": 5662.3,
+        "peak_reserved_mib": 5772.0
+      },
+      {
+        "micro_step": 60,
+        "sequence_tokens": 247,
+        "loss": 0.06900235265493393,
+        "seconds": 0.5961591999998745,
+        "allocated_mib": 5357.5,
+        "reserved_mib": 5772.0,
+        "peak_allocated_mib": 5662.3,
+        "peak_reserved_mib": 5772.0
+      },
+      {
+        "micro_step": 61,
+        "sequence_tokens": 247,
+        "loss": 0.06833695620298386,
+        "seconds": 0.5891489000000547,
+        "allocated_mib": 5357.5,
+        "reserved_mib": 5772.0,
+        "peak_allocated_mib": 5662.3,
+        "peak_reserved_mib": 5772.0
+      },
+      {
+        "micro_step": 62,
+        "sequence_tokens": 243,
+        "loss": 0.07522799074649811,
+        "seconds": 0.5876121999999668,
+        "allocated_mib": 5357.5,
+        "reserved_mib": 5772.0,
+        "peak_allocated_mib": 5662.3,
+        "peak_reserved_mib": 5772.0
+      },
+      {
+        "micro_step": 63,
+        "sequence_tokens": 243,
+        "loss": 0.06682075560092926,
+        "seconds": 0.5814602999998897,
+        "allocated_mib": 5357.5,
+        "reserved_mib": 5772.0,
+        "peak_allocated_mib": 5662.3,
+        "peak_reserved_mib": 5772.0
+      },
+      {
+        "micro_step": 64,
+        "sequence_tokens": 241,
+        "loss": 0.06402968615293503,
+        "seconds": 0.5957827000001998,
+        "allocated_mib": 5347.9,
+        "reserved_mib": 5772.0,
+        "peak_allocated_mib": 5662.3,
+        "peak_reserved_mib": 5772.0
+      }
+    ],
+    "memory": {
+      "allocated_mib": 5347.9,
+      "reserved_mib": 5772.0,
+      "peak_allocated_mib": 5662.3,
+      "peak_reserved_mib": 5772.0
+    },
+    "optimizer_boundary_snapshots": [
+      {
+        "micro_step": 8,
+        "sequence_tokens": 241,
+        "loss": 0.7781943678855896,
+        "seconds": 0.6208008999997219,
+        "allocated_mib": 5347.9,
+        "reserved_mib": 5772.0,
+        "peak_allocated_mib": 5662.3,
+        "peak_reserved_mib": 5772.0
+      },
+      {
+        "micro_step": 16,
+        "sequence_tokens": 241,
+        "loss": 0.467415988445282,
+        "seconds": 0.6159778000001097,
+        "allocated_mib": 5347.9,
+        "reserved_mib": 5772.0,
+        "peak_allocated_mib": 5662.3,
+        "peak_reserved_mib": 5772.0
+      },
+      {
+        "micro_step": 24,
+        "sequence_tokens": 241,
+        "loss": 0.2752515971660614,
+        "seconds": 0.6541391999999178,
+        "allocated_mib": 5347.9,
+        "reserved_mib": 5772.0,
+        "peak_allocated_mib": 5662.3,
+        "peak_reserved_mib": 5772.0
+      },
+      {
+        "micro_step": 32,
+        "sequence_tokens": 241,
+        "loss": 0.1887732744216919,
+        "seconds": 0.6096630999995796,
+        "allocated_mib": 5347.9,
+        "reserved_mib": 5772.0,
+        "peak_allocated_mib": 5662.3,
+        "peak_reserved_mib": 5772.0
+      },
+      {
+        "micro_step": 40,
+        "sequence_tokens": 241,
+        "loss": 0.14529640972614288,
+        "seconds": 0.6007463000000826,
+        "allocated_mib": 5347.9,
+        "reserved_mib": 5772.0,
+        "peak_allocated_mib": 5662.3,
+        "peak_reserved_mib": 5772.0
+      },
+      {
+        "micro_step": 48,
+        "sequence_tokens": 241,
+        "loss": 0.11259643733501434,
+        "seconds": 0.5980773999999656,
+        "allocated_mib": 5347.9,
+        "reserved_mib": 5772.0,
+        "peak_allocated_mib": 5662.3,
+        "peak_reserved_mib": 5772.0
+      },
+      {
+        "micro_step": 56,
+        "sequence_tokens": 241,
+        "loss": 0.08599618822336197,
+        "seconds": 0.5940232000002652,
+        "allocated_mib": 5347.9,
+        "reserved_mib": 5772.0,
+        "peak_allocated_mib": 5662.3,
+        "peak_reserved_mib": 5772.0
+      },
+      {
+        "micro_step": 64,
+        "sequence_tokens": 241,
+        "loss": 0.06402968615293503,
+        "seconds": 0.5957827000001998,
+        "allocated_mib": 5347.9,
+        "reserved_mib": 5772.0,
+        "peak_allocated_mib": 5662.3,
+        "peak_reserved_mib": 5772.0
+      }
+    ],
+    "median_micro_step_seconds": 0.5980969499998992,
+    "allocated_growth_after_optimizer_warmup_mib": 0.0,
+    "memory_growth_pass": true
+  },
+  "adapter": {
+    "path": "artifacts/lora/p6_low_memory_smoke_v1_retry2/adapter",
+    "files": [
+      {
+        "path": "artifacts/lora/p6_low_memory_smoke_v1_retry2/adapter/adapter_config.json",
+        "bytes": 1262,
+        "sha256": "e2b82fe411b779d95322c2207d1245b9c4b171650456f0c483c481ac666aa3fe"
+      },
+      {
+        "path": "artifacts/lora/p6_low_memory_smoke_v1_retry2/adapter/adapter_model.safetensors",
+        "bytes": 10107280,
+        "sha256": "1010a44f1b4296033508aea48300b9f69aea7ed7e0149eeb5e6037d1075cf45e"
+      },
+      {
+        "path": "artifacts/lora/p6_low_memory_smoke_v1_retry2/adapter/README.md",
+        "bytes": 5416,
+        "sha256": "1e733fc9176aa2816149a3a7fed36957c44659aeb390ec251dc9051be6ba2fc6"
+      }
+    ],
+    "formal_training_initialization_allowed": false,
+    "reload_succeeded": true,
+    "weights_identical": true,
+    "saved_loss": 0.20592254400253296,
+    "reloaded_loss": 0.20592254400253296
+  },
+  "headroom": {
+    "telemetry_available": true,
+    "minimum_sampled_device_free_mib": 1364.0,
+    "maximum_sampled_process_shared_mib": 88.0,
+    "passed": true,
+    "thresholds": {
+      "selection": "top_8_lora_train_records_by_token_length_then_product_id_task_type",
+      "records": 8,
+      "repeats": 8,
+      "micro_steps": 64,
+      "optimizer_steps": 8,
+      "max_allocated_growth_mib": 128,
+      "minimum_sampled_device_free_mib": 512,
+      "maximum_sampled_process_shared_mib": 128
+    },
+    "including_initialization_reload_passed": false,
+    "all_phases_minimum_sampled_device_free_mib": 61.0,
+    "all_phases_maximum_sampled_process_shared_mib": 504.0,
+    "sampling_not_instantaneous_peak_proof": true
+  },
+  "protected_hashes_after": {
+    "data/processed/lora_instruction_data_v1/train.jsonl": "c31b00f3d19d503b3f7c7529cc2ce7e115143214b0d9ab40f07412becd6a5434",
+    "data/processed/lora_instruction_data_v1/validation.jsonl": "20a32d5f67a8ac6dd0743bb90445522fe28cd4099ed318e71a4f0e8e33fa0a94",
+    "reports/generation/lora/lora_instruction_data_v1_final_manifest.json": "e21b9f278dbe533f038008840bce313564e702b6b5ff7ba5e0f8714156814a5d",
+    "reports/generation/rag/rag_v2_generation_output_holdout_v1.json": "31fae8cbfc53e0f5ef3329cbee6812963b36ddf48e61858d8d9f65fa17ff8da1",
+    "configs/lora_qlora_smoke_v1.json": "fbb3ba16a2dd9c1bc183d738fa93f3b7d55b6b6418c6b83a5e6fbade89a1e92c",
+    "scripts/run_qlora_smoke.py": "26de32d05db70d6e3b9d8c1c40dedf3886f961f740b445959d545433561a28fe"
+  },
+  "completed_at_utc": "2026-10-04T05:32:47.503431+00:00",
+  "engineering_pass": true,
+  "formal_configuration_ready_for_review": false,
+  "config_sha256": "f744c8bd3f1e96bf35d0d9aff298d93a538bd00ef850de5b565493b85edac8b2",
+  "code_sha256": {
+    "scripts/run_qlora_low_memory_smoke.py": "e1ecedb642ffefb673e337aa7c4dbfa560901bc2dbf5d34874341f6ec23d8db0",
+    "src/generation/qlora_memory.py": "9b4d9a72248dca51ec825d18b05833af3a0f3f8f1bb7b3b8a3a3c4767323f848"
+  }
+}

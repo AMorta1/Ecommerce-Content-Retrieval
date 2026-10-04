@@ -1,0 +1,234 @@
+{
+  "status": "human_review_pending_NOT_FINAL",
+  "versions": {
+    "LoRA_control": {
+      "products": 100,
+      "task_parse_success": {
+        "title": 100,
+        "selling_points": 99,
+        "short_description": 100
+      },
+      "assembled_structure_success": 99,
+      "literal_core_coverage_NOT_HUMAN": {
+        "matched": 493,
+        "denominator": 625,
+        "rate": 0.7888
+      },
+      "latency_seconds": {
+        "title": {
+          "mean": 1.1901300630001423,
+          "p95": 2.031343654999546,
+          "max": 2.2169994000032602
+        },
+        "selling_points": {
+          "mean": 1.5936684820001028,
+          "p95": 2.4613087950003316,
+          "max": 2.794176299998071
+        },
+        "short_description": {
+          "mean": 2.2106843890001984,
+          "p95": 3.2952246400005603,
+          "max": 4.060579900000448
+        },
+        "three_task_total": {
+          "mean": 4.994482934000444,
+          "p95": 7.8753187799980875,
+          "max": 8.59382469999764
+        }
+      },
+      "retrieval_selection_mean_seconds": 0.0,
+      "empty_tasks": 0,
+      "max_token_tasks": 0,
+      "claim_suspect_samples_NOT_FACTUAL_RATE": 4,
+      "number_suspect_samples_NOT_FACTUAL_RATE": 1,
+      "grounding_pass_NOT_HUMAN": 98,
+      "peak_allocated_mib": 5507.4,
+      "peak_reserved_mib": 5636.0,
+      "input_tokens_mean": 126.25666666666666,
+      "input_tokens_max": 177,
+      "mandatory_core_injection_per_task": {
+        "expected": 0,
+        "verified": 0,
+        "rate": null
+      },
+      "by_category": {
+        "保温杯": {
+          "products": 13,
+          "literal_matched": 65,
+          "core_denominator": 101
+        },
+        "垃圾桶": {
+          "products": 12,
+          "literal_matched": 60,
+          "core_denominator": 69
+        },
+        "拖把": {
+          "products": 12,
+          "literal_matched": 54,
+          "core_denominator": 62
+        },
+        "收纳箱": {
+          "products": 13,
+          "literal_matched": 57,
+          "core_denominator": 81
+        },
+        "移动电源": {
+          "products": 12,
+          "literal_matched": 54,
+          "core_denominator": 77
+        },
+        "耳机": {
+          "products": 13,
+          "literal_matched": 63,
+          "core_denominator": 76
+        },
+        "键盘": {
+          "products": 13,
+          "literal_matched": 83,
+          "core_denominator": 85
+        },
+        "鼠标": {
+          "products": 12,
+          "literal_matched": 57,
+          "core_denominator": 74
+        }
+      },
+      "effect_scope_suspect_samples_REVIEW_ONLY": 3,
+      "scenario_suspect_samples_REVIEW_ONLY": 15,
+      "range_suspect_samples_REVIEW_ONLY": 0
+    },
+    "LoRA_RAG": {
+      "products": 100,
+      "task_parse_success": {
+        "title": 100,
+        "selling_points": 99,
+        "short_description": 100
+      },
+      "assembled_structure_success": 99,
+      "literal_core_coverage_NOT_HUMAN": {
+        "matched": 472,
+        "denominator": 625,
+        "rate": 0.7552
+      },
+      "latency_seconds": {
+        "title": {
+          "mean": 1.432746119999647,
+          "p95": 2.123562999998466,
+          "max": 2.4678664000020945
+        },
+        "selling_points": {
+          "mean": 1.881394071000177,
+          "p95": 2.8667770799977004,
+          "max": 3.729734599997755
+        },
+        "short_description": {
+          "mean": 2.239510693000193,
+          "p95": 3.5708351900033444,
+          "max": 4.274791299998469
+        },
+        "three_task_total": {
+          "mean": 5.553650884000017,
+          "p95": 8.773445459999493,
+          "max": 9.950133699996513
+        },
+        "three_task_plus_retrieval": {
+          "mean": 5.55385770300054,
+          "p95": 8.773612589997356,
+          "max": 9.950307799997972
+        },
+        "three_task_plus_retrieval_and_preflight": {
+          "mean": 5.561951086000408,
+          "p95": 8.782881125006316,
+          "max": 9.960825300004217
+        }
+      },
+      "retrieval_selection_mean_seconds": 0.0002068190005229553,
+      "empty_tasks": 0,
+      "max_token_tasks": 0,
+      "claim_suspect_samples_NOT_FACTUAL_RATE": 3,
+      "number_suspect_samples_NOT_FACTUAL_RATE": 0,
+      "grounding_pass_NOT_HUMAN": 100,
+      "peak_allocated_mib": 5692.1,
+      "peak_reserved_mib": 5936.0,
+      "input_tokens_mean": 544.6366666666667,
+      "input_tokens_max": 832,
+      "mandatory_core_injection_per_task": {
+        "expected": 1050,
+        "verified": 1050,
+        "rate": 1.0
+      },
+      "by_category": {
+        "保温杯": {
+          "products": 13,
+          "literal_matched": 65,
+          "core_denominator": 101
+        },
+        "垃圾桶": {
+          "products": 12,
+          "literal_matched": 54,
+          "core_denominator": 69
+        },
+        "拖把": {
+          "products": 12,
+          "literal_matched": 54,
+          "core_denominator": 62
+        },
+        "收纳箱": {
+          "products": 13,
+          "literal_matched": 56,
+          "core_denominator": 81
+        },
+        "移动电源": {
+          "products": 12,
+          "literal_matched": 53,
+          "core_denominator": 77
+        },
+        "耳机": {
+          "products": 13,
+          "literal_matched": 60,
+          "core_denominator": 76
+        },
+        "键盘": {
+          "products": 13,
+          "literal_matched": 74,
+          "core_denominator": 85
+        },
+        "鼠标": {
+          "products": 12,
+          "literal_matched": 56,
+          "core_denominator": 74
+        }
+      },
+      "effect_scope_suspect_samples_REVIEW_ONLY": 5,
+      "scenario_suspect_samples_REVIEW_ONLY": 11,
+      "range_suspect_samples_REVIEW_ONLY": 0
+    }
+  },
+  "statistics": {
+    "products": 100,
+    "by_category": {
+      "移动电源": 12,
+      "耳机": 13,
+      "键盘": 13,
+      "鼠标": 12,
+      "保温杯": 13,
+      "垃圾桶": 12,
+      "拖把": 12,
+      "收纳箱": 13
+    },
+    "original_core_denominator": 625,
+    "source_quality": {
+      "REVIEW": 11,
+      "PASS": 84,
+      "CONFLICT": 5
+    },
+    "original_input_core_fields": 567,
+    "mandatory_core_facts_per_product_sum": 350,
+    "identity_core_facts_sum": 162,
+    "max_input_tokens": 832
+  },
+  "human_metrics": null,
+  "human_preferences": null,
+  "test_history_disclosure": "原冻结test100此前已用于Baseline、RAG及Base/LoRA评测，并已被观察。本次为用户批准的追加固定组合版本正式对照，不是新的未观察盲测；A/B仅表示版本匿名。组合内容在读取本轮test输出前冻结，无论结果好坏只归档，不修改后重跑。",
+  "historical_control_latency": true
+}

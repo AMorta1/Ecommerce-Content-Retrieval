@@ -1,186 +1,105 @@
-# 检索人工评测说明
+# 统一评测协议与结果使用说明
 
-## 当前状态
+本文件更新原检索评测说明，作为最终统一入口。**冻结实验协议/人工标签/指标不修改，不重跑formal test或holdout**；原逐次protocol仍是精确执行证据。
 
-当前评测版本是 `week1_v3_validation_pool_v1`：
+## 1. 四个集合及freeze原则
 
-- 从 validation 的 200 件商品中检索。
-- 24 条中文查询，覆盖 8 个二级品类，每类 3 条。
-- 每条查询保留前 20 个候选，共 480 行。
-- 480 条候选已经全部完成人工复核，当前不存在空标签或 AI 初标标记。
+| 名称 | 角色 | 是否更新模型参数 |
+|---|---|---|
+| lora_train | 原训练侧P5，1,206商品/3,618任务 | 是，仅已完成训练 |
+| lora_train_dev | 同训练侧内部134商品/402任务 | 否，完整dev loss监控和epoch-end best选择 |
+| project_validation | 原冻结200商品，模型候选效果验证 | 否；开发使用，不等于内部LoRA dev |
+| project_test | 原冻结200商品；生成选固定100，检索选固定50查询 | 否；结果不回流调参 |
 
-validation 开发基线已经生成：Precision@10 为 49.58%，pooled Recall@10 为 67.08%，MRR@10 为 73.70%，NDCG@10 为 63.53%。这个候选池用于开发阶段定位问题；独立 test50 已经固定并完成人工标注和正式评测。
+P5内部90/10不替代项目8:1:1，不另建test。训练选best仅用lora_train_dev，不用project_validation/test。P7两个模型均生成project_validation200商品×3task；人工在看质量前按8类、固定seed冻结quick32，不宣称200件全人审。组合development24是已观察开发样本，非未观察holdout。
 
-PRD 要求的 test50 已生成 50 条短查询和 1,200 行相关性标注表。当前 v3 在首次正式 test 指标产生前，经用户确认，又从冻结 test200 中换选了两件经人工复核发现没有相关候选的查询商品。其余 48 条查询和 1,152 行人工标签保留；新查询的 48 行也已由用户复核，全部 1,200 行无 AI 初标。正式 test50 指标已生成；validation24 是开发评测，不能与 test50 指标混为一谈。
+test100在Baseline/RAG等历史阶段已被观察；组合为用户批准的追加固定test100对照，不是新的未观察盲测。test未用于LoRA参数更新不等于没有测试集复用/信息影响后续方案的风险。所有版本有独立输出、标签和manifest，结果无论好坏只归档；禁止看bad case改Prompt后重跑同一test。
 
-## 正式 test50 如何评测
+RAG v2 32条generation-output holdout保持frozen_not_executed；P1已审计其静态字段，不能说字段分布未观察。本轮不打开清单、不运行；组合不是原P3晋级。
 
-从冻结 test200 中按一级品类各 25 条、八个二级品类各 6–7 条选出 50 件真实商品。文本检索使用“品类 + 2–3 个有来源支撑的关键需求”组成的短查询，图片检索使用对应商品图片；完整标题只作为审核依据，不直接充当文本查询。两条与 validation 同型号的商品没有被选为查询；人工检查另排除了容量信息冲突的移动电源、“单卖拖把杆”和“垃圾分类玩具”三个不合格查询，但没有删除或移动任何 test 数据。
+## 2. 生成正式人工三指标
 
-v2 在正式 test 指标产生前，按用户确认的方案换选了三件查询商品，测试商品库与其余 47 条查询不变。换选依据是候选库中是否存在与真实购物需求相符的其他商品，不按模型排名或得分挑选：
+按组装完整商品文案（title+selling_points+short_description）评分，三个task不是三个独立商品样本。
 
-| 二级品类 | 原查询商品 ID | 新查询商品 ID | 新查询文字 | 排除自身后明确相关的候选示例 |
-| --- | --- | --- | --- | --- |
-| 鼠标 | 2859211238 | 616260230702 | 无线静音游戏鼠标 | 589051188248、603883041023 |
-| 移动电源 | 586356111871 | 580312751243 | 便携的10000mAh充电宝 | 561811479895、608112359232 |
-| 收纳箱 | 594880547645 | 614994023079 | 可折叠布艺衣物收纳箱 | 592466909805、613643802588 |
+| 字段 | 冻结判断口径 | 汇总公式 |
+|---|---|---|
+| matched_attribute_count | 原冻结核心清单中，在全文任意位置正确表达的字段数量；同义/正常格式可计，失真不计；同字段重复不重复计 | sum(matched)/sum(core_attribute_count) |
+| fluency_pass | 整份文案是否语法可读、逻辑自然；0/1。格式解析单独统计，事实错误单独判断 | 通过商品数 / 已完成人工商品数 |
+| factual_error_count | 对照同商品完整、可可靠支持的源属性，统计矛盾或新增无来源事实的独立错误点；跨任务重复去重 | 错误样本率=count(error>0)/N；平均错误=sum(error)/N |
 
-v2 的三个新查询曾做标题、属性、图片和检索预检，并已随其余 48 条查询完成人工相关性复核。随后发现其中两条其他查询的 24 件同品类候选均被人工判为 0，无法计算完整 Recall，故在正式指标产生前更新为 v3：
+正式test100分母625，不能因P5/RAG撤回字段、源REVIEW/CONFLICT、空输入或输出解析失败删商品/改分母。自动字面命中不能直接复制为人审命中。一个源表达明确同时满足两个同义核心字段时可分别计字段命中，例如摇盖式对应垃圾桶类型/开合方式；不要求为了标签重复制造文字。
 
-| 二级品类 | 原查询商品 ID | 新查询商品 ID | 新查询文字 | 排除自身后的相关候选示例 |
-| --- | --- | --- | --- | --- |
-| 收纳箱 | 567224681575 | 540395966499 | 带盖塑料衣物收纳箱 | 24497168737、608516760684 |
-| 垃圾桶 | 610066713169 | 619501332263 | 按压式带盖垃圾桶 | 576150055638、583581714600 |
+事实性不只按Top3或实际输入子集：未注入但完整可靠源明确支持的表述，不机械算幻觉；同时应记录是否遵守输入边界。源自身错误/歧义不自动算模型新增错误，不作外部商品真值宣称。unsupported evaluation/effect/scenario、数值/范围失真、身份错误按证据复核，不以单个关键词机械定罪。
 
-v3 两条新查询已核对标题、属性和商品图片，并在同二级品类测试候选中找到上述可能相关商品；这不是正式模型指标，相关性仍以人工标注为准。原两条零相关查询的 48 行标注留在 `reports/retrieval/test_evaluation/superseded_query_judgments_v2.csv` 供追溯，不参与 v3 评测。测试商品库及其余 48 条查询未变。
+允许不新增具体事实的品类直接语义/正常释义；没有来源的具体人群、场景、效果、因果强化仍计错。范围含/不含、兼容集合、数量、品牌/型号角色必须保持原义。比如源“塑料”不支持环保/耐用，源范围6小时含至12小时不含不支持12小时定值。边界例子须写证据及裁决，CT053“适用范围：家庭清洁”按本次用户最终确认保留严格评分。
 
-第一步先审核 50 条文本查询：
+**格式失败与事实错误独立**：区块提示泄漏、空身份字典、字段堆叠可导致结构/通顺不合格，但没有明确新增商品事实时不能直接算事实错误；0个事实错误也不表示输出合格。
 
-~~~text
-reports/retrieval/test_evaluation/query_review.csv
-~~~
+来源实现：src/generation/evaluation.py、lora_validation_review.py:official_metrics及各正式review validator。旧Baseline四指标还有category_style_pass，后续三任务正式口径不临时增加该字段作为门槛。
 
-查询审核表中只允许修改：
+## 3. RAG正式归因与自动诊断
 
-- `query_text`：不自然或属性不准确时修改。
-- `review_query_ok`：确认可用后填 `1`。
-- `review_notes`：可选，记录修改原因。
+RAG v1 formal记录：
+- source_fact_quality_count：源问题，单列，不计模型事实错误。
+- grounding_failure_count：提供的可信事实/约束被矛盾或失真表达。
+- unsupported_generation_count：新增无来源参数/效果/场景。
+- supported_paraphrase_count：有事实支持的释义，不计错。
+- factual_error_count=grounding_failure_count+unsupported_generation_count，原正式配置不改。
 
-不要修改商品编号、品类、原始标题、属性和图片路径。当前 v3 的 50 条查询均已确认，冻结清单中的审核表哈希也已同步，无需再次运行确认命令。只有以后经讨论修改查询审核表时，才运行下面的命令更新哈希；它不会重建已有标注：
+Grounding PASS/FAIL是冻结validator结果，不能直接推事实错误率。检出的评价/效果/场景/数值词是人审线索；源有支持可能false positive，规则没检出也可能漏报。mandatory实际输入完整率只衡量输入供给，不是输出覆盖率。
 
-~~~powershell
-python scripts/prepare_test_retrieval_evaluation.py --confirm-review
-~~~
+分母须分开：静态category×field机会、实际存在核心事实、实际期待Mandatory事实、正式core_attribute_count。源missing不计Mandatory失败；任何token截断/缺失必须报错，不容许完整率100%的伪记录。
 
-如果想修改查询文字，先沟通并同步更新查询清单、标注表和版本。当前 v3 查询清单及标注表已生成，不要在现有目录重新运行 `--finalize`；若从干净副本重建，在 50 条全部确认后运行：
+## 4. 公平对照、匿名偏好与评审来源
 
-~~~powershell
-python scripts/prepare_test_retrieval_evaluation.py --finalize
-~~~
+Base/LoRA：同输入、同task Prompt/chat template、同max tokens/decoding/逐商品逐任务seed，唯一模型变量为adapter加载。旧一调用Baseline不可直接对照三任务LoRA归因。
 
-程序随后生成正式查询清单 `configs/retrieval_test_queries.jsonl`、冻结清单 `reports/retrieval/test_evaluation/manifest.json`，以及相关性标注表：
+LoRA/LoRA+RAG：固定同一adapter及三任务设置，处理差异是四区上下文+必要system接口适配。不是纯检索单因素因果实验；control文本复用历史冻结输出，原旧标签不导入，配对评审重新进行。
 
-~~~text
-reports/retrieval/test_evaluation/relevance_judgments.csv
-~~~
+四维匿名偏好：title_quality、selling_points_structure、short_description_naturalness、overall_ecommerce_professionalism，每项A更好/B更好/持平。先保存blind_summary.json，再使用封存映射解盲。各维度独立：结构规范不等于自然度更高，事实保守不自动等于标题质量更好；不能仅凭核心命中数量写表达偏好理由。
 
-每个 test 二级品类有 25 件商品。查询商品自身不参与排名，所以每条查询需要判断其余 24 件同品类商品，共 `50 × 24 = 1,200` 行。跨二级品类商品依据标准品类直接视为不相关，不需要人工重复检查，最终 Recall 的分母不再局限于检索 Top20 候选池。
+五项诊断：field_stacking、mechanical_template、unsupported_evaluation_effect_scenario、numeric_range_distortion、identity_category_error；不替代正式三指标。非零诊断/事实错误需写定位依据。所有行review_confirmed=1且reviewer非空才正式汇总，AI初审的确认标记不得自动替代用户最终确认。
 
-填写时只修改：
+本项目后期为ChatGPT初审+Codex修正+用户最终确认，不是两个独立真人评审；A/B隐去名称但展示的输入区块可能透露条件，不称严格双盲。Excel ID按文本保留，CSV使用UTF-8 BOM或XLSX，不编辑固定source/output/hidden mapping。
 
-- `relevance_grade`：必填，填写 0、1 或 2，含义与下文一致。
-- `review_notes`：可选，存在关键属性或用途冲突时简短说明。
+同一LoRA输出在两次评审语境可出现标签差异：LoRA-only正式为1%错误样本/5错误；组合配对control为2%/5错误。两者是不同冻结复核结果，不表明重新生成，不覆盖旧标签，也不能择优挑一个充当新实验对照。报告必须连同错误计数分组及边界裁决说明保留。
 
-两条新查询及其余 48 条查询的全部 1,200 行现已由用户人工复核，无空标签或“AI初标”。不要修改查询、商品编号、顺序、标题、属性和图片路径。正式结果已生成；当前目录不要重复运行下面的命令，因为脚本会拒绝覆盖已有指标和排名：
+## 5. 检索标签和指标
 
-~~~powershell
-python scripts/evaluate_test_retrieval.py
-~~~
+validation24查询，每条Top20候选共480行人工判断；没有全库标注，因此只报告pooled Recall@10。test50在固定test200候选库，排除query自身，每条全24件同二级品类候选，50×24=1,200标签；跨二级品类按冻结标准记0。它是冻结评测设定下的完整分母，不等于在任意电商商品全库穷尽相关性。
 
-程序会拒绝 `review_query_ok` 未确认、审核表哈希未更新、空标签和带有“AI初标”标记的结果，然后按纯跨模态 Baseline 分别计算“文本查询→商品图片索引”和“图片查询→商品文本索引”的完整 Precision@10、Recall@10、MRR@10 与 NDCG@10，并按一级、二级品类拆分。当前正式结果：文本搜图片 P@10 43.60%、R@10 61.22%；图片搜文本 P@10 45.40%、R@10 62.68%。两种模式均低于 PRD 参考目标 P@10 55%、R@10 65%，后续应做 Bad Case 分析，不应为了提高分数更换测试查询。正式配置位于 `configs/retrieval_test_evaluation.json`；冻结清单和结果记录了查询、标注、数据及索引的哈希。
+| relevance_grade | 定义 |
+|---|---|
+| 2 | 品类正确且满足主要属性与用途 |
+| 1 | 核心品类正确，部分满足且不违背最关键条件 |
+| 0 | 品类错误或明确关键条件冲突 |
 
-## 需要填写的文件
+正相关threshold=1。每条查询：
+- P@K=TopK正相关数/K。
+- R@K=TopK正相关数/全部已定义候选中正相关数；validation只在pool中定义分母。
+- MRR@K=首个正相关名次倒数，TopK无相关则0。
+- DCG=sum((2^grade-1)/log2(rank+1))，NDCG=DCG/理想按全标注grade排序的DCG。
+- 最终整体及品类取逐查询宏平均，不按商品数或标签行数加权。
 
-用 Excel 打开：
+实现src/retrieval/evaluation.py（pool）及formal_evaluation.py（test）；P/R为PRD核心，MRR/NDCG为冻结补充排序指标。纯跨模态策略要求T→I图片库、I→T文本库，正式test候选仅test200，不能偷偷换融合特征。
 
-~~~text
-reports/retrieval/evaluation/annotation_pool.csv
-~~~
+test查询v2三处、v3两处替换发生于首次正式指标前，经用户确认，理由为查询有效性/相关候选可得性；test200不变，旧48行标签另留。不要描述成原始完全随机且没有审核干预的独立样本；当前query/标签已冻结，不再换选或扩大后改正式指标。
 
-人工复核时只修改最后两列：
+## 6. 入口定位、hash关系和停止保护
 
-- `relevance_grade`：必填，只能是 0、1 或 2。
-- `review_notes`：可选，用于记录用途、材质、规格冲突或修改原因。
+| 用途 | 实际脚本 | 状态 |
+|---|---|---|
+| 生成Baseline | scripts/generate.py | FINAL/RECOMMENDED；仅新非正式输出可演示，默认会覆盖同名文件 |
+| 生成Baseline/RAG人工指标 | scripts/evaluate_generation.py | FINAL；config选择具体口径；本轮不执行写正式metrics |
+| RAG v1 formal生成 | scripts/run_rag_formal_test.py | FINAL，已完成单次test100，禁止重跑 |
+| 三任务Base/LoRA test | scripts/run_lora_project_test.py | FINAL，prepare/generate/archive/summarize均是有状态工作流，已完成 |
+| LoRA+RAG追加test | scripts/run_lora_rag_project_test.py | FINAL，已完成生成与汇总，不再次运行 |
+| validation人审/quick32 | scripts/review_lora_project_validation*.py | EXPERIMENT，开发证据 |
+| 检索pool指标 | scripts/evaluate_retrieval.py | EXPERIMENT，validation开发；不冒充test |
+| 检索test50 | scripts/evaluate_test_retrieval.py | FINAL，已完成，禁止重跑 |
+| rerank test50 | scripts/run_retrieval_rerank_formal_test.py | FINAL，已完成，禁止重跑 |
+| 静态交付核对 | scripts/audit_delivery.py | 第一轮无模型静态核对；批准缓存清理后的保护检查见reports/delivery/cache_cleanup_verification.json，不重写原baseline |
 
-不要修改 `query_id`、`candidate_rank`、`product_id` 等结构字段。`title` 是标题，`candidate_attributes` 只展示与当前查询有关的来源属性，`image_path` 是本地商品图片。
+追溯顺序：最终报告 → 最终metrics/人工标签 → final manifest/checksums → protocol/config/真实代码字节 → 数据/adapter/model元数据/环境hash。当前Git HEAD不能代表未提交文件；独立工作区hash与代码快照必须同时交付。
 
-`product_id` 是长数字字符串，Excel 保存 CSV 时可能将它变成科学计数法并改坏末尾数字。每次保存后可运行：
-
-~~~powershell
-python scripts/repair_csv.py reports/retrieval/evaluation/annotation_pool.csv
-~~~
-
-如果脚本报告错误，再根据同一行图片文件名恢复：
-
-~~~powershell
-python scripts/repair_csv.py --repair reports/retrieval/evaluation/annotation_pool.csv
-~~~
-
-修复不会清空人工标签。评测代码也会拦截商品编号和图片文件名不一致的表。
-
-## 0、1、2 如何判断
-
-| 标签 | 含义 | 判断方法 |
-| --- | --- | --- |
-| 2 | 高度相关 | 品类正确，并满足查询的主要属性和用途 |
-| 1 | 部分相关 | 核心品类正确，只满足部分要求，且没有明确违背最关键条件 |
-| 0 | 不相关 | 品类错误，或与关键要求明确冲突 |
-
-例如查询“USB 接口有线机械键盘”：
-
-- USB、有线、机械键盘：2。
-- 是有线键盘，但无法确认是否机械键盘：1。
-- 无线或蓝牙键盘，与“有线”冲突：0。
-- 鼠标、耳机等错误品类：0。
-
-如果标题、属性和图片互相矛盾，不要自行猜测。只是不确定可填 1 并写明冲突；关键条件明确相反则填 0。
-
-## AI 辅助初标的保护机制
-
-如果将来生成新的 AI 辅助初标，程序会通过 `review_notes` 中的“AI初标”标记阻止正式评测。只查看临时趋势时必须显式增加参数：
-
-~~~powershell
-python scripts/evaluate_retrieval.py --allow-assistant-draft
-~~~
-
-生成的报告会写明 AI 初标数量，只能用于初步分析，不能作为 PRD 达标结论。当前版本已经完成人工复核，不需要使用这个参数。
-
-## 完成人工复核后计算正式指标
-
-~~~powershell
-python scripts/evaluate_retrieval.py
-~~~
-
-默认命令会拒绝空标签和“AI初标”标记。当前正式结果生成于：
-
-~~~text
-reports/retrieval/evaluation/baseline_metrics.json
-~~~
-
-指标包括：
-
-- Precision@10：前 10 个结果中标签为 1 或 2 的比例。
-- pooled Recall@10：前 10 个结果覆盖了候选池中多少相关商品。
-- MRR@10：第一个相关结果出现得有多靠前。
-- NDCG@10：同时考虑排名位置和 0/1/2 相关程度。
-
-## 为什么只能叫 pooled Recall
-
-目前只人工判断每条查询的前 20 个候选，没有判断 validation 全部 200 件商品。因此不知道完整商品库里究竟有多少相关商品，Recall 的分母只能使用这 20 个候选中被判相关的商品数。
-
-加入类别重排或新模型后，应把新方案 Top-20 中未出现过的商品追加到共同候选池，再补充人工标签。所有方案在同一个扩充候选池上重新计算，才是公平对比。不能把候选池 Recall 包装成覆盖全库的正式 Recall。
-
-## 重新生成候选池
-
-当前表已经包含人工填写内容，正常情况下不要重新生成。脚本检测到已有表时会拒绝覆盖。只有创建了新的评测版本和新输出路径后，才运行：
-
-~~~powershell
-python scripts/prepare_retrieval_evaluation.py
-~~~
-
-评测版本、查询文件、候选深度和输出位置统一配置在 `configs/retrieval_evaluation.json`。
-
-## 质量要求
-
-- 正式汇报前，本人应快速复核 24 条查询是否像真实购物表达。
-- 最理想是两人独立标注并检查一致性；四周条件下，至少随机复核 10% 标签并记录修改数量。
-- 不允许按“候选品类相同”自动打标签，有线/无线、容量、材质等细粒度条件同样重要。
-- validation 用于开发和选方案；test200 划分始终冻结。test50 v2 的三处和 v3 的两处换选均发生在首次正式 test 指标产生前，由用户确认，基于查询是否存在相关候选而非模型排名。现在人工标注及基线指标已经完成，v3 查询集固定，不得为提高分数继续换选。
-
-## 跨模块实验记录
-
-生成和检索的正式评测结果统一登记到 `reports/experiment_log.csv`，入口为 `scripts/track_experiment.py`。脚本直接读取指标文件，不手工复制数值；同时将配置内容保存到 `parameters_json`，并记录指标、配置清单的路径和哈希。
-
-实验表中的差值只在模块和 `evaluation_set_id` 都相同时计算。生成评测集由固定100条样本的哈希识别；检索评测集由查询文件哈希、候选库划分和候选库数量共同识别。若评测集不同，`comparison_status` 会写为 `no_matching_baseline`，各差值列保持空白。
-
-差值列默认是“当前版本减 Baseline”；只有 `factual_error_rate_reduction` 使用“Baseline减当前版本”，因此该列为正数表示事实错误率下降。`delta_average_latency_seconds` 为正数表示新版本更慢。
+旧automatic报告中的human pending、配置pending状态是历史快照，不能为了可读性改冻文件。最后finalization manifest给出完成人审状态。已归档结果只读，禁止通过“重算评测”覆盖结果；本轮静态统计和hash核对不调用模型或评测入口。

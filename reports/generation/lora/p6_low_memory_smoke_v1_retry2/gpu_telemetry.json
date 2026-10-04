@@ -1,0 +1,481 @@
+{
+  "samples": [
+    {
+      "at_utc": "2026-10-04T05:31:34.216191+00:00",
+      "phase": "preflight",
+      "device_total_mib": 8188.0,
+      "device_used_mib": 738.0,
+      "device_free_mib": 7211.0,
+      "process_dedicated_mib": 5370.93359375,
+      "process_shared_mib": 76.0,
+      "process_counter_entries": [
+        {
+          "Name": "pid_29336_luid_0x00000000_0x00012A4B_phys_0",
+          "DedicatedUsage": 5631832064,
+          "SharedUsage": 79691776,
+          "TotalCommitted": 5711523840
+        }
+      ]
+    },
+    {
+      "at_utc": "2026-10-04T05:31:40.611241+00:00",
+      "phase": "loading_precision_validation",
+      "device_total_mib": 8188.0,
+      "device_used_mib": 6343.0,
+      "device_free_mib": 1606.0,
+      "process_dedicated_mib": 5606.93359375,
+      "process_shared_mib": 76.0,
+      "process_counter_entries": [
+        {
+          "Name": "pid_29336_luid_0x00000000_0x00012A4B_phys_0",
+          "DedicatedUsage": 5879296000,
+          "SharedUsage": 79691776,
+          "TotalCommitted": 5958987776
+        }
+      ]
+    },
+    {
+      "at_utc": "2026-10-04T05:31:43.276728+00:00",
+      "phase": "loading_precision_validation",
+      "device_total_mib": 8188.0,
+      "device_used_mib": 6499.0,
+      "device_free_mib": 1450.0,
+      "process_dedicated_mib": 7249.078125,
+      "process_shared_mib": 142.0,
+      "process_counter_entries": [
+        {
+          "Name": "pid_29336_luid_0x00000000_0x00012A4B_phys_0",
+          "DedicatedUsage": 7601209344,
+          "SharedUsage": 148897792,
+          "TotalCommitted": 7750107136
+        }
+      ]
+    },
+    {
+      "at_utc": "2026-10-04T05:31:45.761216+00:00",
+      "phase": "loading_precision_validation",
+      "device_total_mib": 8188.0,
+      "device_used_mib": 7888.0,
+      "device_free_mib": 61.0,
+      "process_dedicated_mib": 7255.78515625,
+      "process_shared_mib": 504.0,
+      "process_counter_entries": [
+        {
+          "Name": "pid_29336_luid_0x00000000_0x00012A4B_phys_0",
+          "DedicatedUsage": 7608242176,
+          "SharedUsage": 528482304,
+          "TotalCommitted": 8136724480
+        }
+      ]
+    },
+    {
+      "at_utc": "2026-10-04T05:31:48.210962+00:00",
+      "phase": "smoke24",
+      "device_total_mib": 8188.0,
+      "device_used_mib": 6554.0,
+      "device_free_mib": 1395.0,
+      "process_dedicated_mib": 5912.9609375,
+      "process_shared_mib": 88.0,
+      "process_counter_entries": [
+        {
+          "Name": "pid_29336_luid_0x00000000_0x00012A4B_phys_0",
+          "DedicatedUsage": 6200188928,
+          "SharedUsage": 92274688,
+          "TotalCommitted": 6292463616
+        }
+      ]
+    },
+    {
+      "at_utc": "2026-10-04T05:31:50.698424+00:00",
+      "phase": "smoke24",
+      "device_total_mib": 8188.0,
+      "device_used_mib": 6548.0,
+      "device_free_mib": 1401.0,
+      "process_dedicated_mib": 5932.9609375,
+      "process_shared_mib": 88.0,
+      "process_counter_entries": [
+        {
+          "Name": "pid_29336_luid_0x00000000_0x00012A4B_phys_0",
+          "DedicatedUsage": 6221160448,
+          "SharedUsage": 92274688,
+          "TotalCommitted": 6313435136
+        }
+      ]
+    },
+    {
+      "at_utc": "2026-10-04T05:31:53.218744+00:00",
+      "phase": "smoke24",
+      "device_total_mib": 8188.0,
+      "device_used_mib": 6584.0,
+      "device_free_mib": 1365.0,
+      "process_dedicated_mib": 5942.94140625,
+      "process_shared_mib": 78.0,
+      "process_counter_entries": [
+        {
+          "Name": "pid_29336_luid_0x00000000_0x00012A4B_phys_0",
+          "DedicatedUsage": 6231625728,
+          "SharedUsage": 81788928,
+          "TotalCommitted": 6313414656
+        }
+      ]
+    },
+    {
+      "at_utc": "2026-10-04T05:31:55.727740+00:00",
+      "phase": "smoke24",
+      "device_total_mib": 8188.0,
+      "device_used_mib": 6584.0,
+      "device_free_mib": 1365.0,
+      "process_dedicated_mib": 5942.94140625,
+      "process_shared_mib": 78.0,
+      "process_counter_entries": [
+        {
+          "Name": "pid_29336_luid_0x00000000_0x00012A4B_phys_0",
+          "DedicatedUsage": 6231625728,
+          "SharedUsage": 81788928,
+          "TotalCommitted": 6313414656
+        }
+      ]
+    },
+    {
+      "at_utc": "2026-10-04T05:31:58.340115+00:00",
+      "phase": "smoke24",
+      "device_total_mib": 8188.0,
+      "device_used_mib": 6584.0,
+      "device_free_mib": 1365.0,
+      "process_dedicated_mib": 5942.94140625,
+      "process_shared_mib": 78.0,
+      "process_counter_entries": [
+        {
+          "Name": "pid_29336_luid_0x00000000_0x00012A4B_phys_0",
+          "DedicatedUsage": 6231625728,
+          "SharedUsage": 81788928,
+          "TotalCommitted": 6313414656
+        }
+      ]
+    },
+    {
+      "at_utc": "2026-10-04T05:32:00.823375+00:00",
+      "phase": "longest_stress",
+      "device_total_mib": 8188.0,
+      "device_used_mib": 6584.0,
+      "device_free_mib": 1365.0,
+      "process_dedicated_mib": 5942.94140625,
+      "process_shared_mib": 78.0,
+      "process_counter_entries": [
+        {
+          "Name": "pid_29336_luid_0x00000000_0x00012A4B_phys_0",
+          "DedicatedUsage": 6231625728,
+          "SharedUsage": 81788928,
+          "TotalCommitted": 6313414656
+        }
+      ]
+    },
+    {
+      "at_utc": "2026-10-04T05:32:03.306620+00:00",
+      "phase": "longest_stress",
+      "device_total_mib": 8188.0,
+      "device_used_mib": 6584.0,
+      "device_free_mib": 1365.0,
+      "process_dedicated_mib": 5942.94140625,
+      "process_shared_mib": 78.0,
+      "process_counter_entries": [
+        {
+          "Name": "pid_29336_luid_0x00000000_0x00012A4B_phys_0",
+          "DedicatedUsage": 6231625728,
+          "SharedUsage": 81788928,
+          "TotalCommitted": 6313414656
+        }
+      ]
+    },
+    {
+      "at_utc": "2026-10-04T05:32:05.796263+00:00",
+      "phase": "longest_stress",
+      "device_total_mib": 8188.0,
+      "device_used_mib": 6585.0,
+      "device_free_mib": 1364.0,
+      "process_dedicated_mib": 5942.94140625,
+      "process_shared_mib": 78.0,
+      "process_counter_entries": [
+        {
+          "Name": "pid_29336_luid_0x00000000_0x00012A4B_phys_0",
+          "DedicatedUsage": 6231625728,
+          "SharedUsage": 81788928,
+          "TotalCommitted": 6313414656
+        }
+      ]
+    },
+    {
+      "at_utc": "2026-10-04T05:32:08.269248+00:00",
+      "phase": "longest_stress",
+      "device_total_mib": 8188.0,
+      "device_used_mib": 6580.0,
+      "device_free_mib": 1369.0,
+      "process_dedicated_mib": 5942.94140625,
+      "process_shared_mib": 78.0,
+      "process_counter_entries": [
+        {
+          "Name": "pid_29336_luid_0x00000000_0x00012A4B_phys_0",
+          "DedicatedUsage": 6231625728,
+          "SharedUsage": 81788928,
+          "TotalCommitted": 6313414656
+        }
+      ]
+    },
+    {
+      "at_utc": "2026-10-04T05:32:10.764940+00:00",
+      "phase": "longest_stress",
+      "device_total_mib": 8188.0,
+      "device_used_mib": 6579.0,
+      "device_free_mib": 1370.0,
+      "process_dedicated_mib": 5942.94140625,
+      "process_shared_mib": 78.0,
+      "process_counter_entries": [
+        {
+          "Name": "pid_29336_luid_0x00000000_0x00012A4B_phys_0",
+          "DedicatedUsage": 6231625728,
+          "SharedUsage": 81788928,
+          "TotalCommitted": 6313414656
+        }
+      ]
+    },
+    {
+      "at_utc": "2026-10-04T05:32:13.244508+00:00",
+      "phase": "longest_stress",
+      "device_total_mib": 8188.0,
+      "device_used_mib": 6581.0,
+      "device_free_mib": 1368.0,
+      "process_dedicated_mib": 5942.94140625,
+      "process_shared_mib": 78.0,
+      "process_counter_entries": [
+        {
+          "Name": "pid_29336_luid_0x00000000_0x00012A4B_phys_0",
+          "DedicatedUsage": 6231625728,
+          "SharedUsage": 81788928,
+          "TotalCommitted": 6313414656
+        }
+      ]
+    },
+    {
+      "at_utc": "2026-10-04T05:32:15.760734+00:00",
+      "phase": "longest_stress",
+      "device_total_mib": 8188.0,
+      "device_used_mib": 6585.0,
+      "device_free_mib": 1364.0,
+      "process_dedicated_mib": 5942.94140625,
+      "process_shared_mib": 78.0,
+      "process_counter_entries": [
+        {
+          "Name": "pid_29336_luid_0x00000000_0x00012A4B_phys_0",
+          "DedicatedUsage": 6231625728,
+          "SharedUsage": 81788928,
+          "TotalCommitted": 6313414656
+        }
+      ]
+    },
+    {
+      "at_utc": "2026-10-04T05:32:18.256607+00:00",
+      "phase": "longest_stress",
+      "device_total_mib": 8188.0,
+      "device_used_mib": 6580.0,
+      "device_free_mib": 1369.0,
+      "process_dedicated_mib": 5942.94140625,
+      "process_shared_mib": 78.0,
+      "process_counter_entries": [
+        {
+          "Name": "pid_29336_luid_0x00000000_0x00012A4B_phys_0",
+          "DedicatedUsage": 6231625728,
+          "SharedUsage": 81788928,
+          "TotalCommitted": 6313414656
+        }
+      ]
+    },
+    {
+      "at_utc": "2026-10-04T05:32:20.832222+00:00",
+      "phase": "longest_stress",
+      "device_total_mib": 8188.0,
+      "device_used_mib": 6585.0,
+      "device_free_mib": 1364.0,
+      "process_dedicated_mib": 5942.94140625,
+      "process_shared_mib": 78.0,
+      "process_counter_entries": [
+        {
+          "Name": "pid_29336_luid_0x00000000_0x00012A4B_phys_0",
+          "DedicatedUsage": 6231625728,
+          "SharedUsage": 81788928,
+          "TotalCommitted": 6313414656
+        }
+      ]
+    },
+    {
+      "at_utc": "2026-10-04T05:32:23.335688+00:00",
+      "phase": "longest_stress",
+      "device_total_mib": 8188.0,
+      "device_used_mib": 6581.0,
+      "device_free_mib": 1368.0,
+      "process_dedicated_mib": 5942.94140625,
+      "process_shared_mib": 78.0,
+      "process_counter_entries": [
+        {
+          "Name": "pid_29336_luid_0x00000000_0x00012A4B_phys_0",
+          "DedicatedUsage": 6231625728,
+          "SharedUsage": 81788928,
+          "TotalCommitted": 6313414656
+        }
+      ]
+    },
+    {
+      "at_utc": "2026-10-04T05:32:25.855663+00:00",
+      "phase": "longest_stress",
+      "device_total_mib": 8188.0,
+      "device_used_mib": 6584.0,
+      "device_free_mib": 1365.0,
+      "process_dedicated_mib": 5942.94140625,
+      "process_shared_mib": 78.0,
+      "process_counter_entries": [
+        {
+          "Name": "pid_29336_luid_0x00000000_0x00012A4B_phys_0",
+          "DedicatedUsage": 6231625728,
+          "SharedUsage": 81788928,
+          "TotalCommitted": 6313414656
+        }
+      ]
+    },
+    {
+      "at_utc": "2026-10-04T05:32:28.352334+00:00",
+      "phase": "longest_stress",
+      "device_total_mib": 8188.0,
+      "device_used_mib": 6585.0,
+      "device_free_mib": 1364.0,
+      "process_dedicated_mib": 5942.94140625,
+      "process_shared_mib": 78.0,
+      "process_counter_entries": [
+        {
+          "Name": "pid_29336_luid_0x00000000_0x00012A4B_phys_0",
+          "DedicatedUsage": 6231625728,
+          "SharedUsage": 81788928,
+          "TotalCommitted": 6313414656
+        }
+      ]
+    },
+    {
+      "at_utc": "2026-10-04T05:32:30.810644+00:00",
+      "phase": "longest_stress",
+      "device_total_mib": 8188.0,
+      "device_used_mib": 6578.0,
+      "device_free_mib": 1371.0,
+      "process_dedicated_mib": 5942.94140625,
+      "process_shared_mib": 78.0,
+      "process_counter_entries": [
+        {
+          "Name": "pid_29336_luid_0x00000000_0x00012A4B_phys_0",
+          "DedicatedUsage": 6231625728,
+          "SharedUsage": 81788928,
+          "TotalCommitted": 6313414656
+        }
+      ]
+    },
+    {
+      "at_utc": "2026-10-04T05:32:33.339924+00:00",
+      "phase": "longest_stress",
+      "device_total_mib": 8188.0,
+      "device_used_mib": 6579.0,
+      "device_free_mib": 1370.0,
+      "process_dedicated_mib": 5942.94140625,
+      "process_shared_mib": 78.0,
+      "process_counter_entries": [
+        {
+          "Name": "pid_29336_luid_0x00000000_0x00012A4B_phys_0",
+          "DedicatedUsage": 6231625728,
+          "SharedUsage": 81788928,
+          "TotalCommitted": 6313414656
+        }
+      ]
+    },
+    {
+      "at_utc": "2026-10-04T05:32:35.834584+00:00",
+      "phase": "longest_stress",
+      "device_total_mib": 8188.0,
+      "device_used_mib": 6585.0,
+      "device_free_mib": 1364.0,
+      "process_dedicated_mib": 5942.94140625,
+      "process_shared_mib": 78.0,
+      "process_counter_entries": [
+        {
+          "Name": "pid_29336_luid_0x00000000_0x00012A4B_phys_0",
+          "DedicatedUsage": 6231625728,
+          "SharedUsage": 81788928,
+          "TotalCommitted": 6313414656
+        }
+      ]
+    },
+    {
+      "at_utc": "2026-10-04T05:32:38.335666+00:00",
+      "phase": "adapter_save_reload",
+      "device_total_mib": 8188.0,
+      "device_used_mib": 6580.0,
+      "device_free_mib": 1369.0,
+      "process_dedicated_mib": 5494.94140625,
+      "process_shared_mib": 78.0,
+      "process_counter_entries": [
+        {
+          "Name": "pid_29336_luid_0x00000000_0x00012A4B_phys_0",
+          "DedicatedUsage": 5761863680,
+          "SharedUsage": 81788928,
+          "TotalCommitted": 5843652608
+        }
+      ]
+    },
+    {
+      "at_utc": "2026-10-04T05:32:40.839910+00:00",
+      "phase": "adapter_save_reload",
+      "device_total_mib": 8188.0,
+      "device_used_mib": 6161.0,
+      "device_free_mib": 1788.0,
+      "process_dedicated_mib": 5524.94140625,
+      "process_shared_mib": 78.0,
+      "process_counter_entries": [
+        {
+          "Name": "pid_29336_luid_0x00000000_0x00012A4B_phys_0",
+          "DedicatedUsage": 5793320960,
+          "SharedUsage": 81788928,
+          "TotalCommitted": 5875109888
+        }
+      ]
+    },
+    {
+      "at_utc": "2026-10-04T05:32:43.352176+00:00",
+      "phase": "adapter_save_reload",
+      "device_total_mib": 8188.0,
+      "device_used_mib": 6233.0,
+      "device_free_mib": 1716.0,
+      "process_dedicated_mib": 5660.94140625,
+      "process_shared_mib": 78.0,
+      "process_counter_entries": [
+        {
+          "Name": "pid_29336_luid_0x00000000_0x00012A4B_phys_0",
+          "DedicatedUsage": 5935927296,
+          "SharedUsage": 81788928,
+          "TotalCommitted": 6017716224
+        }
+      ]
+    },
+    {
+      "at_utc": "2026-10-04T05:32:46.921943+00:00",
+      "phase": "adapter_save_reload",
+      "device_total_mib": 8188.0,
+      "device_used_mib": 6131.0,
+      "device_free_mib": 1818.0,
+      "process_dedicated_mib": 5494.94140625,
+      "process_shared_mib": 78.0,
+      "process_counter_entries": [
+        {
+          "Name": "pid_29336_luid_0x00000000_0x00012A4B_phys_0",
+          "DedicatedUsage": 5761863680,
+          "SharedUsage": 81788928,
+          "TotalCommitted": 5843652608
+        }
+      ]
+    }
+  ],
+  "errors": []
+}

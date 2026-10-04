@@ -1,0 +1,190 @@
+{
+  "version": "lora_qlora_smoke_v1",
+  "status": "passed",
+  "scope": "engineering_smoke_only",
+  "started_at_utc": "2026-10-02T05:07:03.738640+00:00",
+  "completed_at_utc": "2026-10-02T05:10:09.306414+00:00",
+  "config": {
+    "path": "configs/lora_qlora_smoke_v1.json",
+    "sha256": "fbb3ba16a2dd9c1bc183d738fa93f3b7d55b6b6418c6b83a5e6fbade89a1e92c"
+  },
+  "environment": {
+    "python": "3.10.21",
+    "torch": "2.12.0+cu130",
+    "transformers": "5.16.1",
+    "peft": "0.21.1",
+    "cuda_runtime": "13.0",
+    "gpu": "NVIDIA GeForce RTX 4070 Laptop GPU",
+    "bf16_supported": true
+  },
+  "input": {
+    "path": "data/processed/lora_instruction_data_v1/train.jsonl",
+    "sha256": "c31b00f3d19d503b3f7c7529cc2ce7e115143214b0d9ab40f07412becd6a5434",
+    "all_train_records_seen_for_selection": 3618,
+    "selected_products": [
+      {
+        "category_l2": "保温杯",
+        "product_id": "563530713946"
+      },
+      {
+        "category_l2": "垃圾桶",
+        "product_id": "616082475147"
+      },
+      {
+        "category_l2": "拖把",
+        "product_id": "581934839340"
+      },
+      {
+        "category_l2": "收纳箱",
+        "product_id": "567783459700"
+      },
+      {
+        "category_l2": "移动电源",
+        "product_id": "590007457808"
+      },
+      {
+        "category_l2": "耳机",
+        "product_id": "571560325386"
+      },
+      {
+        "category_l2": "键盘",
+        "product_id": "584641469378"
+      },
+      {
+        "category_l2": "鼠标",
+        "product_id": "622308119511"
+      }
+    ],
+    "selected_product_count": 8,
+    "selected_record_count": 24,
+    "task_counts": {
+      "title": 8,
+      "selling_points": 8,
+      "short_description": 8
+    }
+  },
+  "model": {
+    "name": "Qwen/Qwen2.5-7B-Instruct",
+    "revision": "a09a35458c702b33eeacc393d103063234e8bc28",
+    "snapshot_path": "E:\\Projects\\Baidu\\.model-cache\\huggingface\\hub\\models--Qwen--Qwen2.5-7B-Instruct\\snapshots\\a09a35458c702b33eeacc393d103063234e8bc28",
+    "local_files_only": true,
+    "loaded_in_4bit": true,
+    "quant_type": "nf4",
+    "double_quant": true,
+    "compute_dtype": "bfloat16"
+  },
+  "lora": {
+    "task_type": "CAUSAL_LM",
+    "target_modules": [
+      "q_proj",
+      "v_proj"
+    ],
+    "r": 8,
+    "lora_alpha": 32,
+    "lora_dropout": 0.05,
+    "bias": "none",
+    "trainable_parameters": 2523136,
+    "total_parameters": 4355495424,
+    "trainable_percent": 0.05793
+  },
+  "tokenization": {
+    "truncation": false,
+    "max_sequence_length": 320,
+    "sequence_tokens": {
+      "min": 117,
+      "max": 223,
+      "mean": 152.25
+    },
+    "prompt_tokens": {
+      "min": 100,
+      "max": 159
+    },
+    "supervised_tokens": {
+      "min": 17,
+      "max": 66
+    }
+  },
+  "execution": {
+    "micro_steps": 24,
+    "optimizer_steps": 3,
+    "gradient_accumulation_steps": 8,
+    "finite_loss": true,
+    "losses": [
+      0.8747320175170898,
+      0.9042981266975403,
+      0.9765101075172424,
+      3.284416675567627,
+      2.094203233718872,
+      1.6448564529418945,
+      0.5600321888923645,
+      2.427208662033081,
+      0.8789737820625305,
+      2.402026891708374,
+      1.7851046323776245,
+      1.1351096630096436,
+      1.373077154159546,
+      1.7787495851516724,
+      0.7791138887405396,
+      1.7576004266738892,
+      1.0568870306015015,
+      1.3663626909255981,
+      0.8698501586914062,
+      1.7579165697097778,
+      1.1835618019104004,
+      2.2758841514587402,
+      1.2878142595291138,
+      1.1510131359100342
+    ],
+    "first_loss": 0.8747320175170898,
+    "last_loss": 1.1510131359100342,
+    "effect_interpretation": "forbidden; engineering smoke only"
+  },
+  "memory": {
+    "after_training": {
+      "allocated_mib": 7428.9,
+      "reserved_mib": 9672.0,
+      "peak_allocated_mib": 8423.5,
+      "peak_reserved_mib": 9672.0
+    },
+    "after_adapter_reload": {
+      "allocated_mib": 5328.0,
+      "reserved_mib": 5508.0,
+      "peak_allocated_mib": 8423.5,
+      "peak_reserved_mib": 9672.0
+    }
+  },
+  "adapter": {
+    "directory": "reports/generation/lora/p6_qlora_smoke_v1_retry1/adapter",
+    "files": [
+      {
+        "path": "reports/generation/lora/p6_qlora_smoke_v1_retry1/adapter/adapter_config.json",
+        "bytes": 1147,
+        "sha256": "b78404b7600a3a93e8eedb322889ef6cb1807c339a94e647b8747dcdb55a03ad"
+      },
+      {
+        "path": "reports/generation/lora/p6_qlora_smoke_v1_retry1/adapter/adapter_model.safetensors",
+        "bytes": 10107280,
+        "sha256": "fc2d4ecc4f4dce6cbcc2a471afa957eb5ad4a892926852a6f80f9e9bbf5fe63b"
+      },
+      {
+        "path": "reports/generation/lora/p6_qlora_smoke_v1_retry1/adapter/README.md",
+        "bytes": 5202,
+        "sha256": "cfeb79a795371fcef4c71e02e8bf1f9ec9ee9a2d2fcc5817cc167516f8aac4c4"
+      }
+    ],
+    "reload_succeeded": true,
+    "adapter_names": [
+      "default"
+    ],
+    "reload_trainable_parameters": 0
+  },
+  "guards": {
+    "formal_training": false,
+    "full_epoch_over_p5_train": false,
+    "project_validation_used": false,
+    "project_test_used": false,
+    "rag_v2_holdout_used": false,
+    "p5_data_mutation_allowed": false,
+    "effect_evaluation_allowed": false
+  }
+}

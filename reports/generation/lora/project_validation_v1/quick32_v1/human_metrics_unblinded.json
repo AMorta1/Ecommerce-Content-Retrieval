@@ -1,0 +1,264 @@
+{
+  "status": "final_human_review_sample32_only",
+  "products_per_model": 32,
+  "official_metrics": {
+    "Base": {
+      "sample_count": 32,
+      "core_attribute_total": 186,
+      "matched_attribute_total": 169,
+      "core_attribute_hit_rate": 0.9086021505376344,
+      "fluency_pass_rate": 1.0,
+      "factual_error_sample_rate": 0.875,
+      "factual_error_total": 107,
+      "average_factual_errors_per_sample": 3.34375
+    },
+    "LoRA": {
+      "sample_count": 32,
+      "core_attribute_total": 186,
+      "matched_attribute_total": 149,
+      "core_attribute_hit_rate": 0.8010752688172043,
+      "fluency_pass_rate": 0.9375,
+      "factual_error_sample_rate": 0.0,
+      "factual_error_total": 0,
+      "average_factual_errors_per_sample": 0.0
+    }
+  },
+  "paired_preferences": {
+    "title_quality": {
+      "Base": 32,
+      "LoRA": 0,
+      "tie": 0
+    },
+    "selling_points_structure": {
+      "Base": 10,
+      "LoRA": 21,
+      "tie": 1
+    },
+    "short_description_naturalness": {
+      "Base": 25,
+      "LoRA": 7,
+      "tie": 0
+    },
+    "overall_ecommerce_professionalism": {
+      "Base": 6,
+      "LoRA": 25,
+      "tie": 1
+    }
+  },
+  "by_category": {
+    "Base": {
+      "保温杯": {
+        "sample_count": 4,
+        "core_attribute_total": 31,
+        "matched_attribute_total": 25,
+        "core_attribute_hit_rate": 0.8064516129032258,
+        "fluency_pass_rate": 1.0,
+        "factual_error_sample_rate": 1.0,
+        "factual_error_total": 19,
+        "average_factual_errors_per_sample": 4.75
+      },
+      "垃圾桶": {
+        "sample_count": 4,
+        "core_attribute_total": 21,
+        "matched_attribute_total": 21,
+        "core_attribute_hit_rate": 1.0,
+        "fluency_pass_rate": 1.0,
+        "factual_error_sample_rate": 0.75,
+        "factual_error_total": 9,
+        "average_factual_errors_per_sample": 2.25
+      },
+      "拖把": {
+        "sample_count": 4,
+        "core_attribute_total": 19,
+        "matched_attribute_total": 19,
+        "core_attribute_hit_rate": 1.0,
+        "fluency_pass_rate": 1.0,
+        "factual_error_sample_rate": 1.0,
+        "factual_error_total": 17,
+        "average_factual_errors_per_sample": 4.25
+      },
+      "收纳箱": {
+        "sample_count": 4,
+        "core_attribute_total": 23,
+        "matched_attribute_total": 16,
+        "core_attribute_hit_rate": 0.6956521739130435,
+        "fluency_pass_rate": 1.0,
+        "factual_error_sample_rate": 1.0,
+        "factual_error_total": 13,
+        "average_factual_errors_per_sample": 3.25
+      },
+      "移动电源": {
+        "sample_count": 4,
+        "core_attribute_total": 22,
+        "matched_attribute_total": 21,
+        "core_attribute_hit_rate": 0.9545454545454546,
+        "fluency_pass_rate": 1.0,
+        "factual_error_sample_rate": 1.0,
+        "factual_error_total": 13,
+        "average_factual_errors_per_sample": 3.25
+      },
+      "耳机": {
+        "sample_count": 4,
+        "core_attribute_total": 19,
+        "matched_attribute_total": 19,
+        "core_attribute_hit_rate": 1.0,
+        "fluency_pass_rate": 1.0,
+        "factual_error_sample_rate": 0.75,
+        "factual_error_total": 8,
+        "average_factual_errors_per_sample": 2.0
+      },
+      "键盘": {
+        "sample_count": 4,
+        "core_attribute_total": 26,
+        "matched_attribute_total": 24,
+        "core_attribute_hit_rate": 0.9230769230769231,
+        "fluency_pass_rate": 1.0,
+        "factual_error_sample_rate": 0.75,
+        "factual_error_total": 15,
+        "average_factual_errors_per_sample": 3.75
+      },
+      "鼠标": {
+        "sample_count": 4,
+        "core_attribute_total": 25,
+        "matched_attribute_total": 24,
+        "core_attribute_hit_rate": 0.96,
+        "fluency_pass_rate": 1.0,
+        "factual_error_sample_rate": 0.75,
+        "factual_error_total": 13,
+        "average_factual_errors_per_sample": 3.25
+      }
+    },
+    "LoRA": {
+      "保温杯": {
+        "sample_count": 4,
+        "core_attribute_total": 31,
+        "matched_attribute_total": 21,
+        "core_attribute_hit_rate": 0.6774193548387096,
+        "fluency_pass_rate": 1.0,
+        "factual_error_sample_rate": 0.0,
+        "factual_error_total": 0,
+        "average_factual_errors_per_sample": 0.0
+      },
+      "垃圾桶": {
+        "sample_count": 4,
+        "core_attribute_total": 21,
+        "matched_attribute_total": 19,
+        "core_attribute_hit_rate": 0.9047619047619048,
+        "fluency_pass_rate": 1.0,
+        "factual_error_sample_rate": 0.0,
+        "factual_error_total": 0,
+        "average_factual_errors_per_sample": 0.0
+      },
+      "拖把": {
+        "sample_count": 4,
+        "core_attribute_total": 19,
+        "matched_attribute_total": 18,
+        "core_attribute_hit_rate": 0.9473684210526315,
+        "fluency_pass_rate": 1.0,
+        "factual_error_sample_rate": 0.0,
+        "factual_error_total": 0,
+        "average_factual_errors_per_sample": 0.0
+      },
+      "收纳箱": {
+        "sample_count": 4,
+        "core_attribute_total": 23,
+        "matched_attribute_total": 16,
+        "core_attribute_hit_rate": 0.6956521739130435,
+        "fluency_pass_rate": 1.0,
+        "factual_error_sample_rate": 0.0,
+        "factual_error_total": 0,
+        "average_factual_errors_per_sample": 0.0
+      },
+      "移动电源": {
+        "sample_count": 4,
+        "core_attribute_total": 22,
+        "matched_attribute_total": 19,
+        "core_attribute_hit_rate": 0.8636363636363636,
+        "fluency_pass_rate": 1.0,
+        "factual_error_sample_rate": 0.0,
+        "factual_error_total": 0,
+        "average_factual_errors_per_sample": 0.0
+      },
+      "耳机": {
+        "sample_count": 4,
+        "core_attribute_total": 19,
+        "matched_attribute_total": 17,
+        "core_attribute_hit_rate": 0.8947368421052632,
+        "fluency_pass_rate": 1.0,
+        "factual_error_sample_rate": 0.0,
+        "factual_error_total": 0,
+        "average_factual_errors_per_sample": 0.0
+      },
+      "键盘": {
+        "sample_count": 4,
+        "core_attribute_total": 26,
+        "matched_attribute_total": 19,
+        "core_attribute_hit_rate": 0.7307692307692307,
+        "fluency_pass_rate": 0.5,
+        "factual_error_sample_rate": 0.0,
+        "factual_error_total": 0,
+        "average_factual_errors_per_sample": 0.0
+      },
+      "鼠标": {
+        "sample_count": 4,
+        "core_attribute_total": 25,
+        "matched_attribute_total": 20,
+        "core_attribute_hit_rate": 0.8,
+        "fluency_pass_rate": 1.0,
+        "factual_error_sample_rate": 0.0,
+        "factual_error_total": 0,
+        "average_factual_errors_per_sample": 0.0
+      }
+    }
+  },
+  "diagnostics_NOT_FORMAL_METRICS": {
+    "Base": {
+      "field_stacking": {
+        "annotated": 32,
+        "positive": 0
+      },
+      "mechanical_template": {
+        "annotated": 32,
+        "positive": 1
+      },
+      "unsupported_evaluation_effect_scenario": {
+        "annotated": 32,
+        "positive": 28
+      },
+      "numeric_range_distortion": {
+        "annotated": 32,
+        "positive": 4
+      },
+      "identity_category_error": {
+        "annotated": 32,
+        "positive": 0
+      }
+    },
+    "LoRA": {
+      "field_stacking": {
+        "annotated": 32,
+        "positive": 2
+      },
+      "mechanical_template": {
+        "annotated": 32,
+        "positive": 4
+      },
+      "unsupported_evaluation_effect_scenario": {
+        "annotated": 32,
+        "positive": 0
+      },
+      "numeric_range_distortion": {
+        "annotated": 32,
+        "positive": 0
+      },
+      "identity_category_error": {
+        "annotated": 32,
+        "positive": 0
+      }
+    }
+  },
+  "sampling_manifest_sha256": "d77a9462635099c907c116aa80ddce94cc5fada4971fe34074fb79d12ea1ac9d",
+  "workbook_sha256": "61679ac05e25c15d940f700cde601731578ed8498ca4ea4c6ed1596d5e2a85e9",
+  "blind_summary_sha256": "3ab2764a5f4dc0fa94c187f90504dc88e68ebfc319a49f16199b3948085250f3",
+  "project_test_run": false
+}

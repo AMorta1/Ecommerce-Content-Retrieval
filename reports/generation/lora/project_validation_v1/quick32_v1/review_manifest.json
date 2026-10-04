@@ -1,0 +1,34 @@
+{
+  "status": "awaiting_human_blinded_review",
+  "products": 32,
+  "documents": 64,
+  "initial_workbook_sha256": "5c23171b28c9944e517d607453918ceaad96ce7d8591916798293979cc84971e",
+  "sampling_manifest_sha256": "d77a9462635099c907c116aa80ddce94cc5fada4971fe34074fb79d12ea1ac9d",
+  "files": [
+    {
+      "path": "reports/generation/lora/project_validation_v1/base/product_outputs.jsonl",
+      "sha256": "c6691e0453c97bff25a656c6b4c9cece3d40e2660496cfdb6532947bdc46bf04"
+    },
+    {
+      "path": "reports/generation/lora/project_validation_v1/base/run_report.json",
+      "sha256": "c98fb31973a9a51d0b6df9d72e91ac3f076f965f7bc1ad6fef185351de953efb"
+    },
+    {
+      "path": "reports/generation/lora/project_validation_v1/base/task_outputs.jsonl",
+      "sha256": "2c97f3d2d6e9fa5065a8d812fc6d3815969d94b432e5f91822760a4520131485"
+    },
+    {
+      "path": "reports/generation/lora/project_validation_v1/lora/product_outputs.jsonl",
+      "sha256": "cc06e7ebb0365c036fa4ac286779e116033bfa2c481950423c4abea5e8388b13"
+    },
+    {
+      "path": "reports/generation/lora/project_validation_v1/lora/run_report.json",
+      "sha256": "b96d552112fd191474cd9558e07420c12cc3ba419408d7ae149e4a794e3cd7ee"
+    },
+    {
+      "path": "reports/generation/lora/project_validation_v1/lora/task_outputs.jsonl",
+      "sha256": "4beb17886b8ef092ac7387e3e8ff007b45081cd20349ee99336f645dc8828844"
+    }
+  ],
+  "human_labels_prefilled": false
+}

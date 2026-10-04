@@ -1,0 +1,145 @@
+{
+  "status": "final_fixed_test100_human_review_complete",
+  "created_at_utc": "2026-10-04T17:50:56.477490+00:00",
+  "files": [
+    {
+      "path": "reports/generation/lora_rag/lora_rag_project_test100_v1/ai_review_amendments_v1.json",
+      "sha256": "b512e8219b3887eb13e4e5e97f53d7b6d044e20d58200db47c895b011afb1683"
+    },
+    {
+      "path": "reports/generation/lora_rag/lora_rag_project_test100_v1/ai_review_import_manifest_v1.json",
+      "sha256": "d9c1ca6ed3f1921d3282ae323ce8fb3c3caae76fd18707c83d09f358403513a8"
+    },
+    {
+      "path": "reports/generation/lora_rag/lora_rag_project_test100_v1/automatic_diagnostics.json",
+      "sha256": "a2a36032adb84373abd50fa9b77a638f2ae898a2fdcf8b796732d90d1c3f5b78"
+    },
+    {
+      "path": "reports/generation/lora_rag/lora_rag_project_test100_v1/automatic_phase_manifest.json",
+      "sha256": "06a7f4e740d67b5b291156b4803a1982aa4cfbdaa59feac201d1f3e9c22eff7a"
+    },
+    {
+      "path": "reports/generation/lora_rag/lora_rag_project_test100_v1/automatic_phase_manifest_checksums.sha256",
+      "sha256": "6878ff8637401c05563381ee3362e452def7dec88a92f349209a90398abefad0"
+    },
+    {
+      "path": "reports/generation/lora_rag/lora_rag_project_test100_v1/automatic_summary.json",
+      "sha256": "348d2cf59847237ac4686de9b547e99bfc1b5fd43d5d35a27782b2f587a3e50b"
+    },
+    {
+      "path": "reports/generation/lora_rag/lora_rag_project_test100_v1/automatic_test_report.md",
+      "sha256": "2670e4af8500ff9fd947355eceeb92f932f6f2118ed019cb311196b5c50e0977"
+    },
+    {
+      "path": "reports/generation/lora_rag/lora_rag_project_test100_v1/blind_mapping.json",
+      "sha256": "ac3e3771e6f22c40cde327c50049abf3e0aa38788f38621c3e54e039622d1cf1"
+    },
+    {
+      "path": "reports/generation/lora_rag/lora_rag_project_test100_v1/blind_summary.json",
+      "sha256": "cc8e85b5353201d061aed30550e8571677fa1c3d97e34e09c3715a20ca3b6a98"
+    },
+    {
+      "path": "reports/generation/lora_rag/lora_rag_project_test100_v1/control_product_outputs.jsonl",
+      "sha256": "881fc2b3ee6199ed365794062d6a1d4d5bca2dcc720733234338b6c0171556ec"
+    },
+    {
+      "path": "reports/generation/lora_rag/lora_rag_project_test100_v1/control_task_outputs.jsonl",
+      "sha256": "6c707c591f7953390af089a243e18e6c33d42feece37813e719c11ec17aa2987"
+    },
+    {
+      "path": "reports/generation/lora_rag/lora_rag_project_test100_v1/environment_freeze.txt",
+      "sha256": "5596644df337a7bd02ff4d4439074d1c61c409606cf1c83e4b1e351c3d1d5990"
+    },
+    {
+      "path": "reports/generation/lora_rag/lora_rag_project_test100_v1/final_test_report.md",
+      "sha256": "4858110bd8bfc86c4d03d7de59711ecec52912df857a83e20e108ed6a4c62c2a"
+    },
+    {
+      "path": "reports/generation/lora_rag/lora_rag_project_test100_v1/frozen_inputs.jsonl",
+      "sha256": "886b37c8a7f9191b7a537e376d8a72c3ad2fe9cca677a38a1de8ce9d487fd647"
+    },
+    {
+      "path": "reports/generation/lora_rag/lora_rag_project_test100_v1/human_diagnostic_cases.json",
+      "sha256": "ab22867775bf788d1a86528e646f9bf93972966b811615604adf2dfdfdbbb3ad"
+    },
+    {
+      "path": "reports/generation/lora_rag/lora_rag_project_test100_v1/human_metrics_unblinded.json",
+      "sha256": "8334ddf6ffba58245a07fb0feccb5feaf0604c83502c2ed1849b57f7e43f9f73"
+    },
+    {
+      "path": "reports/generation/lora_rag/lora_rag_project_test100_v1/human_review_confirmation_record.json",
+      "sha256": "e36b57e5f39dab88c5eea28ea18dec60dbfccad8da5ebb476731c8ad4dd3de6b"
+    },
+    {
+      "path": "reports/generation/lora_rag/lora_rag_project_test100_v1/human_review_final.csv",
+      "sha256": "ebab9d590bfcfa69d85457f31a7529287fef9907eb7a82f859deb4029fb52e30"
+    },
+    {
+      "path": "reports/generation/lora_rag/lora_rag_project_test100_v1/inference_config.json",
+      "sha256": "6b610516cc8ec68aadfc9b9d355c7aa6afa2237b2f0e77f530aff47d76aa59b0"
+    },
+    {
+      "path": "reports/generation/lora_rag/lora_rag_project_test100_v1/lora_rag/attempt_started.json",
+      "sha256": "42d405ef1e423b5194fe88ea18c1b7b654253ebbc45eda21dd61a2e3616bb2a8"
+    },
+    {
+      "path": "reports/generation/lora_rag/lora_rag_project_test100_v1/lora_rag/product_outputs.jsonl",
+      "sha256": "c3a8a0e298560299f00e6fbc7e9bfc46530fe9333d6b7d277d8e547b55858587"
+    },
+    {
+      "path": "reports/generation/lora_rag/lora_rag_project_test100_v1/lora_rag/run_report.json",
+      "sha256": "ab0da5585e608176ce7110fbd60a9ad47cb65406c807168fd5b1c4578cbe05c2"
+    },
+    {
+      "path": "reports/generation/lora_rag/lora_rag_project_test100_v1/lora_rag/task_outputs.jsonl",
+      "sha256": "01a5ecbdf964c38280614967ac1f617991b0f356a622375467689d6cce6d0eee"
+    },
+    {
+      "path": "reports/generation/lora_rag/lora_rag_project_test100_v1/lora_rag_project_test100_blind_review.chatgpt_rechecked_source.xlsx",
+      "sha256": "9e5672690a01a0ba24c004c71120e2db83899ba7051d4e7ee3211e8c69b2a631"
+    },
+    {
+      "path": "reports/generation/lora_rag/lora_rag_project_test100_v1/lora_rag_project_test100_blind_review.initial_blank.xlsx",
+      "sha256": "17dd8ed253455072d59a082d202b586dcdcb7a22166d82e50aa1ad6e8f027a12"
+    },
+    {
+      "path": "reports/generation/lora_rag/lora_rag_project_test100_v1/lora_rag_project_test100_blind_review.pre_ai_import.xlsx",
+      "sha256": "17dd8ed253455072d59a082d202b586dcdcb7a22166d82e50aa1ad6e8f027a12"
+    },
+    {
+      "path": "reports/generation/lora_rag/lora_rag_project_test100_v1/lora_rag_project_test100_blind_review.user_completed.xlsx",
+      "sha256": "8ab13b7d90f94918b60d7fd697fe1b3cec275650c95466c1b7beb42de0254d49"
+    },
+    {
+      "path": "reports/generation/lora_rag/lora_rag_project_test100_v1/lora_rag_project_test100_blind_review.xlsx",
+      "sha256": "1c683a12eb14a82542d4d7707ff2a392ee06e65c65554f3a267483a204d88b9c"
+    },
+    {
+      "path": "reports/generation/lora_rag/lora_rag_project_test100_v1/protocol_manifest.json",
+      "sha256": "83e7d519c1d84baad0e2417f6300064b90264862ed0045ca19623403bb691e70"
+    },
+    {
+      "path": "reports/generation/lora_rag/lora_rag_project_test100_v1/review_manifest.json",
+      "sha256": "151e595b59bef1d6986d6270dc22e480252c7e8a0e88e169adfb68c839f6c466"
+    },
+    {
+      "path": "reports/generation/lora_rag/lora_rag_project_test100_v1/sample_ids.json",
+      "sha256": "f7d4787f9fb095eda5b73d93ed33103d10f3b0e2b128b8f9bca39b5f913eca8f"
+    },
+    {
+      "path": "reports/generation/lora_rag/lora_rag_project_test100_v1/test100_fact_units.jsonl",
+      "sha256": "b2a0e363694760eafcaeb5d344ac2b0149e393c5e1b00db7a57aa867dc1a74e4"
+    }
+  ],
+  "test_history_disclosure": "原冻结test100此前已用于Baseline、RAG及Base/LoRA评测，并已被观察。本次为用户批准的追加固定组合版本正式对照，不是新的未观察盲测；A/B仅表示版本匿名。组合内容在读取本轮test输出前冻结，无论结果好坏只归档，不修改后重跑。",
+  "guards": {
+    "parameter_updates": false,
+    "output_based_adjustment": false,
+    "rerun": false,
+    "holdout_archive_read": false,
+    "holdout_generation": false,
+    "original_rag_v2_p3_entered": false,
+    "old_outputs_or_labels_as_model_inputs": false
+  },
+  "human_metrics_sha256": "8334ddf6ffba58245a07fb0feccb5feaf0604c83502c2ed1849b57f7e43f9f73"
+}

@@ -1,0 +1,25 @@
+{
+  "status": "anonymous_complete_before_unblinding",
+  "products": 100,
+  "preferences": {
+    "title_quality": {
+      "A更好": 51,
+      "B更好": 48,
+      "持平": 1
+    },
+    "selling_points_structure": {
+      "A更好": 49,
+      "B更好": 51
+    },
+    "short_description_naturalness": {
+      "A更好": 52,
+      "B更好": 48
+    },
+    "overall_ecommerce_professionalism": {
+      "A更好": 47,
+      "B更好": 52,
+      "持平": 1
+    }
+  },
+  "workbook_sha256": "bc31ff88d068d9006b6837ed8f5c3cf7e3bff8f38e0191a827112299a6769d2d"
+}

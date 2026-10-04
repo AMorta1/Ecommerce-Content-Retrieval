@@ -1,0 +1,24 @@
+{
+  "products": 32,
+  "preferences": {
+    "title_quality": {
+      "A更好": 16,
+      "B更好": 16
+    },
+    "selling_points_structure": {
+      "A更好": 11,
+      "B更好": 20,
+      "持平": 1
+    },
+    "short_description_naturalness": {
+      "B更好": 17,
+      "A更好": 15
+    },
+    "overall_ecommerce_professionalism": {
+      "B更好": 19,
+      "A更好": 12,
+      "持平": 1
+    }
+  },
+  "workbook_sha256": "61679ac05e25c15d940f700cde601731578ed8498ca4ea4c6ed1596d5e2a85e9"
+}

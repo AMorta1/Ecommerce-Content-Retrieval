@@ -1,0 +1,232 @@
+{
+  "status": "awaiting_human_review_NOT_FINAL",
+  "statistics": {
+    "products": 24,
+    "by_category": {
+      "保温杯": 3,
+      "垃圾桶": 3,
+      "拖把": 3,
+      "收纳箱": 3,
+      "移动电源": 3,
+      "耳机": 3,
+      "键盘": 3,
+      "鼠标": 3
+    },
+    "original_core_denominator": 134,
+    "original_input_core_fields": 127,
+    "mandatory_core_facts_per_product_sum": 76,
+    "identity_core_facts_sum": 39,
+    "max_input_tokens": 660
+  },
+  "versions": {
+    "LoRA_control": {
+      "products": 24,
+      "task_parse_success": {
+        "title": 24,
+        "selling_points": 24,
+        "short_description": 24
+      },
+      "assembled_structure_success": 24,
+      "literal_core_coverage_NOT_HUMAN": {
+        "matched": 116,
+        "denominator": 134,
+        "rate": 0.8656716417910447
+      },
+      "latency_seconds": {
+        "title": {
+          "mean": 1.2708804083329899,
+          "p95": 2.113189860002239,
+          "max": 2.178986899998563
+        },
+        "selling_points": {
+          "mean": 1.6403232083333326,
+          "p95": 2.561190369998439,
+          "max": 2.739481699998578
+        },
+        "short_description": {
+          "mean": 2.2767937250000614,
+          "p95": 3.537795280001773,
+          "max": 3.993859899997915
+        },
+        "three_task_total": {
+          "mean": 5.187997341666384,
+          "p95": 8.15048087999603,
+          "max": 8.329211300002498
+        }
+      },
+      "retrieval_selection_mean_seconds": 0.0,
+      "empty_tasks": 0,
+      "max_token_tasks": 0,
+      "claim_suspect_samples_NOT_FACTUAL_RATE": 0,
+      "number_suspect_samples_NOT_FACTUAL_RATE": 0,
+      "grounding_pass_NOT_HUMAN": 24,
+      "peak_allocated_mib": 5503.6,
+      "peak_reserved_mib": 5636.0,
+      "input_tokens_mean": 124.79166666666667,
+      "input_tokens_max": 162,
+      "mandatory_core_injection_per_task": {
+        "expected": 0,
+        "verified": 0,
+        "rate": null
+      },
+      "by_category": {
+        "保温杯": {
+          "products": 3,
+          "literal_matched": 16,
+          "core_denominator": 20
+        },
+        "垃圾桶": {
+          "products": 3,
+          "literal_matched": 16,
+          "core_denominator": 19
+        },
+        "拖把": {
+          "products": 3,
+          "literal_matched": 13,
+          "core_denominator": 13
+        },
+        "收纳箱": {
+          "products": 3,
+          "literal_matched": 11,
+          "core_denominator": 15
+        },
+        "移动电源": {
+          "products": 3,
+          "literal_matched": 15,
+          "core_denominator": 18
+        },
+        "耳机": {
+          "products": 3,
+          "literal_matched": 10,
+          "core_denominator": 13
+        },
+        "键盘": {
+          "products": 3,
+          "literal_matched": 21,
+          "core_denominator": 21
+        },
+        "鼠标": {
+          "products": 3,
+          "literal_matched": 14,
+          "core_denominator": 15
+        }
+      }
+    },
+    "LoRA_RAG": {
+      "products": 24,
+      "task_parse_success": {
+        "title": 24,
+        "selling_points": 24,
+        "short_description": 24
+      },
+      "assembled_structure_success": 24,
+      "literal_core_coverage_NOT_HUMAN": {
+        "matched": 112,
+        "denominator": 134,
+        "rate": 0.835820895522388
+      },
+      "latency_seconds": {
+        "title": {
+          "mean": 1.5391692999995332,
+          "p95": 2.4616270650050853,
+          "max": 3.1045478000014555
+        },
+        "selling_points": {
+          "mean": 1.8763648041658598,
+          "p95": 2.9044998850022234,
+          "max": 3.0548477999982424
+        },
+        "short_description": {
+          "mean": 2.375990825000675,
+          "p95": 3.7694023000010923,
+          "max": 3.8772504000007757
+        },
+        "three_task_total": {
+          "mean": 5.791524929166068,
+          "p95": 8.778039410005658,
+          "max": 9.967619700000796
+        },
+        "three_task_plus_retrieval": {
+          "mean": 5.791676445833825,
+          "p95": 8.778231365010287,
+          "max": 9.967783200001577
+        },
+        "three_task_plus_retrieval_and_preflight": {
+          "mean": 5.7994328833350055,
+          "p95": 8.787392155008638,
+          "max": 9.986606500002381
+        }
+      },
+      "retrieval_selection_mean_seconds": 0.0001515166677563684,
+      "empty_tasks": 0,
+      "max_token_tasks": 0,
+      "claim_suspect_samples_NOT_FACTUAL_RATE": 0,
+      "number_suspect_samples_NOT_FACTUAL_RATE": 0,
+      "grounding_pass_NOT_HUMAN": 24,
+      "peak_allocated_mib": 5642.8,
+      "peak_reserved_mib": 5818.0,
+      "input_tokens_mean": 537.5833333333334,
+      "input_tokens_max": 660,
+      "mandatory_core_injection_per_task": {
+        "expected": 228,
+        "verified": 228,
+        "rate": 1.0
+      },
+      "by_category": {
+        "保温杯": {
+          "products": 3,
+          "literal_matched": 16,
+          "core_denominator": 20
+        },
+        "垃圾桶": {
+          "products": 3,
+          "literal_matched": 15,
+          "core_denominator": 19
+        },
+        "拖把": {
+          "products": 3,
+          "literal_matched": 13,
+          "core_denominator": 13
+        },
+        "收纳箱": {
+          "products": 3,
+          "literal_matched": 11,
+          "core_denominator": 15
+        },
+        "移动电源": {
+          "products": 3,
+          "literal_matched": 15,
+          "core_denominator": 18
+        },
+        "耳机": {
+          "products": 3,
+          "literal_matched": 10,
+          "core_denominator": 13
+        },
+        "键盘": {
+          "products": 3,
+          "literal_matched": 18,
+          "core_denominator": 21
+        },
+        "鼠标": {
+          "products": 3,
+          "literal_matched": 14,
+          "core_denominator": 15
+        }
+      }
+    }
+  },
+  "human_metrics": null,
+  "human_preferences": null,
+  "guards": {
+    "parameter_updates": false,
+    "project_test_read": false,
+    "holdout_archive_read": false,
+    "holdout_generation": false,
+    "old_rag_output_as_model_input": false,
+    "content_tuning": false,
+    "p3_entered": false
+  },
+  "historical_control_latency": true,
+  "old_single_call_rag_compared": false
+}

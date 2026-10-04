@@ -1,0 +1,43 @@
+{
+  "status": "ai_draft_pending_user_confirmation",
+  "source": "E:/WebDownload/lora_rag_development24_blind_review_rechecked.xlsx",
+  "source_sha256": "aab47c87e8c7285f7a800178f1ec216b0b135474a01ff6af7d06f42bd00c414e",
+  "target": "reports/generation/lora_rag/lora_rag_v2_development24_v1/lora_rag_development24_blind_review.xlsx",
+  "initial_target_sha256": "1bb484f09af31128f91727122c1d9d216503f7ed9966baaa473eacb659d2a904",
+  "products": 24,
+  "core_denominator": 134,
+  "metadata": {
+    "reviewer": "ChatGPT初审 / Codex复查（待用户确认）",
+    "review_confirmed": null
+  },
+  "corrections": {
+    "IR019": {
+      "product_id": "596561935088",
+      "fields": {
+        "short_description_naturalness": {
+          "expected_source": "B更好",
+          "value": "持平",
+          "reason": "两侧都使用相同的中性字段串联句式；B增加容量和家庭使用场景属于信息完整性收益，没有明确的语言自然度优势。保留整体电商专业度B更好的原判断。"
+        },
+        "pair_notes": {
+          "expected_source": "B短详情补充容量和家庭使用场景，整体覆盖更完整。",
+          "value": "B短详情补充容量和家庭使用场景，整份文案比A多覆盖适用场景，因此整体电商专业度保留B更好。两侧同为自然可读的中性字段串联句式，信息更多不直接等于语言更自然，短详情自然度改为持平。",
+          "reason": "区分核心信息覆盖与短详情自然度，避免用同一覆盖收益重复支持不同维度。"
+        }
+      }
+    },
+    "IR020": {
+      "product_id": "621326718016",
+      "fields": {
+        "pair_notes": {
+          "expected_source": "A卖点补充多媒体功能键，减少信息遗漏，整体更完整。",
+          "value": "两侧均有三条中性卖点，格式本身持平。A选取USB接口、机械键盘、多媒体功能键三个信息点；B的USB、有线、机械键盘均已在标题或短详情中表达。A减少与标题/短详情的重复，并补充多媒体功能键，信息选择和组织更合理，因此保留卖点结构A更好；整体专业度A更好同时有核心覆盖6/7对5/7的依据。不是仅按字数或命中数判断结构。",
+          "reason": "保留A更好的偏好，但补充实际信息选择与去重依据，而不只用属性覆盖解释卖点结构。"
+        }
+      }
+    }
+  },
+  "official_scores_changed": false,
+  "unblinding_allowed": false,
+  "official_aggregation_allowed": false
+}

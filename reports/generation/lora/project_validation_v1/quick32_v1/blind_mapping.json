@@ -1,0 +1,229 @@
+{
+  "status": "sealed_until_review_complete",
+  "pairs": [
+    {
+      "product_id": "574249081746",
+      "category_l2": "垃圾桶",
+      "A": "Base",
+      "B": "LoRA",
+      "pair_id": "QV01"
+    },
+    {
+      "product_id": "571596142685",
+      "category_l2": "拖把",
+      "A": "Base",
+      "B": "LoRA",
+      "pair_id": "QV02"
+    },
+    {
+      "product_id": "598779879631",
+      "category_l2": "鼠标",
+      "A": "LoRA",
+      "B": "Base",
+      "pair_id": "QV03"
+    },
+    {
+      "product_id": "615406528064",
+      "category_l2": "耳机",
+      "A": "LoRA",
+      "B": "Base",
+      "pair_id": "QV04"
+    },
+    {
+      "product_id": "612182471234",
+      "category_l2": "耳机",
+      "A": "LoRA",
+      "B": "Base",
+      "pair_id": "QV05"
+    },
+    {
+      "product_id": "572645689177",
+      "category_l2": "耳机",
+      "A": "Base",
+      "B": "LoRA",
+      "pair_id": "QV06"
+    },
+    {
+      "product_id": "600955779275",
+      "category_l2": "保温杯",
+      "A": "LoRA",
+      "B": "Base",
+      "pair_id": "QV07"
+    },
+    {
+      "product_id": "597667566007",
+      "category_l2": "垃圾桶",
+      "A": "LoRA",
+      "B": "Base",
+      "pair_id": "QV08"
+    },
+    {
+      "product_id": "600702277714",
+      "category_l2": "保温杯",
+      "A": "Base",
+      "B": "LoRA",
+      "pair_id": "QV09"
+    },
+    {
+      "product_id": "621326718016",
+      "category_l2": "键盘",
+      "A": "Base",
+      "B": "LoRA",
+      "pair_id": "QV10"
+    },
+    {
+      "product_id": "599958487813",
+      "category_l2": "拖把",
+      "A": "LoRA",
+      "B": "Base",
+      "pair_id": "QV11"
+    },
+    {
+      "product_id": "620263779404",
+      "category_l2": "鼠标",
+      "A": "LoRA",
+      "B": "Base",
+      "pair_id": "QV12"
+    },
+    {
+      "product_id": "556912823177",
+      "category_l2": "收纳箱",
+      "A": "Base",
+      "B": "LoRA",
+      "pair_id": "QV13"
+    },
+    {
+      "product_id": "622147332171",
+      "category_l2": "移动电源",
+      "A": "Base",
+      "B": "LoRA",
+      "pair_id": "QV14"
+    },
+    {
+      "product_id": "584308818142",
+      "category_l2": "移动电源",
+      "A": "LoRA",
+      "B": "Base",
+      "pair_id": "QV15"
+    },
+    {
+      "product_id": "609321986854",
+      "category_l2": "耳机",
+      "A": "Base",
+      "B": "LoRA",
+      "pair_id": "QV16"
+    },
+    {
+      "product_id": "594155212844",
+      "category_l2": "收纳箱",
+      "A": "Base",
+      "B": "LoRA",
+      "pair_id": "QV17"
+    },
+    {
+      "product_id": "621592467720",
+      "category_l2": "键盘",
+      "A": "LoRA",
+      "B": "Base",
+      "pair_id": "QV18"
+    },
+    {
+      "product_id": "618097112440",
+      "category_l2": "拖把",
+      "A": "LoRA",
+      "B": "Base",
+      "pair_id": "QV19"
+    },
+    {
+      "product_id": "621646793043",
+      "category_l2": "键盘",
+      "A": "Base",
+      "B": "LoRA",
+      "pair_id": "QV20"
+    },
+    {
+      "product_id": "618173057392",
+      "category_l2": "收纳箱",
+      "A": "LoRA",
+      "B": "Base",
+      "pair_id": "QV21"
+    },
+    {
+      "product_id": "590013076786",
+      "category_l2": "垃圾桶",
+      "A": "Base",
+      "B": "LoRA",
+      "pair_id": "QV22"
+    },
+    {
+      "product_id": "529465827962",
+      "category_l2": "收纳箱",
+      "A": "LoRA",
+      "B": "Base",
+      "pair_id": "QV23"
+    },
+    {
+      "product_id": "611726909441",
+      "category_l2": "鼠标",
+      "A": "Base",
+      "B": "LoRA",
+      "pair_id": "QV24"
+    },
+    {
+      "product_id": "610672244355",
+      "category_l2": "保温杯",
+      "A": "LoRA",
+      "B": "Base",
+      "pair_id": "QV25"
+    },
+    {
+      "product_id": "576904378076",
+      "category_l2": "拖把",
+      "A": "Base",
+      "B": "LoRA",
+      "pair_id": "QV26"
+    },
+    {
+      "product_id": "522712107019",
+      "category_l2": "鼠标",
+      "A": "Base",
+      "B": "LoRA",
+      "pair_id": "QV27"
+    },
+    {
+      "product_id": "594070208995",
+      "category_l2": "移动电源",
+      "A": "Base",
+      "B": "LoRA",
+      "pair_id": "QV28"
+    },
+    {
+      "product_id": "591205504897",
+      "category_l2": "垃圾桶",
+      "A": "LoRA",
+      "B": "Base",
+      "pair_id": "QV29"
+    },
+    {
+      "product_id": "591829516020",
+      "category_l2": "移动电源",
+      "A": "LoRA",
+      "B": "Base",
+      "pair_id": "QV30"
+    },
+    {
+      "product_id": "621593539222",
+      "category_l2": "键盘",
+      "A": "LoRA",
+      "B": "Base",
+      "pair_id": "QV31"
+    },
+    {
+      "product_id": "566986927827",
+      "category_l2": "保温杯",
+      "A": "Base",
+      "B": "LoRA",
+      "pair_id": "QV32"
+    }
+  ]
+}

@@ -1,0 +1,97 @@
+{
+  "version": "lora_qlora_local_training_candidate_v1",
+  "status": "engineering_candidate_pending_formal_training_confirmation",
+  "executable_training_config": false,
+  "formal_training_authorized": false,
+  "engineering_evidence": {
+    "config": "configs/lora_qlora_low_memory_smoke_v1.json",
+    "report": "reports/generation/lora/p6_low_memory_smoke_v1_retry4/smoke_report.json",
+    "report_sha256": "e8a45b3b1ec6ce21b192a35d0f3212acfd116db28e004d976dfe62b5b0748041",
+    "meaning": "bounded smoke and stress only; not quality or full-epoch evidence"
+  },
+  "data": {
+    "version": "lora_instruction_data_v1",
+    "manifest": "reports/generation/lora/lora_instruction_data_v1_final_manifest.json",
+    "manifest_sha256": "e21b9f278dbe533f038008840bce313564e702b6b5ff7ba5e0f8714156814a5d",
+    "lora_train": {
+      "path": "data/processed/lora_instruction_data_v1/train.jsonl",
+      "sha256": "c31b00f3d19d503b3f7c7529cc2ce7e115143214b0d9ab40f07412becd6a5434",
+      "products": 1206,
+      "task_samples": 3618,
+      "role": "parameter_updates"
+    },
+    "lora_train_dev": {
+      "path": "data/processed/lora_instruction_data_v1/validation.jsonl",
+      "sha256": "20a32d5f67a8ac6dd0743bb90445522fe28cd4099ed318e71a4f0e8e33fa0a94",
+      "products": 134,
+      "task_samples": 402,
+      "role": "training_monitoring_checkpoint_selection_early_stopping",
+      "filename_note": "validation.jsonl is internal lora_train_dev, not project_validation"
+    },
+    "project_validation": "only_after_candidate_frozen; not read by training",
+    "project_test": "not_read; separate_future_authorization_required",
+    "rag_v2_holdout": "frozen_not_executed; not_read_by_training",
+    "split_mutation": false
+  },
+  "engineering_parameters": {
+    "base_model": "Qwen/Qwen2.5-7B-Instruct",
+    "revision": "a09a35458c702b33eeacc393d103063234e8bc28",
+    "local_files_only": true,
+    "quantization": "nf4_4bit",
+    "double_quant": true,
+    "compute_dtype": "bfloat16",
+    "autocast_dtype": "bfloat16",
+    "frozen_embedding_and_head_dtype": "bfloat16",
+    "norm_dtype": "float32",
+    "lora_dtype": "float32",
+    "initialization": "cpu_stage_frozen_embedding_and_head_during_peft_preparation",
+    "lora_target_modules": ["q_proj", "v_proj"],
+    "rank": 8,
+    "alpha": 32,
+    "dropout": 0.05,
+    "bias": "none",
+    "trainable_parameters": 2523136,
+    "micro_batch_size": 1,
+    "gradient_accumulation_steps": 8,
+    "effective_batch_size": 8,
+    "max_sequence_length": 320,
+    "dynamic_length_no_fixed_padding": true,
+    "truncation": false,
+    "loss": "native_shape_bf16_logits_assistant_only_chunked_fp32_mean_causal_cross_entropy",
+    "loss_chunk_tokens": 16,
+    "gradient_checkpointing": true,
+    "gradient_checkpointing_use_reentrant": false,
+    "use_cache": false,
+    "optimizer_candidate": "torch.optim.AdamW",
+    "seed": 42
+  },
+  "formal_training_decisions_pending": {
+    "learning_rate": {"value": null, "smoke_reference": 0.0002, "status": "pending_confirmation"},
+    "epochs_or_max_steps": null,
+    "scheduler": null,
+    "warmup": null,
+    "weight_decay": null,
+    "max_grad_norm": null,
+    "evaluation_steps": null,
+    "checkpoint_save_steps": null,
+    "checkpoint_retention": null,
+    "early_stopping_patience": null,
+    "early_stopping_min_delta": null,
+    "last_partial_accumulation_normalization": null,
+    "resume_strategy_and_directory": null
+  },
+  "monitoring_design": {
+    "dataset": "lora_train_dev",
+    "proposed_selection_metric": "mean_per_record_assistant_token_causal_cross_entropy",
+    "metric_direction": "minimize",
+    "task_type_breakdown": true,
+    "evaluation_no_grad": true,
+    "loss_is_not_project_generation_quality": true
+  },
+  "checkpoint_design": {
+    "save_adapter_and_optimizer_scheduler_rng_training_state": true,
+    "save_full_7b_base": false,
+    "initialize_from_smoke_adapter": false
+  },
+  "missing_training_entry": "No formal local trainer/resume/dev evaluation entry has been implemented in this smoke task."
+}

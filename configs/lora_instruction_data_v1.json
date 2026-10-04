@@ -1,0 +1,246 @@
+{
+  "version": "lora_instruction_data_v1",
+  "status": "p5_data_only_no_training",
+  "template_version": "lora_copy_templates_v1",
+  "source": {
+    "path": "data/processed/week2_train_v1/train.jsonl",
+    "sha256": "6ba7179da3339c638aaace1a331cdc50648e58aa75c6a6852e33666bda512fb1",
+    "record_count": 1559,
+    "dataset_version": "week2_train_v1"
+  },
+  "consistency_review": {
+    "path": "reports/data/week2_train_consistency_review.csv",
+    "sha256": "d39ac8eadb1c59eaca298f234dfe5c3924fcc94dd9bc299b41c10848ae0a680f",
+    "confirmed_status": "confirmed",
+    "confirmed_action": "exclude_product",
+    "review_status": "review",
+    "review_action": "defer_product"
+  },
+  "core_attribute_definition": {
+    "path": "configs/generation_evaluation.json",
+    "sha256": "66e97e3d620c83584f2a9bff1757127117043dfe154e4dcbfbfd40cccc7e00bd",
+    "key": "core_attributes"
+  },
+  "quality_gates": {
+    "exclude_placeholders": [
+      "其他",
+      "其它",
+      "OTHER",
+      "other",
+      "未知",
+      "不详",
+      "默认",
+      "见描述",
+      "如图",
+      "0kg",
+      "/",
+      "-",
+      "N/A",
+      "NA",
+      "暂无"
+    ],
+    "composite_placeholder_separator_pattern": "[/\\\\|,，;；、]+",
+    "identity_absent_values": [
+      "无",
+      "否",
+      "没有",
+      "未配备",
+      "无品牌"
+    ],
+    "excluded_values_by_field": {
+      "型号": [
+        "耳机",
+        "键盘",
+        "鼠标",
+        "移动电源",
+        "保温杯",
+        "收纳箱",
+        "拖把",
+        "垃圾桶"
+      ],
+      "无线技术": [
+        "支持"
+      ]
+    },
+    "model_reject_patterns": [
+      "^\\d+\\s*(?:m|mah|毫安)$",
+      "^(?:type[- ]?c|usb)?[^a-z0-9]*通用$"
+    ],
+    "numeric_core_fields_requiring_digit": [
+      "容量",
+      "尺寸",
+      "净重",
+      "电池容量",
+      "最大输出功率",
+      "保温时长",
+      "光学分辨率",
+      "按键数",
+      "蓝牙版本"
+    ],
+    "unsafe_attribute_value_terms": [
+      "特价",
+      "优惠",
+      "促销",
+      "秒杀",
+      "清仓",
+      "包邮",
+      "现货速发",
+      "顺丰",
+      "大礼包",
+      "赠品",
+      "咨询客服",
+      "联系客服"
+    ],
+    "allowed_multivalue_set_fields": [
+      "功能",
+      "适用人群",
+      "适用场景",
+      "适用对象",
+      "适用空间",
+      "充电协议",
+      "耳机类别"
+    ],
+    "maximum_values_per_set_field": 3,
+    "negative_values_not_used_as_active_copy_points": [
+      "无",
+      "否",
+      "没有",
+      "未配备",
+      "不支持"
+    ],
+    "minimum_active_core_attributes": 3,
+    "title_always_remove_terms": [
+      "特价",
+      "优惠",
+      "促销",
+      "秒杀",
+      "清仓",
+      "抢购",
+      "包邮",
+      "现货",
+      "速发",
+      "顺丰",
+      "热卖",
+      "热销",
+      "爆款",
+      "网红",
+      "新款",
+      "正品",
+      "官方",
+      "原装",
+      "旗舰",
+      "顶级",
+      "高端",
+      "品质",
+      "优质",
+      "超强",
+      "高效",
+      "耐用",
+      "便捷",
+      "安全",
+      "舒适",
+      "精准",
+      "稳定",
+      "完美",
+      "极致",
+      "最佳",
+      "必备",
+      "推荐",
+      "保证",
+      "保障",
+      "省力",
+      "省心",
+      "大容量",
+      "礼包",
+      "赠品",
+      "送礼",
+      "礼物"
+    ],
+    "title_conditionally_supported_terms": [
+      "家用",
+      "办公",
+      "学生",
+      "宿舍",
+      "车载",
+      "户外",
+      "旅行",
+      "厨房",
+      "卫生间",
+      "客厅",
+      "卧室",
+      "儿童",
+      "成人",
+      "女士",
+      "男士",
+      "老人",
+      "情侣",
+      "通用"
+    ],
+    "maximum_title_characters": 60,
+    "maximum_short_description_attributes": 5,
+    "category_title_aliases": {
+      "保温杯": ["保温杯", "保温水杯"],
+      "垃圾桶": ["垃圾桶", "垃圾筒", "纸篓"],
+      "拖把": ["拖把", "拖布", "地拖", "墩布"],
+      "收纳箱": ["收纳箱", "储物箱", "整理箱", "收纳盒", "储物盒", "整理盒"],
+      "移动电源": ["移动电源", "充电宝"],
+      "耳机": ["耳机", "耳麦"],
+      "键盘": ["键盘"],
+      "鼠标": ["鼠标", "滑鼠"]
+    },
+    "category_excluded_title_terms": {
+      "保温杯": ["杯套", "杯盖", "替换吸管"],
+      "垃圾桶": ["垃圾袋"],
+      "拖把": ["替换头", "拖把头", "拖把杆", "拖把配件"],
+      "收纳箱": ["收纳袋", "行李袋", "手提袋"],
+      "移动电源": ["充电宝外壳", "移动电源外壳", "电池盒", "充电盒", "不含电池", "套件"],
+      "耳机": ["耳机套", "耳机盒", "耳机线", "耳机收纳"],
+      "键盘": ["键盘包", "键盘套", "键帽"],
+      "鼠标": ["鼠标垫", "鼠标壳", "鼠标贴"]
+    },
+    "mobile_power_capacity_token_pattern": "(?i)(\\d{4,})\\s*(?:mAh|毫安|m\\b)",
+    "maximum_distinct_mobile_power_capacity_tokens": 1
+  },
+  "targets": {
+    "task_types": [
+      "title",
+      "selling_points",
+      "short_description"
+    ],
+    "selling_point_count": 3,
+    "title_policy": "reassemble supported category and reliable core-attribute components in native-title order; discard untrusted free text",
+    "selling_points_policy": "three neutral field-value statements from reliable active core attributes",
+    "short_description_policy": "one neutral paragraph joining reliable core field-value facts without effects, evaluations, or new scenarios"
+  },
+  "split": {
+    "strategy": "product_grouped_category_stratified_sha256_rank",
+    "namespace": "lora_instruction_data_v1",
+    "seed": 42,
+    "validation_fraction": 0.1,
+    "test_created": false,
+    "frozen_week1_validation_or_test_used": false
+  },
+  "spot_check": {
+    "products_per_category": 3,
+    "selection": "lowest sha256 rank within category using a separate namespace",
+    "namespace": "lora_instruction_data_v1_spot_check",
+    "seed": 42
+  },
+  "provenance_guards": {
+    "source_title_allowed_in_model_input": false,
+    "source_title_role": [
+      "target_component_order",
+      "cleaning_audit",
+      "style_reference"
+    ],
+    "model_generated_targets_allowed": false,
+    "forbidden_target_sources": [
+      "Baseline outputs",
+      "RAG v1 outputs",
+      "RAG v2 outputs",
+      "other model outputs"
+    ],
+    "test_data_allowed_for_template_design": false,
+    "training_executed": false
+  }
+}

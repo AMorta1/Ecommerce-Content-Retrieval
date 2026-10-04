@@ -1,0 +1,19 @@
+{
+  "version": "lora_qlora_smoke_v1",
+  "status": "failed",
+  "scope": "engineering_smoke_only",
+  "started_at_utc": "2026-10-02T04:59:29.259068+00:00",
+  "failed_at_utc": "2026-10-02T04:59:29.900035+00:00",
+  "error_type": "ValueError",
+  "error": "Prompt tokens are not an exact prefix of the supervised sequence.",
+  "traceback": "Traceback (most recent call last):\n  File \"E:\\Projects\\Baidu\\Ecommerce-Content-Retrieval\\scripts\\run_qlora_smoke.py\", line 262, in run\n    tokenized = [tokenize_supervised_record(tokenizer, record, max_length) for record in records]\n  File \"E:\\Projects\\Baidu\\Ecommerce-Content-Retrieval\\scripts\\run_qlora_smoke.py\", line 262, in <listcomp>\n    tokenized = [tokenize_supervised_record(tokenizer, record, max_length) for record in records]\n  File \"E:\\Projects\\Baidu\\Ecommerce-Content-Retrieval\\scripts\\run_qlora_smoke.py\", line 138, in tokenize_supervised_record\n    raise ValueError(\"Prompt tokens are not an exact prefix of the supervised sequence.\")\nValueError: Prompt tokens are not an exact prefix of the supervised sequence.\n",
+  "guards": {
+    "formal_training": false,
+    "full_epoch_over_p5_train": false,
+    "project_validation_used": false,
+    "project_test_used": false,
+    "rag_v2_holdout_used": false,
+    "p5_data_mutation_allowed": false,
+    "effect_evaluation_allowed": false
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "status": "recorded_before_first_model_call",
+  "created_at_utc": "2026-10-04T12:50:23.880403+00:00",
+  "protocol_manifest_sha256": "e8754d37ed27789d02801b710184ee9a034cff2e6996a42da8a29eadde0f7850",
+  "tests": "34 passed: test_lora_formal_test.py, test_lora_validation.py, test_lora_validation_quick32.py",
+  "inference_python": "E:/Anaconda/envs/ecommerce-generation/python.exe",
+  "review_python": "E:/Anaconda/python.exe",
+  "reason": "Existing generation environment has no openpyxl. Use existing base environment for archive/summarize only; install nothing, inference environment unchanged. This corrects the archive/summarize interpreter shown in the frozen protocol document, not any inference setting.",
+  "actual_archive_command": "& 'E:\\Anaconda\\python.exe' -B -X utf8 scripts/run_lora_project_test.py --mode archive",
+  "no_model_generation_in_review_environment": true
+}

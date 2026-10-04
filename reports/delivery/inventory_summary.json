@@ -1,0 +1,36 @@
+{
+  "created_at_utc": "2026-10-04T18:39:48.454851+00:00",
+  "scope": "all repository files including ignored; excludes .git internals and reports/delivery self-artifacts",
+  "file_count": 2586,
+  "classifications": {
+    "KEEP_FINAL": {
+      "files": 129,
+      "bytes": 1227641
+    },
+    "KEEP_REPRODUCIBILITY": {
+      "files": 2212,
+      "bytes": 320906976
+    },
+    "ARCHIVE": {
+      "files": 196,
+      "bytes": 149472666
+    },
+    "DELETE_CANDIDATE": {
+      "files": 49,
+      "bytes": 595319
+    }
+  },
+  "git_head": "08d2e8fdadd3540495563edd2ad3fa5d33e839b4",
+  "holdout_content_opened": false,
+  "no_file_actions_executed": true,
+  "documentation_targets": [
+    "README.md",
+    "docs/data.md",
+    "docs/delivery_audit.md",
+    "docs/evaluation.md",
+    "docs/generation.md",
+    "docs/retrieval.md",
+    "scripts/audit_delivery.py"
+  ],
+  "inventory_sha256": "c5d52f0c6c604316f5a8431d1a1a3dbf66cc01df7675d5c53a5f869baf607422"
+}

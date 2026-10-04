@@ -1,0 +1,191 @@
+{
+  "version": "lora_instruction_data_v1",
+  "status": "built_spot_check_pending",
+  "config": {
+    "path": "configs/lora_instruction_data_v1.json",
+    "sha256": "fa3d2de49f4802b842848c31c0370f29798b576a5b3d0666c76d6aa6b277a7c6"
+  },
+  "sources": {
+    "train": {
+      "path": "data/processed/week2_train_v1/train.jsonl",
+      "sha256": "6ba7179da3339c638aaace1a331cdc50648e58aa75c6a6852e33666bda512fb1",
+      "record_count": 1559,
+      "dataset_version": "week2_train_v1"
+    },
+    "consistency_review": {
+      "path": "reports/data/week2_train_consistency_review.csv",
+      "sha256": "d39ac8eadb1c59eaca298f234dfe5c3924fcc94dd9bc299b41c10848ae0a680f",
+      "confirmed_status": "confirmed",
+      "confirmed_action": "exclude_product",
+      "review_status": "review",
+      "review_action": "defer_product"
+    },
+    "core_attribute_definition": {
+      "path": "configs/generation_evaluation.json",
+      "sha256": "66e97e3d620c83584f2a9bff1757127117043dfe154e4dcbfbfd40cccc7e00bd",
+      "key": "core_attributes"
+    }
+  },
+  "summary": {
+    "usable_product_count": 1340,
+    "instruction_count": 4020,
+    "product_split_counts": {
+      "train": 1206,
+      "validation": 134
+    },
+    "task_counts": {
+      "selling_points": 1340,
+      "short_description": 1340,
+      "title": 1340
+    },
+    "split_task_counts": {
+      "train:selling_points": 1206,
+      "train:short_description": 1206,
+      "train:title": 1206,
+      "validation:selling_points": 134,
+      "validation:short_description": 134,
+      "validation:title": 134
+    },
+    "product_category_counts": {
+      "保温杯": 184,
+      "垃圾桶": 176,
+      "拖把": 156,
+      "收纳箱": 149,
+      "移动电源": 172,
+      "耳机": 171,
+      "键盘": 154,
+      "鼠标": 178
+    },
+    "exclusion_counts": {
+      "accessory_or_product_boundary_title": 39,
+      "confirmed_conflict": 15,
+      "duplicate_final_product_signature": 31,
+      "insufficient_reliable_core_attributes": 50,
+      "review_pending": 28,
+      "title_category_not_supported": 56
+    },
+    "exclusion_category_counts": {
+      "保温杯": {
+        "duplicate_final_product_signature": 1,
+        "title_category_not_supported": 15
+      },
+      "垃圾桶": {
+        "accessory_or_product_boundary_title": 3,
+        "confirmed_conflict": 1,
+        "duplicate_final_product_signature": 2,
+        "insufficient_reliable_core_attributes": 14,
+        "review_pending": 2,
+        "title_category_not_supported": 2
+      },
+      "拖把": {
+        "accessory_or_product_boundary_title": 28,
+        "confirmed_conflict": 1,
+        "duplicate_final_product_signature": 1,
+        "insufficient_reliable_core_attributes": 1,
+        "review_pending": 5,
+        "title_category_not_supported": 3
+      },
+      "收纳箱": {
+        "accessory_or_product_boundary_title": 4,
+        "confirmed_conflict": 4,
+        "duplicate_final_product_signature": 1,
+        "insufficient_reliable_core_attributes": 13,
+        "review_pending": 1,
+        "title_category_not_supported": 27
+      },
+      "移动电源": {
+        "confirmed_conflict": 3,
+        "duplicate_final_product_signature": 1,
+        "insufficient_reliable_core_attributes": 1,
+        "review_pending": 13,
+        "title_category_not_supported": 2
+      },
+      "耳机": {
+        "accessory_or_product_boundary_title": 3,
+        "confirmed_conflict": 3,
+        "insufficient_reliable_core_attributes": 13,
+        "title_category_not_supported": 5
+      },
+      "键盘": {
+        "accessory_or_product_boundary_title": 1,
+        "confirmed_conflict": 3,
+        "duplicate_final_product_signature": 15,
+        "insufficient_reliable_core_attributes": 3,
+        "review_pending": 7,
+        "title_category_not_supported": 1
+      },
+      "鼠标": {
+        "duplicate_final_product_signature": 10,
+        "insufficient_reliable_core_attributes": 5,
+        "title_category_not_supported": 1
+      }
+    },
+    "cleaning_action_type_counts": {
+      "add_reliable_component": 3687,
+      "discard_untrusted_source_title_free_text": 1340,
+      "drop_absent_identity": 4,
+      "drop_excluded_field_value": 21,
+      "drop_non_numeric_value": 159,
+      "drop_noninformative_model": 6,
+      "drop_placeholder": 307,
+      "drop_unsafe_value": 4,
+      "remove_for_title_length": 1,
+      "remove_marketing_or_evaluative_term": 466,
+      "remove_unsupported_scope_or_scenario": 1355,
+      "withhold_multivalue_field": 109,
+      "withhold_oversized_set_field": 96
+    },
+    "version": "lora_instruction_data_v1",
+    "status": "built_spot_check_pending",
+    "model_loaded": false,
+    "training_executed": false,
+    "test_data_read_or_executed": false
+  },
+  "spot_check": {
+    "products_per_category": 3,
+    "product_count": 24,
+    "task_example_count": 72,
+    "manual_review_complete": false
+  },
+  "artifacts": {
+    "products": {
+      "path": "data/processed/lora_instruction_data_v1/products.jsonl",
+      "sha256": "1156e8f8466927c1ece4cb89577ee534ccdd66856f640512bd56f0c164d72868",
+      "bytes": 2512144
+    },
+    "excluded_products": {
+      "path": "data/processed/lora_instruction_data_v1/excluded_products.jsonl",
+      "sha256": "da0e69078a3ddeb474952ccbe68d48c0c219f1ba946b47161f82e044457cc4d2",
+      "bytes": 37413
+    },
+    "train": {
+      "path": "data/processed/lora_instruction_data_v1/train.jsonl",
+      "sha256": "c31b00f3d19d503b3f7c7529cc2ce7e115143214b0d9ab40f07412becd6a5434",
+      "bytes": 11251044
+    },
+    "validation": {
+      "path": "data/processed/lora_instruction_data_v1/validation.jsonl",
+      "sha256": "20a32d5f67a8ac6dd0743bb90445522fe28cd4099ed318e71a4f0e8e33fa0a94",
+      "bytes": 1241600
+    },
+    "summary": {
+      "path": "data/processed/lora_instruction_data_v1/summary.json",
+      "sha256": "1ce2c8d9a08483989d620def30bfa825c51a4f84bc2c71bf3ef9df9113bafd79",
+      "bytes": 3447
+    },
+    "samples": {
+      "path": "reports/generation/lora/lora_instruction_data_v1_samples.csv",
+      "sha256": "f87358bfb7e369a61d6fe656e2754814b546727ac249d281698099771830f939",
+      "bytes": 20356
+    }
+  },
+  "guards": {
+    "source_title_in_model_input": false,
+    "model_generated_target_count": 0,
+    "frozen_validation_used": false,
+    "frozen_test_used": false,
+    "test_output_created": false,
+    "model_loaded": false,
+    "training_executed": false
+  }
+}

@@ -1,0 +1,61 @@
+{
+  "version": "lora_qlora_smoke_v1",
+  "scope": "engineering_smoke_only",
+  "input": {
+    "path": "data/processed/lora_instruction_data_v1/train.jsonl",
+    "expected_sha256": "c31b00f3d19d503b3f7c7529cc2ce7e115143214b0d9ab40f07412becd6a5434",
+    "required_split": "train",
+    "products_per_category": 1,
+    "task_types": ["title", "selling_points", "short_description"],
+    "expected_category_count": 8,
+    "expected_product_count": 8,
+    "expected_record_count": 24,
+    "selection_namespace": "lora_p6_qlora_smoke_v1",
+    "selection_seed": 42
+  },
+  "model": {
+    "name": "Qwen/Qwen2.5-7B-Instruct",
+    "revision": "a09a35458c702b33eeacc393d103063234e8bc28",
+    "cache_dir": "../.model-cache/huggingface/hub",
+    "local_files_only": true,
+    "load_in_4bit": true,
+    "bnb_4bit_quant_type": "nf4",
+    "bnb_4bit_use_double_quant": true,
+    "bnb_4bit_compute_dtype": "bfloat16"
+  },
+  "lora": {
+    "task_type": "CAUSAL_LM",
+    "target_modules": ["q_proj", "v_proj"],
+    "r": 8,
+    "lora_alpha": 32,
+    "lora_dropout": 0.05,
+    "bias": "none"
+  },
+  "optimization": {
+    "seed": 42,
+    "max_sequence_length": 320,
+    "micro_batch_size": 1,
+    "gradient_accumulation_steps": 8,
+    "micro_steps": 24,
+    "optimizer_steps": 3,
+    "learning_rate": 0.0002,
+    "gradient_checkpointing": true,
+    "use_cache": false
+  },
+  "output": {
+    "directory": "reports/generation/lora/p6_qlora_smoke_v1_retry1",
+    "prior_failed_attempt": "reports/generation/lora/p6_qlora_smoke_v1/smoke_failure.json",
+    "adapter_subdirectory": "adapter",
+    "report_filename": "smoke_report.json",
+    "failure_filename": "smoke_failure.json"
+  },
+  "guards": {
+    "formal_training": false,
+    "full_epoch_over_p5_train": false,
+    "project_validation_used": false,
+    "project_test_used": false,
+    "rag_v2_holdout_used": false,
+    "p5_data_mutation_allowed": false,
+    "effect_evaluation_allowed": false
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "complete": true,
+  "global_step": 2,
+  "run_kind": "acceptance_only",
+  "files": [
+    {
+      "path": "adapter/adapter_config.json",
+      "bytes": 1262,
+      "sha256": "e2b82fe411b779d95322c2207d1245b9c4b171650456f0c483c481ac666aa3fe"
+    },
+    {
+      "path": "adapter/adapter_model.safetensors",
+      "bytes": 10107280,
+      "sha256": "a34e9e3082a8f02c31d19f6853a7912d921fe841afe8cc13cfdbc014000bf141"
+    },
+    {
+      "path": "adapter/README.md",
+      "bytes": 5416,
+      "sha256": "1e733fc9176aa2816149a3a7fed36957c44659aeb390ec251dc9051be6ba2fc6"
+    },
+    {
+      "path": "config_snapshot.json",
+      "bytes": 4290,
+      "sha256": "b31e61e27bed5bc283a54cf6d018ed7eb7dcfebfbc491b5080244c89b87e9739"
+    },
+    {
+      "path": "trainer_state.json",
+      "bytes": 6897,
+      "sha256": "85b8c8b31410a203c987c369e11a1507b0347748299433482598e374b61cc0a6"
+    },
+    {
+      "path": "training_state.pt",
+      "bytes": 20297155,
+      "sha256": "bbc4231bdc1cbb1ffa8ec84e499996972bb8576651dbc462408999675be1b060"
+    }
+  ],
+  "saved_at_utc": "2026-10-04T06:13:56.205996+00:00"
+}

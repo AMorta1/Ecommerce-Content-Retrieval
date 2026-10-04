@@ -1,0 +1,236 @@
+{
+  "status": "generation_complete_quick32_human_review_pending",
+  "created_at_utc": "2026-10-04T09:56:41.196209+00:00",
+  "generation_products_per_model": 200,
+  "tasks_per_model": 600,
+  "human_sample_products": 32,
+  "tests": {
+    "passed": 59,
+    "failed": 0,
+    "scope": "focused_P5_P6_P7_unit_tests_synthetic_review_fixtures"
+  },
+  "artifact_writer_environment": {
+    "python": "3.13.9 | packaged by Anaconda, Inc. | (main, Oct 21 2025, 19:09:58) [MSC v.1929 64 bit (AMD64)]",
+    "openpyxl": "3.1.5"
+  },
+  "inference_protocol_sha256": "095cb45a3c07b86ccace377d746ffe3224a9805aaf5204f19640652e08aa1ab2",
+  "sampling_manifest_sha256": "d77a9462635099c907c116aa80ddce94cc5fada4971fe34074fb79d12ea1ac9d",
+  "automatic_phase_manifest_sha256": "d9de118a82768bb07cd362f783e141565aa961d498fb80543734a79fb21ffae4",
+  "human_formal_metrics_exist": false,
+  "automatic_test_promotion": false,
+  "project_test_read": false,
+  "rag_holdout_files_read": false,
+  "rag_v2_generation": false,
+  "parameter_updates": 0,
+  "files": [
+    {
+      "path": "artifacts/lora/lora_v1/checkpoints/checkpoint-step-001359/adapter/adapter_config.json",
+      "sha256": "8c0443a49eb8535c4883ec9d90cad883508917230777033c405e3a87a0b33925"
+    },
+    {
+      "path": "artifacts/lora/lora_v1/checkpoints/checkpoint-step-001359/adapter/adapter_model.safetensors",
+      "sha256": "890a061812321ccf6bbf598b37617fc59dcde70d57042c4304c219a0f6740e31"
+    },
+    {
+      "path": "configs/generation_evaluation.json",
+      "sha256": "66e97e3d620c83584f2a9bff1757127117043dfe154e4dcbfbfd40cccc7e00bd"
+    },
+    {
+      "path": "configs/lora_instruction_data_v1.json",
+      "sha256": "fa3d2de49f4802b842848c31c0370f29798b576a5b3d0666c76d6aa6b277a7c6"
+    },
+    {
+      "path": "configs/lora_project_validation_quick32_v1.json",
+      "sha256": "94dc6c2fab251759833139181103d363742cf794715aee63f9c35df033428772"
+    },
+    {
+      "path": "configs/lora_project_validation_v1.json",
+      "sha256": "4a86013f8e0bae471c6e75694d730232c580465cbc01df630ee8640636d3b1c5"
+    },
+    {
+      "path": "configs/lora_qlora_train_v1.json",
+      "sha256": "1afb8ed3ecca91aa3d8bdd55fb5e456dbb9a60deef8d52f4805c70cc24d7d1e0"
+    },
+    {
+      "path": "data/processed/lora_instruction_data_v1/train.jsonl",
+      "sha256": "c31b00f3d19d503b3f7c7529cc2ce7e115143214b0d9ab40f07412becd6a5434"
+    },
+    {
+      "path": "data/processed/lora_instruction_data_v1/validation.jsonl",
+      "sha256": "20a32d5f67a8ac6dd0743bb90445522fe28cd4099ed318e71a4f0e8e33fa0a94"
+    },
+    {
+      "path": "data/processed/week1_v3/multimodal/validation.jsonl",
+      "sha256": "dd2bc1d6c21567176d95f5414bfd9304f48979b3bb39ab0b038627b1f346af0b"
+    },
+    {
+      "path": "data/processed/week2_rag_mandatory_core_v2/validation_fact_units.jsonl",
+      "sha256": "956cbb567d11c9d603d34f875895f64baa3bdabe584ba185de028f5a7869a798"
+    },
+    {
+      "path": "docs/lora_project_validation_quick32_v1.md",
+      "sha256": "852e479890a0c1b17b1f6bb58cfd77c91259e58633f8c7cc3e0dcdd9d78bac70"
+    },
+    {
+      "path": "docs/lora_project_validation_v1_protocol.md",
+      "sha256": "58e729fe1f8aa9a484eec43a76412581d3307cbed175d402aa609e530f31bf3e"
+    },
+    {
+      "path": "reports/generation/lora/project_validation_v1/automatic_phase_checksums.sha256",
+      "sha256": "e58534f44d5adc0277a528dee41593cb1d97cca7197d6c2144812f19b05c54d5"
+    },
+    {
+      "path": "reports/generation/lora/project_validation_v1/automatic_phase_manifest.json",
+      "sha256": "d9de118a82768bb07cd362f783e141565aa961d498fb80543734a79fb21ffae4"
+    },
+    {
+      "path": "reports/generation/lora/project_validation_v1/automatic_phase_summary.json",
+      "sha256": "58268d04c89973b0d3f6a3c2b3ed42981c8ba1260e3d9f8816f8cadecab09a65"
+    },
+    {
+      "path": "reports/generation/lora/project_validation_v1/base/product_outputs.jsonl",
+      "sha256": "c6691e0453c97bff25a656c6b4c9cece3d40e2660496cfdb6532947bdc46bf04"
+    },
+    {
+      "path": "reports/generation/lora/project_validation_v1/base/run_report.json",
+      "sha256": "c98fb31973a9a51d0b6df9d72e91ac3f076f965f7bc1ad6fef185351de953efb"
+    },
+    {
+      "path": "reports/generation/lora/project_validation_v1/base/task_outputs.jsonl",
+      "sha256": "2c97f3d2d6e9fa5065a8d812fc6d3815969d94b432e5f91822760a4520131485"
+    },
+    {
+      "path": "reports/generation/lora/project_validation_v1/blind_mapping.json",
+      "sha256": "2e5e2e43992c7f2ab96be67f7c471fb393a45075d1abbad946b5486455cc3ff8"
+    },
+    {
+      "path": "reports/generation/lora/project_validation_v1/environment_freeze.txt",
+      "sha256": "5596644df337a7bd02ff4d4439074d1c61c409606cf1c83e4b1e351c3d1d5990"
+    },
+    {
+      "path": "reports/generation/lora/project_validation_v1/frozen_inputs.jsonl",
+      "sha256": "9f2e52e19f3a8b49376b423b4d117f5b1ca215805961793749b727a37c1a352d"
+    },
+    {
+      "path": "reports/generation/lora/project_validation_v1/inference_base.json",
+      "sha256": "ad7b73f8cb253ef880c7d79c460488815246c47979fe11ff333f6f1b02e62033"
+    },
+    {
+      "path": "reports/generation/lora/project_validation_v1/inference_lora.json",
+      "sha256": "13a07ffb5ff6a1c5b8794c3bc95ee7574f0d9e4b8bd908760f9fe5aa37519ea1"
+    },
+    {
+      "path": "reports/generation/lora/project_validation_v1/latency_by_product.csv",
+      "sha256": "cfc0db00fea355c24fbcb739cc87446f0298657aa6c9ee90b7ae99d034faf649"
+    },
+    {
+      "path": "reports/generation/lora/project_validation_v1/lora/product_outputs.jsonl",
+      "sha256": "cc06e7ebb0365c036fa4ac286779e116033bfa2c481950423c4abea5e8388b13"
+    },
+    {
+      "path": "reports/generation/lora/project_validation_v1/lora/run_report.json",
+      "sha256": "b96d552112fd191474cd9558e07420c12cc3ba419408d7ae149e4a794e3cd7ee"
+    },
+    {
+      "path": "reports/generation/lora/project_validation_v1/lora/task_outputs.jsonl",
+      "sha256": "4beb17886b8ef092ac7387e3e8ff007b45081cd20349ee99336f645dc8828844"
+    },
+    {
+      "path": "reports/generation/lora/project_validation_v1/phase_report.md",
+      "sha256": "ab5a43df74a05e5b812227165ddea463cb6dc3b5c32df808b15bc53559392f01"
+    },
+    {
+      "path": "reports/generation/lora/project_validation_v1/protocol_manifest.json",
+      "sha256": "095cb45a3c07b86ccace377d746ffe3224a9805aaf5204f19640652e08aa1ab2"
+    },
+    {
+      "path": "reports/generation/lora/project_validation_v1/quick32_v1/blind_mapping.json",
+      "sha256": "c1506842aed990c89b3c0e322df9a9053c41af592cbc95e6919ef2de46c890b4"
+    },
+    {
+      "path": "reports/generation/lora/project_validation_v1/quick32_v1/project_validation32_blind_review.xlsx",
+      "sha256": "5c23171b28c9944e517d607453918ceaad96ce7d8591916798293979cc84971e"
+    },
+    {
+      "path": "reports/generation/lora/project_validation_v1/quick32_v1/review_manifest.json",
+      "sha256": "52f40480737e41d8963e8504667c69539ba57b78a344a928f85c26a6d1348a2f"
+    },
+    {
+      "path": "reports/generation/lora/project_validation_v1/quick32_v1/sample_ids.json",
+      "sha256": "bb8243578b6802e8a9af7a7620f3495694e5d0ecc5ae9db1c54fcf6269b8864b"
+    },
+    {
+      "path": "reports/generation/lora/project_validation_v1/quick32_v1/sampling_manifest.json",
+      "sha256": "d77a9462635099c907c116aa80ddce94cc5fada4971fe34074fb79d12ea1ac9d"
+    },
+    {
+      "path": "reports/generation/lora/project_validation_v1/review_quick_start.md",
+      "sha256": "08758a9ff93953c15e290b94d8ea04d5b5f63157bf831d62860c8099a899ac8a"
+    },
+    {
+      "path": "scripts/archive_lora_project_validation.py",
+      "sha256": "373ed84a952b3b8467b8eeee8bc22cdbe3bcc74239d186856a516d39062e7532"
+    },
+    {
+      "path": "scripts/finalize_lora_validation_archive.py",
+      "sha256": "7abb016437a84d2030d090a477c5c2ccd02bc7bee6f921c4a50351cd6328a28d"
+    },
+    {
+      "path": "scripts/prepare_generation_evaluation.py",
+      "sha256": "0894cdad680e6a6efa2c15c4ef4f5719c2e30c6256282245876b9230d54a950a"
+    },
+    {
+      "path": "scripts/review_lora_project_validation.py",
+      "sha256": "0fca533dcf0509540c7aafa6937a64b3dcf619adc04c26ed4c3aaf8f6eb3301d"
+    },
+    {
+      "path": "scripts/review_lora_project_validation_quick32.py",
+      "sha256": "a06a823ea60369c7459dd2770aba02a30dd4b15a1bae5413bd49d28b62c445bd"
+    },
+    {
+      "path": "scripts/run_lora_project_validation.py",
+      "sha256": "62a390f5fa245cb35e84c36c4f992657324654b659171fe30ed47f5ef6c538a3"
+    },
+    {
+      "path": "src/generation/evaluation.py",
+      "sha256": "82c71e14d0c0104b96d1d83ba2857e76f89edf4330a96a6827d1cc05461aeda7"
+    },
+    {
+      "path": "src/generation/lora_data.py",
+      "sha256": "6fa199d16edbca11c2ece97c6b43ca18583df55ddf18a4f3113d47d10018efa3"
+    },
+    {
+      "path": "src/generation/lora_training.py",
+      "sha256": "9ac9587e71b6f892bb3c429f7726ff17edddc354ee57372c22da48ccd22e107e"
+    },
+    {
+      "path": "src/generation/lora_validation.py",
+      "sha256": "ee87861d727c24588671b34c8fdeed24198b660093934e44a644ae1f34bada76"
+    },
+    {
+      "path": "src/generation/lora_validation_review.py",
+      "sha256": "c10b9b9d3906b6aaa822ed76f9cc0bb78a8362f7c0aa4169a835c0c363726b9b"
+    },
+    {
+      "path": "src/generation/qlora_memory.py",
+      "sha256": "9b4d9a72248dca51ec825d18b05833af3a0f3f8f1bb7b3b8a3a3c4767323f848"
+    },
+    {
+      "path": "src/generation/qwen.py",
+      "sha256": "344f4e41de9308bf7d213c2786e6022917943f21434c5615239312adf4214aad"
+    },
+    {
+      "path": "src/generation/rag.py",
+      "sha256": "20d9654b775692bedbe995faf07376eda652ddbba8046f58cb068ac0a053a2ef"
+    },
+    {
+      "path": "tests/test_lora_validation.py",
+      "sha256": "d469ffd7fa0a858e3c743863efd75a06cc51d5dcb6885465b8414680f8122827"
+    },
+    {
+      "path": "tests/test_lora_validation_quick32.py",
+      "sha256": "8215e745d2bb1a180ca7b6277f07f0eb70d62caacbd25d06835e4a818c86961e"
+    }
+  ],
+  "workbook_hash_role": "initial_blank_workbook_expected_to_change_only_by_human_fill"
+}

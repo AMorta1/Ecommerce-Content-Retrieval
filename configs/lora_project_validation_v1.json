@@ -1,0 +1,19 @@
+{
+  "version": "lora_project_validation_v1",
+  "scope": "project_validation_only",
+  "source": {"path": "data/processed/week1_v3/multimodal/validation.jsonl", "sha256": "dd2bc1d6c21567176d95f5414bfd9304f48979b3bb39ab0b038627b1f346af0b", "products": 200},
+  "validation_quality_facts": {"path": "data/processed/week2_rag_mandatory_core_v2/validation_fact_units.jsonl", "sha256": "956cbb567d11c9d603d34f875895f64baa3bdabe584ba185de028f5a7869a798"},
+  "p5_config": {"path": "configs/lora_instruction_data_v1.json", "sha256": "fa3d2de49f4802b842848c31c0370f29798b576a5b3d0666c76d6aa6b277a7c6"},
+  "evaluation_definition": {"path": "configs/generation_evaluation.json", "sha256": "66e97e3d620c83584f2a9bff1757127117043dfe154e4dcbfbfd40cccc7e00bd"},
+  "frozen_training_config": {"path": "configs/lora_qlora_train_v1.json", "sha256": "1afb8ed3ecca91aa3d8bdd55fb5e456dbb9a60deef8d52f4805c70cc24d7d1e0"},
+  "adapter": {"path": "artifacts/lora/lora_v1/checkpoints/checkpoint-step-001359/adapter", "weights_sha256": "890a061812321ccf6bbf598b37617fc59dcde70d57042c4304c219a0f6740e31"},
+  "model": {"name": "Qwen/Qwen2.5-7B-Instruct", "revision": "a09a35458c702b33eeacc393d103063234e8bc28", "cache_dir": "../.model-cache/huggingface/hub", "offline": true, "load_in_4bit": true, "quant_type": "nf4", "double_quant": true, "compute_dtype": "bfloat16", "dense_embedding_head_dtype": "bfloat16", "norm_dtype": "float32", "use_cache": true, "gradient_checkpointing_for_inference": false},
+  "prompt": {"version": "lora_copy_templates_v1", "source": "src/generation/lora_data.py:build_instruction_text", "system": "你是中文电商文案编辑，只能使用输入中的品类和可靠核心属性。", "tasks": ["title", "selling_points", "short_description"], "source_title_in_input": false, "max_input_tokens": 2048, "truncation": false},
+  "decoding": {"max_new_tokens": 320, "do_sample": true, "temperature": 0.7, "top_p": 0.9, "top_k": 20, "repetition_penalty": 1.05, "num_beams": 1, "use_cache": true},
+  "pairing": {"base_seed": 42, "seed_rule": "first_8_hex_sha256(p7_lora_v1:42:product_id:task_type) modulo 2147483647", "variant_in_seed": false, "blind_seed": 41007, "blind_assignment": "globally balanced 100 Base-as-A and 100 LoRA-as-A, SHA256-ranked before outputs", "review_order": "independent SHA256 ranking before outputs"},
+  "input_policy": {"value_gates": "unchanged P5 select_reliable_core_attributes", "audit_gates": ["field_requires_review", "field_conflict", "identity_or_category_conflict"], "rag_multivalue_or_whitelist_policy_applied": false, "all_products_retained": true, "official_denominator": "unchanged select_core_attributes using frozen generation_evaluation.json before P5/audit input gates"},
+  "review": {"products": 200, "selection": "all_project_validation_not_output_selected", "official_fields": ["matched_attribute_count", "fluency_pass", "factual_error_count"], "paired_fields": ["title_quality", "selling_points_structure", "short_description_naturalness", "overall_ecommerce_professionalism"], "paired_choices": ["A更好", "B更好", "持平"], "diagnostics": ["field_stacking", "mechanical_template", "unsupported_evaluation_effect_scenario", "numeric_range_distortion", "identity_category_error"], "automatic_is_diagnostic_only": true, "human_labels_prefilled": false, "mapping_sheet_state": "veryHidden", "unblind_after_complete_review": true},
+  "guards": {"project_test_read": false, "rag_holdout_files_read": false, "rag_v2_generation": false, "parameter_updates": false, "p5_modified": false, "output_based_adjustment": false},
+  "holdout_boundary_user_confirmed": "P7 may generate Base/LoRA for all 200 original project_validation products, including overlapping IDs; RAG v2 experiments and holdout archival files remain prohibited and frozen_not_executed",
+  "output": "reports/generation/lora/project_validation_v1"
+}

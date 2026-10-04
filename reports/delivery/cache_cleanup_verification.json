@@ -1,0 +1,44 @@
+{
+  "status": "passed",
+  "checked_at_utc": "2026-10-04T19:08:57.341985+00:00",
+  "deleted_cache_files": 49,
+  "deleted_bytes": 595319,
+  "post_cleanup_file_count": 2537,
+  "post_cleanup_classifications": {
+    "KEEP_FINAL": 129,
+    "KEEP_REPRODUCIBILITY": 2212,
+    "ARCHIVE": 196,
+    "DELETE_CANDIDATE": 0
+  },
+  "unchanged_non_target_files_checked": 2533,
+  "holdout_metadata_only_files": 5,
+  "changed_non_target_files": [],
+  "archive_files_preserved_in_place": 196,
+  "authorized_document_changes": [
+    ".gitignore",
+    "README.md",
+    "docs/delivery_audit.md",
+    "docs/evaluation.md"
+  ],
+  "documentation_sha256": {
+    "README.md": "12642df88d8e8e5b0c6a086808da4af29b8473028f58296d1861860558475fb2",
+    "docs\\data.md": "5f6a062bfa8217fd79ec31d13c9964133f711f9578a54d95e5b40c39adf728c0",
+    "docs\\generation.md": "3264a8b22d05da1c72b7ed8dff13f51fe9fdbaacc619f411eb0b695a7e0913c7",
+    "docs\\retrieval.md": "1a94ce0f7d762b42a135ba41d1c855e06468659f92ae082f9962216ee48c1b83",
+    "docs\\evaluation.md": "98feed4785266e7305d89144d3a428ff5623e1e4913b0e079df84913bd85332a",
+    "docs\\delivery_audit.md": "bc0733a5441e0f5e5b3cea24e89b4d01d4234ec46c4deb7a1998f00d3438468d"
+  },
+  "gitignore_sha256": "406ce82b532c78ed28b46db99da06674d233a8b622f77b8fa52af8f7134e4a68",
+  "git_head_unchanged": true,
+  "colab_guide_ignored": true,
+  "pre_cleanup_inventory_and_baseline_preserved": true,
+  "local_links_checked": 54,
+  "missing_local_links": [],
+  "model_calls": 0,
+  "training_runs": 0,
+  "test_runs": 0,
+  "holdout_content_opened": false,
+  "dependencies_changed": false,
+  "files_moved_or_renamed": 0,
+  "commit_or_push": false
+}

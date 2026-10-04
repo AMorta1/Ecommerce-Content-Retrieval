@@ -1,0 +1,1828 @@
+{
+  "status": "ai_draft_pending_user_confirmation",
+  "created_at_utc": "2026-10-04T17:38:09.876825+00:00",
+  "source": "E:\\WebDownload\\lora_rag_project_test100_blind_review_rechecked.xlsx",
+  "source_sha256": "9e5672690a01a0ba24c004c71120e2db83899ba7051d4e7ee3211e8c69b2a631",
+  "target": "reports/generation/lora_rag/lora_rag_project_test100_v1/lora_rag_project_test100_blind_review.xlsx",
+  "products": 100,
+  "documents": 200,
+  "core_denominator": 625,
+  "imported_editable_cells": 2500,
+  "formal_score_changes": 3,
+  "preference_votes_changed": 1,
+  "user_confirmed_rows": 0,
+  "amended_fields_vs_supplied": [
+    {
+      "pair_id": "CT001",
+      "product_id": "589051188248",
+      "field": "review_confirmed",
+      "source_value": 1,
+      "written_value": null,
+      "reason": "AI初审不替代用户最终确认。"
+    },
+    {
+      "pair_id": "CT001",
+      "product_id": "589051188248",
+      "field": "reviewer",
+      "source_value": "ChatGPT复核",
+      "written_value": "ChatGPT初审 / Codex复查（待用户确认）",
+      "reason": "AI初审不替代用户最终确认。"
+    },
+    {
+      "pair_id": "CT002",
+      "product_id": "540395966499",
+      "field": "review_confirmed",
+      "source_value": 1,
+      "written_value": null,
+      "reason": "AI初审不替代用户最终确认。"
+    },
+    {
+      "pair_id": "CT002",
+      "product_id": "540395966499",
+      "field": "reviewer",
+      "source_value": "ChatGPT复核",
+      "written_value": "ChatGPT初审 / Codex复查（待用户确认）",
+      "reason": "AI初审不替代用户最终确认。"
+    },
+    {
+      "pair_id": "CT003",
+      "product_id": "624110108481",
+      "field": "pair_notes",
+      "source_value": "两侧总体差异有限；核心命中A=5/6、B=5/6。",
+      "written_value": "两侧完整文案均命中5/6。标题偏好A：B在已含“双耳蓝牙耳机、真无线耳机”的标题末尾再加“蓝牙连接”，略显标签堆叠；该连接事实两侧卖点已有表达。这是轻微的标题组织偏好，不是属性覆盖优势；卖点、短详情自然度及整体仍持平。",
+      "reason": "补充标题偏好的可定位表达依据，不将相同核心命中率作为偏好理由。"
+    },
+    {
+      "pair_id": "CT003",
+      "product_id": "624110108481",
+      "field": "review_confirmed",
+      "source_value": 1,
+      "written_value": null,
+      "reason": "AI初审不替代用户最终确认。"
+    },
+    {
+      "pair_id": "CT003",
+      "product_id": "624110108481",
+      "field": "reviewer",
+      "source_value": "ChatGPT复核",
+      "written_value": "ChatGPT初审 / Codex复查（待用户确认）",
+      "reason": "AI初审不替代用户最终确认。"
+    },
+    {
+      "pair_id": "CT004",
+      "product_id": "596152984459",
+      "field": "review_confirmed",
+      "source_value": 1,
+      "written_value": null,
+      "reason": "AI初审不替代用户最终确认。"
+    },
+    {
+      "pair_id": "CT004",
+      "product_id": "596152984459",
+      "field": "reviewer",
+      "source_value": "ChatGPT复核",
+      "written_value": "ChatGPT初审 / Codex复查（待用户确认）",
+      "reason": "AI初审不替代用户最终确认。"
+    },
+    {
+      "pair_id": "CT005",
+      "product_id": "583797205123",
+      "field": "review_confirmed",
+      "source_value": 1,
+      "written_value": null,
+      "reason": "AI初审不替代用户最终确认。"
+    },
+    {
+      "pair_id": "CT005",
+      "product_id": "583797205123",
+      "field": "reviewer",
+      "source_value": "ChatGPT复核",
+      "written_value": "ChatGPT初审 / Codex复查（待用户确认）",
+      "reason": "AI初审不替代用户最终确认。"
+    },
+    {
+      "pair_id": "CT006",
+      "product_id": "623126145078",
+      "field": "review_confirmed",
+      "source_value": 1,
+      "written_value": null,
+      "reason": "AI初审不替代用户最终确认。"
+    },
+    {
+      "pair_id": "CT006",
+      "product_id": "623126145078",
+      "field": "reviewer",
+      "source_value": "ChatGPT复核",
+      "written_value": "ChatGPT初审 / Codex复查（待用户确认）",
+      "reason": "AI初审不替代用户最终确认。"
+    },
+    {
+      "pair_id": "CT007",
+      "product_id": "598781167153",
+      "field": "pair_notes",
+      "source_value": "B整体更好：核心命中5/5，A为4/5。",
+      "written_value": "标题相同。两侧卖点均为三条字段式，B以耳机类别替代标题已有的品牌，信息选择较少重复且参数更完整，因此保留卖点结构和整体偏好B；并非B的语法或短详情自然度必然更好。完整文案核心命中B=5/5、A=4/5，覆盖与表达理由分别记录。",
+      "reason": "区分信息组织偏好与覆盖优势，不凭命中数单独判定表达收益。"
+    },
+    {
+      "pair_id": "CT007",
+      "product_id": "598781167153",
+      "field": "review_confirmed",
+      "source_value": 1,
+      "written_value": null,
+      "reason": "AI初审不替代用户最终确认。"
+    },
+    {
+      "pair_id": "CT007",
+      "product_id": "598781167153",
+      "field": "reviewer",
+      "source_value": "ChatGPT复核",
+      "written_value": "ChatGPT初审 / Codex复查（待用户确认）",
+      "reason": "AI初审不替代用户最终确认。"
+    },
+    {
+      "pair_id": "CT008",
+      "product_id": "8443620439",
+      "field": "review_confirmed",
+      "source_value": 1,
+      "written_value": null,
+      "reason": "AI初审不替代用户最终确认。"
+    },
+    {
+      "pair_id": "CT008",
+      "product_id": "8443620439",
+      "field": "reviewer",
+      "source_value": "ChatGPT复核",
+      "written_value": "ChatGPT初审 / Codex复查（待用户确认）",
+      "reason": "AI初审不替代用户最终确认。"
+    },
+    {
+      "pair_id": "CT009",
+      "product_id": "543556617866",
+      "field": "pair_notes",
+      "source_value": "两侧总体差异有限；核心命中A=4/7、B=4/7。",
+      "written_value": "两侧核心命中均为4/7，整体仍持平。卖点偏好A：A采用接口、连接方式和品牌，B采用接口、品牌和型号；B的两条身份标签重复标题信息，A的参数组织相对更集中。不是单凭命中数判定卖点结构优劣。",
+      "reason": "为保留的卖点偏好补充可定位的信息组织依据。"
+    },
+    {
+      "pair_id": "CT009",
+      "product_id": "543556617866",
+      "field": "review_confirmed",
+      "source_value": 1,
+      "written_value": null,
+      "reason": "AI初审不替代用户最终确认。"
+    },
+    {
+      "pair_id": "CT009",
+      "product_id": "543556617866",
+      "field": "reviewer",
+      "source_value": "ChatGPT复核",
+      "written_value": "ChatGPT初审 / Codex复查（待用户确认）",
+      "reason": "AI初审不替代用户最终确认。"
+    },
+    {
+      "pair_id": "CT010",
+      "product_id": "609861568866",
+      "field": "review_confirmed",
+      "source_value": 1,
+      "written_value": null,
+      "reason": "AI初审不替代用户最终确认。"
+    },
+    {
+      "pair_id": "CT010",
+      "product_id": "609861568866",
+      "field": "reviewer",
+      "source_value": "ChatGPT复核",
+      "written_value": "ChatGPT初审 / Codex复查（待用户确认）",
+      "reason": "AI初审不替代用户最终确认。"
+    },
+    {
+      "pair_id": "CT011",
+      "product_id": "589508217209",
+      "field": "review_confirmed",
+      "source_value": 1,
+      "written_value": null,
+      "reason": "AI初审不替代用户最终确认。"
+    },
+    {
+      "pair_id": "CT011",
+      "product_id": "589508217209",
+      "field": "reviewer",
+      "source_value": "ChatGPT复核",
+      "written_value": "ChatGPT初审 / Codex复查（待用户确认）",
+      "reason": "AI初审不替代用户最终确认。"
+    },
+    {
+      "pair_id": "CT012",
+      "product_id": "624392441174",
+      "field": "review_confirmed",
+      "source_value": 1,
+      "written_value": null,
+      "reason": "AI初审不替代用户最终确认。"
+    },
+    {
+      "pair_id": "CT012",
+      "product_id": "624392441174",
+      "field": "reviewer",
+      "source_value": "ChatGPT复核",
+      "written_value": "ChatGPT初审 / Codex复查（待用户确认）",
+      "reason": "AI初审不替代用户最终确认。"
+    },
+    {
+      "pair_id": "CT013",
+      "product_id": "576463385175",
+      "field": "review_confirmed",
+      "source_value": 1,
+      "written_value": null,
+      "reason": "AI初审不替代用户最终确认。"
+    },
+    {
+      "pair_id": "CT013",
+      "product_id": "576463385175",
+      "field": "reviewer",
+      "source_value": "ChatGPT复核",
+      "written_value": "ChatGPT初审 / Codex复查（待用户确认）",
+      "reason": "AI初审不替代用户最终确认。"
+    },
+    {
+      "pair_id": "CT014",
+      "product_id": "583601853144",
+      "field": "pair_notes",
+      "source_value": "两侧总体差异有限；核心命中A=5/6、B=5/6。",
+      "written_value": "两侧核心命中均为5/6，整体仍持平。卖点偏好A：接口、连接方式、多媒体功能键三条均为规格信息；B以标题已含的品牌替代连接方式，参数组织略弱。该偏好是卖点信息选择差异，不是核心覆盖差异。",
+      "reason": "补充卖点偏好依据，保持原票不变。"
+    },
+    {
+      "pair_id": "CT014",
+      "product_id": "583601853144",
+      "field": "review_confirmed",
+      "source_value": 1,
+      "written_value": null,
+      "reason": "AI初审不替代用户最终确认。"
+    },
+    {
+      "pair_id": "CT014",
+      "product_id": "583601853144",
+      "field": "reviewer",
+      "source_value": "ChatGPT复核",
+      "written_value": "ChatGPT初审 / Codex复查（待用户确认）",
+      "reason": "AI初审不替代用户最终确认。"
+    },
+    {
+      "pair_id": "CT015",
+      "product_id": "614194957336",
+      "field": "review_confirmed",
+      "source_value": 1,
+      "written_value": null,
+      "reason": "AI初审不替代用户最终确认。"
+    },
+    {
+      "pair_id": "CT015",
+      "product_id": "614194957336",
+      "field": "reviewer",
+      "source_value": "ChatGPT复核",
+      "written_value": "ChatGPT初审 / Codex复查（待用户确认）",
+      "reason": "AI初审不替代用户最终确认。"
+    },
+    {
+      "pair_id": "CT016",
+      "product_id": "599485472276",
+      "field": "review_confirmed",
+      "source_value": 1,
+      "written_value": null,
+      "reason": "AI初审不替代用户最终确认。"
+    },
+    {
+      "pair_id": "CT016",
+      "product_id": "599485472276",
+      "field": "reviewer",
+      "source_value": "ChatGPT复核",
+      "written_value": "ChatGPT初审 / Codex复查（待用户确认）",
+      "reason": "AI初审不替代用户最终确认。"
+    },
+    {
+      "pair_id": "CT017",
+      "product_id": "620625786758",
+      "field": "review_confirmed",
+      "source_value": 1,
+      "written_value": null,
+      "reason": "AI初审不替代用户最终确认。"
+    },
+    {
+      "pair_id": "CT017",
+      "product_id": "620625786758",
+      "field": "reviewer",
+      "source_value": "ChatGPT复核",
+      "written_value": "ChatGPT初审 / Codex复查（待用户确认）",
+      "reason": "AI初审不替代用户最终确认。"
+    },
+    {
+      "pair_id": "CT018",
+      "product_id": "565468950564",
+      "field": "review_confirmed",
+      "source_value": 1,
+      "written_value": null,
+      "reason": "AI初审不替代用户最终确认。"
+    },
+    {
+      "pair_id": "CT018",
+      "product_id": "565468950564",
+      "field": "reviewer",
+      "source_value": "ChatGPT复核",
+      "written_value": "ChatGPT初审 / Codex复查（待用户确认）",
+      "reason": "AI初审不替代用户最终确认。"
+    },
+    {
+      "pair_id": "CT019",
+      "product_id": "618820646060",
+      "field": "review_confirmed",
+      "source_value": 1,
+      "written_value": null,
+      "reason": "AI初审不替代用户最终确认。"
+    },
+    {
+      "pair_id": "CT019",
+      "product_id": "618820646060",
+      "field": "reviewer",
+      "source_value": "ChatGPT复核",
+      "written_value": "ChatGPT初审 / Codex复查（待用户确认）",
+      "reason": "AI初审不替代用户最终确认。"
+    },
+    {
+      "pair_id": "CT020",
+      "product_id": "562660919726",
+      "field": "review_confirmed",
+      "source_value": 1,
+      "written_value": null,
+      "reason": "AI初审不替代用户最终确认。"
+    },
+    {
+      "pair_id": "CT020",
+      "product_id": "562660919726",
+      "field": "reviewer",
+      "source_value": "ChatGPT复核",
+      "written_value": "ChatGPT初审 / Codex复查（待用户确认）",
+      "reason": "AI初审不替代用户最终确认。"
+    },
+    {
+      "pair_id": "CT021",
+      "product_id": "530504970904",
+      "field": "review_confirmed",
+      "source_value": 1,
+      "written_value": null,
+      "reason": "AI初审不替代用户最终确认。"
+    },
+    {
+      "pair_id": "CT021",
+      "product_id": "530504970904",
+      "field": "reviewer",
+      "source_value": "ChatGPT复核",
+      "written_value": "ChatGPT初审 / Codex复查（待用户确认）",
+      "reason": "AI初审不替代用户最终确认。"
+    },
+    {
+      "pair_id": "CT022",
+      "product_id": "559685535453",
+      "field": "review_confirmed",
+      "source_value": 1,
+      "written_value": null,
+      "reason": "AI初审不替代用户最终确认。"
+    },
+    {
+      "pair_id": "CT022",
+      "product_id": "559685535453",
+      "field": "reviewer",
+      "source_value": "ChatGPT复核",
+      "written_value": "ChatGPT初审 / Codex复查（待用户确认）",
+      "reason": "AI初审不替代用户最终确认。"
+    },
+    {
+      "pair_id": "CT023",
+      "product_id": "545593037598",
+      "field": "review_confirmed",
+      "source_value": 1,
+      "written_value": null,
+      "reason": "AI初审不替代用户最终确认。"
+    },
+    {
+      "pair_id": "CT023",
+      "product_id": "545593037598",
+      "field": "reviewer",
+      "source_value": "ChatGPT复核",
+      "written_value": "ChatGPT初审 / Codex复查（待用户确认）",
+      "reason": "AI初审不替代用户最终确认。"
+    },
+    {
+      "pair_id": "CT024",
+      "product_id": "616205758872",
+      "field": "review_confirmed",
+      "source_value": 1,
+      "written_value": null,
+      "reason": "AI初审不替代用户最终确认。"
+    },
+    {
+      "pair_id": "CT024",
+      "product_id": "616205758872",
+      "field": "reviewer",
+      "source_value": "ChatGPT复核",
+      "written_value": "ChatGPT初审 / Codex复查（待用户确认）",
+      "reason": "AI初审不替代用户最终确认。"
+    },
+    {
+      "pair_id": "CT025",
+      "product_id": "556245210015",
+      "field": "review_confirmed",
+      "source_value": 1,
+      "written_value": null,
+      "reason": "AI初审不替代用户最终确认。"
+    },
+    {
+      "pair_id": "CT025",
+      "product_id": "556245210015",
+      "field": "reviewer",
+      "source_value": "ChatGPT复核",
+      "written_value": "ChatGPT初审 / Codex复查（待用户确认）",
+      "reason": "AI初审不替代用户最终确认。"
+    },
+    {
+      "pair_id": "CT026",
+      "product_id": "602079265226",
+      "field": "review_confirmed",
+      "source_value": 1,
+      "written_value": null,
+      "reason": "AI初审不替代用户最终确认。"
+    },
+    {
+      "pair_id": "CT026",
+      "product_id": "602079265226",
+      "field": "reviewer",
+      "source_value": "ChatGPT复核",
+      "written_value": "ChatGPT初审 / Codex复查（待用户确认）",
+      "reason": "AI初审不替代用户最终确认。"
+    },
+    {
+      "pair_id": "CT027",
+      "product_id": "547702894728",
+      "field": "review_confirmed",
+      "source_value": 1,
+      "written_value": null,
+      "reason": "AI初审不替代用户最终确认。"
+    },
+    {
+      "pair_id": "CT027",
+      "product_id": "547702894728",
+      "field": "reviewer",
+      "source_value": "ChatGPT复核",
+      "written_value": "ChatGPT初审 / Codex复查（待用户确认）",
+      "reason": "AI初审不替代用户最终确认。"
+    },
+    {
+      "pair_id": "CT028",
+      "product_id": "599620329880",
+      "field": "review_confirmed",
+      "source_value": 1,
+      "written_value": null,
+      "reason": "AI初审不替代用户最终确认。"
+    },
+    {
+      "pair_id": "CT028",
+      "product_id": "599620329880",
+      "field": "reviewer",
+      "source_value": "ChatGPT复核",
+      "written_value": "ChatGPT初审 / Codex复查（待用户确认）",
+      "reason": "AI初审不替代用户最终确认。"
+    },
+    {
+      "pair_id": "CT029",
+      "product_id": "619501332263",
+      "field": "review_confirmed",
+      "source_value": 1,
+      "written_value": null,
+      "reason": "AI初审不替代用户最终确认。"
+    },
+    {
+      "pair_id": "CT029",
+      "product_id": "619501332263",
+      "field": "reviewer",
+      "source_value": "ChatGPT复核",
+      "written_value": "ChatGPT初审 / Codex复查（待用户确认）",
+      "reason": "AI初审不替代用户最终确认。"
+    },
+    {
+      "pair_id": "CT030",
+      "product_id": "600538024615",
+      "field": "review_confirmed",
+      "source_value": 1,
+      "written_value": null,
+      "reason": "AI初审不替代用户最终确认。"
+    },
+    {
+      "pair_id": "CT030",
+      "product_id": "600538024615",
+      "field": "reviewer",
+      "source_value": "ChatGPT复核",
+      "written_value": "ChatGPT初审 / Codex复查（待用户确认）",
+      "reason": "AI初审不替代用户最终确认。"
+    },
+    {
+      "pair_id": "CT031",
+      "product_id": "562615192976",
+      "field": "review_confirmed",
+      "source_value": 1,
+      "written_value": null,
+      "reason": "AI初审不替代用户最终确认。"
+    },
+    {
+      "pair_id": "CT031",
+      "product_id": "562615192976",
+      "field": "reviewer",
+      "source_value": "ChatGPT复核",
+      "written_value": "ChatGPT初审 / Codex复查（待用户确认）",
+      "reason": "AI初审不替代用户最终确认。"
+    },
+    {
+      "pair_id": "CT032",
+      "product_id": "614533597181",
+      "field": "review_confirmed",
+      "source_value": 1,
+      "written_value": null,
+      "reason": "AI初审不替代用户最终确认。"
+    },
+    {
+      "pair_id": "CT032",
+      "product_id": "614533597181",
+      "field": "reviewer",
+      "source_value": "ChatGPT复核",
+      "written_value": "ChatGPT初审 / Codex复查（待用户确认）",
+      "reason": "AI初审不替代用户最终确认。"
+    },
+    {
+      "pair_id": "CT033",
+      "product_id": "581329948812",
+      "field": "pair_notes",
+      "source_value": "B整体更好：核心命中5/8，A为5/8。",
+      "written_value": "两侧完整文案均命中5/8，卖点保留相同容量及保温范围。B标题用源属性已有的620ml替代601–700mL区间及括号标签，表达更集中，保留标题与整体偏好B；620ml不是估算、舍入或凭空具体化。该偏好不是属性覆盖提高，卖点结构及短详情自然度仍持平。",
+      "reason": "解释标题组织优势及数值来源，不用相同命中数支撑优胜。"
+    },
+    {
+      "pair_id": "CT033",
+      "product_id": "581329948812",
+      "field": "review_confirmed",
+      "source_value": 1,
+      "written_value": null,
+      "reason": "AI初审不替代用户最终确认。"
+    },
+    {
+      "pair_id": "CT033",
+      "product_id": "581329948812",
+      "field": "reviewer",
+      "source_value": "ChatGPT复核",
+      "written_value": "ChatGPT初审 / Codex复查（待用户确认）",
+      "reason": "AI初审不替代用户最终确认。"
+    },
+    {
+      "pair_id": "CT034",
+      "product_id": "567398743698",
+      "field": "review_confirmed",
+      "source_value": 1,
+      "written_value": null,
+      "reason": "AI初审不替代用户最终确认。"
+    },
+    {
+      "pair_id": "CT034",
+      "product_id": "567398743698",
+      "field": "reviewer",
+      "source_value": "ChatGPT复核",
+      "written_value": "ChatGPT初审 / Codex复查（待用户确认）",
+      "reason": "AI初审不替代用户最终确认。"
+    },
+    {
+      "pair_id": "CT035",
+      "product_id": "624112334484",
+      "field": "review_confirmed",
+      "source_value": 1,
+      "written_value": null,
+      "reason": "AI初审不替代用户最终确认。"
+    },
+    {
+      "pair_id": "CT035",
+      "product_id": "624112334484",
+      "field": "reviewer",
+      "source_value": "ChatGPT复核",
+      "written_value": "ChatGPT初审 / Codex复查（待用户确认）",
+      "reason": "AI初审不替代用户最终确认。"
+    },
+    {
+      "pair_id": "CT036",
+      "product_id": "624105227976",
+      "field": "review_confirmed",
+      "source_value": 1,
+      "written_value": null,
+      "reason": "AI初审不替代用户最终确认。"
+    },
+    {
+      "pair_id": "CT036",
+      "product_id": "624105227976",
+      "field": "reviewer",
+      "source_value": "ChatGPT复核",
+      "written_value": "ChatGPT初审 / Codex复查（待用户确认）",
+      "reason": "AI初审不替代用户最终确认。"
+    },
+    {
+      "pair_id": "CT037",
+      "product_id": "610605050479",
+      "field": "review_confirmed",
+      "source_value": 1,
+      "written_value": null,
+      "reason": "AI初审不替代用户最终确认。"
+    },
+    {
+      "pair_id": "CT037",
+      "product_id": "610605050479",
+      "field": "reviewer",
+      "source_value": "ChatGPT复核",
+      "written_value": "ChatGPT初审 / Codex复查（待用户确认）",
+      "reason": "AI初审不替代用户最终确认。"
+    },
+    {
+      "pair_id": "CT038",
+      "product_id": "581689863460",
+      "field": "review_confirmed",
+      "source_value": 1,
+      "written_value": null,
+      "reason": "AI初审不替代用户最终确认。"
+    },
+    {
+      "pair_id": "CT038",
+      "product_id": "581689863460",
+      "field": "reviewer",
+      "source_value": "ChatGPT复核",
+      "written_value": "ChatGPT初审 / Codex复查（待用户确认）",
+      "reason": "AI初审不替代用户最终确认。"
+    },
+    {
+      "pair_id": "CT039",
+      "product_id": "621593735132",
+      "field": "review_confirmed",
+      "source_value": 1,
+      "written_value": null,
+      "reason": "AI初审不替代用户最终确认。"
+    },
+    {
+      "pair_id": "CT039",
+      "product_id": "621593735132",
+      "field": "reviewer",
+      "source_value": "ChatGPT复核",
+      "written_value": "ChatGPT初审 / Codex复查（待用户确认）",
+      "reason": "AI初审不替代用户最终确认。"
+    },
+    {
+      "pair_id": "CT040",
+      "product_id": "616413073658",
+      "field": "review_confirmed",
+      "source_value": 1,
+      "written_value": null,
+      "reason": "AI初审不替代用户最终确认。"
+    },
+    {
+      "pair_id": "CT040",
+      "product_id": "616413073658",
+      "field": "reviewer",
+      "source_value": "ChatGPT复核",
+      "written_value": "ChatGPT初审 / Codex复查（待用户确认）",
+      "reason": "AI初审不替代用户最终确认。"
+    },
+    {
+      "pair_id": "CT041",
+      "product_id": "609039324433",
+      "field": "review_confirmed",
+      "source_value": 1,
+      "written_value": null,
+      "reason": "AI初审不替代用户最终确认。"
+    },
+    {
+      "pair_id": "CT041",
+      "product_id": "609039324433",
+      "field": "reviewer",
+      "source_value": "ChatGPT复核",
+      "written_value": "ChatGPT初审 / Codex复查（待用户确认）",
+      "reason": "AI初审不替代用户最终确认。"
+    },
+    {
+      "pair_id": "CT042",
+      "product_id": "621360527079",
+      "field": "review_confirmed",
+      "source_value": 1,
+      "written_value": null,
+      "reason": "AI初审不替代用户最终确认。"
+    },
+    {
+      "pair_id": "CT042",
+      "product_id": "621360527079",
+      "field": "reviewer",
+      "source_value": "ChatGPT复核",
+      "written_value": "ChatGPT初审 / Codex复查（待用户确认）",
+      "reason": "AI初审不替代用户最终确认。"
+    },
+    {
+      "pair_id": "CT043",
+      "product_id": "591309078741",
+      "field": "review_confirmed",
+      "source_value": 1,
+      "written_value": null,
+      "reason": "AI初审不替代用户最终确认。"
+    },
+    {
+      "pair_id": "CT043",
+      "product_id": "591309078741",
+      "field": "reviewer",
+      "source_value": "ChatGPT复核",
+      "written_value": "ChatGPT初审 / Codex复查（待用户确认）",
+      "reason": "AI初审不替代用户最终确认。"
+    },
+    {
+      "pair_id": "CT044",
+      "product_id": "604829061336",
+      "field": "review_confirmed",
+      "source_value": 1,
+      "written_value": null,
+      "reason": "AI初审不替代用户最终确认。"
+    },
+    {
+      "pair_id": "CT044",
+      "product_id": "604829061336",
+      "field": "reviewer",
+      "source_value": "ChatGPT复核",
+      "written_value": "ChatGPT初审 / Codex复查（待用户确认）",
+      "reason": "AI初审不替代用户最终确认。"
+    },
+    {
+      "pair_id": "CT045",
+      "product_id": "609629279071",
+      "field": "review_confirmed",
+      "source_value": 1,
+      "written_value": null,
+      "reason": "AI初审不替代用户最终确认。"
+    },
+    {
+      "pair_id": "CT045",
+      "product_id": "609629279071",
+      "field": "reviewer",
+      "source_value": "ChatGPT复核",
+      "written_value": "ChatGPT初审 / Codex复查（待用户确认）",
+      "reason": "AI初审不替代用户最终确认。"
+    },
+    {
+      "pair_id": "CT046",
+      "product_id": "603102363927",
+      "field": "review_confirmed",
+      "source_value": 1,
+      "written_value": null,
+      "reason": "AI初审不替代用户最终确认。"
+    },
+    {
+      "pair_id": "CT046",
+      "product_id": "603102363927",
+      "field": "reviewer",
+      "source_value": "ChatGPT复核",
+      "written_value": "ChatGPT初审 / Codex复查（待用户确认）",
+      "reason": "AI初审不替代用户最终确认。"
+    },
+    {
+      "pair_id": "CT047",
+      "product_id": "585366825079",
+      "field": "review_confirmed",
+      "source_value": 1,
+      "written_value": null,
+      "reason": "AI初审不替代用户最终确认。"
+    },
+    {
+      "pair_id": "CT047",
+      "product_id": "585366825079",
+      "field": "reviewer",
+      "source_value": "ChatGPT复核",
+      "written_value": "ChatGPT初审 / Codex复查（待用户确认）",
+      "reason": "AI初审不替代用户最终确认。"
+    },
+    {
+      "pair_id": "CT048",
+      "product_id": "578515650928",
+      "field": "review_confirmed",
+      "source_value": 1,
+      "written_value": null,
+      "reason": "AI初审不替代用户最终确认。"
+    },
+    {
+      "pair_id": "CT048",
+      "product_id": "578515650928",
+      "field": "reviewer",
+      "source_value": "ChatGPT复核",
+      "written_value": "ChatGPT初审 / Codex复查（待用户确认）",
+      "reason": "AI初审不替代用户最终确认。"
+    },
+    {
+      "pair_id": "CT049",
+      "product_id": "618733106466",
+      "field": "review_confirmed",
+      "source_value": 1,
+      "written_value": null,
+      "reason": "AI初审不替代用户最终确认。"
+    },
+    {
+      "pair_id": "CT049",
+      "product_id": "618733106466",
+      "field": "reviewer",
+      "source_value": "ChatGPT复核",
+      "written_value": "ChatGPT初审 / Codex复查（待用户确认）",
+      "reason": "AI初审不替代用户最终确认。"
+    },
+    {
+      "pair_id": "CT050",
+      "product_id": "609923870759",
+      "field": "review_confirmed",
+      "source_value": 1,
+      "written_value": null,
+      "reason": "AI初审不替代用户最终确认。"
+    },
+    {
+      "pair_id": "CT050",
+      "product_id": "609923870759",
+      "field": "reviewer",
+      "source_value": "ChatGPT复核",
+      "written_value": "ChatGPT初审 / Codex复查（待用户确认）",
+      "reason": "AI初审不替代用户最终确认。"
+    },
+    {
+      "pair_id": "CT051",
+      "product_id": "15246761632",
+      "field": "review_confirmed",
+      "source_value": 1,
+      "written_value": null,
+      "reason": "AI初审不替代用户最终确认。"
+    },
+    {
+      "pair_id": "CT051",
+      "product_id": "15246761632",
+      "field": "reviewer",
+      "source_value": "ChatGPT复核",
+      "written_value": "ChatGPT初审 / Codex复查（待用户确认）",
+      "reason": "AI初审不替代用户最终确认。"
+    },
+    {
+      "pair_id": "CT052",
+      "product_id": "623882882335",
+      "field": "review_confirmed",
+      "source_value": 1,
+      "written_value": null,
+      "reason": "AI初审不替代用户最终确认。"
+    },
+    {
+      "pair_id": "CT052",
+      "product_id": "623882882335",
+      "field": "reviewer",
+      "source_value": "ChatGPT复核",
+      "written_value": "ChatGPT初审 / Codex复查（待用户确认）",
+      "reason": "AI初审不替代用户最终确认。"
+    },
+    {
+      "pair_id": "CT053",
+      "product_id": "621173570641",
+      "field": "B_notes",
+      "source_value": "“适用范围：家庭清洁”为无依据场景；品牌/型号占位值已门控。",
+      "written_value": "品牌/型号占位值已门控。“适用范围：家庭清洁”在源结构化属性中没有对应依据；按不从品类推导适用场景的严格口径暂保留事实错误1。但它处在直接品类语义与新增家庭场景的边界，需要用户最后裁决，不能仅按“家庭”关键词机械判错。",
+      "reason": "明确边界与当前暂留评分，避免将主观边界伪装成无争议结论。"
+    },
+    {
+      "pair_id": "CT053",
+      "product_id": "621173570641",
+      "field": "pair_notes",
+      "source_value": "A事实边界更稳；A事实错误0，B为1。",
+      "written_value": "A重复“电源方式：充电式”，B三条卖点较少重复，所以保留卖点结构偏好B。按当前严格场景口径，B新增“适用范围：家庭清洁”，A=0、B=1，整体暂保留A更好；这一场景边界请用户最终确认。表达组织与事实边界分别评价。",
+      "reason": "说明卖点偏好与整体偏好为何可以不同，并提示事实边界待裁决。"
+    },
+    {
+      "pair_id": "CT053",
+      "product_id": "621173570641",
+      "field": "review_confirmed",
+      "source_value": 1,
+      "written_value": null,
+      "reason": "AI初审不替代用户最终确认。"
+    },
+    {
+      "pair_id": "CT053",
+      "product_id": "621173570641",
+      "field": "reviewer",
+      "source_value": "ChatGPT复核",
+      "written_value": "ChatGPT初审 / Codex复查（待用户确认）",
+      "reason": "AI初审不替代用户最终确认。"
+    },
+    {
+      "pair_id": "CT054",
+      "product_id": "590175217614",
+      "field": "review_confirmed",
+      "source_value": 1,
+      "written_value": null,
+      "reason": "AI初审不替代用户最终确认。"
+    },
+    {
+      "pair_id": "CT054",
+      "product_id": "590175217614",
+      "field": "reviewer",
+      "source_value": "ChatGPT复核",
+      "written_value": "ChatGPT初审 / Codex复查（待用户确认）",
+      "reason": "AI初审不替代用户最终确认。"
+    },
+    {
+      "pair_id": "CT055",
+      "product_id": "43297860634",
+      "field": "review_confirmed",
+      "source_value": 1,
+      "written_value": null,
+      "reason": "AI初审不替代用户最终确认。"
+    },
+    {
+      "pair_id": "CT055",
+      "product_id": "43297860634",
+      "field": "reviewer",
+      "source_value": "ChatGPT复核",
+      "written_value": "ChatGPT初审 / Codex复查（待用户确认）",
+      "reason": "AI初审不替代用户最终确认。"
+    },
+    {
+      "pair_id": "CT056",
+      "product_id": "583457250405",
+      "field": "review_confirmed",
+      "source_value": 1,
+      "written_value": null,
+      "reason": "AI初审不替代用户最终确认。"
+    },
+    {
+      "pair_id": "CT056",
+      "product_id": "583457250405",
+      "field": "reviewer",
+      "source_value": "ChatGPT复核",
+      "written_value": "ChatGPT初审 / Codex复查（待用户确认）",
+      "reason": "AI初审不替代用户最终确认。"
+    },
+    {
+      "pair_id": "CT057",
+      "product_id": "601009119510",
+      "field": "A_notes",
+      "source_value": null,
+      "written_value": "标题“富德 IK8300 无线 有 键盘”中的孤立“有”缺少字段指代，字段标签堆叠使标题不自然；卖点可还原为多媒体功能键=有。保留通顺率0、字段堆叠1，事实错误0。负向属性不能因“无线”中包含“无”就算命中。",
+      "reason": "非零字段堆叠诊断及通顺失败需要具体证据；补全原缺失说明。"
+    },
+    {
+      "pair_id": "CT057",
+      "product_id": "601009119510",
+      "field": "B_notes",
+      "source_value": null,
+      "written_value": "与A输出一致。标题中的孤立“有”缺少字段指代，字段标签堆叠使标题不自然；卖点可还原为多媒体功能键=有。保留通顺率0、字段堆叠1，事实错误0。负向属性不能因“无线”中包含“无”就算命中。",
+      "reason": "相同输出采用相同判断，补全缺失诊断依据。"
+    },
+    {
+      "pair_id": "CT057",
+      "product_id": "601009119510",
+      "field": "review_confirmed",
+      "source_value": 1,
+      "written_value": null,
+      "reason": "AI初审不替代用户最终确认。"
+    },
+    {
+      "pair_id": "CT057",
+      "product_id": "601009119510",
+      "field": "reviewer",
+      "source_value": "ChatGPT复核",
+      "written_value": "ChatGPT初审 / Codex复查（待用户确认）",
+      "reason": "AI初审不替代用户最终确认。"
+    },
+    {
+      "pair_id": "CT058",
+      "product_id": "610445355179",
+      "field": "pair_notes",
+      "source_value": "A整体更好：核心命中4/6，B为4/6。",
+      "written_value": "两侧完整文案均命中4/6、卖点相同。保留标题及整体轻微偏好A：B在品牌/型号/材质后追加“化妆用品/首饰”，标题标签较多；适用对象两侧卖点均已完整表达，A标题更聚焦。这是主观标题组织偏好，不是覆盖提高，也不意味着所有更短标题必然更好。",
+      "reason": "为相同命中率下的偏好补充具体表达依据。"
+    },
+    {
+      "pair_id": "CT058",
+      "product_id": "610445355179",
+      "field": "review_confirmed",
+      "source_value": 1,
+      "written_value": null,
+      "reason": "AI初审不替代用户最终确认。"
+    },
+    {
+      "pair_id": "CT058",
+      "product_id": "610445355179",
+      "field": "reviewer",
+      "source_value": "ChatGPT复核",
+      "written_value": "ChatGPT初审 / Codex复查（待用户确认）",
+      "reason": "AI初审不替代用户最终确认。"
+    },
+    {
+      "pair_id": "CT059",
+      "product_id": "607358884242",
+      "field": "review_confirmed",
+      "source_value": 1,
+      "written_value": null,
+      "reason": "AI初审不替代用户最终确认。"
+    },
+    {
+      "pair_id": "CT059",
+      "product_id": "607358884242",
+      "field": "reviewer",
+      "source_value": "ChatGPT复核",
+      "written_value": "ChatGPT初审 / Codex复查（待用户确认）",
+      "reason": "AI初审不替代用户最终确认。"
+    },
+    {
+      "pair_id": "CT060",
+      "product_id": "588442419126",
+      "field": "review_confirmed",
+      "source_value": 1,
+      "written_value": null,
+      "reason": "AI初审不替代用户最终确认。"
+    },
+    {
+      "pair_id": "CT060",
+      "product_id": "588442419126",
+      "field": "reviewer",
+      "source_value": "ChatGPT复核",
+      "written_value": "ChatGPT初审 / Codex复查（待用户确认）",
+      "reason": "AI初审不替代用户最终确认。"
+    },
+    {
+      "pair_id": "CT061",
+      "product_id": "608335015563",
+      "field": "review_confirmed",
+      "source_value": 1,
+      "written_value": null,
+      "reason": "AI初审不替代用户最终确认。"
+    },
+    {
+      "pair_id": "CT061",
+      "product_id": "608335015563",
+      "field": "reviewer",
+      "source_value": "ChatGPT复核",
+      "written_value": "ChatGPT初审 / Codex复查（待用户确认）",
+      "reason": "AI初审不替代用户最终确认。"
+    },
+    {
+      "pair_id": "CT062",
+      "product_id": "625037263815",
+      "field": "review_confirmed",
+      "source_value": 1,
+      "written_value": null,
+      "reason": "AI初审不替代用户最终确认。"
+    },
+    {
+      "pair_id": "CT062",
+      "product_id": "625037263815",
+      "field": "reviewer",
+      "source_value": "ChatGPT复核",
+      "written_value": "ChatGPT初审 / Codex复查（待用户确认）",
+      "reason": "AI初审不替代用户最终确认。"
+    },
+    {
+      "pair_id": "CT063",
+      "product_id": "617920658390",
+      "field": "review_confirmed",
+      "source_value": 1,
+      "written_value": null,
+      "reason": "AI初审不替代用户最终确认。"
+    },
+    {
+      "pair_id": "CT063",
+      "product_id": "617920658390",
+      "field": "reviewer",
+      "source_value": "ChatGPT复核",
+      "written_value": "ChatGPT初审 / Codex复查（待用户确认）",
+      "reason": "AI初审不替代用户最终确认。"
+    },
+    {
+      "pair_id": "CT064",
+      "product_id": "565706870969",
+      "field": "review_confirmed",
+      "source_value": 1,
+      "written_value": null,
+      "reason": "AI初审不替代用户最终确认。"
+    },
+    {
+      "pair_id": "CT064",
+      "product_id": "565706870969",
+      "field": "reviewer",
+      "source_value": "ChatGPT复核",
+      "written_value": "ChatGPT初审 / Codex复查（待用户确认）",
+      "reason": "AI初审不替代用户最终确认。"
+    },
+    {
+      "pair_id": "CT065",
+      "product_id": "587907612086",
+      "field": "review_confirmed",
+      "source_value": 1,
+      "written_value": null,
+      "reason": "AI初审不替代用户最终确认。"
+    },
+    {
+      "pair_id": "CT065",
+      "product_id": "587907612086",
+      "field": "reviewer",
+      "source_value": "ChatGPT复核",
+      "written_value": "ChatGPT初审 / Codex复查（待用户确认）",
+      "reason": "AI初审不替代用户最终确认。"
+    },
+    {
+      "pair_id": "CT066",
+      "product_id": "606991731175",
+      "field": "review_confirmed",
+      "source_value": 1,
+      "written_value": null,
+      "reason": "AI初审不替代用户最终确认。"
+    },
+    {
+      "pair_id": "CT066",
+      "product_id": "606991731175",
+      "field": "reviewer",
+      "source_value": "ChatGPT复核",
+      "written_value": "ChatGPT初审 / Codex复查（待用户确认）",
+      "reason": "AI初审不替代用户最终确认。"
+    },
+    {
+      "pair_id": "CT067",
+      "product_id": "2859211238",
+      "field": "review_confirmed",
+      "source_value": 1,
+      "written_value": null,
+      "reason": "AI初审不替代用户最终确认。"
+    },
+    {
+      "pair_id": "CT067",
+      "product_id": "2859211238",
+      "field": "reviewer",
+      "source_value": "ChatGPT复核",
+      "written_value": "ChatGPT初审 / Codex复查（待用户确认）",
+      "reason": "AI初审不替代用户最终确认。"
+    },
+    {
+      "pair_id": "CT068",
+      "product_id": "615882518927",
+      "field": "review_confirmed",
+      "source_value": 1,
+      "written_value": null,
+      "reason": "AI初审不替代用户最终确认。"
+    },
+    {
+      "pair_id": "CT068",
+      "product_id": "615882518927",
+      "field": "reviewer",
+      "source_value": "ChatGPT复核",
+      "written_value": "ChatGPT初审 / Codex复查（待用户确认）",
+      "reason": "AI初审不替代用户最终确认。"
+    },
+    {
+      "pair_id": "CT069",
+      "product_id": "594880547645",
+      "field": "review_confirmed",
+      "source_value": 1,
+      "written_value": null,
+      "reason": "AI初审不替代用户最终确认。"
+    },
+    {
+      "pair_id": "CT069",
+      "product_id": "594880547645",
+      "field": "reviewer",
+      "source_value": "ChatGPT复核",
+      "written_value": "ChatGPT初审 / Codex复查（待用户确认）",
+      "reason": "AI初审不替代用户最终确认。"
+    },
+    {
+      "pair_id": "CT070",
+      "product_id": "613735876059",
+      "field": "A_notes",
+      "source_value": "未表达耳机类别；其余5项核心事实正确。",
+      "written_value": "未表达耳机类别，完整文案命中5/6。源属性同时含“耳机与播放设备连接方式=蓝牙连接”“是否无线=有线”“左右腔体间连接方式=有线连接”和3.5mm插头，存在连接层级/源数据歧义。输出蓝牙连接有直接源字段支持，不新增模型事实错误；保持源质量状态和现有评分，不在本次评审中改源数据。",
+      "reason": "将潜在源数据歧义与模型新增事实错误分开记录。"
+    },
+    {
+      "pair_id": "CT070",
+      "product_id": "613735876059",
+      "field": "B_notes",
+      "source_value": null,
+      "written_value": "未表达听力辅助功能，完整文案命中5/6。与A共享源连接方式歧义：蓝牙连接、有线及3.5mm插头并存；蓝牙连接有直接字段支持，本次不据此计模型新增事实错误，也不改源质量状态。",
+      "reason": "补充漏项及共用源数据歧义，保持两侧评分口径一致。"
+    },
+    {
+      "pair_id": "CT070",
+      "product_id": "613735876059",
+      "field": "pair_notes",
+      "source_value": "A整体更好：核心命中5/6，B为5/6。",
+      "written_value": "两侧均命中5/6，不能以相同命中数支持优胜。保留A的轻微标题和整体偏好：A按品牌/型号/佩戴方式/连接方式组织标题，卖点选择具体的听力辅助功能；B先连接再佩戴，并列多种耳机类别。属于主观组织与信息选择偏好，非覆盖优势；卖点结构、短详情自然度仍持平。两侧同样存在源连接方式歧义，不能归因为某一模型。",
+      "reason": "补充表达偏好依据并披露共用源歧义，不将核心命中数当作表达收益。"
+    },
+    {
+      "pair_id": "CT070",
+      "product_id": "613735876059",
+      "field": "review_confirmed",
+      "source_value": 1,
+      "written_value": null,
+      "reason": "AI初审不替代用户最终确认。"
+    },
+    {
+      "pair_id": "CT070",
+      "product_id": "613735876059",
+      "field": "reviewer",
+      "source_value": "ChatGPT复核",
+      "written_value": "ChatGPT初审 / Codex复查（待用户确认）",
+      "reason": "AI初审不替代用户最终确认。"
+    },
+    {
+      "pair_id": "CT071",
+      "product_id": "572739978355",
+      "field": "review_confirmed",
+      "source_value": 1,
+      "written_value": null,
+      "reason": "AI初审不替代用户最终确认。"
+    },
+    {
+      "pair_id": "CT071",
+      "product_id": "572739978355",
+      "field": "reviewer",
+      "source_value": "ChatGPT复核",
+      "written_value": "ChatGPT初审 / Codex复查（待用户确认）",
+      "reason": "AI初审不替代用户最终确认。"
+    },
+    {
+      "pair_id": "CT072",
+      "product_id": "522783084872",
+      "field": "review_confirmed",
+      "source_value": 1,
+      "written_value": null,
+      "reason": "AI初审不替代用户最终确认。"
+    },
+    {
+      "pair_id": "CT072",
+      "product_id": "522783084872",
+      "field": "reviewer",
+      "source_value": "ChatGPT复核",
+      "written_value": "ChatGPT初审 / Codex复查（待用户确认）",
+      "reason": "AI初审不替代用户最终确认。"
+    },
+    {
+      "pair_id": "CT073",
+      "product_id": "610255708567",
+      "field": "review_confirmed",
+      "source_value": 1,
+      "written_value": null,
+      "reason": "AI初审不替代用户最终确认。"
+    },
+    {
+      "pair_id": "CT073",
+      "product_id": "610255708567",
+      "field": "reviewer",
+      "source_value": "ChatGPT复核",
+      "written_value": "ChatGPT初审 / Codex复查（待用户确认）",
+      "reason": "AI初审不替代用户最终确认。"
+    },
+    {
+      "pair_id": "CT074",
+      "product_id": "620165221976",
+      "field": "review_confirmed",
+      "source_value": 1,
+      "written_value": null,
+      "reason": "AI初审不替代用户最终确认。"
+    },
+    {
+      "pair_id": "CT074",
+      "product_id": "620165221976",
+      "field": "reviewer",
+      "source_value": "ChatGPT复核",
+      "written_value": "ChatGPT初审 / Codex复查（待用户确认）",
+      "reason": "AI初审不替代用户最终确认。"
+    },
+    {
+      "pair_id": "CT075",
+      "product_id": "614181544723",
+      "field": "review_confirmed",
+      "source_value": 1,
+      "written_value": null,
+      "reason": "AI初审不替代用户最终确认。"
+    },
+    {
+      "pair_id": "CT075",
+      "product_id": "614181544723",
+      "field": "reviewer",
+      "source_value": "ChatGPT复核",
+      "written_value": "ChatGPT初审 / Codex复查（待用户确认）",
+      "reason": "AI初审不替代用户最终确认。"
+    },
+    {
+      "pair_id": "CT076",
+      "product_id": "587244433192",
+      "field": "review_confirmed",
+      "source_value": 1,
+      "written_value": null,
+      "reason": "AI初审不替代用户最终确认。"
+    },
+    {
+      "pair_id": "CT076",
+      "product_id": "587244433192",
+      "field": "reviewer",
+      "source_value": "ChatGPT复核",
+      "written_value": "ChatGPT初审 / Codex复查（待用户确认）",
+      "reason": "AI初审不替代用户最终确认。"
+    },
+    {
+      "pair_id": "CT077",
+      "product_id": "618416951039",
+      "field": "review_confirmed",
+      "source_value": 1,
+      "written_value": null,
+      "reason": "AI初审不替代用户最终确认。"
+    },
+    {
+      "pair_id": "CT077",
+      "product_id": "618416951039",
+      "field": "reviewer",
+      "source_value": "ChatGPT复核",
+      "written_value": "ChatGPT初审 / Codex复查（待用户确认）",
+      "reason": "AI初审不替代用户最终确认。"
+    },
+    {
+      "pair_id": "CT078",
+      "product_id": "602684369098",
+      "field": "review_confirmed",
+      "source_value": 1,
+      "written_value": null,
+      "reason": "AI初审不替代用户最终确认。"
+    },
+    {
+      "pair_id": "CT078",
+      "product_id": "602684369098",
+      "field": "reviewer",
+      "source_value": "ChatGPT复核",
+      "written_value": "ChatGPT初审 / Codex复查（待用户确认）",
+      "reason": "AI初审不替代用户最终确认。"
+    },
+    {
+      "pair_id": "CT079",
+      "product_id": "600661711292",
+      "field": "review_confirmed",
+      "source_value": 1,
+      "written_value": null,
+      "reason": "AI初审不替代用户最终确认。"
+    },
+    {
+      "pair_id": "CT079",
+      "product_id": "600661711292",
+      "field": "reviewer",
+      "source_value": "ChatGPT复核",
+      "written_value": "ChatGPT初审 / Codex复查（待用户确认）",
+      "reason": "AI初审不替代用户最终确认。"
+    },
+    {
+      "pair_id": "CT080",
+      "product_id": "577426751464",
+      "field": "A_matched_attribute_count",
+      "source_value": 4,
+      "written_value": 5,
+      "reason": "源垃圾桶类型与开合方式均为摇盖式；A明确表达开合方式摇盖式，语义同时覆盖两字段，与同义字段合并命中的既有口径一致。"
+    },
+    {
+      "pair_id": "CT080",
+      "product_id": "577426751464",
+      "field": "A_notes",
+      "source_value": "未表达垃圾桶类型和适用场景。",
+      "written_value": "源“垃圾桶类型”和“开合方式”均为摇盖式；A卖点明确表达“开合方式：摇盖式”，语义可同时覆盖两字段，不要求重复标签。因此核心命中修正为5/6，仅未表达“适用场景：家庭使用”。",
+      "reason": "修正将同义事实漏计为未覆盖的问题。"
+    },
+    {
+      "pair_id": "CT080",
+      "product_id": "577426751464",
+      "field": "overall_ecommerce_professionalism",
+      "source_value": "B更好",
+      "written_value": "持平",
+      "reason": "两侧均命中5/6，标题相同、卖点结构相近，B重复两标签不足以证明整体表达更专业。"
+    },
+    {
+      "pair_id": "CT080",
+      "product_id": "577426751464",
+      "field": "pair_notes",
+      "source_value": "B整体更好：核心命中5/6，A为4/6。",
+      "written_value": "两侧完整文案均命中5/6，均未表达家庭使用；摇盖式可同时覆盖垃圾桶类型与开合方式。标题相同、卖点结构相近，B短详情重复两个字段标签不构成明确整体收益，整体修正为持平。",
+      "reason": "属性计数修正后撤销没有独立表达依据的B整体优胜。"
+    },
+    {
+      "pair_id": "CT080",
+      "product_id": "577426751464",
+      "field": "review_confirmed",
+      "source_value": 1,
+      "written_value": null,
+      "reason": "AI初审不替代用户最终确认。"
+    },
+    {
+      "pair_id": "CT080",
+      "product_id": "577426751464",
+      "field": "reviewer",
+      "source_value": "ChatGPT复核",
+      "written_value": "ChatGPT初审 / Codex复查（待用户确认）",
+      "reason": "AI初审不替代用户最终确认。"
+    },
+    {
+      "pair_id": "CT081",
+      "product_id": "576150055638",
+      "field": "review_confirmed",
+      "source_value": 1,
+      "written_value": null,
+      "reason": "AI初审不替代用户最终确认。"
+    },
+    {
+      "pair_id": "CT081",
+      "product_id": "576150055638",
+      "field": "reviewer",
+      "source_value": "ChatGPT复核",
+      "written_value": "ChatGPT初审 / Codex复查（待用户确认）",
+      "reason": "AI初审不替代用户最终确认。"
+    },
+    {
+      "pair_id": "CT082",
+      "product_id": "547995479552",
+      "field": "review_confirmed",
+      "source_value": 1,
+      "written_value": null,
+      "reason": "AI初审不替代用户最终确认。"
+    },
+    {
+      "pair_id": "CT082",
+      "product_id": "547995479552",
+      "field": "reviewer",
+      "source_value": "ChatGPT复核",
+      "written_value": "ChatGPT初审 / Codex复查（待用户确认）",
+      "reason": "AI初审不替代用户最终确认。"
+    },
+    {
+      "pair_id": "CT083",
+      "product_id": "615386178525",
+      "field": "review_confirmed",
+      "source_value": 1,
+      "written_value": null,
+      "reason": "AI初审不替代用户最终确认。"
+    },
+    {
+      "pair_id": "CT083",
+      "product_id": "615386178525",
+      "field": "reviewer",
+      "source_value": "ChatGPT复核",
+      "written_value": "ChatGPT初审 / Codex复查（待用户确认）",
+      "reason": "AI初审不替代用户最终确认。"
+    },
+    {
+      "pair_id": "CT084",
+      "product_id": "590008960085",
+      "field": "review_confirmed",
+      "source_value": 1,
+      "written_value": null,
+      "reason": "AI初审不替代用户最终确认。"
+    },
+    {
+      "pair_id": "CT084",
+      "product_id": "590008960085",
+      "field": "reviewer",
+      "source_value": "ChatGPT复核",
+      "written_value": "ChatGPT初审 / Codex复查（待用户确认）",
+      "reason": "AI初审不替代用户最终确认。"
+    },
+    {
+      "pair_id": "CT085",
+      "product_id": "595487807549",
+      "field": "review_confirmed",
+      "source_value": 1,
+      "written_value": null,
+      "reason": "AI初审不替代用户最终确认。"
+    },
+    {
+      "pair_id": "CT085",
+      "product_id": "595487807549",
+      "field": "reviewer",
+      "source_value": "ChatGPT复核",
+      "written_value": "ChatGPT初审 / Codex复查（待用户确认）",
+      "reason": "AI初审不替代用户最终确认。"
+    },
+    {
+      "pair_id": "CT086",
+      "product_id": "42149170939",
+      "field": "review_confirmed",
+      "source_value": 1,
+      "written_value": null,
+      "reason": "AI初审不替代用户最终确认。"
+    },
+    {
+      "pair_id": "CT086",
+      "product_id": "42149170939",
+      "field": "reviewer",
+      "source_value": "ChatGPT复核",
+      "written_value": "ChatGPT初审 / Codex复查（待用户确认）",
+      "reason": "AI初审不替代用户最终确认。"
+    },
+    {
+      "pair_id": "CT087",
+      "product_id": "559887711431",
+      "field": "review_confirmed",
+      "source_value": 1,
+      "written_value": null,
+      "reason": "AI初审不替代用户最终确认。"
+    },
+    {
+      "pair_id": "CT087",
+      "product_id": "559887711431",
+      "field": "reviewer",
+      "source_value": "ChatGPT复核",
+      "written_value": "ChatGPT初审 / Codex复查（待用户确认）",
+      "reason": "AI初审不替代用户最终确认。"
+    },
+    {
+      "pair_id": "CT088",
+      "product_id": "562289059045",
+      "field": "review_confirmed",
+      "source_value": 1,
+      "written_value": null,
+      "reason": "AI初审不替代用户最终确认。"
+    },
+    {
+      "pair_id": "CT088",
+      "product_id": "562289059045",
+      "field": "reviewer",
+      "source_value": "ChatGPT复核",
+      "written_value": "ChatGPT初审 / Codex复查（待用户确认）",
+      "reason": "AI初审不替代用户最终确认。"
+    },
+    {
+      "pair_id": "CT089",
+      "product_id": "608516760684",
+      "field": "review_confirmed",
+      "source_value": 1,
+      "written_value": null,
+      "reason": "AI初审不替代用户最终确认。"
+    },
+    {
+      "pair_id": "CT089",
+      "product_id": "608516760684",
+      "field": "reviewer",
+      "source_value": "ChatGPT复核",
+      "written_value": "ChatGPT初审 / Codex复查（待用户确认）",
+      "reason": "AI初审不替代用户最终确认。"
+    },
+    {
+      "pair_id": "CT090",
+      "product_id": "621846828786",
+      "field": "review_confirmed",
+      "source_value": 1,
+      "written_value": null,
+      "reason": "AI初审不替代用户最终确认。"
+    },
+    {
+      "pair_id": "CT090",
+      "product_id": "621846828786",
+      "field": "reviewer",
+      "source_value": "ChatGPT复核",
+      "written_value": "ChatGPT初审 / Codex复查（待用户确认）",
+      "reason": "AI初审不替代用户最终确认。"
+    },
+    {
+      "pair_id": "CT091",
+      "product_id": "609762128375",
+      "field": "pair_notes",
+      "source_value": "B整体更好：核心命中5/8，A为5/8。",
+      "written_value": "两侧均命中5/8、卖点相同，容量均未生成。保留标题及整体偏好B：A将“大肚杯”与“保温杯”连续堆放，B减少这一杯型/品类标签堆叠；大肚杯在两侧卖点及正文仍有表达，没有以省略事实换取整篇文案的覆盖下降。偏好来自标题组织，不是命中率优势。",
+      "reason": "补充具体标题组织依据，不凭相同命中数判定整体优胜。"
+    },
+    {
+      "pair_id": "CT091",
+      "product_id": "609762128375",
+      "field": "review_confirmed",
+      "source_value": 1,
+      "written_value": null,
+      "reason": "AI初审不替代用户最终确认。"
+    },
+    {
+      "pair_id": "CT091",
+      "product_id": "609762128375",
+      "field": "reviewer",
+      "source_value": "ChatGPT复核",
+      "written_value": "ChatGPT初审 / Codex复查（待用户确认）",
+      "reason": "AI初审不替代用户最终确认。"
+    },
+    {
+      "pair_id": "CT092",
+      "product_id": "544826941132",
+      "field": "review_confirmed",
+      "source_value": 1,
+      "written_value": null,
+      "reason": "AI初审不替代用户最终确认。"
+    },
+    {
+      "pair_id": "CT092",
+      "product_id": "544826941132",
+      "field": "reviewer",
+      "source_value": "ChatGPT复核",
+      "written_value": "ChatGPT初审 / Codex复查（待用户确认）",
+      "reason": "AI初审不替代用户最终确认。"
+    },
+    {
+      "pair_id": "CT093",
+      "product_id": "618263479034",
+      "field": "review_confirmed",
+      "source_value": 1,
+      "written_value": null,
+      "reason": "AI初审不替代用户最终确认。"
+    },
+    {
+      "pair_id": "CT093",
+      "product_id": "618263479034",
+      "field": "reviewer",
+      "source_value": "ChatGPT复核",
+      "written_value": "ChatGPT初审 / Codex复查（待用户确认）",
+      "reason": "AI初审不替代用户最终确认。"
+    },
+    {
+      "pair_id": "CT094",
+      "product_id": "583014299804",
+      "field": "A_factual_error_count",
+      "source_value": 1,
+      "written_value": 0,
+      "reason": "A输出区块标题、字段提示及空身份字典，没有具体虚构数值或新增商品性质；格式/通顺失败不直接折算事实错误。"
+    },
+    {
+      "pair_id": "CT094",
+      "product_id": "583014299804",
+      "field": "A_notes",
+      "source_value": "可靠核心事实均被源质量门控；卖点泄漏RAG区块/字段提示，“支持充电电流”为无可靠输入支持的泛化断言；短详情输出空身份字典。",
+      "written_value": "可靠核心输入因源CONFLICT被门控为空。A卖点泄漏区块标题与“配置USB接口数量/支持充电电流/电池容量”字段提示，短详情输出空身份字典；并未给出具体虚构数值、评价或场景断言。按完整源数据事实口径修正事实错误1→0、无依据评价/效果/场景1→0；仍保留核心命中0、通顺0、字段堆叠1。零事实错误不代表文案合格，结构与通顺明显失败。",
+      "reason": "将结构失败与事实错误区分，不把空输入本身作为所有输出均错误的依据。"
+    },
+    {
+      "pair_id": "CT094",
+      "product_id": "583014299804",
+      "field": "A_unsupported_evaluation_effect_scenario",
+      "source_value": 1,
+      "written_value": 0,
+      "reason": "字段提示泄漏不是明确的评价、效果或场景断言；保留字段堆叠与通顺失败诊断。"
+    },
+    {
+      "pair_id": "CT094",
+      "product_id": "583014299804",
+      "field": "B_factual_error_count",
+      "source_value": 5,
+      "written_value": 4,
+      "reason": "完整源属性含多U口输出，支持不扩大兼容范围的一般多设备充电表述；其余四项仍计事实错误。输入门控与完整源支持不是同一口径。"
+    },
+    {
+      "pair_id": "CT094",
+      "product_id": "583014299804",
+      "field": "B_notes",
+      "source_value": "实际输入为空；“多设备充电”“高效节能”“安全防护”“10000mAh”“USB Type-C”均无可靠输入支持。",
+      "written_value": "实际输入为空，但正式事实判断对照完整源属性，不以输入为空直接判全部输出错误。源“附加功能=多U口输出”支持一般“多设备充电”，文案未声称任何设备/广泛兼容/同时快充，不另计错误。保留四个独立错误点：①高效节能设计无来源；②安全防护技术无来源；③10000mAh与源8000mAh矛盾；④USB Type-C无来源。因此事实错误5→4；无依据评价/效果/场景1、数值失真1保留。源型号=键盘的身份冲突单列，不改源质量状态；核心命中仍为0。",
+      "reason": "按完整源属性核实支持情况，列出四个错误点，保持与正式指标相同的事实支持口径。"
+    },
+    {
+      "pair_id": "CT094",
+      "product_id": "583014299804",
+      "field": "pair_notes",
+      "source_value": "A发生RAG区块/字段提示泄漏，B存在多项无依据事实；两侧均不构成合格输出，整体持平。",
+      "written_value": "A=0项事实错误，但有区块/字段提示泄漏、空身份字典与通顺失败；B=4项事实错误，文字形式及短详情可读性较好。因此保留卖点结构和短详情自然度B更好，整体持平，两侧均不是合格输出。区分表达失败与事实错误；多设备充电由完整源多U口输出支持，不因输入门控为空而计错。",
+      "reason": "解释表达偏好不等同事实优胜，保留原匿名偏好而修正错误归因。"
+    },
+    {
+      "pair_id": "CT094",
+      "product_id": "583014299804",
+      "field": "review_confirmed",
+      "source_value": 1,
+      "written_value": null,
+      "reason": "AI初审不替代用户最终确认。"
+    },
+    {
+      "pair_id": "CT094",
+      "product_id": "583014299804",
+      "field": "reviewer",
+      "source_value": "ChatGPT复核",
+      "written_value": "ChatGPT初审 / Codex复查（待用户确认）",
+      "reason": "AI初审不替代用户最终确认。"
+    },
+    {
+      "pair_id": "CT095",
+      "product_id": "566531828259",
+      "field": "review_confirmed",
+      "source_value": 1,
+      "written_value": null,
+      "reason": "AI初审不替代用户最终确认。"
+    },
+    {
+      "pair_id": "CT095",
+      "product_id": "566531828259",
+      "field": "reviewer",
+      "source_value": "ChatGPT复核",
+      "written_value": "ChatGPT初审 / Codex复查（待用户确认）",
+      "reason": "AI初审不替代用户最终确认。"
+    },
+    {
+      "pair_id": "CT096",
+      "product_id": "24497168737",
+      "field": "review_confirmed",
+      "source_value": 1,
+      "written_value": null,
+      "reason": "AI初审不替代用户最终确认。"
+    },
+    {
+      "pair_id": "CT096",
+      "product_id": "24497168737",
+      "field": "reviewer",
+      "source_value": "ChatGPT复核",
+      "written_value": "ChatGPT初审 / Codex复查（待用户确认）",
+      "reason": "AI初审不替代用户最终确认。"
+    },
+    {
+      "pair_id": "CT097",
+      "product_id": "582839837483",
+      "field": "review_confirmed",
+      "source_value": 1,
+      "written_value": null,
+      "reason": "AI初审不替代用户最终确认。"
+    },
+    {
+      "pair_id": "CT097",
+      "product_id": "582839837483",
+      "field": "reviewer",
+      "source_value": "ChatGPT复核",
+      "written_value": "ChatGPT初审 / Codex复查（待用户确认）",
+      "reason": "AI初审不替代用户最终确认。"
+    },
+    {
+      "pair_id": "CT098",
+      "product_id": "620004973618",
+      "field": "review_confirmed",
+      "source_value": 1,
+      "written_value": null,
+      "reason": "AI初审不替代用户最终确认。"
+    },
+    {
+      "pair_id": "CT098",
+      "product_id": "620004973618",
+      "field": "reviewer",
+      "source_value": "ChatGPT复核",
+      "written_value": "ChatGPT初审 / Codex复查（待用户确认）",
+      "reason": "AI初审不替代用户最终确认。"
+    },
+    {
+      "pair_id": "CT099",
+      "product_id": "607256389125",
+      "field": "review_confirmed",
+      "source_value": 1,
+      "written_value": null,
+      "reason": "AI初审不替代用户最终确认。"
+    },
+    {
+      "pair_id": "CT099",
+      "product_id": "607256389125",
+      "field": "reviewer",
+      "source_value": "ChatGPT复核",
+      "written_value": "ChatGPT初审 / Codex复查（待用户确认）",
+      "reason": "AI初审不替代用户最终确认。"
+    },
+    {
+      "pair_id": "CT100",
+      "product_id": "587556959797",
+      "field": "review_confirmed",
+      "source_value": 1,
+      "written_value": null,
+      "reason": "AI初审不替代用户最终确认。"
+    },
+    {
+      "pair_id": "CT100",
+      "product_id": "587556959797",
+      "field": "reviewer",
+      "source_value": "ChatGPT复核",
+      "written_value": "ChatGPT初审 / Codex复查（待用户确认）",
+      "reason": "AI初审不替代用户最终确认。"
+    }
+  ],
+  "review_flags": {
+    "CT053": {
+      "B_factual_error_count": "“适用范围：家庭清洁”是否属于无具体新增事实的品类语义，还是无来源家庭场景；当前保留严格口径1。"
+    }
+  },
+  "official_aggregation_performed": false,
+  "unblinding_performed": false,
+  "inference_performed": false,
+  "historical_final_reviews_modified": false,
+  "target_after_sha256": "7b3398ca8a69f2b1fc9d5a3e366b46c50fe4c4720982fd1b026d6ef6c03db66e",
+  "original_backup": "reports/generation/lora_rag/lora_rag_project_test100_v1/lora_rag_project_test100_blind_review.pre_ai_import.xlsx",
+  "backup_sha256": "17dd8ed253455072d59a082d202b586dcdcb7a22166d82e50aa1ad6e8f027a12",
+  "source_archive": "reports/generation/lora_rag/lora_rag_project_test100_v1/lora_rag_project_test100_blind_review.chatgpt_rechecked_source.xlsx",
+  "source_archive_sha256": "9e5672690a01a0ba24c004c71120e2db83899ba7051d4e7ee3211e8c69b2a631",
+  "immutable_cells_verified": true,
+  "all_original_sheets_preserved": true,
+  "sealed_mapping_preserved": true,
+  "amendments_sha256": "b512e8219b3887eb13e4e5e97f53d7b6d044e20d58200db47c895b011afb1683",
+  "importer_sha256": "efbe3f77902e0858fc7ba9bbd5ce5945ea7081b817f51fda81729663812e9263",
+  "helper_sha256": "4b2ec84a73726b1a5251ab7575db67738c3e87c1c5488da3b37cb0a59ea268a2"
+}

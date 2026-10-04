@@ -1,0 +1,38 @@
+{
+  "complete": true,
+  "global_step": 4,
+  "run_kind": "acceptance_only",
+  "files": [
+    {
+      "path": "adapter/adapter_config.json",
+      "bytes": 1262,
+      "sha256": "8c0443a49eb8535c4883ec9d90cad883508917230777033c405e3a87a0b33925"
+    },
+    {
+      "path": "adapter/adapter_model.safetensors",
+      "bytes": 10107280,
+      "sha256": "4360f91f7250351ace2de0af732b3da2f1a57bda0b630d3a77c40c484e4adb30"
+    },
+    {
+      "path": "adapter/README.md",
+      "bytes": 5416,
+      "sha256": "1e733fc9176aa2816149a3a7fed36957c44659aeb390ec251dc9051be6ba2fc6"
+    },
+    {
+      "path": "config_snapshot.json",
+      "bytes": 4290,
+      "sha256": "b31e61e27bed5bc283a54cf6d018ed7eb7dcfebfbc491b5080244c89b87e9739"
+    },
+    {
+      "path": "trainer_state.json",
+      "bytes": 6899,
+      "sha256": "435ed4c7247cf1de071b42c8f4a755d2bd9d0d1abe239ac1263a11d29a3df282"
+    },
+    {
+      "path": "training_state.pt",
+      "bytes": 20297155,
+      "sha256": "b9a034fda082f562fe5792c8af72a34634d4c88fd79b65a38bcd2fdb67a9073b"
+    }
+  ],
+  "saved_at_utc": "2026-10-04T06:16:52.453391+00:00"
+}
