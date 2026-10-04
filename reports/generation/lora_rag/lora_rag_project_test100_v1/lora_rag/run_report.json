@@ -1,0 +1,19 @@
+{
+  "status": "passed",
+  "started_at_utc": "2026-10-04T16:42:44.526954+00:00",
+  "scope": "additional_fixed_comparison_on_previously_observed_test100",
+  "parameter_updates": 0,
+  "project_test_read": true,
+  "holdout_archive_read": false,
+  "holdout_generation": false,
+  "gpu": "NVIDIA GeForce RTX 4070 Laptop GPU",
+  "adapter_loaded": true,
+  "base_snapshot": "E:\\Projects\\Baidu\\.model-cache\\huggingface\\hub\\models--Qwen--Qwen2.5-7B-Instruct\\snapshots\\a09a35458c702b33eeacc393d103063234e8bc28",
+  "model_load_seconds": 14.644253099999332,
+  "completed_at_utc": "2026-10-04T16:52:16.308991+00:00",
+  "products": 100,
+  "task_calls": 300,
+  "parsed_tasks": 299,
+  "model_parameters_unchanged": true,
+  "wall_seconds": 571.7976124999986
+}

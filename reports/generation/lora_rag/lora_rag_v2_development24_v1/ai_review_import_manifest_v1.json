@@ -1,0 +1,437 @@
+{
+  "status": "ai_draft_pending_user_confirmation",
+  "created_at_utc": "2026-10-04T16:07:21.459406+00:00",
+  "source": "E:\\WebDownload\\lora_rag_development24_blind_review_rechecked.xlsx",
+  "source_sha256": "aab47c87e8c7285f7a800178f1ec216b0b135474a01ff6af7d06f42bd00c414e",
+  "target": "reports/generation/lora_rag/lora_rag_v2_development24_v1/lora_rag_development24_blind_review.xlsx",
+  "products": 24,
+  "documents": 48,
+  "core_denominator": 134,
+  "imported_editable_cells": 600,
+  "formal_score_changes": 0,
+  "preference_votes_changed": 1,
+  "user_confirmed_rows": 0,
+  "amended_fields_vs_supplied": [
+    {
+      "pair_id": "IR001",
+      "product_id": "569958345076",
+      "field": "review_confirmed",
+      "source_value": 1,
+      "written_value": null,
+      "reason": "AI初审不得代替用户最终确认"
+    },
+    {
+      "pair_id": "IR001",
+      "product_id": "569958345076",
+      "field": "reviewer",
+      "source_value": "ChatGPT复核",
+      "written_value": "ChatGPT初审 / Codex复查（待用户确认）",
+      "reason": "AI初审不得代替用户最终确认"
+    },
+    {
+      "pair_id": "IR002",
+      "product_id": "584308818142",
+      "field": "review_confirmed",
+      "source_value": 1,
+      "written_value": null,
+      "reason": "AI初审不得代替用户最终确认"
+    },
+    {
+      "pair_id": "IR002",
+      "product_id": "584308818142",
+      "field": "reviewer",
+      "source_value": "ChatGPT复核",
+      "written_value": "ChatGPT初审 / Codex复查（待用户确认）",
+      "reason": "AI初审不得代替用户最终确认"
+    },
+    {
+      "pair_id": "IR003",
+      "product_id": "556912823177",
+      "field": "review_confirmed",
+      "source_value": 1,
+      "written_value": null,
+      "reason": "AI初审不得代替用户最终确认"
+    },
+    {
+      "pair_id": "IR003",
+      "product_id": "556912823177",
+      "field": "reviewer",
+      "source_value": "ChatGPT复核",
+      "written_value": "ChatGPT初审 / Codex复查（待用户确认）",
+      "reason": "AI初审不得代替用户最终确认"
+    },
+    {
+      "pair_id": "IR004",
+      "product_id": "620488672878",
+      "field": "review_confirmed",
+      "source_value": 1,
+      "written_value": null,
+      "reason": "AI初审不得代替用户最终确认"
+    },
+    {
+      "pair_id": "IR004",
+      "product_id": "620488672878",
+      "field": "reviewer",
+      "source_value": "ChatGPT复核",
+      "written_value": "ChatGPT初审 / Codex复查（待用户确认）",
+      "reason": "AI初审不得代替用户最终确认"
+    },
+    {
+      "pair_id": "IR005",
+      "product_id": "580390189481",
+      "field": "review_confirmed",
+      "source_value": 1,
+      "written_value": null,
+      "reason": "AI初审不得代替用户最终确认"
+    },
+    {
+      "pair_id": "IR005",
+      "product_id": "580390189481",
+      "field": "reviewer",
+      "source_value": "ChatGPT复核",
+      "written_value": "ChatGPT初审 / Codex复查（待用户确认）",
+      "reason": "AI初审不得代替用户最终确认"
+    },
+    {
+      "pair_id": "IR006",
+      "product_id": "614646720550",
+      "field": "review_confirmed",
+      "source_value": 1,
+      "written_value": null,
+      "reason": "AI初审不得代替用户最终确认"
+    },
+    {
+      "pair_id": "IR006",
+      "product_id": "614646720550",
+      "field": "reviewer",
+      "source_value": "ChatGPT复核",
+      "written_value": "ChatGPT初审 / Codex复查（待用户确认）",
+      "reason": "AI初审不得代替用户最终确认"
+    },
+    {
+      "pair_id": "IR007",
+      "product_id": "584648531319",
+      "field": "review_confirmed",
+      "source_value": 1,
+      "written_value": null,
+      "reason": "AI初审不得代替用户最终确认"
+    },
+    {
+      "pair_id": "IR007",
+      "product_id": "584648531319",
+      "field": "reviewer",
+      "source_value": "ChatGPT复核",
+      "written_value": "ChatGPT初审 / Codex复查（待用户确认）",
+      "reason": "AI初审不得代替用户最终确认"
+    },
+    {
+      "pair_id": "IR008",
+      "product_id": "585183140226",
+      "field": "review_confirmed",
+      "source_value": 1,
+      "written_value": null,
+      "reason": "AI初审不得代替用户最终确认"
+    },
+    {
+      "pair_id": "IR008",
+      "product_id": "585183140226",
+      "field": "reviewer",
+      "source_value": "ChatGPT复核",
+      "written_value": "ChatGPT初审 / Codex复查（待用户确认）",
+      "reason": "AI初审不得代替用户最终确认"
+    },
+    {
+      "pair_id": "IR009",
+      "product_id": "621341696263",
+      "field": "review_confirmed",
+      "source_value": 1,
+      "written_value": null,
+      "reason": "AI初审不得代替用户最终确认"
+    },
+    {
+      "pair_id": "IR009",
+      "product_id": "621341696263",
+      "field": "reviewer",
+      "source_value": "ChatGPT复核",
+      "written_value": "ChatGPT初审 / Codex复查（待用户确认）",
+      "reason": "AI初审不得代替用户最终确认"
+    },
+    {
+      "pair_id": "IR010",
+      "product_id": "600702277714",
+      "field": "review_confirmed",
+      "source_value": 1,
+      "written_value": null,
+      "reason": "AI初审不得代替用户最终确认"
+    },
+    {
+      "pair_id": "IR010",
+      "product_id": "600702277714",
+      "field": "reviewer",
+      "source_value": "ChatGPT复核",
+      "written_value": "ChatGPT初审 / Codex复查（待用户确认）",
+      "reason": "AI初审不得代替用户最终确认"
+    },
+    {
+      "pair_id": "IR011",
+      "product_id": "535858215415",
+      "field": "review_confirmed",
+      "source_value": 1,
+      "written_value": null,
+      "reason": "AI初审不得代替用户最终确认"
+    },
+    {
+      "pair_id": "IR011",
+      "product_id": "535858215415",
+      "field": "reviewer",
+      "source_value": "ChatGPT复核",
+      "written_value": "ChatGPT初审 / Codex复查（待用户确认）",
+      "reason": "AI初审不得代替用户最终确认"
+    },
+    {
+      "pair_id": "IR012",
+      "product_id": "609932288958",
+      "field": "review_confirmed",
+      "source_value": 1,
+      "written_value": null,
+      "reason": "AI初审不得代替用户最终确认"
+    },
+    {
+      "pair_id": "IR012",
+      "product_id": "609932288958",
+      "field": "reviewer",
+      "source_value": "ChatGPT复核",
+      "written_value": "ChatGPT初审 / Codex复查（待用户确认）",
+      "reason": "AI初审不得代替用户最终确认"
+    },
+    {
+      "pair_id": "IR013",
+      "product_id": "606784877914",
+      "field": "review_confirmed",
+      "source_value": 1,
+      "written_value": null,
+      "reason": "AI初审不得代替用户最终确认"
+    },
+    {
+      "pair_id": "IR013",
+      "product_id": "606784877914",
+      "field": "reviewer",
+      "source_value": "ChatGPT复核",
+      "written_value": "ChatGPT初审 / Codex复查（待用户确认）",
+      "reason": "AI初审不得代替用户最终确认"
+    },
+    {
+      "pair_id": "IR014",
+      "product_id": "621656965008",
+      "field": "review_confirmed",
+      "source_value": 1,
+      "written_value": null,
+      "reason": "AI初审不得代替用户最终确认"
+    },
+    {
+      "pair_id": "IR014",
+      "product_id": "621656965008",
+      "field": "reviewer",
+      "source_value": "ChatGPT复核",
+      "written_value": "ChatGPT初审 / Codex复查（待用户确认）",
+      "reason": "AI初审不得代替用户最终确认"
+    },
+    {
+      "pair_id": "IR015",
+      "product_id": "610408134586",
+      "field": "review_confirmed",
+      "source_value": 1,
+      "written_value": null,
+      "reason": "AI初审不得代替用户最终确认"
+    },
+    {
+      "pair_id": "IR015",
+      "product_id": "610408134586",
+      "field": "reviewer",
+      "source_value": "ChatGPT复核",
+      "written_value": "ChatGPT初审 / Codex复查（待用户确认）",
+      "reason": "AI初审不得代替用户最终确认"
+    },
+    {
+      "pair_id": "IR016",
+      "product_id": "613971147597",
+      "field": "review_confirmed",
+      "source_value": 1,
+      "written_value": null,
+      "reason": "AI初审不得代替用户最终确认"
+    },
+    {
+      "pair_id": "IR016",
+      "product_id": "613971147597",
+      "field": "reviewer",
+      "source_value": "ChatGPT复核",
+      "written_value": "ChatGPT初审 / Codex复查（待用户确认）",
+      "reason": "AI初审不得代替用户最终确认"
+    },
+    {
+      "pair_id": "IR017",
+      "product_id": "625309591565",
+      "field": "review_confirmed",
+      "source_value": 1,
+      "written_value": null,
+      "reason": "AI初审不得代替用户最终确认"
+    },
+    {
+      "pair_id": "IR017",
+      "product_id": "625309591565",
+      "field": "reviewer",
+      "source_value": "ChatGPT复核",
+      "written_value": "ChatGPT初审 / Codex复查（待用户确认）",
+      "reason": "AI初审不得代替用户最终确认"
+    },
+    {
+      "pair_id": "IR018",
+      "product_id": "556404503382",
+      "field": "review_confirmed",
+      "source_value": 1,
+      "written_value": null,
+      "reason": "AI初审不得代替用户最终确认"
+    },
+    {
+      "pair_id": "IR018",
+      "product_id": "556404503382",
+      "field": "reviewer",
+      "source_value": "ChatGPT复核",
+      "written_value": "ChatGPT初审 / Codex复查（待用户确认）",
+      "reason": "AI初审不得代替用户最终确认"
+    },
+    {
+      "pair_id": "IR019",
+      "product_id": "596561935088",
+      "field": "short_description_naturalness",
+      "source_value": "B更好",
+      "written_value": "持平",
+      "reason": "两侧都使用相同的中性字段串联句式；B增加容量和家庭使用场景属于信息完整性收益，没有明确的语言自然度优势。保留整体电商专业度B更好的原判断。"
+    },
+    {
+      "pair_id": "IR019",
+      "product_id": "596561935088",
+      "field": "pair_notes",
+      "source_value": "B短详情补充容量和家庭使用场景，整体覆盖更完整。",
+      "written_value": "B短详情补充容量和家庭使用场景，整份文案比A多覆盖适用场景，因此整体电商专业度保留B更好。两侧同为自然可读的中性字段串联句式，信息更多不直接等于语言更自然，短详情自然度改为持平。",
+      "reason": "区分核心信息覆盖与短详情自然度，避免用同一覆盖收益重复支持不同维度。"
+    },
+    {
+      "pair_id": "IR019",
+      "product_id": "596561935088",
+      "field": "review_confirmed",
+      "source_value": 1,
+      "written_value": null,
+      "reason": "AI初审不得代替用户最终确认"
+    },
+    {
+      "pair_id": "IR019",
+      "product_id": "596561935088",
+      "field": "reviewer",
+      "source_value": "ChatGPT复核",
+      "written_value": "ChatGPT初审 / Codex复查（待用户确认）",
+      "reason": "AI初审不得代替用户最终确认"
+    },
+    {
+      "pair_id": "IR020",
+      "product_id": "621326718016",
+      "field": "pair_notes",
+      "source_value": "A卖点补充多媒体功能键，减少信息遗漏，整体更完整。",
+      "written_value": "两侧均有三条中性卖点，格式本身持平。A选取USB接口、机械键盘、多媒体功能键三个信息点；B的USB、有线、机械键盘均已在标题或短详情中表达。A减少与标题/短详情的重复，并补充多媒体功能键，信息选择和组织更合理，因此保留卖点结构A更好；整体专业度A更好同时有核心覆盖6/7对5/7的依据。不是仅按字数或命中数判断结构。",
+      "reason": "保留A更好的偏好，但补充实际信息选择与去重依据，而不只用属性覆盖解释卖点结构。"
+    },
+    {
+      "pair_id": "IR020",
+      "product_id": "621326718016",
+      "field": "review_confirmed",
+      "source_value": 1,
+      "written_value": null,
+      "reason": "AI初审不得代替用户最终确认"
+    },
+    {
+      "pair_id": "IR020",
+      "product_id": "621326718016",
+      "field": "reviewer",
+      "source_value": "ChatGPT复核",
+      "written_value": "ChatGPT初审 / Codex复查（待用户确认）",
+      "reason": "AI初审不得代替用户最终确认"
+    },
+    {
+      "pair_id": "IR021",
+      "product_id": "572645689177",
+      "field": "review_confirmed",
+      "source_value": 1,
+      "written_value": null,
+      "reason": "AI初审不得代替用户最终确认"
+    },
+    {
+      "pair_id": "IR021",
+      "product_id": "572645689177",
+      "field": "reviewer",
+      "source_value": "ChatGPT复核",
+      "written_value": "ChatGPT初审 / Codex复查（待用户确认）",
+      "reason": "AI初审不得代替用户最终确认"
+    },
+    {
+      "pair_id": "IR022",
+      "product_id": "44604493546",
+      "field": "review_confirmed",
+      "source_value": 1,
+      "written_value": null,
+      "reason": "AI初审不得代替用户最终确认"
+    },
+    {
+      "pair_id": "IR022",
+      "product_id": "44604493546",
+      "field": "reviewer",
+      "source_value": "ChatGPT复核",
+      "written_value": "ChatGPT初审 / Codex复查（待用户确认）",
+      "reason": "AI初审不得代替用户最终确认"
+    },
+    {
+      "pair_id": "IR023",
+      "product_id": "610727155009",
+      "field": "review_confirmed",
+      "source_value": 1,
+      "written_value": null,
+      "reason": "AI初审不得代替用户最终确认"
+    },
+    {
+      "pair_id": "IR023",
+      "product_id": "610727155009",
+      "field": "reviewer",
+      "source_value": "ChatGPT复核",
+      "written_value": "ChatGPT初审 / Codex复查（待用户确认）",
+      "reason": "AI初审不得代替用户最终确认"
+    },
+    {
+      "pair_id": "IR024",
+      "product_id": "576694559149",
+      "field": "review_confirmed",
+      "source_value": 1,
+      "written_value": null,
+      "reason": "AI初审不得代替用户最终确认"
+    },
+    {
+      "pair_id": "IR024",
+      "product_id": "576694559149",
+      "field": "reviewer",
+      "source_value": "ChatGPT复核",
+      "written_value": "ChatGPT初审 / Codex复查（待用户确认）",
+      "reason": "AI初审不得代替用户最终确认"
+    }
+  ],
+  "official_aggregation_performed": false,
+  "unblinding_performed": false,
+  "inference_performed": false,
+  "target_after_sha256": "feb9f9e1bbf3d3b523358311488b143c3ff9c35fd8d29a2c6695209f65b825f1",
+  "original_backup": "reports/generation/lora_rag/lora_rag_v2_development24_v1/lora_rag_development24_blind_review.pre_ai_import.xlsx",
+  "backup_sha256": "1bb484f09af31128f91727122c1d9d216503f7ed9966baaa473eacb659d2a904",
+  "source_archive": "reports/generation/lora_rag/lora_rag_v2_development24_v1/lora_rag_development24_blind_review.chatgpt_rechecked_source.xlsx",
+  "source_archive_sha256": "aab47c87e8c7285f7a800178f1ec216b0b135474a01ff6af7d06f42bd00c414e",
+  "immutable_cells_verified": true,
+  "all_original_sheets_preserved": true,
+  "sealed_mapping_preserved": true,
+  "amendments_sha256": "020edf387649b5d4ef0ed8bb3e0db1d4999106cd46a44926a9fde232d356898a",
+  "importer_sha256": "4b2ec84a73726b1a5251ab7575db67738c3e87c1c5488da3b37cb0a59ea268a2"
+}

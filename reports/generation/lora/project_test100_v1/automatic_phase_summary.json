@@ -1,0 +1,942 @@
+{
+  "status": "formal_test100_generation_complete_human_review_pending",
+  "source_statistics": {
+    "products": 100,
+    "core_attribute_total": 625,
+    "by_category": {
+      "移动电源": 12,
+      "耳机": 13,
+      "键盘": 13,
+      "鼠标": 12,
+      "保温杯": 13,
+      "垃圾桶": 12,
+      "拖把": 12,
+      "收纳箱": 13
+    },
+    "source_quality": {
+      "REVIEW": 11,
+      "PASS": 84,
+      "CONFLICT": 5
+    },
+    "input_core_attribute_total": 567,
+    "input_core_below_three": 2,
+    "max_prompt_tokens": 177
+  },
+  "versions": {
+    "Base": {
+      "products": 100,
+      "task_calls": 300,
+      "parse_success_by_task_NOT_FLUENCY": {
+        "title": 100,
+        "selling_points": 46,
+        "short_description": 100
+      },
+      "assembled_structure_success_NOT_FLUENCY": 46,
+      "literal_coverage_NOT_HUMAN": {
+        "matched_fields": 519,
+        "core_attribute_total": 625,
+        "ratio": 0.8304
+      },
+      "latency": {
+        "title": {
+          "samples": 100,
+          "mean_seconds": 1.1632076329998382,
+          "p50_seconds": 1.1017784499999834,
+          "p95_seconds": 1.8603808050022053
+        },
+        "selling_points": {
+          "samples": 100,
+          "mean_seconds": 1.849764768000059,
+          "p50_seconds": 1.8235608499999216,
+          "p95_seconds": 2.9392787099994164
+        },
+        "short_description": {
+          "samples": 100,
+          "mean_seconds": 1.8860576890000085,
+          "p50_seconds": 1.7077806500001316,
+          "p95_seconds": 3.1911211600001477
+        },
+        "three_task_total": {
+          "samples": 100,
+          "mean_seconds": 4.899030089999906,
+          "p50_seconds": 4.587755099997594,
+          "p95_seconds": 7.964054995004153
+        }
+      },
+      "empty_task_outputs": 0,
+      "hit_token_limit_tasks": 0,
+      "claim_terms_REVIEW_ONLY_samples": 80,
+      "number_terms_REVIEW_ONLY_samples": 1,
+      "effect_scope_terms_REVIEW_ONLY_samples": 84,
+      "scenario_terms_REVIEW_ONLY_samples": 47,
+      "range_boundary_clues_REVIEW_ONLY_samples": 0,
+      "peak_allocated_mib": 5497.7,
+      "peak_reserved_mib": 5628.0
+    },
+    "LoRA": {
+      "products": 100,
+      "task_calls": 300,
+      "parse_success_by_task_NOT_FLUENCY": {
+        "title": 100,
+        "selling_points": 99,
+        "short_description": 100
+      },
+      "assembled_structure_success_NOT_FLUENCY": 99,
+      "literal_coverage_NOT_HUMAN": {
+        "matched_fields": 493,
+        "core_attribute_total": 625,
+        "ratio": 0.7888
+      },
+      "latency": {
+        "title": {
+          "samples": 100,
+          "mean_seconds": 1.1901300630001423,
+          "p50_seconds": 1.1092011000000639,
+          "p95_seconds": 2.031343654999546
+        },
+        "selling_points": {
+          "samples": 100,
+          "mean_seconds": 1.5936684820001028,
+          "p50_seconds": 1.468609749999814,
+          "p95_seconds": 2.4613087950003316
+        },
+        "short_description": {
+          "samples": 100,
+          "mean_seconds": 2.2106843890001984,
+          "p50_seconds": 2.1603419999992184,
+          "p95_seconds": 3.2952246400005603
+        },
+        "three_task_total": {
+          "samples": 100,
+          "mean_seconds": 4.994482934000444,
+          "p50_seconds": 4.766879850001715,
+          "p95_seconds": 7.8753187799980875
+        }
+      },
+      "empty_task_outputs": 0,
+      "hit_token_limit_tasks": 0,
+      "claim_terms_REVIEW_ONLY_samples": 4,
+      "number_terms_REVIEW_ONLY_samples": 1,
+      "effect_scope_terms_REVIEW_ONLY_samples": 3,
+      "scenario_terms_REVIEW_ONLY_samples": 15,
+      "range_boundary_clues_REVIEW_ONLY_samples": 0,
+      "peak_allocated_mib": 5507.4,
+      "peak_reserved_mib": 5636.0
+    }
+  },
+  "by_category_AUTOMATIC_ONLY": {
+    "Base": {
+      "保温杯": {
+        "products": 13,
+        "task_calls": 39,
+        "parse_success_by_task_NOT_FLUENCY": {
+          "title": 13,
+          "selling_points": 8,
+          "short_description": 13
+        },
+        "assembled_structure_success_NOT_FLUENCY": 8,
+        "literal_coverage_NOT_HUMAN": {
+          "matched_fields": 73,
+          "core_attribute_total": 101,
+          "ratio": 0.7227722772277227
+        },
+        "latency": {
+          "title": {
+            "samples": 13,
+            "mean_seconds": 1.6133561538456258,
+            "p50_seconds": 1.7423880999995163,
+            "p95_seconds": 2.0657939799995804
+          },
+          "selling_points": {
+            "samples": 13,
+            "mean_seconds": 2.5003203923079127,
+            "p50_seconds": 2.499304699998902,
+            "p95_seconds": 3.130229359999793
+          },
+          "short_description": {
+            "samples": 13,
+            "mean_seconds": 2.6310095538459652,
+            "p50_seconds": 2.737341700001707,
+            "p95_seconds": 3.2898195800007666
+          },
+          "three_task_total": {
+            "samples": 13,
+            "mean_seconds": 6.7446860999995035,
+            "p50_seconds": 6.961275200003001,
+            "p95_seconds": 8.135107040000003
+          }
+        },
+        "empty_task_outputs": 0,
+        "hit_token_limit_tasks": 0,
+        "claim_terms_REVIEW_ONLY_samples": 12,
+        "number_terms_REVIEW_ONLY_samples": 1,
+        "effect_scope_terms_REVIEW_ONLY_samples": 13,
+        "scenario_terms_REVIEW_ONLY_samples": 13,
+        "range_boundary_clues_REVIEW_ONLY_samples": 0,
+        "peak_allocated_mib": 5497.2,
+        "peak_reserved_mib": 5628.0
+      },
+      "垃圾桶": {
+        "products": 12,
+        "task_calls": 36,
+        "parse_success_by_task_NOT_FLUENCY": {
+          "title": 12,
+          "selling_points": 8,
+          "short_description": 12
+        },
+        "assembled_structure_success_NOT_FLUENCY": 8,
+        "literal_coverage_NOT_HUMAN": {
+          "matched_fields": 69,
+          "core_attribute_total": 69,
+          "ratio": 1.0
+        },
+        "latency": {
+          "title": {
+            "samples": 12,
+            "mean_seconds": 0.8268152000000555,
+            "p50_seconds": 0.8305264499995246,
+            "p95_seconds": 1.0410789099989415
+          },
+          "selling_points": {
+            "samples": 12,
+            "mean_seconds": 1.6718890083332856,
+            "p50_seconds": 1.6262826999991375,
+            "p95_seconds": 2.1301278599992655
+          },
+          "short_description": {
+            "samples": 12,
+            "mean_seconds": 1.493147283333504,
+            "p50_seconds": 1.3237945000000764,
+            "p95_seconds": 2.2412674050006895
+          },
+          "three_task_total": {
+            "samples": 12,
+            "mean_seconds": 3.991851491666845,
+            "p50_seconds": 3.8706645000020217,
+            "p95_seconds": 4.935260644999289
+          }
+        },
+        "empty_task_outputs": 0,
+        "hit_token_limit_tasks": 0,
+        "claim_terms_REVIEW_ONLY_samples": 10,
+        "number_terms_REVIEW_ONLY_samples": 0,
+        "effect_scope_terms_REVIEW_ONLY_samples": 12,
+        "scenario_terms_REVIEW_ONLY_samples": 12,
+        "range_boundary_clues_REVIEW_ONLY_samples": 0,
+        "peak_allocated_mib": 5486.5,
+        "peak_reserved_mib": 5628.0
+      },
+      "拖把": {
+        "products": 12,
+        "task_calls": 36,
+        "parse_success_by_task_NOT_FLUENCY": {
+          "title": 12,
+          "selling_points": 8,
+          "short_description": 12
+        },
+        "assembled_structure_success_NOT_FLUENCY": 8,
+        "literal_coverage_NOT_HUMAN": {
+          "matched_fields": 55,
+          "core_attribute_total": 62,
+          "ratio": 0.8870967741935484
+        },
+        "latency": {
+          "title": {
+            "samples": 12,
+            "mean_seconds": 1.039729533332623,
+            "p50_seconds": 1.0630061499978183,
+            "p95_seconds": 1.5496099150002915
+          },
+          "selling_points": {
+            "samples": 12,
+            "mean_seconds": 1.9496877333334244,
+            "p50_seconds": 1.8504292500001611,
+            "p95_seconds": 2.6296376100001
+          },
+          "short_description": {
+            "samples": 12,
+            "mean_seconds": 1.5879992999998649,
+            "p50_seconds": 1.5498922999977367,
+            "p95_seconds": 2.1028295900003284
+          },
+          "three_task_total": {
+            "samples": 12,
+            "mean_seconds": 4.577416566665913,
+            "p50_seconds": 4.587755099997594,
+            "p95_seconds": 6.005861620004724
+          }
+        },
+        "empty_task_outputs": 0,
+        "hit_token_limit_tasks": 0,
+        "claim_terms_REVIEW_ONLY_samples": 12,
+        "number_terms_REVIEW_ONLY_samples": 0,
+        "effect_scope_terms_REVIEW_ONLY_samples": 10,
+        "scenario_terms_REVIEW_ONLY_samples": 8,
+        "range_boundary_clues_REVIEW_ONLY_samples": 0,
+        "peak_allocated_mib": 5488.0,
+        "peak_reserved_mib": 5628.0
+      },
+      "收纳箱": {
+        "products": 13,
+        "task_calls": 39,
+        "parse_success_by_task_NOT_FLUENCY": {
+          "title": 13,
+          "selling_points": 8,
+          "short_description": 13
+        },
+        "assembled_structure_success_NOT_FLUENCY": 8,
+        "literal_coverage_NOT_HUMAN": {
+          "matched_fields": 56,
+          "core_attribute_total": 81,
+          "ratio": 0.691358024691358
+        },
+        "latency": {
+          "title": {
+            "samples": 13,
+            "mean_seconds": 1.1186821384611763,
+            "p50_seconds": 1.0454013999988092,
+            "p95_seconds": 1.5772062600000936
+          },
+          "selling_points": {
+            "samples": 13,
+            "mean_seconds": 1.695378815384454,
+            "p50_seconds": 1.7430104999984906,
+            "p95_seconds": 2.433944500001962
+          },
+          "short_description": {
+            "samples": 13,
+            "mean_seconds": 1.4893864461535906,
+            "p50_seconds": 1.329959399998188,
+            "p95_seconds": 2.001136359999509
+          },
+          "three_task_total": {
+            "samples": 13,
+            "mean_seconds": 4.303447399999221,
+            "p50_seconds": 4.0515193000028376,
+            "p95_seconds": 5.775313220001406
+          }
+        },
+        "empty_task_outputs": 0,
+        "hit_token_limit_tasks": 0,
+        "claim_terms_REVIEW_ONLY_samples": 7,
+        "number_terms_REVIEW_ONLY_samples": 0,
+        "effect_scope_terms_REVIEW_ONLY_samples": 13,
+        "scenario_terms_REVIEW_ONLY_samples": 10,
+        "range_boundary_clues_REVIEW_ONLY_samples": 0,
+        "peak_allocated_mib": 5486.3,
+        "peak_reserved_mib": 5628.0
+      },
+      "移动电源": {
+        "products": 12,
+        "task_calls": 36,
+        "parse_success_by_task_NOT_FLUENCY": {
+          "title": 12,
+          "selling_points": 2,
+          "short_description": 12
+        },
+        "assembled_structure_success_NOT_FLUENCY": 2,
+        "literal_coverage_NOT_HUMAN": {
+          "matched_fields": 65,
+          "core_attribute_total": 77,
+          "ratio": 0.8441558441558441
+        },
+        "latency": {
+          "title": {
+            "samples": 12,
+            "mean_seconds": 1.3963680916667727,
+            "p50_seconds": 1.3895555999988574,
+            "p95_seconds": 2.09904372000019
+          },
+          "selling_points": {
+            "samples": 12,
+            "mean_seconds": 2.0069912916663575,
+            "p50_seconds": 1.8492355500002304,
+            "p95_seconds": 3.2089413000012423
+          },
+          "short_description": {
+            "samples": 12,
+            "mean_seconds": 1.9948501749998588,
+            "p50_seconds": 1.8565242499989836,
+            "p95_seconds": 3.033201864999318
+          },
+          "three_task_total": {
+            "samples": 12,
+            "mean_seconds": 5.398209558332989,
+            "p50_seconds": 5.091004149997389,
+            "p95_seconds": 8.140873145000294
+          }
+        },
+        "empty_task_outputs": 0,
+        "hit_token_limit_tasks": 0,
+        "claim_terms_REVIEW_ONLY_samples": 9,
+        "number_terms_REVIEW_ONLY_samples": 0,
+        "effect_scope_terms_REVIEW_ONLY_samples": 7,
+        "scenario_terms_REVIEW_ONLY_samples": 0,
+        "range_boundary_clues_REVIEW_ONLY_samples": 0,
+        "peak_allocated_mib": 5497.7,
+        "peak_reserved_mib": 5628.0
+      },
+      "耳机": {
+        "products": 13,
+        "task_calls": 39,
+        "parse_success_by_task_NOT_FLUENCY": {
+          "title": 13,
+          "selling_points": 6,
+          "short_description": 13
+        },
+        "assembled_structure_success_NOT_FLUENCY": 6,
+        "literal_coverage_NOT_HUMAN": {
+          "matched_fields": 63,
+          "core_attribute_total": 76,
+          "ratio": 0.8289473684210527
+        },
+        "latency": {
+          "title": {
+            "samples": 13,
+            "mean_seconds": 1.0593637615386866,
+            "p50_seconds": 1.0805235000007087,
+            "p95_seconds": 1.4209991600000642
+          },
+          "selling_points": {
+            "samples": 13,
+            "mean_seconds": 1.9182266692310246,
+            "p50_seconds": 2.116366399997787,
+            "p95_seconds": 2.4173198399985263
+          },
+          "short_description": {
+            "samples": 13,
+            "mean_seconds": 1.554598330769155,
+            "p50_seconds": 1.434553800001595,
+            "p95_seconds": 2.1496378400006497
+          },
+          "three_task_total": {
+            "samples": 13,
+            "mean_seconds": 4.532188761538866,
+            "p50_seconds": 4.509128800003964,
+            "p95_seconds": 5.643206019999342
+          }
+        },
+        "empty_task_outputs": 0,
+        "hit_token_limit_tasks": 0,
+        "claim_terms_REVIEW_ONLY_samples": 9,
+        "number_terms_REVIEW_ONLY_samples": 0,
+        "effect_scope_terms_REVIEW_ONLY_samples": 11,
+        "scenario_terms_REVIEW_ONLY_samples": 1,
+        "range_boundary_clues_REVIEW_ONLY_samples": 0,
+        "peak_allocated_mib": 5488.7,
+        "peak_reserved_mib": 5628.0
+      },
+      "键盘": {
+        "products": 13,
+        "task_calls": 39,
+        "parse_success_by_task_NOT_FLUENCY": {
+          "title": 13,
+          "selling_points": 2,
+          "short_description": 13
+        },
+        "assembled_structure_success_NOT_FLUENCY": 2,
+        "literal_coverage_NOT_HUMAN": {
+          "matched_fields": 68,
+          "core_attribute_total": 85,
+          "ratio": 0.8
+        },
+        "latency": {
+          "title": {
+            "samples": 13,
+            "mean_seconds": 0.9696041076914788,
+            "p50_seconds": 1.0189094000015757,
+            "p95_seconds": 1.3438287599987233
+          },
+          "selling_points": {
+            "samples": 13,
+            "mean_seconds": 1.2858996538461025,
+            "p50_seconds": 1.2038233999992372,
+            "p95_seconds": 2.332114860000728
+          },
+          "short_description": {
+            "samples": 13,
+            "mean_seconds": 2.344017876923597,
+            "p50_seconds": 2.2146762999982457,
+            "p95_seconds": 4.2830467800005865
+          },
+          "three_task_total": {
+            "samples": 13,
+            "mean_seconds": 4.599521638461178,
+            "p50_seconds": 4.008813000000373,
+            "p95_seconds": 7.2279887600016055
+          }
+        },
+        "empty_task_outputs": 0,
+        "hit_token_limit_tasks": 0,
+        "claim_terms_REVIEW_ONLY_samples": 12,
+        "number_terms_REVIEW_ONLY_samples": 0,
+        "effect_scope_terms_REVIEW_ONLY_samples": 11,
+        "scenario_terms_REVIEW_ONLY_samples": 1,
+        "range_boundary_clues_REVIEW_ONLY_samples": 0,
+        "peak_allocated_mib": 5488.2,
+        "peak_reserved_mib": 5628.0
+      },
+      "鼠标": {
+        "products": 12,
+        "task_calls": 36,
+        "parse_success_by_task_NOT_FLUENCY": {
+          "title": 12,
+          "selling_points": 4,
+          "short_description": 12
+        },
+        "assembled_structure_success_NOT_FLUENCY": 4,
+        "literal_coverage_NOT_HUMAN": {
+          "matched_fields": 70,
+          "core_attribute_total": 74,
+          "ratio": 0.9459459459459459
+        },
+        "latency": {
+          "title": {
+            "samples": 12,
+            "mean_seconds": 1.2727274416674845,
+            "p50_seconds": 1.357344700001704,
+            "p95_seconds": 1.6629299300007914
+          },
+          "selling_points": {
+            "samples": 12,
+            "mean_seconds": 1.769660708333807,
+            "p50_seconds": 1.7989345500009222,
+            "p95_seconds": 2.752625500002068
+          },
+          "short_description": {
+            "samples": 12,
+            "mean_seconds": 1.9538874250001754,
+            "p50_seconds": 2.065738949999286,
+            "p95_seconds": 2.710105870000734
+          },
+          "three_task_total": {
+            "samples": 12,
+            "mean_seconds": 4.996275575001467,
+            "p50_seconds": 5.273183250001239,
+            "p95_seconds": 6.273902065001856
+          }
+        },
+        "empty_task_outputs": 0,
+        "hit_token_limit_tasks": 0,
+        "claim_terms_REVIEW_ONLY_samples": 9,
+        "number_terms_REVIEW_ONLY_samples": 0,
+        "effect_scope_terms_REVIEW_ONLY_samples": 7,
+        "scenario_terms_REVIEW_ONLY_samples": 2,
+        "range_boundary_clues_REVIEW_ONLY_samples": 0,
+        "peak_allocated_mib": 5489.9,
+        "peak_reserved_mib": 5628.0
+      }
+    },
+    "LoRA": {
+      "保温杯": {
+        "products": 13,
+        "task_calls": 39,
+        "parse_success_by_task_NOT_FLUENCY": {
+          "title": 13,
+          "selling_points": 13,
+          "short_description": 13
+        },
+        "assembled_structure_success_NOT_FLUENCY": 13,
+        "literal_coverage_NOT_HUMAN": {
+          "matched_fields": 65,
+          "core_attribute_total": 101,
+          "ratio": 0.6435643564356436
+        },
+        "latency": {
+          "title": {
+            "samples": 13,
+            "mean_seconds": 1.6614642769236525,
+            "p50_seconds": 1.7149896000009903,
+            "p95_seconds": 2.197150320003129
+          },
+          "selling_points": {
+            "samples": 13,
+            "mean_seconds": 2.255379984615082,
+            "p50_seconds": 2.3969027000021015,
+            "p95_seconds": 2.788615859999845
+          },
+          "short_description": {
+            "samples": 13,
+            "mean_seconds": 3.0504574384618675,
+            "p50_seconds": 3.058321299999079,
+            "p95_seconds": 3.761145460000261
+          },
+          "three_task_total": {
+            "samples": 13,
+            "mean_seconds": 6.967301700000602,
+            "p50_seconds": 7.170213600002171,
+            "p95_seconds": 8.51941270000243
+          }
+        },
+        "empty_task_outputs": 0,
+        "hit_token_limit_tasks": 0,
+        "claim_terms_REVIEW_ONLY_samples": 0,
+        "number_terms_REVIEW_ONLY_samples": 0,
+        "effect_scope_terms_REVIEW_ONLY_samples": 0,
+        "scenario_terms_REVIEW_ONLY_samples": 1,
+        "range_boundary_clues_REVIEW_ONLY_samples": 0,
+        "peak_allocated_mib": 5506.9,
+        "peak_reserved_mib": 5636.0
+      },
+      "垃圾桶": {
+        "products": 12,
+        "task_calls": 36,
+        "parse_success_by_task_NOT_FLUENCY": {
+          "title": 12,
+          "selling_points": 12,
+          "short_description": 12
+        },
+        "assembled_structure_success_NOT_FLUENCY": 12,
+        "literal_coverage_NOT_HUMAN": {
+          "matched_fields": 60,
+          "core_attribute_total": 69,
+          "ratio": 0.8695652173913043
+        },
+        "latency": {
+          "title": {
+            "samples": 12,
+            "mean_seconds": 1.0004256000001988,
+            "p50_seconds": 1.0066753999999491,
+            "p95_seconds": 1.320895909997671
+          },
+          "selling_points": {
+            "samples": 12,
+            "mean_seconds": 1.2716321083344155,
+            "p50_seconds": 1.2535823000016535,
+            "p95_seconds": 1.3948697200012248
+          },
+          "short_description": {
+            "samples": 12,
+            "mean_seconds": 1.930974858333381,
+            "p50_seconds": 1.8732939000019542,
+            "p95_seconds": 2.2911586949987397
+          },
+          "three_task_total": {
+            "samples": 12,
+            "mean_seconds": 4.2030325666679955,
+            "p50_seconds": 4.123197200002323,
+            "p95_seconds": 4.881203059999097
+          }
+        },
+        "empty_task_outputs": 0,
+        "hit_token_limit_tasks": 0,
+        "claim_terms_REVIEW_ONLY_samples": 0,
+        "number_terms_REVIEW_ONLY_samples": 0,
+        "effect_scope_terms_REVIEW_ONLY_samples": 0,
+        "scenario_terms_REVIEW_ONLY_samples": 5,
+        "range_boundary_clues_REVIEW_ONLY_samples": 0,
+        "peak_allocated_mib": 5496.2,
+        "peak_reserved_mib": 5636.0
+      },
+      "拖把": {
+        "products": 12,
+        "task_calls": 36,
+        "parse_success_by_task_NOT_FLUENCY": {
+          "title": 12,
+          "selling_points": 12,
+          "short_description": 12
+        },
+        "assembled_structure_success_NOT_FLUENCY": 12,
+        "literal_coverage_NOT_HUMAN": {
+          "matched_fields": 54,
+          "core_attribute_total": 62,
+          "ratio": 0.8709677419354839
+        },
+        "latency": {
+          "title": {
+            "samples": 12,
+            "mean_seconds": 1.1581264250004704,
+            "p50_seconds": 1.209716400000616,
+            "p95_seconds": 1.4036714500000016
+          },
+          "selling_points": {
+            "samples": 12,
+            "mean_seconds": 1.465900808333572,
+            "p50_seconds": 1.3723997500001133,
+            "p95_seconds": 1.758354269999836
+          },
+          "short_description": {
+            "samples": 12,
+            "mean_seconds": 2.024118516666628,
+            "p50_seconds": 2.0197678999993514,
+            "p95_seconds": 2.506561589998455
+          },
+          "three_task_total": {
+            "samples": 12,
+            "mean_seconds": 4.64814575000067,
+            "p50_seconds": 4.695660750003299,
+            "p95_seconds": 5.548251815000185
+          }
+        },
+        "empty_task_outputs": 0,
+        "hit_token_limit_tasks": 0,
+        "claim_terms_REVIEW_ONLY_samples": 3,
+        "number_terms_REVIEW_ONLY_samples": 0,
+        "effect_scope_terms_REVIEW_ONLY_samples": 3,
+        "scenario_terms_REVIEW_ONLY_samples": 2,
+        "range_boundary_clues_REVIEW_ONLY_samples": 0,
+        "peak_allocated_mib": 5497.6,
+        "peak_reserved_mib": 5636.0
+      },
+      "收纳箱": {
+        "products": 13,
+        "task_calls": 39,
+        "parse_success_by_task_NOT_FLUENCY": {
+          "title": 13,
+          "selling_points": 13,
+          "short_description": 13
+        },
+        "assembled_structure_success_NOT_FLUENCY": 13,
+        "literal_coverage_NOT_HUMAN": {
+          "matched_fields": 57,
+          "core_attribute_total": 81,
+          "ratio": 0.7037037037037037
+        },
+        "latency": {
+          "title": {
+            "samples": 13,
+            "mean_seconds": 1.1954308076920614,
+            "p50_seconds": 1.1290332000025955,
+            "p95_seconds": 1.6706833399999594
+          },
+          "selling_points": {
+            "samples": 13,
+            "mean_seconds": 1.4792092538465602,
+            "p50_seconds": 1.3595064000001003,
+            "p95_seconds": 1.8731744799995786
+          },
+          "short_description": {
+            "samples": 13,
+            "mean_seconds": 2.0418332153847305,
+            "p50_seconds": 1.9446740999992471,
+            "p95_seconds": 2.7158785400002667
+          },
+          "three_task_total": {
+            "samples": 13,
+            "mean_seconds": 4.716473276923352,
+            "p50_seconds": 4.386527199996635,
+            "p95_seconds": 6.101768120000632
+          }
+        },
+        "empty_task_outputs": 0,
+        "hit_token_limit_tasks": 0,
+        "claim_terms_REVIEW_ONLY_samples": 0,
+        "number_terms_REVIEW_ONLY_samples": 0,
+        "effect_scope_terms_REVIEW_ONLY_samples": 0,
+        "scenario_terms_REVIEW_ONLY_samples": 6,
+        "range_boundary_clues_REVIEW_ONLY_samples": 0,
+        "peak_allocated_mib": 5495.9,
+        "peak_reserved_mib": 5636.0
+      },
+      "移动电源": {
+        "products": 12,
+        "task_calls": 36,
+        "parse_success_by_task_NOT_FLUENCY": {
+          "title": 12,
+          "selling_points": 11,
+          "short_description": 12
+        },
+        "assembled_structure_success_NOT_FLUENCY": 11,
+        "literal_coverage_NOT_HUMAN": {
+          "matched_fields": 54,
+          "core_attribute_total": 77,
+          "ratio": 0.7012987012987013
+        },
+        "latency": {
+          "title": {
+            "samples": 12,
+            "mean_seconds": 1.3355003499994684,
+            "p50_seconds": 1.4668885499995667,
+            "p95_seconds": 1.8673813000006698
+          },
+          "selling_points": {
+            "samples": 12,
+            "mean_seconds": 1.7232301416664388,
+            "p50_seconds": 1.7542551499991532,
+            "p95_seconds": 1.9955144600009587
+          },
+          "short_description": {
+            "samples": 12,
+            "mean_seconds": 2.3388263833336773,
+            "p50_seconds": 2.495771150001019,
+            "p95_seconds": 2.942188930001248
+          },
+          "three_task_total": {
+            "samples": 12,
+            "mean_seconds": 5.397556874999585,
+            "p50_seconds": 5.726810250000199,
+            "p95_seconds": 6.63653849500115
+          }
+        },
+        "empty_task_outputs": 0,
+        "hit_token_limit_tasks": 0,
+        "claim_terms_REVIEW_ONLY_samples": 1,
+        "number_terms_REVIEW_ONLY_samples": 1,
+        "effect_scope_terms_REVIEW_ONLY_samples": 0,
+        "scenario_terms_REVIEW_ONLY_samples": 0,
+        "range_boundary_clues_REVIEW_ONLY_samples": 0,
+        "peak_allocated_mib": 5507.4,
+        "peak_reserved_mib": 5636.0
+      },
+      "耳机": {
+        "products": 13,
+        "task_calls": 39,
+        "parse_success_by_task_NOT_FLUENCY": {
+          "title": 13,
+          "selling_points": 13,
+          "short_description": 13
+        },
+        "assembled_structure_success_NOT_FLUENCY": 13,
+        "literal_coverage_NOT_HUMAN": {
+          "matched_fields": 63,
+          "core_attribute_total": 76,
+          "ratio": 0.8289473684210527
+        },
+        "latency": {
+          "title": {
+            "samples": 13,
+            "mean_seconds": 1.1694373769236195,
+            "p50_seconds": 1.1681506999993871,
+            "p95_seconds": 1.5529566000004704
+          },
+          "selling_points": {
+            "samples": 13,
+            "mean_seconds": 1.7205614999998384,
+            "p50_seconds": 1.7194509000000835,
+            "p95_seconds": 2.1057196600006134
+          },
+          "short_description": {
+            "samples": 13,
+            "mean_seconds": 2.373411600000579,
+            "p50_seconds": 2.4428981999990356,
+            "p95_seconds": 2.9790539200010238
+          },
+          "three_task_total": {
+            "samples": 13,
+            "mean_seconds": 5.263410476924037,
+            "p50_seconds": 5.085906799999066,
+            "p95_seconds": 6.486715640001783
+          }
+        },
+        "empty_task_outputs": 0,
+        "hit_token_limit_tasks": 0,
+        "claim_terms_REVIEW_ONLY_samples": 0,
+        "number_terms_REVIEW_ONLY_samples": 0,
+        "effect_scope_terms_REVIEW_ONLY_samples": 0,
+        "scenario_terms_REVIEW_ONLY_samples": 1,
+        "range_boundary_clues_REVIEW_ONLY_samples": 0,
+        "peak_allocated_mib": 5498.4,
+        "peak_reserved_mib": 5636.0
+      },
+      "键盘": {
+        "products": 13,
+        "task_calls": 39,
+        "parse_success_by_task_NOT_FLUENCY": {
+          "title": 13,
+          "selling_points": 13,
+          "short_description": 13
+        },
+        "assembled_structure_success_NOT_FLUENCY": 13,
+        "literal_coverage_NOT_HUMAN": {
+          "matched_fields": 83,
+          "core_attribute_total": 85,
+          "ratio": 0.9764705882352941
+        },
+        "latency": {
+          "title": {
+            "samples": 13,
+            "mean_seconds": 0.9435495384619011,
+            "p50_seconds": 0.9100959999996121,
+            "p95_seconds": 1.161321439999301
+          },
+          "selling_points": {
+            "samples": 13,
+            "mean_seconds": 1.3451597692308916,
+            "p50_seconds": 1.3106990000014775,
+            "p95_seconds": 1.4683385800002724
+          },
+          "short_description": {
+            "samples": 13,
+            "mean_seconds": 1.8237980076925082,
+            "p50_seconds": 1.8502893000004406,
+            "p95_seconds": 2.175632139999652
+          },
+          "three_task_total": {
+            "samples": 13,
+            "mean_seconds": 4.112507315385301,
+            "p50_seconds": 4.086253900000884,
+            "p95_seconds": 4.642660779999278
+          }
+        },
+        "empty_task_outputs": 0,
+        "hit_token_limit_tasks": 0,
+        "claim_terms_REVIEW_ONLY_samples": 0,
+        "number_terms_REVIEW_ONLY_samples": 0,
+        "effect_scope_terms_REVIEW_ONLY_samples": 0,
+        "scenario_terms_REVIEW_ONLY_samples": 0,
+        "range_boundary_clues_REVIEW_ONLY_samples": 0,
+        "peak_allocated_mib": 5497.9,
+        "peak_reserved_mib": 5636.0
+      },
+      "鼠标": {
+        "products": 12,
+        "task_calls": 36,
+        "parse_success_by_task_NOT_FLUENCY": {
+          "title": 12,
+          "selling_points": 12,
+          "short_description": 12
+        },
+        "assembled_structure_success_NOT_FLUENCY": 12,
+        "literal_coverage_NOT_HUMAN": {
+          "matched_fields": 57,
+          "core_attribute_total": 74,
+          "ratio": 0.7702702702702703
+        },
+        "latency": {
+          "title": {
+            "samples": 12,
+            "mean_seconds": 1.0396593166663781,
+            "p50_seconds": 1.0602682999997342,
+            "p95_seconds": 1.2455114100002902
+          },
+          "selling_points": {
+            "samples": 12,
+            "mean_seconds": 1.4528045749996938,
+            "p50_seconds": 1.402972249999948,
+            "p95_seconds": 1.6360586549995786
+          },
+          "short_description": {
+            "samples": 12,
+            "mean_seconds": 2.0648248666666404,
+            "p50_seconds": 2.1803391499997815,
+            "p95_seconds": 2.4595448250003753
+          },
+          "three_task_total": {
+            "samples": 12,
+            "mean_seconds": 4.557288758332713,
+            "p50_seconds": 4.62307834999956,
+            "p95_seconds": 5.288451465000617
+          }
+        },
+        "empty_task_outputs": 0,
+        "hit_token_limit_tasks": 0,
+        "claim_terms_REVIEW_ONLY_samples": 0,
+        "number_terms_REVIEW_ONLY_samples": 0,
+        "effect_scope_terms_REVIEW_ONLY_samples": 0,
+        "scenario_terms_REVIEW_ONLY_samples": 0,
+        "range_boundary_clues_REVIEW_ONLY_samples": 0,
+        "peak_allocated_mib": 5499.6,
+        "peak_reserved_mib": 5636.0
+      }
+    }
+  },
+  "paired_seed_prompt_preflight_checks": 300,
+  "input_decoding_same": true,
+  "human_official_metrics": null,
+  "human_paired_preferences": null,
+  "test_history_disclosure": "The frozen100 sample was previously evaluated by Baseline/RAG. This is the first and only formal LoRA v1 paired three-task test run, not a never-observed test set.",
+  "old_single_call_baseline_compared": false,
+  "first_call_cold_start_included": true,
+  "parameter_updates": 0,
+  "rag_holdout_files_read": false
+}

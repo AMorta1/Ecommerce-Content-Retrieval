@@ -1,0 +1,468 @@
+{
+  "cases": [
+    {
+      "pair_id": "CT008",
+      "product_id": "8443620439",
+      "variant": "LoRA_RAG",
+      "category_l2": "键盘",
+      "core_attribute_count": 6,
+      "matched_attribute_count": 4,
+      "fluency_pass": 0,
+      "factual_error_count": 1,
+      "field_stacking": 1,
+      "mechanical_template": 0,
+      "unsupported_evaluation_effect_scenario": 1,
+      "numeric_range_distortion": 0,
+      "identity_category_error": 0,
+      "reviewer": "用户复核确认（ChatGPT初审 / Codex修正）",
+      "review_notes": "标题“USB 有 简易键盘”语序生硬；“简易”为无依据评价性描述。",
+      "output": {
+        "generated_title": "ViewSonic/优派 USB 有 简易键盘",
+        "selling_points": [
+          "接口类型：USB",
+          "是否有多媒体功能键：有",
+          "品牌：ViewSonic/优派"
+        ],
+        "short_description": "这款键盘的品牌为ViewSonic/优派，接口类型为USB，连接方式为有线。",
+        "complete_raw_text": "ViewSonic/优派 USB 有 简易键盘\n[\"接口类型：USB\", \"是否有多媒体功能键：有\", \"品牌：ViewSonic/优派\"]\n这款键盘的品牌为ViewSonic/优派，接口类型为USB，连接方式为有线。",
+        "structure_success": true
+      },
+      "source_attributes": {
+        "是否支持人体工程学": [
+          "不支持"
+        ],
+        "售后服务": [
+          "全国联保"
+        ],
+        "优派型号": [
+          "KU855"
+        ],
+        "颜色分类": [
+          "银白",
+          "黑色",
+          "KU855+MW286",
+          "银黑",
+          "KU855白+MW286白"
+        ],
+        "套餐类型": [
+          "官方标配"
+        ],
+        "接口类型": [
+          "USB"
+        ],
+        "保修期": [
+          "12个月"
+        ],
+        "成色": [
+          "全新"
+        ],
+        "是否无线": [
+          "有线"
+        ],
+        "是否机械键盘": [
+          "否"
+        ],
+        "是否有多媒体功能键": [
+          "有"
+        ],
+        "品牌": [
+          "ViewSonic/优派"
+        ],
+        "有无手托": [
+          "无"
+        ],
+        "毛重": [
+          "420g"
+        ],
+        "包装体积": [
+          "284.7*119.8*18.6MM"
+        ]
+      }
+    },
+    {
+      "pair_id": "CT053",
+      "product_id": "621173570641",
+      "variant": "LoRA_RAG",
+      "category_l2": "拖把",
+      "core_attribute_count": 4,
+      "matched_attribute_count": 2,
+      "fluency_pass": 1,
+      "factual_error_count": 0,
+      "field_stacking": 0,
+      "mechanical_template": 1,
+      "unsupported_evaluation_effect_scenario": 0,
+      "numeric_range_distortion": 0,
+      "identity_category_error": 0,
+      "reviewer": "用户复核确认（ChatGPT初审 / Codex修正）",
+      "review_notes": "品牌/型号占位值已门控；卖点重复“电源方式：充电式”，存在机械重复。",
+      "output": {
+        "generated_title": "充电式 单驱动 拖把",
+        "selling_points": [
+          "驱动类型：单驱动",
+          "电源方式：充电式",
+          "电源方式：充电式"
+        ],
+        "short_description": "这款拖把的驱动类型为单驱动，电源方式为充电式。",
+        "complete_raw_text": "充电式 单驱动 拖把\n[\"驱动类型：单驱动\", \"电源方式：充电式\", \"电源方式：充电式\"]\n这款拖把的驱动类型为单驱动，电源方式为充电式。",
+        "structure_success": true
+      },
+      "source_attributes": {
+        "颜色分类": [
+          "咖色桶+加强杆+金属篮+金属盘+5",
+          "黑色桶+加强杆+金属篮+金属盘+2",
+          "黑色桶+加强杆+金属篮+金属盘+5",
+          "咖色桶+加强杆+金属篮+金属盘+2"
+        ],
+        "型号": [
+          "见描述"
+        ],
+        "品牌": [
+          "见描述"
+        ],
+        "电源方式": [
+          "充电式"
+        ],
+        "驱动类型": [
+          "单驱动"
+        ]
+      }
+    },
+    {
+      "pair_id": "CT053",
+      "product_id": "621173570641",
+      "variant": "LoRA_control",
+      "category_l2": "拖把",
+      "core_attribute_count": 4,
+      "matched_attribute_count": 2,
+      "fluency_pass": 1,
+      "factual_error_count": 1,
+      "field_stacking": 0,
+      "mechanical_template": 0,
+      "unsupported_evaluation_effect_scenario": 1,
+      "numeric_range_distortion": 0,
+      "identity_category_error": 0,
+      "reviewer": "用户复核确认（ChatGPT初审 / Codex修正）",
+      "review_notes": "品牌/型号占位值已门控。“适用范围：家庭清洁”在源结构化属性中没有对应依据；按不从品类推导适用场景的严格口径暂保留事实错误1。但它处在直接品类语义与新增家庭场景的边界，需要用户最后裁决，不能仅按“家庭”关键词机械判错。",
+      "output": {
+        "generated_title": "单驱动 充电式 拖把",
+        "selling_points": [
+          "驱动类型：单驱动",
+          "电源方式：充电式",
+          "适用范围：家庭清洁"
+        ],
+        "short_description": "这款拖把的驱动类型为单驱动，电源方式为充电式。",
+        "complete_raw_text": "单驱动 充电式 拖把\n[\"驱动类型：单驱动\", \"电源方式：充电式\", \"适用范围：家庭清洁\"]\n这款拖把的驱动类型为单驱动，电源方式为充电式。",
+        "structure_success": true
+      },
+      "source_attributes": {
+        "颜色分类": [
+          "咖色桶+加强杆+金属篮+金属盘+5",
+          "黑色桶+加强杆+金属篮+金属盘+2",
+          "黑色桶+加强杆+金属篮+金属盘+5",
+          "咖色桶+加强杆+金属篮+金属盘+2"
+        ],
+        "型号": [
+          "见描述"
+        ],
+        "品牌": [
+          "见描述"
+        ],
+        "电源方式": [
+          "充电式"
+        ],
+        "驱动类型": [
+          "单驱动"
+        ]
+      }
+    },
+    {
+      "pair_id": "CT057",
+      "product_id": "601009119510",
+      "variant": "LoRA_control",
+      "category_l2": "键盘",
+      "core_attribute_count": 7,
+      "matched_attribute_count": 4,
+      "fluency_pass": 0,
+      "factual_error_count": 0,
+      "field_stacking": 1,
+      "mechanical_template": 0,
+      "unsupported_evaluation_effect_scenario": 0,
+      "numeric_range_distortion": 0,
+      "identity_category_error": 0,
+      "reviewer": "用户复核确认（ChatGPT初审 / Codex修正）",
+      "review_notes": "标题“富德 IK8300 无线 有 键盘”中的孤立“有”缺少字段指代，字段标签堆叠使标题不自然；卖点可还原为多媒体功能键=有。保留通顺率0、字段堆叠1，事实错误0。负向属性不能因“无线”中包含“无”就算命中。",
+      "output": {
+        "generated_title": "富德 IK8300 无线 有 键盘",
+        "selling_points": [
+          "是否无线：无线",
+          "是否有多媒体功能键：有",
+          "品牌：富德"
+        ],
+        "short_description": "这款键盘的品牌为富德，型号为IK8300，连接方式为无线，配有多媒体功能键。",
+        "complete_raw_text": "富德 IK8300 无线 有 键盘\n[\"是否无线：无线\", \"是否有多媒体功能键：有\", \"品牌：富德\"]\n这款键盘的品牌为富德，型号为IK8300，连接方式为无线，配有多媒体功能键。",
+        "structure_success": true
+      },
+      "source_attributes": {
+        "接口类型": [
+          "蓝牙",
+          "USB"
+        ],
+        "是否无线": [
+          "无线"
+        ],
+        "型号": [
+          "IK8300"
+        ],
+        "是否支持人体工程学": [
+          "支持"
+        ],
+        "保修期": [
+          "12个月"
+        ],
+        "颜色分类": [
+          "78键三模键鼠套餐银色",
+          "78键三模键鼠套餐金色",
+          "78键三模键盘经典黑",
+          "2.4G键鼠套餐商务灰",
+          "2.4G键鼠套餐经典黑",
+          "三模键鼠套餐土豪金",
+          "三模键盘经典黑",
+          "三模键盘时尚银",
+          "78键三模键盘土豪金",
+          "78键三模键鼠套餐黑色",
+          "2.4G键鼠套餐时尚银",
+          "三模键鼠套餐经典黑",
+          "三模键盘土豪金",
+          "三模键鼠套餐时尚银",
+          "78键三模键盘时尚银"
+        ],
+        "是否机械键盘": [
+          "否"
+        ],
+        "套餐类型": [
+          "官方标配"
+        ],
+        "品牌": [
+          "富德"
+        ],
+        "是否有多媒体功能键": [
+          "有"
+        ],
+        "有无手托": [
+          "无"
+        ],
+        "轴体": [
+          "光轴"
+        ],
+        "成色": [
+          "全新"
+        ]
+      }
+    },
+    {
+      "pair_id": "CT057",
+      "product_id": "601009119510",
+      "variant": "LoRA_RAG",
+      "category_l2": "键盘",
+      "core_attribute_count": 7,
+      "matched_attribute_count": 4,
+      "fluency_pass": 0,
+      "factual_error_count": 0,
+      "field_stacking": 1,
+      "mechanical_template": 0,
+      "unsupported_evaluation_effect_scenario": 0,
+      "numeric_range_distortion": 0,
+      "identity_category_error": 0,
+      "reviewer": "用户复核确认（ChatGPT初审 / Codex修正）",
+      "review_notes": "与A输出一致。标题中的孤立“有”缺少字段指代，字段标签堆叠使标题不自然；卖点可还原为多媒体功能键=有。保留通顺率0、字段堆叠1，事实错误0。负向属性不能因“无线”中包含“无”就算命中。",
+      "output": {
+        "generated_title": "富德 IK8300 无线 有 键盘",
+        "selling_points": [
+          "是否无线：无线",
+          "是否有多媒体功能键：有",
+          "品牌：富德"
+        ],
+        "short_description": "这款键盘的品牌为富德，型号为IK8300，连接方式为无线，配有多媒体功能键。",
+        "complete_raw_text": "富德 IK8300 无线 有 键盘\n[\"是否无线：无线\", \"是否有多媒体功能键：有\", \"品牌：富德\"]\n这款键盘的品牌为富德，型号为IK8300，连接方式为无线，配有多媒体功能键。",
+        "structure_success": true
+      },
+      "source_attributes": {
+        "接口类型": [
+          "蓝牙",
+          "USB"
+        ],
+        "是否无线": [
+          "无线"
+        ],
+        "型号": [
+          "IK8300"
+        ],
+        "是否支持人体工程学": [
+          "支持"
+        ],
+        "保修期": [
+          "12个月"
+        ],
+        "颜色分类": [
+          "78键三模键鼠套餐银色",
+          "78键三模键鼠套餐金色",
+          "78键三模键盘经典黑",
+          "2.4G键鼠套餐商务灰",
+          "2.4G键鼠套餐经典黑",
+          "三模键鼠套餐土豪金",
+          "三模键盘经典黑",
+          "三模键盘时尚银",
+          "78键三模键盘土豪金",
+          "78键三模键鼠套餐黑色",
+          "2.4G键鼠套餐时尚银",
+          "三模键鼠套餐经典黑",
+          "三模键盘土豪金",
+          "三模键鼠套餐时尚银",
+          "78键三模键盘时尚银"
+        ],
+        "是否机械键盘": [
+          "否"
+        ],
+        "套餐类型": [
+          "官方标配"
+        ],
+        "品牌": [
+          "富德"
+        ],
+        "是否有多媒体功能键": [
+          "有"
+        ],
+        "有无手托": [
+          "无"
+        ],
+        "轴体": [
+          "光轴"
+        ],
+        "成色": [
+          "全新"
+        ]
+      }
+    },
+    {
+      "pair_id": "CT094",
+      "product_id": "583014299804",
+      "variant": "LoRA_RAG",
+      "category_l2": "移动电源",
+      "core_attribute_count": 4,
+      "matched_attribute_count": 0,
+      "fluency_pass": 0,
+      "factual_error_count": 0,
+      "field_stacking": 1,
+      "mechanical_template": 0,
+      "unsupported_evaluation_effect_scenario": 0,
+      "numeric_range_distortion": 0,
+      "identity_category_error": 0,
+      "reviewer": "用户复核确认（ChatGPT初审 / Codex修正）",
+      "review_notes": "可靠核心输入因源CONFLICT被门控为空。A卖点泄漏区块标题与“配置USB接口数量/支持充电电流/电池容量”字段提示，短详情输出空身份字典；并未给出具体虚构数值、评价或场景断言。按完整源数据事实口径修正事实错误1→0、无依据评价/效果/场景1→0；仍保留核心命中0、通顺0、字段堆叠1。零事实错误不代表文案合格，结构与通顺明显失败。",
+      "output": {
+        "generated_title": "移动电源",
+        "selling_points": null,
+        "short_description": "这款移动电源的身份信息为：{}。",
+        "complete_raw_text": "移动电源\nIdentity Facts（身份信息）：\nMandatory Reliable Core Facts（输入完整提供，不要求各任务重复）：\nSupplemental Top-3（可选补充细节）：\n1. 配置USB接口数量\n2. 支持充电电流\n3. 电池容量\n这款移动电源的身份信息为：{}。",
+        "structure_success": false
+      },
+      "source_attributes": {
+        "品牌": [
+          "雅奇乐(电池)"
+        ],
+        "附加功能": [
+          "多U口输出",
+          "带插头",
+          "液晶显示"
+        ],
+        "外壳材质": [
+          "其他"
+        ],
+        "尺寸": [
+          "105x65x13mm"
+        ],
+        "型号": [
+          "键盘"
+        ],
+        "电池容量": [
+          "8000mAh"
+        ],
+        "颜色分类": [
+          "简约黑色键盘玻璃充电宝",
+          "简约白色键盘玻璃充电宝",
+          "电脑白色键盘玻璃充电宝"
+        ],
+        "智能类型": [
+          "其他智能"
+        ],
+        "电池类型": [
+          "锂聚合物电池"
+        ],
+        "电芯类型": [
+          "软包"
+        ]
+      }
+    },
+    {
+      "pair_id": "CT094",
+      "product_id": "583014299804",
+      "variant": "LoRA_control",
+      "category_l2": "移动电源",
+      "core_attribute_count": 4,
+      "matched_attribute_count": 0,
+      "fluency_pass": 1,
+      "factual_error_count": 4,
+      "field_stacking": 0,
+      "mechanical_template": 0,
+      "unsupported_evaluation_effect_scenario": 1,
+      "numeric_range_distortion": 1,
+      "identity_category_error": 0,
+      "reviewer": "用户复核确认（ChatGPT初审 / Codex修正）",
+      "review_notes": "实际输入为空，但正式事实判断对照完整源属性，不以输入为空直接判全部输出错误。源“附加功能=多U口输出”支持一般“多设备充电”，文案未声称任何设备/广泛兼容/同时快充，不另计错误。保留四个独立错误点：①高效节能设计无来源；②安全防护技术无来源；③10000mAh与源8000mAh矛盾；④USB Type-C无来源。因此事实错误5→4；无依据评价/效果/场景1、数值失真1保留。源型号=键盘的身份冲突单列，不改源质量状态；核心命中仍为0。",
+      "output": {
+        "generated_title": "移动电源",
+        "selling_points": null,
+        "short_description": "这款移动电源的容量为10000mAh，接口为USB Type-C。",
+        "complete_raw_text": "移动电源\n[1] 支持多设备充电\n[2] 高效节能设计\n[3] 安全防护技术\n这款移动电源的容量为10000mAh，接口为USB Type-C。",
+        "structure_success": false
+      },
+      "source_attributes": {
+        "品牌": [
+          "雅奇乐(电池)"
+        ],
+        "附加功能": [
+          "多U口输出",
+          "带插头",
+          "液晶显示"
+        ],
+        "外壳材质": [
+          "其他"
+        ],
+        "尺寸": [
+          "105x65x13mm"
+        ],
+        "型号": [
+          "键盘"
+        ],
+        "电池容量": [
+          "8000mAh"
+        ],
+        "颜色分类": [
+          "简约黑色键盘玻璃充电宝",
+          "简约白色键盘玻璃充电宝",
+          "电脑白色键盘玻璃充电宝"
+        ],
+        "智能类型": [
+          "其他智能"
+        ],
+        "电池类型": [
+          "锂聚合物电池"
+        ],
+        "电芯类型": [
+          "软包"
+        ]
+      }
+    }
+  ],
+  "use": "archive only; never retune or rerun"
+}

@@ -1,0 +1,474 @@
+{
+  "raw_label_mapped_counts": {
+    "耳机": 9667,
+    "键盘": 2354,
+    "鼠标": 6004,
+    "移动电源": 3330,
+    "保温杯": 3010,
+    "收纳箱": 996,
+    "拖把": 2928,
+    "垃圾桶": 1617
+  },
+  "processing_report": {
+    "dataset_version": "week1_v3",
+    "config_sha256": "7f2bf5a3edc663f4c779f97a8174935a17c58d9d13a9dc4b810a0db37e9ada75",
+    "sources": {
+      "full": {
+        "path": "E:\\Projects\\Baidu\\product1m_product5m_id_label.json",
+        "bytes": 5794852057,
+        "mtime_ns": 1788409819580596100,
+        "records": 6313067
+      },
+      "train": {
+        "path": "E:\\Projects\\Baidu\\product1m_product5m_train_id_label.json",
+        "bytes": 3977569457,
+        "mtime_ns": 1788411334779865500,
+        "records": 4418550
+      },
+      "test": {
+        "path": "E:\\Projects\\Baidu\\product1m_product5m_test_id_label.json",
+        "bytes": 1266792790,
+        "mtime_ns": 1788410719396554800,
+        "records": 1341932
+      }
+    },
+    "counts": {
+      "source_records": 6313067,
+      "target_records": 29906
+    },
+    "rejected": {
+      "malformed_or_insufficient_attributes": 99,
+      "excluded_accessory_or_bundle": 863,
+      "excluded_use_case": 56,
+      "excluded_laptop_replacement_keyboard": 362,
+      "duplicate_content": 86,
+      "oversized_pv": 1
+    },
+    "eligible_by_category": {
+      "拖把": 2844,
+      "移动电源": 3312,
+      "耳机": 9615,
+      "鼠标": 5878,
+      "垃圾桶": 1203,
+      "保温杯": 2943,
+      "收纳箱": 995,
+      "键盘": 1649
+    },
+    "selected": 2000,
+    "selected_by_category": {
+      "耳机": 250,
+      "收纳箱": 250,
+      "保温杯": 250,
+      "鼠标": 250,
+      "键盘": 250,
+      "拖把": 250,
+      "垃圾桶": 250,
+      "移动电源": 250
+    },
+    "splits": {
+      "train": {
+        "耳机": 200,
+        "保温杯": 200,
+        "鼠标": 200,
+        "键盘": 200,
+        "收纳箱": 200,
+        "拖把": 200,
+        "垃圾桶": 200,
+        "移动电源": 200
+      },
+      "validation": {
+        "键盘": 25,
+        "移动电源": 25,
+        "垃圾桶": 25,
+        "拖把": 25,
+        "保温杯": 25,
+        "鼠标": 25,
+        "收纳箱": 25,
+        "耳机": 25
+      },
+      "test": {
+        "收纳箱": 25,
+        "键盘": 25,
+        "拖把": 25,
+        "鼠标": 25,
+        "移动电源": 25,
+        "耳机": 25,
+        "保温杯": 25,
+        "垃圾桶": 25
+      }
+    },
+    "selected_original_overlap": 0,
+    "selected_original_split_unknown": 252,
+    "duplicate_checks": {
+      "product_id": 0,
+      "content_fingerprint": 0,
+      "image_url_fingerprint": 0
+    },
+    "limitations": [
+      "Provisional categories require review",
+      "No human-written selling points/descriptions",
+      "Images pending download",
+      "No perceptual image or fuzzy text deduplication",
+      "This experiment uses a new stratified split, not the original benchmark split"
+    ],
+    "elapsed_seconds": 89.6
+  },
+  "week2_summary": {
+    "dataset_version": "week2_train_v1",
+    "source_dataset_version": "week1_v3",
+    "policy": "冻结验证集和测试集不动；训练样本若与冻结集具有相同品牌-型号，或同品类图片 dHash 汉明距离不大于阈值，则从本版本训练集中排除。",
+    "frozen_evaluation": {
+      "test": {
+        "records": 200,
+        "sha256": "4afe6589d2f2a6b8d020ec3836128c6a83d00bf6acd3eff0c0b5f0a8a68076a5"
+      },
+      "validation": {
+        "records": 200,
+        "sha256": "dd2bc1d6c21567176d95f5414bfd9304f48979b3bb39ab0b038627b1f346af0b"
+      }
+    },
+    "brand_model_audit": {
+      "repeated_groups": 70,
+      "cross_split_groups": 30,
+      "frozen_only_cross_split_groups": 2
+    },
+    "image_dhash_audit": {
+      "max_hamming_distance": 4,
+      "candidate_pairs": 13,
+      "cross_split_pairs": 6,
+      "frozen_only_cross_split_pairs": 0
+    },
+    "training": {
+      "before": 1592,
+      "excluded": 33,
+      "after": 1559,
+      "before_by_category": {
+        "保温杯": 200,
+        "垃圾桶": 200,
+        "拖把": 198,
+        "收纳箱": 199,
+        "移动电源": 199,
+        "耳机": 200,
+        "键盘": 197,
+        "鼠标": 199
+      },
+      "excluded_by_category": {
+        "拖把": 3,
+        "移动电源": 7,
+        "耳机": 5,
+        "键盘": 13,
+        "鼠标": 5
+      },
+      "after_by_category": {
+        "保温杯": 200,
+        "垃圾桶": 200,
+        "拖把": 195,
+        "收纳箱": 199,
+        "移动电源": 192,
+        "耳机": 195,
+        "键盘": 184,
+        "鼠标": 194
+      },
+      "source_train_jsonl_sha256": "34e1aeb203fb2cf28f109ba22c93863f5597a0340f2b14a28233be40ab2c5062",
+      "train_jsonl_sha256": "6ba7179da3339c638aaace1a331cdc50648e58aa75c6a6852e33666bda512fb1"
+    },
+    "limitations": [
+      "同品牌型号按保守策略排除，不表示这些商品已被人工确认完全相同。",
+      "dHash 只反映低分辨率视觉结构相似，不等同于商品语义相同。",
+      "验证集和测试集已冻结；两者之间的疑似近重复只记录、不移动。"
+    ]
+  },
+  "p5_final_counts": {
+    "source_products": 1559,
+    "usable_products": 1340,
+    "excluded_or_deferred_products": 219,
+    "train_products": 1206,
+    "validation_products": 134,
+    "instruction_records": 4020,
+    "tasks": {
+      "title": 1340,
+      "selling_points": 1340,
+      "short_description": 1340
+    },
+    "categories": {
+      "保温杯": {
+        "all": 184,
+        "train": 166,
+        "validation": 18,
+        "instructions": 552
+      },
+      "垃圾桶": {
+        "all": 176,
+        "train": 158,
+        "validation": 18,
+        "instructions": 528
+      },
+      "拖把": {
+        "all": 156,
+        "train": 140,
+        "validation": 16,
+        "instructions": 468
+      },
+      "收纳箱": {
+        "all": 149,
+        "train": 134,
+        "validation": 15,
+        "instructions": 447
+      },
+      "移动电源": {
+        "all": 172,
+        "train": 155,
+        "validation": 17,
+        "instructions": 516
+      },
+      "耳机": {
+        "all": 171,
+        "train": 154,
+        "validation": 17,
+        "instructions": 513
+      },
+      "键盘": {
+        "all": 154,
+        "train": 139,
+        "validation": 15,
+        "instructions": 462
+      },
+      "鼠标": {
+        "all": 178,
+        "train": 160,
+        "validation": 18,
+        "instructions": 534
+      }
+    },
+    "exclusions": {
+      "confirmed_conflict": 15,
+      "review_pending": 28,
+      "insufficient_reliable_core_attributes": 50,
+      "title_category_not_supported": 56,
+      "accessory_or_product_boundary_title": 39,
+      "duplicate_final_product_signature": 31
+    }
+  },
+  "core_field_definitions": {
+    "耳机": [
+      "品牌",
+      "型号",
+      "佩戴方式",
+      "耳机类别",
+      "耳机与播放设备连接方式",
+      "蓝牙版本",
+      "功能"
+    ],
+    "键盘": [
+      "品牌",
+      "型号",
+      "接口类型",
+      "是否无线",
+      "是否机械键盘",
+      "是否有多媒体功能键",
+      "有无手托"
+    ],
+    "鼠标": [
+      "品牌",
+      "型号",
+      "接口类型",
+      "工作方式",
+      "光学分辨率",
+      "按键数",
+      "无线技术",
+      "电源方式"
+    ],
+    "移动电源": [
+      "品牌",
+      "型号",
+      "电池容量",
+      "电池类型",
+      "电芯类型",
+      "外壳材质",
+      "充电协议",
+      "最大输出功率"
+    ],
+    "保温杯": [
+      "品牌",
+      "型号",
+      "材质",
+      "容量",
+      "保温时长",
+      "杯子样式",
+      "适用人群",
+      "适用场景"
+    ],
+    "收纳箱": [
+      "品牌",
+      "型号",
+      "材质",
+      "尺寸",
+      "适用对象",
+      "适用空间",
+      "净重"
+    ],
+    "拖把": [
+      "品牌",
+      "型号",
+      "杆材质",
+      "拖布材质",
+      "拖把杆类型",
+      "挤水方式",
+      "驱动类型",
+      "电源方式"
+    ],
+    "垃圾桶": [
+      "品牌",
+      "外壳材质",
+      "形状",
+      "容量",
+      "垃圾桶类型",
+      "开合方式",
+      "适用场景"
+    ]
+  },
+  "actual_split_statistics": {
+    "project_train_v3": {
+      "path": "data/processed/week1_v3/multimodal/train.jsonl",
+      "sha256": "34e1aeb203fb2cf28f109ba22c93863f5597a0340f2b14a28233be40ab2c5062",
+      "records": 1592,
+      "products": 1592,
+      "category_l1": {
+        "3C数码": 795,
+        "家居日用": 797
+      },
+      "category_l2": {
+        "耳机": 200,
+        "保温杯": 200,
+        "鼠标": 199,
+        "键盘": 197,
+        "收纳箱": 199,
+        "拖把": 198,
+        "垃圾桶": 200,
+        "移动电源": 199
+      },
+      "task_types": {}
+    },
+    "project_validation": {
+      "path": "data/processed/week1_v3/multimodal/validation.jsonl",
+      "sha256": "dd2bc1d6c21567176d95f5414bfd9304f48979b3bb39ab0b038627b1f346af0b",
+      "records": 200,
+      "products": 200,
+      "category_l1": {
+        "3C数码": 100,
+        "家居日用": 100
+      },
+      "category_l2": {
+        "键盘": 25,
+        "移动电源": 25,
+        "垃圾桶": 25,
+        "拖把": 25,
+        "保温杯": 25,
+        "鼠标": 25,
+        "收纳箱": 25,
+        "耳机": 25
+      },
+      "task_types": {}
+    },
+    "project_test": {
+      "path": "data/processed/week1_v3/multimodal/test.jsonl",
+      "sha256": "4afe6589d2f2a6b8d020ec3836128c6a83d00bf6acd3eff0c0b5f0a8a68076a5",
+      "records": 200,
+      "products": 200,
+      "category_l1": {
+        "家居日用": 100,
+        "3C数码": 100
+      },
+      "category_l2": {
+        "收纳箱": 25,
+        "键盘": 25,
+        "拖把": 25,
+        "鼠标": 25,
+        "移动电源": 25,
+        "耳机": 25,
+        "保温杯": 25,
+        "垃圾桶": 25
+      },
+      "task_types": {}
+    },
+    "week2_train_v1": {
+      "path": "data/processed/week2_train_v1/train.jsonl",
+      "sha256": "6ba7179da3339c638aaace1a331cdc50648e58aa75c6a6852e33666bda512fb1",
+      "records": 1559,
+      "products": 1559,
+      "category_l1": {
+        "3C数码": 765,
+        "家居日用": 794
+      },
+      "category_l2": {
+        "耳机": 195,
+        "保温杯": 200,
+        "鼠标": 194,
+        "键盘": 184,
+        "收纳箱": 199,
+        "拖把": 195,
+        "垃圾桶": 200,
+        "移动电源": 192
+      },
+      "task_types": {}
+    },
+    "lora_train": {
+      "path": "data/processed/lora_instruction_data_v1/train.jsonl",
+      "sha256": "c31b00f3d19d503b3f7c7529cc2ce7e115143214b0d9ab40f07412becd6a5434",
+      "records": 3618,
+      "products": 1206,
+      "category_l1": {
+        "家居日用": 1794,
+        "3C数码": 1824
+      },
+      "category_l2": {
+        "保温杯": 498,
+        "垃圾桶": 474,
+        "拖把": 420,
+        "收纳箱": 402,
+        "移动电源": 465,
+        "耳机": 462,
+        "键盘": 417,
+        "鼠标": 480
+      },
+      "task_types": {
+        "title": 1206,
+        "selling_points": 1206,
+        "short_description": 1206
+      }
+    },
+    "lora_train_dev": {
+      "path": "data/processed/lora_instruction_data_v1/validation.jsonl",
+      "sha256": "20a32d5f67a8ac6dd0743bb90445522fe28cd4099ed318e71a4f0e8e33fa0a94",
+      "records": 402,
+      "products": 134,
+      "category_l1": {
+        "家居日用": 201,
+        "3C数码": 201
+      },
+      "category_l2": {
+        "保温杯": 54,
+        "垃圾桶": 54,
+        "拖把": 48,
+        "收纳箱": 45,
+        "移动电源": 51,
+        "耳机": 51,
+        "键盘": 45,
+        "鼠标": 54
+      },
+      "task_types": {
+        "title": 134,
+        "selling_points": 134,
+        "short_description": 134
+      }
+    }
+  },
+  "overlap_product_counts": {
+    "lora_train__lora_train_dev": 0,
+    "lora_train__project_validation": 0,
+    "lora_train__project_test": 0,
+    "lora_train_dev__project_validation": 0,
+    "lora_train_dev__project_test": 0,
+    "project_validation__project_test": 0
+  }
+}

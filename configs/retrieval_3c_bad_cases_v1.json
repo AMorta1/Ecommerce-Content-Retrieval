@@ -1,0 +1,46 @@
+{
+  "version": "week2_retrieval_3c_bad_cases_v1",
+  "source_rankings": "reports/retrieval/test_evaluation/baseline_rankings.csv",
+  "source_rankings_sha256": "cf844d521ddc7c0816a91ea2be6690bf284a04dfe36c2ca22980001201759265",
+  "source_judgments": "reports/retrieval/test_evaluation/relevance_judgments.csv",
+  "source_judgments_sha256": "dbf7aecb0dd98b18986027c819749dbf9a723f7973a5ba11263b595f63a3b6f3",
+  "source_queries": "configs/retrieval_test_queries.jsonl",
+  "source_queries_sha256": "48253c3287967d90caa5f9a7b3103ca00a1126d401b3cfe067cb96da0261443f",
+  "source_catalog": "data/processed/week1_v3/multimodal/products.jsonl",
+  "source_catalog_sha256": "ba650e3d02bb38d0841210a615986439b71fe9b2a2db3dd6c16406302d33b586",
+  "selection_policy": "从正式 test50 的 3C grade=0 结果中，每个二级品类5条、text/image各10条，优先高排名并覆盖不同根因；仅用于一次定性诊断，不用于权重选择。",
+  "root_cause_labels": [
+    "cross_modal_alignment_insufficient",
+    "appearance_homogeneity",
+    "category_mismatch",
+    "attribute_conflict_or_data_noise",
+    "ranking_rule_insufficient"
+  ],
+  "cases": [
+    {"case_id": "BC01", "query_mode": "text", "query_id": "test_618070906394", "candidate_product_id": "556245210015", "primary_cause": "ranking_rule_insufficient", "secondary_causes": ["cross_modal_alignment_insufficient"], "rule_fixability": "likely_if_relevant_candidate_in_top20", "evidence": "查询要求无线蓝牙入耳式，候选属性明确为有线；文本属性冲突可由规则降权。"},
+    {"case_id": "BC02", "query_mode": "text", "query_id": "test_556245210015", "candidate_product_id": "571435208828", "primary_cause": "ranking_rule_insufficient", "secondary_causes": ["cross_modal_alignment_insufficient"], "rule_fixability": "likely_if_relevant_candidate_in_top20", "evidence": "候选虽为入耳式，但缺少2米线长和带麦克风等主要约束；细粒度属性未进入原始排序。"},
+    {"case_id": "BC03", "query_mode": "text", "query_id": "test_621360527079", "candidate_product_id": "556245210015", "primary_cause": "ranking_rule_insufficient", "secondary_causes": [], "rule_fixability": "likely_if_relevant_candidate_in_top20", "evidence": "查询明确3米监听耳机，候选为2米游戏/线控耳机；数字和用途约束可解释降权。"},
+    {"case_id": "BC04", "query_mode": "image", "query_id": "test_556245210015", "candidate_product_id": "588442419126", "primary_cause": "appearance_homogeneity", "secondary_causes": ["cross_modal_alignment_insufficient"], "rule_fixability": "not_fixable_without_image_signals", "evidence": "两者均呈现耳机主体，视觉外形相近，但查询商品为有线入耳式，候选为蓝牙挂耳式；正式图片查询没有属性信号。"},
+    {"case_id": "BC05", "query_mode": "image", "query_id": "test_600268397959", "candidate_product_id": "599810070143", "primary_cause": "cross_modal_alignment_insufficient", "secondary_causes": ["appearance_homogeneity"], "rule_fixability": "not_fixable_without_image_signals", "evidence": "查询图是挂脖磁吸耳机，候选图是充电盒式真无线耳机，形态差异明显但文本候选仍排第一，说明细粒度图文形态没有对齐。"},
+
+    {"case_id": "BC06", "query_mode": "text", "query_id": "test_618733106466", "candidate_product_id": "621593735132", "primary_cause": "ranking_rule_insufficient", "secondary_causes": [], "rule_fixability": "likely_if_relevant_candidate_in_top20", "evidence": "查询要求RGB灯效和手托，候选标题只稳定支持机械键盘/鼠标套装，关键功能匹配不足。"},
+    {"case_id": "BC07", "query_mode": "text", "query_id": "test_623002122394", "candidate_product_id": "15246761632", "primary_cause": "ranking_rule_insufficient", "secondary_causes": [], "rule_fixability": "likely_if_relevant_candidate_in_top20", "evidence": "查询要求兼顾办公和游戏的机械键盘，候选为普通有线游戏键盘，机械属性不足。"},
+    {"case_id": "BC08", "query_mode": "image", "query_id": "test_618733106466", "candidate_product_id": "559685535453", "primary_cause": "appearance_homogeneity", "secondary_causes": [], "rule_fixability": "not_fixable_without_image_signals", "evidence": "均为深色机械键盘主体，候选黑轴键盘与查询RGB/手托细节不一致，图像全局特征更关注共同轮廓。"},
+    {"case_id": "BC09", "query_mode": "image", "query_id": "test_537371573076", "candidate_product_id": "569951991675", "primary_cause": "cross_modal_alignment_insufficient", "secondary_causes": ["appearance_homogeneity"], "rule_fixability": "not_fixable_without_image_signals", "evidence": "查询是有线办公键盘，候选是无线迷你小键盘；文本商品语义与查询图片的连接方式/尺寸没有对齐。"},
+    {"case_id": "BC10", "query_mode": "image", "query_id": "test_615882518927", "candidate_product_id": "543556617866", "primary_cause": "appearance_homogeneity", "secondary_causes": [], "rule_fixability": "not_fixable_without_image_signals", "evidence": "两者都包含键盘外观，候选偏卡通键鼠套装且缺少机械/多媒体约束；无图片侧属性解析时无法规则纠正。"},
+
+    {"case_id": "BC11", "query_mode": "text", "query_id": "test_616260230702", "candidate_product_id": "617299493337", "primary_cause": "attribute_conflict_or_data_noise", "secondary_causes": ["ranking_rule_insufficient"], "rule_fixability": "partly_fixable_by_quality_gate", "evidence": "候选标题含“我要买”等查询式噪声，且USB机械鼠标描述与无线静音要求冲突；标题污染会误导文本匹配。"},
+    {"case_id": "BC12", "query_mode": "text", "query_id": "test_572739978355", "candidate_product_id": "43027878612", "primary_cause": "ranking_rule_insufficient", "secondary_causes": [], "rule_fixability": "likely_if_relevant_candidate_in_top20", "evidence": "查询要求1600DPI有线游戏鼠标，候选仅支持普通有线办公/商务，缺少DPI和游戏属性。"},
+    {"case_id": "BC13", "query_mode": "image", "query_id": "test_572739978355", "candidate_product_id": "43027878612", "primary_cause": "appearance_homogeneity", "secondary_causes": [], "rule_fixability": "not_fixable_without_image_signals", "evidence": "同为常见鼠标轮廓，候选办公鼠标在视觉上接近游戏鼠标，但关键DPI/用途无法从当前规则获得。"},
+    {"case_id": "BC14", "query_mode": "image", "query_id": "test_572739978355", "candidate_product_id": "596152984459", "primary_cause": "appearance_homogeneity", "secondary_causes": ["cross_modal_alignment_insufficient"], "rule_fixability": "not_fixable_without_image_signals", "evidence": "候选是无线2.4G鼠标，与有线游戏鼠标外观接近；连接方式冲突未被现有跨模态表示充分区分。"},
+    {"case_id": "BC15", "query_mode": "text", "query_id": "test_578515650928", "candidate_product_id": "559685535453", "primary_cause": "category_mismatch", "secondary_causes": ["cross_modal_alignment_insufficient"], "rule_fixability": "likely_fixable_by_parsed_text_category", "evidence": "电竞游戏鼠标文本查询召回键盘商品；文本中可直接解析鼠标品类，可用二级品类系数降权。"},
+
+    {"case_id": "BC16", "query_mode": "text", "query_id": "test_587556959797", "candidate_product_id": "561811479895", "primary_cause": "ranking_rule_insufficient", "secondary_causes": [], "rule_fixability": "likely_if_relevant_candidate_in_top20", "evidence": "查询要求5000mAh超薄自带线，候选为10000mAh无线/双向快充，容量和功能均冲突。"},
+    {"case_id": "BC17", "query_mode": "text", "query_id": "test_580312751243", "candidate_product_id": "590175217614", "primary_cause": "ranking_rule_insufficient", "secondary_causes": [], "rule_fixability": "likely_if_relevant_candidate_in_top20", "evidence": "查询要求便携10000mAh，候选为30000mAh大容量；数值约束可直接用于降权。"},
+    {"case_id": "BC18", "query_mode": "image", "query_id": "test_614300701256", "candidate_product_id": "561811479895", "primary_cause": "appearance_homogeneity", "secondary_causes": ["cross_modal_alignment_insufficient"], "rule_fixability": "not_fixable_without_image_signals", "evidence": "查询商品为自带线和插头的三合一移动电源，候选为无线/双向快充移动电源；同类外观掩盖了结构功能差异。"},
+    {"case_id": "BC19", "query_mode": "image", "query_id": "test_587556959797", "candidate_product_id": "522783084872", "primary_cause": "attribute_conflict_or_data_noise", "secondary_causes": ["appearance_homogeneity"], "rule_fixability": "not_reliably_fixable", "evidence": "候选标题容量信息缺失且历史审计显示容量声明可疑；图片外观相似与源属性质量问题同时存在。"},
+    {"case_id": "BC20", "query_mode": "image", "query_id": "test_592744185523", "candidate_product_id": "614300701256", "primary_cause": "cross_modal_alignment_insufficient", "secondary_causes": ["appearance_homogeneity"], "rule_fixability": "not_fixable_without_image_signals", "evidence": "查询图是黑色18W快充移动电源，候选图是彩色自带线/插头三合一产品，外观和功能呈现均有差异，现有图片到文本对齐仍将其排第一。"}
+  ],
+  "csv_output": "reports/retrieval/bad_cases/3c_bad_cases_v1.csv",
+  "markdown_output": "reports/retrieval/bad_cases/3c_bad_cases_v1.md"
+}

@@ -1,0 +1,160 @@
+{
+  "status": "final_formal_test100_user_confirmed_human_review",
+  "created_at_utc": "2026-10-04T14:43:25.549319+00:00",
+  "files": [
+    {
+      "path": "reports/generation/lora/project_test100_v1/ai_review_amendments_v1.json",
+      "sha256": "cee4823dde31a9d8f9fa99e480fa57ece18b2f5af776db2b21e6d6b0213a38b0"
+    },
+    {
+      "path": "reports/generation/lora/project_test100_v1/ai_review_import_manifest_v1.json",
+      "sha256": "d271e8e17f73531c1302a1e5a1518b064e95b46ba2971262c4eb53e92bd4138e"
+    },
+    {
+      "path": "reports/generation/lora/project_test100_v1/automatic_diagnostics.jsonl",
+      "sha256": "117d988ae2398bfdf2b2f45570c0c563780c20bd2ac04410dd32dbf526fafda2"
+    },
+    {
+      "path": "reports/generation/lora/project_test100_v1/automatic_phase_checksums.sha256",
+      "sha256": "7b9dc980f624cf5196a207d596223d3d5f02252a04576a34f98f4a2f9fbde795"
+    },
+    {
+      "path": "reports/generation/lora/project_test100_v1/automatic_phase_manifest.json",
+      "sha256": "ed6ea809471582f108aa42335b5fb600b5083f04767bab77a40f770fcc4c6bad"
+    },
+    {
+      "path": "reports/generation/lora/project_test100_v1/automatic_phase_report.md",
+      "sha256": "a5925745e8ca65cae58f8edcc6b84c7c157bc821a41fa9a4eedd08e726f58d43"
+    },
+    {
+      "path": "reports/generation/lora/project_test100_v1/automatic_phase_summary.json",
+      "sha256": "8b3d95c166381db178dfcc8b95c9ae29dd24a53bf8580fc4e9ab5a9b53d9d49b"
+    },
+    {
+      "path": "reports/generation/lora/project_test100_v1/base/attempt_started.json",
+      "sha256": "2ee40b112f16adb6fd7088d414d099d47d9448e232be169ec28e5647310dffff"
+    },
+    {
+      "path": "reports/generation/lora/project_test100_v1/base/product_outputs.jsonl",
+      "sha256": "75e802f442d2f61b912f2ba9fdf467e78e31e9ea176d6ceab904f5313bd7b5a0"
+    },
+    {
+      "path": "reports/generation/lora/project_test100_v1/base/run_report.json",
+      "sha256": "31524d0e87ddc2023f95b9bb7a79cce107c17717cb6574f8e3fc92c1fd57fa9e"
+    },
+    {
+      "path": "reports/generation/lora/project_test100_v1/base/task_outputs.jsonl",
+      "sha256": "7043525c6c6f42345639fb8ca8d2da44b8a3ad983cf05422f21411a4ee8d7e76"
+    },
+    {
+      "path": "reports/generation/lora/project_test100_v1/blind_mapping.json",
+      "sha256": "55fb6f896759728caaa20631693c2678c4898c0f3040c19e85ef58e176c4af1b"
+    },
+    {
+      "path": "reports/generation/lora/project_test100_v1/blind_summary.json",
+      "sha256": "3f68a51bdf9ef34c8b739efe0d447bda34128a06ef36dd613a380690e8dac86f"
+    },
+    {
+      "path": "reports/generation/lora/project_test100_v1/delivery_acceptance.md",
+      "sha256": "51a1e31e0ae69f4d2256ccaa2dfbe10d8450d1edd0ca5a7030a4d7a5fc80fe82"
+    },
+    {
+      "path": "reports/generation/lora/project_test100_v1/delivery_checksums.sha256",
+      "sha256": "691cb90da81f65fb54c128098d4ea981b4c28f62a9b0c6fc2e0e48ef11bb8987"
+    },
+    {
+      "path": "reports/generation/lora/project_test100_v1/delivery_manifest.json",
+      "sha256": "8559543b81a737a860e743d32c39597c7de81fb1dfd26fd65fc5617a2760e0e7"
+    },
+    {
+      "path": "reports/generation/lora/project_test100_v1/environment_freeze.txt",
+      "sha256": "5596644df337a7bd02ff4d4439074d1c61c409606cf1c83e4b1e351c3d1d5990"
+    },
+    {
+      "path": "reports/generation/lora/project_test100_v1/execution_plan.json",
+      "sha256": "d0687e4d1540fadb83a0e6ed6d095e487a9c84f8950f785083369b78450eaf5a"
+    },
+    {
+      "path": "reports/generation/lora/project_test100_v1/final_test_report.md",
+      "sha256": "a80c71c127a212abfb6b427760f505445b38bf29e25997f5d2609568de920726"
+    },
+    {
+      "path": "reports/generation/lora/project_test100_v1/frozen_inputs.jsonl",
+      "sha256": "3cda21a177ac2e6edda1f7e9211c9dc5a011c51866539aa5d5814f6230464f2b"
+    },
+    {
+      "path": "reports/generation/lora/project_test100_v1/human_bad_cases.json",
+      "sha256": "2c1c3d9246a3e8c27796b18c590bd1fc04b995ed75ea5b730576d7f0a7503613"
+    },
+    {
+      "path": "reports/generation/lora/project_test100_v1/human_metrics_unblinded.json",
+      "sha256": "a724300a27370b30c62e684d56fef31266e2044878805a3361b5580f3909f856"
+    },
+    {
+      "path": "reports/generation/lora/project_test100_v1/human_review_confirmation_record.json",
+      "sha256": "7bf8f78ab4f691ddadfff07aa852523d2a3db69fad132fef63647609ed3b58a3"
+    },
+    {
+      "path": "reports/generation/lora/project_test100_v1/human_review_final.csv",
+      "sha256": "315c9f5a5c42f8c681d1a7457856fe899cefae5ab9d9968bbce8c00e50a0b912"
+    },
+    {
+      "path": "reports/generation/lora/project_test100_v1/human_scope_manifest.json",
+      "sha256": "1ac9b6835fa08d41e43053fa3d6d1b46ad8f5194a0c40f7f3ba4c7030883ec88"
+    },
+    {
+      "path": "reports/generation/lora/project_test100_v1/inference_base.json",
+      "sha256": "fa0280cbd661a2b4cf97cf083f69a6212f18f89564d2c0dab27ba831ea5da817"
+    },
+    {
+      "path": "reports/generation/lora/project_test100_v1/inference_lora.json",
+      "sha256": "58fcb0d6cd59332a78a7599f9119841462f57b7162d1e3474fc769190d14b21a"
+    },
+    {
+      "path": "reports/generation/lora/project_test100_v1/latency_by_product.csv",
+      "sha256": "0818d4c41157202657cc22f0fdfee39768cead843b948f620fd02a6de4380d22"
+    },
+    {
+      "path": "reports/generation/lora/project_test100_v1/lora/attempt_started.json",
+      "sha256": "d82abb0f5569f433f7ab5bf0e6f774d703acc9f1ac80e603fa277d11d022d9d0"
+    },
+    {
+      "path": "reports/generation/lora/project_test100_v1/lora/product_outputs.jsonl",
+      "sha256": "948a1724dcc40c7506f70a41fb5269ecbcf0f91b09e6fb9170c84d4c20a41fc6"
+    },
+    {
+      "path": "reports/generation/lora/project_test100_v1/lora/run_report.json",
+      "sha256": "d3a7de0ca341e16c72fd524b84feb7332303741ecfd5e48af07f4730ef26eb59"
+    },
+    {
+      "path": "reports/generation/lora/project_test100_v1/lora/task_outputs.jsonl",
+      "sha256": "6c707c591f7953390af089a243e18e6c33d42feece37813e719c11ec17aa2987"
+    },
+    {
+      "path": "reports/generation/lora/project_test100_v1/project_test100_blind_review.pre_ai_import.xlsx",
+      "sha256": "76c395c9099c2b667cd33ea26b1d6d495025e7d7e5599827c5953d19b9653028"
+    },
+    {
+      "path": "reports/generation/lora/project_test100_v1/project_test100_blind_review.user_completed.xlsx",
+      "sha256": "7c8f5efba15a917db5e95a1878a1adb3deb9720920f3f1db51f723c7526acca4"
+    },
+    {
+      "path": "reports/generation/lora/project_test100_v1/project_test100_blind_review.xlsx",
+      "sha256": "bc31ff88d068d9006b6837ed8f5c3cf7e3bff8f38e0191a827112299a6769d2d"
+    },
+    {
+      "path": "reports/generation/lora/project_test100_v1/protocol_manifest.json",
+      "sha256": "e8754d37ed27789d02801b710184ee9a034cff2e6996a42da8a29eadde0f7850"
+    },
+    {
+      "path": "reports/generation/lora/project_test100_v1/range_review_focus_blind.csv",
+      "sha256": "b0c59603b942346daadf90f8702c126697d6adc68a20cc055fd1c750391b7c02"
+    },
+    {
+      "path": "reports/generation/lora/project_test100_v1/review_manifest.json",
+      "sha256": "6dc26d9467ec367d6640ab56de05d010327fbd72c621fcbe200c19f99f37d7d4"
+    }
+  ],
+  "protocol_manifest_sha256": "e8754d37ed27789d02801b710184ee9a034cff2e6996a42da8a29eadde0f7850",
+  "no_retuning_after_test": true
+}

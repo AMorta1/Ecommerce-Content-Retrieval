@@ -1,116 +1,96 @@
-# 模型选型与 ERNIE-ViL 检索基线
+# ERNIE-ViL跨模态检索与规则rerank技术说明
 
-## 一句话结论
+正式技术入口；历史及正式指标原样保留于reports/retrieval与formal_baseline_report。这里记录实际实现，不以PRD建议冒充代码功能。
 
-检索主线已经使用 `PaddlePaddle/ernie_vil-2.0-base-zh` 在本机 RTX 4070 Laptop 8GB 显存上跑通，并完成 `week1_v3` 全部 1,992 张商品图片的特征库和 Faiss 索引。中文文本和本地图片都能返回 Top-K 商品，满足 PRD“商品特征库构建”和“跨模态检索逻辑实现”的基线实现要求。
+## 1. 模型、环境与可复现限制
 
-24条 validation 查询、每条20个候选已经完成人工相关性复核。基线 Precision@10 为49.58%，低于PRD参考目标55%；候选池 Recall@10 为67.08%。由于没有标注 validation 全库，只能将后者称为 pooled Recall，不能冒充覆盖全库的完整 Recall。
+模型为PaddlePaddle/ernie_vil-2.0-base-zh（ERNIE-ViL 2.0中文Base）。环境ecommerce-retrieval：Python3.10.21，Paddle GPU3.3.0、PaddleNLP3.0.0b4、NumPy1.26.4、aistudio-sdk0.2.6、Faiss CPU1.15.0；正式Baseline归档记录Pillow12.3.0，requirements-data声明11.1.0，两者不混写。来源：requirements-retrieval.txt及[冻结Baseline环境](../reports/formal_baseline_report.md)。
 
-## 为什么选择 ERNIE-ViL
+缓存由PPNLP_HOME指向../.model-cache/paddlenlp。Windows初始化先调用src/retrieval/windows_cuda.py，补wheel内CUDA DLL搜索路径，不改变全局PATH。旧Paddle2.6.1缺系统cuDNN，新版PaddleNLP与aistudio版本兼容问题已有历史记录，不能无理由升级。
 
-| PRD 候选 | 当前结论 |
-| --- | --- |
-| ERNIE-ViL 2.0 Base | 官方中文模型已经在本机 GPU 跑通，作为检索基线 |
-| CLIP ViT-B/32 | 原版主要面向英语，保留为备选或对照，不默认替代中文模型 |
-| ERNIE-3.0-8K-Base | 未确认到可直接使用的准确公开生成权重，没有拿名字相近的理解模型替代 |
-| Qwen2.5-7B-Instruct | 符合中文、参数量、框架和上下文要求，已作为文案生成基线；详见 `docs/generation.md` |
+**当时没有记录不可变ERNIE-ViL revision或原权重完整SHA**。当前可看到缓存，但不能反向证明历史运行权重revision。正式特征/索引有hash；新接手应优先使用这些附件，不能声称重新下载main必然bitwise复现。
 
-大白话：ERNIE-ViL 会把图片和中文描述都转换成 768 个数字。两组数字越接近，模型认为图片和文字越相关。它负责“找商品”，不负责“看图写文案”。
+## 2. 特征提取：实际位置，不猜“第几层”
 
-官方模型入口为 [ERNIE-ViL 2.0 中文版](https://paddlenlp.readthedocs.io/zh/latest/website/PaddlePaddle/ernie_vil-2.0-base-zh/index.html)。CLIP 的语言限制可见 [官方模型卡](https://github.com/openai/CLIP/blob/main/model-card.md)。
+仓库封装src/retrieval/ernie_vil.py:ErnieVilEmbedder通过PaddleNLP Taskflow('feature_extraction', model=..., is_static_model=False)执行，读取返回features后做normalize_rows。没有指定隐藏层编号，不是自定义截取中间层。
 
-## 本机环境
+本轮只读检查本机PaddleNLP3.0.0b4实现：
+- taskflow/multimodal_feature_extraction.py动态图调用_model.get_image_features(pixel_values)或get_text_features(input_ids)；
+- transformers/ernie_vil/modeling.py实际返回vision_outputs[1]与text_outputs[1]，即各encoder pooled output；未在该接口另写一个投影/中间层抽取。
+- 文档示例把视觉pool称pooled CLS；但仓库未冻结具体N层编号和内部pooler配置，**当前工程材料中未找到可靠的历史层号记录，需要人工确认**。不能仅根据Base模型常见层数写“第12层”。
+- 输出768维由既有feature_library/index_build实测记录支持；编码后L2归一化，零向量直接报错。
 
-- Windows，NVIDIA GeForce RTX 4070 Laptop GPU，约 8GB 显存。
-- 独立 Conda 环境 `ecommerce-retrieval`，Python 3.10.21。
-- PaddlePaddle GPU 3.3.0、PaddleNLP 3.0.0b4、NumPy 1.26.4、aistudio-sdk 0.2.6、faiss-cpu 1.15.0。
-- 模型缓存由 `PPNLP_HOME` 指向 `E:\Projects\Baidu\.model-cache\paddlenlp`，不提交 Git。
+本机库源码及缓存预处理配置的路径/hash/提取依据附在[交付观察证据](../reports/delivery/runtime_observations.json)。这些是当前观察，不冒充Baseline运行时已经冻结的库源码证据。
 
-旧版 Paddle 2.6.1 在当前 Windows 环境缺少系统级 cuDNN DLL，最终改用 Paddle 3.3.0。项目通过 `src/retrieval/windows_cuda.py` 在当前进程补全 wheel 自带 DLL 的搜索路径，不修改系统全局 PATH。PaddleNLP 3.0.0b4 与新版 aistudio-sdk 存在接口兼容问题，因此依赖文件固定为 aistudio-sdk 0.2.6。
+## 3. 文本和图像预处理
 
-## 基线实现
+商品文本由src/retrieval/feature_library.py:build_product_text按configs/retrieval.json的title、description顺序，strip后以换行连接、忽略空值。所有description为空，因此实际仅标题；没有用生成详情回填。文本源清洗NFKC/空白规范化在数据层；查询encode_texts只验证非空，不另写营销去除或分词策略。
+
+PaddleNLP当前Taskflow默认max_length=128，padding=max_length、truncation=true；项目构造Taskflow未覆盖max_length。应与Qwen的2048 preflight不截断区分。是否历史框架恰好相同参数没有独立源码hash记录，当前按已记录依赖版本和本机源码观察解释。
+
+图像：项目用Pillow完整读取并convert RGB；后续resize/crop/normalize交给AutoProcessor。当前本机ERNIE-ViL缓存preprocessor_config.json：
+- 按shortest_edge=224保持宽高比resize，resample=3（Pillow bicubic）；
+- center crop 224×224；
+- convert RGB；像素rescale=1/255；
+- mean=[0.485,0.456,0.406]、std=[0.229,0.224,0.225]逐通道normalize。
+- 这些实际值来自缓存配置，不从CLIP默认值猜测；历史预处理配置hash缺失，需区分“当前观察”与“当时冻结”。
+
+## 4. 特征库、相似度和双向检索
+
+| 资产 | 实际位置 |
+|---|---|
+| 商品库 | data/processed/week1_v3/multimodal/products.jsonl，1,992件 |
+| 图片 / 文本向量 | artifacts/features/ernie_vil_week1_v3.npy / ernie_vil_week1_v3_text.npy |
+| 融合向量（实验） | artifacts/features/ernie_vil_week1_v3_fused.npy |
+| 图片 / 文本索引 | artifacts/indexes/ernie_vil_week1_v3.faiss / ernie_vil_week1_v3_text.faiss |
+| 融合索引（实验） | artifacts/indexes/ernie_vil_week1_v3_fused.faiss |
+| 行号映射 | artifacts/indexes/ernie_vil_week1_v3_metadata.jsonl |
+
+build_index.py / build_text_features.py，batch_size=8、gpu:0，使用float32的归一化向量和Faiss IndexFlatIP。归一化后内积=cosine；1,992规模不需要近似索引。融合为normalize(0.5*text+0.5*image)，只是历史优化候选，不是正式纯跨模态Baseline。
+
+T→I：查询中文text encoder → 图片索引。
+I→T：查询图片vision encoder → 商品文本索引。
+完整CLI商品库含所有project split，仅用于本地检索演示；正式test50只过滤test200候选，排除查询商品自身，不把1,992全库指标当test200指标。相关性/指标规则见[evaluation](evaluation.md)。
+
+交付后演示（本轮不执行）：
+
+~~~powershell
+conda activate ecommerce-retrieval
+$env:PPNLP_HOME = (Resolve-Path '../.model-cache/paddlenlp').Path
+python -B -X utf8 scripts/search.py --text "USB接口的迷你有线键盘" --top-k 5 --json
+python -B -X utf8 scripts/search.py --image data/images/week1_v3/16454614360.webp --top-k 5 --json
+~~~
+
+需要既有缓存、向量/索引/元数据附件。首次加载Taskflow若缓存不完整可能访问网络，当前没有强制离线快照revision的完整检索入口；接手者不能将其与生成离线保护混淆。
+
+建库命令为python scripts/build_index.py与python scripts/build_text_features.py。默认拒绝覆盖，但存在--overwrite选项；本轮禁止重建冻结索引，不能把此选项放在快速启动流程中。历史smoke_test_retrieval.py为SMOKE，不是正式效果结论。
+
+## 5. 冻结rerank：公式与信号
+
+src/retrieval/rerank.py + configs/retrieval_rerank_formal_v1.json；规则词表从retrieval_rerank_validation_v1.json固定继承。
 
 ~~~text
-1,992 张商品图
-      ↓ ERNIE-ViL 图片编码
-1,992 × 768 的归一化向量
-      ↓ Faiss IndexFlatIP
-图片特征库与精确索引
-      ↑
-中文查询或新图片 → ERNIE-ViL 编码 → Top-K 商品
+final_score = similarity_score * category_factor
+            + 0.24 * matched_constraint_ratio
+            - 0.12 * conflicted_constraint_ratio
 ~~~
 
-- 商品库：`data/processed/week1_v3/multimodal/products.jsonl`。
-- 图片向量：`artifacts/features/ernie_vil_week1_v3.npy`。
-- Faiss 索引：`artifacts/indexes/ernie_vil_week1_v3.faiss`。
-- 行号与商品信息对应表：`artifacts/indexes/ernie_vil_week1_v3_metadata.jsonl`。
-- 模型、批量大小和所有路径：`configs/retrieval.json`。
+Top20原始候选重排后截Top10。二级同类factor=1.0，同一级=0.7，跨一级=0.4；未从query解析品类时factor=1.0。约束来自真实查询文字，候选支持来自标题/属性规范化文本，不用隐藏人工相关标签打分。matched/conflicted ratio分母是解析出的查询约束数，未知不算命中；负向概念冲突优先，数值按实际规则文本匹配。
 
-图片和文本向量先做 L2 归一化，再用 Faiss `IndexFlatIP` 排序；此时内积等价于余弦相似度。当前只有 1,992 个候选，CPU 精确索引已经足够快，没有必要让近似索引增加复杂度。
+相似度先按冻结6位精度；同分依次rerank score降序、原candidate rank升序、product ID升序。若formal Top20存在负相似度，乘小于1因子可能反向奖励，因此安全保护为中止，不clamp或临时调权。
 
-商品库包含 train、validation、test，是为了提供完整本地检索体验。正式开发指标只使用 validation；最终方案确定后再单独使用 test，不能把全库试跑结果包装成无泄漏评测。
+只做Text→Image：图片查询无独立可用结构化信号，Image→Text严格passthrough Baseline Top10，不偷用查询商品隐藏品类。已知USB可能是无线接收器，冻结规则USB→wired过宽；报告保留此限制，不据test修词表。
 
-## 本机实测
+**search.py没有接入此rerank；没有面向任意用户query的rerank CLI。** 正式入口run_retrieval_rerank_formal_test.py已经单次执行，仅作为可复现定位，不允许重跑。tune_retrieval_rerank.py是EXPERIMENT，不是在线推理入口。
 
-| 项目 | 结果 |
-| --- | ---: |
-| 商品图片 | 1,992 张 |
-| 批量大小 | 8 |
-| 向量维度 | 768 |
-| 模型加载 | 约 5.8–6.2 秒 |
-| 完整图片编码 | 92.038 秒 |
-| 平均每张图片编码 | 46.204 毫秒 |
-| Faiss 建索引 | 0.029 秒 |
-| 模型加载后分配显存 | 777.2 MiB |
-| 五条中文查询编码 | 0.276 秒 |
-| 五条查询搜索全部候选 | 0.002 秒 |
+## 6. 效果和限制
 
-五条试跑查询覆盖耳机、键盘、鼠标、保温杯和垃圾桶。50 个 Top-10 候选都属于对应二级品类，说明模型能抓住粗粒度商品语义。
+正式test50：
+- T→I：P@10 0.436→0.518，R@10 0.612211→0.719621，MRR0.725270→0.804524，NDCG0.569573→0.730356。
+- I→T：P@10 0.454、R@10 0.626766、MRR0.694524、NDCG0.582210，全部保持Baseline。
+- T→I Recall达到PRD65%，Precision未达55%；图片方向未达两项。耳机MRR下降，不写所有类别指标都改善。
+- validation24的Recall只是pooled；test50的同类候选全人工标注分母，定义见评测文档。
+- 编码/搜索历史smoke约0.276秒/五条编码、0.002秒搜索，仅是链路观察；未找到独立50次端到端响应/冷启动正式性能验收，不宣称完整≤6秒达标。
+- 原title可能含营销或歧义，description全空；相关性判断也受样本规模及人工主观性限制。
 
-同编号目标商品图的排名为 124、86、128、19、159。这个结果不表示前十都不相关，而是说明“找到同类商品”比“精确找到指定 SKU 图片”容易。已观察到的典型 Bad Case 是：查询“USB 接口的迷你有线键盘”时，前列结果出现无线或蓝牙键盘，说明模型对连接方式等细粒度属性不稳定。
-
-机器可读记录位于 `reports/retrieval/baseline/`。
-
-## 运行方式
-
-首次准备独立环境：
-
-~~~powershell
-conda create -n ecommerce-retrieval python=3.10 pip=25.2 -y
-conda activate ecommerce-retrieval
-python -m pip install --use-pep517 -r requirements-retrieval.txt
-~~~
-
-建立索引、跑五样本检查并实际检索：
-
-~~~powershell
-python scripts/build_index.py
-python scripts/smoke_test_retrieval.py
-python scripts/search.py --text "USB接口的迷你有线键盘" --top-k 5
-python scripts/search.py --image data/images/week1_v3/16454614360.webp --top-k 5
-~~~
-
-`build_index.py` 默认不覆盖已有特征和索引。数据或模型配置变化后，明确使用：
-
-~~~powershell
-python scripts/build_index.py --overwrite
-~~~
-
-模型权重、图片向量和索引不提交 Git。Leader 获取代码和原始数据后，需要运行一次建索引命令；这是推理预计算，不是重新训练模型。若希望对方直接运行，也可以把 `artifacts/features/` 和 `artifacts/indexes/` 作为单独附件交付。
-
-## 当前交付与限制
-
-已经完成：
-
-- ERNIE-ViL GPU 加载和统一图文编码封装。
-- 全部商品图片特征库和 Faiss 索引。
-- 中文文本检索、图片检索和 Top-K 输出入口。
-- 五样本链路检查、速度记录和可复现环境。
-- validation 的24条查询、480行候选人工复核。
-- Precision@10、候选池 Recall@10、MRR@10 和 NDCG@10 正式基线报告。
-
-尚未完成：
-
-- 类别重排、图文特征融合、RAG 和优化前后对比。
-- Gradio Demo、压力测试和最终 test 评测。
-- LoRA/QLoRA 训练闭环与微调效果验证。
+[正式报告](../reports/retrieval/rerank/formal_rerank_v1_test50_report.md)、[冻结manifest](../reports/retrieval/rerank/rerank_v1_formal_manifest.json)、[正式排名](../reports/retrieval/rerank/formal_rerank_v1_test50_rankings.csv)是追溯入口，不修改或覆盖。

@@ -1,0 +1,15 @@
+{
+  "status": "user_confirmed_final_review_ready_for_frozen_summary",
+  "recorded_at_utc": "2026-10-04T12:16:08.842384+00:00",
+  "user_confirmation": "我已复核完成",
+  "user_saved_workbook_sha256": "10a570d9adfc870e7557dd12fc467117200c3b05ae2f93e62d31acf6805a5cb3",
+  "user_saved_backup": "reports/generation/lora/project_validation_v1/quick32_v1/project_validation32_blind_review.user_completed.xlsx",
+  "final_workbook_sha256": "61679ac05e25c15d940f700cde601731578ed8498ca4ea4c6ed1596d5e2a85e9",
+  "reviewer_metadata_added": "用户最终人工复核（AI辅助初审）",
+  "metadata_only_changed_cells": 32,
+  "user_scores_preferences_notes_unchanged": true,
+  "ai_initial_import_manifest_sha256": "6c51da3ba810b0a71180ac22635c5d40f163c97e59f5667654ec142b0eb488ea",
+  "sampling_manifest_sha256": "d77a9462635099c907c116aa80ddce94cc5fada4971fe34074fb79d12ea1ac9d",
+  "generation_repeated": false,
+  "project_test_run": false
+}

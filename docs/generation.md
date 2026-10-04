@@ -1,75 +1,146 @@
-# 文案生成基线
+# 内容生成、RAG与LoRA技术说明
 
-## 当前范围
+最终技术入口，合并原生成说明中分散的运行/版本信息；**不改实验协议、Prompt源码、config或正式报告**。质量结果见[项目简报](project_brief.md)，运行导航见[README](../README.md)，指标定义见[evaluation](evaluation.md)。
 
-Week 1 使用 `Qwen/Qwen2.5-7B-Instruct` 验证中文电商文案生成。输入只包含标准化后的品类和商品属性；原始商品标题不进入模型，避免目标泄露。输出固定为一个生成标题、三个卖点和一段短描述。
+## 1. 模型、环境与加载边界
 
-Prompt 按 PRD 的“角色设定 + 任务说明 + 属性输入 + 输出要求”组织，并给三类内容分别设置规则。3C 数码强调型号、参数、连接方式和功能，家居日用强调材质、规格、场景和实用性。三类内容在一次推理中统一输出，减少重复加载和推理开销。
+| 项目 | 已有工程证据 |
+|---|---|
+| 基座 | Qwen/Qwen2.5-7B-Instruct |
+| RAG formal / LoRA及后续固定revision | a09a35458c702b33eeacc393d103063234e8bc28 |
+| 本机snapshot | ../.model-cache/huggingface/hub/models--Qwen--Qwen2.5-7B-Instruct/snapshots/a09a35458c702b33eeacc393d103063234e8bc28 |
+| Baseline历史revision | 当时未记录；不能以当前缓存revision反向证明 |
+| 正式LoRA训练环境 | Python3.10.21 / Torch2.12.0+cu130 / Transformers5.16.1 / bitsandbytes0.50.2 / Accelerate1.14.0 / PEFT0.21.1 / safetensors0.8.0 / CUDA13.0 |
+| 训练随机性限制 | seed固定，但deterministic_algorithms=false；不承诺跨GPU/库bitwise相同 |
+| 量化 | bitsandbytes NF4 4-bit、double quant=true、compute BF16 |
+| 存储精度 | 省显存路径冻结embedding/head为BF16，norm及可训练LoRA为FP32 |
+| 加载 | 固定本地snapshot、local_files_only=True；正式入口设置HF_HUB_OFFLINE和TRANSFORMERS_OFFLINE，不做网络fallback |
 
-模型通过 Transformers 加载，并用 bitsandbytes 在运行时压缩为 NF4 4-bit，以适配本地 RTX 4070 Laptop 8GB 显存。原始模型权重只缓存在仓库上一级的 `.model-cache/huggingface/`，不提交 Git。
+来源：[训练final manifest](../reports/generation/lora/lora_v1_training/final_manifest.json)、[pretraining manifest](../reports/generation/lora/lora_v1_pretraining_manifest.json)、[P7协议](lora_project_validation_v1_protocol.md)。snapshot绝对路径只在报告作本机观察，运行从config的相对cache路径解析。
 
-当前五条样本是人工检查过的链路验证样本，不是正式文案标注集。它们只能用于检查模型能否加载、中文输出是否可用、JSON 格式是否稳定，不能据此宣称模型达到正式效果指标。
+requirements-generation.txt记录四个推理依赖，不是完整LoRA锁文件：PEFT安装为经用户确认的--no-deps peft==0.21.1；没有安装trl/datasets。历史freeze与requirements不一致不能靠文档声称已经自动解决。工作簿的openpyxl在基础Python中，不是模型推理环境必备。本轮不安装或改依赖。
 
-## 可行性结果
+## 2. 输入、Prompt和推理配置
 
-2026-09-09 在本地 RTX 4070 Laptop 8GB 上完成五条离线试跑：五条输出都通过 JSON 结构校验，证明推理链路可用。
+### 单调用Baseline
 
-正式 Baseline 从 test 集分层随机抽取100条，两大类各50条，随机种子为42；8个细分类各12或13条。生成输入要求至少有4个核心属性，并按配置剔除常见单值占位符；组合写法的占位值仍有少量残留，并在人工备注中标出。最终96条严格满足 JSON 和三个卖点的格式，结构成功率为96%；平均生成时间6.443秒，P95为7.759秒，最慢8.887秒，PyTorch峰值显存约5817MiB。平均时间低于 PRD 的12秒上限。
+src/generation/qwen.py的build_messages / QwenGenerator；configs/generation.json：
+baseline_v2，max_input_tokens=2048，max_new_tokens=320，do_sample=true，temperature=0.7，top_p=0.9，seed=42。输入generation_input只有品类+冻结筛选属性，原标题仅在报告中作参考，不进入Prompt。一次调用输出JSON：title、恰好三条selling_points、short_description。
 
-自动字符串匹配发现470/625个核心属性值，比例为75.2%。这个数值会漏掉同义表达，也不能识别事实错误，因此只是标注辅助信息，不是 PRD 要求的正式人工相关度。
+模型tokenizer.apply_chat_template生成真实输入；当前代码preflight不截断，超限报错。历史Baseline没有完整不可变revision记录，复现旧版本应定位beaf9d1代码及formal_baseline_manifest，而不是假定当前源码等于历史版本。旧greedy配置只是LEGACY，不是最终Baseline。
 
-内容初查发现模型会把已有事实扩写成未提供结论，例如把“塑料”写成“环保塑料”、把普通键盘写成“游戏键盘”。这不影响“模型能否运行”的可行性结论，但说明当前结果还只是 Baseline。正式人工评测已经加入事实一致性指标，不能只检查语言是否流畅。
+generate.py的计时来自调用前后perf_counter，加载另计；报告generation_average还含该循环的解析/记录开销，不能当服务端端到端响应时间。旧源码未使用P7式显式CUDA同步；不同调用结构不作速度因果比较。
 
-100条人工复核已经完成。核心属性命中550/625，命中率88%；通顺率99%；品类风格通过率100%。三项PRD基础门槛——属性命中率不低于75%、通顺率不低于80%、平均生成不超过12秒——均已通过。事实错误样本率为56%，平均每条1.05项，说明模型的主要短板不是语言表达，而是容易生成输入无法充分支持的性能、材质或适用性结论。正式结果保存在 `reports/generation/evaluation/baseline_metrics.json`。
+交付后非正式演示命令（本轮不执行，输出必须是新文件）：
 
-## 100条基础评测
+~~~powershell
+python -B -X utf8 scripts/generate.py --config configs/generation.json --input data/processed/week1_v3/inference_samples.jsonl --sample-count 1 --offline --output reports/delivery_user_demo_baseline.json
+~~~
 
-完整复现顺序如下。第一条命令生成固定的100条 test 清单；第二条只读取 E 盘模型缓存完成推理；第三条创建 Excel 可直接打开的人工评测表。
+load_samples要求generation_input与product_id，不能直接把原train.jsonl当这条CLI输入。generate.py会覆盖同名文件，README已提示需先检查。正式100件已完成，禁止再次把generation_evaluation_samples传入重跑。
 
-```powershell
-python scripts/prepare_generation_evaluation.py
-python scripts/generate.py --input data/processed/week1_v3/generation_evaluation_samples.jsonl --sample-count 100 --output reports/generation/baseline/evaluation_outputs.json --offline
-python scripts/evaluate_generation.py --prepare
-```
+### 三任务Base/LoRA（冻结公平对照）
 
-人工评测表是 `reports/generation/evaluation/annotation_pool.csv`。不要修改商品编号、输入属性和模型输出，只填写以下列：
+src/generation/lora_data.py:build_instruction_text为任务模板；src/generation/lora_validation.py负责真实chat模板、token preflight、调用、parse_task与assemble。
 
-- `matched_attribute_count`：输入属性中，有多少项在标题、卖点或短详情里被正确表达。意思相同的改写也算命中，但表达错误不能算。
-- `fluency_pass`：三类文案整体语法通顺、逻辑自然填1，否则填0。
-- `factual_error_count`：统计输入无法支持或与输入矛盾的独立事实数量；例如输入只有“塑料”，输出写“环保塑料、坚固耐用”属于事实外扩。
-- `category_style_pass`：3C 是否侧重参数和功能、家居是否侧重生活场景和实用性，并且整体自然，符合填1，否则填0。
-- `review_notes`：可选；有错误时建议简短写明问题，正确样本不必填写。
+| 参数 | 冻结值 / 来源 |
+|---|---|
+| tasks | title / selling_points / short_description，三次独立调用 |
+| 输入 | 品类+P5可靠核心属性，再叠加原源审计门控；源title不输入 |
+| 模板 | lora_copy_templates_v1；system及三个output要求在P7 config中 |
+| 输入tokens | ≤2048，truncation=false；完整核心JSON必须实际进入token上下文 |
+| 新生成tokens | 每task最多320 |
+| decoding | do_sample=true、temperature0.7、top_p0.9、top_k20、repetition_penalty1.05、num_beams1 |
+| 推理工程 | use_cache=true，gradient_checkpointing=false，NF4/double quant/BF16 |
+| seed | int(SHA256('p7_lora_v1:42:product_id:task_type')前8hex,16) mod2147483647，不含模型版本 |
+| 实际默认生成参数 | inference_base.json / inference_lora.json中的decoding_resolved，不仅抄config摘要 |
+| latency | 每task CUDA同步后perf_counter包围generate，三任务总数为三次latency之和；不含模型加载/检索/完整UI |
 
-`auto_exact_matched_count` 只是程序找到的原样字符串数量，不能直接复制到人工命中数。`format_valid=0` 的4条样本是因为模型生成了4个而不是3个卖点，仍需正常评审其内容。
+Base和LoRA输入、Prompt、长度、解码、seed与工程准备一致，唯一模型差别是adapter加载。不能拿单调用旧Baseline Prompt与三任务LoRA比较后把变化全部归因LoRA。独立任务原文及组装全文均保存，解析失败原文仍人工评审。
 
-如果表中备注以 `AI初标` 开头，表示该行只是模型辅助初标。人工逐行确认或修改后，应删除该行备注开头的 `AI初标：`；问题说明本身可以保留。只要还有 AI 初标标记，默认评测命令就会拒绝生成正式人工指标，避免把辅助标签误当成人工结论。
+[P7协议](lora_project_validation_v1_protocol.md)、[test100协议](lora_project_test100_v1_protocol.md)、configs/lora_project_validation_v1.json以及project_test100_v1/inference_*.json为依据。实际代码保持所有200件project_validation生成，但人工仅冻结quick32；不是200件全人工复核。
 
-全部100条人工复核、移除 AI 初标记并保存后运行：
+## 3. LoRA数据、训练和低显存实现
 
-```powershell
-python scripts/evaluate_generation.py
-```
+P5从week2_train_v1构造，不使用Baseline/RAG/模型输出当target。title是可靠组件按原生标题顺序重组，不是原生标题全文自由润色；卖点固定3条中性字段值，短详情最多5属性。原标题只用于target顺序、风格和审计。事实约束是输入机制职责，LoRA目标为表达结构；模板target偏机械也是自然度限制来源。完整数据规则见[data](data.md)。
 
-脚本会计算核心属性命中率、通顺率、事实错误样本率、品类风格通过率，以及平均/P95生成耗时，并与 PRD 的75%、80%和12秒门槛进行对照。当前100条人工评分已完成，运行后可重建正式指标文件。
+正式配置configs/lora_qlora_train_v1.json已冻结；其中status仍是当时pending候选，不代表今天没训练，真实完成状态由final_manifest判定。
 
-## 环境和运行
+| 训练参数 | 实际冻结值 |
+|---|---|
+| LoRA层 | q_proj / v_proj，CAUSAL_LM，bias=none |
+| rank / alpha / dropout | 8 / 32 / 0.05；可训练2,523,136参数 |
+| micro batch / accumulation | 1 / 8；不足8条的尾组按实际条数归一化 |
+| 最大序列长度 | 320；不截断、不固定长padding；P5实际最长269 |
+| optimizer | torch.optim.AdamW，LR2e-4，betas0.9/0.999，eps1e-8，weight_decay0.01 |
+| scheduler / warmup / grad clip | constant_lambda_1 / 0 / max_grad_norm=null |
+| epochs / seed | 3 / 42；逐epoch Python随机打乱 |
+| gradient checkpointing / use_reentrant | true / false；训练use_cache=false |
+| early stopping | 不启用 |
+| dev | 全402条lora_train_dev，no_grad，参数更新0，保持工程配置及RNG |
+| evaluation / best | 每epoch结束；仅完整dev loss最低的epoch-end checkpoint能更新best |
+| checkpoint | 每151 optimizer steps及epoch结束，保留latest+best；不保存完整7B基座 |
+| 状态保存 | adapter、optimizer、scheduler、epoch/global step/cursor、Python/Torch CPU/CUDA RNG、config与校验manifest |
 
-生成使用独立环境，不影响 PaddlePaddle 检索环境：
+每epoch 3,618 micro steps，ceil(3618/8)=453 optimizer steps，三epoch总1,359。latest为最近完整checkpoint；best只能来自已完成dev evaluation的epoch-end，不能拿未评估中间checkpoint参与比较。fresh formal必须全新adapter，不继承smoke/acceptance；resume只用于真实中断。
 
-```powershell
-conda create -n ecommerce-generation python=3.10 pip=25.2 -y
-conda activate ecommerce-generation
-conda env config vars set HF_HOME="E:\Projects\Baidu\.model-cache\huggingface" HF_HUB_CACHE="E:\Projects\Baidu\.model-cache\huggingface\hub" PIP_CACHE_DIR="E:\Projects\Baidu\.package-cache\pip"
-conda deactivate
-conda activate ecommerce-generation
-python -m pip install -r requirements-generation.txt
-python scripts/generate.py --sample-count 5
-```
+src/generation/qlora_memory.py的省显存实现：
+- PEFT准备时暂把冻结的大embedding/head移到CPU，避免临时FP32副本撑爆显存，然后恢复BF16存储。
+- 原形状BF16 head GEMM仍保留，只对assistant有效token logits按16-token片段转FP32计算CE，并使用checkpoint。
+- 保留causal shift、-100屏蔽和有效token平均分母；不是减少rank/样本或改变监督目标。
+- epoch train/dev loss为每条assistant-token mean CE的样本平均，不是全库token总数加权平均，也不是生成质量指标。
 
-第一次运行会下载模型到配置指定的 E 盘缓存。以后可以增加 `--offline`，确认只使用已经下载的文件：
+正式训练**已经完成，不要重跑**。以下只是识别历史命令：
 
-```powershell
-python scripts/generate.py --sample-count 5 --offline
-```
+~~~powershell
+python scripts/train_lora.py --config configs/lora_qlora_train_v1.json --mode train --confirm-formal-training
+# resume仅真实中断才使用；当前已完成，不能据此重启：
+# python scripts/train_lora.py --config configs/lora_qlora_train_v1.json --mode train --confirm-formal-training --resume artifacts/lora/lora_v1/checkpoints/checkpoint-step-001359
+~~~
 
-试跑结果写入 `reports/generation/baseline/smoke_test.json`，正式100条输出写入 `reports/generation/baseline/evaluation_outputs.json`。报告保存真实模型输入、原始输出、解析结果、运行时间和 PyTorch 显存。`reference_title_not_given_to_model` 只用于结果对照，没有送入提示词。需要只测一条时省略 `--sample-count 5`。
+训练99.12分钟，峰值allocated5661.9MiB、dev5535.6MiB；epoch dev loss为0.019772963、0.017524495、0.013250582。best=epoch3 / checkpoint-step-001359。这些只说明训练target拟合，不直接说明表达收益。
+
+### 最终adapter与加载入口
+
+最终目录：artifacts/lora/lora_v1/checkpoints/checkpoint-step-001359/adapter；adapter_model.safetensors为10,107,280 bytes，SHA256=890a061812321ccf6bbf598b37617fc59dcde70d57042c4304c219a0f6740e31。adapter_config.json、best.json/latest.json及checkpoint完整状态都需单独备份，不能只交一份权重。
+
+实际加载链：固定snapshot AutoModelForCausalLM+BitsAndBytesConfig → prepare_kbit_with_cpu_staged_large_layers → PeftModel.from_pretrained(..., is_trainable=False) → eval/no_grad。正式推理流程位于lora_validation.py:generate以及lora_formal_test.py:generate；独立重新加载已由verify_lora_v1_best.py验收，报告best_adapter_reload.json已冻结，不再覆盖。
+
+**通用单商品LoRA推理CLI当前缺失。** 上述generate是冻结数据scope入口，verify脚本固定train小样本，不能承诺“给任意input就运行”。新可复用CLI仅建议另行确认，无本轮代码实现。
+
+## 4. RAG：实际实现，不把设计建议当已实现组件
+
+src/generation/rag.py / qwen.py / grounding.py和scripts/build_rag_facts.py。知识单元来自同商品ID的结构化属性+标准品类，不注入原标题、主图推导、其他商品、模型输出或人工标签。主图/标题只作为质量审计证据。
+
+实际是轻量的同商品过滤、字段优先级与跨任务RRF排序；**没有实现通用BM25+向量Retriever、Chroma或LangChain链**，不能因PRD建议就写已接入这些库。RRF为各task的1/(60+rank)求和，global共享Top-K=3，并按冻结tie-break规则稳定排序。
+
+| 区域 | 规则 |
+|---|---|
+| Identity | category_l1/l2、可信品牌/型号；不占Top-K；核心身份标记mandatory coverage但不重复注入 |
+| Mandatory Reliable Core | v4中源存在、eligible、单值/规范等价、正向/中性可表达核心事实；与品类核心清单相交 |
+| Supplemental Top-3 | 剩余可用补充事实经跨task RRF选择；不是把全部源字段塞入输入 |
+| Negative Constraints | 可靠无/否/不支持/有线等只读约束，不要求主动卖点覆盖，不占补充Top-K |
+
+RAG v1 formal：rag_v6+rag_fact_policy_v3，Identity+全局Top3+Negative，不含独立Mandatory四区。RAG v2：policy_v4+四区，恢复覆盖，但P2.6未通过通顺门槛，因此没有原RAG v2 formal或P3结果。
+
+v4例外：保温杯“大众/年代人群”“日常送礼/通用”和垃圾桶“家庭使用”只supplemental，不强制Mandatory；负向核心在Negative； distinct多值SKU暂缓；收纳箱净重需正数且kg/g。完整白名单与任务优先级在rag_fact_policy_v4.json，非所有core字段都无条件Mandatory。
+
+REVIEW/CONFLICT字段处理见[data](data.md)。RAG与P5允许集合的细则不同，不能替换输入门控。模型prompt/preflight对所有序列化Mandatory事实在tokenizer后做实际tokens完整性检查；任何溢出/缺失直接报错，不裁剪，不报虚假的100%。missing源字段不计注入失败，正式命中分母不变。
+
+Grounding是确定性词/值/单位/范围/身份规则线索，不是人工事实真值分类器。FAIL不自动等于事实错误，supported paraphrase可为false positive；PASS也不保证无隐含扩写。事实错误按完整可靠源证据复核，而不是只比较Top3或输入子集。
+
+## 5. LoRA+RAG组合与运行保护
+
+组合复用固定epoch3 adapter、三任务模板、解码、seed和量化配置；原可靠核心JSON保留，追加四区事实；system由“可靠核心属性”放宽为“可靠属性”是已冻结必要接口适配。它是上下文+接口联合处理，不是纯检索算法因果隔离。
+
+configs/lora_rag_v2_development24_v1.json与lora_rag_project_test100_v1.json、src/generation/lora_rag_integration.py和lora_rag_project_test.py为实现。组合不得恢复原质量门控撤回核心；同商品事实不能跨商品借用。test身份阻断时四区为空，仍保留原core分母。
+
+正式入口scripts/run_lora_rag_project_test.py --mode prepare/generate/review/summarize为一次性实验；300调用已完成，后续人工解盲已归档，**不能重新执行generate或summarize覆盖现有结果**。scripts/run_lora_rag_integration.py仅development24实验，不是产品推理入口。
+
+结果归档：
+- [LoRA训练报告](../reports/generation/lora/lora_v1_training/final_training_report.md)与final_manifest记录代码/config/data/env/base/hash。
+- [Base/LoRA正式test](../reports/generation/lora/project_test100_v1/final_test_analysis.md)及human_review_finalization_manifest。
+- [组合最终报告](../reports/generation/lora_rag/lora_rag_project_test100_v1/final_review_report.md)及final_review_manifest。
+- [原RAG v2结束报告](../reports/generation/rag/rag_v2_p2_phase_summary.md)，32holdout未执行；不要误用组合实验将其改为P3完成。
+
+代码+Git HEAD不能代表全部未提交工作区，正式协议同时归档原始代码字节与逐文件hash。历史pending config/automatic report保留当时状态；最终manifest决定最终状态。当前说明不追写历史精确revision，也不更改任何冻结参数。

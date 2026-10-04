@@ -1,0 +1,97 @@
+{
+  "version": "retrieval_rerank_v1_formal_test50",
+  "status": "frozen_pending_single_test50_execution",
+  "formal_test50_executed": false,
+  "retrieval_config": "configs/retrieval.json",
+  "baseline_evaluation_config": "configs/retrieval_test_evaluation.json",
+  "manifest_path": "reports/retrieval/rerank/rerank_v1_formal_manifest.json",
+  "gallery_split": "test",
+  "query_count": 50,
+  "queries_path": "configs/retrieval_test_queries.jsonl",
+  "query_review_path": "reports/retrieval/test_evaluation/query_review.csv",
+  "relevance_judgments_path": "reports/retrieval/test_evaluation/relevance_judgments.csv",
+  "baseline_rankings_path": "reports/retrieval/test_evaluation/baseline_rankings.csv",
+  "baseline_metrics_path": "reports/retrieval/test_evaluation/baseline_metrics.json",
+  "positive_grade_threshold": 1,
+  "query_mode_policy": {
+    "text": "rule_rerank_from_query_text",
+    "image": "baseline_passthrough_no_image_query_signals"
+  },
+  "rerank_policy_source": "configs/retrieval_rerank_validation_v1.json",
+  "rerank_policy_source_sha256": "e962cef5f894b98c18a2b4943234b4bfc040004c6903f6d39eda3a337b60e604",
+  "selected_parameters": {
+    "candidate_pool_depth": 20,
+    "metric_cutoff": 10,
+    "category_weights": {
+      "exact_l2": 1.0,
+      "same_l1": 0.7,
+      "cross_l1": 0.4
+    },
+    "attribute_weight": 0.24,
+    "conflict_weight": 0.12,
+    "similarity_score_decimal_places": 6,
+    "tie_break_order": [
+      "rerank_score_descending",
+      "original_candidate_rank_ascending",
+      "product_id_ascending"
+    ],
+    "formula": "final_score = similarity_score * category_factor + 0.24 * matched_constraint_ratio - 0.12 * conflicted_constraint_ratio"
+  },
+  "negative_similarity_safety": {
+    "risk": "A negative similarity multiplied by a factor below 1 would become less negative and reverse the intended category penalty.",
+    "read_only_observation": {
+      "text_to_image_validation_top20": {
+        "sample_count": 480,
+        "minimum": 0.237651,
+        "maximum": 0.399942,
+        "negative_count": 0,
+        "zero_count": 0
+      },
+      "frozen_baseline_bidirectional_top10": {
+        "sample_count": 1000,
+        "minimum": 0.258708,
+        "maximum": 0.443119,
+        "negative_count": 0,
+        "zero_count": 0
+      }
+    },
+    "formal_candidate_pool_check": "Check every regenerated Text-to-Image Top-20 raw similarity before reranking.",
+    "action": "abort_formal_execution",
+    "no_clamping_or_retuning": true
+  },
+  "metric_classification": {
+    "prd_primary_frozen_metrics": [
+      "precision_at_10",
+      "recall_at_10"
+    ],
+    "repository_supplemental_frozen_metrics": [
+      "mrr_at_10",
+      "ndcg_at_10"
+    ],
+    "supplemental_note": "MRR@10 and NDCG@10 already exist in the frozen Baseline metrics and manifest. They are frozen repository supplemental metrics, not later recalculations and not PRD target metrics."
+  },
+  "validation_evidence": {
+    "scope_name": "Text→Image validation",
+    "query_count": 24,
+    "candidate_pool_depth": 20,
+    "result_path": "reports/retrieval/rerank/validation_results_v1.json",
+    "scope_limit": "The 24-query validation result describes Text→Image only and must not be presented as a bidirectional retrieval-system result."
+  },
+  "representative_bad_case_evidence": {
+    "sample_count": 20,
+    "source_path": "reports/retrieval/bad_cases/3c_bad_cases_v1.csv",
+    "scope_limit": "Cause percentages and rule-fixable percentages describe only the selected 20 representative 3C cases and must not be extrapolated to all 3C errors."
+  },
+  "reporting_constraints": [
+    "Report the 24-query development evidence as Text→Image validation, not as a bidirectional system result.",
+    "Treat the 20-case cause and rule-fixability proportions as representative-sample findings only.",
+    "Report P@10 and R@10 as PRD primary frozen metrics.",
+    "Report MRR@10 and NDCG@10 as frozen repository supplemental metrics.",
+    "Image-to-Text uses the frozen Baseline Top-10 unchanged because no independent image-side category or attribute signal exists.",
+    "Do not use formal test50 results to adjust rules, pool depth, weights, labels, or evaluation definitions."
+  ],
+  "outputs": {
+    "rankings": "reports/retrieval/rerank/formal_rerank_v1_test50_rankings.csv",
+    "metrics": "reports/retrieval/rerank/formal_rerank_v1_test50_metrics.json"
+  }
+}

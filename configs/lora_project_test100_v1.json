@@ -1,0 +1,16 @@
+{
+  "version": "lora_project_test100_v1",
+  "scope": "project_test_frozen100_only",
+  "validation_config": {"path": "configs/lora_project_validation_v1.json", "sha256": "4a86013f8e0bae471c6e75694d730232c580465cbc01df630ee8640636d3b1c5"},
+  "validation_protocol": {"path": "reports/generation/lora/project_validation_v1/protocol_manifest.json", "sha256": "095cb45a3c07b86ccace377d746ffe3224a9805aaf5204f19640652e08aa1ab2"},
+  "source": {"path": "data/processed/week1_v3/generation_evaluation_samples.jsonl", "sha256": "ce057356a9a0c48e4298daac545fafb0c83ad07ae2f74f1b1211c834b048a557", "products": 100},
+  "project_test_parent": {"path": "data/processed/week1_v3/multimodal/test.jsonl", "sha256": "4afe6589d2f2a6b8d020ec3836128c6a83d00bf6acd3eff0c0b5f0a8a68076a5", "hash_only_not_generated": true},
+  "selection_manifest": {"path": "reports/generation/evaluation/annotation_manifest.json", "sha256": "9fad8a0ec4f6915c3bf1c3065b6cf9ed57e86849ae3781364ef3a3f911789433"},
+  "source_audit": {"path": "reports/data/week2_rag_fact_quality_audit.csv", "sha256": "887ca944c9725f92b213687f1fbebbed82effd8f2bf3f3ae8734eb3e8e290ce0", "scope": "test100"},
+  "inherit_unchanged": ["model", "adapter", "prompt", "decoding", "pairing.base_seed", "pairing.seed_rule", "input_policy", "p5_config", "evaluation_definition", "frozen_training_config"],
+  "review": {"products": 100, "selection": "all_frozen_test100_before_first_generation", "blind_seed": 41007, "human_labels_prefilled": false, "unblind_after_complete_review": true},
+  "guards": {"single_attempt_per_variant": true, "resume_allowed": false, "output_based_adjustment": false, "parameter_updates": false, "rag_holdout_files_read": false, "rag_v2_generation": false, "old_model_outputs_or_labels_as_inputs": false},
+  "test_history_disclosure": "The frozen100 sample was previously evaluated by Baseline/RAG. This is the first and only formal LoRA v1 paired three-task test run, not a never-observed test set.",
+  "authorization": "User accepts validation coverage/fluency trade-offs, freezes epoch3 checkpoint-step-001359, and explicitly approves one final paired test100 evaluation without further iteration.",
+  "output": "reports/generation/lora/project_test100_v1"
+}

@@ -1,0 +1,143 @@
+{
+  "version": "rag_v2_p2_summary_v1",
+  "status": "p2_completed_candidate_not_promoted_to_p3",
+  "completed_at_utc": "2026-10-01T07:58:26Z",
+  "scope": "validation_development_only",
+  "formal_test100_executed": false,
+  "generation_output_holdout_executed": false,
+  "implementation": {
+    "policy_version": "rag_fact_policy_v4",
+    "fact_build_version": "rag_v2_fact_build_v1",
+    "prompt_versions": ["rag_v2_context_v1", "rag_v2_coverage_v1"],
+    "zones": ["Identity", "Mandatory Reliable Core", "Supplemental Top-3", "Negative Constraints"],
+    "supplemental_top_k": 3,
+    "paired_seed_rule": "base_seed_plus_stable_sample_index; identical for V1-control, V2-context, and V2-coverage",
+    "token_preflight": "truncation=false; reject prompt overflow; verify each serialized Mandatory fact in the exact tokenized model input",
+    "current_prompt_candidate": "candidate2_restored_after_candidate3_structure_regression",
+    "current_prompt_matches_development_report_messages": true
+  },
+  "protection_results": {
+    "frozen_holdout_sample_count": 32,
+    "frozen_holdout_product_id_list_sha256": "fcf23fdff25cc8c0c6efb46bb1fd254687f652e47c64bca058132573a87a44d5",
+    "p2_holdout_overlap_count": 0,
+    "holdout_selection_rule_reproduced_before_model_load": true,
+    "static_category_field_opportunities": 1500,
+    "validation_non_identity_mandatory_fact_count": 662,
+    "validation_identity_mandatory_coverage_count": 323,
+    "source_missing_is_mandatory_injection_failure": false,
+    "official_attribute_hit_denominator": "unchanged frozen per-row core_attribute_count",
+    "official_attribute_hit_metrics_computed": false
+  },
+  "fact_build": {
+    "product_count": 200,
+    "fact_count": 1787,
+    "quality_status_counts": {"blocked_conflict": 34, "eligible": 1667, "withhold_review": 86},
+    "mandatory_status_counts": {
+      "identity_coverage": 323,
+      "mandatory": 662,
+      "negative_constraint": 43,
+      "not_core": 632,
+      "supplemental_only": 43,
+      "withheld_quality": 84
+    },
+    "all_200_contexts_pairwise_disjoint": true,
+    "all_200_contexts_same_product_only": true
+  },
+  "smoke_history": [
+    {
+      "candidate": "candidate1",
+      "report_sha256": "d27b447be2ac6efdc3af892cb2bd2e79c506df485d17fd447febca4ad994ac93",
+      "parsed_outputs": "24/24",
+      "grounding_pass": {"V1-control": "3/8", "V2-context": "0/8", "V2-coverage": "0/8"},
+      "decision": "rejected; v2 prompt allowed unsupported marketing expansion"
+    },
+    {
+      "candidate": "candidate2",
+      "report_sha256": "781c6f678ae4b4469f10e10a6511ee03500ee1fdc6c81edeffe423b64ce4c6ac",
+      "parsed_outputs": "24/24",
+      "grounding_pass": {"V1-control": "3/8", "V2-context": "3/8", "V2-coverage": "3/8"},
+      "mandatory_prompt_injection": "52/52",
+      "decision": "used for the 24-sample development comparison"
+    },
+    {
+      "candidate": "candidate3",
+      "report_sha256": "f94a4bbed472398349e17718d42eeafad4d19a787a3ceef97eae9f34e8d436a4",
+      "parsed_outputs": {"V1-control": "8/8", "V2-context": "0/8", "V2-coverage": "6/8"},
+      "mandatory_prompt_injection": "52/52",
+      "decision": "rejected without development run; field template broke selling_points array contract"
+    }
+  ],
+  "development_comparison": {
+    "sample_count": 24,
+    "samples_per_category": 3,
+    "variant_count": 3,
+    "paired_seed_check": "passed_24_of_24",
+    "holdout_overlap_count": 0,
+    "metrics_are_automatic_diagnostics_not_formal_human_metrics": true,
+    "V1-control": {
+      "parsed_output_count": 24,
+      "structured_output_success_rate": 1.0,
+      "grounding_pass_count": 12,
+      "grounding_pass_rate": 0.5,
+      "unsupported_evaluative_claim_count": 12,
+      "unsupported_usage_scenario_count": 6,
+      "average_generation_seconds": 4.437,
+      "p95_generation_seconds": 5.892,
+      "maximum_generation_seconds": 6.01,
+      "maximum_input_tokens": 780
+    },
+    "V2-context": {
+      "parsed_output_count": 24,
+      "structured_output_success_rate": 1.0,
+      "grounding_pass_count": 6,
+      "grounding_pass_rate": 0.25,
+      "unsupported_evaluative_claim_count": 23,
+      "unsupported_usage_scenario_count": 10,
+      "average_generation_seconds": 5.103,
+      "p95_generation_seconds": 6.409,
+      "maximum_generation_seconds": 7.071,
+      "maximum_input_tokens": 875,
+      "mandatory_prompt_injection_expected": 76,
+      "mandatory_prompt_injection_verified": 76,
+      "mandatory_prompt_injection_rate": 1.0,
+      "mandatory_literal_output_coverage": "70/76",
+      "mandatory_literal_output_coverage_rate": 0.9210526315789473,
+      "samples_with_literal_mandatory_omission": 4
+    },
+    "V2-coverage": {
+      "parsed_output_count": 24,
+      "structured_output_success_rate": 1.0,
+      "grounding_pass_count": 6,
+      "grounding_pass_rate": 0.25,
+      "unsupported_evaluative_claim_count": 19,
+      "unsupported_usage_scenario_count": 10,
+      "average_generation_seconds": 5.019,
+      "p95_generation_seconds": 6.505,
+      "maximum_generation_seconds": 6.769,
+      "maximum_input_tokens": 922,
+      "mandatory_prompt_injection_expected": 76,
+      "mandatory_prompt_injection_verified": 76,
+      "mandatory_prompt_injection_rate": 1.0,
+      "mandatory_literal_output_coverage": "68/76",
+      "mandatory_literal_output_coverage_rate": 0.8947368421052632,
+      "samples_with_literal_mandatory_omission": 5
+    }
+  },
+  "decision": {
+    "p2_implementation_complete": true,
+    "recommended_variant_for_p3": null,
+    "reason": "V2-coverage did not improve literal Mandatory output coverage over V2-context and both v2 variants doubled automatic grounding failures versus V1-control. These diagnostics do not replace human evaluation, but they are sufficient not to promote either candidate to the frozen P3 holdout.",
+    "next_action_requires_user_confirmation": "Continue P2 with a newly versioned prompt strategy, or stop the RAG v2 branch; do not execute the 32-sample generation-output holdout yet."
+  },
+  "artifacts": {
+    "config": {"path": "configs/generation_rag_validation_v7.json", "sha256": "4b061de967ab2bd6a5b9fd73e3da010d57850503068869c4bcf986de075e2356"},
+    "policy": {"path": "configs/rag_fact_policy_v4.json", "sha256": "b032bf8835a4bfa11338a6bfddba05392aaa896c103473aa402b4ead25029fea"},
+    "static_audit": {"path": "reports/generation/rag/rag_v2_static_audit_v1.json", "sha256": "efc5e88da9131e3d4f24298e085215f2040c39f15093693313c4c038ab0df474"},
+    "holdout": {"path": "reports/generation/rag/rag_v2_generation_output_holdout_v1.json", "sha256": "31fae8cbfc53e0f5ef3329cbee6812963b36ddf48e61858d8d9f65fa17ff8da1"},
+    "fact_units": {"path": "data/processed/week2_rag_mandatory_core_v2/validation_fact_units.jsonl", "sha256": "956cbb567d11c9d603d34f875895f64baa3bdabe584ba185de028f5a7869a798"},
+    "fact_build_report": {"path": "reports/generation/rag/rag_v2_validation_fact_build_v1.json", "sha256": "221e1659752d5a3bee32962d843f35c2f8a1ef6f152c61c609dc6081d25851d6"},
+    "development_report": {"path": "reports/generation/rag/rag_v2_p2_development24.json", "sha256": "78accdb37ae70916559368d32ebff439ed8f35f7998cba3d43249787eb50a8c0"},
+    "qwen_implementation": {"path": "src/generation/qwen.py", "sha256": "3f85bd9aeb4f27b28bb6be5f083741a864349b99315c45740c65f00c371bcac0"},
+    "rag_implementation": {"path": "src/generation/rag.py", "sha256": "20d9654b775692bedbe995faf07376eda652ddba8046f58cb068ac0a053a2ef"}
+  }
+}

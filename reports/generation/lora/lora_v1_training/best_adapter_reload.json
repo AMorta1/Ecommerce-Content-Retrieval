@@ -1,0 +1,90 @@
+{
+  "status": "passed",
+  "started_at_utc": "2026-10-04T08:21:13.023132+00:00",
+  "pid": 29200,
+  "engineering_only": true,
+  "project_validation_read": false,
+  "project_test_read": false,
+  "rag_holdout_read": false,
+  "optimizer_scheduler_state_loaded": false,
+  "verification_code_sha256": "1f963e8ff312e8877f181d7de48ea64e9ae64d4e43e7777ef9c816ab3bf76166",
+  "completed_at_utc": "2026-10-04T08:21:53.598561+00:00",
+  "seconds": 40.57565969999996,
+  "checkpoint": "E:\\Projects\\Baidu\\Ecommerce-Content-Retrieval\\artifacts\\lora\\lora_v1\\checkpoints\\checkpoint-step-001359",
+  "best": {
+    "path": "artifacts/lora/lora_v1/checkpoints/checkpoint-step-001359",
+    "global_step": 1359,
+    "dev_loss": 0.013250582017680068,
+    "epoch": 3
+  },
+  "base_snapshot": "E:\\Projects\\Baidu\\.model-cache\\huggingface\\hub\\models--Qwen--Qwen2.5-7B-Instruct\\snapshots\\a09a35458c702b33eeacc393d103063234e8bc28",
+  "base_revision": "a09a35458c702b33eeacc393d103063234e8bc28",
+  "adapter_sha256": "890a061812321ccf6bbf598b37617fc59dcde70d57042c4304c219a0f6740e31",
+  "independent_process": true,
+  "saved_weights_exactly_reloaded": true,
+  "signature": {
+    "trainable": {},
+    "embedding": "torch.bfloat16",
+    "head": "torch.bfloat16",
+    "norm_dtypes": [
+      "torch.float32"
+    ],
+    "use_cache": false,
+    "quantization": {
+      "quant_method": "bitsandbytes",
+      "_load_in_8bit": false,
+      "_load_in_4bit": true,
+      "llm_int8_threshold": 6.0,
+      "llm_int8_skip_modules": null,
+      "llm_int8_enable_fp32_cpu_offload": false,
+      "llm_int8_has_fp16_weight": false,
+      "bnb_4bit_quant_type": "nf4",
+      "bnb_4bit_use_double_quant": true,
+      "bnb_4bit_compute_dtype": "bfloat16",
+      "bnb_4bit_quant_storage": "uint8",
+      "load_in_4bit": true,
+      "load_in_8bit": false
+    }
+  },
+  "inference": {
+    "do_sample": false,
+    "max_new_tokens": 128,
+    "use_cache": false,
+    "purpose": "mechanical_only"
+  },
+  "samples": [
+    {
+      "source": "lora_train",
+      "product_id": "14622014051",
+      "task_type": "title",
+      "forward_loss": 0.0011550706112757325,
+      "new_tokens": 25,
+      "output": "TIGER/虎牌 MBJ-C06C 儿童 304不锈钢 保温杯",
+      "quality_judgment": "not_performed"
+    },
+    {
+      "source": "lora_train",
+      "product_id": "14622014051",
+      "task_type": "selling_points",
+      "forward_loss": 4.196019290247932e-05,
+      "new_tokens": 46,
+      "output": "[\"材质：304不锈钢\", \"容量：501mL(含)-600mL(含)\", \"保温时长：12小时(含)-24小时(不含)\"]",
+      "quality_judgment": "not_performed"
+    },
+    {
+      "source": "lora_train",
+      "product_id": "14622014051",
+      "task_type": "short_description",
+      "forward_loss": 1.874887675512582e-05,
+      "new_tokens": 64,
+      "output": "这款保温杯的品牌为TIGER/虎牌，型号为MBJ-C06C，材质为304不锈钢，容量为501mL(含)-600mL(含)，保温时长为12小时(含)-24小时(不含)。",
+      "quality_judgment": "not_performed"
+    }
+  ],
+  "memory": {
+    "allocated_mib": 5320.5,
+    "reserved_mib": 5612.0,
+    "peak_allocated_mib": 5500.9,
+    "peak_reserved_mib": 5612.0
+  }
+}

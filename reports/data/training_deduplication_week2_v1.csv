@@ -1,0 +1,34 @@
+﻿product_id,category_l1,category_l2,title,reasons,matched_frozen_product_ids,matched_frozen_splits,details,decision
+523127199995,3C数码,鼠标,双飞燕无线鼠标联想戴尔神州小米笔记本台式机办公商务游戏标USB光电省电便携家用舒适人体工学G3-220N非充电,same_brand_model,562296958075,validation,双飞燕 / g3220n,exclude_from_training
+524271795033,3C数码,鼠标,华硕 UT220 Pro伸缩线有线无线鼠标 笔记本电脑鼠标 USB光电鼠标,same_brand_model,620004973618,test,asus华硕 / ut220,exclude_from_training
+540337084330,3C数码,耳机,国行现货 Sony/索尼 WH-1000XM3 三代国行头戴式无线降噪蓝牙耳机,same_brand_model,562137902252,validation,sony索尼 / wh1000xm3,exclude_from_training
+553954101662,3C数码,键盘,双飞燕血手幽灵光轴茶轴机械键盘B975电竞游戏笔记本台式机网吧,same_brand_model,621646793043,validation,双飞燕 / b975,exclude_from_training
+559871233580,3C数码,移动电源,小米note3背夹电池5splus无下巴式6x充电宝9手机壳无线超薄5s电源,same_brand_model,586356111871,test,other其他 / 背夹数码,exclude_from_training
+565877760842,3C数码,鼠标,智能语音鼠标无线充电手写板语音打字翻译电脑台式家用笔记本办公,same_brand_model,620092020178,validation,赛科德 / s3cde7s,exclude_from_training
+578179786073,3C数码,键盘,骚男外设店有线黑青轴真机械键盘鼠标套装键鼠游戏miss大司马电竞,same_brand_model,604304655707,validation,狼途数码 / k1000,exclude_from_training
+581569530657,3C数码,移动电源,羽博LED台灯充电宝30000毫安大容量苹果华为闪充通用移动电源正品,same_brand_model,581323518733,test,yoobao羽博 / yb30e,exclude_from_training
+592563957845,3C数码,键盘,官方旗舰店 黑爵AK60樱桃cherry机械键盘青轴黑轴茶轴RGB有线游戏,same_brand_model;similar_image,535288743349,validation,ajazz黑爵 / 光环ak60;dHash distance=2,exclude_from_training
+595694468172,3C数码,耳机,Sony/索尼 WH-1000XM3 无线蓝牙主动降噪头戴式耳机XM2三代大法,same_brand_model,562137902252,validation,sony索尼 / wh1000xm3,exclude_from_training
+595800652343,3C数码,移动电源,正品超大容量充电宝1000000小米oppo苹果专用vivo毫安80000快充闪,same_brand_model,606828457125;616914231244,validation,other其他 / 1000000m,exclude_from_training
+599330368883,家居日用,拖把,好媳妇旋转拖把桶双驱动地拖桶好神拖墩布免手洗手压甩干家用拖把,same_brand_model,568383984938,test,好媳妇 / agw35871,exclude_from_training
+599357249298,3C数码,移动电源,罗马仕充电宝20000毫安大容量智能手机通用正品罗马仕移动电源,same_brand_model,573914060697,validation,romoss罗马仕 / sense6,exclude_from_training
+603860230925,3C数码,移动电源,正品超薄充电宝1000000超大容量毫安适用华为oppo苹果X专用vivo闪,same_brand_model,606828457125;616914231244,validation,other其他 / 1000000m,exclude_from_training
+605737043641,3C数码,键盘,银雕网红真机械键盘鼠标耳机套装青轴黑轴茶轴有线电竞游戏专用台式电脑笔记本外设网吧网咖办公打字非静电容,same_brand_model,616655671226,validation,银雕 / 召唤师zk4,exclude_from_training
+609921607177,3C数码,耳机,Audio Technica/铁三角ATH-CK3TW 真无线蓝牙耳机动圈重低音耳机,same_brand_model,611367149544,test,audiotechnica铁三角 / athck3tw,exclude_from_training
+610474960355,3C数码,键盘,雷蛇技术RK蒸汽复古朋克真机械键盘鼠标套装RGB电竞吃鸡游戏专用,same_brand_model,618733106466,test,rk / s108,exclude_from_training
+610906328254,3C数码,移动电源,金属美少女充电宝超薄小巧便携创意迷你苹果专用通用移动电源,same_brand_model,609923870759,test,雅奇乐电池 / q5,exclude_from_training
+613652655313,家居日用,拖把,拖把桶单桶旋转拖把通用家用洗加厚大桶自动脱水干湿两用托帕,similar_image,587244433192,test,dHash distance=1,exclude_from_training
+613789674244,3C数码,鼠标,微软 精巧鼠标 办公蓝牙鼠标 兼容Win10、Mac OS和Android,same_brand_model,612512237292,test,microsoft微软 / 微软精巧鼠标,exclude_from_training
+614556812800,3C数码,键盘,全新库存外贸机械键盘鼠标套装青轴黑轴红轴茶轴网吧吃鸡台式笔记,same_brand_model,616205758872,test,aula狼蛛 / f2068朋克机械键盘,exclude_from_training
+615106913692,3C数码,键盘,官方正品雷蛇级新盟牧马人真机械键盘青轴黑轴吃鸡lol外设电竞游,same_brand_model,621593735132,test,technology新盟 / x9vr版,exclude_from_training
+615720356983,3C数码,鼠标,牧马人蓝牙无线鼠标静音无声可充电式电竞游戏吃鸡机械办公家用usb电脑笔记本通用女生可爱便携联想惠普专用,same_brand_model,616260230702,test,狼途数码 / m1,exclude_from_training
+615938971838,3C数码,键盘,诚心价HP/笔记本K500机械手感键盘惠普台式电脑有线外接办公爆款,same_brand_model;similar_image,621341696263,validation,dHash distance=0;hp惠普 / k500,exclude_from_training
+616183491009,3C数码,键盘,官方正品斗鱼DKM150机械键盘电竞游戏青轴黑红茶轴台式笔记本电脑,same_brand_model,601065850690,validation,斗鱼数码 / dkm150,exclude_from_training
+616655535465,3C数码,键盘,官网雷蛇技术正品狼蛛自由之翼RGB真机械键盘青轴黑轴吃鸡LOL游戏,same_brand_model,616853015046,validation,aula狼蛛 / 自由之翼升级版,exclude_from_training
+617238019231,3C数码,耳机,havit/海威特I97 真无线蓝牙耳机单双耳入耳式安卓通用颈挂脖头戴式适用oppo苹果vivo华为iphone超长待机官网,same_brand_model,612638540610,validation,havit海威特 / i97,exclude_from_training
+618548581512,3C数码,键盘,正品腹灵MKa104s北美版机械键盘红轴黑轴茶轴青轴有线游戏雷蛇级,same_brand_model,621326718016,validation,flesports腹灵 / mka104s北美版,exclude_from_training
+620122613713,3C数码,耳机,"耳朵会怀孕入耳式,漫步者 TO-U冇心立体声迷你小型超长待机耳机",same_brand_model,604970248763,validation,edifier漫步者 / tou,exclude_from_training
+620529768812,家居日用,拖把,适家免手洗懒人平板拖把家用拖地瓷砖地擦木地板旋转拖布地拖大,similar_image,617425544078,validation,dHash distance=2,exclude_from_training
+621052633101,3C数码,键盘,雷蛇技术正品新盟真机械键盘鼠标套装青轴黑轴茶轴104键蒸汽朋克,same_brand_model;similar_image,616655611311,validation,dHash distance=2;technology新盟 / x10,exclude_from_training
+621341804075,3C数码,键盘,正品雷蛇技术黑爵蒸汽朋克游戏机械键盘黑轴青轴茶轴红轴电竞网红,same_brand_model;similar_image,621593539222,validation,ajazz黑爵 / ak40无极;dHash distance=0,exclude_from_training
+623465919056,3C数码,移动电源,超大容量充电宝1000000毫安华为oppo通用苹果专用vivo小米快闪冲,same_brand_model,606828457125;616914231244,validation,other其他 / 1000000m,exclude_from_training

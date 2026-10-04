@@ -1,0 +1,244 @@
+{
+  "schema_version": 1,
+  "version": "retrieval_rerank_v1_formal_test50",
+  "status": "frozen_pending_single_test50_execution",
+  "created_at_utc": "2026-09-24T14:38:32+00:00",
+  "formal_test50_executed": false,
+  "formal_config": {
+    "path": "configs/retrieval_rerank_formal_v1.json",
+    "size_bytes": 4385,
+    "sha256": "d51146132b8def727f6b24b505a21d28f0a656882e6a7308b382ba20d9a12c52"
+  },
+  "code_identity_at_freeze": {
+    "git_commit": "f2e292b99ef5a751ca1c3db5b755137fb0ae05ac",
+    "branch": "DEV",
+    "worktree_dirty": true,
+    "identity_note": "The Git commit identifies the checked-out base. Runtime files are uniquely identified by their SHA256 values below because the rerank work is not committed at freeze time."
+  },
+  "baseline_reference": {
+    "archive_manifest": "reports/formal_baseline_manifest.json",
+    "archive_manifest_sha256": "eaf4eeb826b31ce67203dab290cbfd51aa573f9e8dd41386149a8995f30a6871",
+    "baseline_git_commit": "beaf9d1c77719a2b0d1a4968b05444cc357e8e7e",
+    "baseline_commit_short": "beaf9d1",
+    "branch_at_baseline": "Week1",
+    "retrieval_version": "week1_v3_test50_crossmodal_v3"
+  },
+  "frozen_design": {
+    "text_to_image": "Regenerate the frozen test50 Text-to-Image Top-20 from actual query text and the frozen image index, apply the frozen rule formula, then truncate to Top-10.",
+    "image_to_text": "Copy the frozen Baseline Image-to-Text Top-10 unchanged. No hidden query category, brand, model, or attributes may affect scoring.",
+    "candidate_pool_depth": 20,
+    "metric_cutoff": 10,
+    "category_weights": {
+      "exact_l2": 1.0,
+      "same_l1": 0.7,
+      "cross_l1": 0.4
+    },
+    "attribute_weight": 0.24,
+    "conflict_weight": 0.12,
+    "formula": "final_score = similarity_score * category_factor + 0.24 * matched_constraint_ratio - 0.12 * conflicted_constraint_ratio",
+    "negative_similarity_action": "abort_formal_execution_without_clamping_or_retuning"
+  },
+  "scope_and_reporting": {
+    "validation_scope": "Text→Image validation",
+    "validation_query_count": 24,
+    "validation_not_bidirectional": true,
+    "representative_bad_case_count": 20,
+    "bad_case_proportions_apply_only_to_selected_sample": true,
+    "prd_primary_metrics": [
+      "precision_at_10",
+      "recall_at_10"
+    ],
+    "frozen_repository_supplemental_metrics": [
+      "mrr_at_10",
+      "ndcg_at_10"
+    ],
+    "supplemental_metric_note": "MRR@10 and NDCG@10 are already present in the frozen Baseline artifact. They are supplemental metrics rather than PRD target metrics and are not classified as post-freeze recalculations."
+  },
+  "read_only_similarity_check": {
+    "text_to_image_validation_top20": {
+      "path": "reports/retrieval/evaluation/annotation_pool.csv",
+      "score_count": 480,
+      "minimum": 0.237651,
+      "maximum": 0.399942,
+      "negative_count": 0,
+      "zero_count": 0
+    },
+    "frozen_baseline_bidirectional_top10": {
+      "path": "reports/retrieval/test_evaluation/baseline_rankings.csv",
+      "score_count": 1000,
+      "minimum": 0.258708,
+      "maximum": 0.443119,
+      "negative_count": 0,
+      "zero_count": 0
+    },
+    "conclusion": "All actually observed candidate scores are positive, so factors 1.0, 0.7, and 0.4 preserve the intended penalty direction. Formal Text-to-Image Top-20 candidates are checked again at execution and any negative score aborts the run."
+  },
+  "model_identity": {
+    "model_name": "PaddlePaddle/ernie_vil-2.0-base-zh",
+    "upstream_revision": null,
+    "revision_note": "The historical Baseline did not record an immutable upstream model revision. Formal execution therefore pins the prepared local model artifacts by SHA256 and does not infer a historical revision.",
+    "cache_root_environment_variable": "PPNLP_HOME",
+    "cache_path_policy": "The cache root is supplied by the local environment and is not a fixed business-code dependency.",
+    "local_artifacts": [
+      {
+        "relative_path": "taskflow/PaddlePaddle/ernie_vil-2.0-base-zh/config.json",
+        "size_bytes": 4303,
+        "sha256": "b4ccc5d8b7b470b5ecf59ed4a1bc69a589892b001525f4d3da3223bdfb1bea30"
+      },
+      {
+        "relative_path": "taskflow/PaddlePaddle/ernie_vil-2.0-base-zh/model_state.pdparams",
+        "size_bytes": 814998209,
+        "sha256": "d73ff05f15af75062579fea8ea973d58d60783eae3e5fd35ac4bacb72b624fa3"
+      },
+      {
+        "relative_path": "taskflow/PaddlePaddle/ernie_vil-2.0-base-zh/preprocessor_config.json",
+        "size_bytes": 539,
+        "sha256": "3d286dddf263c40a15c174158719248cec51070b1948a47b99fc034c8ca93d4c"
+      },
+      {
+        "relative_path": "taskflow/PaddlePaddle/ernie_vil-2.0-base-zh/special_tokens_map.json",
+        "size_bytes": 112,
+        "sha256": "303df45a03609e4ead04bc3dc1536d0ab19b5358db685b6f3da123d05ec200e3"
+      },
+      {
+        "relative_path": "taskflow/PaddlePaddle/ernie_vil-2.0-base-zh/tokenizer_config.json",
+        "size_bytes": 328,
+        "sha256": "42e32050f97dfc582142a0d7b1d9ad8253d978f5e5ed72717ba9c780643b65d3"
+      },
+      {
+        "relative_path": "taskflow/PaddlePaddle/ernie_vil-2.0-base-zh/vocab.txt",
+        "size_bytes": 186807,
+        "sha256": "8b99e7ded859fe015d33329c4a6d75cfba7784cfe8d82db7551fbf481f262fbb"
+      }
+    ]
+  },
+  "runtime_code": [
+    {
+      "path": "scripts/run_retrieval_rerank_formal_test.py",
+      "size_bytes": 22375,
+      "sha256": "d9ad4cdfdef6a7dea4b921ea95266b6c7e1bd8486adb37ec97f455e283bf0621"
+    },
+    {
+      "path": "src/retrieval/rerank.py",
+      "size_bytes": 8401,
+      "sha256": "f67f92f2286373d99adfb14cfeb70e91224e6da1d89117da00de16daaf31d4ae"
+    }
+  ],
+  "verification_artifacts": [
+    {
+      "path": "tests/test_retrieval_rerank_formal.py",
+      "size_bytes": 2521,
+      "sha256": "427c65294aa233a69b3baec17e8e324fa465310a5474664e1345b0713f517f8e"
+    }
+  ],
+  "frozen_project_inputs": [
+    {
+      "path": "configs/retrieval.json",
+      "size_bytes": 1037,
+      "sha256": "c9cb46b479aab8328cf6ea2e083562457d5721cdc8cbc5ca9eb02885373103d7"
+    },
+    {
+      "path": "configs/retrieval_test_evaluation.json",
+      "size_bytes": 1927,
+      "sha256": "69aa0f9ffa60287eca449d9957fe16ce90380d36cb8c3f3ab442a8766aa830aa"
+    },
+    {
+      "path": "configs/retrieval_test_queries.jsonl",
+      "size_bytes": 11689,
+      "sha256": "48253c3287967d90caa5f9a7b3103ca00a1126d401b3cfe067cb96da0261443f"
+    },
+    {
+      "path": "reports/retrieval/test_evaluation/query_review.csv",
+      "size_bytes": 44344,
+      "sha256": "f008e6ffb4c626246ceb119fea4531072a8aaee59a6f6a240af9dc90d669b290"
+    },
+    {
+      "path": "reports/retrieval/test_evaluation/relevance_judgments.csv",
+      "size_bytes": 1955284,
+      "sha256": "dbf7aecb0dd98b18986027c819749dbf9a723f7973a5ba11263b595f63a3b6f3"
+    },
+    {
+      "path": "reports/retrieval/test_evaluation/manifest.json",
+      "size_bytes": 2955,
+      "sha256": "e2e6157c222945180cb336844d413156f11527cf8742184e18dc0962bd82e6c8"
+    },
+    {
+      "path": "reports/retrieval/test_evaluation/baseline_rankings.csv",
+      "size_bytes": 197422,
+      "sha256": "cf844d521ddc7c0816a91ea2be6690bf284a04dfe36c2ca22980001201759265"
+    },
+    {
+      "path": "reports/retrieval/test_evaluation/baseline_metrics.json",
+      "size_bytes": 46008,
+      "sha256": "abeffdd63e8136d6925ac2ba33d4f903593c1de0dda786aa46f68b6a4b20f68d"
+    },
+    {
+      "path": "reports/formal_baseline_manifest.json",
+      "size_bytes": 26543,
+      "sha256": "eaf4eeb826b31ce67203dab290cbfd51aa573f9e8dd41386149a8995f30a6871"
+    },
+    {
+      "path": "data/processed/week1_v3/multimodal/products.jsonl",
+      "size_bytes": 5406991,
+      "sha256": "ba650e3d02bb38d0841210a615986439b71fe9b2a2db3dd6c16406302d33b586"
+    },
+    {
+      "path": "artifacts/indexes/ernie_vil_week1_v3.faiss",
+      "size_bytes": 6119469,
+      "sha256": "9521eedef59163f7ff2d5899f8f06d3802d25798845af2201883597a71954d6f"
+    },
+    {
+      "path": "artifacts/indexes/ernie_vil_week1_v3_text.faiss",
+      "size_bytes": 6119469,
+      "sha256": "d0fc77cbf54fbcfe518d93310bf496f07b808c4ef3154a1592799e336e1d5e29"
+    },
+    {
+      "path": "artifacts/indexes/ernie_vil_week1_v3_metadata.jsonl",
+      "size_bytes": 528664,
+      "sha256": "d3270f849f8ed8d17a776274546367bc475f7a221dc1600feb741f0fa612400e"
+    },
+    {
+      "path": "configs/retrieval_rerank_validation_v1.json",
+      "size_bytes": 8564,
+      "sha256": "e962cef5f894b98c18a2b4943234b4bfc040004c6903f6d39eda3a337b60e604"
+    },
+    {
+      "path": "reports/retrieval/rerank/validation_results_v1.json",
+      "size_bytes": 130323,
+      "sha256": "b804b455426db67219b7d8ed88e626104786df17d77796992db5a141d661e2de"
+    },
+    {
+      "path": "configs/retrieval_3c_bad_cases_v1.json",
+      "size_bytes": 9460,
+      "sha256": "0695dba10ae8211ab9b8771b5e62f5a2a085c5da0fb60df49b15aa4fa31f9d6d"
+    },
+    {
+      "path": "reports/retrieval/bad_cases/3c_bad_cases_v1.csv",
+      "size_bytes": 39130,
+      "sha256": "621c21e2a9295a62ae257850753ff476cca7b2df7e90082de16b1523cfddcb4c"
+    },
+    {
+      "path": "reports/retrieval/bad_cases/3c_bad_cases_v1.md",
+      "size_bytes": 9312,
+      "sha256": "d71c91344ce8958b14073e82196182179bb5e2b3a1788369ade976feb51dc072"
+    },
+    {
+      "path": "requirements-retrieval.txt",
+      "size_bytes": 169,
+      "sha256": "65b1ce208807ef1b2a2968d763ce0bbba23765f54ac448b8e301bf9a711ad884"
+    }
+  ],
+  "execution": {
+    "preflight_command": "python scripts/run_retrieval_rerank_formal_test.py --preflight-only",
+    "formal_command": "python scripts/run_retrieval_rerank_formal_test.py --confirm-formal-test50",
+    "explicit_confirmation_required": true,
+    "model_load_during_preflight": false,
+    "overwrite_existing_outputs": false,
+    "test_metrics_may_change_parameters": false
+  },
+  "expected_outputs": {
+    "rankings": "reports/retrieval/rerank/formal_rerank_v1_test50_rankings.csv",
+    "metrics": "reports/retrieval/rerank/formal_rerank_v1_test50_metrics.json",
+    "present_at_freeze": false
+  }
+}

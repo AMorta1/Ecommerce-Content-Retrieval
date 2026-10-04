@@ -1,0 +1,182 @@
+{
+  "identity": {
+    "run_kind": "acceptance_only",
+    "config": {
+      "version": "lora_qlora_train_v1",
+      "status": "p6_2_candidate_pending_final_full_training_confirmation",
+      "execution": {
+        "default_mode": "prepare",
+        "full_training_requires_explicit_cli_confirmation": true,
+        "acceptance_max_global_steps": 4,
+        "acceptance_is_quality_experiment": false
+      },
+      "data": {
+        "version": "lora_instruction_data_v1",
+        "manifest": "reports/generation/lora/lora_instruction_data_v1_final_manifest.json",
+        "manifest_sha256": "e21b9f278dbe533f038008840bce313564e702b6b5ff7ba5e0f8714156814a5d",
+        "template_version": "lora_copy_templates_v1",
+        "lora_train": {
+          "path": "data/processed/lora_instruction_data_v1/train.jsonl",
+          "sha256": "c31b00f3d19d503b3f7c7529cc2ce7e115143214b0d9ab40f07412becd6a5434",
+          "source_split": "train",
+          "records": 3618,
+          "products": 1206
+        },
+        "lora_train_dev": {
+          "path": "data/processed/lora_instruction_data_v1/validation.jsonl",
+          "sha256": "20a32d5f67a8ac6dd0743bb90445522fe28cd4099ed318e71a4f0e8e33fa0a94",
+          "source_split": "validation",
+          "records": 402,
+          "products": 134
+        },
+        "task_types": [
+          "title",
+          "selling_points",
+          "short_description"
+        ]
+      },
+      "model": {
+        "name": "Qwen/Qwen2.5-7B-Instruct",
+        "revision": "a09a35458c702b33eeacc393d103063234e8bc28",
+        "cache_dir": "../.model-cache/huggingface/hub",
+        "offline": true,
+        "load_in_4bit": true,
+        "quant_type": "nf4",
+        "double_quant": true,
+        "compute_dtype": "bfloat16",
+        "tokenizer_config_sha256": "5b5d4f65d0acd3b2d56a35b56d374a36cbc1c8fa5cf3b3febbbfabf22f359583",
+        "model_config_sha256": "7463bb0ea78315365e6c6b74de4e73bbcc8359dfb0c5a737584e077d42c0b03c"
+      },
+      "lora": {
+        "task_type": "CAUSAL_LM",
+        "target_modules": [
+          "q_proj",
+          "v_proj"
+        ],
+        "r": 8,
+        "lora_alpha": 32,
+        "lora_dropout": 0.05,
+        "bias": "none",
+        "expected_trainable_parameters": 2523136
+      },
+      "engineering": {
+        "reference_smoke_config": "configs/lora_qlora_low_memory_smoke_v1.json",
+        "reference_smoke_config_sha256": "10d5782a280201923eed92d08243d359d99f5d41ce78ff1f3032f6b0653eb582",
+        "memory_module_sha256": "9b4d9a72248dca51ec825d18b05833af3a0f3f8f1bb7b3b8a3a3c4767323f848",
+        "frozen_embedding_head_dtype": "bfloat16",
+        "norm_and_trainable_lora_dtype": "float32",
+        "autocast_dtype": "bfloat16",
+        "initialization": "cpu_stage_large_frozen_layers_during_peft_preparation",
+        "loss": "native_shape_bf16_logits_assistant_only_chunked_fp32_mean_causal_cross_entropy",
+        "loss_chunk_tokens": 16,
+        "micro_batch_size": 1,
+        "gradient_accumulation_steps": 8,
+        "max_sequence_length": 320,
+        "truncation": false,
+        "fixed_length_padding": false,
+        "gradient_checkpointing": true,
+        "gradient_checkpointing_use_reentrant": false,
+        "use_cache": false
+      },
+      "training": {
+        "seed": 42,
+        "epochs": 3,
+        "shuffle": "python_random_local_seed_plus_epoch",
+        "optimizer": "torch.optim.AdamW",
+        "learning_rate": 0.0002,
+        "betas": [
+          0.9,
+          0.999
+        ],
+        "eps": 1e-08,
+        "weight_decay": 0.01,
+        "max_grad_norm": null,
+        "scheduler": "constant_lambda_1",
+        "warmup_steps": 0,
+        "partial_accumulation": "normalize_by_actual_records_in_group",
+        "early_stopping": false
+      },
+      "evaluation": {
+        "dataset": "lora_train_dev",
+        "frequency": "each_epoch_end",
+        "metric": "mean_per_record_assistant_token_causal_cross_entropy",
+        "model_selection": "lowest_dev_loss",
+        "task_type_breakdown": true,
+        "batch_size": 1,
+        "no_grad": true
+      },
+      "checkpoint": {
+        "save_steps": 151,
+        "save_at_epoch_end": true,
+        "keep": "latest_and_best",
+        "acceptance_keep": "all_bounded_checkpoints",
+        "save_full_base": false,
+        "save_optimizer_scheduler_rng": true,
+        "resume_only_complete_latest_checkpoint": true
+      },
+      "output": {
+        "directory": "artifacts/lora/lora_v1",
+        "report_directory": "reports/generation/lora/lora_v1_training"
+      },
+      "guards": {
+        "project_validation_read": false,
+        "project_test_read": false,
+        "rag_holdout_read": false,
+        "p5_mutation": false,
+        "smoke_adapter_initialization": false
+      }
+    },
+    "config_sha256": "1afb8ed3ecca91aa3d8bdd55fb5e456dbb9a60deef8d52f4805c70cc24d7d1e0",
+    "base_snapshot": "E:\\Projects\\Baidu\\.model-cache\\huggingface\\hub\\models--Qwen--Qwen2.5-7B-Instruct\\snapshots\\a09a35458c702b33eeacc393d103063234e8bc28",
+    "chat_template_sha256": "2e2d2512cfe46af53dc1eed45368ecaab26ac4461c480e6b69fe571cf0ceaa75",
+    "environment": {
+      "python": "3.10.21 | packaged by Anaconda, Inc. | (main, Aug 27 2026, 14:35:39) [MSC v.1942 64 bit (AMD64)]",
+      "packages": {
+        "torch": "2.12.0+cu130",
+        "transformers": "5.16.1",
+        "peft": "0.21.1",
+        "bitsandbytes": "0.50.2",
+        "accelerate": "1.14.0",
+        "safetensors": "0.8.0"
+      },
+      "cuda": "13.0",
+      "gpu": "NVIDIA GeForce RTX 4070 Laptop GPU",
+      "deterministic_algorithms": false
+    },
+    "code_sha256": {
+      "scripts/train_lora.py": "669876c69ae689b9449aa4a68064f33f8681fdbf8ffe94ae5eda7cb53b07b019",
+      "src/generation/lora_training.py": "9ac9587e71b6f892bb3c429f7726ff17edddc354ee57372c22da48ccd22e107e",
+      "src/generation/qlora_memory.py": "9b4d9a72248dca51ec825d18b05833af3a0f3f8f1bb7b3b8a3a3c4767323f848"
+    }
+  },
+  "state": {
+    "epoch": 0,
+    "cursor": 32,
+    "global_step": 4,
+    "global_micro_step": 32,
+    "train_seconds": 17.08494239999891,
+    "epoch_train_loss_sum": 42.773590207099915,
+    "epoch_train_records": 32,
+    "train_peak_allocated_mib": 5647.7,
+    "best": null,
+    "completed_epochs": 0
+  },
+  "scheduler": {
+    "base_lrs": [
+      0.0002
+    ],
+    "last_epoch": 4,
+    "_step_count": 5,
+    "_is_initial": false,
+    "_get_lr_called_within_step": false,
+    "_last_lr": [
+      0.0002
+    ],
+    "lr_lambdas": [
+      null
+    ]
+  },
+  "optimizer_digest": "e6bd3cba8ae9f69b167a6ae01f05f1f2ebe7a193882962f666b55a833210a92c",
+  "scheduler_digest": "c459f2cbc6d33416a0c1c3871975dca0b4594343a503a71b1c72c3d81143b128",
+  "rng_digest": "13533352bf6a161eb6806fee9ee2a15dd1c6e983f05233ce983bf1e3547138d0"
+}

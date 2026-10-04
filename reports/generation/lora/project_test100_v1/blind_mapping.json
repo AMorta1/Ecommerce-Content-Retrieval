@@ -1,0 +1,605 @@
+{
+  "status": "sealed_until_review_complete",
+  "pairs": [
+    {
+      "pair_id": "PT001",
+      "product_id": "620004973618",
+      "A": "Base",
+      "B": "LoRA"
+    },
+    {
+      "pair_id": "PT002",
+      "product_id": "576150055638",
+      "A": "Base",
+      "B": "LoRA"
+    },
+    {
+      "pair_id": "PT003",
+      "product_id": "588442419126",
+      "A": "LoRA",
+      "B": "Base"
+    },
+    {
+      "pair_id": "PT004",
+      "product_id": "587556959797",
+      "A": "Base",
+      "B": "LoRA"
+    },
+    {
+      "pair_id": "PT005",
+      "product_id": "556245210015",
+      "A": "LoRA",
+      "B": "Base"
+    },
+    {
+      "pair_id": "PT006",
+      "product_id": "587907612086",
+      "A": "Base",
+      "B": "LoRA"
+    },
+    {
+      "pair_id": "PT007",
+      "product_id": "624110108481",
+      "A": "LoRA",
+      "B": "Base"
+    },
+    {
+      "pair_id": "PT008",
+      "product_id": "621593735132",
+      "A": "LoRA",
+      "B": "Base"
+    },
+    {
+      "pair_id": "PT009",
+      "product_id": "614181544723",
+      "A": "LoRA",
+      "B": "Base"
+    },
+    {
+      "pair_id": "PT010",
+      "product_id": "615386178525",
+      "A": "Base",
+      "B": "LoRA"
+    },
+    {
+      "pair_id": "PT011",
+      "product_id": "613735876059",
+      "A": "LoRA",
+      "B": "Base"
+    },
+    {
+      "pair_id": "PT012",
+      "product_id": "599485472276",
+      "A": "Base",
+      "B": "LoRA"
+    },
+    {
+      "pair_id": "PT013",
+      "product_id": "617920658390",
+      "A": "Base",
+      "B": "LoRA"
+    },
+    {
+      "pair_id": "PT014",
+      "product_id": "618263479034",
+      "A": "LoRA",
+      "B": "Base"
+    },
+    {
+      "pair_id": "PT015",
+      "product_id": "607256389125",
+      "A": "Base",
+      "B": "LoRA"
+    },
+    {
+      "pair_id": "PT016",
+      "product_id": "585366825079",
+      "A": "Base",
+      "B": "LoRA"
+    },
+    {
+      "pair_id": "PT017",
+      "product_id": "566531828259",
+      "A": "Base",
+      "B": "LoRA"
+    },
+    {
+      "pair_id": "PT018",
+      "product_id": "583457250405",
+      "A": "LoRA",
+      "B": "Base"
+    },
+    {
+      "pair_id": "PT019",
+      "product_id": "621360527079",
+      "A": "Base",
+      "B": "LoRA"
+    },
+    {
+      "pair_id": "PT020",
+      "product_id": "565706870969",
+      "A": "Base",
+      "B": "LoRA"
+    },
+    {
+      "pair_id": "PT021",
+      "product_id": "572739978355",
+      "A": "Base",
+      "B": "LoRA"
+    },
+    {
+      "pair_id": "PT022",
+      "product_id": "577426751464",
+      "A": "Base",
+      "B": "LoRA"
+    },
+    {
+      "pair_id": "PT023",
+      "product_id": "595487807549",
+      "A": "LoRA",
+      "B": "Base"
+    },
+    {
+      "pair_id": "PT024",
+      "product_id": "589508217209",
+      "A": "LoRA",
+      "B": "Base"
+    },
+    {
+      "pair_id": "PT025",
+      "product_id": "2859211238",
+      "A": "LoRA",
+      "B": "Base"
+    },
+    {
+      "pair_id": "PT026",
+      "product_id": "616205758872",
+      "A": "LoRA",
+      "B": "Base"
+    },
+    {
+      "pair_id": "PT027",
+      "product_id": "540395966499",
+      "A": "LoRA",
+      "B": "Base"
+    },
+    {
+      "pair_id": "PT028",
+      "product_id": "590175217614",
+      "A": "Base",
+      "B": "LoRA"
+    },
+    {
+      "pair_id": "PT029",
+      "product_id": "625037263815",
+      "A": "Base",
+      "B": "LoRA"
+    },
+    {
+      "pair_id": "PT030",
+      "product_id": "565468950564",
+      "A": "LoRA",
+      "B": "Base"
+    },
+    {
+      "pair_id": "PT031",
+      "product_id": "583014299804",
+      "A": "LoRA",
+      "B": "Base"
+    },
+    {
+      "pair_id": "PT032",
+      "product_id": "559685535453",
+      "A": "LoRA",
+      "B": "Base"
+    },
+    {
+      "pair_id": "PT033",
+      "product_id": "623882882335",
+      "A": "LoRA",
+      "B": "Base"
+    },
+    {
+      "pair_id": "PT034",
+      "product_id": "543556617866",
+      "A": "Base",
+      "B": "LoRA"
+    },
+    {
+      "pair_id": "PT035",
+      "product_id": "547702894728",
+      "A": "Base",
+      "B": "LoRA"
+    },
+    {
+      "pair_id": "PT036",
+      "product_id": "583797205123",
+      "A": "Base",
+      "B": "LoRA"
+    },
+    {
+      "pair_id": "PT037",
+      "product_id": "590008960085",
+      "A": "Base",
+      "B": "LoRA"
+    },
+    {
+      "pair_id": "PT038",
+      "product_id": "603102363927",
+      "A": "Base",
+      "B": "LoRA"
+    },
+    {
+      "pair_id": "PT039",
+      "product_id": "609039324433",
+      "A": "LoRA",
+      "B": "Base"
+    },
+    {
+      "pair_id": "PT040",
+      "product_id": "615882518927",
+      "A": "LoRA",
+      "B": "Base"
+    },
+    {
+      "pair_id": "PT041",
+      "product_id": "530504970904",
+      "A": "LoRA",
+      "B": "Base"
+    },
+    {
+      "pair_id": "PT042",
+      "product_id": "618733106466",
+      "A": "Base",
+      "B": "LoRA"
+    },
+    {
+      "pair_id": "PT043",
+      "product_id": "598781167153",
+      "A": "LoRA",
+      "B": "Base"
+    },
+    {
+      "pair_id": "PT044",
+      "product_id": "599620329880",
+      "A": "LoRA",
+      "B": "Base"
+    },
+    {
+      "pair_id": "PT045",
+      "product_id": "616413073658",
+      "A": "Base",
+      "B": "LoRA"
+    },
+    {
+      "pair_id": "PT046",
+      "product_id": "624105227976",
+      "A": "LoRA",
+      "B": "Base"
+    },
+    {
+      "pair_id": "PT047",
+      "product_id": "8443620439",
+      "A": "Base",
+      "B": "LoRA"
+    },
+    {
+      "pair_id": "PT048",
+      "product_id": "600538024615",
+      "A": "LoRA",
+      "B": "Base"
+    },
+    {
+      "pair_id": "PT049",
+      "product_id": "559887711431",
+      "A": "Base",
+      "B": "LoRA"
+    },
+    {
+      "pair_id": "PT050",
+      "product_id": "620625786758",
+      "A": "LoRA",
+      "B": "Base"
+    },
+    {
+      "pair_id": "PT051",
+      "product_id": "42149170939",
+      "A": "LoRA",
+      "B": "Base"
+    },
+    {
+      "pair_id": "PT052",
+      "product_id": "547995479552",
+      "A": "Base",
+      "B": "LoRA"
+    },
+    {
+      "pair_id": "PT053",
+      "product_id": "624392441174",
+      "A": "Base",
+      "B": "LoRA"
+    },
+    {
+      "pair_id": "PT054",
+      "product_id": "618820646060",
+      "A": "Base",
+      "B": "LoRA"
+    },
+    {
+      "pair_id": "PT055",
+      "product_id": "24497168737",
+      "A": "LoRA",
+      "B": "Base"
+    },
+    {
+      "pair_id": "PT056",
+      "product_id": "578515650928",
+      "A": "LoRA",
+      "B": "Base"
+    },
+    {
+      "pair_id": "PT057",
+      "product_id": "618416951039",
+      "A": "LoRA",
+      "B": "Base"
+    },
+    {
+      "pair_id": "PT058",
+      "product_id": "589051188248",
+      "A": "LoRA",
+      "B": "Base"
+    },
+    {
+      "pair_id": "PT059",
+      "product_id": "545593037598",
+      "A": "LoRA",
+      "B": "Base"
+    },
+    {
+      "pair_id": "PT060",
+      "product_id": "623126145078",
+      "A": "LoRA",
+      "B": "Base"
+    },
+    {
+      "pair_id": "PT061",
+      "product_id": "544826941132",
+      "A": "Base",
+      "B": "LoRA"
+    },
+    {
+      "pair_id": "PT062",
+      "product_id": "567398743698",
+      "A": "LoRA",
+      "B": "Base"
+    },
+    {
+      "pair_id": "PT063",
+      "product_id": "596152984459",
+      "A": "Base",
+      "B": "LoRA"
+    },
+    {
+      "pair_id": "PT064",
+      "product_id": "582839837483",
+      "A": "LoRA",
+      "B": "Base"
+    },
+    {
+      "pair_id": "PT065",
+      "product_id": "522783084872",
+      "A": "LoRA",
+      "B": "Base"
+    },
+    {
+      "pair_id": "PT066",
+      "product_id": "608335015563",
+      "A": "Base",
+      "B": "LoRA"
+    },
+    {
+      "pair_id": "PT067",
+      "product_id": "15246761632",
+      "A": "LoRA",
+      "B": "Base"
+    },
+    {
+      "pair_id": "PT068",
+      "product_id": "583601853144",
+      "A": "LoRA",
+      "B": "Base"
+    },
+    {
+      "pair_id": "PT069",
+      "product_id": "609923870759",
+      "A": "Base",
+      "B": "LoRA"
+    },
+    {
+      "pair_id": "PT070",
+      "product_id": "610255708567",
+      "A": "LoRA",
+      "B": "Base"
+    },
+    {
+      "pair_id": "PT071",
+      "product_id": "610445355179",
+      "A": "LoRA",
+      "B": "Base"
+    },
+    {
+      "pair_id": "PT072",
+      "product_id": "609762128375",
+      "A": "Base",
+      "B": "LoRA"
+    },
+    {
+      "pair_id": "PT073",
+      "product_id": "604829061336",
+      "A": "LoRA",
+      "B": "Base"
+    },
+    {
+      "pair_id": "PT074",
+      "product_id": "600661711292",
+      "A": "Base",
+      "B": "LoRA"
+    },
+    {
+      "pair_id": "PT075",
+      "product_id": "619501332263",
+      "A": "Base",
+      "B": "LoRA"
+    },
+    {
+      "pair_id": "PT076",
+      "product_id": "562660919726",
+      "A": "Base",
+      "B": "LoRA"
+    },
+    {
+      "pair_id": "PT077",
+      "product_id": "576463385175",
+      "A": "Base",
+      "B": "LoRA"
+    },
+    {
+      "pair_id": "PT078",
+      "product_id": "610605050479",
+      "A": "Base",
+      "B": "LoRA"
+    },
+    {
+      "pair_id": "PT079",
+      "product_id": "607358884242",
+      "A": "LoRA",
+      "B": "Base"
+    },
+    {
+      "pair_id": "PT080",
+      "product_id": "602079265226",
+      "A": "Base",
+      "B": "LoRA"
+    },
+    {
+      "pair_id": "PT081",
+      "product_id": "587244433192",
+      "A": "LoRA",
+      "B": "Base"
+    },
+    {
+      "pair_id": "PT082",
+      "product_id": "620165221976",
+      "A": "LoRA",
+      "B": "Base"
+    },
+    {
+      "pair_id": "PT083",
+      "product_id": "594880547645",
+      "A": "Base",
+      "B": "LoRA"
+    },
+    {
+      "pair_id": "PT084",
+      "product_id": "609861568866",
+      "A": "Base",
+      "B": "LoRA"
+    },
+    {
+      "pair_id": "PT085",
+      "product_id": "562289059045",
+      "A": "LoRA",
+      "B": "Base"
+    },
+    {
+      "pair_id": "PT086",
+      "product_id": "609629279071",
+      "A": "Base",
+      "B": "LoRA"
+    },
+    {
+      "pair_id": "PT087",
+      "product_id": "614533597181",
+      "A": "Base",
+      "B": "LoRA"
+    },
+    {
+      "pair_id": "PT088",
+      "product_id": "43297860634",
+      "A": "LoRA",
+      "B": "Base"
+    },
+    {
+      "pair_id": "PT089",
+      "product_id": "621173570641",
+      "A": "LoRA",
+      "B": "Base"
+    },
+    {
+      "pair_id": "PT090",
+      "product_id": "624112334484",
+      "A": "LoRA",
+      "B": "Base"
+    },
+    {
+      "pair_id": "PT091",
+      "product_id": "614194957336",
+      "A": "Base",
+      "B": "LoRA"
+    },
+    {
+      "pair_id": "PT092",
+      "product_id": "602684369098",
+      "A": "Base",
+      "B": "LoRA"
+    },
+    {
+      "pair_id": "PT093",
+      "product_id": "621846828786",
+      "A": "Base",
+      "B": "LoRA"
+    },
+    {
+      "pair_id": "PT094",
+      "product_id": "606991731175",
+      "A": "LoRA",
+      "B": "Base"
+    },
+    {
+      "pair_id": "PT095",
+      "product_id": "581329948812",
+      "A": "LoRA",
+      "B": "Base"
+    },
+    {
+      "pair_id": "PT096",
+      "product_id": "608516760684",
+      "A": "Base",
+      "B": "LoRA"
+    },
+    {
+      "pair_id": "PT097",
+      "product_id": "591309078741",
+      "A": "Base",
+      "B": "LoRA"
+    },
+    {
+      "pair_id": "PT098",
+      "product_id": "601009119510",
+      "A": "LoRA",
+      "B": "Base"
+    },
+    {
+      "pair_id": "PT099",
+      "product_id": "581689863460",
+      "A": "Base",
+      "B": "LoRA"
+    },
+    {
+      "pair_id": "PT100",
+      "product_id": "562615192976",
+      "A": "Base",
+      "B": "LoRA"
+    }
+  ]
+}

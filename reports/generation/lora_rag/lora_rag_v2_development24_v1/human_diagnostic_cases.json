@@ -1,0 +1,116 @@
+{
+  "status": "confirmed_diagnostics_not_for_retuning",
+  "cases": [
+    {
+      "pair_id": "IR018",
+      "product_id": "556404503382",
+      "category_l2": "耳机",
+      "LoRA": {
+        "product_id": "556404503382",
+        "variant": "LoRA_control",
+        "category_l2": "耳机",
+        "core_attribute_count": "3",
+        "matched_attribute_count": "1",
+        "fluency_pass": "1",
+        "factual_error_count": "0",
+        "field_stacking": "0",
+        "mechanical_template": "1",
+        "unsupported_evaluation_effect_scenario": "0",
+        "numeric_range_distortion": "0",
+        "identity_category_error": "0",
+        "reviewer": "用户复核确认（ChatGPT初审 / Codex修正）",
+        "review_notes": "品牌占位值和非信息型号已门控；卖点连续三次重复“佩戴方式：挂耳式”，存在明显机械重复。"
+      },
+      "LoRA_RAG": {
+        "product_id": "556404503382",
+        "variant": "LoRA_RAG",
+        "category_l2": "耳机",
+        "core_attribute_count": "3",
+        "matched_attribute_count": "1",
+        "fluency_pass": "1",
+        "factual_error_count": "0",
+        "field_stacking": "0",
+        "mechanical_template": "0",
+        "unsupported_evaluation_effect_scenario": "0",
+        "numeric_range_distortion": "0",
+        "identity_category_error": "0",
+        "reviewer": "用户复核确认（ChatGPT初审 / Codex修正）",
+        "review_notes": "品牌占位值和非信息型号已门控；“是否线控：是”有完整源属性支持，“类别：耳机”为直接品类语义。"
+      }
+    },
+    {
+      "pair_id": "IR019",
+      "product_id": "596561935088",
+      "category_l2": "垃圾桶",
+      "LoRA": {
+        "product_id": "596561935088",
+        "variant": "LoRA_control",
+        "category_l2": "垃圾桶",
+        "core_attribute_count": "5",
+        "matched_attribute_count": "5",
+        "fluency_pass": "1",
+        "factual_error_count": "0",
+        "field_stacking": "0",
+        "mechanical_template": "0",
+        "unsupported_evaluation_effect_scenario": "0",
+        "numeric_range_distortion": "0",
+        "identity_category_error": "0",
+        "reviewer": "用户复核确认（ChatGPT初审 / Codex修正）",
+        "review_notes": "五项核心事实均正确表达。"
+      },
+      "LoRA_RAG": {
+        "product_id": "596561935088",
+        "variant": "LoRA_RAG",
+        "category_l2": "垃圾桶",
+        "core_attribute_count": "5",
+        "matched_attribute_count": "4",
+        "fluency_pass": "1",
+        "factual_error_count": "0",
+        "field_stacking": "0",
+        "mechanical_template": "0",
+        "unsupported_evaluation_effect_scenario": "0",
+        "numeric_range_distortion": "0",
+        "identity_category_error": "0",
+        "reviewer": "用户复核确认（ChatGPT初审 / Codex修正）",
+        "review_notes": "未表达适用场景“家庭使用”。"
+      }
+    },
+    {
+      "pair_id": "IR020",
+      "product_id": "621326718016",
+      "category_l2": "键盘",
+      "LoRA": {
+        "product_id": "621326718016",
+        "variant": "LoRA_control",
+        "category_l2": "键盘",
+        "core_attribute_count": "7",
+        "matched_attribute_count": "5",
+        "fluency_pass": "1",
+        "factual_error_count": "0",
+        "field_stacking": "0",
+        "mechanical_template": "0",
+        "unsupported_evaluation_effect_scenario": "0",
+        "numeric_range_distortion": "0",
+        "identity_category_error": "0",
+        "reviewer": "用户复核确认（ChatGPT初审 / Codex修正）",
+        "review_notes": "未表达“是否有多媒体功能键=有”和“有无手托=无”。"
+      },
+      "LoRA_RAG": {
+        "product_id": "621326718016",
+        "variant": "LoRA_RAG",
+        "category_l2": "键盘",
+        "core_attribute_count": "7",
+        "matched_attribute_count": "6",
+        "fluency_pass": "1",
+        "factual_error_count": "0",
+        "field_stacking": "0",
+        "mechanical_template": "0",
+        "unsupported_evaluation_effect_scenario": "0",
+        "numeric_range_distortion": "0",
+        "identity_category_error": "0",
+        "reviewer": "用户复核确认（ChatGPT初审 / Codex修正）",
+        "review_notes": "未表达“有无手托=无”。"
+      }
+    }
+  ]
+}

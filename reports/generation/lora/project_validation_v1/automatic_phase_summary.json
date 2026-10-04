@@ -1,0 +1,152 @@
+{
+  "status": "awaiting_human_review_NOT_FINAL_P7",
+  "source_statistics": {
+    "products": 200,
+    "core_attribute_total": 1167,
+    "by_category": {
+      "键盘": 25,
+      "移动电源": 25,
+      "垃圾桶": 25,
+      "拖把": 25,
+      "保温杯": 25,
+      "鼠标": 25,
+      "收纳箱": 25,
+      "耳机": 25
+    },
+    "source_quality": {
+      "PASS": 180,
+      "REVIEW": 11,
+      "CONFLICT": 9
+    },
+    "input_core_attribute_total": 1069,
+    "input_core_below_three": 11,
+    "max_prompt_tokens": 177
+  },
+  "versions": {
+    "Base": {
+      "products": 200,
+      "task_calls": 600,
+      "wall_seconds": 1645.2133707999983,
+      "latency": {
+        "title": {
+          "samples": 200,
+          "mean_seconds": 1.8904776665000371,
+          "p50_seconds": 1.1815522500000952,
+          "p95_seconds": 8.125358690000938
+        },
+        "selling_points": {
+          "samples": 200,
+          "mean_seconds": 3.1306722280000576,
+          "p50_seconds": 2.0188008999994054,
+          "p95_seconds": 13.737081174999906
+        },
+        "short_description": {
+          "samples": 200,
+          "mean_seconds": 3.119544083500186,
+          "p50_seconds": 1.8749008000004324,
+          "p95_seconds": 11.896929760002967
+        },
+        "three_task_total": {
+          "samples": 200,
+          "mean_seconds": 8.14069397800028,
+          "p50_seconds": 5.123121700000411,
+          "p95_seconds": 31.482566379999657
+        }
+      },
+      "parse_success_by_task_NOT_FLUENCY": {
+        "title": 200,
+        "selling_points": 94,
+        "short_description": 200
+      },
+      "assembled_structure_success_NOT_FLUENCY": 94,
+      "hit_token_limit_tasks": 0,
+      "empty_task_outputs": 0,
+      "peak_allocated_mib": 5497.7,
+      "peak_reserved_mib": 5628.0,
+      "model_parameters_unchanged": true,
+      "literal_coverage_NOT_HUMAN": {
+        "matched_fields": 986,
+        "core_attribute_total": 1167,
+        "ratio": 0.8449014567266495
+      },
+      "claim_terms_REVIEW_ONLY_samples": 159,
+      "number_terms_REVIEW_ONLY_samples": 5
+    },
+    "LoRA": {
+      "products": 200,
+      "task_calls": 600,
+      "wall_seconds": 1020.4222396000005,
+      "latency": {
+        "title": {
+          "samples": 200,
+          "mean_seconds": 1.2107000284999958,
+          "p50_seconds": 1.1579680000013468,
+          "p95_seconds": 2.1503410750023244
+        },
+        "selling_points": {
+          "samples": 200,
+          "mean_seconds": 1.6050859514998774,
+          "p50_seconds": 1.442761000000246,
+          "p95_seconds": 2.6895189400014714
+        },
+        "short_description": {
+          "samples": 200,
+          "mean_seconds": 2.2027508039998973,
+          "p50_seconds": 2.1471952500014595,
+          "p95_seconds": 3.523867665000943
+        },
+        "three_task_total": {
+          "samples": 200,
+          "mean_seconds": 5.018536783999771,
+          "p50_seconds": 4.725283949999721,
+          "p95_seconds": 8.213073514995994
+        }
+      },
+      "parse_success_by_task_NOT_FLUENCY": {
+        "title": 200,
+        "selling_points": 197,
+        "short_description": 200
+      },
+      "assembled_structure_success_NOT_FLUENCY": 197,
+      "hit_token_limit_tasks": 0,
+      "empty_task_outputs": 0,
+      "peak_allocated_mib": 5507.4,
+      "peak_reserved_mib": 5636.0,
+      "model_parameters_unchanged": true,
+      "literal_coverage_NOT_HUMAN": {
+        "matched_fields": 948,
+        "core_attribute_total": 1167,
+        "ratio": 0.8123393316195373
+      },
+      "claim_terms_REVIEW_ONLY_samples": 3,
+      "number_terms_REVIEW_ONLY_samples": 0
+    }
+  },
+  "human_official_metrics": null,
+  "human_paired_preferences": null,
+  "human_sample": {
+    "products": 32,
+    "by_category": {
+      "保温杯": 4,
+      "垃圾桶": 4,
+      "拖把": 4,
+      "收纳箱": 4,
+      "移动电源": 4,
+      "耳机": 4,
+      "键盘": 4,
+      "鼠标": 4
+    },
+    "seed": 42,
+    "core_attribute_total": 186,
+    "status": "frozen_awaiting_human_review",
+    "selection": "source_only_stratified_not_output_selected"
+  },
+  "paired_seed_prompt_preflight_checks": 600,
+  "input_and_decoding_same": true,
+  "first_call_cold_start_included": true,
+  "old_single_call_baseline_compared": false,
+  "project_test_read": false,
+  "rag_holdout_files_read": false,
+  "rag_v2_generation": false,
+  "parameter_updates": 0
+}

@@ -1,0 +1,6 @@
+{
+  "path": "artifacts/lora/lora_v1/checkpoints/checkpoint-step-001359",
+  "global_step": 1359,
+  "dev_loss": 0.013250582017680068,
+  "epoch": 3
+}

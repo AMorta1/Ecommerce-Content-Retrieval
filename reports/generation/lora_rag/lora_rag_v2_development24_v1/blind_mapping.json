@@ -1,0 +1,149 @@
+{
+  "status": "sealed_until_complete_review",
+  "pairs": [
+    {
+      "pair_id": "IR001",
+      "product_id": "569958345076",
+      "A": "LoRA_RAG",
+      "B": "LoRA_control"
+    },
+    {
+      "pair_id": "IR002",
+      "product_id": "584308818142",
+      "A": "LoRA_control",
+      "B": "LoRA_RAG"
+    },
+    {
+      "pair_id": "IR003",
+      "product_id": "556912823177",
+      "A": "LoRA_RAG",
+      "B": "LoRA_control"
+    },
+    {
+      "pair_id": "IR004",
+      "product_id": "620488672878",
+      "A": "LoRA_control",
+      "B": "LoRA_RAG"
+    },
+    {
+      "pair_id": "IR005",
+      "product_id": "580390189481",
+      "A": "LoRA_control",
+      "B": "LoRA_RAG"
+    },
+    {
+      "pair_id": "IR006",
+      "product_id": "614646720550",
+      "A": "LoRA_control",
+      "B": "LoRA_RAG"
+    },
+    {
+      "pair_id": "IR007",
+      "product_id": "584648531319",
+      "A": "LoRA_RAG",
+      "B": "LoRA_control"
+    },
+    {
+      "pair_id": "IR008",
+      "product_id": "585183140226",
+      "A": "LoRA_control",
+      "B": "LoRA_RAG"
+    },
+    {
+      "pair_id": "IR009",
+      "product_id": "621341696263",
+      "A": "LoRA_control",
+      "B": "LoRA_RAG"
+    },
+    {
+      "pair_id": "IR010",
+      "product_id": "600702277714",
+      "A": "LoRA_control",
+      "B": "LoRA_RAG"
+    },
+    {
+      "pair_id": "IR011",
+      "product_id": "535858215415",
+      "A": "LoRA_control",
+      "B": "LoRA_RAG"
+    },
+    {
+      "pair_id": "IR012",
+      "product_id": "609932288958",
+      "A": "LoRA_RAG",
+      "B": "LoRA_control"
+    },
+    {
+      "pair_id": "IR013",
+      "product_id": "606784877914",
+      "A": "LoRA_RAG",
+      "B": "LoRA_control"
+    },
+    {
+      "pair_id": "IR014",
+      "product_id": "621656965008",
+      "A": "LoRA_control",
+      "B": "LoRA_RAG"
+    },
+    {
+      "pair_id": "IR015",
+      "product_id": "610408134586",
+      "A": "LoRA_RAG",
+      "B": "LoRA_control"
+    },
+    {
+      "pair_id": "IR016",
+      "product_id": "613971147597",
+      "A": "LoRA_control",
+      "B": "LoRA_RAG"
+    },
+    {
+      "pair_id": "IR017",
+      "product_id": "625309591565",
+      "A": "LoRA_control",
+      "B": "LoRA_RAG"
+    },
+    {
+      "pair_id": "IR018",
+      "product_id": "556404503382",
+      "A": "LoRA_control",
+      "B": "LoRA_RAG"
+    },
+    {
+      "pair_id": "IR019",
+      "product_id": "596561935088",
+      "A": "LoRA_RAG",
+      "B": "LoRA_control"
+    },
+    {
+      "pair_id": "IR020",
+      "product_id": "621326718016",
+      "A": "LoRA_RAG",
+      "B": "LoRA_control"
+    },
+    {
+      "pair_id": "IR021",
+      "product_id": "572645689177",
+      "A": "LoRA_RAG",
+      "B": "LoRA_control"
+    },
+    {
+      "pair_id": "IR022",
+      "product_id": "44604493546",
+      "A": "LoRA_RAG",
+      "B": "LoRA_control"
+    },
+    {
+      "pair_id": "IR023",
+      "product_id": "610727155009",
+      "A": "LoRA_RAG",
+      "B": "LoRA_control"
+    },
+    {
+      "pair_id": "IR024",
+      "product_id": "576694559149",
+      "A": "LoRA_RAG",
+      "B": "LoRA_control"
+    }
+  ]
+}

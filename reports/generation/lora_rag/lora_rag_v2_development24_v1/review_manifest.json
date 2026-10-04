@@ -1,0 +1,74 @@
+{
+  "status": "awaiting_human_review",
+  "initial_workbook_sha256": "1bb484f09af31128f91727122c1d9d216503f7ed9966baaa473eacb659d2a904",
+  "files": [
+    {
+      "path": "reports/generation/lora_rag/lora_rag_v2_development24_v1/automatic_diagnostics.json",
+      "sha256": "dce90990670978ccf02f5817d2a093d4abfd106b68f4d2b34fb5ef446e2ddf40"
+    },
+    {
+      "path": "reports/generation/lora_rag/lora_rag_v2_development24_v1/automatic_summary.json",
+      "sha256": "a2d3767311942ba6bf7ded98002a5d7436ffdd42439bd0cbea20366e84bf47e4"
+    },
+    {
+      "path": "reports/generation/lora_rag/lora_rag_v2_development24_v1/blind_mapping.json",
+      "sha256": "8c5b7e3d333ac165a60e434c15bef8fb0c853d6f9e22a739e49ba0d4c2bb66fd"
+    },
+    {
+      "path": "reports/generation/lora_rag/lora_rag_v2_development24_v1/control_product_outputs.jsonl",
+      "sha256": "144daf5ee7a3389ab618b7a7e53f586993ceda6150f4aded5b9924b8cbe9619f"
+    },
+    {
+      "path": "reports/generation/lora_rag/lora_rag_v2_development24_v1/environment_freeze.txt",
+      "sha256": "5596644df337a7bd02ff4d4439074d1c61c409606cf1c83e4b1e351c3d1d5990"
+    },
+    {
+      "path": "reports/generation/lora_rag/lora_rag_v2_development24_v1/frozen_inputs.jsonl",
+      "sha256": "6e1985b830d52bae94bfe7e1dcaf7e45719505ebc9979ec7563e3d77e9948b23"
+    },
+    {
+      "path": "reports/generation/lora_rag/lora_rag_v2_development24_v1/inference_config.json",
+      "sha256": "6b610516cc8ec68aadfc9b9d355c7aa6afa2237b2f0e77f530aff47d76aa59b0"
+    },
+    {
+      "path": "reports/generation/lora_rag/lora_rag_v2_development24_v1/lora_rag/product_outputs.jsonl",
+      "sha256": "abeae6d881a270a4605bf22b89ab4f8d0a0da5abf59750434ad83b47b5c1d8a3"
+    },
+    {
+      "path": "reports/generation/lora_rag/lora_rag_v2_development24_v1/lora_rag/run_report.json",
+      "sha256": "2fe37c90464d5aa1ef183a456d1789d7f33eb2a65dd7e726baccb4cdc241cbb0"
+    },
+    {
+      "path": "reports/generation/lora_rag/lora_rag_v2_development24_v1/lora_rag/task_outputs.jsonl",
+      "sha256": "ff8a8de46c21491b95e48965a41f2a3d2aa15d30a011fd06476a80213815f634"
+    },
+    {
+      "path": "reports/generation/lora_rag/lora_rag_v2_development24_v1/phase_report.md",
+      "sha256": "48ba6985ef0e31f532e8a08dd15c4565f7ff9b3b3648835ae88c9b86ffac31f5"
+    },
+    {
+      "path": "reports/generation/lora_rag/lora_rag_v2_development24_v1/protocol_manifest.json",
+      "sha256": "17d573d3bddc8fa564075abc14dcd94a2530a4300e30c09b642874a34addedc7"
+    },
+    {
+      "path": "reports/generation/lora_rag/lora_rag_v2_development24_v1/sample_ids.json",
+      "sha256": "0c875f0677cc78a1127d40c7bbf716d2d3094967af7387c78141a948ce0fa9a0"
+    },
+    {
+      "path": "reports/generation/lora_rag/lora_rag_v2_development24_v1/smoke8/product_outputs.jsonl",
+      "sha256": "10a2fbf38f701dc0c2ee7a42916404aa3044cb7b9dfd700940f28cda944a0560"
+    },
+    {
+      "path": "reports/generation/lora_rag/lora_rag_v2_development24_v1/smoke8/run_report.json",
+      "sha256": "063e51dfaf172805eb8fd52178cb192065559f7bdb60585afabbe869247003ed"
+    },
+    {
+      "path": "reports/generation/lora_rag/lora_rag_v2_development24_v1/smoke8/task_outputs.jsonl",
+      "sha256": "9b743869855ba44c329f235dcbe3be51884789b82a3e91801ab91f665cb33880"
+    }
+  ],
+  "workbook": "reports/generation/lora_rag/lora_rag_v2_development24_v1/lora_rag_development24_blind_review.xlsx",
+  "labels_prefilled": false,
+  "products": 24,
+  "documents": 48
+}

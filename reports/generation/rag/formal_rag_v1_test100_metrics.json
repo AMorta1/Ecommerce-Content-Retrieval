@@ -1,0 +1,55 @@
+{
+  "status": "human_evaluation_completed",
+  "version": "rag_v1_formal_final_review",
+  "created_at_utc": "2026-10-01T06:17:39+00:00",
+  "annotation_file_sha256": "bd3aaaf4485b3cf69fc5bfda8b6ebe25d9a4104647c29343c8990fd93042d036",
+  "source_outputs_sha256": "36edf46d4a4db42254713a823265a36937439860e3c3593dad86a37976bbc298",
+  "annotation_progress": {
+    "total_rows": 100,
+    "completed_rows": 100,
+    "remaining_rows": 0
+  },
+  "annotation_provenance": {
+    "human_reviewed_rows": 100,
+    "assistant_draft_rows": 0
+  },
+  "metrics": {
+    "sample_count": 100,
+    "core_attribute_hit_rate": 0.648,
+    "matched_attribute_total": 405,
+    "core_attribute_total": 625,
+    "fluency_pass_rate": 0.93,
+    "factual_error_sample_rate": 0.35,
+    "average_factual_errors_per_sample": 0.57,
+    "category_style_pass_rate": 0.97,
+    "structured_output_success_rate": 1.0,
+    "generation_time_seconds": {
+      "average": 4.343570000000001,
+      "p95": 5.748,
+      "maximum": 6.96
+    }
+  },
+  "prd_target_reference": {
+    "core_attribute_hit_rate": {
+      "target": 0.75,
+      "observed": 0.648,
+      "passed": false
+    },
+    "fluency_pass_rate": {
+      "target": 0.8,
+      "observed": 0.93,
+      "passed": true
+    },
+    "average_generation_seconds": {
+      "target_maximum": 12.0,
+      "observed": 4.343570000000001,
+      "passed": true
+    }
+  },
+  "metric_definition": {
+    "core_attribute_hit_rate": "所有样本人工确认的命中属性数之和 / 输入核心属性数之和",
+    "fluency_pass_rate": "标题、卖点、短详情整体通顺的样本数 / 总样本数",
+    "factual_error_sample_rate": "至少含一项输入无法支持或与输入矛盾事实的样本数 / 总样本数"
+  },
+  "warning": "该结果来自已完成的人工复核标注。"
+}

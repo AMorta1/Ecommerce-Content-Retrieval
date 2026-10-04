@@ -1,0 +1,38 @@
+{
+  "complete": true,
+  "global_step": 1359,
+  "run_kind": "formal_training",
+  "files": [
+    {
+      "path": "adapter/adapter_config.json",
+      "bytes": 1262,
+      "sha256": "8c0443a49eb8535c4883ec9d90cad883508917230777033c405e3a87a0b33925"
+    },
+    {
+      "path": "adapter/adapter_model.safetensors",
+      "bytes": 10107280,
+      "sha256": "890a061812321ccf6bbf598b37617fc59dcde70d57042c4304c219a0f6740e31"
+    },
+    {
+      "path": "adapter/README.md",
+      "bytes": 5416,
+      "sha256": "1e733fc9176aa2816149a3a7fed36957c44659aeb390ec251dc9051be6ba2fc6"
+    },
+    {
+      "path": "config_snapshot.json",
+      "bytes": 4290,
+      "sha256": "b31e61e27bed5bc283a54cf6d018ed7eb7dcfebfbc491b5080244c89b87e9739"
+    },
+    {
+      "path": "trainer_state.json",
+      "bytes": 6986,
+      "sha256": "a360aba09d29ad02e8283f02a085a7941f99f9e3ef3acf71a9e5a02a59c0f193"
+    },
+    {
+      "path": "training_state.pt",
+      "bytes": 20297155,
+      "sha256": "81596223707b4ffaea6558b4c366e489e1078d8fae3567f22a2693ca1efea5fc"
+    }
+  ],
+  "saved_at_utc": "2026-10-04T08:19:53.726868+00:00"
+}

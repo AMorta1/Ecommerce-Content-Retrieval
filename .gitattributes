@@ -1,0 +1,13 @@
+# Preserve frozen artifact bytes and checksums on every platform.
+/artifacts/** -text
+
+# Preserve frozen LoRA sources, configurations, protocols, and evidence hashes.
+/configs/lora_*.json -text
+/docs/lora_*.md -text
+/src/generation/lora_*.py -text
+/src/generation/qlora_memory.py -text
+/tests/test_lora_*.py -text
+/tests/test_qlora_*.py -text
+/scripts/*lora*.py -text
+/reports/generation/lora/** -text
+/reports/generation/lora_rag/** -text

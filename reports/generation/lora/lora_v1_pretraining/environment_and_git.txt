@@ -1,0 +1,63 @@
+accelerate==1.14.0
+annotated-doc==0.0.5
+anyio==4.15.1
+bitsandbytes==0.50.2
+certifi==2026.7.22
+click==8.5.0
+colorama==0.4.6
+exceptiongroup==1.3.1
+filelock==3.32.3
+fsspec==2026.7.0
+h11==0.16.0
+hf-xet==1.6.0
+httpcore==1.0.9
+httpx==0.28.1
+huggingface_hub==1.30.0
+idna==3.19
+Jinja2==3.1.6
+markdown-it-py==4.2.0
+MarkupSafe==3.0.3
+mdurl==0.1.2
+mpmath==1.3.0
+networkx==3.4.2
+numpy==2.2.6
+packaging==26.3
+peft==0.21.1
+psutil==7.2.2
+Pygments==2.21.0
+pypdf==6.18.0
+PyYAML==6.0.3
+regex==2026.9.3
+rich==15.0.0
+safetensors==0.8.0
+shellingham==1.5.4
+sympy==1.14.0
+tokenizers==0.23.2
+torch==2.12.0+cu130
+tqdm==4.70.0
+transformers==5.16.1
+typer==0.27.2
+typing_extensions==4.16.0
+No broken requirements found.
+NVIDIA GeForce RTX 4070 Laptop GPU, 8188 MiB, 582 MiB, 581.29
+?? "Colab\350\277\201\347\247\273\346\214\207\345\215\227.md"
+?? configs/lora_instruction_data_v1.json
+?? configs/lora_qlora_local_training_candidate_v1.json
+?? configs/lora_qlora_low_memory_smoke_v1.json
+?? configs/lora_qlora_smoke_v1.json
+?? configs/lora_qlora_train_v1.json
+?? reports/generation/lora/
+?? scripts/build_lora_instruction_data.py
+?? scripts/run_qlora_low_memory_smoke.py
+?? scripts/run_qlora_smoke.py
+?? scripts/train_lora.py
+?? src/generation/lora_data.py
+?? src/generation/lora_training.py
+?? src/generation/qlora_memory.py
+?? tests/test_lora_data.py
+?? tests/test_lora_training.py
+?? tests/test_qlora_memory.py
+?? tests/test_qlora_smoke.py
+08d2e8fdadd3540495563edd2ad3fa5d33e839b4
+DEV
+

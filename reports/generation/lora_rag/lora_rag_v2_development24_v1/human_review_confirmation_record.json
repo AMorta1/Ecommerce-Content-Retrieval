@@ -1,0 +1,44 @@
+{
+  "status": "user_confirmed_24_rows",
+  "created_at_utc": "2026-10-04T16:16:37.755338+00:00",
+  "user_message": "我已复核完成",
+  "confirmed_rows": 24,
+  "reviewer_metadata_completed_pairs": [
+    "IR001",
+    "IR002",
+    "IR003",
+    "IR004",
+    "IR005",
+    "IR006",
+    "IR007",
+    "IR008",
+    "IR009",
+    "IR010",
+    "IR011",
+    "IR012",
+    "IR013",
+    "IR014",
+    "IR015",
+    "IR016",
+    "IR017",
+    "IR018",
+    "IR019",
+    "IR020",
+    "IR021",
+    "IR022",
+    "IR023",
+    "IR024"
+  ],
+  "supplied_reviewer_values": [
+    {
+      "value": null,
+      "count": 24
+    }
+  ],
+  "metadata_completion_changes_scores_preferences_or_notes": false,
+  "user_saved_workbook": "reports/generation/lora_rag/lora_rag_v2_development24_v1/lora_rag_development24_blind_review.user_completed.xlsx",
+  "user_saved_sha256": "7512f1d08ea02159ae3ad114b97ae4349381f04caf9e8b52bf282fbf196f3174",
+  "completed_workbook_sha256": "706fbab833b71fb733b266f49df097c758af2b71a0466d6cd903a155d3b77356",
+  "user_edits_vs_imported_ai_draft": [],
+  "provenance": "AI-assisted initial judgments, Codex amendment, user final review/confirmation; not independent double-human review"
+}

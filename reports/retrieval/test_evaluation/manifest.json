@@ -1,0 +1,78 @@
+{
+  "status": "human_evaluation_completed",
+  "version": "week1_v3_test50_crossmodal_v3",
+  "created_at_utc": "2026-09-17T10:23:17+00:00",
+  "gallery_split": "test",
+  "gallery_size": 200,
+  "retrieval_strategy": "pure_cross_modal",
+  "catalog_feature_by_query_mode": {
+    "text": "image",
+    "image": "text"
+  },
+  "query_count": 50,
+  "queries_by_category_l1": {
+    "3C数码": 25,
+    "家居日用": 25
+  },
+  "queries_by_category_l2": {
+    "保温杯": 7,
+    "垃圾桶": 6,
+    "拖把": 6,
+    "收纳箱": 6,
+    "移动电源": 6,
+    "耳机": 7,
+    "键盘": 6,
+    "鼠标": 6
+  },
+  "excluded_query_product_ids": [
+    "42149170939",
+    "615393528961",
+    "589508217209",
+    "610468398862",
+    "618846993537"
+  ],
+  "excluded_query_reasons": {
+    "42149170939": "与 validation 商品具有相同品牌和型号",
+    "615393528961": "与 validation 商品具有相同品牌和型号",
+    "589508217209": "标题容量与来源属性明显冲突，不适合作为正式查询",
+    "610468398862": "标题表明是单卖拖把杆，不适合作为完整拖把查询",
+    "618846993537": "实际是垃圾分类玩具，不适合作为垃圾桶查询"
+  },
+  "query_product_excluded_from_gallery": true,
+  "annotation_scope": "每条查询的同二级品类 test 商品，排除查询商品本身；跨品类视为不相关。",
+  "annotation_rows": 1200,
+  "label_values": {
+    "2": "高度相关：商品类型和主要属性/用途均兼容",
+    "1": "部分相关：商品类型正确，但只满足部分属性",
+    "0": "不相关：关键商品类型、属性或用途冲突"
+  },
+  "queries_sha256": "48253c3287967d90caa5f9a7b3103ca00a1126d401b3cfe067cb96da0261443f",
+  "query_review_sha256": "f008e6ffb4c626246ceb119fea4531072a8aaee59a6f6a240af9dc90d669b290",
+  "gallery_sha256": "4afe6589d2f2a6b8d020ec3836128c6a83d00bf6acd3eff0c0b5f0a8a68076a5",
+  "index_sha256_by_query_mode": {
+    "text": "9521eedef59163f7ff2d5899f8f06d3802d25798845af2201883597a71954d6f",
+    "image": "d0fc77cbf54fbcfe518d93310bf496f07b808c4ef3154a1592799e336e1d5e29"
+  },
+  "warning": "50条查询、1200行相关性标签均已人工确认；正式指标见baseline_metrics.json。不得为提高指标更换测试查询。",
+  "annotation_sha256": "dbf7aecb0dd98b18986027c819749dbf9a723f7973a5ba11263b595f63a3b6f3",
+  "supersedes_version": "week1_v3_test50_crossmodal_v2",
+  "query_replacements": {
+    "2859211238": "616260230702",
+    "586356111871": "580312751243",
+    "594880547645": "614994023079",
+    "567224681575": "540395966499",
+    "610066713169": "619501332263"
+  },
+  "replacement_positive_candidate_examples": {
+    "540395966499": [
+      "24497168737",
+      "608516760684"
+    ],
+    "619501332263": [
+      "576150055638",
+      "583581714600"
+    ]
+  },
+  "query_review_confirmed_at_utc": "2026-09-17T10:23:17+00:00",
+  "superseded_judgments_path": "reports/retrieval/test_evaluation/superseded_query_judgments_v2.csv"
+}

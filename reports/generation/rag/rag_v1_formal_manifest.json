@@ -1,0 +1,394 @@
+{
+  "schema_version": "1.0",
+  "manifest_id": "rag_v1_formal_2026-09-24",
+  "status": "frozen_pending_single_test100_execution",
+  "created_at_utc": "2026-09-24T11:48:32+00:00",
+  "formal_test100_executed": false,
+  "formal_config": {
+    "path": "configs/generation_rag_formal_v1.json",
+    "sha256": "e109f34bfd2252196f56455340a743a95fa7706e5db5f5bb20d0891b22892c49",
+    "size_bytes": 7809
+  },
+  "freeze_decision": {
+    "validation_prompt_tuning_closed": true,
+    "formal_version": "rag_v1_formal",
+    "prompt_version": "rag_v6",
+    "top_k": 3,
+    "test100_policy": "Run once after execution code is ready; do not tune or rerun from test results."
+  },
+  "placeholder_gate_resolution": {
+    "product_id": "601447163749",
+    "finding": "??/other previously passed the placeholder gate, was eligible, entered global Top-3, and appeared in the saved rag_v6 Prompt.",
+    "classification": "Source Fact Quality REVIEW and generic fact-quality gate defect",
+    "resolution": "Policy v3 excludes composite values only when every separated token is an existing placeholder; mixed placeholder-plus-real values remain eligible.",
+    "product_specific_rule_added": false,
+    "model_executed_for_fix_verification": false,
+    "test100_accessed_for_fix_verification": false,
+    "validation_before": {
+      "fact_units": "data/processed/week2_rag_v1/validation_fact_units.jsonl",
+      "fact_count": 1637
+    },
+    "validation_after": {
+      "path": "data/processed/week2_rag_v2/validation_fact_units.jsonl",
+      "sha256": "8aab6cdaaed0f7e472869632681e3271c6fbf9fabd2da9be4cbf06c201c1feed",
+      "size_bytes": 1755672,
+      "fact_count": 1619,
+      "removed_fact_count": 18,
+      "added_fact_count": 0,
+      "target_field_removed": "?????=??/other",
+      "target_top3_after_filter": [
+        "????=USB",
+        "????=2.4GHz",
+        "???=5?"
+      ]
+    },
+    "build_report": {
+      "path": "reports/generation/rag/validation_fact_build_v2.json",
+      "sha256": "a436fb2aaee0a4edbad54cefa6d76689d983ef9dd21846010ae811c8bc905f89",
+      "size_bytes": 107486
+    }
+  },
+  "model": {
+    "name": "Qwen/Qwen2.5-7B-Instruct",
+    "revision": "a09a35458c702b33eeacc393d103063234e8bc28",
+    "snapshot_id": "a09a35458c702b33eeacc393d103063234e8bc28",
+    "observed_snapshot_path": "E:\\Projects\\Baidu\\.model-cache\\huggingface\\hub\\models--Qwen--Qwen2.5-7B-Instruct\\snapshots\\a09a35458c702b33eeacc393d103063234e8bc28",
+    "snapshot_path_role": "current local development observation only; model name plus revision identify the formal model",
+    "quantization": {
+      "load_in_4bit": true,
+      "quant_type": "nf4",
+      "compute_dtype": "bfloat16"
+    }
+  },
+  "prompt": {
+    "version": "rag_v6",
+    "implementation": "src/generation/qwen.py::build_rag_messages",
+    "sha256": "15ca1e911b160c4a934608549b685e9de9a7ae590ef9b4b928f5b5a859c2f2d4",
+    "hash_basis": "UTF-8 source bytes for build_rag_messages extracted with Python ast.get_source_segment",
+    "implementation_file": {
+      "path": "src/generation/qwen.py",
+      "sha256": "d3fdaa672bfb7e9228c13811322d28f668a2d5ae41faeff58e8b249ccb239675",
+      "size_bytes": 21854
+    },
+    "output_contract": "JSON object with title, exactly three selling_points strings, and short_description"
+  },
+  "rag_policy": {
+    "version": "rag_fact_policy_v3",
+    "path": "configs/rag_fact_policy_v3.json",
+    "sha256": "df738407e72b4280e9d286118ac84ff6442284195d7b763ddb32ead0ccb68ae1",
+    "size_bytes": 12166,
+    "top_k": 3,
+    "joint_ranking": {
+      "method": "reciprocal_rank_fusion",
+      "tasks": [
+        "title",
+        "selling_points",
+        "short_description"
+      ],
+      "rrf_k": 60,
+      "tie_breakers": [
+        "sum_task_ranks",
+        "field_order",
+        "canonical_field",
+        "fact_id"
+      ]
+    },
+    "negative_constraints": {
+      "enabled": true,
+      "role": "read_only_constraint_outside_content_top_k",
+      "quality_gate": "same-product task fact with quality_status=eligible only",
+      "exact_values": [
+        "无",
+        "否",
+        "不支持",
+        "有线",
+        "没有",
+        "未配备"
+      ],
+      "contains_values": [
+        "不支持"
+      ],
+      "active_generation": false,
+      "requires_same_product_id": true
+    },
+    "placeholder_gate": {
+      "policy": "exclude exact placeholders and composite values whose separated tokens are all configured placeholders; retain mixed placeholder-plus-real values",
+      "separator_pattern": "[/\\\\|,，;；、]+"
+    }
+  },
+  "validator": {
+    "version": "rag_grounding_validator_v1",
+    "implementation": "src/generation/grounding.py",
+    "mode": "detect_and_record_only",
+    "auto_delete": false,
+    "auto_rewrite": false,
+    "auto_regenerate": false,
+    "replaces_human_evaluation": false,
+    "classifications": [
+      "supported_paraphrase",
+      "unsupported_usage_scenario",
+      "unsupported_evaluative_claim",
+      "grounding_failure"
+    ],
+    "implementation_file": {
+      "path": "src/generation/grounding.py",
+      "sha256": "7e1722025f4f2e46d47d024c723becaa129db6f6fe1cf2e894088a048049c247",
+      "size_bytes": 12042
+    }
+  },
+  "generation_parameters": {
+    "max_input_tokens": 2048,
+    "max_new_tokens": 320,
+    "do_sample": true,
+    "temperature": 0.7,
+    "top_p": 0.9,
+    "seed": 42
+  },
+  "frozen_test100": {
+    "path": "data/processed/week1_v3/generation_evaluation_samples.jsonl",
+    "sha256": "ce057356a9a0c48e4298daac545fafb0c83ad07ae2f74f1b1211c834b048a557",
+    "size_bytes": 296348,
+    "sample_count": 100,
+    "content_parsed_or_inspected_during_formal_freeze": false,
+    "formal_generation_executed": false
+  },
+  "quality_audit": {
+    "path": "reports/data/week2_rag_fact_quality_audit.csv",
+    "sha256": "887ca944c9725f92b213687f1fbebbed82effd8f2bf3f3ae8734eb3e8e290ce0",
+    "size_bytes": 365077,
+    "role": "read-only source quality attribution; never changes, deletes, replaces, or resamples frozen records"
+  },
+  "baseline_comparison": {
+    "version": "generation_sampling_prompt_v2",
+    "prompt_version": "baseline_v2",
+    "git_commit": "beaf9d1c77719a2b0d1a4968b05444cc357e8e7e",
+    "manifest": {
+      "path": "reports/formal_baseline_manifest.json",
+      "sha256": "eaf4eeb826b31ce67203dab290cbfd51aa573f9e8dd41386149a8995f30a6871",
+      "size_bytes": 26543
+    },
+    "evaluation_config": {
+      "path": "configs/generation_evaluation_sampling_v2.json",
+      "sha256": "95acac9fbd02026be9228e7bcc677717d3cb1c294e3e27d8c01b914e66139b61",
+      "size_bytes": 431
+    },
+    "metrics": {
+      "path": "reports/generation/evaluation/baseline_metrics_sampling_v2.json",
+      "sha256": "308ed68e74cf6e31fa2e4ba1fa091b9abdacb65bf4e8cc4a31b360c5629edd22",
+      "size_bytes": 1682
+    },
+    "formal_metrics_snapshot": {
+      "core_attribute_hit_rate": 0.8816,
+      "fluency_pass_rate": 0.98,
+      "factual_error_sample_rate": 0.73,
+      "average_factual_errors_per_sample": 1.33,
+      "category_style_pass_rate": 1.0,
+      "structured_output_success_rate": 0.99,
+      "average_generation_seconds": 6.42981
+    }
+  },
+  "code_version": {
+    "git_head_commit": "beaf9d1c77719a2b0d1a4968b05444cc357e8e7e",
+    "git_branch": "Week1",
+    "working_tree_dirty": true,
+    "git_head_role": "repository base commit; current P1 implementation includes uncommitted files and changes",
+    "current_code_primary_identifiers": "formal config SHA256 plus the runtime artifact SHA256 values below",
+    "runtime_artifacts": [
+      {
+        "path": "src/generation/qwen.py",
+        "sha256": "d3fdaa672bfb7e9228c13811322d28f668a2d5ae41faeff58e8b249ccb239675",
+        "size_bytes": 21854
+      },
+      {
+        "path": "src/generation/rag.py",
+        "sha256": "e813a631b78d892a15372e4aa7506f83140f2693b76a24ee0037225876f8d1e0",
+        "size_bytes": 20911
+      },
+      {
+        "path": "src/generation/grounding.py",
+        "sha256": "7e1722025f4f2e46d47d024c723becaa129db6f6fe1cf2e894088a048049c247",
+        "size_bytes": 12042
+      },
+      {
+        "path": "scripts/build_rag_facts.py",
+        "sha256": "82ababad4c3c4d4debf53475f54a7625e6a8be2d160a83f70bf9574a3021e7ff",
+        "size_bytes": 6892
+      },
+      {
+        "path": "scripts/run_rag_validation.py",
+        "sha256": "c36583628fe12b1d25f5fca96a0ae610060f2fdc8c3db328cb691e67c4bce6ce",
+        "size_bytes": 12770
+      },
+      {
+        "path": "scripts/validate_rag_outputs.py",
+        "sha256": "ac44762904c6186262b2ea8c2a3ab401c87b4d7140bb05fba7bf02ff124b007d",
+        "size_bytes": 3156
+      }
+    ],
+    "formal_runtime_artifacts": [
+      {
+        "path": "scripts/run_rag_formal_test.py",
+        "sha256": "a48f1d0d91b25ea5babe7b10fa9512d42211e6174f0d7027b76482794329cbf4",
+        "size_bytes": 22330
+      },
+      {
+        "path": "src/generation/qwen.py",
+        "sha256": "d3fdaa672bfb7e9228c13811322d28f668a2d5ae41faeff58e8b249ccb239675",
+        "size_bytes": 21854
+      },
+      {
+        "path": "src/generation/rag.py",
+        "sha256": "e813a631b78d892a15372e4aa7506f83140f2693b76a24ee0037225876f8d1e0",
+        "size_bytes": 20911
+      },
+      {
+        "path": "src/generation/grounding.py",
+        "sha256": "7e1722025f4f2e46d47d024c723becaa129db6f6fe1cf2e894088a048049c247",
+        "size_bytes": 12042
+      }
+    ]
+  },
+  "environment": {
+    "requirements": {
+      "path": "requirements-generation.txt",
+      "sha256": "89659b0f257c3b32821595bf1b43085ee27ef5bcdc8db1efc66cee39b45be5b7",
+      "size_bytes": 139
+    },
+    "model_cache_note": "The cache path is local development environment configuration and is not a fixed business-code dependency."
+  },
+  "evaluation": {
+    "same_test_data_as_baseline": true,
+    "same_metric_definitions_as_baseline": true,
+    "formal_metrics": [
+      "core_attribute_hit_rate",
+      "fluency_pass_rate",
+      "factual_error_sample_rate",
+      "average_factual_errors_per_sample",
+      "category_style_pass_rate",
+      "structured_output_success_rate",
+      "generation_time_seconds.average",
+      "generation_time_seconds.p95",
+      "generation_time_seconds.maximum"
+    ],
+    "human_review": {
+      "required_rows": 100,
+      "assistant_draft_rows_allowed_for_formal_metrics": 0,
+      "required_fields": [
+        "matched_attribute_count",
+        "fluency_pass",
+        "factual_error_count",
+        "category_style_pass",
+        "review_notes"
+      ],
+      "validator_role": "diagnostic aid only; every row still requires human review"
+    }
+  },
+  "error_attribution": {
+    "Source Fact Error / Source Fact Quality": "source data error, placeholder value, or field displacement",
+    "Retrieval Error": "a correct fact exists in the eligible source facts but is not retrieved",
+    "Grounding Failure": "the Prompt supplies a fact or negative constraint but the model produces contradictory content",
+    "Unsupported Generation": "the Prompt contains no support but the model adds a scenario, effect, or parameter",
+    "supported_paraphrase": "a direct category semantic paraphrase that adds no new fact; not counted as a factual error"
+  },
+  "formal_outputs": {
+    "overwrite_existing": false,
+    "raw_outputs_path": "reports/generation/rag/formal_rag_v1_test100_outputs.json",
+    "validator_report_path": "reports/generation/rag/formal_rag_v1_test100_validator.json",
+    "human_annotations_path": "reports/generation/rag/formal_rag_v1_test100_human_review.csv",
+    "metrics_path": "reports/generation/rag/formal_rag_v1_test100_metrics.json",
+    "report_path": "reports/generation/rag/formal_rag_v1_test100_report.md"
+  },
+  "execution_state": {
+    "formal_test100_executed": false,
+    "test100_fact_units_created": false,
+    "raw_outputs_created": false,
+    "human_annotations_created": false,
+    "formal_metrics_created": false
+  },
+  "execution_prerequisites": [
+    "Use this exact config hash and all pinned dependency hashes.",
+    "Run the dedicated preflight and require it to pass before model loading.",
+    "Execute only through scripts/run_rag_formal_test.py with --confirm-formal-test100; the entry point creates test100 fact units from the frozen source and refuses overwrite.",
+    "Run the frozen test once, then complete human review for all 100 rows before calculating formal metrics."
+  ],
+  "immutability": {
+    "validation_tuning_closed": true,
+    "do_not_change_after_freeze": [
+      "prompt",
+      "RAG policy",
+      "Top-K",
+      "RRF settings",
+      "negative constraints",
+      "validator classification policy",
+      "model revision",
+      "generation parameters",
+      "test100 data",
+      "evaluation metrics"
+    ],
+    "test_result_must_not_trigger_retuning_and_rerun": true
+  },
+  "execution_entrypoint": {
+    "path": "scripts/run_rag_formal_test.py",
+    "sha256": "a48f1d0d91b25ea5babe7b10fa9512d42211e6174f0d7027b76482794329cbf4",
+    "size_bytes": 22330,
+    "preflight_command": "python scripts/run_rag_formal_test.py --preflight-only",
+    "formal_execution_command": "python scripts/run_rag_formal_test.py --confirm-formal-test100",
+    "explicit_confirmation_flag_required": true,
+    "preflight_parses_test100_content": false,
+    "preflight_loads_model": false,
+    "refuses_existing_outputs": true,
+    "local_files_only": true,
+    "sample_filtering": "none; retain all 100 frozen records",
+    "seed_rule": "base_seed_plus_stable_sample_index",
+    "unit_test_module": "tests.test_rag_formal",
+    "unit_tests_passed": 5,
+    "full_suite_tests_passed": 99,
+    "preflight_passed": true,
+    "no_flag_guard_verified": true
+  },
+  "validation_evidence": [
+    {
+      "path": "reports/data/week2_rag_fact_quality_audit.csv",
+      "sha256": "887ca944c9725f92b213687f1fbebbed82effd8f2bf3f3ae8734eb3e8e290ce0",
+      "size_bytes": 365077,
+      "role": "read_only_validation_and_test100_source_quality_audit"
+    },
+    {
+      "path": "reports/generation/rag/validation_fact_build_v2.json",
+      "sha256": "a436fb2aaee0a4edbad54cefa6d76689d983ef9dd21846010ae811c8bc905f89",
+      "size_bytes": 107486,
+      "role": "policy_v3_placeholder_gate_validation_build"
+    },
+    {
+      "path": "configs/generation_rag_validation_v6.json",
+      "sha256": "f1217c35d9e4b489c841d2a4085cc19fb8896da96f160a4016896bbc232c86c3",
+      "size_bytes": 1379,
+      "role": "final_validation_generation_config_before_placeholder_gate_fix"
+    },
+    {
+      "path": "reports/generation/rag/validation_holdout2_rag_v6.json",
+      "sha256": "221d8c4bbf4da1c92dd4b3d5eda4c6fd2930a2b59b0cc1187356fbf13779861d",
+      "size_bytes": 578099,
+      "role": "final_unseen_validation_raw_outputs_before_placeholder_gate_fix"
+    },
+    {
+      "path": "reports/generation/rag/validation_holdout2_rag_v6_review.csv",
+      "sha256": "5e3ec0fc528611b4c15c384d628b73c21056073bae8b5a375d8e6e1deb86d9e0",
+      "size_bytes": 2707,
+      "role": "final_unseen_validation_human_review"
+    },
+    {
+      "path": "reports/generation/rag/validation_holdout2_rag_v6_validator_v1_final.json",
+      "sha256": "33d13f24083276fd625e2f9ec5073ff3c221da7573e301f6a9fab34c5d982cc0",
+      "size_bytes": 19090,
+      "role": "final_deterministic_validator_result"
+    },
+    {
+      "path": "reports/generation/rag/validation_rag_negative_constraints_validator_v1.md",
+      "sha256": "4f8a69fda0ef4d9b4a67cf29941dcfaff72ae20631376c52db79f317627b4375",
+      "size_bytes": 6469,
+      "role": "final_validation_summary"
+    }
+  ],
+  "validation_evidence_note": "The generic composite-placeholder gate was verified by rebuilding validation facts only; Qwen outputs were not regenerated after that gate fix."
+}

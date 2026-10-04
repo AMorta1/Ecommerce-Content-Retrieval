@@ -1,0 +1,324 @@
+{
+  "version": "lora_qlora_low_memory_smoke_v1",
+  "scope": "engineering_smoke_only",
+  "started_at_utc": "2026-10-04T05:21:35.177747+00:00",
+  "status": "failed",
+  "guards": {
+    "formal_training": false,
+    "full_epoch_over_p5_train": false,
+    "project_validation_used": false,
+    "project_test_used": false,
+    "rag_v2_holdout_used": false,
+    "p5_data_mutation_allowed": false,
+    "effect_evaluation_allowed": false
+  },
+  "protected_hashes_before": {
+    "data/processed/lora_instruction_data_v1/train.jsonl": "c31b00f3d19d503b3f7c7529cc2ce7e115143214b0d9ab40f07412becd6a5434",
+    "data/processed/lora_instruction_data_v1/validation.jsonl": "20a32d5f67a8ac6dd0743bb90445522fe28cd4099ed318e71a4f0e8e33fa0a94",
+    "reports/generation/lora/lora_instruction_data_v1_final_manifest.json": "e21b9f278dbe533f038008840bce313564e702b6b5ff7ba5e0f8714156814a5d",
+    "reports/generation/rag/rag_v2_generation_output_holdout_v1.json": "31fae8cbfc53e0f5ef3329cbee6812963b36ddf48e61858d8d9f65fa17ff8da1",
+    "configs/lora_qlora_smoke_v1.json": "fbb3ba16a2dd9c1bc183d738fa93f3b7d55b6b6418c6b83a5e6fbade89a1e92c",
+    "scripts/run_qlora_smoke.py": "26de32d05db70d6e3b9d8c1c40dedf3886f961f740b445959d545433561a28fe"
+  },
+  "environment": {
+    "python": "3.10.21 | packaged by Anaconda, Inc. | (main, Aug 27 2026, 14:35:39) [MSC v.1942 64 bit (AMD64)]",
+    "cuda": "13.0",
+    "gpu": "NVIDIA GeForce RTX 4070 Laptop GPU",
+    "bf16_supported": true,
+    "packages": {
+      "torch": "2.12.0+cu130",
+      "transformers": "5.16.1",
+      "peft": "0.21.1",
+      "bitsandbytes": "0.50.2",
+      "accelerate": "1.14.0"
+    }
+  },
+  "pip_check": {
+    "returncode": 0,
+    "stdout": "No broken requirements found.\n",
+    "stderr": ""
+  },
+  "data": {
+    "split": "lora_train",
+    "all_train_records_tokenized": 3618,
+    "truncation": false,
+    "max_sequence_length": 320,
+    "all_train_max_tokens": 249,
+    "smoke_products": [
+      {
+        "category_l2": "保温杯",
+        "product_id": "563530713946"
+      },
+      {
+        "category_l2": "垃圾桶",
+        "product_id": "616082475147"
+      },
+      {
+        "category_l2": "拖把",
+        "product_id": "581934839340"
+      },
+      {
+        "category_l2": "收纳箱",
+        "product_id": "567783459700"
+      },
+      {
+        "category_l2": "移动电源",
+        "product_id": "590007457808"
+      },
+      {
+        "category_l2": "耳机",
+        "product_id": "571560325386"
+      },
+      {
+        "category_l2": "键盘",
+        "product_id": "584641469378"
+      },
+      {
+        "category_l2": "鼠标",
+        "product_id": "622308119511"
+      }
+    ],
+    "smoke_records": [
+      {
+        "product_id": "563530713946",
+        "task_type": "title",
+        "sequence_tokens": 192
+      },
+      {
+        "product_id": "563530713946",
+        "task_type": "selling_points",
+        "sequence_tokens": 205
+      },
+      {
+        "product_id": "563530713946",
+        "task_type": "short_description",
+        "sequence_tokens": 223
+      },
+      {
+        "product_id": "616082475147",
+        "task_type": "title",
+        "sequence_tokens": 117
+      },
+      {
+        "product_id": "616082475147",
+        "task_type": "selling_points",
+        "sequence_tokens": 131
+      },
+      {
+        "product_id": "616082475147",
+        "task_type": "short_description",
+        "sequence_tokens": 133
+      },
+      {
+        "product_id": "581934839340",
+        "task_type": "title",
+        "sequence_tokens": 136
+      },
+      {
+        "product_id": "581934839340",
+        "task_type": "selling_points",
+        "sequence_tokens": 140
+      },
+      {
+        "product_id": "581934839340",
+        "task_type": "short_description",
+        "sequence_tokens": 151
+      },
+      {
+        "product_id": "567783459700",
+        "task_type": "title",
+        "sequence_tokens": 132
+      },
+      {
+        "product_id": "567783459700",
+        "task_type": "selling_points",
+        "sequence_tokens": 142
+      },
+      {
+        "product_id": "567783459700",
+        "task_type": "short_description",
+        "sequence_tokens": 155
+      },
+      {
+        "product_id": "590007457808",
+        "task_type": "title",
+        "sequence_tokens": 121
+      },
+      {
+        "product_id": "590007457808",
+        "task_type": "selling_points",
+        "sequence_tokens": 133
+      },
+      {
+        "product_id": "590007457808",
+        "task_type": "short_description",
+        "sequence_tokens": 139
+      },
+      {
+        "product_id": "571560325386",
+        "task_type": "title",
+        "sequence_tokens": 140
+      },
+      {
+        "product_id": "571560325386",
+        "task_type": "selling_points",
+        "sequence_tokens": 157
+      },
+      {
+        "product_id": "571560325386",
+        "task_type": "short_description",
+        "sequence_tokens": 164
+      },
+      {
+        "product_id": "584641469378",
+        "task_type": "title",
+        "sequence_tokens": 148
+      },
+      {
+        "product_id": "584641469378",
+        "task_type": "selling_points",
+        "sequence_tokens": 160
+      },
+      {
+        "product_id": "584641469378",
+        "task_type": "short_description",
+        "sequence_tokens": 172
+      },
+      {
+        "product_id": "622308119511",
+        "task_type": "title",
+        "sequence_tokens": 142
+      },
+      {
+        "product_id": "622308119511",
+        "task_type": "selling_points",
+        "sequence_tokens": 154
+      },
+      {
+        "product_id": "622308119511",
+        "task_type": "short_description",
+        "sequence_tokens": 167
+      }
+    ],
+    "stress_records": [
+      {
+        "product_id": "558448633117",
+        "category_l2": "保温杯",
+        "task_type": "short_description",
+        "sequence_tokens": 249,
+        "supervised_tokens": 71
+      },
+      {
+        "product_id": "565379787445",
+        "category_l2": "保温杯",
+        "task_type": "short_description",
+        "sequence_tokens": 249,
+        "supervised_tokens": 72
+      },
+      {
+        "product_id": "558550605843",
+        "category_l2": "保温杯",
+        "task_type": "short_description",
+        "sequence_tokens": 247,
+        "supervised_tokens": 70
+      },
+      {
+        "product_id": "587776118547",
+        "category_l2": "保温杯",
+        "task_type": "short_description",
+        "sequence_tokens": 247,
+        "supervised_tokens": 70
+      },
+      {
+        "product_id": "599150978006",
+        "category_l2": "保温杯",
+        "task_type": "short_description",
+        "sequence_tokens": 247,
+        "supervised_tokens": 71
+      },
+      {
+        "product_id": "603000266496",
+        "category_l2": "保温杯",
+        "task_type": "short_description",
+        "sequence_tokens": 243,
+        "supervised_tokens": 68
+      },
+      {
+        "product_id": "605308510885",
+        "category_l2": "保温杯",
+        "task_type": "short_description",
+        "sequence_tokens": 243,
+        "supervised_tokens": 69
+      },
+      {
+        "product_id": "581345676955",
+        "category_l2": "保温杯",
+        "task_type": "short_description",
+        "sequence_tokens": 241,
+        "supervised_tokens": 67
+      }
+    ]
+  },
+  "model": {
+    "name": "Qwen/Qwen2.5-7B-Instruct",
+    "revision": "a09a35458c702b33eeacc393d103063234e8bc28",
+    "cache_dir": "../.model-cache/huggingface/hub",
+    "local_files_only": true,
+    "load_in_4bit": true,
+    "bnb_4bit_quant_type": "nf4",
+    "bnb_4bit_use_double_quant": true,
+    "bnb_4bit_compute_dtype": "bfloat16",
+    "actual_load_path": "E:\\Projects\\Baidu\\.model-cache\\huggingface\\hub\\models--Qwen--Qwen2.5-7B-Instruct\\snapshots\\a09a35458c702b33eeacc393d103063234e8bc28",
+    "network_access": false
+  },
+  "lora": {
+    "task_type": "CAUSAL_LM",
+    "target_modules": [
+      "q_proj",
+      "v_proj"
+    ],
+    "r": 8,
+    "lora_alpha": 32,
+    "lora_dropout": 0.05,
+    "bias": "none",
+    "trainable_parameters": 2523136
+  },
+  "precision_loss_validation": {
+    "storage_changes": [
+      {
+        "layer": "input_embedding",
+        "before_dtype": "torch.float32",
+        "after_dtype": "torch.bfloat16",
+        "parameters": 544997376,
+        "saved_bytes": 1089994752,
+        "requires_grad": false
+      },
+      {
+        "layer": "output_head",
+        "before_dtype": "torch.float32",
+        "after_dtype": "torch.bfloat16",
+        "parameters": 544997376,
+        "saved_bytes": 1089994752,
+        "requires_grad": false
+      }
+    ],
+    "before_cast_loss": 0.8745776414871216,
+    "after_cast_loss": 0.8883368968963623,
+    "precision_absolute_loss_delta": 0.013759255409240723,
+    "dense_loss": 0.8883368968963623,
+    "dense_chunk_absolute_loss_delta": 0.0,
+    "actual_lora_gradient_max_absolute_delta": 0.00323486328125,
+    "actual_lora_gradient_relative_l2": 0.010361230127885104,
+    "actual_lora_gradient_close": false,
+    "validation_memory": {
+      "allocated_mib": 5328.7,
+      "reserved_mib": 9644.0,
+      "peak_allocated_mib": 8453.8,
+      "peak_reserved_mib": 9644.0
+    }
+  },
+  "failed_at_utc": "2026-10-04T05:22:11.575137+00:00",
+  "failure_stage": "loading_precision_validation",
+  "error": "Actual LoRA gradients differ beyond tolerance: max=0.00323486328125, relative_l2=0.010361230127885104",
+  "traceback": "Traceback (most recent call last):\n  File \"E:\\Projects\\Baidu\\Ecommerce-Content-Retrieval\\scripts\\run_qlora_low_memory_smoke.py\", line 285, in run\n    raise RuntimeError(f\"Actual LoRA gradients differ beyond tolerance: max={maximum_delta}, relative_l2={relative_l2}\")\nRuntimeError: Actual LoRA gradients differ beyond tolerance: max=0.00323486328125, relative_l2=0.010361230127885104\n"
+}

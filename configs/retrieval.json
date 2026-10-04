@@ -5,7 +5,21 @@
   "dataset_path": "data/processed/week1_v3/multimodal/products.jsonl",
   "features_path": "artifacts/features/ernie_vil_week1_v3.npy",
   "index_path": "artifacts/indexes/ernie_vil_week1_v3.faiss",
+  "text_features_path": "artifacts/features/ernie_vil_week1_v3_text.npy",
+  "text_index_path": "artifacts/indexes/ernie_vil_week1_v3_text.faiss",
+  "fused_features_path": "artifacts/features/ernie_vil_week1_v3_fused.npy",
+  "fused_index_path": "artifacts/indexes/ernie_vil_week1_v3_fused.faiss",
   "metadata_path": "artifacts/indexes/ernie_vil_week1_v3_metadata.jsonl",
   "report_path": "reports/retrieval/baseline/index_build.json",
+  "feature_library_report_path": "reports/retrieval/baseline/feature_library.json",
+  "product_text_fields": ["title", "description"],
+  "fusion_weights": {
+    "text": 0.5,
+    "image": 0.5
+  },
+  "default_catalog_feature_by_query_mode": {
+    "text": "image",
+    "image": "text"
+  },
   "default_top_k": 5
 }

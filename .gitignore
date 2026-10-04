@@ -27,7 +27,11 @@ Thumbs.db
 /data/images/
 /data/interim/
 /data/raw/
-/artifacts/
 
 # Local coding-assistant instructions
 /AGENTS.md
+
+# Local handoff and working plan
+/handoff.md
+/Plan.md
+

@@ -1,0 +1,41 @@
+{
+  "version": "rag_v1_formal",
+  "outputs_path": "reports/generation/rag/formal_rag_v1_test100_outputs.json",
+  "expected_outputs_sha256": "36edf46d4a4db42254713a823265a36937439860e3c3593dad86a37976bbc298",
+  "expected_scope": "formal_test100",
+  "expected_sample_count": 100,
+  "require_formal_test100_executed": true,
+  "annotation_path": "reports/generation/rag/formal_rag_v1_test100_human_review.csv",
+  "metrics_path": "reports/generation/rag/formal_rag_v1_test100_metrics.json",
+  "validator_path": "reports/generation/rag/formal_rag_v1_test100_validator.json",
+  "expected_validator_sha256": "2c83d36d5da7b3bd7fd0f6e96e3c405e53e9169a94f237ee5930a9be92339d36",
+  "fact_units_path": "data/processed/week2_rag_formal_v1/test100_fact_units.jsonl",
+  "expected_fact_units_sha256": "5deb2934bbe9500235c034a700d89ba0c5ea6920dd2c37cb3eaeeb051a94b3b8",
+  "quality_audit_path": "reports/data/week2_rag_fact_quality_audit.csv",
+  "expected_quality_audit_sha256": "887ca944c9725f92b213687f1fbebbed82effd8f2bf3f3ae8734eb3e8e290ce0",
+  "annotation_schema": "rag_v1_formal_with_error_attribution_v1",
+  "required_attribution_fields": [
+    "source_fact_quality_count",
+    "retrieval_error_count",
+    "grounding_failure_count",
+    "unsupported_generation_count",
+    "supported_paraphrase_count"
+  ],
+  "targets": {
+    "core_attribute_hit_rate": 0.75,
+    "fluency_pass_rate": 0.8,
+    "average_generation_seconds": 12.0
+  },
+  "human_review_instructions": {
+    "matched_attribute_count": "按 attribute_checklist 逐项确认输出是否命中，分母与 Baseline 保持一致。",
+    "fluency_pass": "标题、三条卖点和短详情整体通顺填1，否则填0。",
+    "factual_error_count": "只统计 Grounding Failure 与 Unsupported Generation 的错误总数。",
+    "category_style_pass": "符合对应一级品类表达风格填1，否则填0。",
+    "source_fact_quality_count": "源属性错误、占位值或字段错位数量；用于归因，不计入模型事实错误。",
+    "retrieval_error_count": "正确且合格的事实存在但未进入 RAG 上下文的数量；用于归因。",
+    "grounding_failure_count": "Prompt 已提供事实或否定约束，但输出生成相反内容的数量。",
+    "unsupported_generation_count": "Prompt 无依据而新增场景、效果或参数的数量。",
+    "supported_paraphrase_count": "合理品类直接语义释义数量，不计事实错误。",
+    "review_notes": "记录具体短语、依据和疑似边界情况；不得直接复制 validator 结论代替人工判断。"
+  }
+}

@@ -1,0 +1,48 @@
+{
+  "version": "lora_qlora_low_memory_smoke_v1",
+  "scope": "engineering_smoke_only",
+  "reference_config": "configs/lora_qlora_smoke_v1.json",
+  "reference_config_sha256": "fbb3ba16a2dd9c1bc183d738fa93f3b7d55b6b6418c6b83a5e6fbade89a1e92c",
+  "output_directory": "reports/generation/lora/p6_low_memory_smoke_v1_retry4",
+  "adapter_directory": "artifacts/lora/p6_low_memory_smoke_v1_retry4/adapter",
+  "prior_failure_report": "reports/generation/lora/p6_low_memory_smoke_v1/failure_report.json",
+  "precision_reference_report": "reports/generation/lora/p6_low_memory_smoke_v1_retry1/smoke_report.json",
+  "precision_reference_sha256": "7a8d62e8f1b4738c372c5d4aeba368cd51d4fc4bd956ee0ac68e9d9b761605c7",
+  "precision": {
+    "initialization": "cpu_stage_frozen_embedding_and_head_during_peft_fp32_preparation",
+    "frozen_embedding_dtype": "bfloat16",
+    "frozen_head_dtype": "bfloat16",
+    "norm_dtype": "float32",
+    "trainable_lora_dtype": "float32",
+    "autocast_dtype": "bfloat16",
+    "gradient_checkpointing_use_reentrant": false
+  },
+  "loss": {
+    "implementation": "native_shape_bf16_logits_assistant_only_chunked_fp32_mean_causal_cross_entropy",
+    "chunk_tokens": 16,
+    "loss_absolute_tolerance": 0.00002,
+    "loss_relative_tolerance": 0.00002,
+    "gradient_absolute_tolerance": 0.00002,
+    "gradient_relative_tolerance": 0.00002,
+    "precision_change_max_absolute_loss_delta": 0.05
+  },
+  "stress": {
+    "selection": "top_8_lora_train_records_by_token_length_then_product_id_task_type",
+    "records": 8,
+    "repeats": 8,
+    "micro_steps": 64,
+    "optimizer_steps": 8,
+    "max_allocated_growth_mib": 128,
+    "minimum_sampled_device_free_mib": 512,
+    "maximum_sampled_process_shared_mib": 128
+  },
+  "guards": {
+    "formal_training": false,
+    "full_epoch_over_p5_train": false,
+    "project_validation_used": false,
+    "project_test_used": false,
+    "rag_v2_holdout_used": false,
+    "p5_data_mutation_allowed": false,
+    "effect_evaluation_allowed": false
+  }
+}

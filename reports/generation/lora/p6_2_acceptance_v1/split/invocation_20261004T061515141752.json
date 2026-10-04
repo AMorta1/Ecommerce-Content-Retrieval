@@ -1,0 +1,2930 @@
+{
+  "status": "passed",
+  "mode": "acceptance",
+  "started_at_utc": "2026-10-04T06:15:15.141752+00:00",
+  "pid": 20612,
+  "counts": {
+    "micro_steps_per_epoch": 3618,
+    "optimizer_steps_per_epoch": 453,
+    "total_optimizer_steps": 1359,
+    "last_group_records": 2
+  },
+  "config_sha256": "1afb8ed3ecca91aa3d8bdd55fb5e456dbb9a60deef8d52f4805c70cc24d7d1e0",
+  "project_validation_read": false,
+  "project_test_read": false,
+  "rag_holdout_read": false,
+  "identity": {
+    "run_kind": "acceptance_only",
+    "config": {
+      "version": "lora_qlora_train_v1",
+      "status": "p6_2_candidate_pending_final_full_training_confirmation",
+      "execution": {
+        "default_mode": "prepare",
+        "full_training_requires_explicit_cli_confirmation": true,
+        "acceptance_max_global_steps": 4,
+        "acceptance_is_quality_experiment": false
+      },
+      "data": {
+        "version": "lora_instruction_data_v1",
+        "manifest": "reports/generation/lora/lora_instruction_data_v1_final_manifest.json",
+        "manifest_sha256": "e21b9f278dbe533f038008840bce313564e702b6b5ff7ba5e0f8714156814a5d",
+        "template_version": "lora_copy_templates_v1",
+        "lora_train": {
+          "path": "data/processed/lora_instruction_data_v1/train.jsonl",
+          "sha256": "c31b00f3d19d503b3f7c7529cc2ce7e115143214b0d9ab40f07412becd6a5434",
+          "source_split": "train",
+          "records": 3618,
+          "products": 1206
+        },
+        "lora_train_dev": {
+          "path": "data/processed/lora_instruction_data_v1/validation.jsonl",
+          "sha256": "20a32d5f67a8ac6dd0743bb90445522fe28cd4099ed318e71a4f0e8e33fa0a94",
+          "source_split": "validation",
+          "records": 402,
+          "products": 134
+        },
+        "task_types": [
+          "title",
+          "selling_points",
+          "short_description"
+        ]
+      },
+      "model": {
+        "name": "Qwen/Qwen2.5-7B-Instruct",
+        "revision": "a09a35458c702b33eeacc393d103063234e8bc28",
+        "cache_dir": "../.model-cache/huggingface/hub",
+        "offline": true,
+        "load_in_4bit": true,
+        "quant_type": "nf4",
+        "double_quant": true,
+        "compute_dtype": "bfloat16",
+        "tokenizer_config_sha256": "5b5d4f65d0acd3b2d56a35b56d374a36cbc1c8fa5cf3b3febbbfabf22f359583",
+        "model_config_sha256": "7463bb0ea78315365e6c6b74de4e73bbcc8359dfb0c5a737584e077d42c0b03c"
+      },
+      "lora": {
+        "task_type": "CAUSAL_LM",
+        "target_modules": [
+          "q_proj",
+          "v_proj"
+        ],
+        "r": 8,
+        "lora_alpha": 32,
+        "lora_dropout": 0.05,
+        "bias": "none",
+        "expected_trainable_parameters": 2523136
+      },
+      "engineering": {
+        "reference_smoke_config": "configs/lora_qlora_low_memory_smoke_v1.json",
+        "reference_smoke_config_sha256": "10d5782a280201923eed92d08243d359d99f5d41ce78ff1f3032f6b0653eb582",
+        "memory_module_sha256": "9b4d9a72248dca51ec825d18b05833af3a0f3f8f1bb7b3b8a3a3c4767323f848",
+        "frozen_embedding_head_dtype": "bfloat16",
+        "norm_and_trainable_lora_dtype": "float32",
+        "autocast_dtype": "bfloat16",
+        "initialization": "cpu_stage_large_frozen_layers_during_peft_preparation",
+        "loss": "native_shape_bf16_logits_assistant_only_chunked_fp32_mean_causal_cross_entropy",
+        "loss_chunk_tokens": 16,
+        "micro_batch_size": 1,
+        "gradient_accumulation_steps": 8,
+        "max_sequence_length": 320,
+        "truncation": false,
+        "fixed_length_padding": false,
+        "gradient_checkpointing": true,
+        "gradient_checkpointing_use_reentrant": false,
+        "use_cache": false
+      },
+      "training": {
+        "seed": 42,
+        "epochs": 3,
+        "shuffle": "python_random_local_seed_plus_epoch",
+        "optimizer": "torch.optim.AdamW",
+        "learning_rate": 0.0002,
+        "betas": [
+          0.9,
+          0.999
+        ],
+        "eps": 1e-08,
+        "weight_decay": 0.01,
+        "max_grad_norm": null,
+        "scheduler": "constant_lambda_1",
+        "warmup_steps": 0,
+        "partial_accumulation": "normalize_by_actual_records_in_group",
+        "early_stopping": false
+      },
+      "evaluation": {
+        "dataset": "lora_train_dev",
+        "frequency": "each_epoch_end",
+        "metric": "mean_per_record_assistant_token_causal_cross_entropy",
+        "model_selection": "lowest_dev_loss",
+        "task_type_breakdown": true,
+        "batch_size": 1,
+        "no_grad": true
+      },
+      "checkpoint": {
+        "save_steps": 151,
+        "save_at_epoch_end": true,
+        "keep": "latest_and_best",
+        "acceptance_keep": "all_bounded_checkpoints",
+        "save_full_base": false,
+        "save_optimizer_scheduler_rng": true,
+        "resume_only_complete_latest_checkpoint": true
+      },
+      "output": {
+        "directory": "artifacts/lora/lora_v1",
+        "report_directory": "reports/generation/lora/lora_v1_training"
+      },
+      "guards": {
+        "project_validation_read": false,
+        "project_test_read": false,
+        "rag_holdout_read": false,
+        "p5_mutation": false,
+        "smoke_adapter_initialization": false
+      }
+    },
+    "config_sha256": "1afb8ed3ecca91aa3d8bdd55fb5e456dbb9a60deef8d52f4805c70cc24d7d1e0",
+    "base_snapshot": "E:\\Projects\\Baidu\\.model-cache\\huggingface\\hub\\models--Qwen--Qwen2.5-7B-Instruct\\snapshots\\a09a35458c702b33eeacc393d103063234e8bc28",
+    "chat_template_sha256": "2e2d2512cfe46af53dc1eed45368ecaab26ac4461c480e6b69fe571cf0ceaa75",
+    "environment": {
+      "python": "3.10.21 | packaged by Anaconda, Inc. | (main, Aug 27 2026, 14:35:39) [MSC v.1942 64 bit (AMD64)]",
+      "packages": {
+        "torch": "2.12.0+cu130",
+        "transformers": "5.16.1",
+        "peft": "0.21.1",
+        "bitsandbytes": "0.50.2",
+        "accelerate": "1.14.0",
+        "safetensors": "0.8.0"
+      },
+      "cuda": "13.0",
+      "gpu": "NVIDIA GeForce RTX 4070 Laptop GPU",
+      "deterministic_algorithms": false
+    },
+    "code_sha256": {
+      "scripts/train_lora.py": "669876c69ae689b9449aa4a68064f33f8681fdbf8ffe94ae5eda7cb53b07b019",
+      "src/generation/lora_training.py": "9ac9587e71b6f892bb3c429f7726ff17edddc354ee57372c22da48ccd22e107e",
+      "src/generation/qlora_memory.py": "9b4d9a72248dca51ec825d18b05833af3a0f3f8f1bb7b3b8a3a3c4767323f848"
+    }
+  },
+  "trainable_parameters": 2523136,
+  "model_signature": {
+    "trainable": {
+      "base_model.model.model.layers.0.self_attn.q_proj.lora_A.default.weight": "torch.float32",
+      "base_model.model.model.layers.0.self_attn.q_proj.lora_B.default.weight": "torch.float32",
+      "base_model.model.model.layers.0.self_attn.v_proj.lora_A.default.weight": "torch.float32",
+      "base_model.model.model.layers.0.self_attn.v_proj.lora_B.default.weight": "torch.float32",
+      "base_model.model.model.layers.1.self_attn.q_proj.lora_A.default.weight": "torch.float32",
+      "base_model.model.model.layers.1.self_attn.q_proj.lora_B.default.weight": "torch.float32",
+      "base_model.model.model.layers.1.self_attn.v_proj.lora_A.default.weight": "torch.float32",
+      "base_model.model.model.layers.1.self_attn.v_proj.lora_B.default.weight": "torch.float32",
+      "base_model.model.model.layers.2.self_attn.q_proj.lora_A.default.weight": "torch.float32",
+      "base_model.model.model.layers.2.self_attn.q_proj.lora_B.default.weight": "torch.float32",
+      "base_model.model.model.layers.2.self_attn.v_proj.lora_A.default.weight": "torch.float32",
+      "base_model.model.model.layers.2.self_attn.v_proj.lora_B.default.weight": "torch.float32",
+      "base_model.model.model.layers.3.self_attn.q_proj.lora_A.default.weight": "torch.float32",
+      "base_model.model.model.layers.3.self_attn.q_proj.lora_B.default.weight": "torch.float32",
+      "base_model.model.model.layers.3.self_attn.v_proj.lora_A.default.weight": "torch.float32",
+      "base_model.model.model.layers.3.self_attn.v_proj.lora_B.default.weight": "torch.float32",
+      "base_model.model.model.layers.4.self_attn.q_proj.lora_A.default.weight": "torch.float32",
+      "base_model.model.model.layers.4.self_attn.q_proj.lora_B.default.weight": "torch.float32",
+      "base_model.model.model.layers.4.self_attn.v_proj.lora_A.default.weight": "torch.float32",
+      "base_model.model.model.layers.4.self_attn.v_proj.lora_B.default.weight": "torch.float32",
+      "base_model.model.model.layers.5.self_attn.q_proj.lora_A.default.weight": "torch.float32",
+      "base_model.model.model.layers.5.self_attn.q_proj.lora_B.default.weight": "torch.float32",
+      "base_model.model.model.layers.5.self_attn.v_proj.lora_A.default.weight": "torch.float32",
+      "base_model.model.model.layers.5.self_attn.v_proj.lora_B.default.weight": "torch.float32",
+      "base_model.model.model.layers.6.self_attn.q_proj.lora_A.default.weight": "torch.float32",
+      "base_model.model.model.layers.6.self_attn.q_proj.lora_B.default.weight": "torch.float32",
+      "base_model.model.model.layers.6.self_attn.v_proj.lora_A.default.weight": "torch.float32",
+      "base_model.model.model.layers.6.self_attn.v_proj.lora_B.default.weight": "torch.float32",
+      "base_model.model.model.layers.7.self_attn.q_proj.lora_A.default.weight": "torch.float32",
+      "base_model.model.model.layers.7.self_attn.q_proj.lora_B.default.weight": "torch.float32",
+      "base_model.model.model.layers.7.self_attn.v_proj.lora_A.default.weight": "torch.float32",
+      "base_model.model.model.layers.7.self_attn.v_proj.lora_B.default.weight": "torch.float32",
+      "base_model.model.model.layers.8.self_attn.q_proj.lora_A.default.weight": "torch.float32",
+      "base_model.model.model.layers.8.self_attn.q_proj.lora_B.default.weight": "torch.float32",
+      "base_model.model.model.layers.8.self_attn.v_proj.lora_A.default.weight": "torch.float32",
+      "base_model.model.model.layers.8.self_attn.v_proj.lora_B.default.weight": "torch.float32",
+      "base_model.model.model.layers.9.self_attn.q_proj.lora_A.default.weight": "torch.float32",
+      "base_model.model.model.layers.9.self_attn.q_proj.lora_B.default.weight": "torch.float32",
+      "base_model.model.model.layers.9.self_attn.v_proj.lora_A.default.weight": "torch.float32",
+      "base_model.model.model.layers.9.self_attn.v_proj.lora_B.default.weight": "torch.float32",
+      "base_model.model.model.layers.10.self_attn.q_proj.lora_A.default.weight": "torch.float32",
+      "base_model.model.model.layers.10.self_attn.q_proj.lora_B.default.weight": "torch.float32",
+      "base_model.model.model.layers.10.self_attn.v_proj.lora_A.default.weight": "torch.float32",
+      "base_model.model.model.layers.10.self_attn.v_proj.lora_B.default.weight": "torch.float32",
+      "base_model.model.model.layers.11.self_attn.q_proj.lora_A.default.weight": "torch.float32",
+      "base_model.model.model.layers.11.self_attn.q_proj.lora_B.default.weight": "torch.float32",
+      "base_model.model.model.layers.11.self_attn.v_proj.lora_A.default.weight": "torch.float32",
+      "base_model.model.model.layers.11.self_attn.v_proj.lora_B.default.weight": "torch.float32",
+      "base_model.model.model.layers.12.self_attn.q_proj.lora_A.default.weight": "torch.float32",
+      "base_model.model.model.layers.12.self_attn.q_proj.lora_B.default.weight": "torch.float32",
+      "base_model.model.model.layers.12.self_attn.v_proj.lora_A.default.weight": "torch.float32",
+      "base_model.model.model.layers.12.self_attn.v_proj.lora_B.default.weight": "torch.float32",
+      "base_model.model.model.layers.13.self_attn.q_proj.lora_A.default.weight": "torch.float32",
+      "base_model.model.model.layers.13.self_attn.q_proj.lora_B.default.weight": "torch.float32",
+      "base_model.model.model.layers.13.self_attn.v_proj.lora_A.default.weight": "torch.float32",
+      "base_model.model.model.layers.13.self_attn.v_proj.lora_B.default.weight": "torch.float32",
+      "base_model.model.model.layers.14.self_attn.q_proj.lora_A.default.weight": "torch.float32",
+      "base_model.model.model.layers.14.self_attn.q_proj.lora_B.default.weight": "torch.float32",
+      "base_model.model.model.layers.14.self_attn.v_proj.lora_A.default.weight": "torch.float32",
+      "base_model.model.model.layers.14.self_attn.v_proj.lora_B.default.weight": "torch.float32",
+      "base_model.model.model.layers.15.self_attn.q_proj.lora_A.default.weight": "torch.float32",
+      "base_model.model.model.layers.15.self_attn.q_proj.lora_B.default.weight": "torch.float32",
+      "base_model.model.model.layers.15.self_attn.v_proj.lora_A.default.weight": "torch.float32",
+      "base_model.model.model.layers.15.self_attn.v_proj.lora_B.default.weight": "torch.float32",
+      "base_model.model.model.layers.16.self_attn.q_proj.lora_A.default.weight": "torch.float32",
+      "base_model.model.model.layers.16.self_attn.q_proj.lora_B.default.weight": "torch.float32",
+      "base_model.model.model.layers.16.self_attn.v_proj.lora_A.default.weight": "torch.float32",
+      "base_model.model.model.layers.16.self_attn.v_proj.lora_B.default.weight": "torch.float32",
+      "base_model.model.model.layers.17.self_attn.q_proj.lora_A.default.weight": "torch.float32",
+      "base_model.model.model.layers.17.self_attn.q_proj.lora_B.default.weight": "torch.float32",
+      "base_model.model.model.layers.17.self_attn.v_proj.lora_A.default.weight": "torch.float32",
+      "base_model.model.model.layers.17.self_attn.v_proj.lora_B.default.weight": "torch.float32",
+      "base_model.model.model.layers.18.self_attn.q_proj.lora_A.default.weight": "torch.float32",
+      "base_model.model.model.layers.18.self_attn.q_proj.lora_B.default.weight": "torch.float32",
+      "base_model.model.model.layers.18.self_attn.v_proj.lora_A.default.weight": "torch.float32",
+      "base_model.model.model.layers.18.self_attn.v_proj.lora_B.default.weight": "torch.float32",
+      "base_model.model.model.layers.19.self_attn.q_proj.lora_A.default.weight": "torch.float32",
+      "base_model.model.model.layers.19.self_attn.q_proj.lora_B.default.weight": "torch.float32",
+      "base_model.model.model.layers.19.self_attn.v_proj.lora_A.default.weight": "torch.float32",
+      "base_model.model.model.layers.19.self_attn.v_proj.lora_B.default.weight": "torch.float32",
+      "base_model.model.model.layers.20.self_attn.q_proj.lora_A.default.weight": "torch.float32",
+      "base_model.model.model.layers.20.self_attn.q_proj.lora_B.default.weight": "torch.float32",
+      "base_model.model.model.layers.20.self_attn.v_proj.lora_A.default.weight": "torch.float32",
+      "base_model.model.model.layers.20.self_attn.v_proj.lora_B.default.weight": "torch.float32",
+      "base_model.model.model.layers.21.self_attn.q_proj.lora_A.default.weight": "torch.float32",
+      "base_model.model.model.layers.21.self_attn.q_proj.lora_B.default.weight": "torch.float32",
+      "base_model.model.model.layers.21.self_attn.v_proj.lora_A.default.weight": "torch.float32",
+      "base_model.model.model.layers.21.self_attn.v_proj.lora_B.default.weight": "torch.float32",
+      "base_model.model.model.layers.22.self_attn.q_proj.lora_A.default.weight": "torch.float32",
+      "base_model.model.model.layers.22.self_attn.q_proj.lora_B.default.weight": "torch.float32",
+      "base_model.model.model.layers.22.self_attn.v_proj.lora_A.default.weight": "torch.float32",
+      "base_model.model.model.layers.22.self_attn.v_proj.lora_B.default.weight": "torch.float32",
+      "base_model.model.model.layers.23.self_attn.q_proj.lora_A.default.weight": "torch.float32",
+      "base_model.model.model.layers.23.self_attn.q_proj.lora_B.default.weight": "torch.float32",
+      "base_model.model.model.layers.23.self_attn.v_proj.lora_A.default.weight": "torch.float32",
+      "base_model.model.model.layers.23.self_attn.v_proj.lora_B.default.weight": "torch.float32",
+      "base_model.model.model.layers.24.self_attn.q_proj.lora_A.default.weight": "torch.float32",
+      "base_model.model.model.layers.24.self_attn.q_proj.lora_B.default.weight": "torch.float32",
+      "base_model.model.model.layers.24.self_attn.v_proj.lora_A.default.weight": "torch.float32",
+      "base_model.model.model.layers.24.self_attn.v_proj.lora_B.default.weight": "torch.float32",
+      "base_model.model.model.layers.25.self_attn.q_proj.lora_A.default.weight": "torch.float32",
+      "base_model.model.model.layers.25.self_attn.q_proj.lora_B.default.weight": "torch.float32",
+      "base_model.model.model.layers.25.self_attn.v_proj.lora_A.default.weight": "torch.float32",
+      "base_model.model.model.layers.25.self_attn.v_proj.lora_B.default.weight": "torch.float32",
+      "base_model.model.model.layers.26.self_attn.q_proj.lora_A.default.weight": "torch.float32",
+      "base_model.model.model.layers.26.self_attn.q_proj.lora_B.default.weight": "torch.float32",
+      "base_model.model.model.layers.26.self_attn.v_proj.lora_A.default.weight": "torch.float32",
+      "base_model.model.model.layers.26.self_attn.v_proj.lora_B.default.weight": "torch.float32",
+      "base_model.model.model.layers.27.self_attn.q_proj.lora_A.default.weight": "torch.float32",
+      "base_model.model.model.layers.27.self_attn.q_proj.lora_B.default.weight": "torch.float32",
+      "base_model.model.model.layers.27.self_attn.v_proj.lora_A.default.weight": "torch.float32",
+      "base_model.model.model.layers.27.self_attn.v_proj.lora_B.default.weight": "torch.float32"
+    },
+    "embedding": "torch.bfloat16",
+    "head": "torch.bfloat16",
+    "norm_dtypes": [
+      "torch.float32"
+    ],
+    "use_cache": false,
+    "quantization": {
+      "quant_method": "bitsandbytes",
+      "_load_in_8bit": false,
+      "_load_in_4bit": true,
+      "llm_int8_threshold": 6.0,
+      "llm_int8_skip_modules": null,
+      "llm_int8_enable_fp32_cpu_offload": false,
+      "llm_int8_has_fp16_weight": false,
+      "bnb_4bit_quant_type": "nf4",
+      "bnb_4bit_use_double_quant": true,
+      "bnb_4bit_compute_dtype": "bfloat16",
+      "bnb_4bit_quant_storage": "uint8",
+      "load_in_4bit": true,
+      "load_in_8bit": false
+    }
+  },
+  "initialization_memory": {
+    "allocated_mib": 5312.7,
+    "reserved_mib": 5482.0,
+    "peak_allocated_mib": 5425.5,
+    "peak_reserved_mib": 5482.0
+  },
+  "precision_storage_changes": [
+    {
+      "layer": "input_embedding",
+      "before_dtype": "torch.float32",
+      "after_dtype": "torch.bfloat16",
+      "parameters": 544997376,
+      "saved_bytes": 1089994752,
+      "requires_grad": false
+    },
+    {
+      "layer": "output_head",
+      "before_dtype": "torch.float32",
+      "after_dtype": "torch.bfloat16",
+      "parameters": 544997376,
+      "saved_bytes": 1089994752,
+      "requires_grad": false
+    }
+  ],
+  "resume": {
+    "restored_global_step": 2,
+    "restored_epoch": 0,
+    "restored_cursor": 16,
+    "optimizer_digest": "70b6b81709c3bbc1ab788b896d88f8f934934f5b172368947986e276d9f28560",
+    "scheduler_digest": "eb024d54fab26a5e3421b5702e486cc13c410defbebe78452926bfce482f10c4",
+    "rng_digest": "570fb9f4a2b8c69ba60bbe74ee02b11af699856ccdc8971ec1dfb2558364aebb",
+    "optimizer_scheduler_rng_restored": true
+  },
+  "start_state": {
+    "epoch": 0,
+    "cursor": 16,
+    "global_step": 2,
+    "global_micro_step": 16,
+    "train_seconds": 8.54460409999956,
+    "epoch_train_loss_sum": 24.10124772787094,
+    "epoch_train_records": 16,
+    "train_peak_allocated_mib": 5647.7,
+    "best": null,
+    "completed_epochs": 0
+  },
+  "completed_at_utc": "2026-10-04T06:16:52.476221+00:00",
+  "wall_seconds": 97.3346204999998,
+  "final_state": {
+    "epoch": 0,
+    "cursor": 32,
+    "global_step": 4,
+    "global_micro_step": 32,
+    "train_seconds": 17.33124769999995,
+    "epoch_train_loss_sum": 42.773590207099915,
+    "epoch_train_records": 32,
+    "train_peak_allocated_mib": 5647.7,
+    "best": null,
+    "completed_epochs": 0
+  },
+  "optimizer_steps": [
+    {
+      "global_step": 3,
+      "epoch": 0.006633499170812604,
+      "cursor": 24,
+      "epoch_order_sha256": "735d304fae2b93a017a7b37540289e7783aa481b938c8ecd8fffaa9da903ff14",
+      "train_loss": 1.3050032630562782,
+      "micro_losses": [
+        2.1186814308166504,
+        0.7452959418296814,
+        1.100075602531433,
+        0.3581838011741638,
+        1.1002647876739502,
+        0.805785596370697,
+        1.899408221244812,
+        2.312330722808838
+      ],
+      "records": [
+        {
+          "product_id": "603298966476",
+          "task_type": "selling_points"
+        },
+        {
+          "product_id": "603075077592",
+          "task_type": "short_description"
+        },
+        {
+          "product_id": "610601747118",
+          "task_type": "short_description"
+        },
+        {
+          "product_id": "599924687609",
+          "task_type": "title"
+        },
+        {
+          "product_id": "623752954950",
+          "task_type": "selling_points"
+        },
+        {
+          "product_id": "610392298842",
+          "task_type": "title"
+        },
+        {
+          "product_id": "621593611171",
+          "task_type": "selling_points"
+        },
+        {
+          "product_id": "622308119511",
+          "task_type": "title"
+        }
+      ],
+      "actual_accumulation_records": 8,
+      "learning_rate": 0.0002,
+      "scheduler_last_epoch": 3,
+      "seconds": 4.638054900000498,
+      "memory": {
+        "allocated_mib": 5347.9,
+        "reserved_mib": 5772.0,
+        "peak_allocated_mib": 5638.9,
+        "peak_reserved_mib": 5772.0
+      }
+    },
+    {
+      "global_step": 4,
+      "epoch": 0.008844665561083471,
+      "cursor": 32,
+      "epoch_order_sha256": "735d304fae2b93a017a7b37540289e7783aa481b938c8ecd8fffaa9da903ff14",
+      "train_loss": 1.0290395468473434,
+      "micro_losses": [
+        0.8516553640365601,
+        1.3594738245010376,
+        0.947659969329834,
+        1.2944532632827759,
+        1.1164110898971558,
+        0.8104002475738525,
+        1.5598409175872803,
+        0.29242169857025146
+      ],
+      "records": [
+        {
+          "product_id": "577439914242",
+          "task_type": "short_description"
+        },
+        {
+          "product_id": "611011870033",
+          "task_type": "selling_points"
+        },
+        {
+          "product_id": "618151673608",
+          "task_type": "title"
+        },
+        {
+          "product_id": "593536241796",
+          "task_type": "selling_points"
+        },
+        {
+          "product_id": "609101917683",
+          "task_type": "selling_points"
+        },
+        {
+          "product_id": "589117014444",
+          "task_type": "title"
+        },
+        {
+          "product_id": "609607473295",
+          "task_type": "selling_points"
+        },
+        {
+          "product_id": "561864046537",
+          "task_type": "short_description"
+        }
+      ],
+      "actual_accumulation_records": 8,
+      "learning_rate": 0.0002,
+      "scheduler_last_epoch": 4,
+      "seconds": 4.148588699999891,
+      "memory": {
+        "allocated_mib": 5347.9,
+        "reserved_mib": 5772.0,
+        "peak_allocated_mib": 5605.4,
+        "peak_reserved_mib": 5772.0
+      }
+    }
+  ],
+  "evaluations": [
+    {
+      "dataset": "lora_train_dev",
+      "records": 402,
+      "dev_loss": 0.9523777201753202,
+      "task_losses": {
+        "title": 1.1990867374715075,
+        "selling_points": 0.9366371760617441,
+        "short_description": 0.721409246992709
+      },
+      "no_grad": true,
+      "parameter_updates": 0,
+      "configuration_unchanged": true,
+      "seconds": 72.26327279999987,
+      "memory": {
+        "allocated_mib": 5347.9,
+        "reserved_mib": 5772.0,
+        "peak_allocated_mib": 5535.6,
+        "peak_reserved_mib": 5772.0
+      },
+      "records_detail": [
+        {
+          "product_id": "42700923397",
+          "task_type": "title",
+          "sequence_tokens": 188,
+          "loss": 0.5066494345664978
+        },
+        {
+          "product_id": "42700923397",
+          "task_type": "selling_points",
+          "sequence_tokens": 203,
+          "loss": 0.477424293756485
+        },
+        {
+          "product_id": "42700923397",
+          "task_type": "short_description",
+          "sequence_tokens": 219,
+          "loss": 0.48198145627975464
+        },
+        {
+          "product_id": "544215262255",
+          "task_type": "title",
+          "sequence_tokens": 192,
+          "loss": 0.3877016603946686
+        },
+        {
+          "product_id": "544215262255",
+          "task_type": "selling_points",
+          "sequence_tokens": 205,
+          "loss": 0.45718854665756226
+        },
+        {
+          "product_id": "544215262255",
+          "task_type": "short_description",
+          "sequence_tokens": 223,
+          "loss": 0.3773323595523834
+        },
+        {
+          "product_id": "569332891697",
+          "task_type": "title",
+          "sequence_tokens": 200,
+          "loss": 0.6004343032836914
+        },
+        {
+          "product_id": "569332891697",
+          "task_type": "selling_points",
+          "sequence_tokens": 218,
+          "loss": 0.5471838712692261
+        },
+        {
+          "product_id": "569332891697",
+          "task_type": "short_description",
+          "sequence_tokens": 231,
+          "loss": 0.7572802901268005
+        },
+        {
+          "product_id": "571966598992",
+          "task_type": "title",
+          "sequence_tokens": 194,
+          "loss": 0.5289137959480286
+        },
+        {
+          "product_id": "571966598992",
+          "task_type": "selling_points",
+          "sequence_tokens": 214,
+          "loss": 0.4651133120059967
+        },
+        {
+          "product_id": "571966598992",
+          "task_type": "short_description",
+          "sequence_tokens": 225,
+          "loss": 0.6860343813896179
+        },
+        {
+          "product_id": "572099021724",
+          "task_type": "title",
+          "sequence_tokens": 186,
+          "loss": 0.5521613955497742
+        },
+        {
+          "product_id": "572099021724",
+          "task_type": "selling_points",
+          "sequence_tokens": 202,
+          "loss": 0.5443170666694641
+        },
+        {
+          "product_id": "572099021724",
+          "task_type": "short_description",
+          "sequence_tokens": 211,
+          "loss": 0.9822152853012085
+        },
+        {
+          "product_id": "576003092944",
+          "task_type": "title",
+          "sequence_tokens": 188,
+          "loss": 0.8727338314056396
+        },
+        {
+          "product_id": "576003092944",
+          "task_type": "selling_points",
+          "sequence_tokens": 214,
+          "loss": 0.5186840891838074
+        },
+        {
+          "product_id": "576003092944",
+          "task_type": "short_description",
+          "sequence_tokens": 232,
+          "loss": 0.5659765005111694
+        },
+        {
+          "product_id": "583021815556",
+          "task_type": "title",
+          "sequence_tokens": 174,
+          "loss": 2.706364870071411
+        },
+        {
+          "product_id": "583021815556",
+          "task_type": "selling_points",
+          "sequence_tokens": 210,
+          "loss": 0.5419007539749146
+        },
+        {
+          "product_id": "583021815556",
+          "task_type": "short_description",
+          "sequence_tokens": 226,
+          "loss": 0.6592678427696228
+        },
+        {
+          "product_id": "598272277621",
+          "task_type": "title",
+          "sequence_tokens": 192,
+          "loss": 0.8390997648239136
+        },
+        {
+          "product_id": "598272277621",
+          "task_type": "selling_points",
+          "sequence_tokens": 219,
+          "loss": 0.5336219072341919
+        },
+        {
+          "product_id": "598272277621",
+          "task_type": "short_description",
+          "sequence_tokens": 236,
+          "loss": 0.6654200553894043
+        },
+        {
+          "product_id": "598733376848",
+          "task_type": "title",
+          "sequence_tokens": 181,
+          "loss": 1.0289385318756104
+        },
+        {
+          "product_id": "598733376848",
+          "task_type": "selling_points",
+          "sequence_tokens": 214,
+          "loss": 0.4898015260696411
+        },
+        {
+          "product_id": "598733376848",
+          "task_type": "short_description",
+          "sequence_tokens": 225,
+          "loss": 0.9040756225585938
+        },
+        {
+          "product_id": "600816076253",
+          "task_type": "title",
+          "sequence_tokens": 187,
+          "loss": 0.46374282240867615
+        },
+        {
+          "product_id": "600816076253",
+          "task_type": "selling_points",
+          "sequence_tokens": 204,
+          "loss": 0.4730924367904663
+        },
+        {
+          "product_id": "600816076253",
+          "task_type": "short_description",
+          "sequence_tokens": 219,
+          "loss": 0.42917078733444214
+        },
+        {
+          "product_id": "602274459386",
+          "task_type": "title",
+          "sequence_tokens": 191,
+          "loss": 0.7115837335586548
+        },
+        {
+          "product_id": "602274459386",
+          "task_type": "selling_points",
+          "sequence_tokens": 213,
+          "loss": 0.5131297707557678
+        },
+        {
+          "product_id": "602274459386",
+          "task_type": "short_description",
+          "sequence_tokens": 221,
+          "loss": 0.7709054350852966
+        },
+        {
+          "product_id": "603839482155",
+          "task_type": "title",
+          "sequence_tokens": 194,
+          "loss": 0.3899868428707123
+        },
+        {
+          "product_id": "603839482155",
+          "task_type": "selling_points",
+          "sequence_tokens": 203,
+          "loss": 0.5590977668762207
+        },
+        {
+          "product_id": "603839482155",
+          "task_type": "short_description",
+          "sequence_tokens": 218,
+          "loss": 0.8320420384407043
+        },
+        {
+          "product_id": "605643755235",
+          "task_type": "title",
+          "sequence_tokens": 195,
+          "loss": 0.5259126424789429
+        },
+        {
+          "product_id": "605643755235",
+          "task_type": "selling_points",
+          "sequence_tokens": 212,
+          "loss": 0.5245130658149719
+        },
+        {
+          "product_id": "605643755235",
+          "task_type": "short_description",
+          "sequence_tokens": 230,
+          "loss": 0.46075230836868286
+        },
+        {
+          "product_id": "608666297228",
+          "task_type": "title",
+          "sequence_tokens": 189,
+          "loss": 0.5687918663024902
+        },
+        {
+          "product_id": "608666297228",
+          "task_type": "selling_points",
+          "sequence_tokens": 211,
+          "loss": 0.5087164640426636
+        },
+        {
+          "product_id": "608666297228",
+          "task_type": "short_description",
+          "sequence_tokens": 219,
+          "loss": 0.7244855165481567
+        },
+        {
+          "product_id": "609994832947",
+          "task_type": "title",
+          "sequence_tokens": 192,
+          "loss": 0.3648119270801544
+        },
+        {
+          "product_id": "609994832947",
+          "task_type": "selling_points",
+          "sequence_tokens": 203,
+          "loss": 0.508866012096405
+        },
+        {
+          "product_id": "609994832947",
+          "task_type": "short_description",
+          "sequence_tokens": 217,
+          "loss": 0.8312053084373474
+        },
+        {
+          "product_id": "620889825985",
+          "task_type": "title",
+          "sequence_tokens": 200,
+          "loss": 0.6147416830062866
+        },
+        {
+          "product_id": "620889825985",
+          "task_type": "selling_points",
+          "sequence_tokens": 217,
+          "loss": 0.5119296908378601
+        },
+        {
+          "product_id": "620889825985",
+          "task_type": "short_description",
+          "sequence_tokens": 231,
+          "loss": 0.7589334845542908
+        },
+        {
+          "product_id": "623141060702",
+          "task_type": "title",
+          "sequence_tokens": 193,
+          "loss": 0.7142436504364014
+        },
+        {
+          "product_id": "623141060702",
+          "task_type": "selling_points",
+          "sequence_tokens": 213,
+          "loss": 0.4867740273475647
+        },
+        {
+          "product_id": "623141060702",
+          "task_type": "short_description",
+          "sequence_tokens": 223,
+          "loss": 0.7424429059028625
+        },
+        {
+          "product_id": "624095436207",
+          "task_type": "title",
+          "sequence_tokens": 221,
+          "loss": 0.22681187093257904
+        },
+        {
+          "product_id": "624095436207",
+          "task_type": "selling_points",
+          "sequence_tokens": 236,
+          "loss": 0.5123685002326965
+        },
+        {
+          "product_id": "624095436207",
+          "task_type": "short_description",
+          "sequence_tokens": 269,
+          "loss": 0.531450092792511
+        },
+        {
+          "product_id": "25543616964",
+          "task_type": "title",
+          "sequence_tokens": 113,
+          "loss": 1.2435492277145386
+        },
+        {
+          "product_id": "25543616964",
+          "task_type": "selling_points",
+          "sequence_tokens": 128,
+          "loss": 1.1028634309768677
+        },
+        {
+          "product_id": "25543616964",
+          "task_type": "short_description",
+          "sequence_tokens": 125,
+          "loss": 0.6338072419166565
+        },
+        {
+          "product_id": "26998768780",
+          "task_type": "title",
+          "sequence_tokens": 115,
+          "loss": 1.6198822259902954
+        },
+        {
+          "product_id": "26998768780",
+          "task_type": "selling_points",
+          "sequence_tokens": 129,
+          "loss": 1.3430492877960205
+        },
+        {
+          "product_id": "26998768780",
+          "task_type": "short_description",
+          "sequence_tokens": 131,
+          "loss": 0.5884737372398376
+        },
+        {
+          "product_id": "520488514618",
+          "task_type": "title",
+          "sequence_tokens": 147,
+          "loss": 1.8048263788223267
+        },
+        {
+          "product_id": "520488514618",
+          "task_type": "selling_points",
+          "sequence_tokens": 156,
+          "loss": 1.2065898180007935
+        },
+        {
+          "product_id": "520488514618",
+          "task_type": "short_description",
+          "sequence_tokens": 167,
+          "loss": 0.6255168914794922
+        },
+        {
+          "product_id": "569822918824",
+          "task_type": "title",
+          "sequence_tokens": 133,
+          "loss": 1.630739450454712
+        },
+        {
+          "product_id": "569822918824",
+          "task_type": "selling_points",
+          "sequence_tokens": 146,
+          "loss": 1.218833565711975
+        },
+        {
+          "product_id": "569822918824",
+          "task_type": "short_description",
+          "sequence_tokens": 155,
+          "loss": 0.8604339957237244
+        },
+        {
+          "product_id": "580215420451",
+          "task_type": "title",
+          "sequence_tokens": 140,
+          "loss": 3.009718894958496
+        },
+        {
+          "product_id": "580215420451",
+          "task_type": "selling_points",
+          "sequence_tokens": 153,
+          "loss": 1.3973912000656128
+        },
+        {
+          "product_id": "580215420451",
+          "task_type": "short_description",
+          "sequence_tokens": 162,
+          "loss": 0.9160614013671875
+        },
+        {
+          "product_id": "583120732189",
+          "task_type": "title",
+          "sequence_tokens": 114,
+          "loss": 4.128450393676758
+        },
+        {
+          "product_id": "583120732189",
+          "task_type": "selling_points",
+          "sequence_tokens": 131,
+          "loss": 1.057793140411377
+        },
+        {
+          "product_id": "583120732189",
+          "task_type": "short_description",
+          "sequence_tokens": 136,
+          "loss": 0.33631885051727295
+        },
+        {
+          "product_id": "591357018669",
+          "task_type": "title",
+          "sequence_tokens": 144,
+          "loss": 2.3374431133270264
+        },
+        {
+          "product_id": "591357018669",
+          "task_type": "selling_points",
+          "sequence_tokens": 157,
+          "loss": 1.3837265968322754
+        },
+        {
+          "product_id": "591357018669",
+          "task_type": "short_description",
+          "sequence_tokens": 165,
+          "loss": 1.48610258102417
+        },
+        {
+          "product_id": "596680428670",
+          "task_type": "title",
+          "sequence_tokens": 133,
+          "loss": 3.360253095626831
+        },
+        {
+          "product_id": "596680428670",
+          "task_type": "selling_points",
+          "sequence_tokens": 146,
+          "loss": 1.3040484189987183
+        },
+        {
+          "product_id": "596680428670",
+          "task_type": "short_description",
+          "sequence_tokens": 155,
+          "loss": 0.9202543497085571
+        },
+        {
+          "product_id": "597431937627",
+          "task_type": "title",
+          "sequence_tokens": 143,
+          "loss": 3.6183691024780273
+        },
+        {
+          "product_id": "597431937627",
+          "task_type": "selling_points",
+          "sequence_tokens": 157,
+          "loss": 1.3598564863204956
+        },
+        {
+          "product_id": "597431937627",
+          "task_type": "short_description",
+          "sequence_tokens": 165,
+          "loss": 1.5601537227630615
+        },
+        {
+          "product_id": "598076584585",
+          "task_type": "title",
+          "sequence_tokens": 114,
+          "loss": 0.9963613152503967
+        },
+        {
+          "product_id": "598076584585",
+          "task_type": "selling_points",
+          "sequence_tokens": 128,
+          "loss": 1.280259370803833
+        },
+        {
+          "product_id": "598076584585",
+          "task_type": "short_description",
+          "sequence_tokens": 125,
+          "loss": 0.8325461745262146
+        },
+        {
+          "product_id": "598854051670",
+          "task_type": "title",
+          "sequence_tokens": 118,
+          "loss": 0.839029848575592
+        },
+        {
+          "product_id": "598854051670",
+          "task_type": "selling_points",
+          "sequence_tokens": 130,
+          "loss": 1.1538645029067993
+        },
+        {
+          "product_id": "598854051670",
+          "task_type": "short_description",
+          "sequence_tokens": 127,
+          "loss": 0.8118947148323059
+        },
+        {
+          "product_id": "600561788795",
+          "task_type": "title",
+          "sequence_tokens": 142,
+          "loss": 1.7755063772201538
+        },
+        {
+          "product_id": "600561788795",
+          "task_type": "selling_points",
+          "sequence_tokens": 156,
+          "loss": 1.49528169631958
+        },
+        {
+          "product_id": "600561788795",
+          "task_type": "short_description",
+          "sequence_tokens": 164,
+          "loss": 1.4645987749099731
+        },
+        {
+          "product_id": "602501293376",
+          "task_type": "title",
+          "sequence_tokens": 135,
+          "loss": 1.636589765548706
+        },
+        {
+          "product_id": "602501293376",
+          "task_type": "selling_points",
+          "sequence_tokens": 144,
+          "loss": 1.1264070272445679
+        },
+        {
+          "product_id": "602501293376",
+          "task_type": "short_description",
+          "sequence_tokens": 157,
+          "loss": 0.4154714345932007
+        },
+        {
+          "product_id": "605657859405",
+          "task_type": "title",
+          "sequence_tokens": 124,
+          "loss": 2.649153232574463
+        },
+        {
+          "product_id": "605657859405",
+          "task_type": "selling_points",
+          "sequence_tokens": 137,
+          "loss": 1.1368906497955322
+        },
+        {
+          "product_id": "605657859405",
+          "task_type": "short_description",
+          "sequence_tokens": 145,
+          "loss": 0.5492376685142517
+        },
+        {
+          "product_id": "609563902799",
+          "task_type": "title",
+          "sequence_tokens": 126,
+          "loss": 2.562626838684082
+        },
+        {
+          "product_id": "609563902799",
+          "task_type": "selling_points",
+          "sequence_tokens": 139,
+          "loss": 1.1943522691726685
+        },
+        {
+          "product_id": "609563902799",
+          "task_type": "short_description",
+          "sequence_tokens": 147,
+          "loss": 0.5927243232727051
+        },
+        {
+          "product_id": "612475865376",
+          "task_type": "title",
+          "sequence_tokens": 155,
+          "loss": 1.7802575826644897
+        },
+        {
+          "product_id": "612475865376",
+          "task_type": "selling_points",
+          "sequence_tokens": 163,
+          "loss": 1.2438855171203613
+        },
+        {
+          "product_id": "612475865376",
+          "task_type": "short_description",
+          "sequence_tokens": 177,
+          "loss": 0.6192331314086914
+        },
+        {
+          "product_id": "613760960890",
+          "task_type": "title",
+          "sequence_tokens": 117,
+          "loss": 2.988809585571289
+        },
+        {
+          "product_id": "613760960890",
+          "task_type": "selling_points",
+          "sequence_tokens": 138,
+          "loss": 0.8912713527679443
+        },
+        {
+          "product_id": "613760960890",
+          "task_type": "short_description",
+          "sequence_tokens": 142,
+          "loss": 0.5421482920646667
+        },
+        {
+          "product_id": "615414912796",
+          "task_type": "title",
+          "sequence_tokens": 143,
+          "loss": 2.3295645713806152
+        },
+        {
+          "product_id": "615414912796",
+          "task_type": "selling_points",
+          "sequence_tokens": 155,
+          "loss": 1.95803964138031
+        },
+        {
+          "product_id": "615414912796",
+          "task_type": "short_description",
+          "sequence_tokens": 163,
+          "loss": 1.4837651252746582
+        },
+        {
+          "product_id": "43078825428",
+          "task_type": "title",
+          "sequence_tokens": 129,
+          "loss": 1.257254958152771
+        },
+        {
+          "product_id": "43078825428",
+          "task_type": "selling_points",
+          "sequence_tokens": 137,
+          "loss": 1.020841121673584
+        },
+        {
+          "product_id": "43078825428",
+          "task_type": "short_description",
+          "sequence_tokens": 145,
+          "loss": 0.3033090829849243
+        },
+        {
+          "product_id": "43259871643",
+          "task_type": "title",
+          "sequence_tokens": 141,
+          "loss": 0.6842127442359924
+        },
+        {
+          "product_id": "43259871643",
+          "task_type": "selling_points",
+          "sequence_tokens": 156,
+          "loss": 0.7115631699562073
+        },
+        {
+          "product_id": "43259871643",
+          "task_type": "short_description",
+          "sequence_tokens": 167,
+          "loss": 0.28844672441482544
+        },
+        {
+          "product_id": "549151083557",
+          "task_type": "title",
+          "sequence_tokens": 131,
+          "loss": 1.2094132900238037
+        },
+        {
+          "product_id": "549151083557",
+          "task_type": "selling_points",
+          "sequence_tokens": 141,
+          "loss": 0.8787536025047302
+        },
+        {
+          "product_id": "549151083557",
+          "task_type": "short_description",
+          "sequence_tokens": 147,
+          "loss": 0.38825586438179016
+        },
+        {
+          "product_id": "560963037453",
+          "task_type": "title",
+          "sequence_tokens": 135,
+          "loss": 1.1460535526275635
+        },
+        {
+          "product_id": "560963037453",
+          "task_type": "selling_points",
+          "sequence_tokens": 147,
+          "loss": 0.9866753816604614
+        },
+        {
+          "product_id": "560963037453",
+          "task_type": "short_description",
+          "sequence_tokens": 161,
+          "loss": 0.32720085978507996
+        },
+        {
+          "product_id": "562849998141",
+          "task_type": "title",
+          "sequence_tokens": 155,
+          "loss": 0.6727977395057678
+        },
+        {
+          "product_id": "562849998141",
+          "task_type": "selling_points",
+          "sequence_tokens": 170,
+          "loss": 0.7532230019569397
+        },
+        {
+          "product_id": "562849998141",
+          "task_type": "short_description",
+          "sequence_tokens": 182,
+          "loss": 0.6425876021385193
+        },
+        {
+          "product_id": "569058425441",
+          "task_type": "title",
+          "sequence_tokens": 141,
+          "loss": 0.6562671065330505
+        },
+        {
+          "product_id": "569058425441",
+          "task_type": "selling_points",
+          "sequence_tokens": 146,
+          "loss": 0.95843505859375
+        },
+        {
+          "product_id": "569058425441",
+          "task_type": "short_description",
+          "sequence_tokens": 161,
+          "loss": 0.2985922396183014
+        },
+        {
+          "product_id": "597105660944",
+          "task_type": "title",
+          "sequence_tokens": 144,
+          "loss": 1.1045891046524048
+        },
+        {
+          "product_id": "597105660944",
+          "task_type": "selling_points",
+          "sequence_tokens": 148,
+          "loss": 0.9973446726799011
+        },
+        {
+          "product_id": "597105660944",
+          "task_type": "short_description",
+          "sequence_tokens": 164,
+          "loss": 0.3434475064277649
+        },
+        {
+          "product_id": "598645023869",
+          "task_type": "title",
+          "sequence_tokens": 140,
+          "loss": 1.751648187637329
+        },
+        {
+          "product_id": "598645023869",
+          "task_type": "selling_points",
+          "sequence_tokens": 151,
+          "loss": 0.8462445735931396
+        },
+        {
+          "product_id": "598645023869",
+          "task_type": "short_description",
+          "sequence_tokens": 165,
+          "loss": 0.2717823088169098
+        },
+        {
+          "product_id": "600100963319",
+          "task_type": "title",
+          "sequence_tokens": 149,
+          "loss": 0.5645579099655151
+        },
+        {
+          "product_id": "600100963319",
+          "task_type": "selling_points",
+          "sequence_tokens": 150,
+          "loss": 0.9850277304649353
+        },
+        {
+          "product_id": "600100963319",
+          "task_type": "short_description",
+          "sequence_tokens": 169,
+          "loss": 0.30598416924476624
+        },
+        {
+          "product_id": "608328445164",
+          "task_type": "title",
+          "sequence_tokens": 134,
+          "loss": 1.1810284852981567
+        },
+        {
+          "product_id": "608328445164",
+          "task_type": "selling_points",
+          "sequence_tokens": 146,
+          "loss": 0.9597620368003845
+        },
+        {
+          "product_id": "608328445164",
+          "task_type": "short_description",
+          "sequence_tokens": 157,
+          "loss": 0.32224777340888977
+        },
+        {
+          "product_id": "610349417279",
+          "task_type": "title",
+          "sequence_tokens": 149,
+          "loss": 0.5668037533760071
+        },
+        {
+          "product_id": "610349417279",
+          "task_type": "selling_points",
+          "sequence_tokens": 167,
+          "loss": 0.690938413143158
+        },
+        {
+          "product_id": "610349417279",
+          "task_type": "short_description",
+          "sequence_tokens": 176,
+          "loss": 0.7055718302726746
+        },
+        {
+          "product_id": "613021590713",
+          "task_type": "title",
+          "sequence_tokens": 127,
+          "loss": 0.5591546297073364
+        },
+        {
+          "product_id": "613021590713",
+          "task_type": "selling_points",
+          "sequence_tokens": 137,
+          "loss": 1.010614037513733
+        },
+        {
+          "product_id": "613021590713",
+          "task_type": "short_description",
+          "sequence_tokens": 143,
+          "loss": 0.4152517020702362
+        },
+        {
+          "product_id": "614136958495",
+          "task_type": "title",
+          "sequence_tokens": 142,
+          "loss": 0.6894874572753906
+        },
+        {
+          "product_id": "614136958495",
+          "task_type": "selling_points",
+          "sequence_tokens": 147,
+          "loss": 0.9211328029632568
+        },
+        {
+          "product_id": "614136958495",
+          "task_type": "short_description",
+          "sequence_tokens": 162,
+          "loss": 0.3685976564884186
+        },
+        {
+          "product_id": "615986453433",
+          "task_type": "title",
+          "sequence_tokens": 119,
+          "loss": 0.7721026539802551
+        },
+        {
+          "product_id": "615986453433",
+          "task_type": "selling_points",
+          "sequence_tokens": 133,
+          "loss": 1.2231626510620117
+        },
+        {
+          "product_id": "615986453433",
+          "task_type": "short_description",
+          "sequence_tokens": 131,
+          "loss": 0.5818272233009338
+        },
+        {
+          "product_id": "621486621986",
+          "task_type": "title",
+          "sequence_tokens": 129,
+          "loss": 1.4714701175689697
+        },
+        {
+          "product_id": "621486621986",
+          "task_type": "selling_points",
+          "sequence_tokens": 138,
+          "loss": 1.0504153966903687
+        },
+        {
+          "product_id": "621486621986",
+          "task_type": "short_description",
+          "sequence_tokens": 148,
+          "loss": 0.180973082780838
+        },
+        {
+          "product_id": "623497021404",
+          "task_type": "title",
+          "sequence_tokens": 163,
+          "loss": 0.7560054063796997
+        },
+        {
+          "product_id": "623497021404",
+          "task_type": "selling_points",
+          "sequence_tokens": 174,
+          "loss": 0.8057026863098145
+        },
+        {
+          "product_id": "623497021404",
+          "task_type": "short_description",
+          "sequence_tokens": 190,
+          "loss": 0.735748291015625
+        },
+        {
+          "product_id": "524494858977",
+          "task_type": "title",
+          "sequence_tokens": 161,
+          "loss": 0.34265846014022827
+        },
+        {
+          "product_id": "524494858977",
+          "task_type": "selling_points",
+          "sequence_tokens": 169,
+          "loss": 0.720373809337616
+        },
+        {
+          "product_id": "524494858977",
+          "task_type": "short_description",
+          "sequence_tokens": 181,
+          "loss": 0.2784108817577362
+        },
+        {
+          "product_id": "543850386738",
+          "task_type": "title",
+          "sequence_tokens": 120,
+          "loss": 0.5163885354995728
+        },
+        {
+          "product_id": "543850386738",
+          "task_type": "selling_points",
+          "sequence_tokens": 131,
+          "loss": 1.007948398590088
+        },
+        {
+          "product_id": "543850386738",
+          "task_type": "short_description",
+          "sequence_tokens": 133,
+          "loss": 0.5622606873512268
+        },
+        {
+          "product_id": "557126348971",
+          "task_type": "title",
+          "sequence_tokens": 120,
+          "loss": 0.6072511672973633
+        },
+        {
+          "product_id": "557126348971",
+          "task_type": "selling_points",
+          "sequence_tokens": 130,
+          "loss": 1.7335718870162964
+        },
+        {
+          "product_id": "557126348971",
+          "task_type": "short_description",
+          "sequence_tokens": 133,
+          "loss": 0.5921770334243774
+        },
+        {
+          "product_id": "558753323097",
+          "task_type": "title",
+          "sequence_tokens": 164,
+          "loss": 0.8280363082885742
+        },
+        {
+          "product_id": "558753323097",
+          "task_type": "selling_points",
+          "sequence_tokens": 165,
+          "loss": 0.8629055023193359
+        },
+        {
+          "product_id": "558753323097",
+          "task_type": "short_description",
+          "sequence_tokens": 179,
+          "loss": 0.6410465240478516
+        },
+        {
+          "product_id": "561308451920",
+          "task_type": "title",
+          "sequence_tokens": 117,
+          "loss": 1.7436633110046387
+        },
+        {
+          "product_id": "561308451920",
+          "task_type": "selling_points",
+          "sequence_tokens": 131,
+          "loss": 1.176169514656067
+        },
+        {
+          "product_id": "561308451920",
+          "task_type": "short_description",
+          "sequence_tokens": 135,
+          "loss": 0.7429520487785339
+        },
+        {
+          "product_id": "565864670782",
+          "task_type": "title",
+          "sequence_tokens": 153,
+          "loss": 1.7129416465759277
+        },
+        {
+          "product_id": "565864670782",
+          "task_type": "selling_points",
+          "sequence_tokens": 181,
+          "loss": 0.6591951847076416
+        },
+        {
+          "product_id": "565864670782",
+          "task_type": "short_description",
+          "sequence_tokens": 198,
+          "loss": 0.2538166046142578
+        },
+        {
+          "product_id": "591964298102",
+          "task_type": "title",
+          "sequence_tokens": 134,
+          "loss": 1.701664924621582
+        },
+        {
+          "product_id": "591964298102",
+          "task_type": "selling_points",
+          "sequence_tokens": 147,
+          "loss": 1.1496073007583618
+        },
+        {
+          "product_id": "591964298102",
+          "task_type": "short_description",
+          "sequence_tokens": 153,
+          "loss": 1.3973009586334229
+        },
+        {
+          "product_id": "595776736215",
+          "task_type": "title",
+          "sequence_tokens": 121,
+          "loss": 0.9725343585014343
+        },
+        {
+          "product_id": "595776736215",
+          "task_type": "selling_points",
+          "sequence_tokens": 130,
+          "loss": 1.2785601615905762
+        },
+        {
+          "product_id": "595776736215",
+          "task_type": "short_description",
+          "sequence_tokens": 137,
+          "loss": 0.6268982291221619
+        },
+        {
+          "product_id": "600825038365",
+          "task_type": "title",
+          "sequence_tokens": 127,
+          "loss": 1.5904232263565063
+        },
+        {
+          "product_id": "600825038365",
+          "task_type": "selling_points",
+          "sequence_tokens": 140,
+          "loss": 1.0147260427474976
+        },
+        {
+          "product_id": "600825038365",
+          "task_type": "short_description",
+          "sequence_tokens": 151,
+          "loss": 0.7892733216285706
+        },
+        {
+          "product_id": "609767916765",
+          "task_type": "title",
+          "sequence_tokens": 149,
+          "loss": 1.0552973747253418
+        },
+        {
+          "product_id": "609767916765",
+          "task_type": "selling_points",
+          "sequence_tokens": 165,
+          "loss": 1.0196421146392822
+        },
+        {
+          "product_id": "609767916765",
+          "task_type": "short_description",
+          "sequence_tokens": 177,
+          "loss": 0.7219526171684265
+        },
+        {
+          "product_id": "615628473498",
+          "task_type": "title",
+          "sequence_tokens": 142,
+          "loss": 0.6622547507286072
+        },
+        {
+          "product_id": "615628473498",
+          "task_type": "selling_points",
+          "sequence_tokens": 148,
+          "loss": 0.9597165584564209
+        },
+        {
+          "product_id": "615628473498",
+          "task_type": "short_description",
+          "sequence_tokens": 165,
+          "loss": 0.4396936297416687
+        },
+        {
+          "product_id": "617399669095",
+          "task_type": "title",
+          "sequence_tokens": 131,
+          "loss": 0.7560284733772278
+        },
+        {
+          "product_id": "617399669095",
+          "task_type": "selling_points",
+          "sequence_tokens": 140,
+          "loss": 1.0656044483184814
+        },
+        {
+          "product_id": "617399669095",
+          "task_type": "short_description",
+          "sequence_tokens": 151,
+          "loss": 0.5717516541481018
+        },
+        {
+          "product_id": "622137408205",
+          "task_type": "title",
+          "sequence_tokens": 137,
+          "loss": 0.28398260474205017
+        },
+        {
+          "product_id": "622137408205",
+          "task_type": "selling_points",
+          "sequence_tokens": 147,
+          "loss": 0.6792829632759094
+        },
+        {
+          "product_id": "622137408205",
+          "task_type": "short_description",
+          "sequence_tokens": 153,
+          "loss": 0.5179454684257507
+        },
+        {
+          "product_id": "622180290668",
+          "task_type": "title",
+          "sequence_tokens": 123,
+          "loss": 1.0932644605636597
+        },
+        {
+          "product_id": "622180290668",
+          "task_type": "selling_points",
+          "sequence_tokens": 131,
+          "loss": 1.1797899007797241
+        },
+        {
+          "product_id": "622180290668",
+          "task_type": "short_description",
+          "sequence_tokens": 138,
+          "loss": 0.6722888946533203
+        },
+        {
+          "product_id": "624831651928",
+          "task_type": "title",
+          "sequence_tokens": 160,
+          "loss": 0.49769166111946106
+        },
+        {
+          "product_id": "624831651928",
+          "task_type": "selling_points",
+          "sequence_tokens": 173,
+          "loss": 0.7285324931144714
+        },
+        {
+          "product_id": "624831651928",
+          "task_type": "short_description",
+          "sequence_tokens": 178,
+          "loss": 0.3384038507938385
+        },
+        {
+          "product_id": "553419918614",
+          "task_type": "title",
+          "sequence_tokens": 125,
+          "loss": 0.3223269581794739
+        },
+        {
+          "product_id": "553419918614",
+          "task_type": "selling_points",
+          "sequence_tokens": 141,
+          "loss": 0.9247914552688599
+        },
+        {
+          "product_id": "553419918614",
+          "task_type": "short_description",
+          "sequence_tokens": 140,
+          "loss": 0.3566611409187317
+        },
+        {
+          "product_id": "554553278267",
+          "task_type": "title",
+          "sequence_tokens": 156,
+          "loss": 0.23611478507518768
+        },
+        {
+          "product_id": "554553278267",
+          "task_type": "selling_points",
+          "sequence_tokens": 166,
+          "loss": 0.806172251701355
+        },
+        {
+          "product_id": "554553278267",
+          "task_type": "short_description",
+          "sequence_tokens": 180,
+          "loss": 0.5659617781639099
+        },
+        {
+          "product_id": "562149261234",
+          "task_type": "title",
+          "sequence_tokens": 154,
+          "loss": 0.22548530995845795
+        },
+        {
+          "product_id": "562149261234",
+          "task_type": "selling_points",
+          "sequence_tokens": 166,
+          "loss": 0.7413498163223267
+        },
+        {
+          "product_id": "562149261234",
+          "task_type": "short_description",
+          "sequence_tokens": 178,
+          "loss": 0.6052457094192505
+        },
+        {
+          "product_id": "569694759189",
+          "task_type": "title",
+          "sequence_tokens": 141,
+          "loss": 0.22809955477714539
+        },
+        {
+          "product_id": "569694759189",
+          "task_type": "selling_points",
+          "sequence_tokens": 155,
+          "loss": 0.7719919681549072
+        },
+        {
+          "product_id": "569694759189",
+          "task_type": "short_description",
+          "sequence_tokens": 167,
+          "loss": 0.31133681535720825
+        },
+        {
+          "product_id": "576474707507",
+          "task_type": "title",
+          "sequence_tokens": 148,
+          "loss": 0.20553922653198242
+        },
+        {
+          "product_id": "576474707507",
+          "task_type": "selling_points",
+          "sequence_tokens": 165,
+          "loss": 0.851428747177124
+        },
+        {
+          "product_id": "576474707507",
+          "task_type": "short_description",
+          "sequence_tokens": 174,
+          "loss": 0.6984497904777527
+        },
+        {
+          "product_id": "579916289699",
+          "task_type": "title",
+          "sequence_tokens": 141,
+          "loss": 0.2850395441055298
+        },
+        {
+          "product_id": "579916289699",
+          "task_type": "selling_points",
+          "sequence_tokens": 158,
+          "loss": 0.7494027018547058
+        },
+        {
+          "product_id": "579916289699",
+          "task_type": "short_description",
+          "sequence_tokens": 167,
+          "loss": 0.3570467233657837
+        },
+        {
+          "product_id": "585600843776",
+          "task_type": "title",
+          "sequence_tokens": 150,
+          "loss": 0.30103930830955505
+        },
+        {
+          "product_id": "585600843776",
+          "task_type": "selling_points",
+          "sequence_tokens": 159,
+          "loss": 0.6836650967597961
+        },
+        {
+          "product_id": "585600843776",
+          "task_type": "short_description",
+          "sequence_tokens": 173,
+          "loss": 0.38037943840026855
+        },
+        {
+          "product_id": "592435842365",
+          "task_type": "title",
+          "sequence_tokens": 160,
+          "loss": 0.10256356000900269
+        },
+        {
+          "product_id": "592435842365",
+          "task_type": "selling_points",
+          "sequence_tokens": 176,
+          "loss": 0.874500572681427
+        },
+        {
+          "product_id": "592435842365",
+          "task_type": "short_description",
+          "sequence_tokens": 186,
+          "loss": 1.111401081085205
+        },
+        {
+          "product_id": "593706844782",
+          "task_type": "title",
+          "sequence_tokens": 158,
+          "loss": 0.3140608072280884
+        },
+        {
+          "product_id": "593706844782",
+          "task_type": "selling_points",
+          "sequence_tokens": 166,
+          "loss": 0.7820567488670349
+        },
+        {
+          "product_id": "593706844782",
+          "task_type": "short_description",
+          "sequence_tokens": 180,
+          "loss": 0.643800675868988
+        },
+        {
+          "product_id": "596507785095",
+          "task_type": "title",
+          "sequence_tokens": 179,
+          "loss": 0.093205027282238
+        },
+        {
+          "product_id": "596507785095",
+          "task_type": "selling_points",
+          "sequence_tokens": 178,
+          "loss": 0.8152352571487427
+        },
+        {
+          "product_id": "596507785095",
+          "task_type": "short_description",
+          "sequence_tokens": 203,
+          "loss": 0.43482711911201477
+        },
+        {
+          "product_id": "597263199493",
+          "task_type": "title",
+          "sequence_tokens": 164,
+          "loss": 0.2766333818435669
+        },
+        {
+          "product_id": "597263199493",
+          "task_type": "selling_points",
+          "sequence_tokens": 170,
+          "loss": 0.7960967421531677
+        },
+        {
+          "product_id": "597263199493",
+          "task_type": "short_description",
+          "sequence_tokens": 188,
+          "loss": 0.5745632648468018
+        },
+        {
+          "product_id": "597532479129",
+          "task_type": "title",
+          "sequence_tokens": 152,
+          "loss": 0.374311238527298
+        },
+        {
+          "product_id": "597532479129",
+          "task_type": "selling_points",
+          "sequence_tokens": 168,
+          "loss": 0.903459370136261
+        },
+        {
+          "product_id": "597532479129",
+          "task_type": "short_description",
+          "sequence_tokens": 179,
+          "loss": 0.5201232433319092
+        },
+        {
+          "product_id": "604753451899",
+          "task_type": "title",
+          "sequence_tokens": 161,
+          "loss": 0.9472278356552124
+        },
+        {
+          "product_id": "604753451899",
+          "task_type": "selling_points",
+          "sequence_tokens": 178,
+          "loss": 0.94920414686203
+        },
+        {
+          "product_id": "604753451899",
+          "task_type": "short_description",
+          "sequence_tokens": 189,
+          "loss": 1.028743028640747
+        },
+        {
+          "product_id": "613530645563",
+          "task_type": "title",
+          "sequence_tokens": 131,
+          "loss": 1.3167524337768555
+        },
+        {
+          "product_id": "613530645563",
+          "task_type": "selling_points",
+          "sequence_tokens": 145,
+          "loss": 0.749506413936615
+        },
+        {
+          "product_id": "613530645563",
+          "task_type": "short_description",
+          "sequence_tokens": 151,
+          "loss": 0.4586896300315857
+        },
+        {
+          "product_id": "614929687815",
+          "task_type": "title",
+          "sequence_tokens": 147,
+          "loss": 0.2020215541124344
+        },
+        {
+          "product_id": "614929687815",
+          "task_type": "selling_points",
+          "sequence_tokens": 163,
+          "loss": 0.8606650829315186
+        },
+        {
+          "product_id": "614929687815",
+          "task_type": "short_description",
+          "sequence_tokens": 174,
+          "loss": 0.6186708807945251
+        },
+        {
+          "product_id": "622497095666",
+          "task_type": "title",
+          "sequence_tokens": 146,
+          "loss": 0.0856965109705925
+        },
+        {
+          "product_id": "622497095666",
+          "task_type": "selling_points",
+          "sequence_tokens": 153,
+          "loss": 0.7950382828712463
+        },
+        {
+          "product_id": "622497095666",
+          "task_type": "short_description",
+          "sequence_tokens": 167,
+          "loss": 0.33168476819992065
+        },
+        {
+          "product_id": "623960161106",
+          "task_type": "title",
+          "sequence_tokens": 164,
+          "loss": 0.1545272022485733
+        },
+        {
+          "product_id": "623960161106",
+          "task_type": "selling_points",
+          "sequence_tokens": 175,
+          "loss": 0.7656676173210144
+        },
+        {
+          "product_id": "623960161106",
+          "task_type": "short_description",
+          "sequence_tokens": 188,
+          "loss": 0.9381185173988342
+        },
+        {
+          "product_id": "526293861303",
+          "task_type": "title",
+          "sequence_tokens": 116,
+          "loss": 2.2286489009857178
+        },
+        {
+          "product_id": "526293861303",
+          "task_type": "selling_points",
+          "sequence_tokens": 139,
+          "loss": 1.205533742904663
+        },
+        {
+          "product_id": "526293861303",
+          "task_type": "short_description",
+          "sequence_tokens": 136,
+          "loss": 0.6459987163543701
+        },
+        {
+          "product_id": "530202520816",
+          "task_type": "title",
+          "sequence_tokens": 128,
+          "loss": 1.6288470029830933
+        },
+        {
+          "product_id": "530202520816",
+          "task_type": "selling_points",
+          "sequence_tokens": 147,
+          "loss": 0.9924822449684143
+        },
+        {
+          "product_id": "530202520816",
+          "task_type": "short_description",
+          "sequence_tokens": 154,
+          "loss": 0.6366971135139465
+        },
+        {
+          "product_id": "531509322875",
+          "task_type": "title",
+          "sequence_tokens": 118,
+          "loss": 0.018770333379507065
+        },
+        {
+          "product_id": "531509322875",
+          "task_type": "selling_points",
+          "sequence_tokens": 134,
+          "loss": 1.036537528038025
+        },
+        {
+          "product_id": "531509322875",
+          "task_type": "short_description",
+          "sequence_tokens": 137,
+          "loss": 0.7226074934005737
+        },
+        {
+          "product_id": "556177070013",
+          "task_type": "title",
+          "sequence_tokens": 117,
+          "loss": 0.3497764766216278
+        },
+        {
+          "product_id": "556177070013",
+          "task_type": "selling_points",
+          "sequence_tokens": 136,
+          "loss": 0.9374396800994873
+        },
+        {
+          "product_id": "556177070013",
+          "task_type": "short_description",
+          "sequence_tokens": 133,
+          "loss": 0.39202407002449036
+        },
+        {
+          "product_id": "560906532208",
+          "task_type": "title",
+          "sequence_tokens": 128,
+          "loss": 0.3516565263271332
+        },
+        {
+          "product_id": "560906532208",
+          "task_type": "selling_points",
+          "sequence_tokens": 144,
+          "loss": 0.7706822156906128
+        },
+        {
+          "product_id": "560906532208",
+          "task_type": "short_description",
+          "sequence_tokens": 141,
+          "loss": 0.3115615248680115
+        },
+        {
+          "product_id": "562489119045",
+          "task_type": "title",
+          "sequence_tokens": 133,
+          "loss": 1.0570640563964844
+        },
+        {
+          "product_id": "562489119045",
+          "task_type": "selling_points",
+          "sequence_tokens": 143,
+          "loss": 1.0080389976501465
+        },
+        {
+          "product_id": "562489119045",
+          "task_type": "short_description",
+          "sequence_tokens": 153,
+          "loss": 0.7784315943717957
+        },
+        {
+          "product_id": "566220836792",
+          "task_type": "title",
+          "sequence_tokens": 146,
+          "loss": 2.410262107849121
+        },
+        {
+          "product_id": "566220836792",
+          "task_type": "selling_points",
+          "sequence_tokens": 173,
+          "loss": 0.7503029108047485
+        },
+        {
+          "product_id": "566220836792",
+          "task_type": "short_description",
+          "sequence_tokens": 190,
+          "loss": 0.5827621221542358
+        },
+        {
+          "product_id": "571097757018",
+          "task_type": "title",
+          "sequence_tokens": 108,
+          "loss": 0.7266684174537659
+        },
+        {
+          "product_id": "571097757018",
+          "task_type": "selling_points",
+          "sequence_tokens": 124,
+          "loss": 1.3318288326263428
+        },
+        {
+          "product_id": "571097757018",
+          "task_type": "short_description",
+          "sequence_tokens": 121,
+          "loss": 0.5231615304946899
+        },
+        {
+          "product_id": "572794053443",
+          "task_type": "title",
+          "sequence_tokens": 108,
+          "loss": 0.8933786153793335
+        },
+        {
+          "product_id": "572794053443",
+          "task_type": "selling_points",
+          "sequence_tokens": 124,
+          "loss": 1.1357320547103882
+        },
+        {
+          "product_id": "572794053443",
+          "task_type": "short_description",
+          "sequence_tokens": 121,
+          "loss": 0.573455810546875
+        },
+        {
+          "product_id": "583503352757",
+          "task_type": "title",
+          "sequence_tokens": 150,
+          "loss": 1.101943016052246
+        },
+        {
+          "product_id": "583503352757",
+          "task_type": "selling_points",
+          "sequence_tokens": 167,
+          "loss": 0.8056612610816956
+        },
+        {
+          "product_id": "583503352757",
+          "task_type": "short_description",
+          "sequence_tokens": 191,
+          "loss": 0.4845893681049347
+        },
+        {
+          "product_id": "587246440411",
+          "task_type": "title",
+          "sequence_tokens": 159,
+          "loss": 1.94264817237854
+        },
+        {
+          "product_id": "587246440411",
+          "task_type": "selling_points",
+          "sequence_tokens": 172,
+          "loss": 0.8053082823753357
+        },
+        {
+          "product_id": "587246440411",
+          "task_type": "short_description",
+          "sequence_tokens": 185,
+          "loss": 1.239711046218872
+        },
+        {
+          "product_id": "591034298813",
+          "task_type": "title",
+          "sequence_tokens": 154,
+          "loss": 0.4958522617816925
+        },
+        {
+          "product_id": "591034298813",
+          "task_type": "selling_points",
+          "sequence_tokens": 168,
+          "loss": 0.7343295812606812
+        },
+        {
+          "product_id": "591034298813",
+          "task_type": "short_description",
+          "sequence_tokens": 184,
+          "loss": 0.377512663602829
+        },
+        {
+          "product_id": "606803176103",
+          "task_type": "title",
+          "sequence_tokens": 147,
+          "loss": 2.646332263946533
+        },
+        {
+          "product_id": "606803176103",
+          "task_type": "selling_points",
+          "sequence_tokens": 164,
+          "loss": 0.7648017406463623
+        },
+        {
+          "product_id": "606803176103",
+          "task_type": "short_description",
+          "sequence_tokens": 171,
+          "loss": 1.4457037448883057
+        },
+        {
+          "product_id": "609950274910",
+          "task_type": "title",
+          "sequence_tokens": 150,
+          "loss": 1.126659870147705
+        },
+        {
+          "product_id": "609950274910",
+          "task_type": "selling_points",
+          "sequence_tokens": 170,
+          "loss": 0.725830614566803
+        },
+        {
+          "product_id": "609950274910",
+          "task_type": "short_description",
+          "sequence_tokens": 179,
+          "loss": 1.2193139791488647
+        },
+        {
+          "product_id": "614191806493",
+          "task_type": "title",
+          "sequence_tokens": 167,
+          "loss": 0.6909430027008057
+        },
+        {
+          "product_id": "614191806493",
+          "task_type": "selling_points",
+          "sequence_tokens": 183,
+          "loss": 0.7862445712089539
+        },
+        {
+          "product_id": "614191806493",
+          "task_type": "short_description",
+          "sequence_tokens": 197,
+          "loss": 0.6838117837905884
+        },
+        {
+          "product_id": "619231434600",
+          "task_type": "title",
+          "sequence_tokens": 155,
+          "loss": 1.1069023609161377
+        },
+        {
+          "product_id": "619231434600",
+          "task_type": "selling_points",
+          "sequence_tokens": 169,
+          "loss": 0.7901729941368103
+        },
+        {
+          "product_id": "619231434600",
+          "task_type": "short_description",
+          "sequence_tokens": 181,
+          "loss": 0.9414885640144348
+        },
+        {
+          "product_id": "620792197593",
+          "task_type": "title",
+          "sequence_tokens": 117,
+          "loss": 1.4860639572143555
+        },
+        {
+          "product_id": "620792197593",
+          "task_type": "selling_points",
+          "sequence_tokens": 141,
+          "loss": 1.1564549207687378
+        },
+        {
+          "product_id": "620792197593",
+          "task_type": "short_description",
+          "sequence_tokens": 138,
+          "loss": 0.6810978055000305
+        },
+        {
+          "product_id": "528829492102",
+          "task_type": "title",
+          "sequence_tokens": 149,
+          "loss": 2.005797863006592
+        },
+        {
+          "product_id": "528829492102",
+          "task_type": "selling_points",
+          "sequence_tokens": 162,
+          "loss": 0.7712513208389282
+        },
+        {
+          "product_id": "528829492102",
+          "task_type": "short_description",
+          "sequence_tokens": 172,
+          "loss": 1.1277347803115845
+        },
+        {
+          "product_id": "540331184412",
+          "task_type": "title",
+          "sequence_tokens": 148,
+          "loss": 0.7861801981925964
+        },
+        {
+          "product_id": "540331184412",
+          "task_type": "selling_points",
+          "sequence_tokens": 160,
+          "loss": 1.071666955947876
+        },
+        {
+          "product_id": "540331184412",
+          "task_type": "short_description",
+          "sequence_tokens": 172,
+          "loss": 1.1425608396530151
+        },
+        {
+          "product_id": "544952808827",
+          "task_type": "title",
+          "sequence_tokens": 138,
+          "loss": 2.4971182346343994
+        },
+        {
+          "product_id": "544952808827",
+          "task_type": "selling_points",
+          "sequence_tokens": 153,
+          "loss": 0.9724713563919067
+        },
+        {
+          "product_id": "544952808827",
+          "task_type": "short_description",
+          "sequence_tokens": 156,
+          "loss": 1.1002415418624878
+        },
+        {
+          "product_id": "556924309540",
+          "task_type": "title",
+          "sequence_tokens": 135,
+          "loss": 0.4585956037044525
+        },
+        {
+          "product_id": "556924309540",
+          "task_type": "selling_points",
+          "sequence_tokens": 153,
+          "loss": 1.1780701875686646
+        },
+        {
+          "product_id": "556924309540",
+          "task_type": "short_description",
+          "sequence_tokens": 150,
+          "loss": 1.7784470319747925
+        },
+        {
+          "product_id": "576377848926",
+          "task_type": "title",
+          "sequence_tokens": 129,
+          "loss": 1.3102893829345703
+        },
+        {
+          "product_id": "576377848926",
+          "task_type": "selling_points",
+          "sequence_tokens": 148,
+          "loss": 1.0533626079559326
+        },
+        {
+          "product_id": "576377848926",
+          "task_type": "short_description",
+          "sequence_tokens": 157,
+          "loss": 1.0420182943344116
+        },
+        {
+          "product_id": "587414853247",
+          "task_type": "title",
+          "sequence_tokens": 127,
+          "loss": 2.431162118911743
+        },
+        {
+          "product_id": "587414853247",
+          "task_type": "selling_points",
+          "sequence_tokens": 142,
+          "loss": 0.9809312224388123
+        },
+        {
+          "product_id": "587414853247",
+          "task_type": "short_description",
+          "sequence_tokens": 153,
+          "loss": 1.047853946685791
+        },
+        {
+          "product_id": "601284953533",
+          "task_type": "title",
+          "sequence_tokens": 141,
+          "loss": 0.5150668025016785
+        },
+        {
+          "product_id": "601284953533",
+          "task_type": "selling_points",
+          "sequence_tokens": 152,
+          "loss": 0.7915356755256653
+        },
+        {
+          "product_id": "601284953533",
+          "task_type": "short_description",
+          "sequence_tokens": 164,
+          "loss": 0.8212766647338867
+        },
+        {
+          "product_id": "610056358817",
+          "task_type": "title",
+          "sequence_tokens": 138,
+          "loss": 2.000741720199585
+        },
+        {
+          "product_id": "610056358817",
+          "task_type": "selling_points",
+          "sequence_tokens": 152,
+          "loss": 0.8235286474227905
+        },
+        {
+          "product_id": "610056358817",
+          "task_type": "short_description",
+          "sequence_tokens": 161,
+          "loss": 1.193061113357544
+        },
+        {
+          "product_id": "613921668167",
+          "task_type": "title",
+          "sequence_tokens": 134,
+          "loss": 0.39281824231147766
+        },
+        {
+          "product_id": "613921668167",
+          "task_type": "selling_points",
+          "sequence_tokens": 147,
+          "loss": 0.9495692253112793
+        },
+        {
+          "product_id": "613921668167",
+          "task_type": "short_description",
+          "sequence_tokens": 159,
+          "loss": 0.9346347451210022
+        },
+        {
+          "product_id": "614002843259",
+          "task_type": "title",
+          "sequence_tokens": 137,
+          "loss": 1.9243175983428955
+        },
+        {
+          "product_id": "614002843259",
+          "task_type": "selling_points",
+          "sequence_tokens": 153,
+          "loss": 1.1541748046875
+        },
+        {
+          "product_id": "614002843259",
+          "task_type": "short_description",
+          "sequence_tokens": 162,
+          "loss": 1.2728139162063599
+        },
+        {
+          "product_id": "616056549560",
+          "task_type": "title",
+          "sequence_tokens": 139,
+          "loss": 0.7985242605209351
+        },
+        {
+          "product_id": "616056549560",
+          "task_type": "selling_points",
+          "sequence_tokens": 151,
+          "loss": 1.3016953468322754
+        },
+        {
+          "product_id": "616056549560",
+          "task_type": "short_description",
+          "sequence_tokens": 163,
+          "loss": 1.0759435892105103
+        },
+        {
+          "product_id": "618174756566",
+          "task_type": "title",
+          "sequence_tokens": 141,
+          "loss": 0.8166855573654175
+        },
+        {
+          "product_id": "618174756566",
+          "task_type": "selling_points",
+          "sequence_tokens": 152,
+          "loss": 0.7915356755256653
+        },
+        {
+          "product_id": "618174756566",
+          "task_type": "short_description",
+          "sequence_tokens": 164,
+          "loss": 0.8212766647338867
+        },
+        {
+          "product_id": "620130716068",
+          "task_type": "title",
+          "sequence_tokens": 139,
+          "loss": 1.42487633228302
+        },
+        {
+          "product_id": "620130716068",
+          "task_type": "selling_points",
+          "sequence_tokens": 154,
+          "loss": 1.099881649017334
+        },
+        {
+          "product_id": "620130716068",
+          "task_type": "short_description",
+          "sequence_tokens": 164,
+          "loss": 1.3596712350845337
+        },
+        {
+          "product_id": "622752995912",
+          "task_type": "title",
+          "sequence_tokens": 137,
+          "loss": 1.9971421957015991
+        },
+        {
+          "product_id": "622752995912",
+          "task_type": "selling_points",
+          "sequence_tokens": 147,
+          "loss": 1.1043341159820557
+        },
+        {
+          "product_id": "622752995912",
+          "task_type": "short_description",
+          "sequence_tokens": 159,
+          "loss": 1.2180578708648682
+        },
+        {
+          "product_id": "9693373322",
+          "task_type": "title",
+          "sequence_tokens": 130,
+          "loss": 0.4815136194229126
+        },
+        {
+          "product_id": "9693373322",
+          "task_type": "selling_points",
+          "sequence_tokens": 147,
+          "loss": 1.370565414428711
+        },
+        {
+          "product_id": "9693373322",
+          "task_type": "short_description",
+          "sequence_tokens": 144,
+          "loss": 1.8710963726043701
+        },
+        {
+          "product_id": "4012034284",
+          "task_type": "title",
+          "sequence_tokens": 134,
+          "loss": 1.2835817337036133
+        },
+        {
+          "product_id": "4012034284",
+          "task_type": "selling_points",
+          "sequence_tokens": 148,
+          "loss": 0.9082530736923218
+        },
+        {
+          "product_id": "4012034284",
+          "task_type": "short_description",
+          "sequence_tokens": 161,
+          "loss": 0.4220402240753174
+        },
+        {
+          "product_id": "538807041289",
+          "task_type": "title",
+          "sequence_tokens": 129,
+          "loss": 2.9304254055023193
+        },
+        {
+          "product_id": "538807041289",
+          "task_type": "selling_points",
+          "sequence_tokens": 145,
+          "loss": 0.9877445101737976
+        },
+        {
+          "product_id": "538807041289",
+          "task_type": "short_description",
+          "sequence_tokens": 157,
+          "loss": 0.4449581503868103
+        },
+        {
+          "product_id": "553325797645",
+          "task_type": "title",
+          "sequence_tokens": 136,
+          "loss": 2.2468037605285645
+        },
+        {
+          "product_id": "553325797645",
+          "task_type": "selling_points",
+          "sequence_tokens": 152,
+          "loss": 0.8434152007102966
+        },
+        {
+          "product_id": "553325797645",
+          "task_type": "short_description",
+          "sequence_tokens": 163,
+          "loss": 0.6923879981040955
+        },
+        {
+          "product_id": "553677474202",
+          "task_type": "title",
+          "sequence_tokens": 138,
+          "loss": 0.8207271695137024
+        },
+        {
+          "product_id": "553677474202",
+          "task_type": "selling_points",
+          "sequence_tokens": 152,
+          "loss": 0.7912968397140503
+        },
+        {
+          "product_id": "553677474202",
+          "task_type": "short_description",
+          "sequence_tokens": 163,
+          "loss": 0.7288212180137634
+        },
+        {
+          "product_id": "559476015218",
+          "task_type": "title",
+          "sequence_tokens": 119,
+          "loss": 2.265970230102539
+        },
+        {
+          "product_id": "559476015218",
+          "task_type": "selling_points",
+          "sequence_tokens": 135,
+          "loss": 1.1318968534469604
+        },
+        {
+          "product_id": "559476015218",
+          "task_type": "short_description",
+          "sequence_tokens": 137,
+          "loss": 0.6902039647102356
+        },
+        {
+          "product_id": "561880609821",
+          "task_type": "title",
+          "sequence_tokens": 144,
+          "loss": 2.404604434967041
+        },
+        {
+          "product_id": "561880609821",
+          "task_type": "selling_points",
+          "sequence_tokens": 158,
+          "loss": 1.3895009756088257
+        },
+        {
+          "product_id": "561880609821",
+          "task_type": "short_description",
+          "sequence_tokens": 170,
+          "loss": 0.9122532606124878
+        },
+        {
+          "product_id": "565694241440",
+          "task_type": "title",
+          "sequence_tokens": 129,
+          "loss": 2.0574727058410645
+        },
+        {
+          "product_id": "565694241440",
+          "task_type": "selling_points",
+          "sequence_tokens": 141,
+          "loss": 0.9387515187263489
+        },
+        {
+          "product_id": "565694241440",
+          "task_type": "short_description",
+          "sequence_tokens": 155,
+          "loss": 0.5157424211502075
+        },
+        {
+          "product_id": "567529034025",
+          "task_type": "title",
+          "sequence_tokens": 121,
+          "loss": 2.119203805923462
+        },
+        {
+          "product_id": "567529034025",
+          "task_type": "selling_points",
+          "sequence_tokens": 137,
+          "loss": 1.1381160020828247
+        },
+        {
+          "product_id": "567529034025",
+          "task_type": "short_description",
+          "sequence_tokens": 143,
+          "loss": 0.41408365964889526
+        },
+        {
+          "product_id": "576089336382",
+          "task_type": "title",
+          "sequence_tokens": 136,
+          "loss": 0.7707836627960205
+        },
+        {
+          "product_id": "576089336382",
+          "task_type": "selling_points",
+          "sequence_tokens": 151,
+          "loss": 0.7862584590911865
+        },
+        {
+          "product_id": "576089336382",
+          "task_type": "short_description",
+          "sequence_tokens": 161,
+          "loss": 0.7592703700065613
+        },
+        {
+          "product_id": "580164285451",
+          "task_type": "title",
+          "sequence_tokens": 159,
+          "loss": 1.3129539489746094
+        },
+        {
+          "product_id": "580164285451",
+          "task_type": "selling_points",
+          "sequence_tokens": 173,
+          "loss": 1.0682529211044312
+        },
+        {
+          "product_id": "580164285451",
+          "task_type": "short_description",
+          "sequence_tokens": 184,
+          "loss": 1.2357462644577026
+        },
+        {
+          "product_id": "591673252247",
+          "task_type": "title",
+          "sequence_tokens": 153,
+          "loss": 1.1860547065734863
+        },
+        {
+          "product_id": "591673252247",
+          "task_type": "selling_points",
+          "sequence_tokens": 167,
+          "loss": 0.9082033038139343
+        },
+        {
+          "product_id": "591673252247",
+          "task_type": "short_description",
+          "sequence_tokens": 178,
+          "loss": 1.2090684175491333
+        },
+        {
+          "product_id": "600882856803",
+          "task_type": "title",
+          "sequence_tokens": 148,
+          "loss": 2.198282480239868
+        },
+        {
+          "product_id": "600882856803",
+          "task_type": "selling_points",
+          "sequence_tokens": 165,
+          "loss": 1.193010926246643
+        },
+        {
+          "product_id": "600882856803",
+          "task_type": "short_description",
+          "sequence_tokens": 176,
+          "loss": 1.2979706525802612
+        },
+        {
+          "product_id": "606511696770",
+          "task_type": "title",
+          "sequence_tokens": 116,
+          "loss": 1.6980235576629639
+        },
+        {
+          "product_id": "606511696770",
+          "task_type": "selling_points",
+          "sequence_tokens": 130,
+          "loss": 0.9461336135864258
+        },
+        {
+          "product_id": "606511696770",
+          "task_type": "short_description",
+          "sequence_tokens": 135,
+          "loss": 0.5159894824028015
+        },
+        {
+          "product_id": "608052443562",
+          "task_type": "title",
+          "sequence_tokens": 131,
+          "loss": 1.2989991903305054
+        },
+        {
+          "product_id": "608052443562",
+          "task_type": "selling_points",
+          "sequence_tokens": 138,
+          "loss": 1.1149277687072754
+        },
+        {
+          "product_id": "608052443562",
+          "task_type": "short_description",
+          "sequence_tokens": 145,
+          "loss": 0.5671466588973999
+        },
+        {
+          "product_id": "608603617242",
+          "task_type": "title",
+          "sequence_tokens": 127,
+          "loss": 2.2180633544921875
+        },
+        {
+          "product_id": "608603617242",
+          "task_type": "selling_points",
+          "sequence_tokens": 144,
+          "loss": 0.8546231985092163
+        },
+        {
+          "product_id": "608603617242",
+          "task_type": "short_description",
+          "sequence_tokens": 155,
+          "loss": 0.4347318410873413
+        },
+        {
+          "product_id": "610701398625",
+          "task_type": "title",
+          "sequence_tokens": 127,
+          "loss": 3.1309423446655273
+        },
+        {
+          "product_id": "610701398625",
+          "task_type": "selling_points",
+          "sequence_tokens": 144,
+          "loss": 1.1024302244186401
+        },
+        {
+          "product_id": "610701398625",
+          "task_type": "short_description",
+          "sequence_tokens": 153,
+          "loss": 0.8151203393936157
+        },
+        {
+          "product_id": "614674196836",
+          "task_type": "title",
+          "sequence_tokens": 138,
+          "loss": 1.304024338722229
+        },
+        {
+          "product_id": "614674196836",
+          "task_type": "selling_points",
+          "sequence_tokens": 151,
+          "loss": 1.1496570110321045
+        },
+        {
+          "product_id": "614674196836",
+          "task_type": "short_description",
+          "sequence_tokens": 161,
+          "loss": 0.9927272796630859
+        },
+        {
+          "product_id": "624407147383",
+          "task_type": "title",
+          "sequence_tokens": 141,
+          "loss": 1.3351306915283203
+        },
+        {
+          "product_id": "624407147383",
+          "task_type": "selling_points",
+          "sequence_tokens": 154,
+          "loss": 1.2211308479309082
+        },
+        {
+          "product_id": "624407147383",
+          "task_type": "short_description",
+          "sequence_tokens": 162,
+          "loss": 1.0125453472137451
+        }
+      ],
+      "global_step": 4,
+      "engineering_only": true
+    }
+  ],
+  "final_optimizer_digest": "e6bd3cba8ae9f69b167a6ae01f05f1f2ebe7a193882962f666b55a833210a92c",
+  "final_scheduler_digest": "c459f2cbc6d33416a0c1c3871975dca0b4594343a503a71b1c72c3d81143b128",
+  "final_rng_digest": "13533352bf6a161eb6806fee9ee2a15dd1c6e983f05233ce983bf1e3547138d0",
+  "latest_checkpoint": "artifacts/lora/p6_2_acceptance_v1/split/checkpoints/checkpoint-step-000004",
+  "best_checkpoint": null
+}

@@ -1,0 +1,560 @@
+{
+  "version": "rag_fact_policy_v4",
+  "status": "p2_validation_candidate",
+  "created_at_utc": "2026-10-01T07:00:00+00:00",
+  "fact_build_version": "rag_v2_fact_build_v1",
+  "design_basis": {
+    "requirements": [
+      "PRD stage 3 lightweight RAG",
+      "Week2.md P1 lightweight RAG",
+      "Leader 9.25 feedback",
+      "Plan.md P1 static audit",
+      "reports/generation/rag/rag_v2_static_audit_v1.json"
+    ],
+    "development_split": "validation",
+    "test100_role": "not read or used for candidate fields, quality rules, priorities, or product patches",
+    "model_execution_in_this_stage": false,
+    "model_revision": "not_applicable_no_model_loaded",
+    "source_datasets": [
+      {
+        "scope": "train",
+        "path": "data/processed/week2_train_v1/train.jsonl",
+        "sha256": "6ba7179da3339c638aaace1a331cdc50648e58aa75c6a6852e33666bda512fb1",
+        "count": 1559
+      },
+      {
+        "scope": "validation",
+        "path": "data/processed/week1_v3/multimodal/validation.jsonl",
+        "sha256": "dd2bc1d6c21567176d95f5414bfd9304f48979b3bb39ab0b038627b1f346af0b",
+        "count": 200
+      }
+    ],
+    "static_audit": {
+      "path": "reports/generation/rag/rag_v2_static_audit_v1.json",
+      "sha256": "efc5e88da9131e3d4f24298e085215f2040c39f15093693313c4c038ab0df474"
+    }
+  },
+  "source_boundary": {
+    "retrieval_scope": "same_product_id_only",
+    "fact_source": "normalized structured attributes plus standardized category",
+    "audit_evidence_only": [
+      "original title",
+      "main image"
+    ],
+    "never_fact_source": [
+      "model generated copy",
+      "baseline output",
+      "human evaluation comments",
+      "other products"
+    ],
+    "original_title_in_prompt": false,
+    "reason": "Baseline generation input excludes the original title; title and image are used to judge source reliability, not injected as generation facts."
+  },
+  "confirmed_decisions": {
+    "identity_quality_gate": "category, brand, and model are supplied outside Top-K only when eligible",
+    "review_handling": "withhold only flagged fields; unrelated stable fields remain eligible",
+    "conflict_handling": "identity or category conflict blocks every fact for that product; ordinary field conflict blocks only that field",
+    "top_k_status": "Supplemental Top-3 remains unchanged for the P2 validation candidate"
+  },
+  "fact_unit_schema": {
+    "fact_id": "{dataset_version}:{split}:{product_id}:{canonical_field}:{normalized_value_sha256_12}",
+    "required_fields": [
+      "fact_id",
+      "product_id",
+      "dataset_version",
+      "split",
+      "category_l1",
+      "category_l2",
+      "knowledge_level",
+      "fact_role",
+      "field_group",
+      "field_order",
+      "field_name",
+      "canonical_field",
+      "raw_values",
+      "normalized_values",
+      "task_tags",
+      "quality_status",
+      "quality_reasons",
+      "is_core_attribute",
+      "mandatory_status",
+      "mandatory_reasons",
+      "evidence",
+      "source_path",
+      "source_sha256"
+    ],
+    "knowledge_level_values": [
+      "category",
+      "function",
+      "parameter",
+      "specification"
+    ],
+    "task_tag_values": [
+      "title",
+      "selling_points",
+      "short_description"
+    ],
+    "quality_status_values": [
+      "eligible",
+      "withhold_review",
+      "blocked_conflict"
+    ],
+    "evidence_fields": [
+      "structured_source",
+      "title_consistency",
+      "image_consistency",
+      "audit_version"
+    ]
+  },
+  "record_status_policy": {
+    "PASS": "Only whitelisted, non-placeholder facts are eligible.",
+    "REVIEW": "Keep the frozen record; withhold flagged fields until independent evidence resolves the SKU or boundary. Unrelated stable fields may remain eligible.",
+    "CONFLICT": "Keep the frozen record; block conflicting fields. If category/product identity conflicts, block all facts for generation and report Source Fact Error."
+  },
+  "global_value_gates": {
+    "exclude_placeholders": [
+      "其他",
+      "其它",
+      "OTHER",
+      "other",
+      "未知",
+      "不详",
+      "默认",
+      "见描述",
+      "如图",
+      "0kg"
+    ],
+    "multi_value_rule": "Keep multiple values only when they are equivalent after normalization or explicitly represent a set that the task can state without selecting a SKU. Otherwise withhold.",
+    "numeric_rule": "Normalize units and compare exact values/ranges. Block incompatible point values, impossible ranges, and unverified marketing capacities.",
+    "identity_rule": "Brand/model/category must not conflict with title or image audit evidence.",
+    "identity_absent_values": [
+      "无",
+      "否",
+      "没有",
+      "未配备"
+    ],
+    "excluded_values_by_attribute": {
+      "型号": [
+        "耳机",
+        "键盘",
+        "鼠标",
+        "移动电源",
+        "保温杯",
+        "收纳箱",
+        "拖把",
+        "垃圾桶"
+      ]
+    },
+    "no_padding": true,
+    "composite_placeholder_separator_pattern": "[/\\\\|,，;；、]+",
+    "composite_placeholder_rule": "Exclude a value when splitting on configured separators yields two or more tokens and every token is an existing placeholder; keep mixed placeholder-plus-real values."
+  },
+  "global_excluded_fields": {
+    "fields": [
+      "颜色分类",
+      "套餐类型",
+      "成色",
+      "售后服务",
+      "保修期",
+      "上市时间",
+      "生产企业",
+      "产地",
+      "省份",
+      "地市",
+      "洲",
+      "国家",
+      "国家/地区",
+      "企业出口资质",
+      "产品出口必备单证",
+      "验厂标准",
+      "出口检测机构",
+      "包装体积",
+      "毛重",
+      "价格",
+      "拖把价格",
+      "主图来源",
+      "流行元素",
+      "风格"
+    ],
+    "patterns": [
+      "促销",
+      "销量",
+      "优惠",
+      "包邮",
+      "赠品",
+      "认证",
+      "承诺"
+    ],
+    "reasons": [
+      "multi-SKU option noise",
+      "transaction or marketing metadata",
+      "weak relation to the generation task",
+      "not independently verified"
+    ]
+  },
+  "category_field_policy": {
+    "耳机": {
+      "identity": [
+        "品牌",
+        "型号"
+      ],
+      "function": [
+        "耳机与播放设备连接方式",
+        "是否无线",
+        "蓝牙版本",
+        "是否有麦克风",
+        "是否线控"
+      ],
+      "parameter": [
+        "插头直径",
+        "线长"
+      ],
+      "specification": [
+        "佩戴方式",
+        "耳机类别",
+        "是否单双耳"
+      ],
+      "conditional": [
+        "功能",
+        "防水性能",
+        "降噪相关字段"
+      ],
+      "exclude": [
+        "兼容平台",
+        "适用音乐类型",
+        "待机时间",
+        "传输半径",
+        "灵敏度",
+        "频响范围",
+        "阻抗"
+      ]
+    },
+    "键盘": {
+      "identity": [
+        "品牌",
+        "型号"
+      ],
+      "function": [
+        "接口类型",
+        "是否无线",
+        "是否机械键盘",
+        "是否有多媒体功能键",
+        "有无手托"
+      ],
+      "parameter": [
+        "键数"
+      ],
+      "specification": [
+        "轴体"
+      ],
+      "conditional": [],
+      "exclude": [
+        "是否支持人体工程学",
+        "是否支持即插即用"
+      ]
+    },
+    "鼠标": {
+      "identity": [
+        "品牌",
+        "型号"
+      ],
+      "function": [
+        "接口类型",
+        "无线技术",
+        "工作方式",
+        "电源方式"
+      ],
+      "parameter": [
+        "光学分辨率",
+        "按键数",
+        "无线距离"
+      ],
+      "specification": [
+        "是否支持人体工程学"
+      ],
+      "conditional": [],
+      "exclude": [
+        "是否盒装正品",
+        "滚轮数"
+      ]
+    },
+    "移动电源": {
+      "identity": [
+        "品牌",
+        "型号"
+      ],
+      "function": [
+        "充电协议",
+        "是否支持无线充电"
+      ],
+      "parameter": [
+        "电池容量",
+        "最大输出功率"
+      ],
+      "specification": [
+        "电池类型",
+        "电芯类型",
+        "外壳材质",
+        "尺寸"
+      ],
+      "conditional": [
+        "附加功能",
+        "是否带屏幕",
+        "是否带数据线",
+        "是否带充电插头",
+        "是否支持磁吸充电"
+      ],
+      "exclude": [
+        "智能类型"
+      ]
+    },
+    "保温杯": {
+      "identity": [
+        "品牌",
+        "型号"
+      ],
+      "function": [
+        "保温时长",
+        "是否带吸管"
+      ],
+      "parameter": [
+        "容量",
+        "杯子容量值"
+      ],
+      "specification": [
+        "材质",
+        "杯子样式"
+      ],
+      "conditional": [
+        "适用人群",
+        "适用场景"
+      ],
+      "exclude": [
+        "保温性能描述",
+        "保温产品",
+        "适用空间"
+      ]
+    },
+    "收纳箱": {
+      "identity": [
+        "品牌",
+        "型号"
+      ],
+      "function": [],
+      "parameter": [
+        "尺寸",
+        "容量",
+        "净重"
+      ],
+      "specification": [
+        "材质"
+      ],
+      "conditional": [
+        "适用对象",
+        "适用空间"
+      ],
+      "exclude": [
+        "适用人群",
+        "是否手工"
+      ]
+    },
+    "拖把": {
+      "identity": [
+        "品牌",
+        "型号"
+      ],
+      "function": [
+        "挤水方式",
+        "驱动类型",
+        "电源方式"
+      ],
+      "parameter": [
+        "伸缩长度",
+        "拖把桶尺寸"
+      ],
+      "specification": [
+        "杆材质",
+        "拖布材质",
+        "拖把杆类型",
+        "尘推类型"
+      ],
+      "conditional": [
+        "配件类型"
+      ],
+      "exclude": [
+        "吸水性",
+        "脱水率",
+        "耐腐蚀度",
+        "拖把杆的承重",
+        "胶棉头的软化速度"
+      ]
+    },
+    "垃圾桶": {
+      "identity": [
+        "品牌",
+        "型号"
+      ],
+      "function": [
+        "开合方式"
+      ],
+      "parameter": [
+        "容量"
+      ],
+      "specification": [
+        "外壳材质",
+        "形状",
+        "垃圾桶类型"
+      ],
+      "conditional": [
+        "适用场景"
+      ],
+      "exclude": [
+        "货号"
+      ]
+    }
+  },
+  "task_field_priority": {
+    "title": [
+      "category identity",
+      "brand/model",
+      "one highest-confidence differentiating function/parameter/specification"
+    ],
+    "selling_points": [
+      "up to three eligible function/parameter/specification facts; one fact per point"
+    ],
+    "short_description": [
+      "category identity plus up to three eligible facts, without adding unsupported use cases or benefits"
+    ]
+  },
+  "selection_policy": {
+    "identity_order": [
+      "category_l1",
+      "category_l2",
+      "品牌",
+      "型号"
+    ],
+    "conditional_fields_enabled": true,
+    "distinct_multi_value_action": "withhold_review",
+    "task_group_priority": {
+      "title": [
+        "parameter",
+        "function",
+        "specification"
+      ],
+      "selling_points": [
+        "function",
+        "parameter",
+        "specification"
+      ],
+      "short_description": [
+        "specification",
+        "function",
+        "parameter"
+      ]
+    },
+    "global_joint_ranking": {
+      "method": "reciprocal_rank_fusion",
+      "tasks": [
+        "title",
+        "selling_points",
+        "short_description"
+      ],
+      "rrf_k": 60,
+      "tie_breakers": [
+        "sum_task_ranks",
+        "field_order",
+        "canonical_field",
+        "fact_id"
+      ]
+    }
+  },
+  "initial_retrieval_proposal": {
+    "basis": "frozen core definition plus week2_train_v1 and validation static audit; no test100 rule selection",
+    "identity_information": "category_l1, category_l2, and eligible brand/model supplied separately and not counted in Top-K",
+    "top_k": 3,
+    "top_k_status": "supplemental_top3_unchanged_for_p2_validation",
+    "candidate_filter": "same product_id and quality_status=eligible; exclude Identity, Mandatory, and Negative before Supplemental RRF",
+    "ranking": "global reciprocal-rank fusion over title, selling_points, and short_description task rankings",
+    "confidence_threshold": "eligible gate; no numeric similarity threshold proposed in this stage",
+    "if_fewer_than_k": "return fewer facts; never pad with low-confidence or other-product facts",
+    "negative_constraints": "all same-product eligible negative facts are supplied as read-only constraints outside Mandatory and Supplemental Top-K"
+  },
+  "mandatory_core_policy": {
+    "definition_source": {
+      "path": "configs/generation_evaluation.json",
+      "sha256": "66e97e3d620c83584f2a9bff1757127117043dfe154e4dcbfbfd40cccc7e00bd",
+      "field": "core_attributes"
+    },
+    "formal_denominator_unchanged": true,
+    "source_missing_is_injection_failure": false,
+    "identity_core_role": "Keep eligible brand/model in Identity and add an identity_mandatory_coverage marker; never duplicate the fact in the Prompt.",
+    "task_core_role": "Eligible, single-valued, positive or neutral, actively expressible core facts enter Mandatory Reliable Core Facts.",
+    "negative_core_role": "Eligible negative core facts enter Negative Constraints and are not required active coverage.",
+    "distinct_multi_value_action": "withhold_review",
+    "supplemental_only_rules": [
+      {
+        "category_l2": "保温杯",
+        "field": "适用人群",
+        "exact_values": ["大众"],
+        "regex_values": ["^[0-9]+后$"],
+        "reason": "generic_or_marketing_demographic_not_forced"
+      },
+      {
+        "category_l2": "保温杯",
+        "field": "适用场景",
+        "exact_values": ["日常送礼", "通用"],
+        "reason": "generic_or_gifting_scenario_not_forced"
+      },
+      {
+        "category_l2": "垃圾桶",
+        "field": "适用场景",
+        "exact_values": ["家庭使用"],
+        "reason": "generic_household_scene_not_forced"
+      }
+    ],
+    "value_shape_rules": [
+      {
+        "category_l2": "收纳箱",
+        "field": "净重",
+        "regex": "(?i)^[0-9]+(?:\\.[0-9]+)?\\s*(?:kg|g)$",
+        "must_be_positive": true,
+        "invalid_action": "withhold_review"
+      }
+    ],
+    "prompt_preflight": {
+      "tokenize_with_truncation": false,
+      "max_input_tokens_unchanged": true,
+      "require_every_serialized_mandatory_fact": true,
+      "overflow_action": "error",
+      "incomplete_injection_action": "error",
+      "record_token_id_sha256": true
+    }
+  },
+  "mandatory_core_fields": {
+    "耳机": ["品牌", "型号", "佩戴方式", "耳机类别", "耳机与播放设备连接方式", "蓝牙版本", "功能"],
+    "键盘": ["品牌", "型号", "接口类型", "是否无线", "是否机械键盘", "是否有多媒体功能键", "有无手托"],
+    "鼠标": ["品牌", "型号", "接口类型", "工作方式", "光学分辨率", "按键数", "无线技术", "电源方式"],
+    "移动电源": ["品牌", "型号", "电池容量", "电池类型", "电芯类型", "外壳材质", "充电协议", "最大输出功率"],
+    "保温杯": ["品牌", "型号", "材质", "容量", "保温时长", "杯子样式", "适用人群", "适用场景"],
+    "收纳箱": ["品牌", "型号", "材质", "尺寸", "适用对象", "适用空间", "净重"],
+    "拖把": ["品牌", "型号", "杆材质", "拖布材质", "拖把杆类型", "挤水方式", "驱动类型", "电源方式"],
+    "垃圾桶": ["品牌", "外壳材质", "形状", "容量", "垃圾桶类型", "开合方式", "适用场景"]
+  },
+  "negative_constraint_policy": {
+    "role": "read_only_constraint_outside_content_top_k",
+    "quality_gate": "fact_role=task and quality_status=eligible only",
+    "exact_values": [
+      "无",
+      "否",
+      "不支持",
+      "有线",
+      "没有",
+      "未配备"
+    ],
+    "contains_values": [
+      "不支持"
+    ],
+    "active_generation": false,
+    "requires_same_product_id": true
+  }
+}

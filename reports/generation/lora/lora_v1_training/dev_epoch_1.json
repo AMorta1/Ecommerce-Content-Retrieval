@@ -1,0 +1,2437 @@
+{
+  "dataset": "lora_train_dev",
+  "records": 402,
+  "dev_loss": 0.019772963364395123,
+  "task_losses": {
+    "title": 0.05650993182329086,
+    "selling_points": 0.0016568969216840836,
+    "short_description": 0.0011520613482104243
+  },
+  "no_grad": true,
+  "parameter_updates": 0,
+  "configuration_unchanged": true,
+  "seconds": 72.52213380000103,
+  "memory": {
+    "allocated_mib": 5347.9,
+    "reserved_mib": 5774.0,
+    "peak_allocated_mib": 5535.6,
+    "peak_reserved_mib": 5774.0
+  },
+  "records_detail": [
+    {
+      "product_id": "42700923397",
+      "task_type": "title",
+      "sequence_tokens": 188,
+      "loss": 0.001057215966284275
+    },
+    {
+      "product_id": "42700923397",
+      "task_type": "selling_points",
+      "sequence_tokens": 203,
+      "loss": 1.6828284060466103e-05
+    },
+    {
+      "product_id": "42700923397",
+      "task_type": "short_description",
+      "sequence_tokens": 219,
+      "loss": 6.551795377163216e-05
+    },
+    {
+      "product_id": "544215262255",
+      "task_type": "title",
+      "sequence_tokens": 192,
+      "loss": 0.0008262786432169378
+    },
+    {
+      "product_id": "544215262255",
+      "task_type": "selling_points",
+      "sequence_tokens": 205,
+      "loss": 2.045849214482587e-05
+    },
+    {
+      "product_id": "544215262255",
+      "task_type": "short_description",
+      "sequence_tokens": 223,
+      "loss": 6.08095942880027e-05
+    },
+    {
+      "product_id": "569332891697",
+      "task_type": "title",
+      "sequence_tokens": 200,
+      "loss": 0.001833995571359992
+    },
+    {
+      "product_id": "569332891697",
+      "task_type": "selling_points",
+      "sequence_tokens": 218,
+      "loss": 1.831836016208399e-05
+    },
+    {
+      "product_id": "569332891697",
+      "task_type": "short_description",
+      "sequence_tokens": 231,
+      "loss": 0.00011629251093836501
+    },
+    {
+      "product_id": "571966598992",
+      "task_type": "title",
+      "sequence_tokens": 194,
+      "loss": 0.00464921398088336
+    },
+    {
+      "product_id": "571966598992",
+      "task_type": "selling_points",
+      "sequence_tokens": 214,
+      "loss": 2.6220743166049942e-05
+    },
+    {
+      "product_id": "571966598992",
+      "task_type": "short_description",
+      "sequence_tokens": 225,
+      "loss": 8.45988470246084e-05
+    },
+    {
+      "product_id": "572099021724",
+      "task_type": "title",
+      "sequence_tokens": 186,
+      "loss": 0.10997025668621063
+    },
+    {
+      "product_id": "572099021724",
+      "task_type": "selling_points",
+      "sequence_tokens": 202,
+      "loss": 0.00011940149852307513
+    },
+    {
+      "product_id": "572099021724",
+      "task_type": "short_description",
+      "sequence_tokens": 211,
+      "loss": 0.00023871177108958364
+    },
+    {
+      "product_id": "576003092944",
+      "task_type": "title",
+      "sequence_tokens": 188,
+      "loss": 0.04262671247124672
+    },
+    {
+      "product_id": "576003092944",
+      "task_type": "selling_points",
+      "sequence_tokens": 214,
+      "loss": 2.781088369374629e-05
+    },
+    {
+      "product_id": "576003092944",
+      "task_type": "short_description",
+      "sequence_tokens": 232,
+      "loss": 0.00015691774024162441
+    },
+    {
+      "product_id": "583021815556",
+      "task_type": "title",
+      "sequence_tokens": 174,
+      "loss": 0.10866069793701172
+    },
+    {
+      "product_id": "583021815556",
+      "task_type": "selling_points",
+      "sequence_tokens": 210,
+      "loss": 1.9647508452180773e-05
+    },
+    {
+      "product_id": "583021815556",
+      "task_type": "short_description",
+      "sequence_tokens": 226,
+      "loss": 0.0002231625549029559
+    },
+    {
+      "product_id": "598272277621",
+      "task_type": "title",
+      "sequence_tokens": 192,
+      "loss": 0.00901992991566658
+    },
+    {
+      "product_id": "598272277621",
+      "task_type": "selling_points",
+      "sequence_tokens": 219,
+      "loss": 3.097672015428543e-05
+    },
+    {
+      "product_id": "598272277621",
+      "task_type": "short_description",
+      "sequence_tokens": 236,
+      "loss": 9.933976252796128e-05
+    },
+    {
+      "product_id": "598733376848",
+      "task_type": "title",
+      "sequence_tokens": 181,
+      "loss": 0.011978601105511189
+    },
+    {
+      "product_id": "598733376848",
+      "task_type": "selling_points",
+      "sequence_tokens": 214,
+      "loss": 2.5332527002319694e-05
+    },
+    {
+      "product_id": "598733376848",
+      "task_type": "short_description",
+      "sequence_tokens": 225,
+      "loss": 0.00011062913108617067
+    },
+    {
+      "product_id": "600816076253",
+      "task_type": "title",
+      "sequence_tokens": 187,
+      "loss": 0.0009447701158933342
+    },
+    {
+      "product_id": "600816076253",
+      "task_type": "selling_points",
+      "sequence_tokens": 204,
+      "loss": 1.6310401406371966e-05
+    },
+    {
+      "product_id": "600816076253",
+      "task_type": "short_description",
+      "sequence_tokens": 219,
+      "loss": 6.984043284319341e-05
+    },
+    {
+      "product_id": "602274459386",
+      "task_type": "title",
+      "sequence_tokens": 191,
+      "loss": 0.03444512188434601
+    },
+    {
+      "product_id": "602274459386",
+      "task_type": "selling_points",
+      "sequence_tokens": 213,
+      "loss": 5.657601650455035e-05
+    },
+    {
+      "product_id": "602274459386",
+      "task_type": "short_description",
+      "sequence_tokens": 221,
+      "loss": 0.00014214024122338742
+    },
+    {
+      "product_id": "603839482155",
+      "task_type": "title",
+      "sequence_tokens": 194,
+      "loss": 0.006688268855214119
+    },
+    {
+      "product_id": "603839482155",
+      "task_type": "selling_points",
+      "sequence_tokens": 203,
+      "loss": 3.4949414839502424e-05
+    },
+    {
+      "product_id": "603839482155",
+      "task_type": "short_description",
+      "sequence_tokens": 218,
+      "loss": 8.11707359389402e-05
+    },
+    {
+      "product_id": "605643755235",
+      "task_type": "title",
+      "sequence_tokens": 195,
+      "loss": 0.0014136274112388492
+    },
+    {
+      "product_id": "605643755235",
+      "task_type": "selling_points",
+      "sequence_tokens": 212,
+      "loss": 2.9334752980503254e-05
+    },
+    {
+      "product_id": "605643755235",
+      "task_type": "short_description",
+      "sequence_tokens": 230,
+      "loss": 0.00012797015369869769
+    },
+    {
+      "product_id": "608666297228",
+      "task_type": "title",
+      "sequence_tokens": 189,
+      "loss": 0.0018425264861434698
+    },
+    {
+      "product_id": "608666297228",
+      "task_type": "selling_points",
+      "sequence_tokens": 211,
+      "loss": 1.9481654817354865e-05
+    },
+    {
+      "product_id": "608666297228",
+      "task_type": "short_description",
+      "sequence_tokens": 219,
+      "loss": 0.00011276839359197766
+    },
+    {
+      "product_id": "609994832947",
+      "task_type": "title",
+      "sequence_tokens": 192,
+      "loss": 0.002268524607643485
+    },
+    {
+      "product_id": "609994832947",
+      "task_type": "selling_points",
+      "sequence_tokens": 203,
+      "loss": 6.49124413030222e-05
+    },
+    {
+      "product_id": "609994832947",
+      "task_type": "short_description",
+      "sequence_tokens": 217,
+      "loss": 0.00011674612323986366
+    },
+    {
+      "product_id": "620889825985",
+      "task_type": "title",
+      "sequence_tokens": 200,
+      "loss": 0.0012179295299574733
+    },
+    {
+      "product_id": "620889825985",
+      "task_type": "selling_points",
+      "sequence_tokens": 217,
+      "loss": 3.5339719033800066e-05
+    },
+    {
+      "product_id": "620889825985",
+      "task_type": "short_description",
+      "sequence_tokens": 231,
+      "loss": 0.00012675243488047272
+    },
+    {
+      "product_id": "623141060702",
+      "task_type": "title",
+      "sequence_tokens": 193,
+      "loss": 0.0028446924407035112
+    },
+    {
+      "product_id": "623141060702",
+      "task_type": "selling_points",
+      "sequence_tokens": 213,
+      "loss": 1.990144301089458e-05
+    },
+    {
+      "product_id": "623141060702",
+      "task_type": "short_description",
+      "sequence_tokens": 223,
+      "loss": 0.000201515867956914
+    },
+    {
+      "product_id": "624095436207",
+      "task_type": "title",
+      "sequence_tokens": 221,
+      "loss": 0.27877572178840637
+    },
+    {
+      "product_id": "624095436207",
+      "task_type": "selling_points",
+      "sequence_tokens": 236,
+      "loss": 2.364277133892756e-05
+    },
+    {
+      "product_id": "624095436207",
+      "task_type": "short_description",
+      "sequence_tokens": 269,
+      "loss": 0.00019139335199724883
+    },
+    {
+      "product_id": "25543616964",
+      "task_type": "title",
+      "sequence_tokens": 113,
+      "loss": 0.131367489695549
+    },
+    {
+      "product_id": "25543616964",
+      "task_type": "selling_points",
+      "sequence_tokens": 128,
+      "loss": 0.09751947969198227
+    },
+    {
+      "product_id": "25543616964",
+      "task_type": "short_description",
+      "sequence_tokens": 125,
+      "loss": 0.005128811579197645
+    },
+    {
+      "product_id": "26998768780",
+      "task_type": "title",
+      "sequence_tokens": 115,
+      "loss": 0.004621529020369053
+    },
+    {
+      "product_id": "26998768780",
+      "task_type": "selling_points",
+      "sequence_tokens": 129,
+      "loss": 5.599273572443053e-05
+    },
+    {
+      "product_id": "26998768780",
+      "task_type": "short_description",
+      "sequence_tokens": 131,
+      "loss": 0.00022390879166778177
+    },
+    {
+      "product_id": "520488514618",
+      "task_type": "title",
+      "sequence_tokens": 147,
+      "loss": 0.007267676293849945
+    },
+    {
+      "product_id": "520488514618",
+      "task_type": "selling_points",
+      "sequence_tokens": 156,
+      "loss": 4.8613503167871386e-05
+    },
+    {
+      "product_id": "520488514618",
+      "task_type": "short_description",
+      "sequence_tokens": 167,
+      "loss": 0.0006957522709853947
+    },
+    {
+      "product_id": "569822918824",
+      "task_type": "title",
+      "sequence_tokens": 133,
+      "loss": 0.13155478239059448
+    },
+    {
+      "product_id": "569822918824",
+      "task_type": "selling_points",
+      "sequence_tokens": 146,
+      "loss": 0.003149496391415596
+    },
+    {
+      "product_id": "569822918824",
+      "task_type": "short_description",
+      "sequence_tokens": 155,
+      "loss": 0.0018903191667050123
+    },
+    {
+      "product_id": "580215420451",
+      "task_type": "title",
+      "sequence_tokens": 140,
+      "loss": 0.03184490278363228
+    },
+    {
+      "product_id": "580215420451",
+      "task_type": "selling_points",
+      "sequence_tokens": 153,
+      "loss": 4.1831393900793046e-05
+    },
+    {
+      "product_id": "580215420451",
+      "task_type": "short_description",
+      "sequence_tokens": 162,
+      "loss": 0.0005870913155376911
+    },
+    {
+      "product_id": "583120732189",
+      "task_type": "title",
+      "sequence_tokens": 114,
+      "loss": 0.1459501087665558
+    },
+    {
+      "product_id": "583120732189",
+      "task_type": "selling_points",
+      "sequence_tokens": 131,
+      "loss": 0.00039459066465497017
+    },
+    {
+      "product_id": "583120732189",
+      "task_type": "short_description",
+      "sequence_tokens": 136,
+      "loss": 0.0009518503793515265
+    },
+    {
+      "product_id": "591357018669",
+      "task_type": "title",
+      "sequence_tokens": 144,
+      "loss": 0.01649504341185093
+    },
+    {
+      "product_id": "591357018669",
+      "task_type": "selling_points",
+      "sequence_tokens": 157,
+      "loss": 8.266063377959654e-05
+    },
+    {
+      "product_id": "591357018669",
+      "task_type": "short_description",
+      "sequence_tokens": 165,
+      "loss": 0.00028740911511704326
+    },
+    {
+      "product_id": "596680428670",
+      "task_type": "title",
+      "sequence_tokens": 133,
+      "loss": 0.4158896207809448
+    },
+    {
+      "product_id": "596680428670",
+      "task_type": "selling_points",
+      "sequence_tokens": 146,
+      "loss": 0.0013140380615368485
+    },
+    {
+      "product_id": "596680428670",
+      "task_type": "short_description",
+      "sequence_tokens": 155,
+      "loss": 0.002102081198245287
+    },
+    {
+      "product_id": "597431937627",
+      "task_type": "title",
+      "sequence_tokens": 143,
+      "loss": 0.30474725365638733
+    },
+    {
+      "product_id": "597431937627",
+      "task_type": "selling_points",
+      "sequence_tokens": 157,
+      "loss": 7.738371641607955e-05
+    },
+    {
+      "product_id": "597431937627",
+      "task_type": "short_description",
+      "sequence_tokens": 165,
+      "loss": 0.00027297186898067594
+    },
+    {
+      "product_id": "598076584585",
+      "task_type": "title",
+      "sequence_tokens": 114,
+      "loss": 0.22708401083946228
+    },
+    {
+      "product_id": "598076584585",
+      "task_type": "selling_points",
+      "sequence_tokens": 128,
+      "loss": 0.0839332640171051
+    },
+    {
+      "product_id": "598076584585",
+      "task_type": "short_description",
+      "sequence_tokens": 125,
+      "loss": 0.0020854948088526726
+    },
+    {
+      "product_id": "598854051670",
+      "task_type": "title",
+      "sequence_tokens": 118,
+      "loss": 0.0011048760497942567
+    },
+    {
+      "product_id": "598854051670",
+      "task_type": "selling_points",
+      "sequence_tokens": 130,
+      "loss": 0.00033747070119716227
+    },
+    {
+      "product_id": "598854051670",
+      "task_type": "short_description",
+      "sequence_tokens": 127,
+      "loss": 0.0001494155148975551
+    },
+    {
+      "product_id": "600561788795",
+      "task_type": "title",
+      "sequence_tokens": 142,
+      "loss": 0.012410975992679596
+    },
+    {
+      "product_id": "600561788795",
+      "task_type": "selling_points",
+      "sequence_tokens": 156,
+      "loss": 8.274425636045635e-05
+    },
+    {
+      "product_id": "600561788795",
+      "task_type": "short_description",
+      "sequence_tokens": 164,
+      "loss": 0.00038566620787605643
+    },
+    {
+      "product_id": "602501293376",
+      "task_type": "title",
+      "sequence_tokens": 135,
+      "loss": 0.11859522759914398
+    },
+    {
+      "product_id": "602501293376",
+      "task_type": "selling_points",
+      "sequence_tokens": 144,
+      "loss": 0.002306245733052492
+    },
+    {
+      "product_id": "602501293376",
+      "task_type": "short_description",
+      "sequence_tokens": 157,
+      "loss": 0.0002507719036657363
+    },
+    {
+      "product_id": "605657859405",
+      "task_type": "title",
+      "sequence_tokens": 124,
+      "loss": 0.003938189707696438
+    },
+    {
+      "product_id": "605657859405",
+      "task_type": "selling_points",
+      "sequence_tokens": 137,
+      "loss": 7.862263737479225e-05
+    },
+    {
+      "product_id": "605657859405",
+      "task_type": "short_description",
+      "sequence_tokens": 145,
+      "loss": 0.0003142333298455924
+    },
+    {
+      "product_id": "609563902799",
+      "task_type": "title",
+      "sequence_tokens": 126,
+      "loss": 0.0008947392925620079
+    },
+    {
+      "product_id": "609563902799",
+      "task_type": "selling_points",
+      "sequence_tokens": 139,
+      "loss": 8.959860861068591e-05
+    },
+    {
+      "product_id": "609563902799",
+      "task_type": "short_description",
+      "sequence_tokens": 147,
+      "loss": 0.00022957059263717383
+    },
+    {
+      "product_id": "612475865376",
+      "task_type": "title",
+      "sequence_tokens": 155,
+      "loss": 0.015257282182574272
+    },
+    {
+      "product_id": "612475865376",
+      "task_type": "selling_points",
+      "sequence_tokens": 163,
+      "loss": 4.389390232972801e-05
+    },
+    {
+      "product_id": "612475865376",
+      "task_type": "short_description",
+      "sequence_tokens": 177,
+      "loss": 0.00033863793942146003
+    },
+    {
+      "product_id": "613760960890",
+      "task_type": "title",
+      "sequence_tokens": 117,
+      "loss": 0.000912595889531076
+    },
+    {
+      "product_id": "613760960890",
+      "task_type": "selling_points",
+      "sequence_tokens": 138,
+      "loss": 0.00010915495658991858
+    },
+    {
+      "product_id": "613760960890",
+      "task_type": "short_description",
+      "sequence_tokens": 142,
+      "loss": 0.00034522239002399147
+    },
+    {
+      "product_id": "615414912796",
+      "task_type": "title",
+      "sequence_tokens": 143,
+      "loss": 0.07093146443367004
+    },
+    {
+      "product_id": "615414912796",
+      "task_type": "selling_points",
+      "sequence_tokens": 155,
+      "loss": 0.00031821420998312533
+    },
+    {
+      "product_id": "615414912796",
+      "task_type": "short_description",
+      "sequence_tokens": 163,
+      "loss": 0.0005289489636197686
+    },
+    {
+      "product_id": "43078825428",
+      "task_type": "title",
+      "sequence_tokens": 129,
+      "loss": 0.2508253753185272
+    },
+    {
+      "product_id": "43078825428",
+      "task_type": "selling_points",
+      "sequence_tokens": 137,
+      "loss": 3.261438905610703e-05
+    },
+    {
+      "product_id": "43078825428",
+      "task_type": "short_description",
+      "sequence_tokens": 145,
+      "loss": 6.664595275651664e-05
+    },
+    {
+      "product_id": "43259871643",
+      "task_type": "title",
+      "sequence_tokens": 141,
+      "loss": 0.06921115517616272
+    },
+    {
+      "product_id": "43259871643",
+      "task_type": "selling_points",
+      "sequence_tokens": 156,
+      "loss": 2.1241687136352994e-05
+    },
+    {
+      "product_id": "43259871643",
+      "task_type": "short_description",
+      "sequence_tokens": 167,
+      "loss": 5.250372851151042e-05
+    },
+    {
+      "product_id": "549151083557",
+      "task_type": "title",
+      "sequence_tokens": 131,
+      "loss": 0.21719345450401306
+    },
+    {
+      "product_id": "549151083557",
+      "task_type": "selling_points",
+      "sequence_tokens": 141,
+      "loss": 0.00039465981535613537
+    },
+    {
+      "product_id": "549151083557",
+      "task_type": "short_description",
+      "sequence_tokens": 147,
+      "loss": 0.00022436272411141545
+    },
+    {
+      "product_id": "560963037453",
+      "task_type": "title",
+      "sequence_tokens": 135,
+      "loss": 0.051190417259931564
+    },
+    {
+      "product_id": "560963037453",
+      "task_type": "selling_points",
+      "sequence_tokens": 147,
+      "loss": 3.9040260162437335e-05
+    },
+    {
+      "product_id": "560963037453",
+      "task_type": "short_description",
+      "sequence_tokens": 161,
+      "loss": 8.594873361289501e-05
+    },
+    {
+      "product_id": "562849998141",
+      "task_type": "title",
+      "sequence_tokens": 155,
+      "loss": 0.005863298196345568
+    },
+    {
+      "product_id": "562849998141",
+      "task_type": "selling_points",
+      "sequence_tokens": 170,
+      "loss": 0.00012375488586258143
+    },
+    {
+      "product_id": "562849998141",
+      "task_type": "short_description",
+      "sequence_tokens": 182,
+      "loss": 4.69771730422508e-05
+    },
+    {
+      "product_id": "569058425441",
+      "task_type": "title",
+      "sequence_tokens": 141,
+      "loss": 0.0017778148176148534
+    },
+    {
+      "product_id": "569058425441",
+      "task_type": "selling_points",
+      "sequence_tokens": 146,
+      "loss": 1.7979044059757143e-05
+    },
+    {
+      "product_id": "569058425441",
+      "task_type": "short_description",
+      "sequence_tokens": 161,
+      "loss": 6.639348430326208e-05
+    },
+    {
+      "product_id": "597105660944",
+      "task_type": "title",
+      "sequence_tokens": 144,
+      "loss": 0.0023923898115754128
+    },
+    {
+      "product_id": "597105660944",
+      "task_type": "selling_points",
+      "sequence_tokens": 148,
+      "loss": 1.5232365512929391e-05
+    },
+    {
+      "product_id": "597105660944",
+      "task_type": "short_description",
+      "sequence_tokens": 164,
+      "loss": 0.0002578908752184361
+    },
+    {
+      "product_id": "598645023869",
+      "task_type": "title",
+      "sequence_tokens": 140,
+      "loss": 0.04180758446455002
+    },
+    {
+      "product_id": "598645023869",
+      "task_type": "selling_points",
+      "sequence_tokens": 151,
+      "loss": 1.9155137124471366e-05
+    },
+    {
+      "product_id": "598645023869",
+      "task_type": "short_description",
+      "sequence_tokens": 165,
+      "loss": 7.972696039360017e-05
+    },
+    {
+      "product_id": "600100963319",
+      "task_type": "title",
+      "sequence_tokens": 149,
+      "loss": 0.0013492269208654761
+    },
+    {
+      "product_id": "600100963319",
+      "task_type": "selling_points",
+      "sequence_tokens": 150,
+      "loss": 1.4226919120119419e-05
+    },
+    {
+      "product_id": "600100963319",
+      "task_type": "short_description",
+      "sequence_tokens": 169,
+      "loss": 8.170693035935983e-05
+    },
+    {
+      "product_id": "608328445164",
+      "task_type": "title",
+      "sequence_tokens": 134,
+      "loss": 0.003250321839004755
+    },
+    {
+      "product_id": "608328445164",
+      "task_type": "selling_points",
+      "sequence_tokens": 146,
+      "loss": 1.3493709047907032e-05
+    },
+    {
+      "product_id": "608328445164",
+      "task_type": "short_description",
+      "sequence_tokens": 157,
+      "loss": 6.506081990664825e-05
+    },
+    {
+      "product_id": "610349417279",
+      "task_type": "title",
+      "sequence_tokens": 149,
+      "loss": 0.0022078619804233313
+    },
+    {
+      "product_id": "610349417279",
+      "task_type": "selling_points",
+      "sequence_tokens": 167,
+      "loss": 5.574457100010477e-05
+    },
+    {
+      "product_id": "610349417279",
+      "task_type": "short_description",
+      "sequence_tokens": 176,
+      "loss": 7.041585922706872e-05
+    },
+    {
+      "product_id": "613021590713",
+      "task_type": "title",
+      "sequence_tokens": 127,
+      "loss": 0.016286099329590797
+    },
+    {
+      "product_id": "613021590713",
+      "task_type": "selling_points",
+      "sequence_tokens": 137,
+      "loss": 8.143276500049978e-05
+    },
+    {
+      "product_id": "613021590713",
+      "task_type": "short_description",
+      "sequence_tokens": 143,
+      "loss": 9.22035615076311e-05
+    },
+    {
+      "product_id": "614136958495",
+      "task_type": "title",
+      "sequence_tokens": 142,
+      "loss": 0.002447007689625025
+    },
+    {
+      "product_id": "614136958495",
+      "task_type": "selling_points",
+      "sequence_tokens": 147,
+      "loss": 1.580237403686624e-05
+    },
+    {
+      "product_id": "614136958495",
+      "task_type": "short_description",
+      "sequence_tokens": 162,
+      "loss": 6.0524918808368966e-05
+    },
+    {
+      "product_id": "615986453433",
+      "task_type": "title",
+      "sequence_tokens": 119,
+      "loss": 0.006898574996739626
+    },
+    {
+      "product_id": "615986453433",
+      "task_type": "selling_points",
+      "sequence_tokens": 133,
+      "loss": 0.00037157328915782273
+    },
+    {
+      "product_id": "615986453433",
+      "task_type": "short_description",
+      "sequence_tokens": 131,
+      "loss": 0.00027599302120506763
+    },
+    {
+      "product_id": "621486621986",
+      "task_type": "title",
+      "sequence_tokens": 129,
+      "loss": 0.0042449962347745895
+    },
+    {
+      "product_id": "621486621986",
+      "task_type": "selling_points",
+      "sequence_tokens": 138,
+      "loss": 3.4759290429065004e-05
+    },
+    {
+      "product_id": "621486621986",
+      "task_type": "short_description",
+      "sequence_tokens": 148,
+      "loss": 6.347933958750218e-05
+    },
+    {
+      "product_id": "623497021404",
+      "task_type": "title",
+      "sequence_tokens": 163,
+      "loss": 0.01587655209004879
+    },
+    {
+      "product_id": "623497021404",
+      "task_type": "selling_points",
+      "sequence_tokens": 174,
+      "loss": 0.0001353777915937826
+    },
+    {
+      "product_id": "623497021404",
+      "task_type": "short_description",
+      "sequence_tokens": 190,
+      "loss": 5.0678041588980705e-05
+    },
+    {
+      "product_id": "524494858977",
+      "task_type": "title",
+      "sequence_tokens": 161,
+      "loss": 0.012484913691878319
+    },
+    {
+      "product_id": "524494858977",
+      "task_type": "selling_points",
+      "sequence_tokens": 169,
+      "loss": 2.3997097741812468e-05
+    },
+    {
+      "product_id": "524494858977",
+      "task_type": "short_description",
+      "sequence_tokens": 181,
+      "loss": 6.735612987540662e-05
+    },
+    {
+      "product_id": "543850386738",
+      "task_type": "title",
+      "sequence_tokens": 120,
+      "loss": 0.0035327007062733173
+    },
+    {
+      "product_id": "543850386738",
+      "task_type": "selling_points",
+      "sequence_tokens": 131,
+      "loss": 6.347229646053165e-05
+    },
+    {
+      "product_id": "543850386738",
+      "task_type": "short_description",
+      "sequence_tokens": 133,
+      "loss": 9.894082904793322e-05
+    },
+    {
+      "product_id": "557126348971",
+      "task_type": "title",
+      "sequence_tokens": 120,
+      "loss": 0.013721488416194916
+    },
+    {
+      "product_id": "557126348971",
+      "task_type": "selling_points",
+      "sequence_tokens": 130,
+      "loss": 0.0001033804946928285
+    },
+    {
+      "product_id": "557126348971",
+      "task_type": "short_description",
+      "sequence_tokens": 133,
+      "loss": 0.00015209722914732993
+    },
+    {
+      "product_id": "558753323097",
+      "task_type": "title",
+      "sequence_tokens": 164,
+      "loss": 0.012360634282231331
+    },
+    {
+      "product_id": "558753323097",
+      "task_type": "selling_points",
+      "sequence_tokens": 165,
+      "loss": 2.011882133956533e-05
+    },
+    {
+      "product_id": "558753323097",
+      "task_type": "short_description",
+      "sequence_tokens": 179,
+      "loss": 0.00014462626131717116
+    },
+    {
+      "product_id": "561308451920",
+      "task_type": "title",
+      "sequence_tokens": 117,
+      "loss": 0.009213514626026154
+    },
+    {
+      "product_id": "561308451920",
+      "task_type": "selling_points",
+      "sequence_tokens": 131,
+      "loss": 0.000156325229909271
+    },
+    {
+      "product_id": "561308451920",
+      "task_type": "short_description",
+      "sequence_tokens": 135,
+      "loss": 0.00014274285058490932
+    },
+    {
+      "product_id": "565864670782",
+      "task_type": "title",
+      "sequence_tokens": 153,
+      "loss": 0.0026159926783293486
+    },
+    {
+      "product_id": "565864670782",
+      "task_type": "selling_points",
+      "sequence_tokens": 181,
+      "loss": 0.0006095937569625676
+    },
+    {
+      "product_id": "565864670782",
+      "task_type": "short_description",
+      "sequence_tokens": 198,
+      "loss": 0.00024044944439083338
+    },
+    {
+      "product_id": "591964298102",
+      "task_type": "title",
+      "sequence_tokens": 134,
+      "loss": 0.11025021225214005
+    },
+    {
+      "product_id": "591964298102",
+      "task_type": "selling_points",
+      "sequence_tokens": 147,
+      "loss": 2.9219609132269397e-05
+    },
+    {
+      "product_id": "591964298102",
+      "task_type": "short_description",
+      "sequence_tokens": 153,
+      "loss": 0.00035791375557892025
+    },
+    {
+      "product_id": "595776736215",
+      "task_type": "title",
+      "sequence_tokens": 121,
+      "loss": 0.0010150645393878222
+    },
+    {
+      "product_id": "595776736215",
+      "task_type": "selling_points",
+      "sequence_tokens": 130,
+      "loss": 0.0001975105842575431
+    },
+    {
+      "product_id": "595776736215",
+      "task_type": "short_description",
+      "sequence_tokens": 137,
+      "loss": 0.0001905169483507052
+    },
+    {
+      "product_id": "600825038365",
+      "task_type": "title",
+      "sequence_tokens": 127,
+      "loss": 0.003504473017528653
+    },
+    {
+      "product_id": "600825038365",
+      "task_type": "selling_points",
+      "sequence_tokens": 140,
+      "loss": 3.09755741909612e-05
+    },
+    {
+      "product_id": "600825038365",
+      "task_type": "short_description",
+      "sequence_tokens": 151,
+      "loss": 0.00010504386591492221
+    },
+    {
+      "product_id": "609767916765",
+      "task_type": "title",
+      "sequence_tokens": 149,
+      "loss": 0.01569955423474312
+    },
+    {
+      "product_id": "609767916765",
+      "task_type": "selling_points",
+      "sequence_tokens": 165,
+      "loss": 0.0002432432520436123
+    },
+    {
+      "product_id": "609767916765",
+      "task_type": "short_description",
+      "sequence_tokens": 177,
+      "loss": 0.0006064692279323936
+    },
+    {
+      "product_id": "615628473498",
+      "task_type": "title",
+      "sequence_tokens": 142,
+      "loss": 0.002633799333125353
+    },
+    {
+      "product_id": "615628473498",
+      "task_type": "selling_points",
+      "sequence_tokens": 148,
+      "loss": 1.721193802950438e-05
+    },
+    {
+      "product_id": "615628473498",
+      "task_type": "short_description",
+      "sequence_tokens": 165,
+      "loss": 7.346840720856562e-05
+    },
+    {
+      "product_id": "617399669095",
+      "task_type": "title",
+      "sequence_tokens": 131,
+      "loss": 0.0015368431340903044
+    },
+    {
+      "product_id": "617399669095",
+      "task_type": "selling_points",
+      "sequence_tokens": 140,
+      "loss": 2.3390099158859812e-05
+    },
+    {
+      "product_id": "617399669095",
+      "task_type": "short_description",
+      "sequence_tokens": 151,
+      "loss": 7.912572618806735e-05
+    },
+    {
+      "product_id": "622137408205",
+      "task_type": "title",
+      "sequence_tokens": 137,
+      "loss": 0.005865031387656927
+    },
+    {
+      "product_id": "622137408205",
+      "task_type": "selling_points",
+      "sequence_tokens": 147,
+      "loss": 8.206948405131698e-05
+    },
+    {
+      "product_id": "622137408205",
+      "task_type": "short_description",
+      "sequence_tokens": 153,
+      "loss": 0.00015893523232080042
+    },
+    {
+      "product_id": "622180290668",
+      "task_type": "title",
+      "sequence_tokens": 123,
+      "loss": 0.0009361632983200252
+    },
+    {
+      "product_id": "622180290668",
+      "task_type": "selling_points",
+      "sequence_tokens": 131,
+      "loss": 5.253448762232438e-05
+    },
+    {
+      "product_id": "622180290668",
+      "task_type": "short_description",
+      "sequence_tokens": 138,
+      "loss": 0.00011885662388522178
+    },
+    {
+      "product_id": "624831651928",
+      "task_type": "title",
+      "sequence_tokens": 160,
+      "loss": 0.004931620322167873
+    },
+    {
+      "product_id": "624831651928",
+      "task_type": "selling_points",
+      "sequence_tokens": 173,
+      "loss": 0.00022034528956282884
+    },
+    {
+      "product_id": "624831651928",
+      "task_type": "short_description",
+      "sequence_tokens": 178,
+      "loss": 6.988482346059754e-05
+    },
+    {
+      "product_id": "553419918614",
+      "task_type": "title",
+      "sequence_tokens": 125,
+      "loss": 0.0009554315474815667
+    },
+    {
+      "product_id": "553419918614",
+      "task_type": "selling_points",
+      "sequence_tokens": 141,
+      "loss": 9.674210741650313e-05
+    },
+    {
+      "product_id": "553419918614",
+      "task_type": "short_description",
+      "sequence_tokens": 140,
+      "loss": 0.000133691995870322
+    },
+    {
+      "product_id": "554553278267",
+      "task_type": "title",
+      "sequence_tokens": 156,
+      "loss": 0.0007493480225093663
+    },
+    {
+      "product_id": "554553278267",
+      "task_type": "selling_points",
+      "sequence_tokens": 166,
+      "loss": 5.725950904889032e-05
+    },
+    {
+      "product_id": "554553278267",
+      "task_type": "short_description",
+      "sequence_tokens": 180,
+      "loss": 0.00015917312703095376
+    },
+    {
+      "product_id": "562149261234",
+      "task_type": "title",
+      "sequence_tokens": 154,
+      "loss": 0.0009402154246345162
+    },
+    {
+      "product_id": "562149261234",
+      "task_type": "selling_points",
+      "sequence_tokens": 166,
+      "loss": 6.619068153668195e-05
+    },
+    {
+      "product_id": "562149261234",
+      "task_type": "short_description",
+      "sequence_tokens": 178,
+      "loss": 7.232525240397081e-05
+    },
+    {
+      "product_id": "569694759189",
+      "task_type": "title",
+      "sequence_tokens": 141,
+      "loss": 0.002203467534855008
+    },
+    {
+      "product_id": "569694759189",
+      "task_type": "selling_points",
+      "sequence_tokens": 155,
+      "loss": 9.146559023065493e-05
+    },
+    {
+      "product_id": "569694759189",
+      "task_type": "short_description",
+      "sequence_tokens": 167,
+      "loss": 0.0001070223079295829
+    },
+    {
+      "product_id": "576474707507",
+      "task_type": "title",
+      "sequence_tokens": 148,
+      "loss": 0.001969387987628579
+    },
+    {
+      "product_id": "576474707507",
+      "task_type": "selling_points",
+      "sequence_tokens": 165,
+      "loss": 9.290959860663861e-05
+    },
+    {
+      "product_id": "576474707507",
+      "task_type": "short_description",
+      "sequence_tokens": 174,
+      "loss": 7.845796790206805e-05
+    },
+    {
+      "product_id": "579916289699",
+      "task_type": "title",
+      "sequence_tokens": 141,
+      "loss": 0.0012438527774065733
+    },
+    {
+      "product_id": "579916289699",
+      "task_type": "selling_points",
+      "sequence_tokens": 158,
+      "loss": 4.213320789858699e-05
+    },
+    {
+      "product_id": "579916289699",
+      "task_type": "short_description",
+      "sequence_tokens": 167,
+      "loss": 0.00011050327157136053
+    },
+    {
+      "product_id": "585600843776",
+      "task_type": "title",
+      "sequence_tokens": 150,
+      "loss": 0.01082358043640852
+    },
+    {
+      "product_id": "585600843776",
+      "task_type": "selling_points",
+      "sequence_tokens": 159,
+      "loss": 4.249819176038727e-05
+    },
+    {
+      "product_id": "585600843776",
+      "task_type": "short_description",
+      "sequence_tokens": 173,
+      "loss": 0.00023930362658575177
+    },
+    {
+      "product_id": "592435842365",
+      "task_type": "title",
+      "sequence_tokens": 160,
+      "loss": 0.009596416726708412
+    },
+    {
+      "product_id": "592435842365",
+      "task_type": "selling_points",
+      "sequence_tokens": 176,
+      "loss": 0.000396196759538725
+    },
+    {
+      "product_id": "592435842365",
+      "task_type": "short_description",
+      "sequence_tokens": 186,
+      "loss": 7.487303082598373e-05
+    },
+    {
+      "product_id": "593706844782",
+      "task_type": "title",
+      "sequence_tokens": 158,
+      "loss": 0.0032780389301478863
+    },
+    {
+      "product_id": "593706844782",
+      "task_type": "selling_points",
+      "sequence_tokens": 166,
+      "loss": 8.06041934993118e-05
+    },
+    {
+      "product_id": "593706844782",
+      "task_type": "short_description",
+      "sequence_tokens": 180,
+      "loss": 0.0001109408913180232
+    },
+    {
+      "product_id": "596507785095",
+      "task_type": "title",
+      "sequence_tokens": 179,
+      "loss": 0.245909184217453
+    },
+    {
+      "product_id": "596507785095",
+      "task_type": "selling_points",
+      "sequence_tokens": 178,
+      "loss": 6.932884571142495e-05
+    },
+    {
+      "product_id": "596507785095",
+      "task_type": "short_description",
+      "sequence_tokens": 203,
+      "loss": 9.739401139086112e-05
+    },
+    {
+      "product_id": "597263199493",
+      "task_type": "title",
+      "sequence_tokens": 164,
+      "loss": 0.0009135965956375003
+    },
+    {
+      "product_id": "597263199493",
+      "task_type": "selling_points",
+      "sequence_tokens": 170,
+      "loss": 4.3986223317915574e-05
+    },
+    {
+      "product_id": "597263199493",
+      "task_type": "short_description",
+      "sequence_tokens": 188,
+      "loss": 0.00013442314229905605
+    },
+    {
+      "product_id": "597532479129",
+      "task_type": "title",
+      "sequence_tokens": 152,
+      "loss": 0.002754785818979144
+    },
+    {
+      "product_id": "597532479129",
+      "task_type": "selling_points",
+      "sequence_tokens": 168,
+      "loss": 0.0004660002887248993
+    },
+    {
+      "product_id": "597532479129",
+      "task_type": "short_description",
+      "sequence_tokens": 179,
+      "loss": 7.564741827081889e-05
+    },
+    {
+      "product_id": "604753451899",
+      "task_type": "title",
+      "sequence_tokens": 161,
+      "loss": 0.16860274970531464
+    },
+    {
+      "product_id": "604753451899",
+      "task_type": "selling_points",
+      "sequence_tokens": 178,
+      "loss": 0.0010352915851399302
+    },
+    {
+      "product_id": "604753451899",
+      "task_type": "short_description",
+      "sequence_tokens": 189,
+      "loss": 7.417227607220411e-05
+    },
+    {
+      "product_id": "613530645563",
+      "task_type": "title",
+      "sequence_tokens": 131,
+      "loss": 0.19015927612781525
+    },
+    {
+      "product_id": "613530645563",
+      "task_type": "selling_points",
+      "sequence_tokens": 145,
+      "loss": 0.00015219140914268792
+    },
+    {
+      "product_id": "613530645563",
+      "task_type": "short_description",
+      "sequence_tokens": 151,
+      "loss": 9.776958177099004e-05
+    },
+    {
+      "product_id": "614929687815",
+      "task_type": "title",
+      "sequence_tokens": 147,
+      "loss": 0.003014571964740753
+    },
+    {
+      "product_id": "614929687815",
+      "task_type": "selling_points",
+      "sequence_tokens": 163,
+      "loss": 0.00014334167644847184
+    },
+    {
+      "product_id": "614929687815",
+      "task_type": "short_description",
+      "sequence_tokens": 174,
+      "loss": 0.0007332460954785347
+    },
+    {
+      "product_id": "622497095666",
+      "task_type": "title",
+      "sequence_tokens": 146,
+      "loss": 0.0060477047227323055
+    },
+    {
+      "product_id": "622497095666",
+      "task_type": "selling_points",
+      "sequence_tokens": 153,
+      "loss": 6.151817069621757e-05
+    },
+    {
+      "product_id": "622497095666",
+      "task_type": "short_description",
+      "sequence_tokens": 167,
+      "loss": 0.0003541067417245358
+    },
+    {
+      "product_id": "623960161106",
+      "task_type": "title",
+      "sequence_tokens": 164,
+      "loss": 0.006562886293977499
+    },
+    {
+      "product_id": "623960161106",
+      "task_type": "selling_points",
+      "sequence_tokens": 175,
+      "loss": 0.00011394161992939189
+    },
+    {
+      "product_id": "623960161106",
+      "task_type": "short_description",
+      "sequence_tokens": 188,
+      "loss": 6.353084609145299e-05
+    },
+    {
+      "product_id": "526293861303",
+      "task_type": "title",
+      "sequence_tokens": 116,
+      "loss": 0.0035325263161212206
+    },
+    {
+      "product_id": "526293861303",
+      "task_type": "selling_points",
+      "sequence_tokens": 139,
+      "loss": 0.0019214553758502007
+    },
+    {
+      "product_id": "526293861303",
+      "task_type": "short_description",
+      "sequence_tokens": 136,
+      "loss": 0.00018368712335359305
+    },
+    {
+      "product_id": "530202520816",
+      "task_type": "title",
+      "sequence_tokens": 128,
+      "loss": 0.17163217067718506
+    },
+    {
+      "product_id": "530202520816",
+      "task_type": "selling_points",
+      "sequence_tokens": 147,
+      "loss": 0.0022570639848709106
+    },
+    {
+      "product_id": "530202520816",
+      "task_type": "short_description",
+      "sequence_tokens": 154,
+      "loss": 0.00046576577005907893
+    },
+    {
+      "product_id": "531509322875",
+      "task_type": "title",
+      "sequence_tokens": 118,
+      "loss": 0.002126525854691863
+    },
+    {
+      "product_id": "531509322875",
+      "task_type": "selling_points",
+      "sequence_tokens": 134,
+      "loss": 6.320551619865e-05
+    },
+    {
+      "product_id": "531509322875",
+      "task_type": "short_description",
+      "sequence_tokens": 137,
+      "loss": 0.005806394387036562
+    },
+    {
+      "product_id": "556177070013",
+      "task_type": "title",
+      "sequence_tokens": 117,
+      "loss": 0.01102053839713335
+    },
+    {
+      "product_id": "556177070013",
+      "task_type": "selling_points",
+      "sequence_tokens": 136,
+      "loss": 0.0002656573778949678
+    },
+    {
+      "product_id": "556177070013",
+      "task_type": "short_description",
+      "sequence_tokens": 133,
+      "loss": 0.00012021396833006293
+    },
+    {
+      "product_id": "560906532208",
+      "task_type": "title",
+      "sequence_tokens": 128,
+      "loss": 0.002868922660127282
+    },
+    {
+      "product_id": "560906532208",
+      "task_type": "selling_points",
+      "sequence_tokens": 144,
+      "loss": 7.687780453125015e-05
+    },
+    {
+      "product_id": "560906532208",
+      "task_type": "short_description",
+      "sequence_tokens": 141,
+      "loss": 6.519832095364109e-05
+    },
+    {
+      "product_id": "562489119045",
+      "task_type": "title",
+      "sequence_tokens": 133,
+      "loss": 0.013692577369511127
+    },
+    {
+      "product_id": "562489119045",
+      "task_type": "selling_points",
+      "sequence_tokens": 143,
+      "loss": 3.018123607034795e-05
+    },
+    {
+      "product_id": "562489119045",
+      "task_type": "short_description",
+      "sequence_tokens": 153,
+      "loss": 0.00011293802526779473
+    },
+    {
+      "product_id": "566220836792",
+      "task_type": "title",
+      "sequence_tokens": 146,
+      "loss": 0.007605557795614004
+    },
+    {
+      "product_id": "566220836792",
+      "task_type": "selling_points",
+      "sequence_tokens": 173,
+      "loss": 0.00012848019832745194
+    },
+    {
+      "product_id": "566220836792",
+      "task_type": "short_description",
+      "sequence_tokens": 190,
+      "loss": 0.001001976546831429
+    },
+    {
+      "product_id": "571097757018",
+      "task_type": "title",
+      "sequence_tokens": 108,
+      "loss": 0.002090226160362363
+    },
+    {
+      "product_id": "571097757018",
+      "task_type": "selling_points",
+      "sequence_tokens": 124,
+      "loss": 0.00014262009062804282
+    },
+    {
+      "product_id": "571097757018",
+      "task_type": "short_description",
+      "sequence_tokens": 121,
+      "loss": 8.604255708632991e-05
+    },
+    {
+      "product_id": "572794053443",
+      "task_type": "title",
+      "sequence_tokens": 108,
+      "loss": 0.0023256794083863497
+    },
+    {
+      "product_id": "572794053443",
+      "task_type": "selling_points",
+      "sequence_tokens": 124,
+      "loss": 0.00012642999354284257
+    },
+    {
+      "product_id": "572794053443",
+      "task_type": "short_description",
+      "sequence_tokens": 121,
+      "loss": 0.00014388663112185895
+    },
+    {
+      "product_id": "583503352757",
+      "task_type": "title",
+      "sequence_tokens": 150,
+      "loss": 0.007462284993380308
+    },
+    {
+      "product_id": "583503352757",
+      "task_type": "selling_points",
+      "sequence_tokens": 167,
+      "loss": 2.8155911422800273e-05
+    },
+    {
+      "product_id": "583503352757",
+      "task_type": "short_description",
+      "sequence_tokens": 191,
+      "loss": 0.0001830941328080371
+    },
+    {
+      "product_id": "587246440411",
+      "task_type": "title",
+      "sequence_tokens": 159,
+      "loss": 0.10828446596860886
+    },
+    {
+      "product_id": "587246440411",
+      "task_type": "selling_points",
+      "sequence_tokens": 172,
+      "loss": 0.00015748964506201446
+    },
+    {
+      "product_id": "587246440411",
+      "task_type": "short_description",
+      "sequence_tokens": 185,
+      "loss": 6.364627188304439e-05
+    },
+    {
+      "product_id": "591034298813",
+      "task_type": "title",
+      "sequence_tokens": 154,
+      "loss": 0.0063338209874928
+    },
+    {
+      "product_id": "591034298813",
+      "task_type": "selling_points",
+      "sequence_tokens": 168,
+      "loss": 0.0006858872366137803
+    },
+    {
+      "product_id": "591034298813",
+      "task_type": "short_description",
+      "sequence_tokens": 184,
+      "loss": 0.0003184521337971091
+    },
+    {
+      "product_id": "606803176103",
+      "task_type": "title",
+      "sequence_tokens": 147,
+      "loss": 0.25163963437080383
+    },
+    {
+      "product_id": "606803176103",
+      "task_type": "selling_points",
+      "sequence_tokens": 164,
+      "loss": 0.00010562013630988076
+    },
+    {
+      "product_id": "606803176103",
+      "task_type": "short_description",
+      "sequence_tokens": 171,
+      "loss": 9.285110718337819e-05
+    },
+    {
+      "product_id": "609950274910",
+      "task_type": "title",
+      "sequence_tokens": 150,
+      "loss": 0.006163154728710651
+    },
+    {
+      "product_id": "609950274910",
+      "task_type": "selling_points",
+      "sequence_tokens": 170,
+      "loss": 7.888647087384015e-05
+    },
+    {
+      "product_id": "609950274910",
+      "task_type": "short_description",
+      "sequence_tokens": 179,
+      "loss": 0.0012666452676057816
+    },
+    {
+      "product_id": "614191806493",
+      "task_type": "title",
+      "sequence_tokens": 167,
+      "loss": 0.012439403682947159
+    },
+    {
+      "product_id": "614191806493",
+      "task_type": "selling_points",
+      "sequence_tokens": 183,
+      "loss": 0.0006629247218370438
+    },
+    {
+      "product_id": "614191806493",
+      "task_type": "short_description",
+      "sequence_tokens": 197,
+      "loss": 0.00010953309538308531
+    },
+    {
+      "product_id": "619231434600",
+      "task_type": "title",
+      "sequence_tokens": 155,
+      "loss": 0.045808691531419754
+    },
+    {
+      "product_id": "619231434600",
+      "task_type": "selling_points",
+      "sequence_tokens": 169,
+      "loss": 6.666133413091302e-05
+    },
+    {
+      "product_id": "619231434600",
+      "task_type": "short_description",
+      "sequence_tokens": 181,
+      "loss": 0.00011943750723730773
+    },
+    {
+      "product_id": "620792197593",
+      "task_type": "title",
+      "sequence_tokens": 117,
+      "loss": 0.003638695925474167
+    },
+    {
+      "product_id": "620792197593",
+      "task_type": "selling_points",
+      "sequence_tokens": 141,
+      "loss": 0.0035503359977155924
+    },
+    {
+      "product_id": "620792197593",
+      "task_type": "short_description",
+      "sequence_tokens": 138,
+      "loss": 0.00040912622353062034
+    },
+    {
+      "product_id": "528829492102",
+      "task_type": "title",
+      "sequence_tokens": 149,
+      "loss": 0.16195400059223175
+    },
+    {
+      "product_id": "528829492102",
+      "task_type": "selling_points",
+      "sequence_tokens": 162,
+      "loss": 0.0001670388737693429
+    },
+    {
+      "product_id": "528829492102",
+      "task_type": "short_description",
+      "sequence_tokens": 172,
+      "loss": 0.0020618296694010496
+    },
+    {
+      "product_id": "540331184412",
+      "task_type": "title",
+      "sequence_tokens": 148,
+      "loss": 0.011034724302589893
+    },
+    {
+      "product_id": "540331184412",
+      "task_type": "selling_points",
+      "sequence_tokens": 160,
+      "loss": 0.0004534654726739973
+    },
+    {
+      "product_id": "540331184412",
+      "task_type": "short_description",
+      "sequence_tokens": 172,
+      "loss": 0.00048602951574139297
+    },
+    {
+      "product_id": "544952808827",
+      "task_type": "title",
+      "sequence_tokens": 138,
+      "loss": 0.15600937604904175
+    },
+    {
+      "product_id": "544952808827",
+      "task_type": "selling_points",
+      "sequence_tokens": 153,
+      "loss": 0.00017631416267249733
+    },
+    {
+      "product_id": "544952808827",
+      "task_type": "short_description",
+      "sequence_tokens": 156,
+      "loss": 0.02259901911020279
+    },
+    {
+      "product_id": "556924309540",
+      "task_type": "title",
+      "sequence_tokens": 135,
+      "loss": 0.17180529236793518
+    },
+    {
+      "product_id": "556924309540",
+      "task_type": "selling_points",
+      "sequence_tokens": 153,
+      "loss": 0.00021362167899496853
+    },
+    {
+      "product_id": "556924309540",
+      "task_type": "short_description",
+      "sequence_tokens": 150,
+      "loss": 0.000356046250090003
+    },
+    {
+      "product_id": "576377848926",
+      "task_type": "title",
+      "sequence_tokens": 129,
+      "loss": 0.03746964782476425
+    },
+    {
+      "product_id": "576377848926",
+      "task_type": "selling_points",
+      "sequence_tokens": 148,
+      "loss": 0.0001392942649545148
+    },
+    {
+      "product_id": "576377848926",
+      "task_type": "short_description",
+      "sequence_tokens": 157,
+      "loss": 0.0030990971717983484
+    },
+    {
+      "product_id": "587414853247",
+      "task_type": "title",
+      "sequence_tokens": 127,
+      "loss": 0.12081374228000641
+    },
+    {
+      "product_id": "587414853247",
+      "task_type": "selling_points",
+      "sequence_tokens": 142,
+      "loss": 0.00018171215197071433
+    },
+    {
+      "product_id": "587414853247",
+      "task_type": "short_description",
+      "sequence_tokens": 153,
+      "loss": 0.0026748806703835726
+    },
+    {
+      "product_id": "601284953533",
+      "task_type": "title",
+      "sequence_tokens": 141,
+      "loss": 0.13399343192577362
+    },
+    {
+      "product_id": "601284953533",
+      "task_type": "selling_points",
+      "sequence_tokens": 152,
+      "loss": 0.0001391746336594224
+    },
+    {
+      "product_id": "601284953533",
+      "task_type": "short_description",
+      "sequence_tokens": 164,
+      "loss": 0.0010418270248919725
+    },
+    {
+      "product_id": "610056358817",
+      "task_type": "title",
+      "sequence_tokens": 138,
+      "loss": 0.1444159746170044
+    },
+    {
+      "product_id": "610056358817",
+      "task_type": "selling_points",
+      "sequence_tokens": 152,
+      "loss": 0.0002532442449592054
+    },
+    {
+      "product_id": "610056358817",
+      "task_type": "short_description",
+      "sequence_tokens": 161,
+      "loss": 0.0016382720787078142
+    },
+    {
+      "product_id": "613921668167",
+      "task_type": "title",
+      "sequence_tokens": 134,
+      "loss": 0.020468629896640778
+    },
+    {
+      "product_id": "613921668167",
+      "task_type": "selling_points",
+      "sequence_tokens": 147,
+      "loss": 5.643801705446094e-05
+    },
+    {
+      "product_id": "613921668167",
+      "task_type": "short_description",
+      "sequence_tokens": 159,
+      "loss": 0.0026721751783043146
+    },
+    {
+      "product_id": "614002843259",
+      "task_type": "title",
+      "sequence_tokens": 137,
+      "loss": 0.009412677958607674
+    },
+    {
+      "product_id": "614002843259",
+      "task_type": "selling_points",
+      "sequence_tokens": 153,
+      "loss": 0.0014162583975121379
+    },
+    {
+      "product_id": "614002843259",
+      "task_type": "short_description",
+      "sequence_tokens": 162,
+      "loss": 0.004283735062927008
+    },
+    {
+      "product_id": "616056549560",
+      "task_type": "title",
+      "sequence_tokens": 139,
+      "loss": 0.01024710014462471
+    },
+    {
+      "product_id": "616056549560",
+      "task_type": "selling_points",
+      "sequence_tokens": 151,
+      "loss": 0.00030726721161045134
+    },
+    {
+      "product_id": "616056549560",
+      "task_type": "short_description",
+      "sequence_tokens": 163,
+      "loss": 0.0005840463563799858
+    },
+    {
+      "product_id": "618174756566",
+      "task_type": "title",
+      "sequence_tokens": 141,
+      "loss": 0.017452621832489967
+    },
+    {
+      "product_id": "618174756566",
+      "task_type": "selling_points",
+      "sequence_tokens": 152,
+      "loss": 0.0001391746336594224
+    },
+    {
+      "product_id": "618174756566",
+      "task_type": "short_description",
+      "sequence_tokens": 164,
+      "loss": 0.0010418270248919725
+    },
+    {
+      "product_id": "620130716068",
+      "task_type": "title",
+      "sequence_tokens": 139,
+      "loss": 0.007791236042976379
+    },
+    {
+      "product_id": "620130716068",
+      "task_type": "selling_points",
+      "sequence_tokens": 154,
+      "loss": 0.0006498924340121448
+    },
+    {
+      "product_id": "620130716068",
+      "task_type": "short_description",
+      "sequence_tokens": 164,
+      "loss": 0.004181057680398226
+    },
+    {
+      "product_id": "622752995912",
+      "task_type": "title",
+      "sequence_tokens": 137,
+      "loss": 0.19469285011291504
+    },
+    {
+      "product_id": "622752995912",
+      "task_type": "selling_points",
+      "sequence_tokens": 147,
+      "loss": 0.0007644086144864559
+    },
+    {
+      "product_id": "622752995912",
+      "task_type": "short_description",
+      "sequence_tokens": 159,
+      "loss": 0.003291010158136487
+    },
+    {
+      "product_id": "9693373322",
+      "task_type": "title",
+      "sequence_tokens": 130,
+      "loss": 0.3029201924800873
+    },
+    {
+      "product_id": "9693373322",
+      "task_type": "selling_points",
+      "sequence_tokens": 147,
+      "loss": 0.006334384437650442
+    },
+    {
+      "product_id": "9693373322",
+      "task_type": "short_description",
+      "sequence_tokens": 144,
+      "loss": 0.048117779195308685
+    },
+    {
+      "product_id": "4012034284",
+      "task_type": "title",
+      "sequence_tokens": 134,
+      "loss": 0.2573676109313965
+    },
+    {
+      "product_id": "4012034284",
+      "task_type": "selling_points",
+      "sequence_tokens": 148,
+      "loss": 5.495786899700761e-05
+    },
+    {
+      "product_id": "4012034284",
+      "task_type": "short_description",
+      "sequence_tokens": 161,
+      "loss": 0.0014614822575822473
+    },
+    {
+      "product_id": "538807041289",
+      "task_type": "title",
+      "sequence_tokens": 129,
+      "loss": 0.38006266951560974
+    },
+    {
+      "product_id": "538807041289",
+      "task_type": "selling_points",
+      "sequence_tokens": 145,
+      "loss": 6.466128979809582e-05
+    },
+    {
+      "product_id": "538807041289",
+      "task_type": "short_description",
+      "sequence_tokens": 157,
+      "loss": 0.0009955078130587935
+    },
+    {
+      "product_id": "553325797645",
+      "task_type": "title",
+      "sequence_tokens": 136,
+      "loss": 0.4633401334285736
+    },
+    {
+      "product_id": "553325797645",
+      "task_type": "selling_points",
+      "sequence_tokens": 152,
+      "loss": 5.435339335235767e-05
+    },
+    {
+      "product_id": "553325797645",
+      "task_type": "short_description",
+      "sequence_tokens": 163,
+      "loss": 0.001097379601560533
+    },
+    {
+      "product_id": "553677474202",
+      "task_type": "title",
+      "sequence_tokens": 138,
+      "loss": 0.001415942795574665
+    },
+    {
+      "product_id": "553677474202",
+      "task_type": "selling_points",
+      "sequence_tokens": 152,
+      "loss": 3.652481973404065e-05
+    },
+    {
+      "product_id": "553677474202",
+      "task_type": "short_description",
+      "sequence_tokens": 163,
+      "loss": 0.0007121138041839004
+    },
+    {
+      "product_id": "559476015218",
+      "task_type": "title",
+      "sequence_tokens": 119,
+      "loss": 0.0008849184960126877
+    },
+    {
+      "product_id": "559476015218",
+      "task_type": "selling_points",
+      "sequence_tokens": 135,
+      "loss": 0.0002852174802683294
+    },
+    {
+      "product_id": "559476015218",
+      "task_type": "short_description",
+      "sequence_tokens": 137,
+      "loss": 0.0014605832984670997
+    },
+    {
+      "product_id": "561880609821",
+      "task_type": "title",
+      "sequence_tokens": 144,
+      "loss": 0.02824416570365429
+    },
+    {
+      "product_id": "561880609821",
+      "task_type": "selling_points",
+      "sequence_tokens": 158,
+      "loss": 0.0003881202428601682
+    },
+    {
+      "product_id": "561880609821",
+      "task_type": "short_description",
+      "sequence_tokens": 170,
+      "loss": 0.0016370253870263696
+    },
+    {
+      "product_id": "565694241440",
+      "task_type": "title",
+      "sequence_tokens": 129,
+      "loss": 0.020185252651572227
+    },
+    {
+      "product_id": "565694241440",
+      "task_type": "selling_points",
+      "sequence_tokens": 141,
+      "loss": 1.71711653820239e-05
+    },
+    {
+      "product_id": "565694241440",
+      "task_type": "short_description",
+      "sequence_tokens": 155,
+      "loss": 0.0010667323367670178
+    },
+    {
+      "product_id": "567529034025",
+      "task_type": "title",
+      "sequence_tokens": 121,
+      "loss": 0.0007704447489231825
+    },
+    {
+      "product_id": "567529034025",
+      "task_type": "selling_points",
+      "sequence_tokens": 137,
+      "loss": 7.843515777494758e-05
+    },
+    {
+      "product_id": "567529034025",
+      "task_type": "short_description",
+      "sequence_tokens": 143,
+      "loss": 0.0016466707456856966
+    },
+    {
+      "product_id": "576089336382",
+      "task_type": "title",
+      "sequence_tokens": 136,
+      "loss": 0.0018621417693793774
+    },
+    {
+      "product_id": "576089336382",
+      "task_type": "selling_points",
+      "sequence_tokens": 151,
+      "loss": 3.667871351353824e-05
+    },
+    {
+      "product_id": "576089336382",
+      "task_type": "short_description",
+      "sequence_tokens": 161,
+      "loss": 0.0007289413479156792
+    },
+    {
+      "product_id": "580164285451",
+      "task_type": "title",
+      "sequence_tokens": 159,
+      "loss": 0.2688201367855072
+    },
+    {
+      "product_id": "580164285451",
+      "task_type": "selling_points",
+      "sequence_tokens": 173,
+      "loss": 7.411026308545843e-05
+    },
+    {
+      "product_id": "580164285451",
+      "task_type": "short_description",
+      "sequence_tokens": 184,
+      "loss": 0.0008481385884806514
+    },
+    {
+      "product_id": "591673252247",
+      "task_type": "title",
+      "sequence_tokens": 153,
+      "loss": 0.1251797378063202
+    },
+    {
+      "product_id": "591673252247",
+      "task_type": "selling_points",
+      "sequence_tokens": 167,
+      "loss": 0.00010339022264815867
+    },
+    {
+      "product_id": "591673252247",
+      "task_type": "short_description",
+      "sequence_tokens": 178,
+      "loss": 0.0014869360020384192
+    },
+    {
+      "product_id": "600882856803",
+      "task_type": "title",
+      "sequence_tokens": 148,
+      "loss": 0.0035865106619894505
+    },
+    {
+      "product_id": "600882856803",
+      "task_type": "selling_points",
+      "sequence_tokens": 165,
+      "loss": 0.00011277936573605984
+    },
+    {
+      "product_id": "600882856803",
+      "task_type": "short_description",
+      "sequence_tokens": 176,
+      "loss": 0.001047377591021359
+    },
+    {
+      "product_id": "606511696770",
+      "task_type": "title",
+      "sequence_tokens": 116,
+      "loss": 0.0008565527386963367
+    },
+    {
+      "product_id": "606511696770",
+      "task_type": "selling_points",
+      "sequence_tokens": 130,
+      "loss": 3.4873497497756034e-05
+    },
+    {
+      "product_id": "606511696770",
+      "task_type": "short_description",
+      "sequence_tokens": 135,
+      "loss": 0.0007715838146395981
+    },
+    {
+      "product_id": "608052443562",
+      "task_type": "title",
+      "sequence_tokens": 131,
+      "loss": 0.00808490626513958
+    },
+    {
+      "product_id": "608052443562",
+      "task_type": "selling_points",
+      "sequence_tokens": 138,
+      "loss": 4.383091436466202e-05
+    },
+    {
+      "product_id": "608052443562",
+      "task_type": "short_description",
+      "sequence_tokens": 145,
+      "loss": 0.0008476420189253986
+    },
+    {
+      "product_id": "608603617242",
+      "task_type": "title",
+      "sequence_tokens": 127,
+      "loss": 0.0007895079907029867
+    },
+    {
+      "product_id": "608603617242",
+      "task_type": "selling_points",
+      "sequence_tokens": 144,
+      "loss": 4.873703437624499e-05
+    },
+    {
+      "product_id": "608603617242",
+      "task_type": "short_description",
+      "sequence_tokens": 155,
+      "loss": 0.0008332360303029418
+    },
+    {
+      "product_id": "610701398625",
+      "task_type": "title",
+      "sequence_tokens": 127,
+      "loss": 0.0058809854090213776
+    },
+    {
+      "product_id": "610701398625",
+      "task_type": "selling_points",
+      "sequence_tokens": 144,
+      "loss": 0.0013761563459411263
+    },
+    {
+      "product_id": "610701398625",
+      "task_type": "short_description",
+      "sequence_tokens": 153,
+      "loss": 0.0012685798574239016
+    },
+    {
+      "product_id": "614674196836",
+      "task_type": "title",
+      "sequence_tokens": 138,
+      "loss": 0.030134916305541992
+    },
+    {
+      "product_id": "614674196836",
+      "task_type": "selling_points",
+      "sequence_tokens": 151,
+      "loss": 2.8667860533460043e-05
+    },
+    {
+      "product_id": "614674196836",
+      "task_type": "short_description",
+      "sequence_tokens": 161,
+      "loss": 0.0003414534730836749
+    },
+    {
+      "product_id": "624407147383",
+      "task_type": "title",
+      "sequence_tokens": 141,
+      "loss": 0.004937469493597746
+    },
+    {
+      "product_id": "624407147383",
+      "task_type": "selling_points",
+      "sequence_tokens": 154,
+      "loss": 0.0005460841930471361
+    },
+    {
+      "product_id": "624407147383",
+      "task_type": "short_description",
+      "sequence_tokens": 162,
+      "loss": 0.0013893594732508063
+    }
+  ],
+  "global_step": 453,
+  "completed_epoch": 1,
+  "epoch_train_loss": 0.05216941095187531
+}

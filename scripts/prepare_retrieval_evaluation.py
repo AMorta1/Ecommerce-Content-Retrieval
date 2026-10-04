@@ -20,6 +20,7 @@ sys.path.insert(0, str(PROJECT_ROOT))
 from src.retrieval.catalog import load_catalog, load_metadata, resolve_project_path  # noqa: E402
 from src.retrieval.ernie_vil import ErnieVilEmbedder  # noqa: E402
 from src.retrieval.faiss_index import load_index, search  # noqa: E402
+from src.retrieval.feature_library import catalog_index_path  # noqa: E402
 
 
 DEFAULT_CONFIG = PROJECT_ROOT / "configs" / "retrieval_evaluation.json"
@@ -197,7 +198,10 @@ def main() -> None:
     catalog = load_catalog(dataset_path, PROJECT_ROOT)
     catalog_by_id = {record["product_id"]: record for record in catalog}
     metadata = load_metadata(resolve_project_path(PROJECT_ROOT, retrieval_config["metadata_path"]))
-    index = load_index(resolve_project_path(PROJECT_ROOT, retrieval_config["index_path"]))
+    catalog_feature = evaluation_config.get("catalog_feature", "image")
+    index_path = catalog_index_path(retrieval_config, catalog_feature)
+    resolved_index_path = resolve_project_path(PROJECT_ROOT, index_path)
+    index = load_index(resolved_index_path)
     if len(metadata) != int(index.ntotal):
         raise RuntimeError("索引向量数量与商品元数据数量不一致。")
 
@@ -234,6 +238,7 @@ def main() -> None:
         "version": evaluation_config["version"],
         "created_at_utc": datetime.now(timezone.utc).isoformat(timespec="seconds"),
         "model": embedder.model_name,
+        "catalog_feature": catalog_feature,
         "gallery_split": gallery_split,
         "gallery_size": gallery_size,
         "query_count": len(queries),
@@ -241,7 +246,7 @@ def main() -> None:
         "pool_depth": pool_depth,
         "annotation_rows": len(rows),
         "query_file_sha256": file_sha256(queries_path),
-        "index_sha256": file_sha256(resolve_project_path(PROJECT_ROOT, retrieval_config["index_path"])),
+        "index_sha256": file_sha256(resolved_index_path),
         "timings_seconds": {
             "model_load": round(model_load_seconds, 3),
             "query_encoding": round(encoding_seconds, 3),

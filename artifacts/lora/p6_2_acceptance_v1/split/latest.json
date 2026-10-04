@@ -1,0 +1,5 @@
+{
+  "path": "artifacts/lora/p6_2_acceptance_v1/split/checkpoints/checkpoint-step-000004",
+  "global_step": 4,
+  "manifest_sha256": "bcecee293375200e723b94e7bd710bdba038e4708499edb43fe541f1bd231957"
+}

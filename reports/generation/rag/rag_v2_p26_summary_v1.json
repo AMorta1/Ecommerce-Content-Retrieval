@@ -1,0 +1,134 @@
+{
+  "version": "rag_v2_p26_summary_v1",
+  "status": "completed_development_gate_failed_stop",
+  "completed_at_utc": "2026-10-01T14:31:42.5432324Z",
+  "scope": "single_controlled_factual_prompt_candidate_on_existing_development24",
+  "formal_test100_executed": false,
+  "generation_output_holdout_executed": false,
+  "additional_prompt_iteration_allowed": false,
+  "checkpoint": {
+    "path": "reports/generation/rag/rag_v2_p25_checkpoint_manifest_v1.json",
+    "sha256": "fd48b5b1670b257916904fe0206ddefb185d9c70d630be1dcea77309cb8562d8",
+    "git_commit_created": false
+  },
+  "candidate": {
+    "name": "V2-controlled-factual",
+    "prompt_version": "rag_v2_controlled_factual_v1",
+    "only_new_content_prompt_candidate": true,
+    "config_path": "configs/generation_rag_validation_v8_p26.json",
+    "config_sha256": "61183df29d03628b9c6715ad983589359c203cd93ee17f2080d41e27d753eeaf",
+    "unchanged_fact_policy": {
+      "path": "configs/rag_fact_policy_v4.json",
+      "sha256": "b032bf8835a4bfa11338a6bfddba05392aaa896c103473aa402b4ead25029fea"
+    },
+    "unchanged_holdout_manifest": {
+      "path": "reports/generation/rag/rag_v2_generation_output_holdout_v1.json",
+      "sha256": "31fae8cbfc53e0f5ef3329cbee6812963b36ddf48e61858d8d9f65fa17ff8da1"
+    },
+    "frozen_generation_settings": {
+      "model_name": "Qwen/Qwen2.5-7B-Instruct",
+      "revision": "a09a35458c702b33eeacc393d103063234e8bc28",
+      "quantization": "bitsandbytes_nf4_4bit",
+      "max_input_tokens": 2048,
+      "max_new_tokens": 320,
+      "do_sample": true,
+      "temperature": 0.7,
+      "top_p": 0.9,
+      "seed": 42,
+      "paired_seed_rule": "base_seed_plus_stable_sample_index",
+      "supplemental_top_k": 3,
+      "context_selector": "rag_v2_four_zone",
+      "grounding_validator": "rag_grounding_validator_v1_detect_only"
+    }
+  },
+  "tests": {
+    "targeted_generation_tests": "59 passed",
+    "full_suite": "126 passed",
+    "prompt_changed_after_tests": false,
+    "prompt_changed_after_smoke": false
+  },
+  "smoke8": {
+    "purpose": "engineering_checks_only",
+    "path": "reports/generation/rag/rag_v2_p26_smoke8.json",
+    "sha256": "41a84b46bb71ece3a81f8314cf265e3725814e204eaec15dc220a27758d627f5",
+    "sample_count": 8,
+    "variant_count": 2,
+    "json_parsed": "16/16",
+    "mandatory_injection": "26/26",
+    "prompt_truncation_count": 0,
+    "paired_seed_check": "passed_8_of_8",
+    "holdout_overlap_count": 0,
+    "content_used_for_prompt_tuning": false,
+    "runtime_note": "child process completed and wrote a valid report; conda run wrapper then raised a GBK stdout encoding error"
+  },
+  "development24": {
+    "path": "reports/generation/rag/rag_v2_p26_development24.json",
+    "sha256": "58249a239eb4bc95e61c79678f8721934e36003a1144957a508cf34b0b1ef115",
+    "single_execution": true,
+    "sample_count": 24,
+    "variant_count": 2,
+    "json_parsed": "48/48",
+    "paired_seed_check": "passed_24_of_24",
+    "holdout_overlap_count": 0,
+    "mandatory_injection": "76/76",
+    "mandatory_injection_rate": 1.0,
+    "prompt_truncation_count": 0,
+    "mandatory_literal_output_coverage": "70/76",
+    "mandatory_literal_output_coverage_is_official_metric": false,
+    "average_generation_seconds": 5.085,
+    "p95_generation_seconds": 6.915,
+    "maximum_generation_seconds": 7.713,
+    "automatic_grounding_pass": "18/24"
+  },
+  "human_evaluation": {
+    "rubric": "same_as_formal_generation_evaluation",
+    "v1_control": {
+      "review_source": "reused finalized P2.5 annotations because all 24 raw and parsed outputs are byte-for-byte equal",
+      "source_path": "reports/generation/rag/rag_v2_p25_development24_human_review.csv",
+      "source_sha256": "46046077171e0fb4071300a45dc3633e94cd174aa50a5798636f219b2f8eefcf",
+      "core_attribute_hit": "105/134",
+      "core_attribute_hit_rate": 0.7835820895522388,
+      "fluency_pass": "22/24",
+      "fluency_pass_rate": 0.9166666666666666,
+      "factual_error_samples": "11/24",
+      "factual_error_sample_rate": 0.4583333333333333,
+      "factual_error_count": 17,
+      "average_factual_error_count": 0.7083333333333334
+    },
+    "v2_controlled_factual": {
+      "path": "reports/generation/rag/rag_v2_p26_controlled_factual_human_review.csv",
+      "sha256": "2da6ab82337675e80082f08d45d40be425a63a73d73ccfa67df3cb9963a0df94",
+      "core_attribute_hit": "117/134",
+      "core_attribute_hit_rate": 0.8731343283582089,
+      "fluency_pass": "9/24",
+      "fluency_pass_rate": 0.375,
+      "factual_error_samples": "8/24",
+      "factual_error_sample_rate": 0.3333333333333333,
+      "factual_error_count": 26,
+      "average_factual_error_count": 1.0833333333333333,
+      "identity_or_category_error_count": 0,
+      "factual_error_count_reduction_vs_p25_v2_context": 0.6,
+      "factual_error_count_reduction_vs_p25_v2_coverage": 0.543859649122807
+    }
+  },
+  "development_gate": {
+    "core_attribute_hit_at_least_85_percent": true,
+    "fluency_at_least_80_percent": false,
+    "factual_error_sample_rate_not_above_v1_45_83_percent": true,
+    "mandatory_injection_100_percent": true,
+    "json_24_of_24": true,
+    "identity_or_category_error_zero": true,
+    "average_factual_error_count_reported_and_clearly_reduced_vs_current_v2": true,
+    "overall_pass": false,
+    "failed_gate_reasons": [
+      "human_fluency_pass_rate_37.5_percent_below_80_percent"
+    ]
+  },
+  "decision": {
+    "promote_to_p3": false,
+    "run_generation_output_holdout32": false,
+    "create_p27_or_p28_prompt": false,
+    "reason": "The single allowed controlled-factual prompt reduced factual-error sample rate and preserved core coverage, but frequently copied the neutral connector examples verbatim, causing a severe fluency regression and failing the development gate.",
+    "next_step": "Stop RAG v2 prompt iteration and await user direction on whether to reassess the 7B free-generation method or output structure."
+  }
+}

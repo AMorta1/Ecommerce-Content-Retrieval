@@ -1,0 +1,2776 @@
+{
+  "method": "static AST/literal scan, no execution",
+  "files": [
+    {
+      "path": "reports/generation/lora/p6_low_memory_smoke_v1_retry1/source_snapshot/qlora_memory.py",
+      "module_docstring": true,
+      "public_top_level_without_docstring": [],
+      "local_absolute_path_literals": [],
+      "unclear_filename_candidate": false
+    },
+    {
+      "path": "reports/generation/lora/p6_low_memory_smoke_v1_retry1/source_snapshot/run_qlora_low_memory_smoke.py",
+      "module_docstring": true,
+      "public_top_level_without_docstring": [
+        {
+          "name": "write_json",
+          "line": 35
+        },
+        {
+          "name": "batch_on_cuda",
+          "line": 92
+        },
+        {
+          "name": "protected_hashes",
+          "line": 96
+        },
+        {
+          "name": "validate",
+          "line": 109
+        },
+        {
+          "name": "run",
+          "line": 133
+        }
+      ],
+      "local_absolute_path_literals": [],
+      "unclear_filename_candidate": false
+    },
+    {
+      "path": "reports/generation/lora/p6_low_memory_smoke_v1_retry2/source_snapshot/qlora_memory.py",
+      "module_docstring": true,
+      "public_top_level_without_docstring": [],
+      "local_absolute_path_literals": [],
+      "unclear_filename_candidate": false
+    },
+    {
+      "path": "reports/generation/lora/p6_low_memory_smoke_v1_retry2/source_snapshot/run_qlora_low_memory_smoke.py",
+      "module_docstring": true,
+      "public_top_level_without_docstring": [
+        {
+          "name": "write_json",
+          "line": 35
+        },
+        {
+          "name": "batch_on_cuda",
+          "line": 92
+        },
+        {
+          "name": "protected_hashes",
+          "line": 96
+        },
+        {
+          "name": "validate",
+          "line": 109
+        },
+        {
+          "name": "run",
+          "line": 133
+        }
+      ],
+      "local_absolute_path_literals": [],
+      "unclear_filename_candidate": false
+    },
+    {
+      "path": "reports/generation/lora/p6_low_memory_smoke_v1_retry3/source_snapshot/qlora_memory.py",
+      "module_docstring": true,
+      "public_top_level_without_docstring": [],
+      "local_absolute_path_literals": [],
+      "unclear_filename_candidate": false
+    },
+    {
+      "path": "reports/generation/lora/p6_low_memory_smoke_v1_retry3/source_snapshot/run_qlora_low_memory_smoke.py",
+      "module_docstring": true,
+      "public_top_level_without_docstring": [
+        {
+          "name": "write_json",
+          "line": 35
+        },
+        {
+          "name": "batch_on_cuda",
+          "line": 92
+        },
+        {
+          "name": "protected_hashes",
+          "line": 96
+        },
+        {
+          "name": "validate",
+          "line": 109
+        },
+        {
+          "name": "run",
+          "line": 133
+        }
+      ],
+      "local_absolute_path_literals": [],
+      "unclear_filename_candidate": false
+    },
+    {
+      "path": "scripts/analyze_retrieval_bad_cases.py",
+      "module_docstring": true,
+      "public_top_level_without_docstring": [
+        {
+          "name": "resolve",
+          "line": 43
+        },
+        {
+          "name": "file_sha256",
+          "line": 48
+        },
+        {
+          "name": "load_csv",
+          "line": 52
+        },
+        {
+          "name": "load_jsonl",
+          "line": 57
+        },
+        {
+          "name": "atomic_write_csv",
+          "line": 62
+        },
+        {
+          "name": "atomic_write_text",
+          "line": 75
+        },
+        {
+          "name": "build_rows",
+          "line": 85
+        },
+        {
+          "name": "validate_selection",
+          "line": 143
+        },
+        {
+          "name": "build_markdown",
+          "line": 160
+        },
+        {
+          "name": "write_contact_sheets",
+          "line": 222
+        },
+        {
+          "name": "main",
+          "line": 245
+        }
+      ],
+      "local_absolute_path_literals": [],
+      "unclear_filename_candidate": false
+    },
+    {
+      "path": "scripts/archive_lora_project_validation.py",
+      "module_docstring": true,
+      "public_top_level_without_docstring": [
+        {
+          "name": "percentile",
+          "line": 17
+        },
+        {
+          "name": "main",
+          "line": 24
+        }
+      ],
+      "local_absolute_path_literals": [],
+      "unclear_filename_candidate": false
+    },
+    {
+      "path": "scripts/audit_delivery.py",
+      "module_docstring": true,
+      "public_top_level_without_docstring": [
+        {
+          "name": "sha",
+          "line": 32
+        },
+        {
+          "name": "opaque",
+          "line": 40
+        },
+        {
+          "name": "files",
+          "line": 44
+        },
+        {
+          "name": "read",
+          "line": 50
+        },
+        {
+          "name": "write",
+          "line": 57
+        },
+        {
+          "name": "git",
+          "line": 61
+        },
+        {
+          "name": "references",
+          "line": 65
+        },
+        {
+          "name": "classification",
+          "line": 87
+        },
+        {
+          "name": "statistics",
+          "line": 136
+        },
+        {
+          "name": "main",
+          "line": 180
+        }
+      ],
+      "local_absolute_path_literals": [],
+      "unclear_filename_candidate": false
+    },
+    {
+      "path": "scripts/build_index.py",
+      "module_docstring": true,
+      "public_top_level_without_docstring": [
+        {
+          "name": "parse_args",
+          "line": 30
+        },
+        {
+          "name": "load_config",
+          "line": 37
+        },
+        {
+          "name": "ensure_outputs_available",
+          "line": 75
+        },
+        {
+          "name": "temporary_path",
+          "line": 82
+        },
+        {
+          "name": "file_sha256",
+          "line": 86
+        },
+        {
+          "name": "write_json",
+          "line": 94
+        },
+        {
+          "name": "main",
+          "line": 103
+        }
+      ],
+      "local_absolute_path_literals": [],
+      "unclear_filename_candidate": false
+    },
+    {
+      "path": "scripts/build_lora_instruction_data.py",
+      "module_docstring": true,
+      "public_top_level_without_docstring": [
+        {
+          "name": "parse_args",
+          "line": 32
+        },
+        {
+          "name": "main",
+          "line": 109
+        }
+      ],
+      "local_absolute_path_literals": [],
+      "unclear_filename_candidate": false
+    },
+    {
+      "path": "scripts/build_rag_facts.py",
+      "module_docstring": true,
+      "public_top_level_without_docstring": [
+        {
+          "name": "parse_args",
+          "line": 32
+        },
+        {
+          "name": "file_sha256",
+          "line": 45
+        },
+        {
+          "name": "load_jsonl",
+          "line": 53
+        },
+        {
+          "name": "write_jsonl",
+          "line": 58
+        },
+        {
+          "name": "write_json",
+          "line": 67
+        },
+        {
+          "name": "main",
+          "line": 76
+        }
+      ],
+      "local_absolute_path_literals": [],
+      "unclear_filename_candidate": false
+    },
+    {
+      "path": "scripts/build_text_features.py",
+      "module_docstring": true,
+      "public_top_level_without_docstring": [
+        {
+          "name": "parse_args",
+          "line": 30
+        },
+        {
+          "name": "load_config",
+          "line": 37
+        },
+        {
+          "name": "file_sha256",
+          "line": 60
+        },
+        {
+          "name": "encode_texts",
+          "line": 68
+        },
+        {
+          "name": "ensure_outputs_available",
+          "line": 81
+        },
+        {
+          "name": "atomic_save_array",
+          "line": 88
+        },
+        {
+          "name": "atomic_save_index",
+          "line": 99
+        },
+        {
+          "name": "write_json",
+          "line": 109
+        },
+        {
+          "name": "main",
+          "line": 122
+        }
+      ],
+      "local_absolute_path_literals": [],
+      "unclear_filename_candidate": false
+    },
+    {
+      "path": "scripts/deduplicate_training_data.py",
+      "module_docstring": true,
+      "public_top_level_without_docstring": [
+        {
+          "name": "load_jsonl",
+          "line": 22
+        },
+        {
+          "name": "file_sha256",
+          "line": 27
+        },
+        {
+          "name": "write_evidence_csv",
+          "line": 31
+        },
+        {
+          "name": "main",
+          "line": 69
+        }
+      ],
+      "local_absolute_path_literals": [],
+      "unclear_filename_candidate": false
+    },
+    {
+      "path": "scripts/download_images.py",
+      "module_docstring": true,
+      "public_top_level_without_docstring": [
+        {
+          "name": "main",
+          "line": 12
+        }
+      ],
+      "local_absolute_path_literals": [],
+      "unclear_filename_candidate": false
+    },
+    {
+      "path": "scripts/evaluate_generation.py",
+      "module_docstring": true,
+      "public_top_level_without_docstring": [
+        {
+          "name": "parse_args",
+          "line": 60
+        },
+        {
+          "name": "load_json",
+          "line": 78
+        },
+        {
+          "name": "load_jsonl",
+          "line": 83
+        },
+        {
+          "name": "resolve_project_path",
+          "line": 88
+        },
+        {
+          "name": "file_sha256",
+          "line": 93
+        },
+        {
+          "name": "flatten_attributes",
+          "line": 101
+        },
+        {
+          "name": "flatten_rag_facts",
+          "line": 105
+        },
+        {
+          "name": "build_annotation_rows",
+          "line": 112
+        },
+        {
+          "name": "validate_output_report",
+          "line": 175
+        },
+        {
+          "name": "prepare_annotation",
+          "line": 200
+        },
+        {
+          "name": "percentile_95",
+          "line": 221
+        },
+        {
+          "name": "structured_output_success_rate",
+          "line": 227
+        },
+        {
+          "name": "validate_attribution_rows",
+          "line": 236
+        },
+        {
+          "name": "normalize_match_text",
+          "line": 260
+        },
+        {
+          "name": "canonical_review_field",
+          "line": 265
+        },
+        {
+          "name": "estimate_matched_attribute_count",
+          "line": 271
+        },
+        {
+          "name": "draft_formal_rows",
+          "line": 294
+        },
+        {
+          "name": "write_annotation_rows",
+          "line": 407
+        },
+        {
+          "name": "draft_rag_formal_annotation",
+          "line": 419
+        },
+        {
+          "name": "evaluate",
+          "line": 449
+        },
+        {
+          "name": "main",
+          "line": 547
+        }
+      ],
+      "local_absolute_path_literals": [],
+      "unclear_filename_candidate": false
+    },
+    {
+      "path": "scripts/evaluate_retrieval.py",
+      "module_docstring": true,
+      "public_top_level_without_docstring": [
+        {
+          "name": "parse_args",
+          "line": 31
+        },
+        {
+          "name": "load_json",
+          "line": 42
+        },
+        {
+          "name": "file_sha256",
+          "line": 47
+        },
+        {
+          "name": "write_json",
+          "line": 55
+        },
+        {
+          "name": "main",
+          "line": 67
+        }
+      ],
+      "local_absolute_path_literals": [],
+      "unclear_filename_candidate": false
+    },
+    {
+      "path": "scripts/evaluate_test_retrieval.py",
+      "module_docstring": true,
+      "public_top_level_without_docstring": [
+        {
+          "name": "parse_args",
+          "line": 56
+        },
+        {
+          "name": "load_json",
+          "line": 62
+        },
+        {
+          "name": "load_jsonl",
+          "line": 66
+        },
+        {
+          "name": "file_sha256",
+          "line": 71
+        },
+        {
+          "name": "encode_images",
+          "line": 75
+        },
+        {
+          "name": "evaluate_breakdowns",
+          "line": 130
+        },
+        {
+          "name": "atomic_write_json",
+          "line": 159
+        },
+        {
+          "name": "write_rankings",
+          "line": 173
+        },
+        {
+          "name": "main",
+          "line": 186
+        }
+      ],
+      "local_absolute_path_literals": [],
+      "unclear_filename_candidate": false
+    },
+    {
+      "path": "scripts/finalize_lora_rag_review.py",
+      "module_docstring": true,
+      "public_top_level_without_docstring": [
+        {
+          "name": "main",
+          "line": 20
+        }
+      ],
+      "local_absolute_path_literals": [],
+      "unclear_filename_candidate": false
+    },
+    {
+      "path": "scripts/finalize_lora_rag_test100_review.py",
+      "module_docstring": true,
+      "public_top_level_without_docstring": [
+        {
+          "name": "readable_report",
+          "line": 24
+        },
+        {
+          "name": "main",
+          "line": 109
+        }
+      ],
+      "local_absolute_path_literals": [],
+      "unclear_filename_candidate": false
+    },
+    {
+      "path": "scripts/finalize_lora_validation_archive.py",
+      "module_docstring": true,
+      "public_top_level_without_docstring": [
+        {
+          "name": "main",
+          "line": 12
+        }
+      ],
+      "local_absolute_path_literals": [],
+      "unclear_filename_candidate": false
+    },
+    {
+      "path": "scripts/generate.py",
+      "module_docstring": true,
+      "public_top_level_without_docstring": [
+        {
+          "name": "parse_args",
+          "line": 24
+        },
+        {
+          "name": "load_json",
+          "line": 35
+        },
+        {
+          "name": "load_samples",
+          "line": 40
+        },
+        {
+          "name": "resolve_project_path",
+          "line": 60
+        },
+        {
+          "name": "main",
+          "line": 65
+        }
+      ],
+      "local_absolute_path_literals": [],
+      "unclear_filename_candidate": false
+    },
+    {
+      "path": "scripts/import_lora_rag_ai_review.py",
+      "module_docstring": true,
+      "public_top_level_without_docstring": [
+        {
+          "name": "digest",
+          "line": 28
+        },
+        {
+          "name": "sheet_snapshot",
+          "line": 32
+        },
+        {
+          "name": "validate_draft",
+          "line": 38
+        },
+        {
+          "name": "import_draft",
+          "line": 59
+        }
+      ],
+      "local_absolute_path_literals": [],
+      "unclear_filename_candidate": false
+    },
+    {
+      "path": "scripts/import_lora_rag_test100_ai_review.py",
+      "module_docstring": true,
+      "public_top_level_without_docstring": [
+        {
+          "name": "import_draft",
+          "line": 34
+        }
+      ],
+      "local_absolute_path_literals": [
+        "E:/WebDownload/lora_rag_project_test100_blind_review_rechecked.xlsx"
+      ],
+      "unclear_filename_candidate": false
+    },
+    {
+      "path": "scripts/import_lora_test100_ai_review.py",
+      "module_docstring": true,
+      "public_top_level_without_docstring": [
+        {
+          "name": "digest",
+          "line": 27
+        },
+        {
+          "name": "sheet_digest",
+          "line": 31
+        },
+        {
+          "name": "validate_rows",
+          "line": 37
+        },
+        {
+          "name": "main",
+          "line": 61
+        }
+      ],
+      "local_absolute_path_literals": [],
+      "unclear_filename_candidate": false
+    },
+    {
+      "path": "scripts/inspect_data.py",
+      "module_docstring": true,
+      "public_top_level_without_docstring": [
+        {
+          "name": "main",
+          "line": 16
+        }
+      ],
+      "local_absolute_path_literals": [],
+      "unclear_filename_candidate": false
+    },
+    {
+      "path": "scripts/prepare_data.py",
+      "module_docstring": true,
+      "public_top_level_without_docstring": [
+        {
+          "name": "main",
+          "line": 13
+        }
+      ],
+      "local_absolute_path_literals": [],
+      "unclear_filename_candidate": false
+    },
+    {
+      "path": "scripts/prepare_generation_evaluation.py",
+      "module_docstring": true,
+      "public_top_level_without_docstring": [
+        {
+          "name": "parse_args",
+          "line": 20
+        },
+        {
+          "name": "load_json",
+          "line": 26
+        },
+        {
+          "name": "resolve_project_path",
+          "line": 31
+        },
+        {
+          "name": "file_sha256",
+          "line": 36
+        },
+        {
+          "name": "load_test_records",
+          "line": 44
+        },
+        {
+          "name": "select_samples",
+          "line": 80
+        },
+        {
+          "name": "write_jsonl_atomic",
+          "line": 129
+        },
+        {
+          "name": "write_json_atomic",
+          "line": 141
+        },
+        {
+          "name": "main",
+          "line": 153
+        }
+      ],
+      "local_absolute_path_literals": [],
+      "unclear_filename_candidate": false
+    },
+    {
+      "path": "scripts/prepare_inference_samples.py",
+      "module_docstring": true,
+      "public_top_level_without_docstring": [
+        {
+          "name": "main",
+          "line": 13
+        }
+      ],
+      "local_absolute_path_literals": [],
+      "unclear_filename_candidate": false
+    },
+    {
+      "path": "scripts/prepare_retrieval_evaluation.py",
+      "module_docstring": true,
+      "public_top_level_without_docstring": [
+        {
+          "name": "parse_args",
+          "line": 47
+        },
+        {
+          "name": "load_json",
+          "line": 53
+        },
+        {
+          "name": "load_queries",
+          "line": 58
+        },
+        {
+          "name": "file_sha256",
+          "line": 86
+        },
+        {
+          "name": "select_candidate_attributes",
+          "line": 94
+        },
+        {
+          "name": "main",
+          "line": 180
+        }
+      ],
+      "local_absolute_path_literals": [],
+      "unclear_filename_candidate": false
+    },
+    {
+      "path": "scripts/prepare_test_retrieval_evaluation.py",
+      "module_docstring": true,
+      "public_top_level_without_docstring": [
+        {
+          "name": "parse_args",
+          "line": 58
+        },
+        {
+          "name": "file_sha256",
+          "line": 74
+        },
+        {
+          "name": "atomic_write_text",
+          "line": 78
+        },
+        {
+          "name": "write_annotation",
+          "line": 88
+        },
+        {
+          "name": "ensure_query_review_can_be_confirmed",
+          "line": 194
+        },
+        {
+          "name": "main",
+          "line": 202
+        }
+      ],
+      "local_absolute_path_literals": [],
+      "unclear_filename_candidate": false
+    },
+    {
+      "path": "scripts/repair_csv.py",
+      "module_docstring": true,
+      "public_top_level_without_docstring": [
+        {
+          "name": "parse_args",
+          "line": 17
+        },
+        {
+          "name": "read_csv",
+          "line": 24
+        },
+        {
+          "name": "write_csv",
+          "line": 33
+        },
+        {
+          "name": "main",
+          "line": 45
+        }
+      ],
+      "local_absolute_path_literals": [],
+      "unclear_filename_candidate": false
+    },
+    {
+      "path": "scripts/review_lora_project_validation.py",
+      "module_docstring": true,
+      "public_top_level_without_docstring": [],
+      "local_absolute_path_literals": [],
+      "unclear_filename_candidate": false
+    },
+    {
+      "path": "scripts/review_lora_project_validation_quick32.py",
+      "module_docstring": true,
+      "public_top_level_without_docstring": [
+        {
+          "name": "choose",
+          "line": 26
+        },
+        {
+          "name": "freeze",
+          "line": 51
+        },
+        {
+          "name": "verify_sample",
+          "line": 77
+        },
+        {
+          "name": "workbook",
+          "line": 90
+        },
+        {
+          "name": "summarize",
+          "line": 188
+        }
+      ],
+      "local_absolute_path_literals": [],
+      "unclear_filename_candidate": false
+    },
+    {
+      "path": "scripts/run_lora_project_test.py",
+      "module_docstring": true,
+      "public_top_level_without_docstring": [],
+      "local_absolute_path_literals": [],
+      "unclear_filename_candidate": false
+    },
+    {
+      "path": "scripts/run_lora_project_validation.py",
+      "module_docstring": true,
+      "public_top_level_without_docstring": [],
+      "local_absolute_path_literals": [],
+      "unclear_filename_candidate": false
+    },
+    {
+      "path": "scripts/run_lora_rag_integration.py",
+      "module_docstring": true,
+      "public_top_level_without_docstring": [],
+      "local_absolute_path_literals": [],
+      "unclear_filename_candidate": false
+    },
+    {
+      "path": "scripts/run_lora_rag_project_test.py",
+      "module_docstring": true,
+      "public_top_level_without_docstring": [],
+      "local_absolute_path_literals": [],
+      "unclear_filename_candidate": false
+    },
+    {
+      "path": "scripts/run_qlora_low_memory_smoke.py",
+      "module_docstring": true,
+      "public_top_level_without_docstring": [
+        {
+          "name": "write_json",
+          "line": 35
+        },
+        {
+          "name": "batch_on_cuda",
+          "line": 92
+        },
+        {
+          "name": "protected_hashes",
+          "line": 96
+        },
+        {
+          "name": "validate",
+          "line": 109
+        },
+        {
+          "name": "run",
+          "line": 133
+        }
+      ],
+      "local_absolute_path_literals": [],
+      "unclear_filename_candidate": false
+    },
+    {
+      "path": "scripts/run_qlora_smoke.py",
+      "module_docstring": true,
+      "public_top_level_without_docstring": [
+        {
+          "name": "utc_now",
+          "line": 24
+        },
+        {
+          "name": "sha256_file",
+          "line": 28
+        },
+        {
+          "name": "project_path",
+          "line": 36
+        },
+        {
+          "name": "load_json",
+          "line": 40
+        },
+        {
+          "name": "load_jsonl",
+          "line": 44
+        },
+        {
+          "name": "stable_rank",
+          "line": 56
+        },
+        {
+          "name": "select_smoke_records",
+          "line": 61
+        },
+        {
+          "name": "tokenize_supervised_record",
+          "line": 133
+        },
+        {
+          "name": "memory_snapshot",
+          "line": 175
+        },
+        {
+          "name": "adapter_file_manifest",
+          "line": 184
+        },
+        {
+          "name": "validate_config",
+          "line": 196
+        },
+        {
+          "name": "run",
+          "line": 234
+        },
+        {
+          "name": "parse_args",
+          "line": 502
+        },
+        {
+          "name": "main",
+          "line": 512
+        }
+      ],
+      "local_absolute_path_literals": [],
+      "unclear_filename_candidate": false
+    },
+    {
+      "path": "scripts/run_rag_formal_test.py",
+      "module_docstring": true,
+      "public_top_level_without_docstring": [
+        {
+          "name": "parse_args",
+          "line": 43
+        },
+        {
+          "name": "project_path",
+          "line": 61
+        },
+        {
+          "name": "load_json",
+          "line": 66
+        },
+        {
+          "name": "load_jsonl",
+          "line": 74
+        },
+        {
+          "name": "file_sha256",
+          "line": 87
+        },
+        {
+          "name": "function_source_sha256",
+          "line": 95
+        },
+        {
+          "name": "require_hash",
+          "line": 115
+        },
+        {
+          "name": "formal_output_paths",
+          "line": 126
+        },
+        {
+          "name": "ensure_outputs_absent",
+          "line": 139
+        },
+        {
+          "name": "validate_frozen_values",
+          "line": 146
+        },
+        {
+          "name": "qwen_runtime_config",
+          "line": 335
+        },
+        {
+          "name": "atomic_write_json",
+          "line": 349
+        },
+        {
+          "name": "atomic_write_jsonl",
+          "line": 361
+        },
+        {
+          "name": "parse_model_output",
+          "line": 373
+        },
+        {
+          "name": "run_formal_test",
+          "line": 380
+        },
+        {
+          "name": "main",
+          "line": 525
+        }
+      ],
+      "local_absolute_path_literals": [],
+      "unclear_filename_candidate": false
+    },
+    {
+      "path": "scripts/run_rag_validation.py",
+      "module_docstring": true,
+      "public_top_level_without_docstring": [
+        {
+          "name": "parse_args",
+          "line": 36
+        },
+        {
+          "name": "project_path",
+          "line": 52
+        },
+        {
+          "name": "load_json",
+          "line": 57
+        },
+        {
+          "name": "load_jsonl",
+          "line": 61
+        },
+        {
+          "name": "sha256",
+          "line": 66
+        },
+        {
+          "name": "load_development_product_ids",
+          "line": 157
+        },
+        {
+          "name": "load_excluded_product_ids",
+          "line": 202
+        },
+        {
+          "name": "select_samples",
+          "line": 215
+        },
+        {
+          "name": "parse_result",
+          "line": 262
+        },
+        {
+          "name": "run_generation",
+          "line": 269
+        },
+        {
+          "name": "write_json",
+          "line": 303
+        },
+        {
+          "name": "main",
+          "line": 573
+        }
+      ],
+      "local_absolute_path_literals": [],
+      "unclear_filename_candidate": false
+    },
+    {
+      "path": "scripts/run_retrieval_rerank_formal_test.py",
+      "module_docstring": true,
+      "public_top_level_without_docstring": [
+        {
+          "name": "parse_args",
+          "line": 49
+        },
+        {
+          "name": "load_json",
+          "line": 59
+        },
+        {
+          "name": "load_jsonl",
+          "line": 63
+        },
+        {
+          "name": "file_sha256",
+          "line": 68
+        },
+        {
+          "name": "project_path",
+          "line": 72
+        },
+        {
+          "name": "evaluate_breakdowns",
+          "line": 156
+        },
+        {
+          "name": "verify_path_hash",
+          "line": 183
+        },
+        {
+          "name": "verify_model_cache",
+          "line": 191
+        },
+        {
+          "name": "preflight",
+          "line": 205
+        },
+        {
+          "name": "git_runtime_identity",
+          "line": 276
+        },
+        {
+          "name": "write_json_exclusive",
+          "line": 293
+        },
+        {
+          "name": "write_csv_exclusive",
+          "line": 300
+        },
+        {
+          "name": "run_formal_test50",
+          "line": 310
+        },
+        {
+          "name": "main",
+          "line": 492
+        }
+      ],
+      "local_absolute_path_literals": [],
+      "unclear_filename_candidate": false
+    },
+    {
+      "path": "scripts/search.py",
+      "module_docstring": true,
+      "public_top_level_without_docstring": [
+        {
+          "name": "parse_args",
+          "line": 24
+        },
+        {
+          "name": "load_config",
+          "line": 40
+        },
+        {
+          "name": "main",
+          "line": 45
+        }
+      ],
+      "local_absolute_path_literals": [],
+      "unclear_filename_candidate": false
+    },
+    {
+      "path": "scripts/smoke_test_retrieval.py",
+      "module_docstring": true,
+      "public_top_level_without_docstring": [
+        {
+          "name": "parse_args",
+          "line": 28
+        },
+        {
+          "name": "load_json",
+          "line": 36
+        },
+        {
+          "name": "load_samples",
+          "line": 41
+        },
+        {
+          "name": "main",
+          "line": 56
+        }
+      ],
+      "local_absolute_path_literals": [],
+      "unclear_filename_candidate": false
+    },
+    {
+      "path": "scripts/track_experiment.py",
+      "module_docstring": true,
+      "public_top_level_without_docstring": [
+        {
+          "name": "parse_args",
+          "line": 63
+        },
+        {
+          "name": "resolve_path",
+          "line": 82
+        },
+        {
+          "name": "display_path",
+          "line": 86
+        },
+        {
+          "name": "load_json",
+          "line": 93
+        },
+        {
+          "name": "file_sha256",
+          "line": 101
+        },
+        {
+          "name": "format_number",
+          "line": 109
+        },
+        {
+          "name": "require_human_evaluation",
+          "line": 115
+        },
+        {
+          "name": "evaluation_set_id",
+          "line": 129
+        },
+        {
+          "name": "extract_metrics",
+          "line": 144
+        },
+        {
+          "name": "find_model",
+          "line": 170
+        },
+        {
+          "name": "build_record",
+          "line": 178
+        },
+        {
+          "name": "read_log",
+          "line": 223
+        },
+        {
+          "name": "metric_delta",
+          "line": 233
+        },
+        {
+          "name": "refresh_comparisons",
+          "line": 239
+        },
+        {
+          "name": "upsert_record",
+          "line": 282
+        },
+        {
+          "name": "write_log",
+          "line": 292
+        },
+        {
+          "name": "main",
+          "line": 305
+        }
+      ],
+      "local_absolute_path_literals": [],
+      "unclear_filename_candidate": false
+    },
+    {
+      "path": "scripts/train_lora.py",
+      "module_docstring": true,
+      "public_top_level_without_docstring": [
+        {
+          "name": "arguments",
+          "line": 17
+        }
+      ],
+      "local_absolute_path_literals": [],
+      "unclear_filename_candidate": false
+    },
+    {
+      "path": "scripts/tune_retrieval_rerank.py",
+      "module_docstring": true,
+      "public_top_level_without_docstring": [
+        {
+          "name": "file_sha256",
+          "line": 26
+        },
+        {
+          "name": "load_json",
+          "line": 30
+        },
+        {
+          "name": "resolve",
+          "line": 34
+        },
+        {
+          "name": "load_rows",
+          "line": 39
+        },
+        {
+          "name": "group_rows",
+          "line": 44
+        },
+        {
+          "name": "metrics_for_rows",
+          "line": 55
+        },
+        {
+          "name": "run_trial",
+          "line": 71
+        },
+        {
+          "name": "selection_key",
+          "line": 105
+        },
+        {
+          "name": "compact_metrics",
+          "line": 117
+        },
+        {
+          "name": "atomic_write_json",
+          "line": 124
+        },
+        {
+          "name": "main",
+          "line": 138
+        }
+      ],
+      "local_absolute_path_literals": [],
+      "unclear_filename_candidate": false
+    },
+    {
+      "path": "scripts/validate_data.py",
+      "module_docstring": true,
+      "public_top_level_without_docstring": [
+        {
+          "name": "load",
+          "line": 17
+        },
+        {
+          "name": "main",
+          "line": 70
+        }
+      ],
+      "local_absolute_path_literals": [],
+      "unclear_filename_candidate": false
+    },
+    {
+      "path": "scripts/validate_rag_outputs.py",
+      "module_docstring": true,
+      "public_top_level_without_docstring": [
+        {
+          "name": "parse_args",
+          "line": 23
+        },
+        {
+          "name": "sha256",
+          "line": 31
+        },
+        {
+          "name": "write_json",
+          "line": 39
+        },
+        {
+          "name": "main",
+          "line": 48
+        }
+      ],
+      "local_absolute_path_literals": [],
+      "unclear_filename_candidate": false
+    },
+    {
+      "path": "scripts/verify_lora_v1_best.py",
+      "module_docstring": true,
+      "public_top_level_without_docstring": [
+        {
+          "name": "run",
+          "line": 22
+        }
+      ],
+      "local_absolute_path_literals": [],
+      "unclear_filename_candidate": false
+    },
+    {
+      "path": "src/__init__.py",
+      "module_docstring": true,
+      "public_top_level_without_docstring": [],
+      "local_absolute_path_literals": [],
+      "unclear_filename_candidate": false
+    },
+    {
+      "path": "src/data/__init__.py",
+      "module_docstring": true,
+      "public_top_level_without_docstring": [],
+      "local_absolute_path_literals": [],
+      "unclear_filename_candidate": false
+    },
+    {
+      "path": "src/data/deduplication.py",
+      "module_docstring": true,
+      "public_top_level_without_docstring": [],
+      "local_absolute_path_literals": [],
+      "unclear_filename_candidate": false
+    },
+    {
+      "path": "src/data/images.py",
+      "module_docstring": true,
+      "public_top_level_without_docstring": [
+        {
+          "name": "AllowedRedirects",
+          "line": 42
+        }
+      ],
+      "local_absolute_path_literals": [],
+      "unclear_filename_candidate": false
+    },
+    {
+      "path": "src/data/preprocess.py",
+      "module_docstring": true,
+      "public_top_level_without_docstring": [
+        {
+          "name": "digest",
+          "line": 17
+        },
+        {
+          "name": "write_json",
+          "line": 21
+        },
+        {
+          "name": "write_jsonl",
+          "line": 25
+        },
+        {
+          "name": "content_fingerprint",
+          "line": 37
+        }
+      ],
+      "local_absolute_path_literals": [],
+      "unclear_filename_candidate": false
+    },
+    {
+      "path": "src/data/pv_parser.py",
+      "module_docstring": true,
+      "public_top_level_without_docstring": [],
+      "local_absolute_path_literals": [],
+      "unclear_filename_candidate": false
+    },
+    {
+      "path": "src/data/review.py",
+      "module_docstring": true,
+      "public_top_level_without_docstring": [],
+      "local_absolute_path_literals": [],
+      "unclear_filename_candidate": false
+    },
+    {
+      "path": "src/data/streaming.py",
+      "module_docstring": true,
+      "public_top_level_without_docstring": [],
+      "local_absolute_path_literals": [],
+      "unclear_filename_candidate": false
+    },
+    {
+      "path": "src/generation/__init__.py",
+      "module_docstring": true,
+      "public_top_level_without_docstring": [],
+      "local_absolute_path_literals": [],
+      "unclear_filename_candidate": false
+    },
+    {
+      "path": "src/generation/evaluation.py",
+      "module_docstring": true,
+      "public_top_level_without_docstring": [
+        {
+          "name": "GenerationJudgment",
+          "line": 21
+        },
+        {
+          "name": "load_annotation_rows",
+          "line": 30
+        },
+        {
+          "name": "annotation_progress",
+          "line": 41
+        },
+        {
+          "name": "parse_binary",
+          "line": 64
+        },
+        {
+          "name": "parse_nonnegative_integer",
+          "line": 70
+        },
+        {
+          "name": "parse_judgments",
+          "line": 80
+        },
+        {
+          "name": "evaluate_judgments",
+          "line": 115
+        }
+      ],
+      "local_absolute_path_literals": [],
+      "unclear_filename_candidate": false
+    },
+    {
+      "path": "src/generation/grounding.py",
+      "module_docstring": true,
+      "public_top_level_without_docstring": [],
+      "local_absolute_path_literals": [],
+      "unclear_filename_candidate": false
+    },
+    {
+      "path": "src/generation/lora_data.py",
+      "module_docstring": true,
+      "public_top_level_without_docstring": [
+        {
+          "name": "file_sha256",
+          "line": 19
+        },
+        {
+          "name": "normalize_text",
+          "line": 27
+        },
+        {
+          "name": "load_jsonl",
+          "line": 32
+        },
+        {
+          "name": "load_consistency_review",
+          "line": 37
+        },
+        {
+          "name": "active_copy_attributes",
+          "line": 134
+        },
+        {
+          "name": "build_selling_points_target",
+          "line": 238
+        },
+        {
+          "name": "build_short_description_target",
+          "line": 246
+        },
+        {
+          "name": "build_instruction_text",
+          "line": 301
+        },
+        {
+          "name": "build_instruction_record",
+          "line": 332
+        },
+        {
+          "name": "assign_product_splits",
+          "line": 383
+        },
+        {
+          "name": "build_dataset",
+          "line": 410
+        },
+        {
+          "name": "select_spot_check_products",
+          "line": 552
+        },
+        {
+          "name": "summarize_dataset",
+          "line": 574
+        },
+        {
+          "name": "validate_dataset",
+          "line": 612
+        }
+      ],
+      "local_absolute_path_literals": [],
+      "unclear_filename_candidate": false
+    },
+    {
+      "path": "src/generation/lora_formal_review.py",
+      "module_docstring": true,
+      "public_top_level_without_docstring": [
+        {
+          "name": "paired_data",
+          "line": 22
+        },
+        {
+          "name": "percentile",
+          "line": 71
+        },
+        {
+          "name": "automatic_group",
+          "line": 78
+        },
+        {
+          "name": "build_workbook",
+          "line": 103
+        },
+        {
+          "name": "archive",
+          "line": 193
+        },
+        {
+          "name": "summarize",
+          "line": 255
+        }
+      ],
+      "local_absolute_path_literals": [],
+      "unclear_filename_candidate": false
+    },
+    {
+      "path": "src/generation/lora_formal_test.py",
+      "module_docstring": true,
+      "public_top_level_without_docstring": [
+        {
+          "name": "checked_config",
+          "line": 39
+        },
+        {
+          "name": "reliable_attributes",
+          "line": 77
+        },
+        {
+          "name": "build_inputs",
+          "line": 88
+        },
+        {
+          "name": "prepare",
+          "line": 118
+        },
+        {
+          "name": "verify_protocol",
+          "line": 225
+        },
+        {
+          "name": "claim_run",
+          "line": 236
+        },
+        {
+          "name": "generate",
+          "line": 246
+        }
+      ],
+      "local_absolute_path_literals": [],
+      "unclear_filename_candidate": false
+    },
+    {
+      "path": "src/generation/lora_rag_integration.py",
+      "module_docstring": true,
+      "public_top_level_without_docstring": [
+        {
+          "name": "checked_config",
+          "line": 48
+        },
+        {
+          "name": "select_samples",
+          "line": 78
+        },
+        {
+          "name": "assert_context",
+          "line": 96
+        },
+        {
+          "name": "fact_line",
+          "line": 132
+        },
+        {
+          "name": "integration_messages",
+          "line": 136
+        },
+        {
+          "name": "preflight",
+          "line": 150
+        },
+        {
+          "name": "mapping_for",
+          "line": 166
+        },
+        {
+          "name": "verify_control",
+          "line": 181
+        },
+        {
+          "name": "prepare",
+          "line": 193
+        },
+        {
+          "name": "verify_protocol",
+          "line": 297
+        },
+        {
+          "name": "generate",
+          "line": 310
+        },
+        {
+          "name": "paired_data",
+          "line": 404
+        },
+        {
+          "name": "grounding_context",
+          "line": 436
+        },
+        {
+          "name": "percentile",
+          "line": 448
+        },
+        {
+          "name": "automatic_summary",
+          "line": 454
+        },
+        {
+          "name": "review_fixed",
+          "line": 496
+        },
+        {
+          "name": "integration_columns",
+          "line": 507
+        },
+        {
+          "name": "build_review",
+          "line": 512
+        },
+        {
+          "name": "validate_review_rows",
+          "line": 640
+        },
+        {
+          "name": "summarize",
+          "line": 669
+        }
+      ],
+      "local_absolute_path_literals": [],
+      "unclear_filename_candidate": false
+    },
+    {
+      "path": "src/generation/lora_rag_project_test.py",
+      "module_docstring": true,
+      "public_top_level_without_docstring": [
+        {
+          "name": "checked_config",
+          "line": 60
+        },
+        {
+          "name": "environment",
+          "line": 93
+        },
+        {
+          "name": "validate_control",
+          "line": 119
+        },
+        {
+          "name": "gated_context",
+          "line": 152
+        },
+        {
+          "name": "prepare",
+          "line": 169
+        },
+        {
+          "name": "verify_protocol",
+          "line": 273
+        },
+        {
+          "name": "claim_run",
+          "line": 287
+        },
+        {
+          "name": "generate",
+          "line": 295
+        },
+        {
+          "name": "paired_data",
+          "line": 384
+        },
+        {
+          "name": "save_manifest",
+          "line": 422
+        },
+        {
+          "name": "write_report",
+          "line": 435
+        },
+        {
+          "name": "build_review",
+          "line": 477
+        },
+        {
+          "name": "validate_review_rows",
+          "line": 592
+        },
+        {
+          "name": "summarize",
+          "line": 621
+        }
+      ],
+      "local_absolute_path_literals": [],
+      "unclear_filename_candidate": false
+    },
+    {
+      "path": "src/generation/lora_training.py",
+      "module_docstring": true,
+      "public_top_level_without_docstring": [
+        {
+          "name": "now",
+          "line": 33
+        },
+        {
+          "name": "resolve",
+          "line": 37
+        },
+        {
+          "name": "digest",
+          "line": 41
+        },
+        {
+          "name": "json_digest",
+          "line": 49
+        },
+        {
+          "name": "read_json",
+          "line": 53
+        },
+        {
+          "name": "atomic_json",
+          "line": 57
+        },
+        {
+          "name": "step_counts",
+          "line": 64
+        },
+        {
+          "name": "epoch_order",
+          "line": 73
+        },
+        {
+          "name": "accumulation_groups",
+          "line": 79
+        },
+        {
+          "name": "validate_config",
+          "line": 86
+        },
+        {
+          "name": "load_records",
+          "line": 142
+        },
+        {
+          "name": "token_ids",
+          "line": 163
+        },
+        {
+          "name": "tokenize_record",
+          "line": 175
+        },
+        {
+          "name": "memory",
+          "line": 193
+        },
+        {
+          "name": "capture_rng",
+          "line": 202
+        },
+        {
+          "name": "restore_rng",
+          "line": 208
+        },
+        {
+          "name": "parameter_signature",
+          "line": 237
+        },
+        {
+          "name": "file_manifest",
+          "line": 291
+        },
+        {
+          "name": "verify_checkpoint",
+          "line": 324
+        },
+        {
+          "name": "restore_checkpoint_state",
+          "line": 340
+        },
+        {
+          "name": "validate_output",
+          "line": 376
+        },
+        {
+          "name": "run",
+          "line": 383
+        }
+      ],
+      "local_absolute_path_literals": [],
+      "unclear_filename_candidate": false
+    },
+    {
+      "path": "src/generation/lora_validation.py",
+      "module_docstring": true,
+      "public_top_level_without_docstring": [
+        {
+          "name": "checked_config",
+          "line": 38
+        },
+        {
+          "name": "seed_for",
+          "line": 62
+        },
+        {
+          "name": "quality_metadata",
+          "line": 69
+        },
+        {
+          "name": "build_inputs",
+          "line": 91
+        },
+        {
+          "name": "blind_mapping",
+          "line": 129
+        },
+        {
+          "name": "assemble",
+          "line": 161
+        },
+        {
+          "name": "load_jsonl",
+          "line": 174
+        },
+        {
+          "name": "append_jsonl",
+          "line": 179
+        },
+        {
+          "name": "model_snapshot",
+          "line": 184
+        },
+        {
+          "name": "prepare",
+          "line": 188
+        },
+        {
+          "name": "verify_protocol",
+          "line": 267
+        },
+        {
+          "name": "generate",
+          "line": 279
+        }
+      ],
+      "local_absolute_path_literals": [],
+      "unclear_filename_candidate": false
+    },
+    {
+      "path": "src/generation/lora_validation_review.py",
+      "module_docstring": true,
+      "public_top_level_without_docstring": [
+        {
+          "name": "normalized",
+          "line": 52
+        },
+        {
+          "name": "automatic_hints",
+          "line": 56
+        },
+        {
+          "name": "paired_data",
+          "line": 70
+        },
+        {
+          "name": "review_columns",
+          "line": 95
+        },
+        {
+          "name": "fixed_values",
+          "line": 114
+        },
+        {
+          "name": "build_workbook",
+          "line": 129
+        },
+        {
+          "name": "official_metrics",
+          "line": 228
+        }
+      ],
+      "local_absolute_path_literals": [],
+      "unclear_filename_candidate": false
+    },
+    {
+      "path": "src/generation/qlora_memory.py",
+      "module_docstring": true,
+      "public_top_level_without_docstring": [],
+      "local_absolute_path_literals": [],
+      "unclear_filename_candidate": false
+    },
+    {
+      "path": "src/generation/qwen.py",
+      "module_docstring": true,
+      "public_top_level_without_docstring": [],
+      "local_absolute_path_literals": [],
+      "unclear_filename_candidate": false
+    },
+    {
+      "path": "src/generation/rag.py",
+      "module_docstring": true,
+      "public_top_level_without_docstring": [],
+      "local_absolute_path_literals": [],
+      "unclear_filename_candidate": false
+    },
+    {
+      "path": "src/retrieval/__init__.py",
+      "module_docstring": true,
+      "public_top_level_without_docstring": [],
+      "local_absolute_path_literals": [],
+      "unclear_filename_candidate": false
+    },
+    {
+      "path": "src/retrieval/catalog.py",
+      "module_docstring": true,
+      "public_top_level_without_docstring": [],
+      "local_absolute_path_literals": [],
+      "unclear_filename_candidate": false
+    },
+    {
+      "path": "src/retrieval/ernie_vil.py",
+      "module_docstring": true,
+      "public_top_level_without_docstring": [],
+      "local_absolute_path_literals": [],
+      "unclear_filename_candidate": false
+    },
+    {
+      "path": "src/retrieval/evaluation.py",
+      "module_docstring": true,
+      "public_top_level_without_docstring": [],
+      "local_absolute_path_literals": [],
+      "unclear_filename_candidate": false
+    },
+    {
+      "path": "src/retrieval/faiss_index.py",
+      "module_docstring": true,
+      "public_top_level_without_docstring": [],
+      "local_absolute_path_literals": [],
+      "unclear_filename_candidate": false
+    },
+    {
+      "path": "src/retrieval/feature_library.py",
+      "module_docstring": true,
+      "public_top_level_without_docstring": [],
+      "local_absolute_path_literals": [],
+      "unclear_filename_candidate": false
+    },
+    {
+      "path": "src/retrieval/formal_evaluation.py",
+      "module_docstring": true,
+      "public_top_level_without_docstring": [
+        {
+          "name": "discounted_cumulative_gain",
+          "line": 212
+        }
+      ],
+      "local_absolute_path_literals": [],
+      "unclear_filename_candidate": false
+    },
+    {
+      "path": "src/retrieval/rerank.py",
+      "module_docstring": true,
+      "public_top_level_without_docstring": [],
+      "local_absolute_path_literals": [],
+      "unclear_filename_candidate": false
+    },
+    {
+      "path": "src/retrieval/windows_cuda.py",
+      "module_docstring": true,
+      "public_top_level_without_docstring": [],
+      "local_absolute_path_literals": [],
+      "unclear_filename_candidate": false
+    },
+    {
+      "path": "tests/test_data.py",
+      "module_docstring": false,
+      "public_top_level_without_docstring": [
+        {
+          "name": "StreamingTests",
+          "line": 16
+        },
+        {
+          "name": "AttributeTests",
+          "line": 46
+        },
+        {
+          "name": "DatasetTests",
+          "line": 62
+        }
+      ],
+      "local_absolute_path_literals": [],
+      "unclear_filename_candidate": false
+    },
+    {
+      "path": "tests/test_deduplication.py",
+      "module_docstring": false,
+      "public_top_level_without_docstring": [
+        {
+          "name": "product",
+          "line": 16
+        },
+        {
+          "name": "DeduplicationTests",
+          "line": 25
+        }
+      ],
+      "local_absolute_path_literals": [],
+      "unclear_filename_candidate": false
+    },
+    {
+      "path": "tests/test_experiment_tracking.py",
+      "module_docstring": false,
+      "public_top_level_without_docstring": [
+        {
+          "name": "ExperimentTrackingTests",
+          "line": 13
+        }
+      ],
+      "local_absolute_path_literals": [],
+      "unclear_filename_candidate": false
+    },
+    {
+      "path": "tests/test_generation.py",
+      "module_docstring": false,
+      "public_top_level_without_docstring": [
+        {
+          "name": "GenerationConfigTests",
+          "line": 43
+        },
+        {
+          "name": "GenerationPromptTests",
+          "line": 134
+        },
+        {
+          "name": "PromptPreflightTests",
+          "line": 485
+        },
+        {
+          "name": "RagValidationRunnerTests",
+          "line": 549
+        },
+        {
+          "name": "GenerationOutputTests",
+          "line": 653
+        },
+        {
+          "name": "RagFactTests",
+          "line": 678
+        },
+        {
+          "name": "GroundingValidatorTests",
+          "line": 1031
+        },
+        {
+          "name": "GenerationEvaluationTests",
+          "line": 1162
+        }
+      ],
+      "local_absolute_path_literals": [],
+      "unclear_filename_candidate": false
+    },
+    {
+      "path": "tests/test_images.py",
+      "module_docstring": false,
+      "public_top_level_without_docstring": [
+        {
+          "name": "ImageTests",
+          "line": 12
+        }
+      ],
+      "local_absolute_path_literals": [],
+      "unclear_filename_candidate": false
+    },
+    {
+      "path": "tests/test_lora_data.py",
+      "module_docstring": false,
+      "public_top_level_without_docstring": [
+        {
+          "name": "make_test_config",
+          "line": 13
+        },
+        {
+          "name": "product",
+          "line": 51
+        },
+        {
+          "name": "LoraInstructionDataTests",
+          "line": 73
+        }
+      ],
+      "local_absolute_path_literals": [],
+      "unclear_filename_candidate": false
+    },
+    {
+      "path": "tests/test_lora_formal_test.py",
+      "module_docstring": true,
+      "public_top_level_without_docstring": [
+        {
+          "name": "synthetic",
+          "line": 16
+        },
+        {
+          "name": "test_frozen_prompt_seed_no_title_and_all_samples_retained",
+          "line": 31
+        },
+        {
+          "name": "test_audit_gate_unchanged_denominator",
+          "line": 44
+        },
+        {
+          "name": "test_no_filter_reorder_or_validation_masquerade",
+          "line": 56
+        },
+        {
+          "name": "test_input_path_guard_before_digest",
+          "line": 69
+        },
+        {
+          "name": "test_single_attempt_consumed_even_before_model_load",
+          "line": 78
+        },
+        {
+          "name": "test_p7_inference_execution_body_is_identical",
+          "line": 86
+        },
+        {
+          "name": "mock_review",
+          "line": 102
+        },
+        {
+          "name": "test_workbook100_blank_labels_hidden_mapping",
+          "line": 122
+        },
+        {
+          "name": "test_incomplete_test_review_never_unblinds",
+          "line": 136
+        },
+        {
+          "name": "test_completed_test_review_reuses_metrics_and_finalizes",
+          "line": 143
+        },
+        {
+          "name": "test_mapping_tampering_and_source_edits_rejected",
+          "line": 168
+        },
+        {
+          "name": "test_range_and_effect_hints_never_equal_fact_judgments",
+          "line": 178
+        }
+      ],
+      "local_absolute_path_literals": [],
+      "unclear_filename_candidate": false
+    },
+    {
+      "path": "tests/test_lora_rag_integration.py",
+      "module_docstring": true,
+      "public_top_level_without_docstring": [
+        {
+          "name": "synthetic_sample",
+          "line": 14
+        },
+        {
+          "name": "configuration",
+          "line": 34
+        },
+        {
+          "name": "populate_rag_tasks",
+          "line": 38
+        },
+        {
+          "name": "test_original_core_task_requirements_and_seed_preserved_no_title_leak",
+          "line": 47
+        },
+        {
+          "name": "test_invalid_new_facts_never_enter_prompt",
+          "line": 61
+        },
+        {
+          "name": "test_actual_tokenizer_completeness_zero_denominator_and_overflow",
+          "line": 78
+        },
+        {
+          "name": "test_control_output_seed_or_prompt_mismatch_rejected",
+          "line": 101
+        },
+        {
+          "name": "test_restricted_paths_checked_before_hashing",
+          "line": 110
+        },
+        {
+          "name": "test_guard_missing_keys_rejected_before_hashing",
+          "line": 119
+        },
+        {
+          "name": "twenty_four",
+          "line": 128
+        },
+        {
+          "name": "test_selection_and_blinding_fixed_before_outputs_no_new_sample",
+          "line": 132
+        },
+        {
+          "name": "test_grounding_sees_original_core_even_when_rag_excludes_it",
+          "line": 147
+        },
+        {
+          "name": "test_p7_withdrawals_intersect_before_rag_selection",
+          "line": 154
+        },
+        {
+          "name": "workbook",
+          "line": 174
+        },
+        {
+          "name": "test_workbook_anonymity_blank_labels_immutable_inputs_and_pending_metrics",
+          "line": 201
+        },
+        {
+          "name": "test_human_review_complete_required_original_metrics_and_no_fixed_mutation",
+          "line": 222
+        },
+        {
+          "name": "test_existing_generation_directory_rejects_retries",
+          "line": 243
+        }
+      ],
+      "local_absolute_path_literals": [],
+      "unclear_filename_candidate": false
+    },
+    {
+      "path": "tests/test_lora_rag_project_test.py",
+      "module_docstring": true,
+      "public_top_level_without_docstring": [
+        {
+          "name": "config",
+          "line": 13
+        },
+        {
+          "name": "test_rejects_forbidden_inputs_before_hashing",
+          "line": 18
+        },
+        {
+          "name": "hundred",
+          "line": 36
+        },
+        {
+          "name": "test_mapping_deterministic_global_and_category_balanced_before_outputs",
+          "line": 40
+        },
+        {
+          "name": "test_attempt_consumed_even_if_interrupted",
+          "line": 54
+        },
+        {
+          "name": "test_source_audit_scope_copy_only_no_status_or_policy_changes",
+          "line": 61
+        },
+        {
+          "name": "test_identity_block_empty_context_keeps_id_no_fact_restoration",
+          "line": 79
+        },
+        {
+          "name": "test_reused_frozen_prompt_seed_tokenizer_no_new_content_candidate",
+          "line": 96
+        },
+        {
+          "name": "workbook",
+          "line": 109
+        },
+        {
+          "name": "test_workbook_blank_anonymous_100_and_pending_not_fake_formal_metrics",
+          "line": 140
+        },
+        {
+          "name": "test_complete_human_archive_same_metrics_evidence_and_frozen_cells",
+          "line": 163
+        }
+      ],
+      "local_absolute_path_literals": [],
+      "unclear_filename_candidate": false
+    },
+    {
+      "path": "tests/test_lora_training.py",
+      "module_docstring": false,
+      "public_top_level_without_docstring": [
+        {
+          "name": "test_project_counts_and_partial_group",
+          "line": 15
+        },
+        {
+          "name": "test_partial_accumulation_mean_matches_actual_group_not_eight",
+          "line": 25
+        },
+        {
+          "name": "test_epoch_order_deterministic_independent_of_global_rng",
+          "line": 33
+        },
+        {
+          "name": "test_resume_only_at_optimizer_boundary",
+          "line": 41
+        },
+        {
+          "name": "config",
+          "line": 47
+        },
+        {
+          "name": "test_full_training_requires_explicit_permission_before_data_io",
+          "line": 51
+        },
+        {
+          "name": "test_acceptance_cannot_run_epoch_or_full_training",
+          "line": 58
+        },
+        {
+          "name": "test_frozen_lora_parameters_rejected",
+          "line": 65
+        },
+        {
+          "name": "test_test_data_path_is_rejected_before_open",
+          "line": 72
+        },
+        {
+          "name": "test_tokenizer_parity_with_frozen_smoke",
+          "line": 82
+        },
+        {
+          "name": "TinyAdapter",
+          "line": 97
+        },
+        {
+          "name": "test_complete_checkpoint_cpu_resume_replays_rng_optimizer_scheduler_and_loss",
+          "line": 111
+        },
+        {
+          "name": "test_checkpoint_corruption_and_formal_acceptance_identity_rejected",
+          "line": 147
+        },
+        {
+          "name": "test_dev_evaluation_no_grad_no_updates_preserves_rng_and_training_mode",
+          "line": 162
+        },
+        {
+          "name": "test_retention_keeps_latest_best_and_unrelated_directories",
+          "line": 183
+        },
+        {
+          "name": "test_outputs_cannot_target_p5_or_root",
+          "line": 197
+        }
+      ],
+      "local_absolute_path_literals": [],
+      "unclear_filename_candidate": false
+    },
+    {
+      "path": "tests/test_lora_validation.py",
+      "module_docstring": true,
+      "public_top_level_without_docstring": [
+        {
+          "name": "configuration",
+          "line": 13
+        },
+        {
+          "name": "synthetic",
+          "line": 17
+        },
+        {
+          "name": "test_seed_and_prompt_pairing_no_source_title",
+          "line": 33
+        },
+        {
+          "name": "test_gate_does_not_change_formal_denominator_or_remove_product",
+          "line": 48
+        },
+        {
+          "name": "test_rag_generic_multivalue_reason_is_not_new_input_policy",
+          "line": 61
+        },
+        {
+          "name": "test_only_project_validation_records_and_audit",
+          "line": 68
+        },
+        {
+          "name": "test_all_input_paths_checked_before_any_data_read",
+          "line": 79
+        },
+        {
+          "name": "test_blinding_balanced_reproducible_independent_of_source_order",
+          "line": 88
+        },
+        {
+          "name": "test_three_point_parsing_does_not_require_prompt_json",
+          "line": 98
+        },
+        {
+          "name": "test_assembly_preserves_failed_raw_output_without_fallback_or_retry",
+          "line": 103
+        },
+        {
+          "name": "test_human_metrics_equal_frozen_evaluation",
+          "line": 112
+        },
+        {
+          "name": "mock_review",
+          "line": 124
+        },
+        {
+          "name": "test_workbook_ids_blank_human_labels_and_hidden_mapping",
+          "line": 147
+        },
+        {
+          "name": "test_incomplete_review_cannot_unblind_or_create_metrics",
+          "line": 163
+        },
+        {
+          "name": "test_complete_review_preserves_diagnostics_and_unblinds_after_summary",
+          "line": 170
+        },
+        {
+          "name": "test_mapping_tampering_is_rejected",
+          "line": 195
+        }
+      ],
+      "local_absolute_path_literals": [],
+      "unclear_filename_candidate": false
+    },
+    {
+      "path": "tests/test_lora_validation_quick32.py",
+      "module_docstring": true,
+      "public_top_level_without_docstring": [
+        {
+          "name": "synthetic_source",
+          "line": 10
+        },
+        {
+          "name": "test_stratified_selection_fixed_and_output_independent",
+          "line": 15
+        },
+        {
+          "name": "test_invalid_scope_rejected",
+          "line": 30
+        },
+        {
+          "name": "review_fixture",
+          "line": 38
+        },
+        {
+          "name": "test_quick_workbook_32_rows_no_labels_and_partial_summary_blocked",
+          "line": 61
+        },
+        {
+          "name": "test_quick_complete_summary_scoped_to_32_and_preserves_template_diagnosis",
+          "line": 76
+        }
+      ],
+      "local_absolute_path_literals": [],
+      "unclear_filename_candidate": false
+    },
+    {
+      "path": "tests/test_pipeline.py",
+      "module_docstring": false,
+      "public_top_level_without_docstring": [
+        {
+          "name": "PipelineTests",
+          "line": 11
+        }
+      ],
+      "local_absolute_path_literals": [],
+      "unclear_filename_candidate": false
+    },
+    {
+      "path": "tests/test_qlora_memory.py",
+      "module_docstring": false,
+      "public_top_level_without_docstring": [
+        {
+          "name": "test_chunked_loss_and_hidden_gradients_match_dense_causal_ce",
+          "line": 13
+        },
+        {
+          "name": "test_chunked_loss_rejects_no_targets_or_trainable_head",
+          "line": 33
+        },
+        {
+          "name": "TinyModel",
+          "line": 44
+        },
+        {
+          "name": "test_precision_cast_preserves_norm_adapter_and_freezing",
+          "line": 61
+        },
+        {
+          "name": "test_precision_cast_rejects_trainable_embedding",
+          "line": 75
+        },
+        {
+          "name": "test_cpu_staging_keeps_preparation_contract_and_final_weights",
+          "line": 82
+        }
+      ],
+      "local_absolute_path_literals": [],
+      "unclear_filename_candidate": false
+    },
+    {
+      "path": "tests/test_qlora_smoke.py",
+      "module_docstring": false,
+      "public_top_level_without_docstring": [
+        {
+          "name": "TensorLike",
+          "line": 17
+        },
+        {
+          "name": "test_token_id_list_accepts_transformers_batch_encoding_shape",
+          "line": 25
+        },
+        {
+          "name": "test_token_id_list_flattens_single_tensor_batch",
+          "line": 33
+        },
+        {
+          "name": "test_token_id_list_rejects_non_integer_tokens",
+          "line": 37
+        }
+      ],
+      "local_absolute_path_literals": [],
+      "unclear_filename_candidate": false
+    },
+    {
+      "path": "tests/test_rag_formal.py",
+      "module_docstring": false,
+      "public_top_level_without_docstring": [
+        {
+          "name": "FormalPreflightTests",
+          "line": 16
+        },
+        {
+          "name": "FormalInputTests",
+          "line": 154
+        }
+      ],
+      "local_absolute_path_literals": [],
+      "unclear_filename_candidate": false
+    },
+    {
+      "path": "tests/test_retrieval_evaluation.py",
+      "module_docstring": false,
+      "public_top_level_without_docstring": [
+        {
+          "name": "RetrievalEvaluationTests",
+          "line": 23
+        },
+        {
+          "name": "FormalRetrievalEvaluationTests",
+          "line": 85
+        }
+      ],
+      "local_absolute_path_literals": [],
+      "unclear_filename_candidate": false
+    },
+    {
+      "path": "tests/test_retrieval_index.py",
+      "module_docstring": false,
+      "public_top_level_without_docstring": [
+        {
+          "name": "RetrievalCatalogTests",
+          "line": 17
+        },
+        {
+          "name": "RetrievalFeatureTests",
+          "line": 76
+        }
+      ],
+      "local_absolute_path_literals": [],
+      "unclear_filename_candidate": false
+    },
+    {
+      "path": "tests/test_retrieval_rerank.py",
+      "module_docstring": false,
+      "public_top_level_without_docstring": [
+        {
+          "name": "candidate",
+          "line": 27
+        },
+        {
+          "name": "RetrievalRerankTests",
+          "line": 40
+        }
+      ],
+      "local_absolute_path_literals": [],
+      "unclear_filename_candidate": false
+    },
+    {
+      "path": "tests/test_retrieval_rerank_formal.py",
+      "module_docstring": false,
+      "public_top_level_without_docstring": [
+        {
+          "name": "FormalRetrievalRerankTests",
+          "line": 14
+        }
+      ],
+      "local_absolute_path_literals": [],
+      "unclear_filename_candidate": false
+    },
+    {
+      "path": "tests/test_retrieval_runtime.py",
+      "module_docstring": false,
+      "public_top_level_without_docstring": [
+        {
+          "name": "WindowsCudaPathTests",
+          "line": 8
+        }
+      ],
+      "local_absolute_path_literals": [],
+      "unclear_filename_candidate": false
+    },
+    {
+      "path": "tests/test_review.py",
+      "module_docstring": false,
+      "public_top_level_without_docstring": [
+        {
+          "name": "ReviewSpreadsheetTests",
+          "line": 12
+        }
+      ],
+      "local_absolute_path_literals": [],
+      "unclear_filename_candidate": false
+    }
+  ]
+}

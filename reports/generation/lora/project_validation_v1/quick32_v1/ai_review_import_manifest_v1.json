@@ -1,0 +1,793 @@
+{
+  "status": "AI_assisted_review_draft_pending_user_confirmation",
+  "source_path": "E:\\WebDownload\\project_validation32_blind_review_rechecked_2sheets.xlsx",
+  "source_sha256": "c3facad898c4005110757cd009db856cd961fa4cc69266b6ed60b00aa38d4a17",
+  "target_path": "E:\\Projects\\Baidu\\Ecommerce-Content-Retrieval\\reports\\generation\\lora\\project_validation_v1\\quick32_v1\\project_validation32_blind_review.xlsx",
+  "target_sha256": "1a4591450e7380fba467f6cf9553886acf9acaa2cd385faf10fbc99c15fa1461",
+  "blank_backup_path": "E:\\Projects\\Baidu\\Ecommerce-Content-Retrieval\\reports\\generation\\lora\\project_validation_v1\\quick32_v1\\project_validation32_blind_review.pre_ai_import.xlsx",
+  "blank_backup_sha256": "5c23171b28c9944e517d607453918ceaad96ce7d8591916798293979cc84971e",
+  "amendments_sha256": "a0097cd41f5703a68a7a3558fd8e1e13f0f3667076dc7fb7bfd7e4b0001fa5cb",
+  "products": 32,
+  "model_documents": 64,
+  "core_attribute_total": 186,
+  "imported_editable_cells": 800,
+  "amended_fields_vs_supplied": [
+    {
+      "pair_id": "QV01",
+      "product_id": "574249081746",
+      "field": "review_confirmed",
+      "from_user_file": 1,
+      "written_value": 0
+    },
+    {
+      "pair_id": "QV01",
+      "product_id": "574249081746",
+      "field": "reviewer",
+      "from_user_file": "ChatGPT复核",
+      "written_value": "AI初审：ChatGPT填写，Codex复核修正；待用户确认"
+    },
+    {
+      "pair_id": "QV02",
+      "product_id": "571596142685",
+      "field": "review_confirmed",
+      "from_user_file": 1,
+      "written_value": 0
+    },
+    {
+      "pair_id": "QV02",
+      "product_id": "571596142685",
+      "field": "reviewer",
+      "from_user_file": "ChatGPT复核",
+      "written_value": "AI初审：ChatGPT填写，Codex复核修正；待用户确认"
+    },
+    {
+      "pair_id": "QV03",
+      "product_id": "598779879631",
+      "field": "B_notes",
+      "from_user_file": "“连接稳定快速”“追踪精准无延迟”“细节捕捉更敏锐”“连接方便快捷”“细腻操控体验”“操作灵活高效”均为无依据扩写。",
+      "written_value": "AI复查计点说明（原6点不变）：①连接稳定快速的传输性能评价；②追踪精准/保证精准定位，重复只计1次；③无延迟，时延承诺独立于定位精度；④细节捕捉更敏锐/细腻操控体验，按近义精细操控诉求合并；⑤连接方便快捷的操作便利；⑥多按键操作灵活高效。源USB、光电、5000dpi、6键仅支持这些规格，不直接证明上述性能/体验。"
+    },
+    {
+      "pair_id": "QV03",
+      "product_id": "598779879631",
+      "field": "review_confirmed",
+      "from_user_file": 1,
+      "written_value": 0
+    },
+    {
+      "pair_id": "QV03",
+      "product_id": "598779879631",
+      "field": "reviewer",
+      "from_user_file": "ChatGPT复核",
+      "written_value": "AI初审：ChatGPT填写，Codex复核修正；待用户确认"
+    },
+    {
+      "pair_id": "QV04",
+      "product_id": "615406528064",
+      "field": "B_notes",
+      "from_user_file": "“稳固舒适”为无依据评价；“游戏专用/专为游戏爱好者打造”较“游戏耳机”进一步强化用途，按1个独立扩写计。",
+      "written_value": "独立错误3点：①“稳固”是佩戴稳定性效果；②“舒适”是佩戴舒适性效果，不能与稳固合成1点；③“游戏专用/专为游戏爱好者打造”为用途/设计目的强化，重复只计1次。源挂耳式不证明稳固或舒适，游戏耳机类别不直接证明专用设计目的。"
+    },
+    {
+      "pair_id": "QV04",
+      "product_id": "615406528064",
+      "field": "review_confirmed",
+      "from_user_file": 1,
+      "written_value": 0
+    },
+    {
+      "pair_id": "QV04",
+      "product_id": "615406528064",
+      "field": "reviewer",
+      "from_user_file": "ChatGPT复核",
+      "written_value": "AI初审：ChatGPT填写，Codex复核修正；待用户确认"
+    },
+    {
+      "pair_id": "QV04",
+      "product_id": "615406528064",
+      "field": "A_mechanical_template",
+      "from_user_file": 0,
+      "written_value": 1
+    },
+    {
+      "pair_id": "QV04",
+      "product_id": "615406528064",
+      "field": "B_factual_error_count",
+      "from_user_file": 2,
+      "written_value": 3
+    },
+    {
+      "pair_id": "QV04",
+      "product_id": "615406528064",
+      "field": "A_notes",
+      "from_user_file": "事实表达正确；标题存在品牌重复但仍可读。",
+      "written_value": "事实表达正确，保持fluency_pass=1；标题“OPPO OPPO Enco M31耳机”重复品牌，是直接拼接品牌+含品牌的型号所致，标记机械模板化1。不是因为正常字段句式一致就判模板化。"
+    },
+    {
+      "pair_id": "QV05",
+      "product_id": "612182471234",
+      "field": "review_confirmed",
+      "from_user_file": 1,
+      "written_value": 0
+    },
+    {
+      "pair_id": "QV05",
+      "product_id": "612182471234",
+      "field": "reviewer",
+      "from_user_file": "ChatGPT复核",
+      "written_value": "AI初审：ChatGPT填写，Codex复核修正；待用户确认"
+    },
+    {
+      "pair_id": "QV06",
+      "product_id": "572645689177",
+      "field": "review_confirmed",
+      "from_user_file": 1,
+      "written_value": 0
+    },
+    {
+      "pair_id": "QV06",
+      "product_id": "572645689177",
+      "field": "reviewer",
+      "from_user_file": "ChatGPT复核",
+      "written_value": "AI初审：ChatGPT填写，Codex复核修正；待用户确认"
+    },
+    {
+      "pair_id": "QV07",
+      "product_id": "600955779275",
+      "field": "B_notes",
+      "from_user_file": "“适用于大众日常使用及送礼场合”将“日常送礼”扩展出了“日常使用”场景。",
+      "written_value": "独立错误2点：①“日常使用及送礼”扩大源适用场景“日常送礼”；②“6小时至12小时”未保留核心保温时长6小时(含)-12小时(不含)的排除上界，全文没有保留该边界的正确表达，保温时长不计核心命中，其余7字段计命中。源另有“开水保温12小时左右”的辅助描述，与核心半开范围存在口径差异；不称12小时为完全凭空编造，但也不以模糊辅助描述替换冻结核心原义。本范围判断请人工重点确认。"
+    },
+    {
+      "pair_id": "QV07",
+      "product_id": "600955779275",
+      "field": "review_confirmed",
+      "from_user_file": 1,
+      "written_value": 0
+    },
+    {
+      "pair_id": "QV07",
+      "product_id": "600955779275",
+      "field": "reviewer",
+      "from_user_file": "ChatGPT复核",
+      "written_value": "AI初审：ChatGPT填写，Codex复核修正；待用户确认"
+    },
+    {
+      "pair_id": "QV07",
+      "product_id": "600955779275",
+      "field": "B_numeric_range_distortion",
+      "from_user_file": 0,
+      "written_value": 1
+    },
+    {
+      "pair_id": "QV07",
+      "product_id": "600955779275",
+      "field": "B_factual_error_count",
+      "from_user_file": 1,
+      "written_value": 2
+    },
+    {
+      "pair_id": "QV07",
+      "product_id": "600955779275",
+      "field": "B_matched_attribute_count",
+      "from_user_file": 8,
+      "written_value": 7
+    },
+    {
+      "pair_id": "QV08",
+      "product_id": "597667566007",
+      "field": "review_confirmed",
+      "from_user_file": 1,
+      "written_value": 0
+    },
+    {
+      "pair_id": "QV08",
+      "product_id": "597667566007",
+      "field": "reviewer",
+      "from_user_file": "ChatGPT复核",
+      "written_value": "AI初审：ChatGPT填写，Codex复核修正；待用户确认"
+    },
+    {
+      "pair_id": "QV09",
+      "product_id": "600702277714",
+      "field": "B_notes",
+      "from_user_file": "事实正确，但未表达杯子样式和适用人群。",
+      "written_value": "标题“富光 FZ194001 儿童 316不锈钢 保温杯”已正确表达适用人群儿童，补计1项；品牌、型号、材质、容量、保温时长、人群共6项正确，只未覆盖大肚杯样式。"
+    },
+    {
+      "pair_id": "QV09",
+      "product_id": "600702277714",
+      "field": "review_confirmed",
+      "from_user_file": 1,
+      "written_value": 0
+    },
+    {
+      "pair_id": "QV09",
+      "product_id": "600702277714",
+      "field": "reviewer",
+      "from_user_file": "ChatGPT复核",
+      "written_value": "AI初审：ChatGPT填写，Codex复核修正；待用户确认"
+    },
+    {
+      "pair_id": "QV09",
+      "product_id": "600702277714",
+      "field": "A_matched_attribute_count",
+      "from_user_file": 7,
+      "written_value": 6
+    },
+    {
+      "pair_id": "QV09",
+      "product_id": "600702277714",
+      "field": "A_numeric_range_distortion",
+      "from_user_file": 0,
+      "written_value": 1
+    },
+    {
+      "pair_id": "QV09",
+      "product_id": "600702277714",
+      "field": "A_factual_error_count",
+      "from_user_file": 4,
+      "written_value": 5
+    },
+    {
+      "pair_id": "QV09",
+      "product_id": "600702277714",
+      "field": "B_matched_attribute_count",
+      "from_user_file": 5,
+      "written_value": 6
+    },
+    {
+      "pair_id": "QV09",
+      "product_id": "600702277714",
+      "field": "A_notes",
+      "from_user_file": "“耐用”“安全”“适合日常使用”“保持饮品温度更持久”均无直接事实依据。",
+      "written_value": "独立错误5点：①耐用；②安全；③适合日常使用（沿用原稿的无来源适用性判断，泛日常使用是否只属品类基础语义请人工确认）；④保持饮品温度更持久；⑤“保温时长可达6小时至12小时”将源6小时(含)-12小时(不含)写成可达12小时，未保留排除上界。保温时长不计命中，其余6核心字段正确。"
+    },
+    {
+      "pair_id": "QV10",
+      "product_id": "621326718016",
+      "field": "review_confirmed",
+      "from_user_file": 1,
+      "written_value": 0
+    },
+    {
+      "pair_id": "QV10",
+      "product_id": "621326718016",
+      "field": "reviewer",
+      "from_user_file": "ChatGPT复核",
+      "written_value": "AI初审：ChatGPT填写，Codex复核修正；待用户确认"
+    },
+    {
+      "pair_id": "QV11",
+      "product_id": "599958487813",
+      "field": "B_notes",
+      "from_user_file": "“品质保障”“清洁更高效”“安全省力”为无依据评价/效果；家庭清洁属于拖把直接品类语义，不计错。",
+      "written_value": "独立错误4点：①品质保障；②清洁更高效；③安全；④省力。安全与省力是不同效果，不因写在同一句而合并。家居日用+拖把的泛家庭清洁属于低风险直接品类用途表达，未新增具体房间、人群或效果，不另计场景错误。"
+    },
+    {
+      "pair_id": "QV11",
+      "product_id": "599958487813",
+      "field": "review_confirmed",
+      "from_user_file": 1,
+      "written_value": 0
+    },
+    {
+      "pair_id": "QV11",
+      "product_id": "599958487813",
+      "field": "reviewer",
+      "from_user_file": "ChatGPT复核",
+      "written_value": "AI初审：ChatGPT填写，Codex复核修正；待用户确认"
+    },
+    {
+      "pair_id": "QV11",
+      "product_id": "599958487813",
+      "field": "B_factual_error_count",
+      "from_user_file": 3,
+      "written_value": 4
+    },
+    {
+      "pair_id": "QV12",
+      "product_id": "620263779404",
+      "field": "review_confirmed",
+      "from_user_file": 1,
+      "written_value": 0
+    },
+    {
+      "pair_id": "QV12",
+      "product_id": "620263779404",
+      "field": "reviewer",
+      "from_user_file": "ChatGPT复核",
+      "written_value": "AI初审：ChatGPT填写，Codex复核修正；待用户确认"
+    },
+    {
+      "pair_id": "QV12",
+      "product_id": "620263779404",
+      "field": "A_matched_attribute_count",
+      "from_user_file": 5,
+      "written_value": 6
+    },
+    {
+      "pair_id": "QV12",
+      "product_id": "620263779404",
+      "field": "A_notes",
+      "from_user_file": "正确表达品牌、型号、USB、光电、1600dpi；未覆盖按键数、蓝牙、自带充电。",
+      "written_value": "标题“GOIIOG/极构 XM10鼠标-01 蓝牙 USB”已正确表达无线技术蓝牙，补计1项；品牌、型号、USB、光电、1600dpi、蓝牙共6项正确，仅未覆盖3个按键和自带充电。"
+    },
+    {
+      "pair_id": "QV13",
+      "product_id": "556912823177",
+      "field": "review_confirmed",
+      "from_user_file": 1,
+      "written_value": 0
+    },
+    {
+      "pair_id": "QV13",
+      "product_id": "556912823177",
+      "field": "reviewer",
+      "from_user_file": "ChatGPT复核",
+      "written_value": "AI初审：ChatGPT填写，Codex复核修正；待用户确认"
+    },
+    {
+      "pair_id": "QV14",
+      "product_id": "622147332171",
+      "field": "review_confirmed",
+      "from_user_file": 1,
+      "written_value": 0
+    },
+    {
+      "pair_id": "QV14",
+      "product_id": "622147332171",
+      "field": "reviewer",
+      "from_user_file": "ChatGPT复核",
+      "written_value": "AI初审：ChatGPT填写，Codex复核修正；待用户确认"
+    },
+    {
+      "pair_id": "QV15",
+      "product_id": "584308818142",
+      "field": "review_confirmed",
+      "from_user_file": 1,
+      "written_value": 0
+    },
+    {
+      "pair_id": "QV15",
+      "product_id": "584308818142",
+      "field": "reviewer",
+      "from_user_file": "ChatGPT复核",
+      "written_value": "AI初审：ChatGPT填写，Codex复核修正；待用户确认"
+    },
+    {
+      "pair_id": "QV16",
+      "product_id": "609321986854",
+      "field": "review_confirmed",
+      "from_user_file": 1,
+      "written_value": 0
+    },
+    {
+      "pair_id": "QV16",
+      "product_id": "609321986854",
+      "field": "reviewer",
+      "from_user_file": "ChatGPT复核",
+      "written_value": "AI初审：ChatGPT填写，Codex复核修正；待用户确认"
+    },
+    {
+      "pair_id": "QV17",
+      "product_id": "594155212844",
+      "field": "review_confirmed",
+      "from_user_file": 1,
+      "written_value": 0
+    },
+    {
+      "pair_id": "QV17",
+      "product_id": "594155212844",
+      "field": "reviewer",
+      "from_user_file": "ChatGPT复核",
+      "written_value": "AI初审：ChatGPT填写，Codex复核修正；待用户确认"
+    },
+    {
+      "pair_id": "QV18",
+      "product_id": "621592467720",
+      "field": "review_confirmed",
+      "from_user_file": 1,
+      "written_value": 0
+    },
+    {
+      "pair_id": "QV18",
+      "product_id": "621592467720",
+      "field": "reviewer",
+      "from_user_file": "ChatGPT复核",
+      "written_value": "AI初审：ChatGPT填写，Codex复核修正；待用户确认"
+    },
+    {
+      "pair_id": "QV18",
+      "product_id": "621592467720",
+      "field": "A_mechanical_template",
+      "from_user_file": 0,
+      "written_value": 1
+    },
+    {
+      "pair_id": "QV18",
+      "product_id": "621592467720",
+      "field": "A_notes",
+      "from_user_file": "标题“无线 是 键盘”把布尔值机械拼接，明显影响自然度；事实本身未判错。",
+      "written_value": "标题“无线 是 键盘”把布尔值直接拼入标题槽位，影响自然度；field_stacking=1与mechanical_template=1同时记录，fluency_pass=0不变。正文正确表达五项输入事实，事实错误仍为0；不因普通字段句式固定而判模板化。"
+    },
+    {
+      "pair_id": "QV19",
+      "product_id": "618097112440",
+      "field": "B_notes",
+      "from_user_file": "“坚固耐用”“吸水性强”“环保省电”“稳固且高效的清洁体验”为无依据评价/效果。",
+      "written_value": "AI复查独立错误6点：①坚固耐用的材料质量评价；②吸水性强；③环保；④省电；⑤稳固清洁体验；⑥高效清洁体验。环保与省电、操作稳固与清洁高效分别不是同一事实命题。源承重/耐腐蚀/吸水秒数仅为指标，没有给出评价或比较基准。手动支持无需电驱动，但“省电”是否仅为该事实的直接转述、还是无比较依据的效果宣传，存在判断边界，暂计1点并请人工重点确认；不把它当作数值或品类错误。"
+    },
+    {
+      "pair_id": "QV19",
+      "product_id": "618097112440",
+      "field": "review_confirmed",
+      "from_user_file": 1,
+      "written_value": 0
+    },
+    {
+      "pair_id": "QV19",
+      "product_id": "618097112440",
+      "field": "reviewer",
+      "from_user_file": "ChatGPT复核",
+      "written_value": "AI初审：ChatGPT填写，Codex复核修正；待用户确认"
+    },
+    {
+      "pair_id": "QV19",
+      "product_id": "618097112440",
+      "field": "B_factual_error_count",
+      "from_user_file": 4,
+      "written_value": 6
+    },
+    {
+      "pair_id": "QV20",
+      "product_id": "621646793043",
+      "field": "B_notes",
+      "from_user_file": "标题“双飞燕 有线 有 键盘”布尔值机械拼接，明显影响通顺；事实未判错。",
+      "written_value": "标题“双飞燕 有线 有 键盘”把孤立布尔值“有”直接拼入标题，标记字段堆叠1、机械模板化1，fluency_pass=0不变。孤立“有”未指明手托，不据此补计有无手托；正文四项事实正确，事实错误仍为0。"
+    },
+    {
+      "pair_id": "QV20",
+      "product_id": "621646793043",
+      "field": "review_confirmed",
+      "from_user_file": 1,
+      "written_value": 0
+    },
+    {
+      "pair_id": "QV20",
+      "product_id": "621646793043",
+      "field": "reviewer",
+      "from_user_file": "ChatGPT复核",
+      "written_value": "AI初审：ChatGPT填写，Codex复核修正；待用户确认"
+    },
+    {
+      "pair_id": "QV20",
+      "product_id": "621646793043",
+      "field": "B_mechanical_template",
+      "from_user_file": 0,
+      "written_value": 1
+    },
+    {
+      "pair_id": "QV21",
+      "product_id": "618173057392",
+      "field": "review_confirmed",
+      "from_user_file": 1,
+      "written_value": 0
+    },
+    {
+      "pair_id": "QV21",
+      "product_id": "618173057392",
+      "field": "reviewer",
+      "from_user_file": "ChatGPT复核",
+      "written_value": "AI初审：ChatGPT填写，Codex复核修正；待用户确认"
+    },
+    {
+      "pair_id": "QV22",
+      "product_id": "590013076786",
+      "field": "review_confirmed",
+      "from_user_file": 1,
+      "written_value": 0
+    },
+    {
+      "pair_id": "QV22",
+      "product_id": "590013076786",
+      "field": "reviewer",
+      "from_user_file": "ChatGPT复核",
+      "written_value": "AI初审：ChatGPT填写，Codex复核修正；待用户确认"
+    },
+    {
+      "pair_id": "QV22",
+      "product_id": "590013076786",
+      "field": "A_factual_error_count",
+      "from_user_file": 3,
+      "written_value": 4
+    },
+    {
+      "pair_id": "QV22",
+      "product_id": "590013076786",
+      "field": "A_notes",
+      "from_user_file": "“耐用易清洁”“节省空间摆放”“满足家庭日常使用需求”为无依据评价/效果。",
+      "written_value": "独立错误4点：①耐用；②易清洁（与耐用属于不同效果）；③节省空间；④10L容量满足家庭日常使用需求的充分性/效果推导。源家庭使用支持适用场景本身，不直接证明满足需求这一效果。四项核心事实仍正确命中。"
+    },
+    {
+      "pair_id": "QV23",
+      "product_id": "529465827962",
+      "field": "B_notes",
+      "from_user_file": "“轻量化”“提升收纳效率”“知名品牌”“品质保证”“简洁实用”“帮助更好整理”均为无依据评价/效果。",
+      "written_value": "AI复查计点说明（原6点不变）：①轻量化/净重仅2kg的轻量评价；②“卧室专用/专为卧室打造”的用途或设计目的强化，源只写适用空间卧室；③提升收纳效率/帮助更好整理，近义改善收纳效果合并1点；④知名品牌；⑤品质保证；⑥简洁实用的设计评价。源卧室场景本身支持，型号与品牌未判错。关于效率与整理效果是否应拆分，请人工最终确认；本次不逐形容词机械计数。"
+    },
+    {
+      "pair_id": "QV23",
+      "product_id": "529465827962",
+      "field": "review_confirmed",
+      "from_user_file": 1,
+      "written_value": 0
+    },
+    {
+      "pair_id": "QV23",
+      "product_id": "529465827962",
+      "field": "reviewer",
+      "from_user_file": "ChatGPT复核",
+      "written_value": "AI初审：ChatGPT填写，Codex复核修正；待用户确认"
+    },
+    {
+      "pair_id": "QV24",
+      "product_id": "611726909441",
+      "field": "B_notes",
+      "from_user_file": "事实正确，未表达3个按键。",
+      "written_value": "五项事实正确，未表达3个按键。标题“相思豆(数码) 相思豆 F760”重复品牌，按与QV04-A一致的直接拼接问题标记机械模板化1；仍可读，fluency_pass=1不变。"
+    },
+    {
+      "pair_id": "QV24",
+      "product_id": "611726909441",
+      "field": "review_confirmed",
+      "from_user_file": 1,
+      "written_value": 0
+    },
+    {
+      "pair_id": "QV24",
+      "product_id": "611726909441",
+      "field": "reviewer",
+      "from_user_file": "ChatGPT复核",
+      "written_value": "AI初审：ChatGPT填写，Codex复核修正；待用户确认"
+    },
+    {
+      "pair_id": "QV24",
+      "product_id": "611726909441",
+      "field": "B_mechanical_template",
+      "from_user_file": 0,
+      "written_value": 1
+    },
+    {
+      "pair_id": "QV24",
+      "product_id": "611726909441",
+      "field": "A_mechanical_template",
+      "from_user_file": 0,
+      "written_value": 1
+    },
+    {
+      "pair_id": "QV24",
+      "product_id": "611726909441",
+      "field": "A_notes",
+      "from_user_file": "“连接方便快捷”“稳定准确的定位”“细腻的操作体验”为无依据评价/效果。",
+      "written_value": "“连接方便快捷”“稳定准确的定位”“细腻的操作体验”为无依据评价/效果，原3点不变。标题“相思豆(数码) 相思豆 F760”直接拼接品牌与含品牌的型号，重复品牌，标记机械模板化1；仍可读，fluency_pass=1不变。"
+    },
+    {
+      "pair_id": "QV25",
+      "product_id": "610672244355",
+      "field": "B_notes",
+      "from_user_file": "“品质有保障”“耐用且易于清洁”“容量适中”“方便日常携带与饮用”为无依据评价/效果。",
+      "written_value": "独立错误6点：①品质有保障；②耐用；③易于清洁（与耐用拆开）；④容量适中；⑤方便日常携带与饮用的便利性效果；⑥“6小时到24小时”未保留源6小时(含)-24小时(不含)的排除上界。保温时长未正确表达，不计命中，其余7核心字段正确。源辅助保温性能“40度以上6小时”不能证明包含24小时。"
+    },
+    {
+      "pair_id": "QV25",
+      "product_id": "610672244355",
+      "field": "review_confirmed",
+      "from_user_file": 1,
+      "written_value": 0
+    },
+    {
+      "pair_id": "QV25",
+      "product_id": "610672244355",
+      "field": "reviewer",
+      "from_user_file": "ChatGPT复核",
+      "written_value": "AI初审：ChatGPT填写，Codex复核修正；待用户确认"
+    },
+    {
+      "pair_id": "QV25",
+      "product_id": "610672244355",
+      "field": "B_numeric_range_distortion",
+      "from_user_file": 0,
+      "written_value": 1
+    },
+    {
+      "pair_id": "QV25",
+      "product_id": "610672244355",
+      "field": "B_factual_error_count",
+      "from_user_file": 4,
+      "written_value": 6
+    },
+    {
+      "pair_id": "QV25",
+      "product_id": "610672244355",
+      "field": "B_matched_attribute_count",
+      "from_user_file": 8,
+      "written_value": 7
+    },
+    {
+      "pair_id": "QV26",
+      "product_id": "576904378076",
+      "field": "B_notes",
+      "from_user_file": "事实正确，未表达双驱动和手动电源方式。",
+      "written_value": "标题“尚奇 SEX 不锈钢 双驱动 拖把”已正确表达驱动类型双驱动，补计1项；品牌、型号、杆材质、拖布材质、拖把杆类型、双驱动共6项正确，仅未表达手动电源方式。"
+    },
+    {
+      "pair_id": "QV26",
+      "product_id": "576904378076",
+      "field": "review_confirmed",
+      "from_user_file": 1,
+      "written_value": 0
+    },
+    {
+      "pair_id": "QV26",
+      "product_id": "576904378076",
+      "field": "reviewer",
+      "from_user_file": "ChatGPT复核",
+      "written_value": "AI初审：ChatGPT填写，Codex复核修正；待用户确认"
+    },
+    {
+      "pair_id": "QV26",
+      "product_id": "576904378076",
+      "field": "B_matched_attribute_count",
+      "from_user_file": 5,
+      "written_value": 6
+    },
+    {
+      "pair_id": "QV27",
+      "product_id": "522712107019",
+      "field": "review_confirmed",
+      "from_user_file": 1,
+      "written_value": 0
+    },
+    {
+      "pair_id": "QV27",
+      "product_id": "522712107019",
+      "field": "reviewer",
+      "from_user_file": "ChatGPT复核",
+      "written_value": "AI初审：ChatGPT填写，Codex复核修正；待用户确认"
+    },
+    {
+      "pair_id": "QV28",
+      "product_id": "594070208995",
+      "field": "review_confirmed",
+      "from_user_file": 1,
+      "written_value": 0
+    },
+    {
+      "pair_id": "QV28",
+      "product_id": "594070208995",
+      "field": "reviewer",
+      "from_user_file": "ChatGPT复核",
+      "written_value": "AI初审：ChatGPT填写，Codex复核修正；待用户确认"
+    },
+    {
+      "pair_id": "QV28",
+      "product_id": "594070208995",
+      "field": "A_factual_error_count",
+      "from_user_file": 4,
+      "written_value": 3
+    },
+    {
+      "pair_id": "QV28",
+      "product_id": "594070208995",
+      "field": "A_notes",
+      "from_user_file": "“充足电量支持”“安全性能更佳”“大容量”“持久电力支持”为无依据评价/效果；品牌占位值未计命中。",
+      "written_value": "去重后独立错误3点：①“充足电量支持/大容量”都是对10000mAh容量充足性的评价，合并1点；②“安全性能更佳”；③“持久电力支持”是续航持续性效果，与容量评价区别计1点。品牌占位值未计命中，其他四项核心事实正确。"
+    },
+    {
+      "pair_id": "QV29",
+      "product_id": "591205504897",
+      "field": "review_confirmed",
+      "from_user_file": 1,
+      "written_value": 0
+    },
+    {
+      "pair_id": "QV29",
+      "product_id": "591205504897",
+      "field": "reviewer",
+      "from_user_file": "ChatGPT复核",
+      "written_value": "AI初审：ChatGPT填写，Codex复核修正；待用户确认"
+    },
+    {
+      "pair_id": "QV30",
+      "product_id": "591829516020",
+      "field": "B_notes",
+      "from_user_file": "“确保产品质量与售后服务”“大容量”“满足长时间使用需求”“兼容多种设备”为无依据扩写。",
+      "written_value": "独立错误5点：①确保产品质量；②确保售后服务（完整源属性无售后服务字段，与产品质量是不同保证）；③大容量；④满足长时间使用需求；⑤兼容多种设备。协议PD2.0及5500MAH规格本身正确，不直接证明上述效果、保证和兼容对象范围。"
+    },
+    {
+      "pair_id": "QV30",
+      "product_id": "591829516020",
+      "field": "review_confirmed",
+      "from_user_file": 1,
+      "written_value": 0
+    },
+    {
+      "pair_id": "QV30",
+      "product_id": "591829516020",
+      "field": "reviewer",
+      "from_user_file": "ChatGPT复核",
+      "written_value": "AI初审：ChatGPT填写，Codex复核修正；待用户确认"
+    },
+    {
+      "pair_id": "QV30",
+      "product_id": "591829516020",
+      "field": "B_factual_error_count",
+      "from_user_file": 4,
+      "written_value": 5
+    },
+    {
+      "pair_id": "QV31",
+      "product_id": "621593539222",
+      "field": "review_confirmed",
+      "from_user_file": 1,
+      "written_value": 0
+    },
+    {
+      "pair_id": "QV31",
+      "product_id": "621593539222",
+      "field": "reviewer",
+      "from_user_file": "ChatGPT复核",
+      "written_value": "AI初审：ChatGPT填写，Codex复核修正；待用户确认"
+    },
+    {
+      "pair_id": "QV32",
+      "product_id": "566986927827",
+      "field": "review_confirmed",
+      "from_user_file": 1,
+      "written_value": 0
+    },
+    {
+      "pair_id": "QV32",
+      "product_id": "566986927827",
+      "field": "reviewer",
+      "from_user_file": "ChatGPT复核",
+      "written_value": "AI初审：ChatGPT填写，Codex复核修正；待用户确认"
+    },
+    {
+      "pair_id": "QV32",
+      "product_id": "566986927827",
+      "field": "A_matched_attribute_count",
+      "from_user_file": 6,
+      "written_value": 5
+    },
+    {
+      "pair_id": "QV32",
+      "product_id": "566986927827",
+      "field": "A_numeric_range_distortion",
+      "from_user_file": 0,
+      "written_value": 1
+    },
+    {
+      "pair_id": "QV32",
+      "product_id": "566986927827",
+      "field": "A_factual_error_count",
+      "from_user_file": 4,
+      "written_value": 6
+    },
+    {
+      "pair_id": "QV32",
+      "product_id": "566986927827",
+      "field": "A_notes",
+      "from_user_file": "“安全健康”“适中易携”“专为儿童设计”“稳固安全”为无依据评价/强化；户外运动由完整源属性支持。",
+      "written_value": "独立错误6点：①安全健康/稳固安全中的安全诉求跨区去重1次；②容量适中；③易携带，与容量适中属于不同效果；④专为儿童设计，较源适用人群儿童强化设计目的；⑤直身杯型稳固；⑥“能够保证6小时到12小时的保温效果”未保留6小时(含)-12小时(不含)的排除上界。正确命中材质、容量、杯型、儿童、运动共5项；品牌/型号无效值不计，保温时长不计。户外运动由完整源适用空间户外+适用场景运动支持，不另计场景错误。"
+    }
+  ],
+  "human_confirmation_rows": 0,
+  "immutable_source_output_cells_unchanged": true,
+  "hidden_sheets_preserved": true,
+  "unblinding_performed": false,
+  "formal_metrics_created": false,
+  "project_test_read": false,
+  "rag_holdout_read": false
+}

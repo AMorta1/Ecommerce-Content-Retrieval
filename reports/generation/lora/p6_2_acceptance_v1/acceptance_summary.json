@@ -1,0 +1,99 @@
+{
+  "version": "p6_2_trainer_acceptance_v1",
+  "status": "passed_no_full_training",
+  "scope": "independent_trainer_preparation_and_bounded_engineering_acceptance",
+  "formal_config": "configs/lora_qlora_train_v1.json",
+  "formal_config_sha256": "1afb8ed3ecca91aa3d8bdd55fb5e456dbb9a60deef8d52f4805c70cc24d7d1e0",
+  "step_counts": {
+    "micro_steps_per_epoch": 3618,
+    "optimizer_steps_per_epoch": 453,
+    "total_micro_steps_3_epochs": 10854,
+    "total_optimizer_steps_3_epochs": 1359,
+    "last_accumulation_group": 2
+  },
+  "checkpoint_interval": 151,
+  "checkpoint_saves_per_epoch": 3,
+  "training_time_estimate": {
+    "micro_step_seconds_reference": 0.5339044499999659,
+    "worst_length_micro_step_seconds_reference": 0.5982740500001,
+    "pure_training_minutes_reference": 96.58331500499384,
+    "pure_training_minutes_worst_length": 108.22777564501808,
+    "three_dev_evaluations_minutes": 3.6131636399999936,
+    "estimated_training_plus_dev_minutes": [
+      100.19647864499383,
+      111.84093928501808
+    ],
+    "caveat": "short-measurement extrapolation; not a full-epoch measurement; initialization/checkpoint/thermal variability extra"
+  },
+  "process_reports": [
+    "reports/generation/lora/p6_2_acceptance_v1/uninterrupted/invocation_20261004T061124823192.json",
+    "reports/generation/lora/p6_2_acceptance_v1/split/invocation_20261004T061330239919.json",
+    "reports/generation/lora/p6_2_acceptance_v1/split/invocation_20261004T061515141752.json"
+  ],
+  "resume_and_dev": {
+    "reference_pid": 30668,
+    "prefix_pid": 6932,
+    "resumed_pid": 20612,
+    "different_processes": true,
+    "restored": {
+      "restored_global_step": 2,
+      "restored_epoch": 0,
+      "restored_cursor": 16,
+      "optimizer_digest": "70b6b81709c3bbc1ab788b896d88f8f934934f5b172368947986e276d9f28560",
+      "scheduler_digest": "eb024d54fab26a5e3421b5702e486cc13c410defbebe78452926bfce482f10c4",
+      "rng_digest": "570fb9f4a2b8c69ba60bbe74ee02b11af699856ccdc8971ec1dfb2558364aebb",
+      "optimizer_scheduler_rng_restored": true
+    },
+    "final_global_step": 4,
+    "final_epoch": 0,
+    "final_cursor": 32,
+    "final_micro_step": 32,
+    "data_order_identical": true,
+    "max_micro_loss_absolute_delta": 0,
+    "adapter_sha256_reference": "4360f91f7250351ace2de0af732b3da2f1a57bda0b630d3a77c40c484e4adb30",
+    "adapter_sha256_resumed": "4360f91f7250351ace2de0af732b3da2f1a57bda0b630d3a77c40c484e4adb30",
+    "adapter_identical": true,
+    "optimizer_identical": true,
+    "scheduler_identical": true,
+    "rng_identical": true,
+    "reference_train_seconds": 17.08494239999891,
+    "train_peak_allocated_mib": 5647.7,
+    "dev": {
+      "dataset": "lora_train_dev",
+      "records": 402,
+      "dev_loss": 0.9523777201753202,
+      "task_losses": {
+        "title": 1.1990867374715075,
+        "selling_points": 0.9366371760617441,
+        "short_description": 0.721409246992709
+      },
+      "no_grad": true,
+      "parameter_updates": 0,
+      "configuration_unchanged": true,
+      "seconds": 72.26327279999987,
+      "memory": {
+        "allocated_mib": 5347.9,
+        "reserved_mib": 5772,
+        "peak_allocated_mib": 5535.6,
+        "peak_reserved_mib": 5772
+      }
+    },
+    "dev_longest_tokens": 269,
+    "configuration_sha256": "1afb8ed3ecca91aa3d8bdd55fb5e456dbb9a60deef8d52f4805c70cc24d7d1e0"
+  },
+  "tests": {
+    "new_tests_passed": 20,
+    "total_passed": 164,
+    "pip_check": "No broken requirements found."
+  },
+  "guards": {
+    "full_training_started": false,
+    "project_validation_read": false,
+    "project_test_read": false,
+    "rag_holdout_read": false,
+    "p5_mutated": false,
+    "dependencies_changed": false,
+    "commit_or_push": false
+  },
+  "stop": "await_user_final_confirmation_before_three_epoch_training"
+}

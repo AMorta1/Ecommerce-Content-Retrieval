@@ -1,0 +1,56 @@
+{
+  "version": "week1_v3_test50_crossmodal_v3",
+  "retrieval_config": "configs/retrieval.json",
+  "gallery_split": "test",
+  "retrieval_strategy": "pure_cross_modal",
+  "catalog_feature_by_query_mode": {
+    "text": "image",
+    "image": "text"
+  },
+  "seed": 42,
+  "query_quota_by_category": {
+    "耳机": 7,
+    "键盘": 6,
+    "鼠标": 6,
+    "移动电源": 6,
+    "保温杯": 7,
+    "收纳箱": 6,
+    "拖把": 6,
+    "垃圾桶": 6
+  },
+  "excluded_query_product_ids": [
+    "42149170939",
+    "615393528961",
+    "589508217209",
+    "610468398862",
+    "618846993537"
+  ],
+  "excluded_query_reasons": {
+    "42149170939": "与 validation 商品具有相同品牌和型号",
+    "615393528961": "与 validation 商品具有相同品牌和型号",
+    "589508217209": "标题容量与来源属性明显冲突，不适合作为正式查询",
+    "610468398862": "标题表明是单卖拖把杆，不适合作为完整拖把查询",
+    "618846993537": "实际是垃圾分类玩具，不适合作为垃圾桶查询"
+  },
+  "query_replacements": {
+    "2859211238": "616260230702",
+    "586356111871": "580312751243",
+    "594880547645": "614994023079",
+    "567224681575": "540395966499",
+    "610066713169": "619501332263"
+  },
+  "exclude_query_product_from_gallery": true,
+  "metric_cutoff": 10,
+  "positive_grade_threshold": 1,
+  "queries_path": "configs/retrieval_test_queries.jsonl",
+  "query_texts_path": "configs/retrieval_test_query_texts.json",
+  "query_review_path": "reports/retrieval/test_evaluation/query_review.csv",
+  "annotation_path": "reports/retrieval/test_evaluation/relevance_judgments.csv",
+  "manifest_path": "reports/retrieval/test_evaluation/manifest.json",
+  "rankings_path": "reports/retrieval/test_evaluation/baseline_rankings.csv",
+  "metrics_path": "reports/retrieval/test_evaluation/baseline_metrics.json",
+  "prd_targets": {
+    "recall_at_10": 0.65,
+    "precision_at_10": 0.55
+  }
+}

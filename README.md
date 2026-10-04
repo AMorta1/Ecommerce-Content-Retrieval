@@ -1,164 +1,165 @@
 # Ecommerce-Content-Retrieval
 
-电商内容智能生成与多模态检索算法验证项目。当前完成 Week 1 数据处理、ERNIE-ViL 2.0 中文版检索基线，以及 Qwen2.5-7B-Instruct 文案生成 Baseline 推理和100条人工评测。主要运行设备为本地 RTX 4070 Laptop（8GB 显存）。
+## 1. 项目简介
 
-## 当前可用数据
+电商内容智能生成与多模态检索算法验证项目，包含两个核心模块：
 
-`week1_v3` 从两个大类、八个细分类各抽取 250 条商品；图片失败和重复过滤后为 **1,992 条**：训练 1,592、验证 200、测试 200。v2 人工抽查发现的笔记本内置替换键盘已经通过规则排除。
+- 商品内容智能生成：以品类和可靠结构化属性为输入，使用Qwen2.5-7B-Instruct生成标题、卖点和短详情，提供Baseline、RAG、LoRA及组合方案的实现与评测证据。
+- 图文跨模态商品检索：使用ERNIE-ViL中文图文编码与Faiss，实现文本搜图、图片搜文及文本侧规则重排。
 
-品类为耳机、键盘、鼠标、移动电源、保温杯、收纳箱、拖把、垃圾桶。类别规则仍需人工审核，原始属性也可能互相矛盾。它是基线实验子集，不是已经标注完成的 LoRA 或检索评测数据。
+本仓库提供算法代码、数据处理链、配置、模型附件和实验报告。项目成果见[项目简报](docs/project_brief.md)，使用与技术说明见下文索引。
 
-## 目录
+## 2. 项目结构
 
-```text
-configs/                 数据、生成、检索和评测参数配置
-src/data/                流式读取、属性解析、预处理、图片处理
-src/generation/          Qwen 提示词、模型加载和生成评测逻辑
-src/retrieval/           ERNIE-ViL 编码、商品信息读取、Faiss 检索
-scripts/                 可以执行的入口
-tests/                   数据、生成、检索和实验记录测试
-data/processed/          当前实验 JSONL 和配置快照（不提交 Git）
-data/images/             本地图片缓存（不提交 Git）
-artifacts/               可重建的大文件：图片向量和 Faiss 索引（不提交 Git）
-reports/                 小型实验结果、人工审核表和历史证据（提交 Git）
-docs/                    数据、检索、生成和评测说明
-```
+~~~text
+src/data/          数据解析、清洗、图片校验与去重
+src/generation/    Qwen、RAG、LoRA数据/训练/推理与评测实现
+src/retrieval/     ERNIE-ViL、特征库、Faiss、rerank与评测
+scripts/           命令行入口
+configs/           数据、生成、训练、检索和评测配置
+docs/              项目简报、技术说明、评测协议与交付审计
+reports/           正式报告、指标、人工复核、manifest与历史证据
+artifacts/         LoRA adapter/checkpoint、特征、索引及商品映射
+tests/             数据规则、算法与工程保护测试
+data/              处理后数据及图片附件，不随Git提供
+~~~
 
-## 运行数据处理
+正式入口与历史工具的分类见[交付审计](docs/delivery_audit.md)。不要将scripts目录中的所有脚本依次运行。
 
-以下命令都在仓库根目录执行。原始三个 JSON 默认位于仓库上一级；修改 `configs/data.json` 可调整路径。原始文件、图片和处理后的全量 JSONL 不随仓库分发。
+## 3. 环境说明
 
-流式统计、清洗、划分只使用 Python 标准库；图片处理使用 Pillow。当前数据代码实际在 Python 3.13.9、Pillow 11.1.0 上验证。后续模型依赖和模型运行环境另行确定。
+生成与检索使用独立环境。以下是已记录的本机版本，不是对任意平台的兼容性保证。
 
-```powershell
-python -m pip install -r requirements-data.txt
-python scripts/inspect_data.py --input ../product1m_product5m_id_label.json --output reports/data/census
-python scripts/prepare_data.py
-python scripts/download_images.py --workers 4
-python scripts/prepare_inference_samples.py
-python scripts/validate_data.py
-python -m unittest discover -s tests -v
-```
+| 环境 | 关键依赖 |
+|---|---|
+| Generation：ecommerce-generation | Python3.10.21；Torch2.12.0+cu130；Transformers5.16.1；Accelerate1.14.0；bitsandbytes0.50.2；PEFT0.21.1 |
+| Retrieval：ecommerce-retrieval | Python3.10.21；Paddle GPU3.3.0；PaddleNLP3.0.0b4；NumPy1.26.4；Faiss CPU1.15.0 |
+| 数据处理／工作簿 | Pillow；openpyxl，具体环境差异见技术文档 |
 
-`prepare_data.py` 拒绝覆盖已有输出目录。重复实验使用新的目录，例如：
+依赖声明：[Generation](requirements-generation.txt)、[Retrieval](requirements-retrieval.txt)、[图片处理](requirements-data.txt)。Generation声明尚未包含PEFT，数据声明与历史检索环境的Pillow版本也存在差异；复现应同时参考[正式训练环境快照](reports/generation/lora/lora_v1_training/environment_20261004T064046462933.txt)和[Baseline环境记录](reports/formal_baseline_report.md)，不能仅把requirements当作完整锁文件。
 
-```powershell
-python scripts/prepare_data.py --output data/processed/week1_repeat
-python scripts/download_images.py --dataset data/processed/week1_repeat
-```
+已有环境先检查版本，不默认升级核心包：
 
-图片下载会验证并复用当前版本的缓存，失败样本记录在 `image_manifest.jsonl`，不会填入假图片。可以通过 `--limit 5` 先选择少量训练商品测试下载流程。
-
-当前数据和检索都默认读取 `week1_v3`。旧版大文件和重复报告已经清理，只在 `reports/history/` 保留发现品类问题所需的 v2 人工抽查证据。处理过程中的候选数据库会自动删除。
-
-## 运行 ERNIE-ViL 检索试验
-
-检索使用独立的 Python 3.10 环境，不影响数据处理环境。首次安装和首次运行会下载较大的 GPU 运行库与约 777MB 模型权重；它们保存在本机环境和 PaddleNLP 缓存中，不提交 Git。
-
-```powershell
-conda create -n ecommerce-retrieval python=3.10 pip=25.2 -y
-conda activate ecommerce-retrieval
-python -m pip install --use-pep517 -r requirements-retrieval.txt
-python scripts/build_index.py
-python scripts/smoke_test_retrieval.py
-```
-
-`build_index.py` 为 1,992 张商品图片提取向量，并建立精确余弦检索索引。默认不会覆盖已有输出；确实需要重建时使用 `--overwrite`。模型代码会自动处理 Windows 下 Paddle wheel 自带 CUDA DLL 的加载路径，不需要修改系统全局 PATH。
-
-建立索引后，可以直接检索：
-
-```powershell
-python scripts/search.py --text "USB接口的迷你有线键盘" --top-k 5
-python scripts/search.py --image data/images/week1_v3/16454614360.webp --top-k 5
-```
-
-当前实测为 768 维向量，完整图片库编码约 92 秒；五条文本批量编码约 0.276 秒，搜索全部候选约 0.002 秒。五条检查查询的 50 个 Top-10 结果都命中查询对应品类，但细粒度属性并不稳定。这些查询不是独立人工相关性标签，因此只能作为基础效果观察，不能当作正式 Recall@10 或 Precision@10。
-
-模型权重、图片向量和索引是本地大文件，不提交 Git。Leader 拿到代码和原始数据后运行建索引命令即可复现；这是推理预计算，不是重新训练模型。如需免去这一步，可以把 `artifacts/features/` 和 `artifacts/indexes/` 作为单独实验附件发送。
-
-## 准备检索人工评测
-
-第一版 validation 评测包含 24 条查询和每条 20 个候选，共 480 行，现已全部完成人工复核。标注表位于：
-
-```text
-reports/retrieval/evaluation/annotation_pool.csv
-```
-
-运行正式评测：
-
-```powershell
-python scripts/evaluate_retrieval.py
-```
-
-当前基线 Precision@10 为 49.58%，低于 PRD 参考目标 55%；候选池 Recall@10 为 67.08%。Recall 只能基于已检查候选池计算，因此明确写为 `pooled_recall_at_10`，不能冒充覆盖全库的完整 Recall。
-
-如果审核 CSV 被 Excel 保存成科学计数法，可用 `scripts/repair_csv.py` 检查，并增加 `--repair` 从对应图片文件名恢复原始商品编号；人工填写的审核结果不会被清除。
-
-## 运行 Qwen 文案生成试验
-
-文案生成使用独立的 `ecommerce-generation` 环境。模型权重固定缓存在仓库上一级的 `.model-cache/huggingface/`，不进入 Git；推理时使用 bitsandbytes NF4 4-bit，以适配8GB显存。第一次运行会下载模型，后续增加 `--offline` 可强制只读本地缓存。
-
-```powershell
-conda create -n ecommerce-generation python=3.10 pip=25.2 -y
+~~~powershell
 conda activate ecommerce-generation
-python -m pip install -r requirements-generation.txt
-python scripts/generate.py --sample-count 5
-python scripts/generate.py --sample-count 5 --offline
-```
+python --version
+python -m pip check
+~~~
 
-真正送入模型的只有 `generation_input` 中的品类和筛选后属性，不包含作为对照的原始标题。输出固定为生成标题、三个卖点和短描述。完整的环境变量设置、输入边界和报告解释见 `docs/generation.md`。
+检索环境同样先激活ecommerce-retrieval再检查。基座缓存位于仓库外../.model-cache；Generation正式流程使用固定本地snapshot。详细加载与环境说明见[generation](docs/generation.md)和[retrieval](docs/retrieval.md)。
 
-当前五条可行性样本均成功生成并通过 JSON 结构校验。内容仍存在把普通材质扩写成“环保”、把普通键盘写成“游戏键盘”等事实外扩，后续需通过提示词或微调优化。
+## 4. 数据说明
 
-PRD 要求从 test 集抽取100条人工评估核心属性命中率和通顺度。正式评测池按两大类各50条分层抽样并完成人工复核：核心属性命中率88%，通顺率99%，均通过75%和80%的门槛；平均生成6.443秒，也通过12秒门槛。严格结构成功率为96%，事实错误样本率为56%，说明 Baseline 虽达到PRD基础门槛，但事实约束仍是后续优化重点。标注表和正式指标分别位于 `reports/generation/evaluation/annotation_pool.csv`、`reports/generation/evaluation/baseline_metrics.json`，填写方法和复现命令见 `docs/generation.md`。
+图文有效数据共1,992件，覆盖3C数码、家居日用及八个二级品类。
 
-## 记录和对比实验版本
+| 名称 | 数量 | 用途 |
+|---|---:|---|
+| 项目初始train | 1,592件 | 原训练侧 |
+| project_validation | 200件 | 项目级开发和候选验证 |
+| project_test | 200件 | 冻结正式测试侧 |
+| lora_train | 1,206件／3,618任务 | LoRA参数更新 |
+| lora_train_dev | 134件／402任务 | dev loss监控和checkpoint选择 |
 
-`scripts/track_experiment.py` 将生成、检索的正式指标登记到同一张 `reports/experiment_log.csv`。每行代表一个实验版本，包含模型、方法、固定评测集标识、完整配置快照、关键指标和相对 Baseline 的变化。当前已登记两个 Week 1 Baseline。
+LoRA内部90/10来自原训练侧，不替代项目级划分。正式生成人工样本为固定test100，正式检索为固定test50。路径、字段、清洗与剔除规则见[数据处理说明](docs/data.md)。未交付数据/图片附件时，不能完整运行数据相关流程。
 
-登记生成实验：
+## 5. 快速使用
 
-```powershell
-python scripts/track_experiment.py --module generation --method baseline --metrics reports/generation/evaluation/baseline_metrics.json --manifest reports/generation/evaluation/annotation_manifest.json --config configs/generation.json --config configs/generation_evaluation.json
-```
+以下命令均在仓库根目录执行，供非正式使用。已完成的正式训练、test和holdout不得重跑或覆盖。
 
-登记检索实验：
+### Generation Baseline
 
-```powershell
-python scripts/track_experiment.py --module retrieval --method baseline --metrics reports/retrieval/evaluation/baseline_metrics.json --manifest reports/retrieval/evaluation/annotation_manifest.json --config configs/retrieval.json --config configs/retrieval_evaluation.json
-```
+输入必须含product_id、title和generation_input，推荐使用已有非正式推理样例。为避免覆盖，先检查输出路径：
 
-后续版本将 `--method` 改为 `lora`、`rag` 或 `rerank`，并传入该版本独立的指标、清单和配置文件。同一模块和版本会更新原行，不会重复追加；只有评测集标识相同的版本才会自动计算差值。优化版指标不能覆盖现有 Baseline 文件。
+~~~powershell
+conda activate ecommerce-generation
+if (Test-Path -LiteralPath 'reports/user_demo/baseline.json') { throw '输出已存在，请选择新路径' }
+python -B -X utf8 scripts/generate.py --config configs/generation.json --input data/processed/week1_v3/inference_samples.jsonl --sample-count 1 --offline --output reports/user_demo/baseline.json
+~~~
 
-## 后续模型验证读取位置
+这是单调用Baseline演示，不是正式test或LoRA三任务对照。
 
-```text
-data/processed/week1_v3/multimodal/train.jsonl
-data/processed/week1_v3/multimodal/validation.jsonl
-data/processed/week1_v3/multimodal/test.jsonl
-data/processed/week1_v3/inference_samples.jsonl
-```
+### LoRA、RAG与LoRA + RAG
 
-最后一个文件是经过图片和文本检查的五条样本，包含：
+| 功能 | 推荐实现／正式入口 | 使用边界 |
+|---|---|---|
+| LoRA训练 | [train_lora.py](scripts/train_lora.py)，[训练config](configs/lora_qlora_train_v1.json) | 训练已完成；仅提供入口定位 |
+| LoRA推理 | [lora_validation.py](src/generation/lora_validation.py)中的generate加载链；正式test入口为[run_lora_project_test.py](scripts/run_lora_project_test.py) | 从固定base加载最终adapter；通用单商品CLI尚未提供 |
+| RAG v1生成 | [run_rag_formal_test.py](scripts/run_rag_formal_test.py)，[formal config](configs/generation_rag_formal_v1.json) | 已封存的一次性test入口，不作为演示重跑 |
+| LoRA + RAG | [run_lora_rag_project_test.py](scripts/run_lora_rag_project_test.py)，[组合config](configs/lora_rag_project_test100_v1.json) | 已封存的组合对照入口；通用单商品CLI尚未提供 |
 
-- `generation_input`：明确筛选后的品类和属性，排除已发现冲突的字段；不包含目标标题。
-- `image_path`：相对仓库根目录的有效图片路径。
-- `smoke_query`：用于试跑文本检索的描述，不是人工相关性标签。
-- `sample_review`：已知数据问题及检查方式。
+最终adapter：[checkpoint-step-001359/adapter](artifacts/lora/lora_v1/checkpoints/checkpoint-step-001359/adapter)。加载链、输入要求和任务模板见[generation技术说明](docs/generation.md)。这些正式评测脚本不是通用服务入口，不能仅更换输入路径就用于任意商品。
 
-JSONL 中仍保留原始标题、原始属性和来源。看图检查不等于验证了实际商品参数。推理验证样本只保留上述一份，由 `prepare_inference_samples.py` 生成。
+### ERNIE-ViL与检索
 
-## 文档与结果
+准备已有模型缓存、特征、索引和商品映射后，可进行非正式检索：
 
-- [数据处理与结果](docs/data.md)
-- [模型选型与 ERNIE-ViL 检索基线](docs/retrieval.md)
-- [Qwen 文案生成基线与人工评测](docs/generation.md)
-- [检索人工评测说明](docs/evaluation.md)
-- [多版本实验汇总](reports/experiment_log.csv)
-- [v3 全量索引构建记录](reports/retrieval/baseline/index_build.json)
-- [v3 ERNIE-ViL 五样本试跑结果](reports/retrieval/baseline/smoke_test.json)
-- [全量标签频数](reports/data/census/label_counts.csv)
-- [v3 独立校验结果](reports/data/validation.json)
-- [v3 的 40 条抽查结果](reports/data/category_review.csv)
-- [v3 近重复与同型号检查](reports/data/duplicate_audit.json)
-- [v2 原始抽查证据](reports/history/category_review_week1_v2.csv)
+~~~powershell
+conda activate ecommerce-retrieval
+$env:PPNLP_HOME = (Resolve-Path '../.model-cache/paddlenlp').Path
+python -B -X utf8 scripts/search.py --text "USB接口的迷你有线键盘" --top-k 5 --json
+python -B -X utf8 scripts/search.py --image data/images/week1_v3/16454614360.webp --top-k 5 --json
+~~~
+
+search.py是跨模态Baseline入口，尚未集成正式rerank。
+
+| 功能 | 正式入口 |
+|---|---|
+| 图像embedding及索引 | [build_index.py](scripts/build_index.py)，[retrieval.json](configs/retrieval.json) |
+| 文本embedding及索引 | [build_text_features.py](scripts/build_text_features.py) |
+| Retrieval evaluation | [evaluate_test_retrieval.py](scripts/evaluate_test_retrieval.py)，[test evaluation config](configs/retrieval_test_evaluation.json) |
+| Rerank evaluation | [run_retrieval_rerank_formal_test.py](scripts/run_retrieval_rerank_formal_test.py)，[rerank config](configs/retrieval_rerank_formal_v1.json) |
+| Generation evaluation | [evaluate_generation.py](scripts/evaluate_generation.py)，具体人工口径见[evaluation](docs/evaluation.md) |
+
+上述构建/评测入口用于实现定位；冻结特征、索引和正式结果已有附件，不应重建或重测已有冻结结果。
+
+## 6. 配置文件
+
+主要配置均位于configs：
+
+- Generation Baseline：generation.json。
+- LoRA数据／训练：lora_instruction_data_v1.json、lora_qlora_train_v1.json。
+- 三任务推理／正式测试：lora_project_validation_v1.json、lora_project_test100_v1.json。
+- RAG：generation_rag_formal_v1.json、rag_fact_policy_v3.json；四区事实及组合使用rag_fact_policy_v4.json。
+- 组合正式测试：lora_rag_project_test100_v1.json。
+- 检索／重排：retrieval.json、retrieval_rerank_formal_v1.json。
+- 评测定义：generation_evaluation.json、retrieval_test_evaluation.json。
+
+配置中的历史pending状态不代表当前实验未完成，最终状态以对应final manifest为准。冻结配置须保持不变。
+
+## 7. 文档索引
+
+| 文档 | 内容 |
+|---|---|
+| [项目简报](docs/project_brief.md) | 项目方案、主要结果、目标完成情况与交付成果 |
+| [数据处理说明](docs/data.md) | 来源、品类、字段、清洗、剔除与数据隔离 |
+| [Generation技术说明](docs/generation.md) | Qwen、RAG、QLoRA、组合与推理实现 |
+| [Retrieval技术说明](docs/retrieval.md) | ERNIE-ViL、预处理、特征、索引与rerank |
+| [Evaluation说明](docs/evaluation.md) | 人工指标、匿名偏好、检索指标与冻结原则 |
+| [Delivery audit](docs/delivery_audit.md) | 正式入口、历史分类、交付缺口与清理记录 |
+
+## 8. 主要结果
+
+以下是各版本的最终正式结果摘要，不构成跨实验条件的统一排行榜。
+
+| 生成版本 | 核心属性命中率 | 通顺率 | 事实错误样本率 |
+|---|---:|---:|---:|
+| 单调用Baseline sampling v2 | 88.16% | 98% | 73% |
+| LoRA v1，独立Base/LoRA对照 | 74.72% | 99% | 1% |
+| LoRA + RAG，追加配对对照 | 73.76% | 97% | 1% |
+
+冻结rerank的Text→Image P@10/R@10为51.80%/71.96%；Image→Text保持Baseline，为45.40%/62.68%。完整对照、RAG结果、匿名偏好和PRD判断见[项目简报](docs/project_brief.md)及其引用的正式报告。
+
+## 9. 已知限制
+
+- LoRA及组合的核心覆盖未达到75%；标题与短详情自然度仍有限制，组合未表现出稳定整体表达收益。
+- 文搜图Precision和图片搜文P/R未达PRD门槛；检索完整端到端性能验收尚无可靠记录。
+- 通用单商品LoRA/组合推理CLI、在线rerank和Gradio Demo尚未在仓库中找到实现。
+- 历史Baseline模型revision、部分环境锁定及源数据授权记录不完整。
+- test100已在多轮评测中被观察。
+
+## 10. 交付说明
+
+- artifacts已加入Git跟踪并暂存，包括最终adapter、特征、索引和历史工程产物；.gitattributes禁止换行转换以保持附件hash。尚未commit/push，交付前需确认接收方实际获得这些文件。
+- data/processed和data/images仍被Git忽略，需提供独立数据/图片附件；模型基座缓存不在仓库内，需另附固定snapshot或固定版本获取说明。
+- ARCHIVE原位保留；历史smoke adapter不是正式模型初始化权重。历史分类与缓存清理记录见delivery audit，清理前inventory不是当前Git状态清单。
+- 最终报告位于reports/formal_baseline_report.md、reports/generation/{rag,lora,lora_rag}/及reports/retrieval/rerank/，从[项目简报](docs/project_brief.md)进入对应报告和manifest。

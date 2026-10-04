@@ -1,0 +1,60 @@
+{
+  "observed_at_utc": "2026-10-04T18:39:48.451448+00:00",
+  "scope": "current installed source/cache only; NOT proof of historical Baseline revision or historical preprocessing hash",
+  "feature_position": "Taskflow dynamic get_image_features/get_text_features -> vision_outputs[1]/text_outputs[1]; no project hidden-layer index",
+  "taskflow_current_text_max_length": 128,
+  "files": [
+    {
+      "path": "E:\\Anaconda\\envs\\ecommerce-retrieval\\Lib\\site-packages\\paddlenlp\\taskflow\\multimodal_feature_extraction.py",
+      "exists": true,
+      "sha256": "6436b5a56f6d716411a6bc404904c0265611205f3854623a7357b72681980f45"
+    },
+    {
+      "path": "E:\\Anaconda\\envs\\ecommerce-retrieval\\Lib\\site-packages\\paddlenlp\\transformers\\ernie_vil\\modeling.py",
+      "exists": true,
+      "sha256": "306029c00a394aec4641e6ee874c9c7c43e715d2af1f4811909c24f71155da99"
+    },
+    {
+      "path": "E:\\Anaconda\\envs\\ecommerce-retrieval\\Lib\\site-packages\\paddlenlp\\transformers\\ernie_vil\\image_processing.py",
+      "exists": true,
+      "sha256": "d489adb6105c606c8eb31337da41d7c7db68d6f4a1106a6a5a206af91093bbe2"
+    },
+    {
+      "path": "E:\\Projects\\Baidu\\.model-cache\\paddlenlp\\taskflow\\PaddlePaddle\\ernie_vil-2.0-base-zh\\preprocessor_config.json",
+      "exists": true,
+      "sha256": "3d286dddf263c40a15c174158719248cec51070b1948a47b99fc034c8ca93d4c"
+    }
+  ],
+  "preprocessor_config": {
+    "crop_size": {
+      "height": 224,
+      "width": 224
+    },
+    "do_center_crop": true,
+    "do_convert_rgb": true,
+    "do_normalize": true,
+    "do_rescale": true,
+    "do_resize": true,
+    "feature_extractor_type": "ErnieViLFeatureExtractor",
+    "image_mean": [
+      0.485,
+      0.456,
+      0.406
+    ],
+    "image_processor_type": "ErnieViLImageProcessor",
+    "image_std": [
+      0.229,
+      0.224,
+      0.225
+    ],
+    "processor_class": "ErnieViLProcessor",
+    "resample": 3,
+    "rescale_factor": 0.00392156862745098,
+    "size": {
+      "shortest_edge": 224
+    }
+  },
+  "model_loaded": false,
+  "network_access": false,
+  "historical_weight_revision": "not reliably recorded"
+}

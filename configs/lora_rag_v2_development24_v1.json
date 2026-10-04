@@ -1,0 +1,21 @@
+{
+  "version": "lora_rag_v2_development24_v1",
+  "scope": "independent_integration_validation_development24_only",
+  "parent_config": "configs/lora_project_validation_v1.json",
+  "parent_protocol": {"path": "reports/generation/lora/project_validation_v1/protocol_manifest.json", "sha256": "095cb45a3c07b86ccace377d746ffe3224a9805aaf5204f19640652e08aa1ab2"},
+  "parent_archive": "reports/generation/lora/project_validation_v1/automatic_phase_manifest.json",
+  "parent_inputs": "reports/generation/lora/project_validation_v1/frozen_inputs.jsonl",
+  "control_outputs": "reports/generation/lora/project_validation_v1/lora/product_outputs.jsonl",
+  "control_report": "reports/generation/lora/project_validation_v1/lora/run_report.json",
+  "development_sample": {"path": "reports/generation/rag/rag_v2_p2_development24.json", "sha256": "78accdb37ae70916559368d32ebff439ed8f35f7998cba3d43249787eb50a8c0", "products": 24, "per_category": 3, "read_role": "IDs and pre-existing non-holdout selection provenance only; never old generated text as input"},
+  "fact_policy": {"path": "configs/rag_fact_policy_v4.json", "sha256": "b032bf8835a4bfa11338a6bfddba05392aaa896c103473aa402b4ead25029fea"},
+  "prompt": {"version": "lora_rag_three_task_interface_v1", "max_input_tokens": 2048, "truncation": false, "system": "你是中文电商文案编辑，只能使用输入中的品类和可靠属性。", "task_requirements": "unchanged P5 build_instruction_text; append neutral four-zone context; no coverage or P2.6 language constraints"},
+  "variants": ["LoRA_control", "LoRA_RAG"],
+  "control": {"generation": "reuse hash-verified P7 outputs on the same 24 IDs", "labels": "new blinded review, no imported human scores"},
+  "rag": {"selector": "src/generation/rag.py:select_rag_v2_context", "policy_version": "rag_fact_policy_v4", "top_k": 3, "retained_original_core": true, "new_facts_gate": "eligible same-product facts; never restore a P7-withheld core field", "four_zone_duplicates": false},
+  "pairing": {"base_seed": 42, "seed_rule": "unchanged P7 seed_for(product_id, task_type, 42)", "variant_affects_seed": false, "blind_seed": 41008, "assignment": "per-category balanced 1 or 2 controls as A; globally 12 controls as A; SHA256-ranked before new outputs"},
+  "smoke": {"products": 8, "selection": "first ID in frozen development order per category", "role": "engineering only, no content tuning", "new_calls": 24},
+  "generation": {"products": 24, "new_calls": 72, "single_attempt": true, "resume": false},
+  "guards": {"parameter_updates": false, "project_test_read": false, "holdout_archive_read": false, "holdout_generation": false, "old_rag_output_as_model_input": false, "content_tuning": false, "p3_entered": false},
+  "output": "reports/generation/lora_rag/lora_rag_v2_development24_v1"
+}

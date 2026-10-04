@@ -1,0 +1,12 @@
+{
+  "status": "passed",
+  "protected_files": 2536,
+  "changed_files": [],
+  "holdout_content_opened": false,
+  "holdout_guard": "size and mtime only; existing parent reports supply state",
+  "model_calls": 0,
+  "training_runs": 0,
+  "test_runs": 0,
+  "files_deleted_moved_renamed": 0,
+  "git_head_unchanged": true
+}

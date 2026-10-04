@@ -1,0 +1,23 @@
+{
+  "status": "complete_anonymous_aggregate_before_unblinding",
+  "preferences": {
+    "title_quality": {
+      "持平": 23,
+      "B更好": 1
+    },
+    "selling_points_structure": {
+      "持平": 22,
+      "B更好": 1,
+      "A更好": 1
+    },
+    "short_description_naturalness": {
+      "持平": 24
+    },
+    "overall_ecommerce_professionalism": {
+      "持平": 21,
+      "B更好": 2,
+      "A更好": 1
+    }
+  },
+  "workbook_sha256": "706fbab833b71fb733b266f49df097c758af2b71a0466d6cd903a155d3b77356"
+}

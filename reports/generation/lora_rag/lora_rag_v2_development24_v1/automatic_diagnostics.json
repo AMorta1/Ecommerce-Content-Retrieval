@@ -1,0 +1,1452 @@
+{
+  "LoRA_control": {
+    "576694559149": {
+      "automatic_hints": {
+        "literal_matched_count_NOT_HUMAN": 5,
+        "literal_matched_fields": [
+          "品牌",
+          "型号",
+          "材质",
+          "容量",
+          "保温时长"
+        ],
+        "literal_unmatched_fields_NOT_OMISSION_VERDICT": [
+          "杯子样式"
+        ],
+        "claim_terms_REVIEW_ONLY": [],
+        "number_terms_REVIEW_ONLY": [],
+        "structure_success": true,
+        "tasks_hit_token_limit": []
+      },
+      "grounding_REVIEW_ONLY": {
+        "validator_version": "rag_grounding_validator_v1",
+        "mode": "detect_and_record_only",
+        "output_modified": false,
+        "regeneration_triggered": false,
+        "replaces_human_evaluation": false,
+        "status": "PASS",
+        "error_count": 0,
+        "classification_counts": {},
+        "findings": []
+      }
+    },
+    "584648531319": {
+      "automatic_hints": {
+        "literal_matched_count_NOT_HUMAN": 5,
+        "literal_matched_fields": [
+          "品牌",
+          "型号",
+          "材质",
+          "容量",
+          "保温时长"
+        ],
+        "literal_unmatched_fields_NOT_OMISSION_VERDICT": [
+          "杯子样式",
+          "适用人群"
+        ],
+        "claim_terms_REVIEW_ONLY": [],
+        "number_terms_REVIEW_ONLY": [],
+        "structure_success": true,
+        "tasks_hit_token_limit": []
+      },
+      "grounding_REVIEW_ONLY": {
+        "validator_version": "rag_grounding_validator_v1",
+        "mode": "detect_and_record_only",
+        "output_modified": false,
+        "regeneration_triggered": false,
+        "replaces_human_evaluation": false,
+        "status": "PASS",
+        "error_count": 0,
+        "classification_counts": {},
+        "findings": []
+      }
+    },
+    "600702277714": {
+      "automatic_hints": {
+        "literal_matched_count_NOT_HUMAN": 6,
+        "literal_matched_fields": [
+          "品牌",
+          "型号",
+          "材质",
+          "容量",
+          "保温时长",
+          "适用人群"
+        ],
+        "literal_unmatched_fields_NOT_OMISSION_VERDICT": [
+          "杯子样式"
+        ],
+        "claim_terms_REVIEW_ONLY": [],
+        "number_terms_REVIEW_ONLY": [],
+        "structure_success": true,
+        "tasks_hit_token_limit": []
+      },
+      "grounding_REVIEW_ONLY": {
+        "validator_version": "rag_grounding_validator_v1",
+        "mode": "detect_and_record_only",
+        "output_modified": false,
+        "regeneration_triggered": false,
+        "replaces_human_evaluation": false,
+        "status": "PASS",
+        "error_count": 0,
+        "classification_counts": {},
+        "findings": []
+      }
+    },
+    "535858215415": {
+      "automatic_hints": {
+        "literal_matched_count_NOT_HUMAN": 6,
+        "literal_matched_fields": [
+          "品牌",
+          "外壳材质",
+          "形状",
+          "容量",
+          "垃圾桶类型",
+          "开合方式"
+        ],
+        "literal_unmatched_fields_NOT_OMISSION_VERDICT": [
+          "适用场景"
+        ],
+        "claim_terms_REVIEW_ONLY": [],
+        "number_terms_REVIEW_ONLY": [],
+        "structure_success": true,
+        "tasks_hit_token_limit": []
+      },
+      "grounding_REVIEW_ONLY": {
+        "validator_version": "rag_grounding_validator_v1",
+        "mode": "detect_and_record_only",
+        "output_modified": false,
+        "regeneration_triggered": false,
+        "replaces_human_evaluation": false,
+        "status": "PASS",
+        "error_count": 0,
+        "classification_counts": {},
+        "findings": []
+      }
+    },
+    "596561935088": {
+      "automatic_hints": {
+        "literal_matched_count_NOT_HUMAN": 5,
+        "literal_matched_fields": [
+          "品牌",
+          "外壳材质",
+          "形状",
+          "容量",
+          "适用场景"
+        ],
+        "literal_unmatched_fields_NOT_OMISSION_VERDICT": [],
+        "claim_terms_REVIEW_ONLY": [],
+        "number_terms_REVIEW_ONLY": [],
+        "structure_success": true,
+        "tasks_hit_token_limit": []
+      },
+      "grounding_REVIEW_ONLY": {
+        "validator_version": "rag_grounding_validator_v1",
+        "mode": "detect_and_record_only",
+        "output_modified": false,
+        "regeneration_triggered": false,
+        "replaces_human_evaluation": false,
+        "status": "PASS",
+        "error_count": 0,
+        "classification_counts": {
+          "supported_paraphrase": 1
+        },
+        "findings": [
+          {
+            "classification": "supported_paraphrase",
+            "location": "short_description",
+            "text_span": "适用场景为家庭使用",
+            "reason": "explicit_usage_fact:适用场景",
+            "potential_false_positive": false
+          }
+        ]
+      }
+    },
+    "585183140226": {
+      "automatic_hints": {
+        "literal_matched_count_NOT_HUMAN": 5,
+        "literal_matched_fields": [
+          "品牌",
+          "外壳材质",
+          "形状",
+          "容量",
+          "垃圾桶类型"
+        ],
+        "literal_unmatched_fields_NOT_OMISSION_VERDICT": [
+          "开合方式",
+          "适用场景"
+        ],
+        "claim_terms_REVIEW_ONLY": [],
+        "number_terms_REVIEW_ONLY": [],
+        "structure_success": true,
+        "tasks_hit_token_limit": []
+      },
+      "grounding_REVIEW_ONLY": {
+        "validator_version": "rag_grounding_validator_v1",
+        "mode": "detect_and_record_only",
+        "output_modified": false,
+        "regeneration_triggered": false,
+        "replaces_human_evaluation": false,
+        "status": "PASS",
+        "error_count": 0,
+        "classification_counts": {},
+        "findings": []
+      }
+    },
+    "610727155009": {
+      "automatic_hints": {
+        "literal_matched_count_NOT_HUMAN": 3,
+        "literal_matched_fields": [
+          "品牌",
+          "型号",
+          "挤水方式"
+        ],
+        "literal_unmatched_fields_NOT_OMISSION_VERDICT": [],
+        "claim_terms_REVIEW_ONLY": [],
+        "number_terms_REVIEW_ONLY": [],
+        "structure_success": true,
+        "tasks_hit_token_limit": []
+      },
+      "grounding_REVIEW_ONLY": {
+        "validator_version": "rag_grounding_validator_v1",
+        "mode": "detect_and_record_only",
+        "output_modified": false,
+        "regeneration_triggered": false,
+        "replaces_human_evaluation": false,
+        "status": "PASS",
+        "error_count": 0,
+        "classification_counts": {},
+        "findings": []
+      }
+    },
+    "44604493546": {
+      "automatic_hints": {
+        "literal_matched_count_NOT_HUMAN": 5,
+        "literal_matched_fields": [
+          "品牌",
+          "型号",
+          "杆材质",
+          "拖布材质",
+          "电源方式"
+        ],
+        "literal_unmatched_fields_NOT_OMISSION_VERDICT": [],
+        "claim_terms_REVIEW_ONLY": [],
+        "number_terms_REVIEW_ONLY": [],
+        "structure_success": true,
+        "tasks_hit_token_limit": []
+      },
+      "grounding_REVIEW_ONLY": {
+        "validator_version": "rag_grounding_validator_v1",
+        "mode": "detect_and_record_only",
+        "output_modified": false,
+        "regeneration_triggered": false,
+        "replaces_human_evaluation": false,
+        "status": "PASS",
+        "error_count": 0,
+        "classification_counts": {},
+        "findings": []
+      }
+    },
+    "620488672878": {
+      "automatic_hints": {
+        "literal_matched_count_NOT_HUMAN": 5,
+        "literal_matched_fields": [
+          "品牌",
+          "型号",
+          "杆材质",
+          "拖布材质",
+          "电源方式"
+        ],
+        "literal_unmatched_fields_NOT_OMISSION_VERDICT": [],
+        "claim_terms_REVIEW_ONLY": [],
+        "number_terms_REVIEW_ONLY": [],
+        "structure_success": true,
+        "tasks_hit_token_limit": []
+      },
+      "grounding_REVIEW_ONLY": {
+        "validator_version": "rag_grounding_validator_v1",
+        "mode": "detect_and_record_only",
+        "output_modified": false,
+        "regeneration_triggered": false,
+        "replaces_human_evaluation": false,
+        "status": "PASS",
+        "error_count": 0,
+        "classification_counts": {},
+        "findings": []
+      }
+    },
+    "556912823177": {
+      "automatic_hints": {
+        "literal_matched_count_NOT_HUMAN": 3,
+        "literal_matched_fields": [
+          "品牌",
+          "材质",
+          "净重"
+        ],
+        "literal_unmatched_fields_NOT_OMISSION_VERDICT": [
+          "尺寸",
+          "适用空间"
+        ],
+        "claim_terms_REVIEW_ONLY": [],
+        "number_terms_REVIEW_ONLY": [],
+        "structure_success": true,
+        "tasks_hit_token_limit": []
+      },
+      "grounding_REVIEW_ONLY": {
+        "validator_version": "rag_grounding_validator_v1",
+        "mode": "detect_and_record_only",
+        "output_modified": false,
+        "regeneration_triggered": false,
+        "replaces_human_evaluation": false,
+        "status": "PASS",
+        "error_count": 0,
+        "classification_counts": {},
+        "findings": []
+      }
+    },
+    "625309591565": {
+      "automatic_hints": {
+        "literal_matched_count_NOT_HUMAN": 4,
+        "literal_matched_fields": [
+          "品牌",
+          "型号",
+          "适用空间",
+          "净重"
+        ],
+        "literal_unmatched_fields_NOT_OMISSION_VERDICT": [
+          "尺寸",
+          "适用对象"
+        ],
+        "claim_terms_REVIEW_ONLY": [],
+        "number_terms_REVIEW_ONLY": [],
+        "structure_success": true,
+        "tasks_hit_token_limit": []
+      },
+      "grounding_REVIEW_ONLY": {
+        "validator_version": "rag_grounding_validator_v1",
+        "mode": "detect_and_record_only",
+        "output_modified": false,
+        "regeneration_triggered": false,
+        "replaces_human_evaluation": false,
+        "status": "PASS",
+        "error_count": 0,
+        "classification_counts": {
+          "supported_paraphrase": 2
+        },
+        "findings": [
+          {
+            "classification": "supported_paraphrase",
+            "location": "selling_points[0]",
+            "text_span": "适用空间：衣橱/衣帽间",
+            "reason": "explicit_usage_fact:适用空间",
+            "potential_false_positive": false
+          },
+          {
+            "classification": "supported_paraphrase",
+            "location": "short_description",
+            "text_span": "适用空间为衣橱/衣帽间",
+            "reason": "explicit_usage_fact:适用空间",
+            "potential_false_positive": false
+          }
+        ]
+      }
+    },
+    "613971147597": {
+      "automatic_hints": {
+        "literal_matched_count_NOT_HUMAN": 4,
+        "literal_matched_fields": [
+          "品牌",
+          "材质",
+          "尺寸",
+          "净重"
+        ],
+        "literal_unmatched_fields_NOT_OMISSION_VERDICT": [],
+        "claim_terms_REVIEW_ONLY": [],
+        "number_terms_REVIEW_ONLY": [],
+        "structure_success": true,
+        "tasks_hit_token_limit": []
+      },
+      "grounding_REVIEW_ONLY": {
+        "validator_version": "rag_grounding_validator_v1",
+        "mode": "detect_and_record_only",
+        "output_modified": false,
+        "regeneration_triggered": false,
+        "replaces_human_evaluation": false,
+        "status": "PASS",
+        "error_count": 0,
+        "classification_counts": {},
+        "findings": []
+      }
+    },
+    "584308818142": {
+      "automatic_hints": {
+        "literal_matched_count_NOT_HUMAN": 5,
+        "literal_matched_fields": [
+          "品牌",
+          "电池容量",
+          "电池类型",
+          "电芯类型",
+          "外壳材质"
+        ],
+        "literal_unmatched_fields_NOT_OMISSION_VERDICT": [
+          "最大输出功率"
+        ],
+        "claim_terms_REVIEW_ONLY": [],
+        "number_terms_REVIEW_ONLY": [],
+        "structure_success": true,
+        "tasks_hit_token_limit": []
+      },
+      "grounding_REVIEW_ONLY": {
+        "validator_version": "rag_grounding_validator_v1",
+        "mode": "detect_and_record_only",
+        "output_modified": false,
+        "regeneration_triggered": false,
+        "replaces_human_evaluation": false,
+        "status": "PASS",
+        "error_count": 0,
+        "classification_counts": {},
+        "findings": []
+      }
+    },
+    "610408134586": {
+      "automatic_hints": {
+        "literal_matched_count_NOT_HUMAN": 5,
+        "literal_matched_fields": [
+          "品牌",
+          "型号",
+          "电池容量",
+          "电池类型",
+          "电芯类型"
+        ],
+        "literal_unmatched_fields_NOT_OMISSION_VERDICT": [
+          "外壳材质"
+        ],
+        "claim_terms_REVIEW_ONLY": [],
+        "number_terms_REVIEW_ONLY": [],
+        "structure_success": true,
+        "tasks_hit_token_limit": []
+      },
+      "grounding_REVIEW_ONLY": {
+        "validator_version": "rag_grounding_validator_v1",
+        "mode": "detect_and_record_only",
+        "output_modified": false,
+        "regeneration_triggered": false,
+        "replaces_human_evaluation": false,
+        "status": "PASS",
+        "error_count": 0,
+        "classification_counts": {},
+        "findings": []
+      }
+    },
+    "569958345076": {
+      "automatic_hints": {
+        "literal_matched_count_NOT_HUMAN": 5,
+        "literal_matched_fields": [
+          "品牌",
+          "型号",
+          "电池容量",
+          "电池类型",
+          "电芯类型"
+        ],
+        "literal_unmatched_fields_NOT_OMISSION_VERDICT": [
+          "外壳材质"
+        ],
+        "claim_terms_REVIEW_ONLY": [],
+        "number_terms_REVIEW_ONLY": [],
+        "structure_success": true,
+        "tasks_hit_token_limit": []
+      },
+      "grounding_REVIEW_ONLY": {
+        "validator_version": "rag_grounding_validator_v1",
+        "mode": "detect_and_record_only",
+        "output_modified": false,
+        "regeneration_triggered": false,
+        "replaces_human_evaluation": false,
+        "status": "PASS",
+        "error_count": 0,
+        "classification_counts": {},
+        "findings": []
+      }
+    },
+    "621656965008": {
+      "automatic_hints": {
+        "literal_matched_count_NOT_HUMAN": 5,
+        "literal_matched_fields": [
+          "品牌",
+          "型号",
+          "佩戴方式",
+          "耳机类别",
+          "耳机与播放设备连接方式"
+        ],
+        "literal_unmatched_fields_NOT_OMISSION_VERDICT": [
+          "蓝牙版本"
+        ],
+        "claim_terms_REVIEW_ONLY": [],
+        "number_terms_REVIEW_ONLY": [],
+        "structure_success": true,
+        "tasks_hit_token_limit": []
+      },
+      "grounding_REVIEW_ONLY": {
+        "validator_version": "rag_grounding_validator_v1",
+        "mode": "detect_and_record_only",
+        "output_modified": false,
+        "regeneration_triggered": false,
+        "replaces_human_evaluation": false,
+        "status": "PASS",
+        "error_count": 0,
+        "classification_counts": {},
+        "findings": []
+      }
+    },
+    "572645689177": {
+      "automatic_hints": {
+        "literal_matched_count_NOT_HUMAN": 4,
+        "literal_matched_fields": [
+          "品牌",
+          "型号",
+          "佩戴方式",
+          "耳机类别"
+        ],
+        "literal_unmatched_fields_NOT_OMISSION_VERDICT": [],
+        "claim_terms_REVIEW_ONLY": [],
+        "number_terms_REVIEW_ONLY": [],
+        "structure_success": true,
+        "tasks_hit_token_limit": []
+      },
+      "grounding_REVIEW_ONLY": {
+        "validator_version": "rag_grounding_validator_v1",
+        "mode": "detect_and_record_only",
+        "output_modified": false,
+        "regeneration_triggered": false,
+        "replaces_human_evaluation": false,
+        "status": "PASS",
+        "error_count": 0,
+        "classification_counts": {},
+        "findings": []
+      }
+    },
+    "556404503382": {
+      "automatic_hints": {
+        "literal_matched_count_NOT_HUMAN": 1,
+        "literal_matched_fields": [
+          "佩戴方式"
+        ],
+        "literal_unmatched_fields_NOT_OMISSION_VERDICT": [
+          "品牌",
+          "型号"
+        ],
+        "claim_terms_REVIEW_ONLY": [],
+        "number_terms_REVIEW_ONLY": [],
+        "structure_success": true,
+        "tasks_hit_token_limit": []
+      },
+      "grounding_REVIEW_ONLY": {
+        "validator_version": "rag_grounding_validator_v1",
+        "mode": "detect_and_record_only",
+        "output_modified": false,
+        "regeneration_triggered": false,
+        "replaces_human_evaluation": false,
+        "status": "PASS",
+        "error_count": 0,
+        "classification_counts": {},
+        "findings": []
+      }
+    },
+    "621341696263": {
+      "automatic_hints": {
+        "literal_matched_count_NOT_HUMAN": 7,
+        "literal_matched_fields": [
+          "品牌",
+          "型号",
+          "接口类型",
+          "是否无线",
+          "是否机械键盘",
+          "是否有多媒体功能键",
+          "有无手托"
+        ],
+        "literal_unmatched_fields_NOT_OMISSION_VERDICT": [],
+        "claim_terms_REVIEW_ONLY": [],
+        "number_terms_REVIEW_ONLY": [],
+        "structure_success": true,
+        "tasks_hit_token_limit": []
+      },
+      "grounding_REVIEW_ONLY": {
+        "validator_version": "rag_grounding_validator_v1",
+        "mode": "detect_and_record_only",
+        "output_modified": false,
+        "regeneration_triggered": false,
+        "replaces_human_evaluation": false,
+        "status": "PASS",
+        "error_count": 0,
+        "classification_counts": {},
+        "findings": []
+      }
+    },
+    "606784877914": {
+      "automatic_hints": {
+        "literal_matched_count_NOT_HUMAN": 7,
+        "literal_matched_fields": [
+          "品牌",
+          "型号",
+          "接口类型",
+          "是否无线",
+          "是否机械键盘",
+          "是否有多媒体功能键",
+          "有无手托"
+        ],
+        "literal_unmatched_fields_NOT_OMISSION_VERDICT": [],
+        "claim_terms_REVIEW_ONLY": [],
+        "number_terms_REVIEW_ONLY": [],
+        "structure_success": true,
+        "tasks_hit_token_limit": []
+      },
+      "grounding_REVIEW_ONLY": {
+        "validator_version": "rag_grounding_validator_v1",
+        "mode": "detect_and_record_only",
+        "output_modified": false,
+        "regeneration_triggered": false,
+        "replaces_human_evaluation": false,
+        "status": "PASS",
+        "error_count": 0,
+        "classification_counts": {},
+        "findings": []
+      }
+    },
+    "621326718016": {
+      "automatic_hints": {
+        "literal_matched_count_NOT_HUMAN": 7,
+        "literal_matched_fields": [
+          "品牌",
+          "型号",
+          "接口类型",
+          "是否无线",
+          "是否机械键盘",
+          "是否有多媒体功能键",
+          "有无手托"
+        ],
+        "literal_unmatched_fields_NOT_OMISSION_VERDICT": [],
+        "claim_terms_REVIEW_ONLY": [],
+        "number_terms_REVIEW_ONLY": [],
+        "structure_success": true,
+        "tasks_hit_token_limit": []
+      },
+      "grounding_REVIEW_ONLY": {
+        "validator_version": "rag_grounding_validator_v1",
+        "mode": "detect_and_record_only",
+        "output_modified": false,
+        "regeneration_triggered": false,
+        "replaces_human_evaluation": false,
+        "status": "PASS",
+        "error_count": 0,
+        "classification_counts": {},
+        "findings": []
+      }
+    },
+    "609932288958": {
+      "automatic_hints": {
+        "literal_matched_count_NOT_HUMAN": 5,
+        "literal_matched_fields": [
+          "品牌",
+          "型号",
+          "接口类型",
+          "工作方式",
+          "光学分辨率"
+        ],
+        "literal_unmatched_fields_NOT_OMISSION_VERDICT": [],
+        "claim_terms_REVIEW_ONLY": [],
+        "number_terms_REVIEW_ONLY": [],
+        "structure_success": true,
+        "tasks_hit_token_limit": []
+      },
+      "grounding_REVIEW_ONLY": {
+        "validator_version": "rag_grounding_validator_v1",
+        "mode": "detect_and_record_only",
+        "output_modified": false,
+        "regeneration_triggered": false,
+        "replaces_human_evaluation": false,
+        "status": "PASS",
+        "error_count": 0,
+        "classification_counts": {},
+        "findings": []
+      }
+    },
+    "614646720550": {
+      "automatic_hints": {
+        "literal_matched_count_NOT_HUMAN": 5,
+        "literal_matched_fields": [
+          "品牌",
+          "型号",
+          "接口类型",
+          "工作方式",
+          "光学分辨率"
+        ],
+        "literal_unmatched_fields_NOT_OMISSION_VERDICT": [],
+        "claim_terms_REVIEW_ONLY": [],
+        "number_terms_REVIEW_ONLY": [],
+        "structure_success": true,
+        "tasks_hit_token_limit": []
+      },
+      "grounding_REVIEW_ONLY": {
+        "validator_version": "rag_grounding_validator_v1",
+        "mode": "detect_and_record_only",
+        "output_modified": false,
+        "regeneration_triggered": false,
+        "replaces_human_evaluation": false,
+        "status": "PASS",
+        "error_count": 0,
+        "classification_counts": {},
+        "findings": []
+      }
+    },
+    "580390189481": {
+      "automatic_hints": {
+        "literal_matched_count_NOT_HUMAN": 4,
+        "literal_matched_fields": [
+          "接口类型",
+          "工作方式",
+          "光学分辨率",
+          "按键数"
+        ],
+        "literal_unmatched_fields_NOT_OMISSION_VERDICT": [
+          "品牌"
+        ],
+        "claim_terms_REVIEW_ONLY": [],
+        "number_terms_REVIEW_ONLY": [],
+        "structure_success": true,
+        "tasks_hit_token_limit": []
+      },
+      "grounding_REVIEW_ONLY": {
+        "validator_version": "rag_grounding_validator_v1",
+        "mode": "detect_and_record_only",
+        "output_modified": false,
+        "regeneration_triggered": false,
+        "replaces_human_evaluation": false,
+        "status": "PASS",
+        "error_count": 0,
+        "classification_counts": {},
+        "findings": []
+      }
+    }
+  },
+  "LoRA_RAG": {
+    "576694559149": {
+      "automatic_hints": {
+        "literal_matched_count_NOT_HUMAN": 5,
+        "literal_matched_fields": [
+          "品牌",
+          "型号",
+          "材质",
+          "容量",
+          "保温时长"
+        ],
+        "literal_unmatched_fields_NOT_OMISSION_VERDICT": [
+          "杯子样式"
+        ],
+        "claim_terms_REVIEW_ONLY": [],
+        "number_terms_REVIEW_ONLY": [],
+        "structure_success": true,
+        "tasks_hit_token_limit": []
+      },
+      "grounding_REVIEW_ONLY": {
+        "validator_version": "rag_grounding_validator_v1",
+        "mode": "detect_and_record_only",
+        "output_modified": false,
+        "regeneration_triggered": false,
+        "replaces_human_evaluation": false,
+        "status": "PASS",
+        "error_count": 0,
+        "classification_counts": {},
+        "findings": []
+      }
+    },
+    "584648531319": {
+      "automatic_hints": {
+        "literal_matched_count_NOT_HUMAN": 5,
+        "literal_matched_fields": [
+          "品牌",
+          "型号",
+          "材质",
+          "容量",
+          "保温时长"
+        ],
+        "literal_unmatched_fields_NOT_OMISSION_VERDICT": [
+          "杯子样式",
+          "适用人群"
+        ],
+        "claim_terms_REVIEW_ONLY": [],
+        "number_terms_REVIEW_ONLY": [],
+        "structure_success": true,
+        "tasks_hit_token_limit": []
+      },
+      "grounding_REVIEW_ONLY": {
+        "validator_version": "rag_grounding_validator_v1",
+        "mode": "detect_and_record_only",
+        "output_modified": false,
+        "regeneration_triggered": false,
+        "replaces_human_evaluation": false,
+        "status": "PASS",
+        "error_count": 0,
+        "classification_counts": {},
+        "findings": []
+      }
+    },
+    "600702277714": {
+      "automatic_hints": {
+        "literal_matched_count_NOT_HUMAN": 6,
+        "literal_matched_fields": [
+          "品牌",
+          "型号",
+          "材质",
+          "容量",
+          "保温时长",
+          "适用人群"
+        ],
+        "literal_unmatched_fields_NOT_OMISSION_VERDICT": [
+          "杯子样式"
+        ],
+        "claim_terms_REVIEW_ONLY": [],
+        "number_terms_REVIEW_ONLY": [],
+        "structure_success": true,
+        "tasks_hit_token_limit": []
+      },
+      "grounding_REVIEW_ONLY": {
+        "validator_version": "rag_grounding_validator_v1",
+        "mode": "detect_and_record_only",
+        "output_modified": false,
+        "regeneration_triggered": false,
+        "replaces_human_evaluation": false,
+        "status": "PASS",
+        "error_count": 0,
+        "classification_counts": {},
+        "findings": []
+      }
+    },
+    "535858215415": {
+      "automatic_hints": {
+        "literal_matched_count_NOT_HUMAN": 6,
+        "literal_matched_fields": [
+          "品牌",
+          "外壳材质",
+          "形状",
+          "容量",
+          "垃圾桶类型",
+          "开合方式"
+        ],
+        "literal_unmatched_fields_NOT_OMISSION_VERDICT": [
+          "适用场景"
+        ],
+        "claim_terms_REVIEW_ONLY": [],
+        "number_terms_REVIEW_ONLY": [],
+        "structure_success": true,
+        "tasks_hit_token_limit": []
+      },
+      "grounding_REVIEW_ONLY": {
+        "validator_version": "rag_grounding_validator_v1",
+        "mode": "detect_and_record_only",
+        "output_modified": false,
+        "regeneration_triggered": false,
+        "replaces_human_evaluation": false,
+        "status": "PASS",
+        "error_count": 0,
+        "classification_counts": {},
+        "findings": []
+      }
+    },
+    "596561935088": {
+      "automatic_hints": {
+        "literal_matched_count_NOT_HUMAN": 4,
+        "literal_matched_fields": [
+          "品牌",
+          "外壳材质",
+          "形状",
+          "容量"
+        ],
+        "literal_unmatched_fields_NOT_OMISSION_VERDICT": [
+          "适用场景"
+        ],
+        "claim_terms_REVIEW_ONLY": [],
+        "number_terms_REVIEW_ONLY": [],
+        "structure_success": true,
+        "tasks_hit_token_limit": []
+      },
+      "grounding_REVIEW_ONLY": {
+        "validator_version": "rag_grounding_validator_v1",
+        "mode": "detect_and_record_only",
+        "output_modified": false,
+        "regeneration_triggered": false,
+        "replaces_human_evaluation": false,
+        "status": "PASS",
+        "error_count": 0,
+        "classification_counts": {},
+        "findings": []
+      }
+    },
+    "585183140226": {
+      "automatic_hints": {
+        "literal_matched_count_NOT_HUMAN": 5,
+        "literal_matched_fields": [
+          "品牌",
+          "外壳材质",
+          "形状",
+          "容量",
+          "垃圾桶类型"
+        ],
+        "literal_unmatched_fields_NOT_OMISSION_VERDICT": [
+          "开合方式",
+          "适用场景"
+        ],
+        "claim_terms_REVIEW_ONLY": [],
+        "number_terms_REVIEW_ONLY": [],
+        "structure_success": true,
+        "tasks_hit_token_limit": []
+      },
+      "grounding_REVIEW_ONLY": {
+        "validator_version": "rag_grounding_validator_v1",
+        "mode": "detect_and_record_only",
+        "output_modified": false,
+        "regeneration_triggered": false,
+        "replaces_human_evaluation": false,
+        "status": "PASS",
+        "error_count": 0,
+        "classification_counts": {},
+        "findings": []
+      }
+    },
+    "610727155009": {
+      "automatic_hints": {
+        "literal_matched_count_NOT_HUMAN": 3,
+        "literal_matched_fields": [
+          "品牌",
+          "型号",
+          "挤水方式"
+        ],
+        "literal_unmatched_fields_NOT_OMISSION_VERDICT": [],
+        "claim_terms_REVIEW_ONLY": [],
+        "number_terms_REVIEW_ONLY": [],
+        "structure_success": true,
+        "tasks_hit_token_limit": []
+      },
+      "grounding_REVIEW_ONLY": {
+        "validator_version": "rag_grounding_validator_v1",
+        "mode": "detect_and_record_only",
+        "output_modified": false,
+        "regeneration_triggered": false,
+        "replaces_human_evaluation": false,
+        "status": "PASS",
+        "error_count": 0,
+        "classification_counts": {},
+        "findings": []
+      }
+    },
+    "44604493546": {
+      "automatic_hints": {
+        "literal_matched_count_NOT_HUMAN": 5,
+        "literal_matched_fields": [
+          "品牌",
+          "型号",
+          "杆材质",
+          "拖布材质",
+          "电源方式"
+        ],
+        "literal_unmatched_fields_NOT_OMISSION_VERDICT": [],
+        "claim_terms_REVIEW_ONLY": [],
+        "number_terms_REVIEW_ONLY": [],
+        "structure_success": true,
+        "tasks_hit_token_limit": []
+      },
+      "grounding_REVIEW_ONLY": {
+        "validator_version": "rag_grounding_validator_v1",
+        "mode": "detect_and_record_only",
+        "output_modified": false,
+        "regeneration_triggered": false,
+        "replaces_human_evaluation": false,
+        "status": "PASS",
+        "error_count": 0,
+        "classification_counts": {},
+        "findings": []
+      }
+    },
+    "620488672878": {
+      "automatic_hints": {
+        "literal_matched_count_NOT_HUMAN": 5,
+        "literal_matched_fields": [
+          "品牌",
+          "型号",
+          "杆材质",
+          "拖布材质",
+          "电源方式"
+        ],
+        "literal_unmatched_fields_NOT_OMISSION_VERDICT": [],
+        "claim_terms_REVIEW_ONLY": [],
+        "number_terms_REVIEW_ONLY": [],
+        "structure_success": true,
+        "tasks_hit_token_limit": []
+      },
+      "grounding_REVIEW_ONLY": {
+        "validator_version": "rag_grounding_validator_v1",
+        "mode": "detect_and_record_only",
+        "output_modified": false,
+        "regeneration_triggered": false,
+        "replaces_human_evaluation": false,
+        "status": "PASS",
+        "error_count": 0,
+        "classification_counts": {},
+        "findings": []
+      }
+    },
+    "556912823177": {
+      "automatic_hints": {
+        "literal_matched_count_NOT_HUMAN": 3,
+        "literal_matched_fields": [
+          "品牌",
+          "材质",
+          "净重"
+        ],
+        "literal_unmatched_fields_NOT_OMISSION_VERDICT": [
+          "尺寸",
+          "适用空间"
+        ],
+        "claim_terms_REVIEW_ONLY": [],
+        "number_terms_REVIEW_ONLY": [],
+        "structure_success": true,
+        "tasks_hit_token_limit": []
+      },
+      "grounding_REVIEW_ONLY": {
+        "validator_version": "rag_grounding_validator_v1",
+        "mode": "detect_and_record_only",
+        "output_modified": false,
+        "regeneration_triggered": false,
+        "replaces_human_evaluation": false,
+        "status": "PASS",
+        "error_count": 0,
+        "classification_counts": {},
+        "findings": []
+      }
+    },
+    "625309591565": {
+      "automatic_hints": {
+        "literal_matched_count_NOT_HUMAN": 4,
+        "literal_matched_fields": [
+          "品牌",
+          "型号",
+          "适用空间",
+          "净重"
+        ],
+        "literal_unmatched_fields_NOT_OMISSION_VERDICT": [
+          "尺寸",
+          "适用对象"
+        ],
+        "claim_terms_REVIEW_ONLY": [],
+        "number_terms_REVIEW_ONLY": [],
+        "structure_success": true,
+        "tasks_hit_token_limit": []
+      },
+      "grounding_REVIEW_ONLY": {
+        "validator_version": "rag_grounding_validator_v1",
+        "mode": "detect_and_record_only",
+        "output_modified": false,
+        "regeneration_triggered": false,
+        "replaces_human_evaluation": false,
+        "status": "PASS",
+        "error_count": 0,
+        "classification_counts": {
+          "supported_paraphrase": 2
+        },
+        "findings": [
+          {
+            "classification": "supported_paraphrase",
+            "location": "selling_points[0]",
+            "text_span": "适用空间：衣橱/衣帽间",
+            "reason": "explicit_usage_fact:适用空间",
+            "potential_false_positive": false
+          },
+          {
+            "classification": "supported_paraphrase",
+            "location": "short_description",
+            "text_span": "适用空间为衣橱/衣帽间",
+            "reason": "explicit_usage_fact:适用空间",
+            "potential_false_positive": false
+          }
+        ]
+      }
+    },
+    "613971147597": {
+      "automatic_hints": {
+        "literal_matched_count_NOT_HUMAN": 4,
+        "literal_matched_fields": [
+          "品牌",
+          "材质",
+          "尺寸",
+          "净重"
+        ],
+        "literal_unmatched_fields_NOT_OMISSION_VERDICT": [],
+        "claim_terms_REVIEW_ONLY": [],
+        "number_terms_REVIEW_ONLY": [],
+        "structure_success": true,
+        "tasks_hit_token_limit": []
+      },
+      "grounding_REVIEW_ONLY": {
+        "validator_version": "rag_grounding_validator_v1",
+        "mode": "detect_and_record_only",
+        "output_modified": false,
+        "regeneration_triggered": false,
+        "replaces_human_evaluation": false,
+        "status": "PASS",
+        "error_count": 0,
+        "classification_counts": {},
+        "findings": []
+      }
+    },
+    "584308818142": {
+      "automatic_hints": {
+        "literal_matched_count_NOT_HUMAN": 5,
+        "literal_matched_fields": [
+          "品牌",
+          "电池容量",
+          "电池类型",
+          "电芯类型",
+          "外壳材质"
+        ],
+        "literal_unmatched_fields_NOT_OMISSION_VERDICT": [
+          "最大输出功率"
+        ],
+        "claim_terms_REVIEW_ONLY": [],
+        "number_terms_REVIEW_ONLY": [],
+        "structure_success": true,
+        "tasks_hit_token_limit": []
+      },
+      "grounding_REVIEW_ONLY": {
+        "validator_version": "rag_grounding_validator_v1",
+        "mode": "detect_and_record_only",
+        "output_modified": false,
+        "regeneration_triggered": false,
+        "replaces_human_evaluation": false,
+        "status": "PASS",
+        "error_count": 0,
+        "classification_counts": {},
+        "findings": []
+      }
+    },
+    "610408134586": {
+      "automatic_hints": {
+        "literal_matched_count_NOT_HUMAN": 5,
+        "literal_matched_fields": [
+          "品牌",
+          "型号",
+          "电池容量",
+          "电池类型",
+          "电芯类型"
+        ],
+        "literal_unmatched_fields_NOT_OMISSION_VERDICT": [
+          "外壳材质"
+        ],
+        "claim_terms_REVIEW_ONLY": [],
+        "number_terms_REVIEW_ONLY": [],
+        "structure_success": true,
+        "tasks_hit_token_limit": []
+      },
+      "grounding_REVIEW_ONLY": {
+        "validator_version": "rag_grounding_validator_v1",
+        "mode": "detect_and_record_only",
+        "output_modified": false,
+        "regeneration_triggered": false,
+        "replaces_human_evaluation": false,
+        "status": "PASS",
+        "error_count": 0,
+        "classification_counts": {},
+        "findings": []
+      }
+    },
+    "569958345076": {
+      "automatic_hints": {
+        "literal_matched_count_NOT_HUMAN": 5,
+        "literal_matched_fields": [
+          "品牌",
+          "型号",
+          "电池容量",
+          "电池类型",
+          "电芯类型"
+        ],
+        "literal_unmatched_fields_NOT_OMISSION_VERDICT": [
+          "外壳材质"
+        ],
+        "claim_terms_REVIEW_ONLY": [],
+        "number_terms_REVIEW_ONLY": [],
+        "structure_success": true,
+        "tasks_hit_token_limit": []
+      },
+      "grounding_REVIEW_ONLY": {
+        "validator_version": "rag_grounding_validator_v1",
+        "mode": "detect_and_record_only",
+        "output_modified": false,
+        "regeneration_triggered": false,
+        "replaces_human_evaluation": false,
+        "status": "PASS",
+        "error_count": 0,
+        "classification_counts": {},
+        "findings": []
+      }
+    },
+    "621656965008": {
+      "automatic_hints": {
+        "literal_matched_count_NOT_HUMAN": 5,
+        "literal_matched_fields": [
+          "品牌",
+          "型号",
+          "佩戴方式",
+          "耳机类别",
+          "耳机与播放设备连接方式"
+        ],
+        "literal_unmatched_fields_NOT_OMISSION_VERDICT": [
+          "蓝牙版本"
+        ],
+        "claim_terms_REVIEW_ONLY": [],
+        "number_terms_REVIEW_ONLY": [],
+        "structure_success": true,
+        "tasks_hit_token_limit": []
+      },
+      "grounding_REVIEW_ONLY": {
+        "validator_version": "rag_grounding_validator_v1",
+        "mode": "detect_and_record_only",
+        "output_modified": false,
+        "regeneration_triggered": false,
+        "replaces_human_evaluation": false,
+        "status": "PASS",
+        "error_count": 0,
+        "classification_counts": {},
+        "findings": []
+      }
+    },
+    "572645689177": {
+      "automatic_hints": {
+        "literal_matched_count_NOT_HUMAN": 4,
+        "literal_matched_fields": [
+          "品牌",
+          "型号",
+          "佩戴方式",
+          "耳机类别"
+        ],
+        "literal_unmatched_fields_NOT_OMISSION_VERDICT": [],
+        "claim_terms_REVIEW_ONLY": [],
+        "number_terms_REVIEW_ONLY": [],
+        "structure_success": true,
+        "tasks_hit_token_limit": []
+      },
+      "grounding_REVIEW_ONLY": {
+        "validator_version": "rag_grounding_validator_v1",
+        "mode": "detect_and_record_only",
+        "output_modified": false,
+        "regeneration_triggered": false,
+        "replaces_human_evaluation": false,
+        "status": "PASS",
+        "error_count": 0,
+        "classification_counts": {},
+        "findings": []
+      }
+    },
+    "556404503382": {
+      "automatic_hints": {
+        "literal_matched_count_NOT_HUMAN": 1,
+        "literal_matched_fields": [
+          "佩戴方式"
+        ],
+        "literal_unmatched_fields_NOT_OMISSION_VERDICT": [
+          "品牌",
+          "型号"
+        ],
+        "claim_terms_REVIEW_ONLY": [],
+        "number_terms_REVIEW_ONLY": [],
+        "structure_success": true,
+        "tasks_hit_token_limit": []
+      },
+      "grounding_REVIEW_ONLY": {
+        "validator_version": "rag_grounding_validator_v1",
+        "mode": "detect_and_record_only",
+        "output_modified": false,
+        "regeneration_triggered": false,
+        "replaces_human_evaluation": false,
+        "status": "PASS",
+        "error_count": 0,
+        "classification_counts": {},
+        "findings": []
+      }
+    },
+    "621341696263": {
+      "automatic_hints": {
+        "literal_matched_count_NOT_HUMAN": 6,
+        "literal_matched_fields": [
+          "品牌",
+          "型号",
+          "接口类型",
+          "是否无线",
+          "是否机械键盘",
+          "是否有多媒体功能键"
+        ],
+        "literal_unmatched_fields_NOT_OMISSION_VERDICT": [
+          "有无手托"
+        ],
+        "claim_terms_REVIEW_ONLY": [],
+        "number_terms_REVIEW_ONLY": [],
+        "structure_success": true,
+        "tasks_hit_token_limit": []
+      },
+      "grounding_REVIEW_ONLY": {
+        "validator_version": "rag_grounding_validator_v1",
+        "mode": "detect_and_record_only",
+        "output_modified": false,
+        "regeneration_triggered": false,
+        "replaces_human_evaluation": false,
+        "status": "PASS",
+        "error_count": 0,
+        "classification_counts": {},
+        "findings": []
+      }
+    },
+    "606784877914": {
+      "automatic_hints": {
+        "literal_matched_count_NOT_HUMAN": 6,
+        "literal_matched_fields": [
+          "品牌",
+          "型号",
+          "接口类型",
+          "是否无线",
+          "是否机械键盘",
+          "是否有多媒体功能键"
+        ],
+        "literal_unmatched_fields_NOT_OMISSION_VERDICT": [
+          "有无手托"
+        ],
+        "claim_terms_REVIEW_ONLY": [],
+        "number_terms_REVIEW_ONLY": [],
+        "structure_success": true,
+        "tasks_hit_token_limit": []
+      },
+      "grounding_REVIEW_ONLY": {
+        "validator_version": "rag_grounding_validator_v1",
+        "mode": "detect_and_record_only",
+        "output_modified": false,
+        "regeneration_triggered": false,
+        "replaces_human_evaluation": false,
+        "status": "PASS",
+        "error_count": 0,
+        "classification_counts": {},
+        "findings": []
+      }
+    },
+    "621326718016": {
+      "automatic_hints": {
+        "literal_matched_count_NOT_HUMAN": 6,
+        "literal_matched_fields": [
+          "品牌",
+          "型号",
+          "接口类型",
+          "是否无线",
+          "是否机械键盘",
+          "是否有多媒体功能键"
+        ],
+        "literal_unmatched_fields_NOT_OMISSION_VERDICT": [
+          "有无手托"
+        ],
+        "claim_terms_REVIEW_ONLY": [],
+        "number_terms_REVIEW_ONLY": [],
+        "structure_success": true,
+        "tasks_hit_token_limit": []
+      },
+      "grounding_REVIEW_ONLY": {
+        "validator_version": "rag_grounding_validator_v1",
+        "mode": "detect_and_record_only",
+        "output_modified": false,
+        "regeneration_triggered": false,
+        "replaces_human_evaluation": false,
+        "status": "PASS",
+        "error_count": 0,
+        "classification_counts": {},
+        "findings": []
+      }
+    },
+    "609932288958": {
+      "automatic_hints": {
+        "literal_matched_count_NOT_HUMAN": 5,
+        "literal_matched_fields": [
+          "品牌",
+          "型号",
+          "接口类型",
+          "工作方式",
+          "光学分辨率"
+        ],
+        "literal_unmatched_fields_NOT_OMISSION_VERDICT": [],
+        "claim_terms_REVIEW_ONLY": [],
+        "number_terms_REVIEW_ONLY": [],
+        "structure_success": true,
+        "tasks_hit_token_limit": []
+      },
+      "grounding_REVIEW_ONLY": {
+        "validator_version": "rag_grounding_validator_v1",
+        "mode": "detect_and_record_only",
+        "output_modified": false,
+        "regeneration_triggered": false,
+        "replaces_human_evaluation": false,
+        "status": "PASS",
+        "error_count": 0,
+        "classification_counts": {},
+        "findings": []
+      }
+    },
+    "614646720550": {
+      "automatic_hints": {
+        "literal_matched_count_NOT_HUMAN": 5,
+        "literal_matched_fields": [
+          "品牌",
+          "型号",
+          "接口类型",
+          "工作方式",
+          "光学分辨率"
+        ],
+        "literal_unmatched_fields_NOT_OMISSION_VERDICT": [],
+        "claim_terms_REVIEW_ONLY": [],
+        "number_terms_REVIEW_ONLY": [],
+        "structure_success": true,
+        "tasks_hit_token_limit": []
+      },
+      "grounding_REVIEW_ONLY": {
+        "validator_version": "rag_grounding_validator_v1",
+        "mode": "detect_and_record_only",
+        "output_modified": false,
+        "regeneration_triggered": false,
+        "replaces_human_evaluation": false,
+        "status": "PASS",
+        "error_count": 0,
+        "classification_counts": {},
+        "findings": []
+      }
+    },
+    "580390189481": {
+      "automatic_hints": {
+        "literal_matched_count_NOT_HUMAN": 4,
+        "literal_matched_fields": [
+          "接口类型",
+          "工作方式",
+          "光学分辨率",
+          "按键数"
+        ],
+        "literal_unmatched_fields_NOT_OMISSION_VERDICT": [
+          "品牌"
+        ],
+        "claim_terms_REVIEW_ONLY": [],
+        "number_terms_REVIEW_ONLY": [],
+        "structure_success": true,
+        "tasks_hit_token_limit": []
+      },
+      "grounding_REVIEW_ONLY": {
+        "validator_version": "rag_grounding_validator_v1",
+        "mode": "detect_and_record_only",
+        "output_modified": false,
+        "regeneration_triggered": false,
+        "replaces_human_evaluation": false,
+        "status": "PASS",
+        "error_count": 0,
+        "classification_counts": {},
+        "findings": []
+      }
+    }
+  }
+}

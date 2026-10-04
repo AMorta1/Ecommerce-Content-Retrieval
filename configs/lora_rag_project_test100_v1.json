@@ -1,0 +1,18 @@
+{
+  "version": "lora_rag_project_test100_v1",
+  "scope": "additional_fixed_comparison_on_previously_observed_test100",
+  "development_protocol": {"path": "reports/generation/lora_rag/lora_rag_v2_development24_v1/protocol_manifest.json", "sha256": "17d573d3bddc8fa564075abc14dcd94a2530a4300e30c09b642874a34addedc7"},
+  "test_protocol": {"path": "reports/generation/lora/project_test100_v1/protocol_manifest.json", "sha256": "e8754d37ed27789d02801b710184ee9a034cff2e6996a42da8a29eadde0f7850"},
+  "test_archive": {"path": "reports/generation/lora/project_test100_v1/automatic_phase_manifest.json", "sha256": "ed6ea809471582f108aa42335b5fb600b5083f04767bab77a40f770fcc4c6bad"},
+  "test_inputs": {"path": "reports/generation/lora/project_test100_v1/frozen_inputs.jsonl", "sha256": "3cda21a177ac2e6edda1f7e9211c9dc5a011c51866539aa5d5814f6230464f2b"},
+  "control_outputs": {"path": "reports/generation/lora/project_test100_v1/lora/product_outputs.jsonl", "sha256": "948a1724dcc40c7506f70a41fb5269ecbcf0f91b09e6fb9170c84d4c20a41fc6"},
+  "control_tasks": {"path": "reports/generation/lora/project_test100_v1/lora/task_outputs.jsonl", "sha256": "6c707c591f7953390af089a243e18e6c33d42feece37813e719c11ec17aa2987"},
+  "control_report": {"path": "reports/generation/lora/project_test100_v1/lora/run_report.json", "sha256": "d3a7de0ca341e16c72fd524b84feb7332303741ecfd5e48af07f4730ef26eb59"},
+  "control_inference": {"path": "reports/generation/lora/project_test100_v1/inference_lora.json", "sha256": "58fcb0d6cd59332a78a7599f9119841462f57b7162d1e3474fc769190d14b21a"},
+  "inherit_unchanged": ["development prompt", "development four-zone interface", "rag_fact_policy_v4", "Top-3", "intersection with existing reliable core gate", "best epoch3 adapter", "model revision", "chat template", "decoding", "per-product/per-task seed", "validator", "official evaluation denominator and human rubric"],
+  "review": {"products": 100, "selection": "all_original_frozen100_no_resampling", "blind_seed": 41009, "prefill_human_labels": false},
+  "generation": {"new_products": 100, "new_task_calls": 300, "single_attempt": true, "resume": false, "control": "reuse_hash_verified_formal_LoRA_three_task_outputs"},
+  "guards": {"parameter_updates": false, "output_based_adjustment": false, "rerun": false, "holdout_archive_read": false, "holdout_generation": false, "original_rag_v2_p3_entered": false, "old_outputs_or_labels_as_model_inputs": false},
+  "test_history_disclosure": "原冻结test100此前已用于Baseline、RAG及Base/LoRA评测，并已被观察。本次为用户批准的追加固定组合版本正式对照，不是新的未观察盲测；A/B仅表示版本匿名。组合内容在读取本轮test输出前冻结，无论结果好坏只归档，不修改后重跑。",
+  "output": "reports/generation/lora_rag/lora_rag_project_test100_v1"
+}

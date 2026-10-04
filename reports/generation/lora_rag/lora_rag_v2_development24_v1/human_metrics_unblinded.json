@@ -1,0 +1,216 @@
+{
+  "status": "completed_human_review",
+  "versions": {
+    "LoRA_control": {
+      "sample_count": 24,
+      "core_attribute_total": 134,
+      "matched_attribute_total": 110,
+      "core_attribute_hit_rate": 0.8208955223880597,
+      "fluency_pass_rate": 1.0,
+      "factual_error_sample_rate": 0.0,
+      "factual_error_total": 0,
+      "average_factual_errors_per_sample": 0.0
+    },
+    "LoRA_RAG": {
+      "sample_count": 24,
+      "core_attribute_total": 134,
+      "matched_attribute_total": 110,
+      "core_attribute_hit_rate": 0.8208955223880597,
+      "fluency_pass_rate": 1.0,
+      "factual_error_sample_rate": 0.0,
+      "factual_error_total": 0,
+      "average_factual_errors_per_sample": 0.0
+    }
+  },
+  "by_category": {
+    "LoRA_control": {
+      "保温杯": {
+        "sample_count": 3,
+        "core_attribute_total": 20,
+        "matched_attribute_total": 16,
+        "core_attribute_hit_rate": 0.8,
+        "fluency_pass_rate": 1.0,
+        "factual_error_sample_rate": 0.0,
+        "factual_error_total": 0,
+        "average_factual_errors_per_sample": 0.0
+      },
+      "垃圾桶": {
+        "sample_count": 3,
+        "core_attribute_total": 19,
+        "matched_attribute_total": 16,
+        "core_attribute_hit_rate": 0.8421052631578947,
+        "fluency_pass_rate": 1.0,
+        "factual_error_sample_rate": 0.0,
+        "factual_error_total": 0,
+        "average_factual_errors_per_sample": 0.0
+      },
+      "拖把": {
+        "sample_count": 3,
+        "core_attribute_total": 13,
+        "matched_attribute_total": 13,
+        "core_attribute_hit_rate": 1.0,
+        "fluency_pass_rate": 1.0,
+        "factual_error_sample_rate": 0.0,
+        "factual_error_total": 0,
+        "average_factual_errors_per_sample": 0.0
+      },
+      "收纳箱": {
+        "sample_count": 3,
+        "core_attribute_total": 15,
+        "matched_attribute_total": 11,
+        "core_attribute_hit_rate": 0.7333333333333333,
+        "fluency_pass_rate": 1.0,
+        "factual_error_sample_rate": 0.0,
+        "factual_error_total": 0,
+        "average_factual_errors_per_sample": 0.0
+      },
+      "移动电源": {
+        "sample_count": 3,
+        "core_attribute_total": 18,
+        "matched_attribute_total": 15,
+        "core_attribute_hit_rate": 0.8333333333333334,
+        "fluency_pass_rate": 1.0,
+        "factual_error_sample_rate": 0.0,
+        "factual_error_total": 0,
+        "average_factual_errors_per_sample": 0.0
+      },
+      "耳机": {
+        "sample_count": 3,
+        "core_attribute_total": 13,
+        "matched_attribute_total": 10,
+        "core_attribute_hit_rate": 0.7692307692307693,
+        "fluency_pass_rate": 1.0,
+        "factual_error_sample_rate": 0.0,
+        "factual_error_total": 0,
+        "average_factual_errors_per_sample": 0.0
+      },
+      "键盘": {
+        "sample_count": 3,
+        "core_attribute_total": 21,
+        "matched_attribute_total": 15,
+        "core_attribute_hit_rate": 0.7142857142857143,
+        "fluency_pass_rate": 1.0,
+        "factual_error_sample_rate": 0.0,
+        "factual_error_total": 0,
+        "average_factual_errors_per_sample": 0.0
+      },
+      "鼠标": {
+        "sample_count": 3,
+        "core_attribute_total": 15,
+        "matched_attribute_total": 14,
+        "core_attribute_hit_rate": 0.9333333333333333,
+        "fluency_pass_rate": 1.0,
+        "factual_error_sample_rate": 0.0,
+        "factual_error_total": 0,
+        "average_factual_errors_per_sample": 0.0
+      }
+    },
+    "LoRA_RAG": {
+      "保温杯": {
+        "sample_count": 3,
+        "core_attribute_total": 20,
+        "matched_attribute_total": 16,
+        "core_attribute_hit_rate": 0.8,
+        "fluency_pass_rate": 1.0,
+        "factual_error_sample_rate": 0.0,
+        "factual_error_total": 0,
+        "average_factual_errors_per_sample": 0.0
+      },
+      "垃圾桶": {
+        "sample_count": 3,
+        "core_attribute_total": 19,
+        "matched_attribute_total": 15,
+        "core_attribute_hit_rate": 0.7894736842105263,
+        "fluency_pass_rate": 1.0,
+        "factual_error_sample_rate": 0.0,
+        "factual_error_total": 0,
+        "average_factual_errors_per_sample": 0.0
+      },
+      "拖把": {
+        "sample_count": 3,
+        "core_attribute_total": 13,
+        "matched_attribute_total": 13,
+        "core_attribute_hit_rate": 1.0,
+        "fluency_pass_rate": 1.0,
+        "factual_error_sample_rate": 0.0,
+        "factual_error_total": 0,
+        "average_factual_errors_per_sample": 0.0
+      },
+      "收纳箱": {
+        "sample_count": 3,
+        "core_attribute_total": 15,
+        "matched_attribute_total": 11,
+        "core_attribute_hit_rate": 0.7333333333333333,
+        "fluency_pass_rate": 1.0,
+        "factual_error_sample_rate": 0.0,
+        "factual_error_total": 0,
+        "average_factual_errors_per_sample": 0.0
+      },
+      "移动电源": {
+        "sample_count": 3,
+        "core_attribute_total": 18,
+        "matched_attribute_total": 15,
+        "core_attribute_hit_rate": 0.8333333333333334,
+        "fluency_pass_rate": 1.0,
+        "factual_error_sample_rate": 0.0,
+        "factual_error_total": 0,
+        "average_factual_errors_per_sample": 0.0
+      },
+      "耳机": {
+        "sample_count": 3,
+        "core_attribute_total": 13,
+        "matched_attribute_total": 10,
+        "core_attribute_hit_rate": 0.7692307692307693,
+        "fluency_pass_rate": 1.0,
+        "factual_error_sample_rate": 0.0,
+        "factual_error_total": 0,
+        "average_factual_errors_per_sample": 0.0
+      },
+      "键盘": {
+        "sample_count": 3,
+        "core_attribute_total": 21,
+        "matched_attribute_total": 16,
+        "core_attribute_hit_rate": 0.7619047619047619,
+        "fluency_pass_rate": 1.0,
+        "factual_error_sample_rate": 0.0,
+        "factual_error_total": 0,
+        "average_factual_errors_per_sample": 0.0
+      },
+      "鼠标": {
+        "sample_count": 3,
+        "core_attribute_total": 15,
+        "matched_attribute_total": 14,
+        "core_attribute_hit_rate": 0.9333333333333333,
+        "fluency_pass_rate": 1.0,
+        "factual_error_sample_rate": 0.0,
+        "factual_error_total": 0,
+        "average_factual_errors_per_sample": 0.0
+      }
+    }
+  },
+  "preferences": {
+    "title_quality": {
+      "LoRA_control": 0,
+      "LoRA_RAG": 1,
+      "tie": 23
+    },
+    "selling_points_structure": {
+      "LoRA_control": 0,
+      "LoRA_RAG": 2,
+      "tie": 22
+    },
+    "short_description_naturalness": {
+      "LoRA_control": 0,
+      "LoRA_RAG": 0,
+      "tie": 24
+    },
+    "overall_ecommerce_professionalism": {
+      "LoRA_control": 1,
+      "LoRA_RAG": 2,
+      "tie": 21
+    }
+  },
+  "workbook_sha256": "706fbab833b71fb733b266f49df097c758af2b71a0466d6cd903a155d3b77356",
+  "blind_summary_sha256": "73aead59241e6bcdf0003d0066732ff2fafce9f3f7b4bf11c255599e72634f10",
+  "no_test_or_holdout": true
+}
